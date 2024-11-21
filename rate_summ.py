@@ -2,7 +2,7 @@ import time
 import json
 import google.generativeai as genai
 
-genai.configure(api_key='AIzaSyBhQh_KpObWgXhgoyjhi0ZtjySOrZlHFr8')
+genai.configure(api_key='Api Key')
 model = genai.GenerativeModel('gemini-pro')
 
 input_file_path = 'summaries.json'
