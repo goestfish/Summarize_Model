@@ -11,4 +11,3 @@ instruction:
 modal run train_modal.py::train_and_gene 
 
 model will be under checkpoint folder on modal server
-or you can use the exist model which under result.
