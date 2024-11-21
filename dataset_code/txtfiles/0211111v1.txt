@@ -1,0 +1,920 @@
+arXiv:math/0211111v1  [math.AP]  6 Nov 2002CONTROL OF SPATIALLY HETEROGENEOUS AND
+TIME-VARYING CELLULAR REACTION NETWORKS: A NEW
+SUMMATION LAW
+MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODENK O
+Abstract. A hallmark of a plethora of intracellular signaling pathway s is the
+spatial separation of activation and deactivation process es that potentially re-
+sults in precipitous gradients of activated proteins. The c lassical Metabolic
+Control Analysis (MCA), which quantiﬁes the inﬂuence of an i ndividual pro-
+cess on a system variable as the control coeﬃcient, cannot be applied to spa-
+tially separated protein networks. The present paper unrav els the principles
+that govern the control over the ﬂuxes and intermediate conc entrations in spa-
+tially heterogeneous reaction networks. Our main results a re two types of the
+control summation theorems. The ﬁrst type is a non-trivial g eneralization of
+the classical theorems to systems with spatially and tempor ally varying con-
+centrations. In this generalization, the process of diﬀusi on, which enters as the
+result of spatial concentration gradients, plays a role sim ilar to other processes
+such as chemical reactions and membrane transport. The seco nd summation
+theorem is completely novel. It states that the control by th e membrane trans-
+port, the diﬀusion control coeﬃcient multiplied by two, and a newly introduced
+control coeﬃcient associated with changes in the spatial si ze of a system (e.g.,
+cell), all add up to one and zero for the control over ﬂux and co ncentration.
+Using a simple example of a kinase/phosphatase system in a sp herical cell, we
+speculate that unless active mechanisms of intracellular t ransport are involved,
+the threshold cell size is limited by the diﬀusion control, w hen it is beginning
+to exceed the spatial control coeﬃcient signiﬁcantly.
+1.Introduction
+Extracellular information received by plasma membrane receptors is processed,
+encoded, and transferred to the nucleus through activation and spatial relocation of
+multiple signalling components. Receptor activation triggers signalling responses
+associated with the mobilization of a plethora of adapter and target proteins to
+the plasma membrane (Haugh and Lauﬀenburger 1997; Kholodenko et al. 2000b).
+Proteins activated e.g. by phosphorylation at the cell surface tra vel to stimulate
+critical regulatory targets at various cellular sites including the nuc leus. During
+and after the travel, these proteins are inactivated, e.g. throug h dephosphorylation.
+For instance, a protein phosphorylated by a plasma-membrane ass ociated protein
+kinase can be dephosphorylated by a phosphatase in the cytosol o r nucleus. The
+transport between cellular locations, where the activation and inac tivation occur,
+is passive (thermal diﬀusion), driven by spatial gradients in the con centrations.
+In some cases, not to be discussed here, motor proteins or endoc ytosis may be
+involved (Kholodenko 2002). Previous work estimated that these s patial gradients
+Centrum voor Wiskunde en Informatica, Amsterdam, The Nethe rlands;peletier@cwi.nl
+Vrije Universiteit Amsterdam, The Netherlands; hw@bio.vu.nl
+Thomas Jeﬀerson University, Philadelphia, USA; Boris.Kholodenko@mail.tju.ed .
+1
+2 MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODEN KO
+may be large, and that therefore diﬀusion may contribute to the co ntrol of signal
+transduction (Brown and Kholodenko 1999; Kholodenko et al. 2000 a).
+For spatially homogeneous reaction networks, the control over ﬂ uxes and in-
+termediate concentrations has been studied both experimentally a nd theoretically
+(reviewed in (Fell 1997)). The control is generally quantiﬁed as the extent to which
+any type of molecular process inﬂuences a system variable, such as the ﬂux or
+concentration. The control coeﬃcients are deﬁned as the ratios of the fractional
+changes in the system variable to that of the biochemical activity wh ich caused the
+system change. Mathematically, the stability of a system steady st ate is required
+and the changes are considered as inﬁnitesimally small, i.e., the coeﬃcie nts are ex-
+pressedasthe logtologderivatives(Fell 1997). Importantprincip lesunderlyingthe
+control of biochemical reaction networks in well-stirred reactors have been worked
+out recently. For instance, it can be shown that a large increase in t he activity of
+a single enzyme does not result in a substantial increase in the ﬂux fo r almost any
+metabolic network; marked ﬂux increase can be achieved by a conce rted modula-
+tion of several pathway reactions (Kacser and Acerenza 1993). In metabolic control
+analysis (MCA), this result is related to the so-called summation theo rem, which
+states that the sum of the enzyme control coeﬃcients adds up to 1 (Kacser and
+Burns 1973; Heinrich and Rapoport 1973; Westerhoﬀ and van Dam 1 987). There
+is no rate-limiting enzyme, the control is shared between all networ k processes.
+The present paper unravels the principles that govern the contro l pattern in spa-
+tially heterogeneous cellular networks. We demonstrate new prope rties of control
+thatresultfromthespatialaspectofdiﬀusionandseparationofs ignallingreactions.
+The control summation theorems, relevant for these networks, are formulated and
+proven.
+2.Methods
+2.1.Description of the system. Weconsiderlivingmetabolic systemsconsisting
+ofninternal chemical species Y1,...,Y n, with concentrations c1,...,c n. These
+species interact via mreactions which can be represented as
+n/summationdisplay
+i=1N+
+ijYi⇄n/summationdisplay
+i=1N−
+ijYi, j= 1,...,m (1)
+whereN±
+ijare the dimensionless forward and reverse stoichiometric coeﬃcien ts
+for the consumption of species Yiin the forward and reverse reactions j. We
+writeNij=N−
+ij−N+
+ijfor the net stoichiometric component. Reaction jhas
+rateαvjvj(c1,...,c n), so that in the absence of diﬀusion the time evolution of the
+concentrations cishould be given by
+∂
+∂tci=m/summationdisplay
+j=1Nijαvjvj, i= 1,...,n.
+cihas the dimension of concentration [M], or mole number per unit volume . The
+rateofthereaction1,i.e. vj, hasthedimensionofconcentrationperunit time[M/s].
+It is a function of the kinetic parameters of the enzyme catalyzing t hat reaction (or
+if non-enzymatic of the chemical reaction itself), e.g. KM, the concentration of the
+enzyme, and the concentrations of substrates, products and a llosteric modiﬁers of
+the reaction. The dimensionless parameter αvjis the tool we shall use to modulate
+the activity of reaction vj.
+CONTROL OF HETEROGENEOUS NETWORKS 3
+In this paper we will be interested in cases in which concentrations ca nnotbe
+assumed homogeneous in space inside the systems. For thermodyn amic reasons,
+living systems need to be open for at least some chemical compounds . These sub-
+stancesare transported acrossthe system membrane, usually b y transportproteins,
+i.e. eﬀectively there is a sink or source for some of the species on the system bound-
+ary, e.g. the (plasma) membrane. The spatial separation between the sink or source
+and the chemistry that takes place in the bulk phase then creates s patial variations
+in concentration.
+When the system is not homogeneousand not at steadystate, the concentrations
+needtobespeciﬁedasfunctionsoftimeandspace(i.e. ci(x,t)), andboundaryﬂuxes
+arerequired. Theprincipaldiﬃcultyaccompanyingthespatialinhom ogeneityofthe
+concentrations of any component Yi, which makes the classical MCA inapplicable,
+is that the number of ‘explicit’ variables associated with Yibecomes inﬁnitely large.
+Thereactionsareassumedtotake placein anenclosedthree-dimen sionalspacethat
+is represented by a bounded set of x1,x2,x3-coordinates, i.e. the volume V⊂R3.
+For instance, Vcan correspond to the cytoplasm or the mitochondrial matrix.
+InsideVthe species react with each other, according to Eq. 1; in addition th ey
+undergo diﬀusive transport. The concentrations ciof the species are functions of
+time (0< t < t end) and space ( x∈V), and their evolution is governed by the
+balance (reaction-diﬀusion) equations (Katchalsky and Curran 19 65)
+∂
+∂tci−αDiDi∆ci=m/summationdisplay
+j=1Nijαvjvj, x∈V,0< t < t end. (2)
+The parameter Diis the diﬀusion coeﬃcient of species Yi. It is considered homo-
+geneous. For Cartesian coordinates the Laplacian ∆ is deﬁned as
+∆ =∂2
+∂x2
+1+∂2
+∂x2
+2+∂2
+∂x2
+3.
+The operator ∆ has the dimension of 1 /length2[m−2].Dihas the dimension of
+surface per time [m2/s] and is assumed to be the same throughout volume V. In
+order to assess the importance of diﬀusion of a substance for the behavior of the
+system, we shall modulate the diﬀusion processes. To this aim, Diis multiplied
+by the dimensionless modulation parameter αDi, which has the value of 1 in the
+reference state.
+In addition to Eq. 2, which holds in the bulk, represented by V, we need to
+specify the behaviour at the boundary Sof the set V. For a species Yifor which
+the membrane is a passive barrier we assume a closed boundary cond ition,
+−αDiDi∂ci
+∂ν= 0 on S. (3)
+The vector νis the normal vector of unit length pointing out of V, and∂ci/∂νis
+the derivative of ciin the direction of ν. This makes the quantity −αDiDi∂ci/∂ν
+the outward diﬀusive ﬂux of species Yi.
+Ifaspecies istransportedacrossthe boundaryof V, then the boundarycondition
+takes a similar form, but with non-zero right-hand side,
+−αDiDi∂ci
+∂ν=αfifionS, (4)
+wherefiisthetransportrateperunit surfacearea. ficanbeduetoactivetransport
+or a (bio)chemical reaction at the membrane surface and may be a f unction of the
+4 MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODEN KO
+concentrations c1,...,c n. There is at least one non-zero ﬂux αfifi(one of which
+we conveniently assume to correspond to i= 1). Like other α’s,αfiis a parameter
+that we shall use to modulate the transport activity. This modulatio n is equivalent
+to changes in the activity or concentration of membrane enzymes o r carriers. We
+shall refer to the ‘ﬂux Jthrough the system’ as the magnitude of the net export of
+Y1, integrated over the surface of Vand normalized by the surface area:
+J=αf1
+|S|/integraldisplay
+Sf1dS (5)
+We normalizethe total ﬂowwith respectto the correspondingsurf aceareato obtain
+a surface-averaged ﬂux. The diﬀerence in role of a reaction rate in the bulk phase
+(vj) and a transportrate ( fi) is underlined by the diﬀerence in the dimensionality—
+the former is given in volume concentration per time unit (e.g., M/s), w hereas the
+latter is expressed in surface concentration (density) per time un it (e.g., M ·m/s).
+We comprise Eq. 3 into Eq. 4 by allowing fito be zero. Some reactions that involve
+cytoplasmic substances only occur in the membrane or at the membr ane surface.
+This is equivalent to the substrate of the reaction being exported a nd the product
+of the reaction being imported, and will be treated as such.
+2.2.Parameter Modulation and Control Analysis. We have explicitly intro-
+duced dimensionless modulation parameters αvj,αDi, andαfi, through which the
+system can be modiﬁed. For the formulation and interpretation of c ontrol theorems
+associated with diﬀusion we need to introduce two additional forms o f modulation,
+associated with space and time, in the following way. We assume that t he spa-
+tial and temporal variables x1,x2,x3, andt, are related to a reference spatial and
+temporal frame ξ1,ξ2,ξ3, andτ, via dimensionless modulation parameters αLand
+αt:
+x1=αLξ1, x 2=αLξ2, x 3=αLξ3,andt=αtτ.(6)
+Note that a reference time interval [0 ,τend] is rescaled to an actual time interval
+[0,αtτend] =αt[0,τend]; and similarly, the reference volume Vis scaled to an actual
+volumeαLV(Figure 1).
+V
+αLV
+Figure 1. The domain Vis scaled by geometric multiplication
+We shall be explicit about the cause-and-eﬀect relationship that ex ists between
+parameters andstate. The parameters are the kinetic constants in rate functions vj
+andfiand diﬀusion coeﬃcients Di, together with their modulators αvj,αDi, and
+αfi. We also consider the volume Vand the time interval [0 ,τend] as parameters,
+together with the space and time modulators αLandαt. A ﬁnal ‘parameter’ that
+CONTROL OF HETEROGENEOUS NETWORKS 5
+we need to take into account is the distribution of all species in space at the initial
+time.
+For a given choice of all parameters the concentration of each of t he species Yi
+is determined uniquely as a function of space and time, according to E qs. 2 and 4.
+The choice of parameters yields a a unique set of functions ci(x,t), each deﬁned at
+every point x∈αLVand at each time t∈[0,αtτend].
+Note that the functions ciare deﬁned on diﬀerent domains for diﬀerent αLand
+αt. Forcomparisonpurposes it will be more convenientto think of cias functions of
+the reference coordinates ξandτand the modulation parameters α, i.e.ci(ξ,τ,α),
+whereξ∈V,τ∈[0,τend], andα= (αvj,αDi,αfi,αL,αt). The functions ci(ξ,τ,α)
+determine the stateof the system associated with the choice of parameters.
+The change of coordinates, from ( x,t) to (ξ,τ), induces a small modiﬁcation in
+Eqs. 2 and 4, which now become
+α−1
+t∂
+∂τci−α−2
+LαDiDi∆ci=m/summationdisplay
+j=1Nijαvjvj, ξ∈V,0< τ < τ end(7)
+−α−1
+LαDiDi∂ci
+∂ν=αfifi ξ∈S,0< τ < τ end(8)
+Note that the diﬀerentiation in the operators ∆ and ∂/∂νis now with respect
+toξ. The deﬁnition of the ﬂux, however, remains unchanged under this change of
+coordinates, because of the surface averaging:
+J=αf1
+|S|/integraldisplay
+Sf1dS (9)
+In the vein of Metabolic Control Analysis we will consider a reference state
+associated with the choice αvj=αDi=αfi=αL=αt= 1 and a second state,
+resulting from an inﬁnitesimal change in one of these modulators. Th e diﬀerence
+between the two states will be taken to characterize the control that the modulated
+parameter has on the state of the system. The dimensionless para meterαvjis
+the tool we shall use to modulate the activity of reaction vj. Departures of αvj
+from 1 correspond to a modulation of enzyme catalytic activity or co ncentration,
+or to a proportional modulation of all rate constants of the react ion step if it is not
+enzyme catalyzed (this modulation leaves the equilibrium constant un changed, for
+details see (Kholodenko and Westerhoﬀ 1993, 1994, 1995), where this approach was
+introduced). For instance, if reaction 1 is a protein-protein intera ction (a central
+reaction in signaling networks), the rate vjdepends on two kinetic constants, kon
+andkoﬀ, and a change in αvjcorresponds to equal proportional change of both
+constants that leaves the dissociation (equilibrium) constant Kdunchanged. The
+ratio of the fractional change in a state variable of the reaction ne twork, such as
+Jorck, and the fractional change in αvjdetermines the control coeﬃcient with
+respect to reaction rate vj(in the limit of inﬁnitesimally small changes):
+CJ
+vj=dlnJ
+dlnαvj/vextendsingle/vextendsingle/vextendsingle/vextendsingle
+αvj=1, Cckvj=dlnck
+dlnαvj/vextendsingle/vextendsingle/vextendsingle/vextendsingle
+αvj=1,
+whereαvj= 1 corresponds to the reference state (all other parameters a re assumed
+ﬁxed). Similarly, considering two states corresponding to small mod ulations in di-
+mensionless parameters, αfiandαDi, we deﬁne the control coeﬃcients with respect
+to transport reaction and diﬀusion, CJ
+fiandCJ
+Di.
+6 MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODEN KO
+An intrinsically novel control coeﬃcient emerges as the heterogen eous spatial
+organization of cellular reaction network is taken into account. This coeﬃcient is
+obtained when the size ( L) of the system is modiﬁed through a modulation of the
+dimensionless parameter αL, as shown schematically in Fig. 1, whilst keeping ﬁxed
+allother parameters. In a cell setting, these parametersinclude the volumeand sur-
+face concentrations of enzymes and other molecular forms, the t otal concentrations
+of which are conserved (for instance, the total amount of phosp horylated and un-
+phosphorylated forms of a protein) in network reactions describe d by Eqs. 7 and 8.
+Therefore, increasing the cell size also implies adding conserved che mical moieties
+and additional enzymes both to the bulk aqueous phase and cell mem branes. Ac-
+cordingly, the ‘spatial’ control coeﬃcient is deﬁned as CJ
+L=dlnJ/dlnαL, where
+only the spatial variables are modulated, as described above (Eq. 6 ). It is of note,
+that the parameter Lcan be interpreted as the characteristic cell size, e.g., the vol-
+ume to surface ratio, whose fractional changes are equal to the fractional changes
+inαL.
+AspecialcaseofEq.7ariseswhenweonlyconsidersteady-state, non-equilibrium
+conﬁgurations; these correspond to solutions c1(ξ),...,c n(ξ) of the steady-state
+equations
+−α−2
+LαDiDi∆ci=m/summationdisplay
+j=1Nijαvjvj, ξ∈V, (10)
+withboundaryconditions8. Forthepurposesofthispaperweassu methatsolutions
+of this set of equations are locally unique and asymptotically stable.
+3.Results: the first summation theorem
+In a metabolic network where concentrations are homogeneous, t he sum of the
+ﬂux control by all biochemical reactions equals 1 (Kacser and Burn s 1973; Heinrich
+and Rapoport 1973). We generalize this summation theorem for sys tems where
+concentrations may not be homogeneous and where transport oc curs — here the
+sum over all the reactive processes need not be 1. The ﬂux may be p artially
+controlled by diﬀusion or by transport and it is because of this contr ol that the
+classical summation theorem no longer holds. The generalized summa tion theorem
+takes the form
+n/summationdisplay
+i=1CJ
+Di+m/summationdisplay
+j=1CJ
+vj+n/summationdisplay
+i=1CJ
+fi= 1. (11)
+In words this theorem reads: the total control by all diﬀusion, re action, and trans-
+port processes on any steady state ﬂux equals 1. The proof of Eq . 11 is based on
+Euler’s theorem on homogeneous function, which can be stated as f ollows. Let g
+be a function of p1,...,p n, such that for all piand for all λ >0,
+g(λβ1p1,...,λβnpn) =λγg(p1,...,p n), (12)
+for some β1,...,β n,γ∈R, i.e.,g(p1,...,p n) is the same function after the trans-
+formation
+˜g=λγg,˜pi=λβipi. (13)
+Then
+n/summationdisplay
+i=1βi∂ln|g|
+∂lnpi=γ. (14)
+CONTROL OF HETEROGENEOUS NETWORKS 7
+It may be noted that for some of the parameters pi,βimay equal zero. These
+parameters are not modulated in Eq. 13, and Eq. 14 shows that the se parameters
+are absent from the summation theorem.
+Forγandallβiequalto 1, Eq.14remindsofthe ﬂux controlsummation theorem
+of Metabolic Control Analysis (Kacser and Burns 1973; Heinrich and Rapoport
+1973), but it may not be clear a prioriwhat function and which parameters should
+be considered. When searching for other than the traditional sum mation theorems,
+a strategy may prove useful. One strategy is that of leaving the sy stem in essence
+in the same state (cf. (Kacser and Burns 1973)). In terms of the system under
+consideration this translates into the concentrations ci(ξ,τ) remaining the same
+when the parameters piof Eq. 13 are changed.
+In order to implement the above strategy and examine under what t ype of pa-
+rameter changes ci(ξ,τ) might be constant, one may inspect the equations that
+deﬁneci. For steady states Eqs. 10 and 8 deﬁne ci(ξ). Multiplying both equa-
+tions by the same factor λshould leave their solutions unchanged. Consequently,
+multiplying all αDi, allαvj, and all αfiby that same factor should not change
+the solutions ci(ξ) either: the terms in the equations are homogeneous functions of
+ﬁrst order of the parameters αDi,αvj, andαfi. When only these parameters are
+modulated, the speciﬁc transport rate remains unaltered, becau se the metabolite
+concentrations remain constant and neither αDi,αvj, orαfioccurs in the function
+fi(c1,...,c n). Consequently firemains unchanged, and therefore we can calculate
+the corresponding ﬂux as a function of λ,
+J(λ) =λαf1
+|S|/integraldisplay
+Sf1=λJ(1).
+We can reformulate this result as follows: we have shown that the ﬂu xJ, as a
+function of the parameters αDi,αvj, andαfi, satisﬁes
+J(λαD1,...,λα Dn,λαv1,...,λα vm,λαf1,...,λα fn)
+=λJ(αD1,...,α Dn,αv1,...,α vm,αf1,...,α fn).
+Equality 11 now follows from Eq. 14.
+It should be remembered that the parameters αDi,αvj, andαfirepresentthe ac-
+tivities of diﬀusion, chemical, and transport processes, respectiv ely. Consequently,
+Eq. 11 really refers to a theorem concerning the control by diﬀusio n, chemistry and
+transport. It is an extension, both in concept and in proof, of the familiar ﬂux con-
+trol summation theorem of Metabolic Control Analysis. The latter o nly dealt with
+the middle terms of the left-hand side and then only the enzyme cata lyzed reac-
+tions thereof, it assumed concentrations to be homogeneous in sp ace, and neglected
+explicit transport terms.
+A further extension to the above methodology will generalize the ab ove sum-
+mation theorem to systems that depend on time: Dropping the assu mption of
+steady state, Eqs. 7 and 8 become the equations that deﬁne ci(ξ,τ). Multiplying
+both these equations by the same factor λagain leaves their solutions unchanged.
+Consequently:
+−CJ(τ)
+t+n/summationdisplay
+i=1CJ(τ)
+Di+m/summationdisplay
+j=1CJ(τ)
+vj+n/summationdisplay
+i=1CJ(τ)
+fi= 1. (15)
+8 MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODEN KO
+HereCJ(τ)
+tcoincides with the time-control coeﬃcient deﬁned in (Acerenza et a l.
+1989). How can we understand this theorem and in particularthis ne w time-control
+coeﬃcient? Let us ﬁrstconsiderthe situation that would ensue fro msimultaneously
+and equally increasing all the parameters αDi,αvj, andαfiby 1% in the absence
+of an increase in αt. Because all activities increase, also the ﬂux Jshould increase.
+However, the system should also change more quickly in time, i.e. the in crease in
+magnitude of Jshould occur earlier. To obtain a proportionate increase in J, one
+should look at an earlier point in time, i.e. time should be 1% earlier, or, ke eping
+in mind that t=αtT,αt= 0.99.
+CJ(τ)
+tshould not be confused with the time-dependent control coeﬃcien ts de-
+ﬁned by (Westerhoﬀ and van Dam 1987; Heinrich and Reder 1991). F or a further
+discussion of the distinctions, see also (Kholodenko et al. 1997) for the control
+analysis of relaxations in the vicinity of the steady state.
+Often, as time goes to inﬁnity, the system relaxes to a steady stat e. The control
+by time on the ﬂux then reduces to zero and the summation theorem for the time
+dependent controlcoeﬃcients reduces to the one for steady st ate controlcoeﬃcients
+(Eq. 11).
+The summation theorem 15 is more general than suggested by the a bove deriva-
+tion. It can be derived without requiring explicit equations for the tim e evolution
+of the system, such as Eqs. 7 and 8. The proof then considers an a ctual physical
+transformationof the system under consideration: all the time de pendent elemental
+processes are increased by the same factor λ. This implies that everything happens
+in the same way, but faster by that same factor λ. We represent this concept of
+‘faster’ by the parameter αt, as above (since t=αtτ,αt<1 correspondsto ‘faster’,
+andαt>1 to ‘slower’). Writing the parameter-dependence explicitly,
+ci(ξ,τ) =ci(ξ,τ;αDi,αvj,αfi,αL,αt),
+we have
+ci/parenleftBig
+ξ,τ;λαDi,λαvj,λαfi,αL,αt
+λ/parenrightBig
+=ci(ξ,τ;αDi,αvj,αfi,αfi,αt),
+or in other words, ciis homogeneous of zeroth order in αDi,αvj,αfi, and 1/αt.
+Using Eq. 14 this yields the summation theorem for concentrations,
+−Cck
+t+n/summationdisplay
+i=1Cck
+Di+m/summationdisplay
+j=1Cckvj+n/summationdisplay
+i=1Cck
+fi= 0. (16)
+whereckis short for ck(ξ,τ). A similar result for the ﬂux,
+J/parenleftBig
+τ;λαDi,λαvj,λαfi,αt
+λ/parenrightBig
+=λJ(τ;αDi,αvj,αfi,αt),
+showsthattheﬂuxishomogeneousofﬁrstorderin αDi,αvj,αfi, and1/αt, resulting
+in the summation theorem Eq. 15.
+4.A novel summation theorem
+The above theorem is an extension of the theorem of (Acerenza et al. 1989) to
+cases with transport and diﬀusion. The theorem we shall develop no w is intrinsi-
+cally new as its origin lies in spatial aspects that have hitherto been ne glected in
+CONTROL OF HETEROGENEOUS NETWORKS 9
+Metabolic Control Analysis (Fell 1997). The strategy we follow is aga in to con-
+sider a transformation for which the system properties should not change. We ﬁrst
+discuss the nature of diﬀusion, as illustrated by Einstein’s diﬀusion eq uation:
+δx=/radicalbig
+nDDδt,
+wherenDis a number of order 1 that depends on the dimensionality. In words,
+the displacement due to diﬀusion increases with the square root of t he diﬀusion
+coeﬃcient. Consequently, increasing all diﬀusion coeﬃcients by λ2should increase
+all displacement by the factor λ.
+This becomes obvious when considering Eq. 7. Replacing αDibyλ2αDiand
+αLbyλαLleaves Eq. 7 unchanged. The boundary condition 8 in a natural way
+suggests replacing αfibyλαfi, so that this equation is also essentially unchanged.
+As a result this choice of parameters leaves the solution ciinvariant:
+ci(ξ,τ;λ2αDi,αvj,λαfi,λαL,αt) =ci(ξ,τ;αDi,αvj,αfi,αL,αt).(17)
+We immediately deduce the second summation theorem for concentr ations,
+2n/summationdisplay
+i=1Cc
+Di+n/summationdisplay
+i=1Cc
+fi+Cc
+L= 0, (18)
+wherecstands for any ci(ξ,τ). Similarly, since the ﬂux satisﬁes
+J(τ;λ2αDi,αvj,λαfi,λαL,αt) =λJ(τ;αDi,αvj,αfi,αL,αt),
+the associated summation theorem results
+2n/summationdisplay
+i=1CJ(τ)
+Di+n/summationdisplay
+i=1CJ(τ)
+fi+CJ(τ)
+L= 1. (19)
+Naturally, if we only consider steady states, then ci(ξ,τ) reduces to ci(ξ), andJ(τ)
+toJ.
+The modulation of V, viaαL, implicated in the evaluation of the corresponding
+control coeﬃcient is one in which the size of the system changes; it is important,
+however, that the system size changes whilst keeping the volume co ncentration of
+enzymes in the bulk aqueous phase constant and the surface conc entrations of the
+membrane enzymes constant.
+Toillustratethemodulationintroducedabove,considerthecaseof aone-dimensional
+spatial domain of the form (0 ,∞); the membrane is thought to be at x= 0, and
+the cell is deemed so large that the ‘other end’ is eﬀectively at inﬁnity . For such a
+‘half-inﬁnite’ cell, in non-equilibrium steady-state, Eq. 19 reduces t o
+2n/summationdisplay
+i=1CJ
+Di+n/summationdisplay
+i=1CJ
+fi= 1 (20)
+whereJis the ﬂux at the border ( x= 0);CJ
+Lvanishes as a result of the inﬁnite
+size. Figure 2 shows how the solution ci(x) depends on the parameter modulation
+by the factor λgiven in Eq. 17. Note that here ciis plotted as a function of x;
+when plotted as a function of ξ, the graphs for diﬀerent λcoincide (cf. 17).
+10 MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODE NKO
+λ= 1c1:λ >1
+c2:λ >1
+Figure 2. The scaling in λfor a two-species system
+ξ= 0 ξ=Lkinasephosphatase
+Figure 3. Geometry 1: a slice bounded by parallel membranes
+kinase
+at the
+membrane
+phosphatase
+in the bulk
+Figure 4. Geometry 2: a spherical cell
+5.An explicit example system
+For certain simple cases control coeﬃcients can be calculated explic itly. We do
+so here for a kinase/phosphatase example that we also discussed in (Brown and
+Kholodenko 1999; Kholodenko et al. 2000a). There are two species ,YandYP,
+which are the unphosphorylated and phosphorylated form of a give n protein; the
+kinase converts YintoYP, and the phosphatase does the reverse.
+Besides providing an illustration of the concepts and results discuss ed above we
+wishtodemonstratetheinﬂuenceofthesystemgeometryonthec ontrolcoeﬃcients.
+We consider two cases:
+(1)Vis bounded by two parallel membranes; the kinase reaction is localized
+to one membrane, the phosphatase to the other (Figure 3);
+(2)Vis a spherical region (e.g. a cell or an organelle) bounded by a membra ne;
+the kinase is localized at the membrane, but the phosphatase is distr ibuted
+throughout the bulk (Figure 4).
+CONTROL OF HETEROGENEOUS NETWORKS 11
+Asweshallseebelow,inthecaseofparallelmembranesthesizecont rolcoeﬃcient
+CJ
+Lisnegative: an increase in the distance between the membranes reduces the ﬂ ux
+through the system. However, when the phosphatase is not memb rane-bound but
+distributed, as in the second case, increasing the system size actu ally increases the
+ﬂux:CJ
+Lispositive.
+5.1.Two parallel membranes. We assume that the system is large with respect
+to the distance Lbetween the membranes and therefore adopt a one-dimensional
+formulation. We also restrict the study to (non-equilibrium) steady state.
+Since no reaction takes place in the bulk, the equations satisﬁed by YandYP
+in the bulk (Eq. 10) reduce to
+−α−2
+LαDDYP′′=−α−2
+LαDDY′′= 0,0< ξ < L. (21)
+Note that the spatial variable is ξ, as discussed above; the physical variable xis
+given by x=αLξ.
+For the kinase and phosphatase reactions we assume the rate fun ctions
+αkkk(κkY−YP) and αpkp(YP−κpY).
+Note the dimensionality of kk,p: the rate functions are surface ﬂuxes, but YPand
+Yare bulk concentrations; kkandkptherefore have dimension length/time. The
+coeﬃcients αk,pandκk,pare dimensionless.
+The kinase and phosphatase reactions both enter the description as boundary
+conditions (cf. 8):
+α−1
+LαDDYP′=αpkp(YP−κpY)
+α−1
+LαDDY′=−αpkp(YP−κpY)atξ= 0 (phosphatase) (22)
+−α−1
+LαDDYP′=−αkkk(κkY−YP)
+−α−1
+LαDDY′=αkkk(κkY−YP)atξ=L(kinase) (23)
+Equation 21 implies that the spatial gradients of YPandY(i.e.YP′andY′)
+are constant in ξ; let us set δ=YP′. From the solution of equations (21–23) the
+relevant information for our purposes is δ:
+δ=M(βpαkκk−βkαpκp)
+α−1
+LαDD(βk+βp)+Lβkβp. (24)
+HereMis the total concentration Y+YP, which is independent of ξby Eq. 21,
+and
+βk=αkkk(1+κk) and βp=αpkp(1+κp).
+Because of the spatial separation of the reactions the ﬂux as deﬁ ned by Eq. 5
+equals the diﬀusive ﬂux,
+J=−α−1
+LαDDYP′=−α−1
+LαDDδ. (25)
+From Eqs. 24 and 25 we can determine the control coeﬃcients of th e ﬂux with
+respect to the kinase and phosphatase reactions and to diﬀusion, as well as the
+12 MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODE NKO
+‘length’-control coeﬃcient:1
+CJ
+k=Dβp
+D(βk+βp)+Lβkβp,
+CJ
+p=Dβk
+D(βk+βp)+Lβkβp,
+CJ
+D=Lβkβp
+D(βk+βp)+Lβkβp,
+CJ
+L=−Lβkβp
+D(βk+βp)+Lβkβp.
+Clearly these expressions satisfy the summation theorems Eqs. 11 and 19:
+CJ
+D+CJ
+k+CJ
+p= 1,
+2CJ
+D+CJ
+k+CJ
+p+CJ
+L= 1.
+Note that both the kinase and the phosphatase reaction are boun dary eﬀects, and
+therefore give rise to boundary control coeﬃcients CJ
+fiof Eqs. 11 and 19.
+For concentration control we choose to consider not a pointwise c oncentration,
+but the diﬀerence between concentrations at opposite ends:
+YP(L)−YP(0) =Lδ.
+Denoting the control coeﬃcients with respect to this quantity as Cc, we have
+Cc
+k=Dβp
+D(βk+βp)+Lβkβp,
+Cc
+p=Dβk
+D(βk+βp)+Lβkβp,
+Cc
+D=−D(βk+βp)
+D(βk+βp)+Lβkβp,
+Cc
+L=D(βk+βp)
+D(βk+βp)+Lβkβp.
+An example of the values of these control coeﬃcients is given in Figur e 5.
+5.2.A spherical cell. For the second example we consider the same system as
+above, but now in a spherical cell of radius L. We assume spherical symmetry
+throughout.
+The kinase reaction is again localized at the membrane, and therefor e results in
+a boundary condition
+−α−1
+LαDDYP′=αkkk(YP−κkY),
+−α−1
+LαDDY′=−αkkk(YP−κkY),atξ=L(kinase). (26)
+The spatial variable is again ξ, but it now represents a radialcoordinate. The
+phosphatase reaction, which in this example is distributed througho ut the bulk,
+now enters as a right-hand side in the diﬀerential equation for YandYP(cf. 10):
+−α−2
+LαDDξ−2(ξ2YP′)′=−αpkp(YP−κpY),
+−α−2
+LαDDξ−2(ξ2Y′)′=αpkp(YP−κpY),0< ξ < L.
+1Note that these formulas contain no α’s, since they result from evaluation at αL=αD=
+αk=αp= 1; consequently, βk,p=kk,p(1 +κk,p).
+CONTROL OF HETEROGENEOUS NETWORKS 13
+0246810−1−0.8−0.6−0.4−0.200.20.40.60.81
+0246810−1−0.8−0.6−0.4−0.200.20.40.60.81
+L(µm)CJ
+pCJ
+D
+CJ
+k
+CJ
+L
+L(µm)Cc
+p
+Cc
+DCc
+L
+Cc
+k
+Figure 5. Values of control coeﬃcients as a function of Lfor the
+ﬁrst example (parallel membranes at distance L, the kinase and
+phosphatase are localized at diﬀerent membranes; D= 1µm2/s,
+kp=kk= 1/s,κp= 0.1,κk= 10).
+Again note the dimensions of kkandkp: similar to the previous example, kkhas
+dimension length/time; but here kpconverts a bulk concentration into a bulk ﬂux,
+and therefore kphas the (more familiar) dimension 1/time. As before, the total
+concentration is independent of ξ, and denoted by M:
+M=YP+Y (27)
+As a ﬁrst step we investigate diﬀerent boundary conditions, where we prescribe
+the ﬂuxJ:
+−α−1
+LαDDYP′=J=α−1
+LαDDY′, (28)
+atξ=L. For this choice of boundary conditions we can solve the system exa ctly.
+Setu=YP−κpY; thenusatisﬁes the equation
+−α−2
+LαDDξ−2(ξ2u′)′=−αpkp(1+κp)u,
+with boundary condition
+−α−1
+LαDDu′(L) = (1+ κp)J.
+We ﬁnd that uis given by
+u(ξ) =−J1+κp
+α−1
+LαDDL2
+γLcoshγL−sinhγLsinhγξ
+ξ, (29)
+where the inverse length scale γis deﬁned by
+γ2=α2
+Lαpkp(1+κp)
+αDD.
+14 MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODE NKO
+It follows that
+YP(ξ) =κp
+1+κpM+1
+1+κpu(ξ)
+Y(ξ) =1
+1+κpM−1
+1+κpu(ξ).(30)
+To return to the boundary conditions 26 we equate the ﬂux Jin Eq. 28 with the
+right-hand side of Eq. 26:
+J=αkkk(YP(L)−κkY(L)) =αkkk/parenleftbigg1+κk
+1+κpu(L)+κp−κk
+1+κpM/parenrightbigg
+;
+using the expression 29 for uthis yields
+J=ν
+1+β, ν=αkkkMκp−κk
+1+κp, β=αkkk1+κk
+α−1
+LαDDL
+γLcothγL−1
+(31)
+(cothxis the hyperbolic cotangent, cosh x/sinhx).
+As in the previous example we thus obtain explicit formulas for the con trol of
+the various parameters on the ﬂux:
+CJ
+k=1
+1+β
+CJ
+D=1
+2β
+1+βγLcothγL−2+γ2L2(coth2γL−1)
+γLcothγL−1
+CJ
+p=1
+2β
+1+βγLcothγL−γ2L2(coth2γL−1)
+γLcothγL−1
+CJ
+L=β
+1+β1−γ2L2(coth2γL−1)
+γLcothγL−1
+As an example of the concentration control values we choose a poin t at distance
+L/2 from the center of the cell. Denoting the control coeﬃcients with respect to
+this quantity as Cc, we calculate
+Cc
+k=µCJ
+k
+Cc
+D=µ/parenleftbigg
+CJ
+D+1
+2φ−1/parenrightbigg
+Cc
+p=µ/parenleftbigg
+CJ
+p−1
+2φ/parenrightbigg
+Cc
+L=µ/parenleftbig
+CJ
+L−φ+1/parenrightbig
+Here
+µ=u(L/2)
+κpM+u(L/2)andφ=γ2L2
+γLcothγL−1−γL
+2coth/parenleftbiggγL
+2/parenrightbigg
+.
+An example of the values of these control coeﬃcients is given in Figur e 6.
+6.Discussion
+Until fairly recently, biochemistry focused more on the time depend ent aspects
+of processes than on the spatial aspects. Exceptions were the m embrane-mediated
+subcompartmentation of cellular metabolism. The cellular subcompar tments were
+CONTROL OF HETEROGENEOUS NETWORKS 15
+024681000.10.20.30.40.50.60.70.80.91
+0246810−1−0.500.5
+L(µm)CJ
+p
+CJ
+DCJ
+kCJ
+L
+L(µm)Cc
+pCc
+D
+Cc
+LCc
+k
+Figure 6. Values of control coeﬃcients as a function of Lfor the
+second example (a spherical cell with a kinase on the membrane
+and a phosphatase in the cytosol; D= 1µm2/s,kp=kk= 1/s,
+κp= 0.1,κk= 10).Ccdenotes control of the concentration mea-
+sured halfway between the center and the membrane.
+mostly considered to be homogeneous in terms of concentrations a nd the hetero-
+geneity between them wasanalyzed in terms of the activity of trans port catalystsin
+the membranes (Westerhoﬀ and van Dam 1987). Inhomogeneity of metabolites and
+evenionswithin aqueoussubcompartmentshasoftenbeen propos ed(Kell1979)but
+calculations have shown that at least for central metabolic routes aqueous diﬀusion
+should be fast on the time scale of the catalytic turnover of the enz ymes also given
+the proximity of the enzyme molecules due to the small sizes of cells (W esterhoﬀ
+and van Dam 1987; Westerhoﬀ and Welch 1992). Metabolic Control A nalysis was
+developed from this perspective and proved a useful way to ration alize the study
+of regulation and control of intermediary metabolism (Fell 1997) an d free-energy
+transduction (Westerhoﬀ and van Dam 1987). More than an analys is procedure,
+Metabolic Control Analysis also provided biochemists with a set of laws (theorems)
+that govern control of ﬂuxes and concentrations in metabolic net works. One type
+of these were the summation theorems, stating that the sum of th e control by all
+the individual enzyme catalyzed reactions on ﬂux and concentratio n (Kacser and
+Burns 1973; Heinrich and Rapoport 1973), oscillation amplitude (Kho lodenko et al.
+1997) or relaxation time constant (Heinrich and Reder 1991) should equal 1, 0, 1,
+and 1 respectively.
+Those were the days where biochemistry focused on metabolism. Ho wever, only
+a minor fraction of the known genomes encodes primary metabolism. Much coding
+capacity is devoted to regulation, in part through signal transduc tion (Kell 1979;
+Kholodenko et al. 2000c). Signal transduction has (i) the spatial a spect that many
+signals arrive at the cell’s plasma membrane and have to be transferr ed to its
+16 MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODE NKO
+nuclear DNA, (ii) the added complication that much of the signal is tra nsferred
+by proteins in direct phosphoryl transfers, rather than with sma ll molecules as
+messengers, and (iii) the feature that those proteins are often p resent at a thousand
+times lower concentrations than the usual metabolite. All these th ree features work
+in the direction that might make diﬀusion of the components limiting in sig nal
+transfer. Indeed, it was calculated that for realisticparameter v alues, concentration
+gradientsinsignal(deﬁnedasin(Franckeetal.)) shouldarise(Fell1 980;Brownand
+Kholodenko 1999; Kholodenko et al. 2000a), which might even force the cell to take
+refuge to alternative mechanisms of movement of the signal prote ins (Kholodenko
+2002).
+With the realization of the possible importance of transport and diﬀu sion for
+cell biochemistry, there came a need to update Metabolic Control A nalysis so as
+to include the aspects of diﬀusion. This is what the ﬁrst part of this p aper accom-
+plished for the summation theorem. The result was rather simple, to the sum of the
+enzyme control coeﬃcients also coeﬃcients for the control by th e diﬀusion of the
+various species needed to be added, as well as control coeﬃcients for the transport
+processes and for the non-enzyme-catalyzed chemical reaction s, before it amounted
+to 1 for ﬂux control and 0 for concentration control. This result is perhaps not
+surprising, but has been overlooked eﬀectively in the literature for quite a while. In
+studies of the control of growth rate of E. coliby the lactose permease, it was found
+that a sum of 1 could not be found and it was suspected that part of the control
+resided in diﬀusion across the outer membrane (Jensen et al. 1993; Dykhuizen et al.
+1987). It was found that none of the glycolytic enzymes had signiﬁc ant control on
+the glycolytic ﬂux in yeast. This was considered a problem until stron g indica-
+tions arose of substantial control in glucose transport into the c ells (Reijenga et al.
+2001). Thus, if anything, our extension of the summation theorem to include the
+transport steps may open eyes to the possibility that transport c ontrols metabolic
+ﬂuxes. Similarly we should expect renewed attention to arise from th e other term
+in our summation theorem, i.e. the one that refers to control by th e diﬀusion. Of
+course the novelty lies not so much in the possibility of such control, b ut in the fact
+that it may account for a shortfall of metabolic control from the t otal of 1.
+We have also formulated the summation theorem for the case of inho mogeneity
+in both time and space, i.e. where a spatial gradient may be developing over time.
+In that case diﬀusion and time turn out to share in the total ﬂux con trol of 1.
+In the case of homogeneity in time (i.e. at steady state), the forme r contribution
+disappears, in case of spatial homogeneity the latter. The experim ental system
+that springs to mind is that of Belousov-Zhabotinsky reactions exh ibiting time
+varying spirals (Zhabotinsky and Zaikin 1973), but closer to biology t he wave type
+oscillations in yeast extracts (Mair et al. 2001). The most relevant a pplication
+may be in developmental biology, but for this an extension to Hierarc hical Control
+Analysis (Snoep et al. 2002) will be needed.
+While the ﬁrst ﬂux summation result, Eq. 11, and the ﬁrst concentr ation sum-
+mation result, Eq. 16, are a simple extension of existing theory, the summation
+theorems concerning changes of spatial scale (Eqs. 18, 19, and 2 0) are fundamen-
+tally new, and introduce a concept that is new to Metabolic Control A nalysis:
+control by size.
+CONTROL OF HETEROGENEOUS NETWORKS 17
+‘Control by the size’, the quantity measured by CL, is a concept with some
+interesting properties. For instance, CJ
+LandCc
+Lcan be both positive and negative.
+This is related to the fact that the size of a system can inﬂuence the ‘productive’
+capacity of the system in diﬀerent ways at the same time. Let us exa mine this for
+ﬂux control:
+•Size can be an obstacle: if material has to travel over a distance L, as in the
+example of parallel membranes (Case 1 of Section 5), then an increa se inL
+implies a decrease of the (average) concentration gradient, and t herefore
+causes a reduction in diﬀusive ﬂux. This is the dominant eﬀect in the
+large-Llimit of Case 1, as shown in Fig. 5, where it leads to a limit value
+ofCJ
+Lof−1.
+•On the other hand, size can also be a resource: if a reaction takes p lace in
+a bulk region of linear size L, thenLis also a measure of reactive capacity:
+an increase in size will result in an increase of total reactive ﬂux. This is
+demonstrated by the second example, where the input- and outpu t bound-
+aries are co-located and no material is forced to travel over a dist anceL.
+Here the control by size is positive, and in the limit of small Lthe control
+even approaches 1.
+The new summation theorems have a number of interesting implication s. Per-
+haps the most striking one is that they impose an upper limit to the con trol that
+diﬀusion may have on the ﬂux through the system. The ﬁrst summat ion theorem
+suggested that this number be 1, i.e. if the biochemical and the tran sport processes
+were in excess and the system were large; the second, however, s hows that it is only
+1/2whenever the controlby size is positive (i.e. when increasingthe siz e results in a
+higer ﬂux). Clearly, in such cases there must always be another pro cess controlling
+ﬂux, in addition to diﬀusion. In the example of Fig. 6 the other proces ses were the
+biochemical reactions.
+The example of Figure 2 also shows how changing the diﬀusion rate alte rs the
+concentration proﬁles. By increasing the diﬀusion rate we increase the width of
+a ‘boundary layer’, in which a signiﬁcant part of the reactions takes p lace. As
+a result the ﬂux is also increased. Note, however, that the relative increase in
+size of the boundary layer (which scales as λ, sincex=αLξ=λξ) is the square
+root of the increase of the diﬀusion coeﬃcients ( αDi=λ2). This can be explained
+intuitivelyasfollows. The sizeofthe boundarylayeris determined byc ounteracting
+forces; a thin boundary layer provides for fast spatial transpor t (on the scale of the
+layer thickness), but little reactive capacity, while for a thick layer t he situation
+is inversed. An increase in diﬀusion rate is therefore used partially to increase
+transport rate, and partially to increase reaction capacity. The n umber 1/2 is the
+result of this trade-oﬀ.
+Acknowledgement
+This workwas supported by the RTN network ‘Nonlinear Partial Diﬀer ential Equa-
+tions describing Front Propagation and other Singular Phenomena’, HPRN-CT-
+2002-00274, and by the National Institute of Health through Gra nt GM59570.
+18 MARK A. PELETIER, HANS V. WESTERHOFF, AND BORIS N. KHOLODE NKO
+References
+Acerenza,L.,Sauro,H.M., andKacser,H.1989.Controlanalysis oftime-dependent
+metabolic systems. J. Theoret. Biol. 137:423–444
+Brown, G. C. and Kholodenko, B. N. 1999. Spatial gradients of cellu lar phospho-
+proteins. FEBS Letters 457:452–454
+Dykhuizen, D. E., Dean, A. M., and Hartl, D. L. 1987. Metabolic ﬂux an d ﬁtness.
+Genetics 115:25–31
+Fell, D. A. 1980. Theoretical analyses of the functioning of the high - and low- Km
+cyclic nucleotide phosphodiesterases in the regulation of the conce ntration of
+adenosine 3’,5’-cyclic monophosphate in animal cells. J. Theor. Biol. 84:361–385
+—. 1997. Understanding the Control of Metabolism. Portland Pres s, London
+Francke, C., Postma, P. W., Westerhoﬀ, H. V., Blom, J. G., and Peletie r, M. A.
+Why the phosphotransferase system of Escherichia coli escapes the diﬀusion
+limitation of signal transduction, transport and metabolism that co nfronts mam-
+malian cells
+Haugh, J. M. and Lauﬀenburger, D. A. 1997. Physical modulation o f introcellular
+signalling processes by locational regulation. Biophys. J. 72:2014–2031
+Heinrich, R. and Rapoport, T. 1973. Linear theory of enzymatic ch ains; its appli-
+cation for the analysis of the crossover theorem and of the glycoly sis of human
+erythrocytes. Acta Biol. Med. Germ. 31:479–494
+Heinrich, R. and Reder, C. 1991. Metabolic control analysis of relax ation processes.
+J. Theor. Biol. 151:343–350
+Jensen, P. R., Westerhoﬀ, H. V., and Michelsen, O. 1993. The use of lac-type
+promoters in control analysis. Eur. J. Biochem. 211:181–191
+Kacser, H. and Acerenza, L. 1993. A universal method for achiev ing increases in
+metabolite production. Eur. J. Biochem. 216:361–367
+Kacser, H. and Burns, J. 1973. The controlof ﬂux. Symp. Soc. Exp. Biol. 27:65–104
+Katchalsky, A. and Curran, P. F. 1965. Nonequilibrium Thermodyna mics in Bio-
+physics. Harvard
+Kell, D. B. 1979. On the functional proton current pathway of elec tron transport
+phosphorylation. An electrodic view. Biochim. Biophys. Acta 549:55–99
+Kholodenko, B. N. 2002. MAP kinase signalling and endocytic traﬃckin g: A mar-
+riage of convenience? Trends Cel. Biol. 12:173–177
+Kholodenko, B. N., Brown, G. C., and Hoek, J. B. 2000a. Diﬀusion con trol of
+protein phosphorylation in signal transduction pathways. Biochem. J. 350:901–
+907
+Kholodenko, B. N., Demin, O. V., and Westerhoﬀ, H. V. 1997. Contro l analysis of
+periodic phenomena in biological systems. J. Phys. Chem. B101:2070–2081
+Kholodenko, B. N., Hoek, J. B., and Westerhoﬀ, H. V. 2000b. Why cy toplasmic
+signalling proteins should be recruited to cell membranes. Trends Cell Biol.
+10:173–178
+Kholodenko, B. N. and Westerhoﬀ, H. V. 1993. Metabolic channelling and control
+of the ﬂux. FEBS Letters 320:71–74
+—. 1994. Control theory of one enzyme. Biochim. Biophys. Acta 1208:294–305
+—. 1995. The macroworld versus the microworld of biochemical regu lation and
+control.Trends Biochem. Sci. 20:52–54
+Kholodenko, B. N., Westerhoﬀ, H. V., Schwaber, J., and Cascante, M. 2000c. En-
+gineering a living cell to desired metabolite concentrations and ﬂuxes : Pathways
+CONTROL OF HETEROGENEOUS NETWORKS 19
+with multifunctional enzymes. Metabolic Engineering 2:1–13
+Mair, T., Warnke, C., and Muller, S. C. 2001. Spatio-temporal dynam ics in glycol-
+ysis.Faraday Discuss. 120:249–259
+Reijenga, K. A., Snoep, J. L., Diderich, J. A., van Verseveld, H. W., We sterhoﬀ,
+H. V., and Teusink, B. 2001. Control of glycolytic dynamics by hexos e transport
+inSaccharomyces cerevisiae .Biophys. J.
+Snoep, J. L., van der Weijden, C. C., Andersen, H. W., Westerhoﬀ, H . V., and
+Jensen, P. R. 2002. DNA supercoiling in Escherichia coli is under tight and
+subtle homeostatic control, involving gene-expression and metabo lic regulation
+of both topoisomerase I and DNA gyrase. Eur. J. Biochem. 269:1662–1669
+Westerhoﬀ, H. V. and van Dam, K. 1987. Thermodynamics and Cont rol of Biolog-
+ical Free-energy Transduction. Elsevier, Amsterdam
+Westerhoﬀ, H. V. and Welch, G. R. 1992. Enzyme organizationand t he direction of
+metabolic ﬂow: Physicochemical considerations. Curr. Top. Cell. Regul. 33:361–
+390
+Zhabotinsky, A. M. and Zaikin, A. N. 1973. Autowave processes in a distributed
+chemical system. J. Theor. Biol. 40:45–61

@@ -1,0 +1,296 @@
+arXiv:cond-mat/9809209v1  [cond-mat.stat-mech]  15 Sep 1998Finite-size scaling of the error threshold transition
+in ﬁnite populations
+P. R. A. Campos and J. F. Fontanari
+Instituto de F´ ısica de S˜ ao Carlos
+Universidade de S˜ ao Paulo
+Caixa Postal 369
+13560-970 S˜ ao Carlos SP
+Brazil
+Abstract
+The error threshold transition in a stochastic (i.e. ﬁnite population) version of
+thequasispeciesmodelofmolecularevolutionisstudiedusingﬁnite-s izescaling. For
+the single-sharp-peakreplicationlandscape, thedeterministic mod elexhibitsaﬁrst-
+order transition at Q=Qc= 1/a, whereQis the probability of exact replication of
+a molecule of length L→ ∞, andais the selective advantage of the master string.
+For suﬃciently large population size, N, we show that in the critical region the
+characteristic time for the vanishing of the master strings from th e population is
+described very well by the scaling assumption τ=N1/2fa/bracketleftbig
+(Q−Qc)N1/2/bracketrightbig
+, where
+fais ana-dependent scaling function.
+Short Title: error threshold in ﬁnite populations
+PACS:87.10+e, 64.60.Cn
+1
+An elusive issue in the extension of Eigen’s quasispecies model [1] of mo lecular
+evolutiontoﬁnite populationsisthe characterizationoftheso-calle derrorthreshold
+phenomenonwhichlimitsthelengthofthemoleculesand, consequent ly,the amount
+of information they can store [2]. This phenomenon poses an interes ting challenge
+to the theoriesof the origin oflife, since it preventsthe emergence of huge molecules
+which could carry the necessary information for building a complex me tabolism.
+Moreover, since modern theories of integration of information in pr e-biotic systems
+involve the compartmentation of a small number of molecules, the un derstanding of
+the eﬀects of the error propagation in ﬁnite populations has becom e a major issue
+to the theories of the origin of life [3].
+The quasispecies model was originally formulated within a deterministic chem-
+ical kinetic framework based on a set of ordinary diﬀerential equat ions for the
+concentrations of the diﬀerent types of molecules that compose t he population.
+Such formulation, however, is valid only in the limit where the total num ber of
+molecules, denoted by N, goes to inﬁnity. In the binary version of the quasispecies
+model, a molecule is represented by a string of Ldigits (s1,s2,...,s L), with the
+variables sαallowed to take on only two diﬀerent values, say sα= 0,1, each of
+which representing a diﬀerent type of monomer used to build the mole cule. The
+concentrations xiof molecules of type i= 1,2,...,2Levolve in time according to
+the equations [1, 2]
+dxi
+dt=/summationdisplay
+jWijxj−Φ(t)xi, (1)
+where Φ( t) is a dilution ﬂux that keeps the total concentration constant. Th is ﬂux
+introducesanonlinearityinEq.(1), andisdeterminedbytheconditio n/summationtext
+idxi/dt=
+0. In particular, assuming/summationtext
+ixi= 1 yields
+Φ =/summationdisplay
+i,jWijxj. (2)
+The elements of the replication matrix Wijdepend on the replication rate or ﬁtness
+Aiofthe stringsoftype iaswellasonthe Hammingdistance d(i,j)betweenstrings
+iandj. They are given by [1, 2]
+Wii=Aiqν(3)
+and
+Wij=AjqL−d(i,j)(1−q)d(i,j)i/negationslash=j, (4)
+where 0≤q≤1 is the single-digit replication accuracy, which is assumed to be the
+same for all digits.
+The quasispecies concept and the error threshold phenomenon ar e illustrated
+more neatly for the single-sharp-peak replication landscape, in whic h we ascribe
+the replication rate a >1 to the so-called master string, say (1 ,1,...,1), and the
+replication rate 1 to the remaining strings. In this context, the par ameterais
+2
+termed selective advantage of the master string. As the replicatio n accuracy q
+decreases, two distinct regimes are observed in the population com position in the
+deterministic case: the quasispecies regime characterized by the presence of the
+master string together with its close neighbors, and the uniform regime where the
+2Lstrings appear in the same proportion. The transition between the se regimes
+takes place at the error threshold qc, whose value depends on the parameters Land
+a[1,2]. However,eveninthedeterministiccase, N→ ∞, agenuinethermodynamic
+order-disorder phase transition will occur in the limit L→ ∞only [4, 5, 6]. To
+study this transition for large L, it is convenient to introduce the probability of
+exact replication of an entire string, namely,
+Q=qL, (5)
+so that the discontinuous transition occurs at
+Qc=1
+a(6)
+forL→ ∞[1, 6]. A recent ﬁnite-size scaling study of the sharpness of the thr eshold
+transition indicates that the characteristics of the transition per sist across a range
+ofQof order L−1aboutQc[7].
+Although several theoretical frameworks have been proposed t o generalize the
+deterministickineticformulationofthequasispeciesmodelsoastot akeintoaccount
+theeﬀectofﬁnite N[8,9,10,11,12,13], thesomewhatuncontrolledapproximations
+usedinthoseanalyseshavehinderedaprecisecharacterizationof theerrorthreshold
+for ﬁnite populations. In particular, Nowak and Schuster [10] emplo yed a simple
+birth and death model, whose deterministic limit, however, does not y ield the
+stationary distribution predicted by Eq. (1), as well as numerical s imulations based
+on Gillespie’s algorithm [14] to show that an appropriately deﬁned Qc(N) tends
+to the deterministic value 1 /awithN−1/2for suﬃciently large populations. A
+similar result was obtained by neglecting the possibility of occurrence of multiple
+errors during the replication of a molecule [12]. A more drastic approx imation that
+neglects linkage disequilibrium at the population level yields that Qc(N) increases
+linearly with 1 /N[13]. Of course, since there is no generally accepted deﬁnition
+of error threshold for ﬁnite N(and for ﬁnite Las well), denoted above by Qc(N),
+there are some arbitrariness in those analyses.
+In this paper we follow a more direct approach to characterize the e rror thresh-
+old transition for ﬁnite N, which dispenses with a deﬁnition for Qc(N). As men-
+tioned before, since a genuine phase transition occurs in the limits N→ ∞and
+L→ ∞only, we study a stochastic (i.e. ﬁnite N) version of the quasispecies model
+withL→ ∞andq→1 so that Q=qLis ﬁnite. In this limit the problem
+simpliﬁes enormously as the probability of any string becoming a maste r string
+due to replication errors is of order 1 /Land so can be safely neglected. Besides,
+since for the single-sharp-peak replication landscape the strings c an be classiﬁed
+in two types only: the master strings and the error tail, which compr ises all other
+3
+strings, the population at any given generation can be described by the single in-
+tegern= 0,1,...,N, which gives the number of master strings in the population.
+The goal then is to calculate the probability distribution that at gene rationtthere
+are exactly nmaster strings in the population. This quantity, denoted by Pt(n),
+obeys the recursion equation
+Pt+1(n) =N/summationdisplay
+m=0T(n,m)Pt(m) (7)
+with the elements of the transition matrix Tgiven by
+T(n,m) =m/summationdisplay
+k=n/parenleftbigg
+N
+k/parenrightbigg /parenleftbigg
+k
+n/parenrightbigg
+wk
+m(1−wm)N−kQn(1−Q)k−n,(8)
+where
+wm=ma
+N−m+ma(9)
+is the relative ﬁtness of the master strings. In writing Eq. (8) we ha ve followed
+the prescription used in the implementation of the standard genetic algorithm [15]:
+ﬁrst the natural selection process acting via diﬀerential reprodu ction is considered
+and then the mutation process. We note that/summationtext
+nT(n,m) = 1∀mandT(0,0) = 1.
+Moreover the largest eigenvalue of Tisλ0= 1 and its corresponding eigenvector
+isl†
+0= (1,0,...,0). This stochastic model is easily recognized as the celebrated
+Kimura-Crowinﬁniteallelemodel[16,17]whichhasbeenextensivelyst udiedwithin
+the diﬀusion approximation for large N. However, for arbitrary values of Qanda
+the solutions of the partial diﬀerential equations are too complicat ed to be of any
+utility to our purposes [17].
+As for ﬁnite Nthe ﬂuctuations, either in the reproduction or mutation pro-
+cesses, will ultimately lead to the irreversible loss of all copies of the m aster string
+from the population, the asymptotic solution of Eq. (7) is simply P∞(n) =δn0.
+Our goal is to determine how the characteristic time, τ, that governs the vanishing
+of the master strings from the population depends on N,Qanda.
+Before proceeding on the analysis of the stochastic problem, it is ins tructive to
+discuss brieﬂy the deterministic limit N→ ∞. In this case the average number of
+master strings obeys the recursion equation
+/angbracketleftn/angbracketrightt+1=N/summationdisplay
+n=0N/summationdisplay
+m=0nT(n,m)Pt(m)
+=Qa/angbracketleftn/angbracketrightt, (10)
+whose solution is /angbracketleftn/angbracketrightt= (Qa)t/angbracketleftn/angbracketright0. Hence, in the deterministic regime we ﬁnd
+τ=−1
+ln(Qa)(11)
+4
+which diverges at Q=Qc= 1/a, signalling thus the existence of a phase transition
+in the limit N→ ∞. Clearly, for Q > Q cthe master strings are always present in
+the population so that τis inﬁnite in this entire region.
+We consider now the ﬁnite Nregime. In this case the recursion equations for
+the moments of ndo not yield useful information since, as usual, the moment of
+orderpdepends on the moment of order p+1 evaluated at the previous generation.
+We resort then to a direct calculation of the probability distribution Pt(m). More
+speciﬁcally, we will focus on the calculation of Pt(0), since this is the quantity that
+measures the rate of vanishing of the master strings from the pop ulation. Although
+Pt(0) could be evaluated through a series of matrix multiplications, a sim ple linear
+algebra calculation yields [17]
+Pt(0) =N/summationdisplay
+n=0cnln0λt
+n
+= 1+c1l10λt
+1+...+cNlN0λt
+N (12)
+whereλnarethe eigenvaluesof T,ln0arethe zerothcomponentsofthe eigenvectors
+ln, andcnare parametersthat depend on the initial state P0(n). Also we have used
+λ0=l00=c0= 1. Assumingwithout lossofgeneralitythat1 ≥λ1≥...≥λN≥0,
+in the limit of large twe ﬁnd
+1−Pt(0)≈Ce−t/τ(13)
+where
+τ=−1
+lnλ1, (14)
+andCisaconstantthatdepends ontheinitial state. Thusthe problembe comesthe
+one of ﬁnding the second largest eigenvalue of the nonsymmetric ma trixT. Since
+the largest eigenvalue and its corresponding eigenvector are alrea dy known, this
+numerical problem yields easily to the vector iteration method [18]. Alt ernatively,
+we could ﬁnd τby following the time evolution of Pt(0), obtained directly through
+the recursion equations (7), for a few generations and then plott ing ln[1−Pt(0)]
+against the generation number t. We have veriﬁed that both methods yield the
+same results for τ.
+InFig.1wepresentthedependenceofln τontheprobabilityofexactreplication
+of an entire string, Q, fora= 2 and several values of N. The ﬁnite Neﬀects are
+negligible for values of Qsmaller than, though not too close, Qc, as indicated by
+the very good agreement between the ﬁnite Ndata and the theoretical prediction
+forN→ ∞given in Eq. (11). Since we expect τto increase exponentially with
+increasing NforQ > Q c, and to tend towards its limiting value, Eq. (11), also
+exponentially with NforQ < Q c, the issue is then to determine the dependence
+ofτonNat the critical point Q=Qc. In Fig. 2 we present ln τcalculated at
+Qc= 1/aagainst ln Nfor diﬀerent values of a. These results indicate clearly that
+at the critical point τincreases like N1/2, irrespective of the value of a. Once
+5
+we have identiﬁed the rescaling of ln τthat leads to the collapsing of the data for
+diﬀerent NatQ=Qc, the next step is to determine the sharpness of the transition,
+namely, the range of QaboutQcwhere the transition characteristics persists. This
+is achieved by assuming that the size of this region shrinks to zero like N−1/νas
+N→ ∞, where the exponent ν≥0 is estimated using ﬁnite-size scaling or, more
+precisely, the data collapsing method [19]. In Fig. 3 we show the collaps e of the
+data for diﬀerent Nobtained with ν= 2 fora= 2, 10 and 50. Although for a= 2
+we can achieve a good-quality data collapse using relatively small popu lation sizes
+(N≥200), for larger values of a, however, a similar quality collapsing can only
+be obtained using larger values of N(i.e.N≥400). In summary, the results of
+the data collapsing method indicate that the dependence of τonNin the critical
+region is very well described by the scaling assumption
+τ=N1/2fa/bracketleftBig
+(Q−Qc)N1/2/bracketrightBig
+, (15)
+wherefais a scaling function, whose speciﬁc form depends on the parameter a.
+To appreciate the eﬀect of the selective advantage parameter aon the quality
+of the data collapsing results presented in Fig. 3, next we consider in some detail
+the case a→ ∞andNﬁnite. Using wm→1 form >0 yields
+T(n,m) =T(n) =/parenleftbigg
+N
+n/parenrightbigg
+Qn(1−Q)N−nm >0. (16)
+As before, T(0,0) = 1 and T(n,0) = 0 for n >0. In this case the eigenvalues of T
+can easily be calculated analytically yielding λ0= 1,λ1=/summationtextN
+n=1T(n),λ2=...=
+λN= 0. Hence,
+τ=−1
+ln/bracketleftBig
+1−(1−Q)N/bracketrightBig. (17)
+Finally, taking the limits Q→Qc= 0 and N→ ∞, we can easily verify that ν= 1
+in this limit. This interesting result suggests that uncontrolled appro ximations
+and simpliﬁcations of the original model which enhance the selective a dvantage
+of the master string or the ﬁnite population sampling eﬀects are exp ected to give
+unreliable estimates of the exponent ν. Moreover, care must be taken in restricting
+the ﬁnite-size scaling analysis to the regime N≫ato avoid underestimating the
+value of ν. We note, of course, that the situation of interest is N→ ∞whilea
+remains ﬁnite.
+To conclude, the collapse of the data for diﬀerent Nintoa-dependent scaling
+functionspresentedinFig.3andsummarizedinthescalingassumptio n(15)provide
+afullcharacterizationoftheerrorthresholdtransition,signalled inourmodelbythe
+divergence of τatQc= 1/a, for large N. We emphasize that the main advantageof
+our approachis that it does not relyupon any arbitrarydeﬁnition of errorthreshold
+for ﬁnite populations.
+6
+Acknowledgments The work of JFF was supported in part by Conselho Na-
+cional de Desenvolvimento Cient´ ıﬁco e Tecnol´ ogico (CNPq). PRAC is supported
+by FAPESP.
+7
+References
+[1] Eigen M 1971, Naturwissenchaften 58465
+[2] Eigen M, McCaskill J S and Schuster P 1989, Adv. Chem. Phys. 75149
+[3] Maynard Smith J and Szathm´ ary E 1995 The Major Transitions in Evolution
+(Oxford: Freeman)
+[4] Leuth¨ ausser I 1987, J. Stat. Phys. 48343
+[5] Tarazona P 1992, Phys. Rev. A 456038
+[6] Galluccio S 1997, Phys. Rev. E 564526
+[7] Campos P R A and Fontanari J F 1998, Phys. Rev. E 582664
+[8] Ebeling W and Feistel R 1977, Ann. Phys. (Leipzig) 3481
+[9] McCaskill J S 1984, Biol. Cybern. 5063
+[10] Nowak M A and Schuster P 1989, J. Theor. Biol. 137375
+[11] Zhang Y-C 1997, Phys. Rev. E 55R3817
+[12] Bonnaz D and Koch A J 1998, J. Phys. A: Math. Gen. 31417
+[13] Alves D and Fontanari J F 1998, Phys. Rev. E 577008
+[14] Gillespie D 1976, J. Comp. Phys. 22403
+[15] Goldberg D E 1989 Genetic Algorithms in Search, Optimization and Machine
+Learning (Reading: Addison-Wesley)
+[16] Kimura M and Crow J F 1964, Genetics 49725
+[17] Crow J F and Kimura M 1970 An Introduction to Population Genetics Theory
+(New York: Harper & Row)
+[18] Engeln-M¨ ullges G and Uhlig F 1996 Numerical Algorithms with C (Berlin:
+Springer-Verlag)
+[19] Binder K 1985, J. Comp. Phys. 591
+8
+Figure captions
+Fig. 1Logarithm of the characteristic time for the vanishing of the maste r strings
+from the population, ln τ, as a function of the probability of exact replication, Q,
+fora= 2, and N= 100 (∗), 200 (✸), 300 (✷), 500 (△), and 600 ( ×). The solid line
+is the theoretical prediction for N→ ∞.
+Fig. 2Logarithm of the characteristic time for the vanishing of the maste r strings
+from the population, ln τ, calculated at Qc= 1/aas a function of the logarithm of
+the population size, ln N, fora= 2 (/circlecopyrt), 10 (△), and 50 ( ✷).
+Fig. 3Properlyrescaledlogarithmofthecharacteristictimeforthevanis hingofthe
+master strings from the population, ln τ/lnN1/2, as a function of ( Q−Qc)N1/2
+for (from top to bottom at Q=Qc)a= 2, 10 and 50. The convention is N= 200
+(✸), 300 (✷), 400 (/circlecopyrt), 500 (△), and 600 ( ×). Fora= 10 and 50 only the data for
+N≥400 are presented.
+9
+/G13/G11/G13 /G13/G11/G14 /G13/G11/G15 /G13/G11/G16 /G13/G11/G17 /G13/G11/G18 /G13/G11/G19 /G13/G11/G1A /G13/G11/G1B/G13/G14/G13/G15/G13/G16/G13/G17/G13
+/G03/G03/G4F/G51τ
+/G34
+/G18/G11/G15 /G18/G11/G17 /G18/G11/G19 /G18/G11/G1B /G19/G11/G13 /G19/G11/G15 /G19/G11/G17/G14/G11/G13/G14/G11/G18/G15/G11/G13/G15/G11/G18/G16/G11/G13/G16/G11/G18
+/G03/G03/G4F/G51/G03τ
+/G4F/G51/G03/G31
+/G10/G13/G11/G17 /G13/G11/G13 /G13/G11/G17 /G13/G11/G1B/G10/G14/G13/G14/G15/G16/G17/G18/G19
+/G03/G03/G15/G4F/G51τ /G12/G4F/G51/G31
+/G0B/G34/G10/G34/G46/G0C/G31/G13/G11/G18

@@ -1,0 +1,176 @@
+arXiv:cond-mat/0104482v1  25 Apr 2001Catastrophic senescence of the Paciﬁc salmon
+without mutation-accumulation
+Hildegard Meyer-Ortmanns
+Institut f¨ ur Theoretische Physik
+Universit¨ at Heidelberg
+Philosophenweg 16
+D-69120 Heidelberg, Germany
+e-mail: ortmanns@thphys.uni-heidelberg.de
+April 26, 2024
+Abstract
+We derive catastrophic senescence of the Paciﬁc salmon from an aging model
+which was recently proposed by Stauﬀer. The model is based on the postu-
+lates of a minimum reproduction age and a maximal genetic lif espan. It allows
+for self-organization of a typical age of ﬁrst reproduction and a typical age of
+death. Our Monte Carlo simulations of the population dynami cs show that
+the model leads to catastrophic senescence for semelparous reproduction as it
+occurs in the case of salmon, but to a more gradually increase of senescence
+for iteroparous reproduction.
+Keywords : population dynamics, aging, Stauﬀer model, Monte Carlo
+1 Introduction
+According to the evolutionary theory of aging senescence is ultimately caused by a
+declining pressure of natural selection as one gets older an d older [1]. One mani-
+festation of senescence (which can be most easily handled on the computer) is an
+increase of mortality with age or, more precisely, a decreas e of survivors at age a,
+from an initial population of newly born oﬀspring at time 0. S enescence is attributed
+to several factors like environment, metabolism, and, most important, by several ge-
+netic mechanisms. Two major genetic mechanisms, which are u nder discussion and
+need not necessarily exclude each other, are antagonistic p leitropy and mutation-
+accumulation. Based on the latter mechanism, i.e. on the hyp othesis of an increase
+of deleterious mutations with age, Penna et al. (1995) propo sed a bit-string model
+[2] , which nowadays is widely used for Monte Carlo simulatio ns of aging, because
+it predicts many experimentally observed features of senes cence (for a recent review
+1
+see [3]). One of the successful predicitions is the catastro phic senescence for the
+Paciﬁc salmon.
+Paciﬁc salmon show the most dramatic manifestation of aging . As semelparous
+individuals they breed only once in their life, all at the sam e age, with plenty of
+oﬀspring, and die a few weeks later . In contrast to salmon, it eroparous individuals
+breed repeatedly and age more gradually.
+2 The model
+Recently Stauﬀer has proposed a model which is based on the po stulate of a mini-
+mum reproduction age and a maximal genetic lifespan [4]. Onl y these two numbers
+are transmitted from generation to generation, with certai n mutations, by asexual
+reproduction. The population consists of Nindividuals i(i∈1, ..., N ) initially. Each
+individual is characterized by three integers: its age a(i), its minimum reproduction
+ageam(i) and its maximal genetic lifespan ad(i) with 0 ≤am(i)< ad(i)≤32. The
+maximal lifetime is restricted to 32 time units (called year s), the minimum repro-
+duction age may be chosen between zero and ad(i)−1. Within these constraints the
+values of am(i) and ad(i) are randomly mutated for an oﬀspring by ±1, away from
+the maternal values, and for each child separately. These mu tations realize some
+kind of antagonistic pleiotropy in the sense that a shorter l ifespan or a later repro-
+duction age increase the birth rate. (“Parents die to make pl ace for their children”.)
+After an individual has reached its minimum reproduction ag e, it gives birth to one
+oﬀspring with probability b, chosen as (1 + ǫ)/(ad(i)−am(i) +ǫ) with ǫ= 0.08
+for convenience. Independently of the genetic death, which happens automatically
+and unavoidably if a(i) =ad(i), at each time interval an individual can also die
+“accidentally”, with the Verhulst probalility N/N max.Nmaxis called the carrying
+capacity to account for the fact that any given environment c an only support pop-
+ulations up to some maximal size Nmax. Otherwise the individuals die because of
+food and space limitations. Stauﬀer’s model shows the basic features required for
+senescence. The age distribution shows an increase of morta lity with age. Moreover,
+a self-organization of a typical age of ﬁrst reproduction an d of death is observed,
+similarly to Ito’s self-organization of a minimum reproduc tion age in the framework
+of the Penna model [5].
+In this paper we apply Stauﬀer’s model to the population dyna mics of Paciﬁc
+salmon and check whether the model is able to reproduce the qu alitative features of
+catastrophic senescence. For a given value of Nmaxand an initial population of N
+individuals we specify am(i) = 1 and ad(i) = 16 for all i= 1, ..., N as initial values.
+One Monte Carlo iteration then consists of the following thr ee steps that we call
+“deaths”, “births” and “aging”.
+•In the ﬁrst loop of “deaths” over all individuals, each indiv idual dies either with
+the Verhulst probability N/N max, or, if it survives space and food limitations,
+2
+because it has reached its maximal genetically allowed age ad(i). Otherwise it
+survives. The initial population of size Ngets reduced this way.
+•In the second loop of “births” over all individuals, each ind ividual gives birth
+tonb≥1 oﬀspring with probability b= 1.08/(ad(i)−am(i) + 0.08), provided
+the maternal age is not below the minimum reproduction age an d equals a
+ﬁxed given integer a0with 0 ≤am(i)≤a0< a d(i)≤32 and a0(i) =a0is
+chosen the same for all individuals. The latter condition ob viously accounts
+for the speciﬁc features of salmon which breed only once and a ll at the same
+age. It turns out that the choice of the number of oﬀspring nbis not arbitrary,
+because the second condition is so restrictive that the popu lation only survives
+for suﬃciently large nb. Now the values of amandadfor the oﬀspring are
+mutated away from the maternal values, again at each time int erval by ±1
+for each child separately as in Stauﬀer’s model, but with pro bability ps<1.
+This way the mutations become suppressed with probability 1 −ps, to account
+for the experimental fact that the time interval for reprodu ction of salmon is
+rather narrow for anygeneration. Unless mutations are suppressed, they have
+the tendency of spreading the ﬁrst reproduction age within a broader time
+interval. On the histograms of aging this has a similar eﬀect as iteroparous
+reproduction. The question is whether the minimum reproduc tion age adjusts
+itself to a value which is self-consistent with the prescrib ed ﬁxed reproduction
+agea0. The remaining mutations should drive the initial values fo ram(i)
+towards a0.
+•In the third step of a single iteration, the population which remains from the
+ﬁrst two steps ages by one time unit, ( a(i)→a(i) + 1). The population size
+and averages over the individual minimum reproduction ages and the maximal
+lifespans are stored. From a certain number of iterations on also the individual
+agesa(i),am(i) and ad(i) are stored in histograms as a function of the time
+interval j,j∈(1, ...,32).
+Now the iterations are repeated a number of ttimes until the population dy-
+namics has stabilized and the ﬂuctuations in average values are negligibly small.
+3 Results
+Figs.1 and 2 show various histograms of ages adfor genetic death which were ob-
+tained for the following choice of parameters. In Fig.1 the c arrying capacity Nmax
+is chosen as 2 ·105,Ninitially as Nmax/2. The number of iterations tis 2·104.
+The actual reproduction age a0is ﬁxed to 6, and the number of births nbwhich an
+individual can give to oﬀspring at the age of 6 is 12. Mutation s of the minimum
+reproduction age of oﬀspring are suppressed by 80%(+), 95%( x) and 99%( ⋆), re-
+spectively. The histograms show a clear self-organized max imum of genetic death
+at an age of 7. In discrete time units this means that death occ urs most likely
+3
+directly after reproduction. The peaks are the sharper the s tronger the suppres-
+sion of mutations. The qualitative shape of the histograms s tays the same when
+Nmaxis varied over several orders of magnitude. Already after ≈100 iterations
+the population dynamics stabilizes in the sense that the pop ulation size oscillates
+regularly between stable minimum and maximum values. These regular oscillations
+build up randomly during the ﬁrst 100 iterations and then are reproduced with the
+period a0= 6. The value of nb= 12 is the minimal integer so that the population
+with 95% suppression of mutations survives as a whole. For sm allernbit dies out
+after a few iterations. This feature is in qualitative agree ment with nature. Paciﬁc
+salmon produce plenty oﬀspring once they breed to compensat e for the restrictive
+conditions on amanda0independent of i. The maximum of the histogram of ages
+for the minimal reproduction age lies at an age of 6, consiste nt with the prescribed
+value a0.
+In Fig.2 we compare histograms of ages for genetic death betw een iteroparous
+(full line) and semelparous (dashed line) reproduction. Th e dashed curve was ob-
+tained for Nmax= 2·105,t= 2·104,a0= 6,nb= 12, 1 −ps= 99%. Again it
+shows a sharp peak at the age of 7. The histogram for iteroparo us reproduction was
+obtained for Nmax= 2·107,t= 2·104, reproduction can happen at any age between
+am(i) and ad(i), (i.e. i-dependent and possibly several times in one life) ,nb= 1
+and no suppression of mutations of am(i) and ad(i) for the oﬀspring. The hundred
+times larger value for Nmaxwas chosen for convenience to get comparable numbers
+foradin spite of the diﬀerent reproduction conditions. The maxim a of both curves
+are self-organized, but in the iteroparous case the maximum is much broader, going
+along with a gradual increase of senescence with time or a les s rapid aging than in
+the case of salmon, compatible with the Penna model [2].
+4 Summary
+Stauﬀer’s model based on the two postulates of a minimum repr oduction age and a
+maximal genetic lifespan predicts the catastrophic senesc ence for the Paciﬁc salmon
+in a qualitative way. The larger the suppression of mutation s, the faster die the
+individuals after reproduction, and the larger is the numbe r of births in one repro-
+duction step which is necessary to sustain the species. The s elf-organized maximum
+of the histogram of ages amis self-consistent with the only allowed age a0for repro-
+duction, a restriction that is used as an input. Stauﬀer’s ex planation works without
+mutation-accumulation, whereas mutation-accumulation w as an essential ingredient
+in the Penna model. Therefore, diﬀerently from what the succ ess of the Penna
+model might have suggested, mutation-accumulation does no t seem to be essential
+for explaining gross qualitative features of senescence.
+4
+5 Acknowlegdment
+I would like to thank Dietrich Stauﬀer for stimulating discu ssions.
+References
+[1] M. R. Rose, Evolutionary Biology of Aging (Oxford Univer sity Press, New York,
+1991).
+[2] T. J. P. Penna, S. Moss de Oliveira and D. Stauﬀer, Phys. Re v. E 52, R3309
+(1995).
+[3] S. Moss de Oliveira, P. M. C. de Oliveira and D. Stauﬀer, Ev olution, Money,
+War and Computers (Teubner, Stuttgart-Leipzig 1999).
+[4] D. Stauﬀer, in Biological Evolution and Statistical Phy sics (Dresden, May 2000),
+M. L¨ assig and A. Valleriani (Springer, Berlin 2001 or 2002) .
+[5] N. Ito, Int. J. Mod. Phys. C 7, 107 (1996).
+5
+1101001000100001000001e+061e+071e+081e+09
+0 5 10 15 20number
+age
+Figure 1: Histogram of ages for genetic death; mutation prob ability 20(+), 5(x) and
+1(⋆) percent
+6
+05e+071e+081.5e+082e+082.5e+083e+083.5e+084e+08
+0 5 10 15 20 25 30 35number 
+age
+Figure 2: Histogram of ages for genetic death: iteroparous ( full) and semelparous
+(dashed) reproduction
+7

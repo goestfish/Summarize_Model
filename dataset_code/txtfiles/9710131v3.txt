@@ -1,0 +1,528 @@
+arXiv:cond-mat/9710131v3  8 Nov 1997Kinetics, Hydrodynamics and Stochastodynamics
+of Cellular Structure Coarsening
+S. B. Goryachev∗
+Laboratoire de M´ etallurgie Physique, URA CNRS n 234,
+Bˆ at. C6, Universit´ e de Lille I, 59655 Villeneuve d’Ascq,
+France
+14 October 1997
+Abstract
+For the ﬁrst time the phenomenon of cellular structure coars ening
+are consistently analysed from the positions of kinetic, hy drodynamic and
+stochastodynamic theories of nonequilibrium statistical systems. Thereby
+micro-, meso- and macroscopic levels of approach are distin guished. At
+the microscopic level the cellular structure is describe by a probability
+distribution function in a phase space of cell coordinates a nd of cell sizes.
+A kinetic equation for the function is written and a developm ent to a
+hydrodynamic equation of a mesoscopic cell medium is realis ed. It has the
+form of adiﬀusion-reaction equationwith anegative ”diﬀus ion” coeﬃcient
+and with a cell interface density playing the role of concent ration. Its
+analysis reveals a new eﬀect of macroscopic patterning in th e cell medium:
+existence of space-correlated stochastic ﬂuctuations of t he cell interface
+density.
+PACS numbers: 02.50.-r, 05.20.-Dd, 47.53.+r, 82.20.-w
+1 Introduction
+There are many physical systems consisting of homogeneous doma ins separated
+by distinct boundaries, so called cellular structures: ordered doma ins in alloys,
+magnetic domains, gas bubbles in soap froth and in lipid monolayers, gr ains in
+polycrystals, etc. [1, 2, 3, 4]. We have here a simple physical situatio n (Fig. 1
+[2]), when the system volume Vbeing the sum ofvolumes ofall cells, the volume
+speciﬁc energy and the interface speciﬁc energy Eare constant. The internal
+energy of the system Eis completely deﬁned by the cell interface area Σ. It is
+easytoseethat foranytwoneighbouringcellsthevolumedecrease ofthesmaller
+one (down to complete disappearance) and the simultaneous volume increase of
+the greater one diminish Σ. This permanent topological possibility to d ecrease
+E=EΣ makes the system intrinsically unstable. The mean cell size increase s
+during this statistical process (Fig. 1), named ”coarsening”(larg e cells ”eat up”
+small ones). The changes of Erelated to the elementary statistical event of cell
+disappearance are so large in comparisonwith the energy of thermo ﬂuctuations,
+∗E-mail: goryachev@univ-lille1.fr
+1
+Figure 1: Soap froth conﬁgurations at three diﬀerent times during its evolution.
+that the coarsening cannot be described by ways of usual thermo dynamics [5].
+Still this challenging statistical problem can be elegantly solved by met hods of
+physical kinetics, as shown by Lifshitz, Slyozov and Hillert (LSH) [6, 7 , 8], if we
+consider the cellular structure as some dynamic system. To get a ce ll dynamics
+equation let us following LSH approximately consider each cell as an ela stic
+sphere shell embedded in an elastic environment which represents t he average
+eﬀect of cell-cell interaction. For a cell of radius awe write an interface tension
+force asF=−E(1/a−κ), where the term 1 /ais related to the eﬀect of interface
+surface tension of the cell itself and the term κ- to the eﬀect of interface surface
+tension of adjoining cells (the elastic environment). The quantity κis nothing
+that a self-consistent mean of cell curvature throughout the sy stem. Believing
+that the cell interface velocity waﬀected by Fis determined by viscous law
+w=MF, whereMis the cell interface mobility, we have [6, 7, 8]
+da/dt=−D(1/a−κ) (1)
+withD=ME. In the coarsening process the cells move in a size space {a}
+(some phase space) with a velocity (1). We can write a continuity equ ation in
+this space as
+∂f/∂t+∂(fda/dt)/∂a= 0 (2)
+for a cell size distribution function f(a,t) [6, 7, 8]. The function f(a,t) is
+normalised so that n(t) =/integraltext
+0fdais the mean number of cells per unit volume;
+Ωd/integraldisplay
+0adfda= 1; (3)
+¯a(t) =/integraltext
+0afda/nis the mean cell size and ρ(t) = Σ/V= (Ωdd/2)/integraltext
+0ad−1fda
+is the mean cell interface density. Here d= 2,3 is the cellular structure dimen-
+sionality and Ω d= 2π(d−1)/d. Condition (3) is nothing that the conservation
+law of the total volume of all cells in unit volume. A remarkable propert y of
+this statistical dynamic system, discovered by LSH, is the occurre nce of astable
+steady-state regime ofevolution. This regimeis observedif and only if the mean
+curvatureκ(t)taketheunique”self-consistent”value κ(t) =/radicalbig
+2/(Dt). Allother
+macroscopicsystem variables obey also simple scaling laws :¯a(t)∝ρ−1(t)∝t1/2,
+n(t)∝td/2and the solution of (1)-(3) has a universal scaling form
+f0(a,t)∝(1/¯a(t))d+1ϕ(µ1a/¯a(t)), (4)
+whereϕ(z) is a peaked function, depending on donly, andµ1≈1 [6, 7, 8].
+2
+There is a great number of publications devoted to the question of ” improve-
+ment” of the individual cell dynamics equation (1) (we will say microsc opic dy-
+namics equation) to get a good agreement of the cell size distributio nf0(a,t)
+with experimental data, essentially in the metallurgic literature relat ed to nor-
+mal grain growth [2, 3, 4, 9, 10]. Surprisingly small attention has bee n paid to
+mesoscopic and macroscopic behaviours of the cellular structures as some con-
+tinuous elastic cellular medium with viscous motion law, although the exis tence
+of interesting self-organisation eﬀects is almost evident here [11, 1 2]. Indeed, if
+we have a good look at Fig. 1 we can see a strong size correlation of ad jacent
+cells. Near a small cell the probability to ﬁnd another small cell is grat er then a
+large one, and vice versa, near a large cell the probability to ﬁnd ano ther large
+cell is grater then a small one. In other words we observe here spa ce-correlated
+ﬂuctuations of the mesoscopic cell interface density ρ(x,t). Qualitatively this
+eﬀect can be easy analysed. Let us consider a nonhomogeneous ce llular struc-
+ture with the macroscopic mean interface density ρ(t) and the mesoscopic one
+ρ(x,t) =ρ(t)+δρ(x,t) , weakly varying in space. To be more precise, let us as-
+sume thatδρ(x,t)<<ρ(t) and the wavelength λof spatial variations of ρ(x,t)
+is much greaterthan ¯ a≈1/ρ(t). Let us cut out a medium volume VLhaving the
+sizeL<<λ, but still including many cells. Each element d sof the surface Σ L,
+enclosingVL, is aﬀected by the interface tension of the cells, surrounding VL.
+The total interface tension force acting on VLis/contintegraltext
+Eρds=/integraltext
+E∇ρdV. In a ho-
+mogeneous cell medium this force equals zero. In the nonhomogene ous medium
+the force is non zero. The total cell interface in VL, which moves as the whole
+under the force eﬀect, is/integraltext
+ρdV. Hence the force acting on cell interface unit is
+E∇ρ/ρ. Supposing the viscous law for the cell interface movement, we ﬁnd a
+cell interface ﬂux j=ρv∝D∇ρ. We see that the cells make a collective motion
+in the direction ∇ρ. This is an uphill diﬀusion” of the cell medium. Taking into
+account the annihilation law d ρ/t∝ −Dρ3, which follows from ρ(t)∝t−1/2, we
+get [12]
+∂ρ/∂t=−γ1Dρ3−γ2D△ρ. (5)
+Hereγ1andγ2are dimensionless constants, depending on the scaling distri-
+bution function ϕ(z), only. Equation (5) has the form of a diﬀusion-reaction
+equation with the cell interface density ρplaying the role of concentration and
+with a negative ”diﬀusion” coeﬃcient. We see that, the amplitude of a ny small
+spatial ﬂuctuation δρ(x,t) with wavelength λ<ξ, whereξ= 2π/radicalbig
+γ2/3γ1ρ−1is
+the correlation length of the ﬂuctuations, grows without bound. I t follows that
+competing stochastic processes of cell disappearance and cell me dium ”uphill
+diﬀusion” can give rise to the formation of large-scale domains of the sizeλ≤ξ
+having the density ρ(x,t) greater or smaller than the mean value ρ(t) (Fig. 2
+[13]). It also means that space derivatives of higher order of ρmust be taken
+into account in right side of (5) for detailed analysis of the system st ability and
+more accurate estimation of ξ.
+Whereas the physical ideas explaining the possible macroscopic self- organi-
+sation eﬀects are simple, the consecutive derivation of the mesosc opic evolution
+equation (5) and the calculation of kinetic coeﬃcients γ1andγ2, deﬁning the
+eﬀect quantitatively, turns out to be a diﬃcult statistical task [14]. Therefore
+the ”technique” of the problem solution asks for some commentarie s. Let us
+consider an ideal gas as a well-known example for comparison. The co nsistent
+description of its evolution include three classic scale levels of conside ration:
+3
+Figure 2: Late-time conﬁgurations in Potts model of grain growth s imulation.
+micro-, meso- and macroscopic [5, 6, 15, 16]. On the microscopic level the evo-
+lution is eﬀectively described by methods of physical kinetics, i.e. by B oltzmann
+kinetic equation [5, 6] for the system probability distribution function fin a
+phase space, taking into account interaction and movement laws of atoms. Hav-
+ing the equilibrium solution f0for the homogeneous gas (Maxwell-Boltzmann
+(MB) distribution), it is possible to move to the mesoscopic level of the system
+description by introducing mesoscopicquantities (density, pressu re, etc.) as mo-
+ments of the distribution function. In the case of small spatial gra dients of the
+mesoscopic quantities, integration of kinetic equation by Enskog me thod gives a
+hydrodynamic equation [6, 15]. If the hydrodynamic equation has steady-state
+nonhomogeneoussolutions, it is possibleto talk abouta macroscopic description
+of the system by means of spatial patterns of size ξmuch greater than the meso-
+scopic size. To study the patterns formation it is convenient to tra nsform the
+hydrodynamic equation into Langevin stochastic equation [16] for an order pa-
+rameter. As we see above LSH distribution (4) plays the same outstanding ro le
+for the coarsening cellular structures in steady-state, as MB dist ribution plays
+for ideal gases in equilibrium state [5, 6, 7, 8]. All diﬀerence between M B and
+LSH distributions is that the ﬁrst is determined by thermoﬂuctuatio ns related
+to collisions of gas atoms and the second is determined by stochasto ﬂuctuations
+related to the process of cells annihilation. Hence the main methodica l idea of
+this paper is to use LSH distribution as a basis for the multilevel descr iption of
+cellular structure, like MB distribution is used in order to go from the k inetic
+equation to the hydrodynamic one and then to the stochastic one. This idea
+has interesting applications for other physical systems, where th e scaling regime
+is reached. For example, its application allows to generalise Lifshitz-S lyozov
+theory of homogeneous coalescence [7] for the nonhomogeneous case [17], to de-
+scribe the relaxation of nonhomogeneous dislocation structure du ring annealing
+[12] etc.
+4
+2 Kinetic theory (microscopic level)
+Let us consider as in Sec. 1 a nonhomogeneous cellular structure wit h the in-
+terface density ρ(x,t), weakly varying in space. We divide the volume Vof the
+system into small coarse-graining elements VLwithL << λ, but still includ-
+ing many cells. In the ﬁrst approximation the cell dynamics of the str ucture
+in eachVLwill be deﬁned by the dynamics equation (1), with the curvature κ
+becoming a local caracteristic - an interface curvature self-consistent mean ﬁeld
+κ(x,t) . The ﬁeld κ(x,t) inVLat point xequals to the self-consistent mean
+of cell curvature κ(t) determined by (1)-(4) for the cell structure in VLif we
+approximately consider it as homogeneous. The ﬁeld κ(x,t) is a weakly varying
+function in space as ρ(x,t) is. In the second approximation the dynamics equa-
+tion (1) will contain gradients of the ﬁeld κ(x,t). It is easy to establish this fact
+if weanalyzean one-dimensionalcellularstructure( d= 1). Let us cell interfaces
+are located at the points xi(i= 0,±1,±2,...) ofx-axe. We have the cell radii
+a(i)= (xi+1−xi)/2 , the cell curvatures κ(i)= 1/a(i)and the cell centres coordi-
+natesx(i)= (xi+1+xi)/2. Eachinterfaceisacted uponby attractionofadjacent
+ones(the interfacetension ofthe cells) accordingtothe law Fi=E(κ(i)−κ(i−1))
+with the result that the cell changes its position dx(i)/dt=D(κ(i+1)−κ(i−1))/2
+and its size da(i)/dt=D(κ(i+1)+κ(i−1)−2κ(i))/2. If we now introduce a cur-
+vature exact ﬁeld κe(x,t) as a step function, which is κ(i)ifxi<x<x i+1, we
+can rewrite dx(i)/dt=D[κe(x(i)−a(i),t)−κe(x(i)+a(i),t)]/2 andda(i)/dt=
+D[κe(x(i)+a(i),t)+κe(x(i)−a(i),t)−2/a(i)]/2. Replacing the exact ﬁeld κe(x,t)
+by the mean ﬁeld κ(x,t) and taking into account that ¯ a << L << λ we get
+respectively the cell velocity and the cell size change rate
+dx/dt=Da∇κ/d, (6)
+da/dt=−D(1/a−κ)+Da2△κ/(2d). (7)
+It is easy to understand that the abovementioned deﬁnition of the curvature
+mean ﬁeldκe(x,t) holds for nonhomogeneous cellular structures in two ( d= 2)
+and three dimensions ( d= 3). Expressions (6) and (7) are also valid. Really,
+each cell of the structure may be approximatelythought of as hav ingthe form of
+sphere. Then the all cellular structure conﬁguration may be descr ibed through
+the cell centrecoordinatesand the cell radii. Letus chooseacell o fradiusawith
+centre in a point xand an interface point with coordinate x′=x+a(x′,t) of the
+cell. The velocity w(x′,t) of the interface point aﬀected by the interface tension
+forceF(x′,t) =−E[1/a(t)−κe(x′,t)]a(x′,t)/a(t), is determined by the viscous
+laww(x′,t) =MF(x′,t)]. Replacing κe(x,t) byκ(x,t) we can approximately
+calculate the cell velocity d x/dt=/contintegraltext
+w(x′,t)ds′/(Ωddad−1)≈a∇w/dand the
+cell size change rate d a/dt=/contintegraltext
+w(x′,t)ds′/(Ωddad−1)≈w+a2△w/(2d) and
+ﬁnd expresions (6) and (7).
+We see that the cells move in a coordinate-size space {x,a}in the process
+of coarsening. These movements are conveniently described by kin etic equation
+[18]
+∂f/∂t+∂(fdx/dt)/∂x+∂(fda/dt)/∂a= 0 (8)
+for the structure probability distribution function f(x,a,t) in the cell coordi-
+nate-size space with normalisation condition
+(Ωd/V)/integraldisplay
+dx/integraldisplay
+0daadf= 1. (9)
+5
+Equations (8) and (9) have the physical sense of continuity equat ion in the
+coordinate-size space and of conservation law of the total volume of all cells of
+the system. They are natural generalisations of (2) and (3). For the macroscop-
+ically homogeneous cell structure the set of equations (6)-(9) co mes to (1)-(3)
+and has the solution (4) with ϕ(z) = [dz/(2−z)d+2](2e)dexp[2d/(z−2)] for
+0< z <2 andϕ(z) = 0 forz≥2 ;µi=/integraltext
+0ziϕ(z)dz. The mean structure
+variables obey simple scaling laws: ¯ a(t) =µ1√
+Dt;κ(t) = (µd−2/µd−1)/√
+Dt;
+n(t) = 1/(Ωdµd(√
+Dt)d) andρ(t) =dµd−1/(2µd√
+Dt).
+To ﬁndf1(x,a,t) =f0(a,t)+δf(x,a,t) in the ﬁrst-order approximation for
+small parameters | ∇ρ|/ρ2<<1, it is necessary, as in well-known Enskog
+method [6], to substitute f1(x,a,t) in (6)-(9) and linearize them, taking into
+account that δf(x,a,t)<< f0(a,t). I hope in a future work to realise this
+possibility, but this is proving at present to be a diﬃcult task [14].
+3 Hydrodynamic theory (mesoscopic level)
+Equation (8) provides the kinetic (microscopic) description of the c ellular struc-
+ture coarsening. To get the hydrodynamic equation let us rewrite ( 4) as
+f0(a,t) =αρd+1ϕ(βaρ), (10)
+whereα= (µd)d/[Ωd(dµd−1)d+1] andβ=µd/(dµd−1) are constants, and use
+again as in Sec. 1 and 2 the standard coarse-grain averaging proce dure [1].
+Namely, let us introduce a mesoscopic coarse-graining length L(t)>>¯a(t),
+so that a mesoscopic coarse-graining volume VL= ΩdLdincludes many cells.
+Let us divide the volume Vof cellular structure into elements of volume VL.
+For small gradients of mesoscopic variables κ(x,t),¯a(x,t),ρ(x,t),andn(x,t) we
+may suppose that a local homogeneous steady-state is reached in each separate
+elementVLafter a time τL=L2/Dmuch greater than the cell annihilation time
+τa= ¯a2/D. For all this, the cellular structure as the whole (macroscopically)
+is not in the homogeneous state. Then the distribution function f0(x,a,t) in
+VLat point xcan be assumed to be a local steady-state function , equal to LSH
+distribution (10) for the homogeneous cellular structure with dens ityρ(x,t),
+that prevails at the point x. This supposition is completely analogous to the
+local system equilibrium one inlinear thermodynamics [5, 6]. Multiplying (8) by
+Ωddad−1/2, (6) by Ω ddad−1f0/2, (8) by Ω dad, integrating them by aand using
+conservation law (9), we make the averaging procedure. After su ﬃciently heavy
+calculations we obtain, respectively, the equation of cell medium continuity , an
+analogue of Darcy’s law in hydrodynamics and an equation similar to the state
+equation in gas dynamics [15]:
+∂ρ/∂t+∇(ρv) =−D[α1ρ3−α2ρ2κ−α3△κ], (11)
+v= (D/2)ρ−1∇κ, (12)
+ρ3κ=β1ρ4−β2ρ△κ+β3∇κ∇ρ. (13)
+The set of three hydrodynamic equations (11)-(13), containing t hree hydrody-
+namic quantities of the cell medium: the density ρ(x,t) , the velocity v(x,t) =
+(Ωdd/ρ)/integraltext
+0ad−1(dx/dt)fda, and the curvature κ(x,t), forms a closed set. The
+role of the quantities ρ(x,t) ,κ(x,t) andv(x,t) are completely analogous to the
+6
+role of gas density, pressure and velocity in viscous gas dynamics. I f initial and
+boundary conditions are known, the cell medium movement can be de termined
+by traditional hydro-gas dynamics methods [15] for any continuou s distribution
+ofρ(x,t) ,κ(x,t) andv(x,t). By substituting (12)-(13) in (11), the set can be
+reduced to evolution equation (5). In (5), (11)-(13) α1,α2,β1,β2,γ1,γ2are cal-
+culated constants. For d= 2:α1= 1.54,α2= 1.11,α3= 0.25, β1= 1.11,β2=
+0,β3= 0.267,γ1= 0.308,γ2= 0.277. Ford= 3:α1= 1.16,α2= 1.44,α3= 0.5,
+β1= 0.718,β2= 0.132,β3= 0.263,γ1= 0.129,γ2= 0.136. Full expressions are
+suﬃciently bulky (e.g. α1= 4(d−1)µ2
+dµd−3/(d2µ3
+d−1)) and will be published
+elsewhere [14].
+4 Stochastodynamic theory (macroscopic level)
+To analyse the dynamics of macroscopic spatial perturbations of t he cell me-
+dium, let us introduce a relative value of deviation of the cell interfac e density
+from its mean macroscopic value ψ(x,t) =δρ(x,t)/ρ(t)<<1 , whereρ(t) is
+the uniform solution of (5). Substituting ρ(x,t) =ρ(t) +δρ(x,t) in (5) and
+coming to new time and space variables ∂˜t= 3γ1Dρ2(t)∂t=−∂lnρ3(t) and
+∂˜x=ρ(t)∂x(intrinsic system variables [7]), we obtain
+∂ψ/∂˜t=−δF/δψ (14)
+withF{ψ}=/integraltext
+d˜x[Aψ2+C(˜∇ψ)2]/2 ,A= 1 and C=−γ2/(3γ1) (C=−0.300
+ford= 2 and C=−0.351 ford= 3 ). Taking ψ(˜x,˜t) in the form ψ(˜x,˜t) =
+ψ(˜k,˜ω)ei(˜k˜x−˜t˜ω), we get the dispersion relation ˜ ω(˜k) =−i˜σ(˜k) , where
+˜σ(˜k) =A+C˜k2(15)
+isthedampingcoeﬃcient. Includingin F{ψ}the term −hψdescribingtheeﬀect
+of an external ﬁeld h(˜x,˜t)∝ei(˜k˜x−˜t˜ω), we ﬁnd the generalised susceptibility
+˜χ(˜k,˜ω) = 1/[˜σ(˜k)−i˜ω].
+As all mesoscopic quantities, ψis a ﬂuctuating quantity. But on writing
+(14) we have neglected these ﬂuctuations. The quantity ψis a sum of a number
+of microscopic random quantities. Each of them corresponds to th e contri-
+bution of a cell being in VL. In view of central limit theorem of statistics,
+ψhas Gaussian distribution function with the mean value < ψ > L= 0 and
+the dispersion < ψ2>L=ν/[VLN] , whereν=µ2(d−1)/µ2
+d−1−1 (ν= 0.109
+ford= 2 andν= 0.373 ford= 3) [14]. Equation (14), after taking into
+account the ﬂuctuations, becomes Langevin stochastic equation withF{ψ}
+being astochastodynamic potential [19]. The noise ζis Gaussian noise, with
+<ζ >= 0 and the correlation function <ζ(˜x,˜t)ζ(˜x′,˜t′)>= 2θδ(˜x−˜x′)δ(˜t−˜t′)
+, deﬁned by the ﬂuctuations at scales a << L andτa<< τL. Hereθ=
+Ωd(d/2)d−1(µd
+d−1/µd−1
+d)(µ2(d−1)/µ2
+d−1−1) (θ= 0.619ford= 2 andθ= 8.09 for
+d= 3 ) [14]. The forms of evolution equation (14) and of the noise ζguarantee
+that the steady-state probability distribution functional is given b y Boltzmann
+formulaP{ψ} ∝exp[−F{ψ}/θ] [19]. We see that our cell system is rated in
+the class of so-called potential systems with potential F{ψ}having Landau-
+Ginzburg form [5, 6, 16] and the quantity ψplays a role of an order parameter .
+It is not surprizing because in general sense the system is in perfec t analogy to
+a thermodynamic system with a nonconserved order parameter ψ. So the forms
+7
+of evolution equation (14) and of potential F{ψ}are dictated by simple symme-
+try macroscopic considerations. Instead of the thermal noise in t hermodynamic
+systems we have here the stochastic noise, created by the contin uous process of
+cells annihilation. In virtue of reasoning, ﬂuctuation-dissipation the orem may
+be applied, according to which the generalised susceptibility ˜ χ(˜k,˜ω) determines
+the spectral correlation function of ﬂuctuations as ˜S(˜k,˜ω) = (2θ/˜ω)Im˜χ(˜k,˜ω) .
+The structure function has usual Ornstein-Zernike form ˜S(˜k) =θ/˜σ(˜k) [5, 6].
+From (15) we see, that the order parameter modes ψ(˜k,˜t) with˜k>/radicalbig
+−A/C
+are unstable. This is every indication that highest order terms of th e expan-
+sion ofF{ψ}in powers of ˜∇ψmust be considered for detailed analysis of the
+system stability. The derivation of the exact expression for these terms by
+Enskog method is a very heavy task [6, 14] not realized to the prese nt. We
+proceed now diﬀerently. Let us use the fact that our system is pot ential with
+the nonconserved order parameter ψ. Then we may consider F{ψ}as some
+phenomenological potential in the abovemensioned Landau sense. This poten-
+tial have necessarily the general form F{ψ}=/integraltext
+dx[Aψ2+C(˜∇ψ)2+D(˜△ψ)2]/2
+withD>0 [5, 16, 20]. The phenomenological coeﬃcients A,CandDcan be
+found from experiments, computer simulations or by a direct calcula tion as we
+have made above for AandC. As a consequence we get the damping coeﬃcient
+in the form
+˜σ(˜k) =A+C˜k2+D˜k4. (16)
+We do not know the real value of D, but we are able to forecast the possible
+scenarios of system evolution [20]. If A>0,C<0 andD>C2/(4A) the
+evolution equation (14) has the single stable solution ψ0(˜x) = 0 , and modes
+ψ(˜k,˜t) with any ˜kdecay with time. Therefore the system is stable with respect
+to large-scale ﬂuctuations of ψ(˜x,˜t) nearψ0(˜x) = 0 . The modes ψ(˜k,˜t) with
+˜k=˜kC=/radicalbig
+−C/(2D) = 2π/˜ξ, where˜ξis an intrinsic correlation length, have
+the lowest decay rate. That is why under the action of the stochas tic internal
+noiseζ, created by a continuous process of cells annihilation, space-corr elated
+ﬂuctuations arise in the system. The system is in a modulated state (short range
+ordering) and the structure function
+˜S(˜k) =θ/(A+C˜k2+D˜k4). (17)
+has a maximum at ˜k=˜kC(Fig. 3), reﬂecting the abovestated fact that the
+modesψ(˜kC,˜t)decaywiththelowestrate. If A>0,C<0and0<D<C2/(4A)
+, the evolution equation (14) has the unstable solution ψ0(˜x) = 0 and stationary
+one-, two-, ... d-dimensional space-periodical solutions with wavelength ˜λ=˜ξ
+[20]. Under the action of the stochastic internal noise ζthe system comes from
+the homogeneous state into one of these patterned state (long range ordering).
+The question of existence of the ﬁrst or of the second type of ord ering depends
+of the value of coeﬃcient D.
+5 Discussion
+We see that in the process of structure coarsening the macrosco pic cell interface
+densityρ(t) decreases with time as ρ(t)∝t−1/2and the mesoscopic density
+ρ(x,t) =ρ(t)[1+δρ(x,t)/ρ(t)] also decreases (Fig. 1). The competition of two
+stochastic processes of the cells annihilation and of the cells collectiv e motion
+8
+ÄS(Äk)/ÄS(0)
+Äk  D=0.1
+  D=1  D=0.2
+Figure3: Scaledstructurefunctionofﬂuctuations ˜S(˜k)/˜S(0) = 1/[1+(C/A)˜k2+
+(D/A)˜k4] of the relative interface density ψ(x,t) =ρ(x,t)/ρ(t)−1 for diﬀerent
+D.
+creates space-correlated ﬂuctuations of the cell interface den sity. These ﬂuctua-
+tions are the adjacent domains of size ξwithρ(x,t) greater or smaller than ρ(t)
+(Fig. 1,2). In other words, they are the domains in which the cells hav e the
+mean size ¯a(x,t) greater or smaller than the macroscopic mean value ¯ a(t) . The
+amplitude of relative ﬂuctuations δρ(x,t)/ρ(t) and the domain size (characteris-
+tic wavelength of ﬂuctuations), divided by the mean cell size ξ/¯a(t)∝ξρ(t) =˜ξ
+stay constant. These domains can be short-range ordered (Fig. 1) or long-range
+(Fig. 2) ordered in space. The short-range ordering of cell interf ace density
+ﬂuctuations resemble the ﬂuid density ﬂuctuations ordering in the w ell-known
+phenomenon of critical opalescence. The long-range ordering of c ell interface
+density ﬂuctuations resemble to the eﬀect of spinodal decomposit ion in thermo-
+dynamic systems.
+This is just a moment to return to the question discussed in Sec. 1 an d
+2 about basing of the self-consistent mean ﬁeld approximation for d escription
+of the cellular systems. The condition of its validity is the condition tha t the
+relativevalueofﬁeldﬂuctuations δκ(x,t)/κ(t)≈δρ(x,t)/ρ(t)≈ψ(x,t) issmall.
+More priscisely, the ﬂuctuations averaged over the coarse-grain ing volume VL
+must be small: < ψ2(x,t)>L=ν/[VLN(x,t)]<<1 . Choosing the volume
+of a ﬁrst coordination sphere as a minimum possible value of VLand taking
+into consideration that n=VLNis the number of cells in VL, we see that
+this condition is well satisﬁed both for d= 2(ν= 0.109,n≈7) andd=
+3(ν= 0.373,n≈13). The general condition of validity of mean-ﬁeld theory
+for the systems with Landau-Ginzburg potential F{ψ}is well-known Ginzburg
+criterion: ﬂuctuations of ψaveraged over the correlation volume must be small
+< ψ2(x,t)>ξ=ν/[VξN(x,t)]<<1 . This criterion is obviously fulﬁlled if
+L≤ξ. Uniting this condition with the foregoing condition of existence of
+stochastodynamic potential F{ψ}, we have ﬁnally ¯ a << L ≤ξ. This is just
+the familiar condition of the choice of the coarse graining size L, which is also
+9
+the condition of validity of the self-consistent mean ﬁeld approximat ionin phase
+transformation theory. It can be satisﬁed if ¯ a<<L≤ξ. In coarsening cellular
+systems this is always the case for the short range ordering ( D>C2/(4A))
+and this is so indeed if D>>−C/(8π2) for the long-range ordering (0 <D<
+C2/(4A) ).
+In spite of that the ordering eﬀects of cell interface density ﬂuct uations
+can be evidently established by visual analysis of diﬀerent cellular str uctures
+in experiments (Fig. 1) and computer simulations (Fig. 2), I am not aw are
+of publications, where the structure function (17), describing th e eﬀect quan-
+titatively, has been directly obtained. I feel that it is related to two reasons.
+Firstly, it must be noted that hydrodynamic and stochastodynamic theories de-
+veloped here are valid in the long wavelength limit ˜k=kρ(t)<1 , when we can
+guarantee the possibility of application of the cell medium conception and the
+self-consistent mean ﬁeld approximation. In the long wavelength limit ˜k<1 the
+maximum of ˜S(˜k) is hardly observed: if ˜kC<<1 the maximum is small (Fig.
+3); if˜kC≈1 it is hardly separated from the other maximum ˜k0≈2 correspond-
+ing to the trivial eﬀect that the mean distance between neighbourin g interfaces
+is 2¯a. This later maximum cannot be described within our long wavelength
+approach and is not shown in Fig. 3. Therefore the more strong con ﬁrmation
+of existence of the large-scale ﬂuctuations of cell interface dens ity is the obser-
+vation of the negative curvature of˜S(˜k) in the macroscopic ˜k→0 limit (Fig.
+3). However it demands of a laborious statistical analysis or a scatt ering study
+of very large cellular systems. In actual practice the ﬁnite-size ind uced eﬀects
+stays too essential [21]. Secondly, in computer experiments, using usually ”
+q- states Potts model” [10, 13], the structure function S(k) is calculated as a
+Fourier transform of the correlation function of a phases volume d ensity. If all
+phases have the same equilibrium energy, and the boundaries separ ating the
+phase domains, are suﬃciently distinct, the system state is complet ely deﬁned
+by the total interfacial area. In consequence, the cell interfac e densityρ(x,t)
+and the corresponding structure function (17) is a much more sen sible charac-
+teristic of the system than the phases volume density and the corr esponding to
+it structure function. Quite recently [22] it has been demonstrate d by computer
+simulation of normal grain growth that a size correlation between ne ighbouring
+grains exist in grain structure. Unfortunately the spectral corr elation analy-
+sis of the cell interface density ﬂuctuations by means of the struc ture function
+(17) has not been made and direct quantitative comparison of thes e results with
+present theoryresults is diﬃcult. Still there is no doubt that we are dealing with
+the ﬁrst observation of the short-range ordering of cell interfa ce density ﬂuctu-
+ations in cellular structures. New experiments or computer simulatio ns with
+careful space spectral analysis of cell interface density ﬂuctua tions are needed
+to conﬁrm the existence of dynamic patterning in cellular structure s.
+6 Summary
+In summary, the problems of multilevel description of cellular struct ure evolu-
+tion are considered from positions of kinetic, hydrodynamic and sto chastody-
+namic theories of nonequilibrium statistical systems. It is demonstr ated that
+the eﬀective method to solve the problem is to describe the cellular st ructure on
+the microscopic level by the probability distribution function in the co ordinate-
+10
+size space, i.e. in the space of the cell coordinates and the cell sizes . The
+kinetic equation for the weakly nonhomogeneous cellular structure is written
+and the development to hydrodynamic equations for a continuous e lastic cellu-
+lar medium with viscous motion law is realised. These non-linear diﬀerent ial
+equations contain three mesoscopic quantities of the cell medium (t he cell inter-
+face density, the cell medium velocity and the cell interface curvat ure) and are
+analogous to the continuity equation, Darcy’s law and the equation o f state in
+gas dynamics. For continuous ﬂow of the cell medium the hydrodyna mic equa-
+tion set is reduced to a single evolution equation for the cell interfac e density.
+It has the form of a diﬀusion-reaction equation with a negative ”diﬀu sion” co-
+eﬃcient and with the cell interface density playing the role of ”conce ntration”.
+It is shown that the relative value of deviation of the cell interface d ensity from
+its mean macroscopic value is a suitable order parameter of the syst em. The
+order parameter dynamics are described by Langevin stochastic e quation with a
+stochastodynamic potential having Ginzburg-Landau form and wit h a stochas-
+tic noise, created by the continuous process of cells annihilation. An alysis of
+the order parameter dynamics in coarsening reveals a new eﬀect of macroscopic
+patterning in the cell medium: competition between two stochastic p rocesses of
+the small cells ”eating up” by large ones and of the ”uphill cells diﬀusion ” leads
+to the creation of space-correlated ﬂuctuations of the cell inter face density.
+7 Acknowledgements
+I alwayskeep in my memory stimulating discussions with the late B. M. St runin
+and I. M. Lifshitz carried out during the early stages of this work at the Moscow
+Engineering Physics Institute. I acknowledge valuable discussions w ith V. V.
+Slyozov, A. I. Ryazanov, L. P. Kubin, V. Pontikis, N. Rivier and R. Le fever. I
+am grateful to the Laboratoire des Solides Irradi´ es, Ecole Polyt echnique, France
+for kind hospitality and support of this work.
+References
+[1] I. M. Lifshitz, Sov. Phys. JETP 15, 939 (1962); J. D. Gunton, M. San
+Miguel and P. S. Sahni, in Phase Transitions and Critical Phenomena , Vol.
+8, eds. C. Domb and J. L. Lebowitz (Academic, New York, 1983) p.26 7; K.
+Binder, in Material Science and Technology , Vol. 5, ed. P. Haasen (VCH,
+Weinheim, Germany, 1990) p.143; A. J. Bray, Adv. Phys. 43, 357 (1994).
+[2] J. Stavans, PhysicaA194, 307 (1993).
+[3] J.A.GlazierandD. Weaire, J. Phys.: Cond. Mat. 4, 1867(1992); B. Berge,
+A. J. Simon and A. Libchaber, Phys. Rev. A41, 6893 (1990); D. Weaire,
+F. Bolton, P. Molho and J. A. Glazier, J. Phys. Cond. Mat. 3, 2101 (1991);
+D. Weaire and N. Rivier, Contemp. Phys. 25, 59 (1984).
+[4] H. Atkinson, Acta Met. 36, 469(1988); G Abbrusseze and P. Brozzo, Grain
+growth in polycrystalline materials (Trans. Tech. Publications, Zurich,
+1992); V. E. Fradkov and D. Udler, Adv. Phys. 43, 739(1994).
+11
+[5] L. D. Landau and E. M. Lifshitz, Statistical physics , Part 1 (Pergamon
+Press, London, 1980).
+[6] L. D. Landau and E. M. Lifshitz, Physical kinetics (Pergamon Press, Lon-
+don, 1981).
+[7] I. M. Lifshitz and V. V. Slyozov, Sov. Phys. JETP 8, 331 (1959); V. V.
+Slyozov and V. V. Sagalovich, Sov. Phys. Usp. 30, 23 (1987).
+[8] M. Hillert, Acta Met. 13, 227 (1965).
+[9] H. Flyvbjerg, Phys. Rev. E47, 4037 (1993), PhysicaA194, 298 (1993); J.
+Stavans, E. Domany, and D. Mukamel, Europhys. Lett. 15, 479 (1991); C.
+Sire,Phys. Rev. Lett. 72, 420 (1994).
+[10] G. S. Grest, M. P. Anderson and D. J. Srolovitz, Phys. Rev. B38, 4752
+(1988); J. A. Glazier, M. P. Anderson and G. S. Grest, Phil. Mag. B62,
+615 (1990); C. Sire and S. N. Majumdar, Phys. Rev. E52, 244 (1995).
+[11] D. Weaire and M. A. Fortes, Adv. Phys. 6, 685 (1994).
+[12] S. B. Goryachev and A. V. Shalenkov, in Solid State Phenomena , Vol. 35-
+36, eds. J. Rabier, A. George, Y. Brchet and L. Kubin (Trans Tech Pub-
+lications, Aedermannsdorf, 1994); S. B. Goryachev and A. V. Sha lenkov,
+Metal. Phys. & Metallogr. 77, 134,143 (1994).
+[13] P. Paillard, Ph.D. Thesis , Paris XI University (1994); P. Paillard, Scripta
+Met., to be published.
+[14] S. B. Goryachev, Physica, to be published.
+[15] L. D. Landau and E. M. Lifshitz, Fluid mechanics (Pergamon Press, Lon-
+don, 1959).
+[16] P. C. Honenberg and B. I. Halperin, Rev. Mod. Phys. 49, 435 (1977); M. C.
+Cross and P. C. Honenberg 65, 851 (1993); H. Haken, Advanced synergetics
+(Springer, Berlin, 1987), N. G. van Kampen, Stochastic processes in physics
+and chemistry (Springer, Berlin, 1985).
+[17] S. B. Goryachev, Phys. Rev. , to be published.
+[18] K. Binder, D. Stauﬀer, and H. Muller-Krumbhaar, Phys. Rev. B12, 5261
+(1975); K. Binder, Phys. Rev. B15, 4425 (1977); L. A. Maksimov and A.
+I. Ryazanov, Zh. Eksp. Teor. Fiz. 79, 2311 (1980).
+[19] W. Horsthemke, R. Lefever, Noise-Induced Transitions (Springer, Berlin,
+1984); R. Graham, Phys. Rev. A10, 1792 (1974); R. Graham and T. Tl,
+Phys. Rev. A33, 1322 (1986).
+[20] S. B. Goryachev, Phys. Rev. Lett. 72, 1850 (1994).
+[21] O. G. Mouritsen, Phys. Rev. Lett. 56, 850 (1986).
+[22] O. Hunderi and N. Ryum, Acta Met. 44, 1673 (1996); K. Marthinsen, O.
+Hunderi and N. Ryum, Acta Met. 44, 1681 (1996).
+12

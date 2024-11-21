@@ -1,0 +1,2051 @@
+Large Deviations for the Fleming/-Viot pro cess withneutral m utation and selection
+/D/.A/.Da wsonThe Fields Institute
+S/. F engMcMaster Univ ersit yOctob er /2/0/, /1/9/9/8AbstractLarge deviation principles are established for the Fleming/-Viot pro cesses with neutral m u/-tation and selection/, and the corresp onding equilibrium measures as the sampling rate go es to/0/. All results are /rst pro v ed for the /nite allele mo del/, and then generalized/, through thepro jectiv e limit tec hnique/, to the in/nite allele mo del/. Explicit expressions are obtained for therate functions/.Keywor ds/: Fleming/-Viot pro cess/, large deviations/, relativ e en trop y /.AMS /1/9/9/1 subje ct classi/c ations/: Primary /6/0F/1/0/; secondary /9/2D/1/0/./1 In tro ductionThe Fleming/-Viot pro cess is a measure/-v alued pro cess describing the ev olution of the distribution ofgenot yp es in a p opulation/. In the case of t w o alleles it reduces to a one/-dimensional di/usion pro cessthat appro ximates the classical W righ t/-Fisher mo del/. The standard mo del in p opulation geneticsin v olv es m utation/, replacemen t sampling/, and selectiv e adv an tages among v arious genot yp es/.Let E b e a compact metric space/, C /( E /) b e the set of con tin uous functions on E /, and M/1
+/( E /)denote the space of all probabilit y measures on E with the top ology of w eak con v ergence/. Let A b ethe generator of a Mark o v pro cess on E with domain D /( A /)/. De/ne D /= f F /: F /( / /) /= f /( h //; / i /) /; f /2C
+/1b
+/( R /) /; / /2 D /( A /) /; / /2 M/1
+/( E /) g /. Then the generator of the Fleming/-Viot pro cess isL F /( / /) /=
+ZE
+/A
+/ F /( / /)/ / /( x /)
+// /( dx /) /+
+//2
+ZE
+ZE
+//
+/2F /( / /)/ / /( x /) / / /( y /)
+/Q /( / /; dx/; dy /) /(/1/./1/)/= f
+/0/( h //; / i /) h //; A/ i /+
+//2
+Z Z/ /( x /) / /( y /) Q /( / /; dx/; dy /) /;/Researc h supp orted b y the Natural Science and Engineering Researc h Council of Canada/1
+where/ F /( / /) /=/ / /( x /) /= lim/" /! /0/+
+/"
+/BnZr /1f F /( / /+ /"/x
+/) /BnZr F /( / /) g /;/
+/2F /( / /) /=/ / /( x /) / / /( y /) /= lim/"/1
+/! /0/+ /; /"/2
+/! /0/+
+/( /"/1
+/"/2
+/)
+/BnZr /1f F /( / /+ /"/1
+/x
+/+ /"/2
+/y
+/) /BnZr F /( / /) g /;Q /( / /; dx/; dy /) /= / /( dx /) /x
+/( dy /) /BnZr / /( dx /) / /( dy /) /;and /x
+stands for the Dirac measure at x /2 E /. The domain of L is D /. E is called the t yp e space/,A is kno wn as the m utation op erator/, and the last term in /(/1 /: /1/) describ es the con tin uous sampling/.If the m utation op erator has the form of Af /( x /) /=
+//2
+R/( f /( y /) /BnZr f /( x /)/) //0
+/( dy /) with //0
+/2 M/1
+/( E /)/, w ecall the pro cess a Fleming/-Viot pro cess with neutral m utation/. It is kno wn that the Fleming/-Viotpro cess with neutral m utation has a unique rev ersible probabilit y measure /(cf/. Ethier and Kurtz/[/6 /]/)/.In the presen t article w e will consider the limiting b eha vior of this pro cess as / /! /0 /: In the/rst principal result w e establish a large deviation principle /(henceforth/, LDP/) for the sequence ofrev ersible measures/. It turns out that the sequence con v erges to the probabilit y /xed p oin t //0
+ofthe m utation op erator exp onen tially fast and for / /= /1 /; / / //0
+the deviation is c haracterized b ythe relativ e en trop y de/ned asH /( //0
+j / /) /=
+/8/</:
+RE
+h log hd/ if //0
+/ //1 otherwise/,
+/(/1/./2/)where h is the Radon/-Nik o dym deriv ativ e of //0
+with resp ect to / /. It is kno wn/, b y Sano v/'s theo/-rem/, that the empirical measure f
+/1n
+Pnk /=/1
+/Xk
+gn / /1
+of an i/.i/.d/. sequence of random v ariables withcommon distribution //0
+con v erges exp onen tially fast to //0
+as n go es to in/nit y /, and the deviationis c haracterized b y the relativ e en trop y H /( / j //0
+/)/. Our example here ma y b e the /rst among thelarge deviation literature that has this /\rev ersed/" form of relativ e en trop y as rate function/. InSano v/'s theorem/, the in/uence of sampling is dominan t while in the Fleming/-Viot case this in/u/-ence decreases to zero/. This ma y b e an explanation for the /\rev ersed/" expression of the t w o ratefunctions/.The second principal result of this article establishes a path lev el LDP for the Fleming/-Viotpro cess with neutral m utation and with selection/. This can b e view ed as an F reidlin/-W en tzellt yp e result in in/nite dimension/. F urthermore/, the existing results on large deviations for /nitedimensional di/usions usually assume either the di/usion co e/cien t is non/-degenerate or the squarero ot of the di/usion co e/cien t is uniformly Lipsc hitz con tin uous/, but our mo del with /nite allelessatis/es neither of them/. Hence our results also include an extension of the /nite dimensionalF reidlin/-W en tzell theory /./2
+The sampling rate / can b e in terpreted as the in v erse p opulation size and the large deviationresults of this pap er describ e the deviations from the /\in/nite p opulation/" deterministic limit/.The large deviation result for equilibrium measures is pro v ed in Section /2 and the path lev elLDP is pro v ed in Section /3/. W e will /rst pro v e the LDP for the Fleming/-Viot pro cess with neutralm utation/, and then/, b y the Cameron/-Martin/-Girsano v transformation/, for the case with selection/.F or pro cesses without selection w e will /rst pro v e the result for the /nite allele mo del/, and thengeneralize/, through the pro jectiv e limit tec hnique/, to the in/nite allele mo del/./2 LDP for Equilib ri um MeasuresLet the follo wing ob jects b e giv en/: X a Hausdor/ top ological space/, BX
+a / /-algebra of space X /,f P/"
+g/"/> /0
+a family of probabilit y measures on /( X /; BX
+/)/, f a/"
+g/"/> /0
+a family of p ositiv e n um b ers tendingto zero as /" go es to zero/, and a function I /: X /BnZr /! /[/0 /; /1 /]/.De/nition /2/./1 The function I /: X /BnZr /! /[/0 /; /1 /] is c al le d a r ate function if it is lower semic ontinuous/.A r ate function is c al le d the go o d r ate function if for any r / /0 /, the level set /I
+/( r /) /= f x /2 X /:I /( x /) / r g is c omp act/. The c onstant a/"
+is c al le d the sp e e d/.De/nition /2/./2 f P/"
+g satis/es a LDP with the r ate function /(or go o d r ate function/) I if/1/. for e ach BX
+/-me asur able op en subset G of Xlim inf/" /! /0
+a/"
+log P/"
+/( G /) / /BnZr infx /2 G
+I /( x /)/; /(/2/./1/)/2/. for e ach BX
+/-me asur able close d subset B of Xlim sup/" /! /0
+a/"
+log P/"
+/( B /) / /BnZr infx /2 B
+I /( x /)/; /(/2/./2/)Remark/: The BX
+/-measurable condition is needed when B is not the Borel / /-algebra and not allop en or closed sets are BX
+/-measurable/. This situation ma y o ccur when the space X is not separable/.When the space X is compact/, all rate functions are go o d rate functions/. Also the function I inthe ab o v e de/nition is unique when X is a regular top ological space/. F or an excellen t in tro ductionto basic concepts and tec hniques of large deviations refer to /[/4 /]/.In this section w e will establish LDP for the equilibriu m measures of the Fleming/-Viot pro cesseswith neutral m utation and with selection/. W e will start with the case when the t yp e space E is/nite/. Then/, b y using the pro jectiv e limit tec hnique/, w e obtain results for the case of E /= /[/0 /; /1/]/./3
+F or an y n / /1/, let E /= f /1 /; /2 /; / / / /; n g /. The space M/1
+/( E /)/, the set of all probabilit y measures onE /, can b e iden ti/ed with the /( n /BnZr /1/)/-dimensional simplex/n
+/= f x /= /( x/1
+/; / / / /; xn
+/) /: xi
+/ /0 /; i /= /1 /; / / / /; n /;
+nXi /=/1
+xi
+/= /1 g /:The Fleming/-Viot pro cess with neutral m utation reduces to the neutral one/-lo cus n /-allele di/usionpro cess with generatorA/
+/=
+//2
+nXi/;j /=/1
+xi
+/( /ij
+/BnZr xj
+/)
+/@
+/2/@ xi
+/@ xj
+/+
+nXi /=/1
+/
+nXj /=/1
+xj
+qj i
+//@/@ xi
+/;where qj i
+/( j /6/= i /) is the in tensit y of a m utation from allele j to allele i /, and qj j
+/= /BnZr
+Pi /6/= j
+qj i
+/:Let m denote the Leb esgue measure on /n
+/. If the in/nitesimal matrix /( qij
+/) is irreducible/, thenthis di/usion has a unique stationary distribution whic h is absolutely con tin uous with resp ect tom /. /(cf/. Shiga /[/1/1 /]/)In the sp ecial case of paren t/-indep enden t m utation/, i/.e/./,qij
+/=
+//2
+pj
+/> /0 /; /1 / i /6/= j / n/;
+nXi /=/1
+pi
+/= /1 /; / /> /0 /:W righ t /[/1/4 /] disco v ered that for p /= /( p/1
+/; / / / /; pn
+/)/, the unique stationary distribution // /;/ /;p
+/2 M/1
+/(/n
+/)is the Diric hlet distribution with parameters p/1
+/; / / / /; pn
+giv en b y// /;/ /;p
+/( dx /) /=
+/BnZr/[ /
+/BnZr /1/ /]/BnZr/( /
+/BnZr /1/ p/1
+/) / / / /BnZr/( /
+/BnZr /1/ pn
+/)
+x
+/
+/BnZr /1/ p/1
+/BnZr /1/1
+/ / / x
+/
+/BnZr /1/ pn
+/BnZr /1n
+dx/1
+/ / / dxn /BnZr /1
+/:F or an y Borel measurable subset C of /n
+/, w e ha v e b y Stirling/'s form ulalog // /;/ /;p
+/( C /) /= log
+n
+p/2 / /( /
+/BnZr /1/ /)
+/
+/BnZr /1/ /BnZr
+/1/2e
+///1/2 //(
+p/2 / /)
+n/( /
+/BnZr /1/ p/1
+/)
+/
+/BnZr /1/ p/1
+/BnZr
+/1/2e
+//1
+//1/2 / p/1/ / / /( /
+/BnZr /1/ pn
+/)
+/
+/BnZr /1/ pn
+/BnZr
+/1/2e
+/n
+//1/2 / pn
+/(/2/./3/)/
+ZC
+x
+/
+/BnZr /1/ p/1
+/BnZr /1/1
+/ / / x
+/
+/BnZr /1/ pn
+/BnZr /1n
+dx/1
+/ / / dxn /BnZr /1
+o/=
+n /BnZr /1/2
+log
+/1/2 / /
+/+
+/1/2
+log
+/( / p/1
+/) / / / /( / pn
+/)/
+/+
+//1/2 /
+h/ /BnZr
+//1p/1
+/BnZr / / / /BnZr
+/npn
+i/BnZr /
+/BnZr /1/
+nXi /=/1
+pi
+log pi
+/+ log
+ZC
+x
+/
+/BnZr /1/ p/1
+/BnZr /1/1
+/ / / x
+/
+/BnZr /1/ pn
+/BnZr /1n
+dx/1
+/ / / dxn /BnZr /1
+/;where /0 /< //; //1
+/; / / / /; /n
+/< /1 are some constan ts/.F or an y /" /> /0/, let C/"
+/= f x /2 C /: min/1 / i / n
+xi
+/ /" g /. F or an y measurable function f on/n
+/, jj f jjL
+/
+/BnZr /1 denotes the L
+/
+/BnZr /1norm of f with resp ect to measure m /. Then w e ha v e for / /<min/1 / i / n
+f / pi
+g /,jj IC
+e
+Pni /=/1
+/ pi
+log xijjL
+/
+/BnZr /1 /= /[
+ZC
+x
+/
+/BnZr /1/ p/1/1
+/ / / x
+/
+/BnZr /1/ pnn
+dx/1
+/ / / dxn /BnZr /1
+/]
+//(/2/./4/)/4
+/ /[
+ZC
+x
+/
+/BnZr /1/ p/1
+/BnZr /1/1
+/ / / x
+/
+/BnZr /1/ pn
+/BnZr /1n
+dx/1
+/ / / dxn /BnZr /1
+/]
+//= jj IC
+e
+Pni /=/1
+/( / pi
+/BnZr / /) log xijjL
+/
+/BnZr /1/ jj IA/"
+e
+Pni /=/1
+/ pi
+log xijjL
+/
+/BnZr /1
+/(
+/1/"
+/)
+n//+ m /( C n C/"
+/)/ jj IC
+e
+Pni /=/1
+/ pi
+log xijjL
+/
+/BnZr /1 /(
+/1/"
+/)
+//+ m /( C n C/"
+/) /:Letting / /! /0/, then /" /! /0/, w e getlim/ /! /0
+/[
+ZC
+x
+/
+/BnZr /1/ p/1
+/BnZr /1/1
+/ / / x
+/
+/BnZr /1/ pn
+/BnZr /1n
+dx/1
+/ / / dxn /BnZr /1
+/]
+//= ess sup f IC
+e
+Pni /=/1
+/ pi
+log xi/: x /2 /n
+g /: /(/2/./5/)F or an y subset B of /n
+/, w e ha v eess sup f IB
+e
+Pni /=/1
+/ pi
+log xi/: x /2 /n
+g / e
+/BnZr infx /2 B
+Pni /=/1
+/ pi
+log
+/1xi/: /(/2/./6/)On the other hand for an y op en subset G of /n
+/,ess sup f IG
+e
+Pni /=/1
+/ pi
+log xi/: x /2 /n
+g /= ess sup f e
+Pni /=/1
+/ pi
+log xi/: x /2 G g /(/2/./7/)/= e
+/BnZr infx /2 G
+Pni /=/1
+/ pi
+log
+/1xi/:By /(/2 /: /3/) /,/(/2 /: /5/) /, and /(/2 /: /6/) /, w e get that for an y closed subset B of /nlim sup/ /! /0
+/ log // /;/ /;p
+/( B /) / /BnZr / infx /2 B
+f
+nXi /=/1
+/( pi
+log
+/1xi
+/+ pi
+log pi
+/) g /: /(/2/./8/)F rom /(/2 /: /3/) /, /(/2 /: /5/) /, and /(/2 /: /7/) /, w e obtain that for an y op en subset G of /nlim inf/ /! /0
+/ log // /;/ /;p
+/( G /) / /BnZr / infx /2 G
+f
+nXi /=/1
+/( pi
+log
+/1xi
+/+ pi
+log pi
+/) g /: /(/2/./9/)Note that in the presen t situation the relativ e en trop y H /( p j x /) of p with resp ect to x is giv en b yH /( p j x /) /=
+nXi /=/1
+pi
+log
+pixi
+/;and is non/-negativ e/, con tin uous/. This com bined with the compactness of /n
+implies that all lev elsets of f x /2 /n
+/: H /( p j x /) / r g are compact/. Th us w e ha v e pro v ed the follo wing theorem/.Theorem /2/./1 When the mutation is p ar ent indep endent/, the family f // /;/ /;p
+g/ /> /0
+satis/es a LDPon sp ac e /n
+with the go o d r ate function I
+/p
+/( x /) /= / H /( p j x /) as / go es to zer o/.Remark/: It is w ell kno wn that the relativ e en trop y H /( x j p /) is the rate function describing thelarge deviations of the empirical measure of an i/.i/.d/. sequence of random v ariables with commondistribution p /. In the case of / /= /1 the rate function in Theorem /2/./1 has an /\rev ersed/" expressionH /( p j x /)/./5
+In Theorem /2/./1/, the probabilit y measure p is p ositiv e for ev ery t yp e i in E /. By making xi
+/= /0whenev er pi
+/= /0/, the Diric hlet distribution can b e de/ned for an y p /2 /n
+as follo ws/. Without lossof generalit y /, let p /= /( p/1
+/; / / / /; pr
+/; /0 /; / / / /; /0/) /; r /< n/; /~ p /= /( p/1
+/; / / / /; pr
+/)/. W e de/ne// /;/ /;p
+/= // /;/ /; /~ p
+/ /
+/
+ n /BnZr r/0
+/: /(/2/./1/0/)F or an y p/; x /2 /n
+/, de/neI
+/p
+/( x /) /=
+/8/</:
+/ H /( p j x /) if x / p/1 otherwise/,
+/(/2/./1/1/)Then a generalized v ersion of Theorem /2/./1 can b e stated as follo ws/.Theorem /2/./2 F or any p /2 /n
+/, the family f // /;/ /;p
+g/ /> /0
+satis/es a LDP on sp ac e /n
+with the go o dr ate function I
+/p
+/( x /) as / go es to zer o/.Next w e consider the case when the t yp e space E /= /[/0 /; /1/]/. Let M/1
+/(/[/0 /; /1/]/) b e the collectionof all probabilit y measures on /[/0 /; /1/] with the top ology of w eak con v ergence/. Another top ology onM/1
+/(/[/0 /; /1/]/) needed in the sequel is called the / top ology whic h is the smallest top ology suc h thatfor eac h b ounded measurable function f on /[/0 /; /1/]/, the map / /!
+R/1/0
+f /( z /) / /( dz /) is con tin uous/. The/ /-top ology on M/1
+/(/[/0 /; /1/]/) is stronger than the w eak top ology /. But when the t yp e space E is /nite/,the t w o top ologies coincide with eac h other/. W e use M
+//1
+/(/[/0 /; /1/]/) to denote the space of all probabilit ymeasures on /[/0 /; /1/] equipp ed with the / top ology /.Note that for eac h x /2 /[/0 /; /1/]/, let Vx
+/= f / /2 M/1
+/(/[/0 /; /1/]/) /: / /( x /) /> /3 /= /4 g /. Then eac h Vx
+isan nonempt y op en set in the / top ology and for di/eren t x/; y /2 /[/0 /; /1/]/, Vx
+and Vy
+are disjoin t/.Since there are uncoun table n um b er of suc h op en sets/, the space M
+//1
+/(/[/0 /; /1/]/) is not separable/. The/ /-algebra B
+/on M
+//1
+/(/[/0 /; /1/]/) is de/ned to b e the smallest / /-algebra suc h that for ev ery b ounded/,measurable function f on /[/0 /; /1/]/, the map / /!
+R/1/0
+f /( x /) d / /( x /) is measurable/. It is kno wn /(cf/. /[/4/]/)that the Borel / /-algebra of space M/1
+/(/[/0 /; /1/]/) is the same as B
+//. W e use B to denote this common/ /-algebra throughout the remainder of this section/.LetP /= ff B/1
+/; / / / /; Br
+g /: r / /1 /; B/1
+/; / / / /; Br
+is a partition of /[/0 /; /1/] b y Borel measurable sets g /(/2/./1/2/)b e the collection of all /nite partitions of /[/0 /; /1/]/. F or an y / /2 M/1
+/(/[/0 /; /1/]/) /; /| /= f B/1
+/; / / / /; Br
+g /2 P /,de/ne //|
+/( / /) /= /( / /( B/1
+/) /; / / / /; / /( Br
+/)/)/.F or an y //; / /2 M/1
+/(/[/0 /; /1/]/)/, let H /( / j / /) b e the relativ e en trop y of / with resp ect to / de/ned in/(/1 /: /2/) /. Then it is kno wn /(cf/. /[/5 /]/) thatH /( / j / /) /= supg /2 C /(/[/0 /; /1/]/)
+f
+Z/1/0
+g d/ /BnZr log
+Z/1/0
+e
+gd/ g /= supg /2 B /(/[/0 /; /1/]/)
+f
+Z/1/0
+g d/ /BnZr log
+Z/1/0
+e
+gd/ g /; /(/2/./1/3/)/6
+where C /(/[/0 /; /1/]/) /; B /(/[/0 /; /1/]/) are the sets of con tin uous functions and b ounded measurable functions on/[/0 /; /1/]/, resp ectiv ely /.The follo wing expression of the relativ e en trop y will b e rep eatedly used in the sequel/.Lemma /2/./3 F or any //; / /2 M/1
+/(/[/0 /; /1/]/) /;H /( / j / /) /= sup/| /2P
+H /( //|
+/( / /) j //|
+/( / /)/) /: /(/2/./1/4/)Pro of/: If / is not absolutely con tin uous with resp ect to / /, then b oth side of /(/2 /: /1/4/) are in/nit y /. No ww e assume that h /=
+d/d/
+exists/. Then for an y /| /= /( B/1
+/; / / / /; Br
+/) /2 P /, c ho ose a function g /2 B /(/[/0 /; /1/]/)suc h thatg /( z /) /=
+Xi /: / /( Bi
+/) /> /0
+log
+/ /( Bi
+/)/ /( Bi
+/)
+IBi
+/( z /) /:By direct calculation w e ha v eH /( //|
+/( / /) j //|
+/( / /)/) /=
+Z/1/0
+g /( z /) d/ /BnZr log
+Z/1/0
+e
+g /( z /)d//:By /(/2 /: /1/3/) /, w e get H /( //|
+/( / /) j //|
+/( / /)/) / H /( / j / /) whic h implies that sup/| /2P
+H /( //|
+/( / /) j //|
+/( / /)/) / H /( / j / /)/.On the other hand/, for an y n / /1/, lethn
+/( x /) /=
+n /2
+nXk /=/1
+/( k /BnZr /1/) /= /2
+nIBk
+/( x /) /+ nIAn
+/( x /) /;where Bk
+/= f z /: /( k /BnZr /1/) /= /2
+n/ h /( z /) /< k /= /2
+ng /, An
+/= f z /: h /( z /) / n g /. The fact that h is in tegrable withresp ect to / implies that hn
+is an increasing sequence of nonnegativ e simple functions con v ergingto h almost surely with resp ect to / /. Let /` /= f B/1
+/; / / / /; Bn /2
+n/; An
+g /. Then w e ha v esup/| /2P
+H /( //|
+/( / /) j //|
+/( / /)/) / H /( //`
+/( / /) j //`
+/( / /)/) /
+Z/1/0
+hn
+log hn
+d//:Let n go to in/nit y /, w e get /(/2 /: /1/4/) b y /(/1 /: /2/) and the monotone con v ergence theorem/. /2No w w e are ready to pro v e large deviation results for equilibrium measures of some Fleming/-Viot pro cesses/. A Fleming/-Viot pro cess with neutral m utation has a generator of the follo wingform/:L F /( / /) /=
+ZE
+/A
+/ F /( / /)/ / /( z /)
+// /( dz /) /+
+//2
+ZE
+ZE
+//
+/2F /( / /)/ / /( z /) / / /( y /)
+/Q /( / /; dz /; dy /) /; /(/2/./1/5/)where E /= /[/0 /; /1/]/, / /> /0/, //0
+/2 M/1
+/(/[/0 /; /1/]/)/, andAf /( z /) /=
+//2
+Z/1/0
+/( f /( y /) /BnZr f /( z /)/) //0
+/( dy /) /;Q /( / /; dz /; dy /) /= / /( dz /) /z
+/( dy /) /BnZr / /( dz /) / /( dy /) /:/7
+F or an y symmetric b ounded measurable function V /( z /; y /) /2 B /(/[/0 /; /1/] / /[/0 /; /1/]/) /, letV /( / /) /=
+Z/1/0
+Z/1/0
+V /( z /; y /) / /( dz /) / /( dy /) /;andh
+/ V /( / /)/ /
+/;
+/ F/ /
+i /=
+Z/1/0
+Z/1/0
+Z/1/0
+/ F/ /
+/( z /)/[ V /( z /; y /) /BnZr V /( y /; w /)/] / /( dz /) / /( d y /) / /( dw /) /:Then the generator of a Fleming/-Viot pro cess with neutral m utation and selection tak es theform/:LV
+F /( / /) /= L F /( / /) /+ h
+/ V /( / /)/ /
+/;
+/ F/ /
+i /; /(/2/./1/6/)where V is called the /tness function/.It is kno wn /(cf/. theorem /3/./1 and theorem /3/./2 in /[/6 /]/) that the martingale problem asso ciatedwith generators L and LV
+are w ell/-p osed/. Shiga /[/1/2 /] sho ws that the Fleming/-Viot pro cess withgenerator L has a unique/, rev ersible stationary distribution // /;/ /;//0
+/2 M/1
+/( M/1
+/(/[/0 /; /1/]/)/)/, whic h is thedistribution of a M/1
+/(/[/0 /; /1/]/)/-v alued random v ariable / c haracterized b y the prop ert y that whenev err / /2 and B/1
+/; / / / /; Br
+is a partition of /[/0 /; /1/]/, /( / /( B/1
+/) /; / / / /; / /( Br
+/)/) has the Diric hlet distributionwith parameters
+/1/
+/ //0
+/( B/1
+/) /; / / / /;
+/1/
+/ //0
+/( Br
+/)/. /(Note that zero parameters can b e remo v ed to create aDiric hlet distribution on a simplex with dimension less than r /./) The Fleming/-Viot pro cess withneutral m utation and selection also has a unique/, rev ersible stationary distribution giv en b y// /;/ /;//0
+/;V
+/( d/ /) /= Z
+/BnZr /1exp/[
+V /( / /)/
+/]// /;/ /;//0
+/( d/ /) /; /(/2/./1/7/)where Z is the normalizing constan t/./(cf/. Ethier and Kurtz /[/7/]/)/.Theorem /2/./4 The family f // /;/ /;//0
+g satis/es a LDP on sp ac e M
+//1
+/(/[/0 /; /1/]/) with the go o d r ate functionI
+///0
+/( / /) /=
+/8/</:
+/ H /( //0
+j / /) if / / //0/1 otherwise/,
+/(/2/./1/8/)Pro of/: First note that the set of all /nite partitions P /, partially ordered b y /| / /{ i/ /| is /ner than/{ /, is a partially ordered righ t/-/ltering set/. F or ev ery /| /= /( B/1
+/; / / / /; Br
+/) /2 P /, letX/|
+/= f x /= /( xB/1
+/; / / / /; xBr
+/) /: xBi
+/ /0 /; i /= /1 /; / / / /; r /;
+rXi /=/1
+xBi
+/= /1 g /:F or an y /{ /= /( C/1
+/; / / / /; Cl
+/) /; /| /= /( B/1
+/; / / / /; Br
+/) /2 P /, /| / /{ /, de/ne//{/|
+/: X/|
+/! X/{
+/; /( xB/1
+/; / / / /; xBr
+/) /! /(
+XBk
+/ C/1
+xBk
+/; / / / /;
+XBk
+/ Cl
+xBk
+/) /:/8
+Let X represen t the pro jectiv e limit of the family fX/|
+/; //{/|
+/; /{/; /| /2 J /; /g /, //|
+b e the pro jectiv emapping/. Then w e ha v e M/1
+/(/[/0 /; /1/]/) / X b y iden tifying / /2 M/1
+/(/[/0 /; /1/]/) with the pro jectiv e limit off /( / /( B/1
+/) /; / / / /; / /( Br
+/)/) /: /| /= /( B/1
+/; / / / /; Br
+/) /2 P g /.On the other hand/, an y elemen t / of X can b e view ed as a /nitely additiv e measure on /[/0 /; /1/]/.F or an y f /2 C /(/[/0 /; /1/]/) and / /2 X /, w e de/ne the follo wing /"abstract in tegral/" of f with resp ect to / /:h //; f i /= limn /!/1
+/2
+n/BnZr /1Xk /=/0
+f /(/2
+/BnZr nk /) xBk
+/;where B/0
+/= /[/0 /; /2
+/BnZr n/)/, Bk
+/= /(/2
+/BnZr nk /; /2
+/BnZr n/( k /+ /1/)/] for k /= /1 /; / / / /; /2
+/BnZr n/BnZr /1/. The existence of this limitis guaran teed since
+P/2
+n/BnZr /1k /=/0
+f /(/2
+/BnZr nk /) xBk
+is a b ounded Cauc h y sequence/. F rom this de/nition andthe fact that an y decreasing sequence fn
+/2 C /(/[/0 /; /1/]/) whic h con v erges to zero p oin t wisely con v ergesto zero uniformly /(Dini/'s theorem/)/, w e conclude that h //; f i is a linear form on space C /(/[/0 /; /1/]/)satisfying/:/(a/) h //; f i / /0 for f / /0/;/(b/) h //; f i /= /1 for f / /1/;/(c/) h //; f i /! /0 as f /# /0 p oin t wise/.By the Daniell/-Stone theorem /(see e/.g/. page /1/9/7 of Bauer /[/1/]/)/, / is a probabilit y measure onthe Borel / /-algebra of /[/0 /; /1/]/. The pro jectiv e top ology obtained is just the / /-top ology /. Hence w eha v e X /= M
+//1
+/(/[/0 /; /1/]/)/. By Theorem /2/./2 and Theorem /3/./3 of Da wson and G/ artner /[/3/]/, w e ha v e thatthe family f // /;/ /;//0
+g satis/es a LDP on space X with the go o d rate functionI /( / /) /= sup f I
+///|
+/( //0
+/)
+/( //|
+/( / /)/) /: /| /2 P g /: /(/2/./1/9/)F rom /(/2 /: /3/) /, w e see that I /( / /) /= I
+///0
+/( / /) /: /2No w letC /( / /; //0
+/; V /) /= sup/ /2 M/1
+/( E /)
+f V /( / /) /BnZr I
+///0
+/( / /) g /; I
+/ /;V//0
+/( / /) /= C /( / /; //0
+/; V /) /BnZr /[ V /( / /) /BnZr I
+///0
+/( / /)/] /:Then w e ha v e the follo wing LDP /.Theorem /2/./5 The family f // /;/ /;//0
+/;V
+g satis/es a LDP on sp ac e M/1
+/(/[/0 /; /1/]/) with the go o d r ate func/-tion I
+/ /;V//0
+/( / /) /.Pro of/: Since C /( / /; //0
+/; V /) is a constan t/, V /( / /) is b ounded con tin uous in the / /-top ology /, an y lev elset of function I
+/ /;V//0
+/( / /) is a / /-closed subset of a lev el set of function I
+///0
+/( / /)/. Hence I
+/ /;V//0
+/( / /) is a go o drate function in the / /-top ology /, and th us in the w eak top ology to o/./9
+By using V aradhan/'s Lemma/, w e ha v e for an y F /( / /) /2 C /( M/1
+/(/[/0 /; /1/]/)/)/,lim/ /! /0
+/ log Z /= lim/ /! /0
+/ log
+ZM/1
+/(/[/0 /; /1/]/)
+e
+V /( / /) /=/// /;/ /;//0
+/( d/ /) /= C /( / /; //0
+/; V /) /;lim/ /! /0
+/ log
+ZM/1
+/(/[/0 /; /1/]/)
+e
+F /( / /) /=/// /;/ /;//0
+/;V
+/( d/ /) /= C /( / /; //0
+/; F /+ V /) /BnZr C /( / /; //0
+/; V /) /:Since M/1
+/(/[/0 /; /1/]/) is compact and th us the family // /;/ /;//0
+/;V
+is exp onen tial tigh t/, b y Bryc/'s in v erseV aradhan Lemma /(cf/. section /4/./4 of Dem b o and Zeitouni /[/4 /]/)/, w e get that the family f // /;/ /;//0
+/;V
+gsatis/es a LDP on space M/1
+/(/[/0 /; /1/]/) with the go o d rate function I
+/ /;V//0
+/( / /)/. /2/3 P ath Lev el LDPIn this section w e will establish three LDPs at the path lev el/: LDP for /nite t yp e /(or allele/) mo del/,LDP for the Fleming/-Viot pro cess with neutral m utation/, and LDP for the Fleming/-Viot pro cesswith neutral m utation and selection/. The no v elt y of our result for /nite t yp e mo del is that thedi/usion co e/cien t of the corresp onding di/usion pro cess is degenerate and the square ro ot of thedi/usion co e/cien t is non/-Lipsc hitz/. This is an extension of the F reidlin/-W en tzell theory /./3/./1 LDP F or Finite Allele Mo delDe/neSn
+/= f x /= /( x/1
+/; / / / /; xn /BnZr /1
+/) /: xi
+/ /0 /; i /= /1 /; / / / /; n /BnZr /1/;
+n /BnZr /1Xi /=/1
+xi
+/ /1 g /:The Fleming/-Viot pro cess with /nite allele and neutral m utation is a /nite dimensional di/usionpro cess describ ed b y the follo wing system of sto c hastic di/eren tial equationsdx
+/"k
+/( t /) /= bk
+/( x
+/"/( t /)/) dt /+ /"
+n /BnZr /1Xl /=/1
+/k l
+/( x
+/"/( t /)/) dBl
+/( t /) /; /1 / k / n /BnZr /1 /; /(/3/./1/)where x
+/"/( t /) /= /( x
+/"/1
+/( t /) /; / / / /; x
+/"n /BnZr /1
+/( t /)/)/, bk
+/( x
+/"/( t /)/) /=
+//2
+/( pk
+/BnZr x
+/"k
+/( t /)/)/, and / /( x
+/"/( t /)/) /= /( /k l
+/( x
+/"/( t /)/)/)/1 / k /;l / n /BnZr /1is giv en b y/ /( x
+/"/( t /)/) /
+/0/( x
+/"/( t /)/) /= D /( x
+/"/( t /)/) /= /( x
+/"k
+/( t /)/( /k l
+/BnZr x
+/"l
+/( t /)/)/)/1 / k /;l / n /BnZr /1
+/;and /"
+/2/= / /, pk
+/= //0
+/( k /) /> /0/, Bl
+/( t /) /; /1 / l / n /BnZr /1 are indep enden t Bro wnian motions/.F or a /xed T /> /0 and x /2 Sn
+/, let C /(/[/0 /; T /] /; Sn
+/) b e the space of all Sn
+/-v alued con tin uous functionson /[/0 /; T /] endo w ed with the uniform top ology /, and P
+/"x
+denote the la w of x
+/"/( / /) starting at x /.Lemma /3/./1 The family f P
+/"x
+g/"/> /0
+is exp onential ly tight on C /(/[/0 /; T /] /; Sn
+/) for al l x /2 Sn
+/./1/0
+Pro of/: Let c/1
+/ supx /2Sn
+jj b /( x /) jj /, c/2
+/= supjj / jj /=/1 /;x /2Sn
+h / /; D /( x /) / i /> /0 /: F or an y a /> /0/, c ho ose m/0
+//1 /; /"/0
+/> /0 suc h that for m / m/0
+/; /" / /"/0
+/, w e ha v e /2/( n /BnZr /1/) m
+/2T / /1 and a/"
+/BnZr /2/> /1/. De/neKa
+/= /\m / m/0
+f x /( / /) /2 C /(/[/0 /; T /] /; Sn
+/)/; supt/;s /2 /[/0 /;T /] /; j t /BnZr s j /</m
+j x /( t /) /BnZr x /( s /) j / /m
+g /;where /m
+/=
+/1m
+/2
+/, /m
+/= c/1
+/m
+/+ f /2 c/2
+/( n /BnZr /1/) a /[
+/1m
+/+ /m
+ln
+/2/( n /BnZr /1/) T/m
+/] g
+/1 /= /2/. Let b /( x /) /= /( b/1
+/( x /) /; / / / /; bn /BnZr /1
+/( x /)/) /:Then w e ha v eP
+/"x
+f x /( / /) /2 K
+ca
+g /
+/1Xm /= m/0
+P f supt/;s /2 /[/0 /;T /] /; j t /BnZr s j /</m
+j x
+/"/( t /) /BnZr x
+/"/( s /) j /> /m
+g /(/3/./2/)/
+/1Xm /= m/0
+P f supt/;s /2 /[/0 /;T /] /; j t /BnZr s j /</m
+j x
+/"/( t /) /BnZr x
+/"/( s /) /BnZr
+Zts
+b /( x
+/"/( / /)/) d/ j /> /m
+/BnZr c/1
+/m
+g/
+/1Xm /= m/0
+/2/( n /BnZr /1/) T/m
+exp
+//BnZr
+/( /m
+/BnZr c/1
+/m
+/)
+/2/2 c/2
+/( n /BnZr /1/) /m
+/"
+/2
+//=
+/1Xm /= m/0
+/2/( n /BnZr /1/) T/m
+exp
+//BnZr
+a/m
+/"
+/2
+/(/1 /=m /+ /m
+ln /(/2/( n /BnZr /1/) T /=/m
+/)/)
+//
+/1Xm /= m/0
+/2/( n /BnZr /1/) T/m
+/(
+/m/2/( n /BnZr /1/) T
+/)
+a/=/"
+/2exp /( /BnZr am/=/"
+/2/) /
+exp/( /BnZr
+a/"
+/2
+/)/1 /BnZr exp/( /BnZr
+a/"
+/2
+/)
+/;where the third inequalit y is obtained b y using Theorem /4/./2/./1 in Stro o c k and V aradhan /[/1/3 /]/. Letting/" go to zero/, w e getlim sup/" /! /0
+/"
+/2log P
+/"x
+f K
+ca
+g / /BnZr a/: /(/3/./3/)The lemma follo ws since Ka
+is a compact set in C /(/[/0 /; T /] /; Sn
+/)/. /2Let /@ Sn
+and S
+/n
+denote the b oundary and in terior of Sn
+/, resp ectiv ely /. By direct calculation w eget det /( A /( x /)/) /= x/1
+/ / / xn /BnZr /1
+/(/1 /BnZr
+Pn /BnZr /1i /=/1
+xi
+/) /: Th us for an y x /2 S
+/n
+/, D /( x /) is in v ertible and the in v erseis giv en b yD
+/BnZr /1/( x /) /=
+/0BBBBBBBBBBBBBB/@
+/1 /BnZr
+P/1 / i / n /BnZr /1 /;i/6 /=/1
+xix/1
+xn
+/1xn
+/ / /
+/1xn/1xn
+/1 /BnZr
+P/1 / i / n /BnZr /1 /;i/6 /=/2
+xix/2
+xn
+/ / /
+/1xn/ / / / / / / / / / / //1xn
+/1xn
+/ / /
+/1 /BnZr
+P/1 / i / n /BnZr /1 /;i/6 /= n /BnZr /1
+xixn /BnZr /1
+xn
+/1CCCCCCCCCCCCCCA
+/(/3/./4/)where xn
+/= /1 /BnZr
+Pn /BnZr /1i /=/1
+xi
+/./1/1
+F or an y x in Sn
+and /' in C /(/[/0 /; T /] /; Sn
+/)/, letH
+x/1
+/= f /' /: /' /( t /) /= x /+
+Zt/0
+g /( s /) ds/; g /2 L
+/2/(/[/0 /; T /]/) g /;K/'
+/= f g /2 H
+x/1
+/: /' /( t /) /= x /+
+Zt/0
+b /( /' /( s /)/) ds /+
+Zt/0
+/ /( /' /( s /)/) /_ g /( s /) ds g /;and de/neIx
+/( /' /) /=
+/8/</:
+/1/2
+infg /2 K/'
+RT/0
+/( /_ g /( t /)/)
+/2dt/; /' /2 H
+x/1/1 /; /' /6/2 H
+x/1
+/(/3/./5/)By using the explicit expression of D
+/BnZr /1/( x /)/, w e get the follo wing for functions /' /( t /) whose pathesare completely con tained inside S
+/n
+/./[ /_ /' /( t /) /BnZr b /( /' /( t /)/)/] D
+/BnZr /1/( /' /( t /)/)/[ /_ /' /( t /) /BnZr b /( /' /( t /)/)/]
+/0/(/3/./6/)/=
+n /BnZr /1Xi/;j /=/1 /;i /6/= j
+/[ /_ /'i
+/( t /) /BnZr bi
+/( /' /( t /)/)/]/[ /_ /'j
+/( t /) /BnZr bj
+/( /' /( t /)/)/]
+//1 /BnZr
+n /BnZr /1Xk /=/1
+/'k
+/( t /)
+//BnZr /1/+
+n /BnZr /1Xi /=/1
+/[ /_ /'i
+/( t /) /BnZr bi
+/( /' /( t /)/)/]
+/2
+//1 /BnZr
+Pn /BnZr /1k /=/1 /;k /6/= i
+/'k
+/( t /)/'i
+/( t /)/(/1 /BnZr
+Pn /BnZr /1k /=/1
+/'k
+/( t /)/)
+//=
+nXi /=/1
+/( /_ /'i
+/( t /) /BnZr bi
+/( /' /( t /)/)/)
+/2/'i
+/( t /)
+/;where /'n
+/( t /) /= /1 /BnZr
+Pn /BnZr /1i /=/1
+/'i
+/( t /)/.Lemma /3/./2 If /' hits the b oundary /@ Sn
+/, then Ix
+/( /' /) /= /1 /.Pro of/: W e will pro v e this result b y con tradiction/. Assume there is a /' suc h that Ix
+/( /' /) /< /1 and/' hits the b oundary /. Let t/0
+/2 /(/0 /; T /] b e the /rst time that /' hits the b oundary /. Without lossof generalit y w e further assume that the hitting o ccurs on the /rst co ordinate /'/1
+/. No w c ho ose/0 /< t/1
+/< t/2
+/< t/0
+suc h that inft /2 /[ t/1
+/;t/2
+/]
+f b/1
+/( /'/1
+/( t /)/) g /> /0/, and log /( /'/1
+/( t /)/) is absolutely con tin uous on/[ t/1
+/; t/2
+/]/. By direct calculation w e get/BnZr /2
+Zt/2t/1
+/_ /'/1
+/( t /) b/1
+/( /' /( t /)/)/'/1
+/( t /)
+dt /
+Zt/2t/1
+/( /_ /'/1
+/( t /) /BnZr b/1
+/( /' /( t /)/)/)
+/2/'/1
+/( t /)
+dt / Ix
+/( /' /) /< /1 /:On the other hand/, p erforming in tegration b y parts t wice/, w e get/BnZr /2
+Zt/2t/1
+/_ /'/1
+/( t /) b/1
+/( /' /( t /)/)/'/1
+/( t /)
+dt /= /BnZr /2 f b/1
+/( /' /( t/2
+/)/) log/( /'/1
+/( t/2
+/)/) /BnZr b/1
+/( /' /( t/1
+/)/) log/( /'/1
+/( t/1
+/)/)/+
+//2
+Zt/2t/1
+log/( /'/1
+/( t /)/) /_ /'/1
+/( t /) dt g/= /BnZr /2 f b/1
+/( /' /( t/2
+/)/) log/( /'/1
+/( t/2
+/)/) /BnZr b/1
+/( /' /( t/1
+/)/) log/( /'/1
+/( t/1
+/)/)/+
+//2
+/[ /'/1
+/( t/2
+/)/(log/( /'/1
+/( t/2
+/)/) /BnZr /1/) /BnZr /'/1
+/( t/1
+/)/(log/( /'/1
+/( t/1
+/)/) /BnZr /1/)/] g /:/1/2
+Letting t/2
+go es to t/0
+/, the ab o v e will go to in/nit y b ecause the /rst term go es to in/nit y whileall other terms are b ounded/. This certainly con tradicts the assumption of /niteness of Ix
+/( /' /)/. /2Hence if w e de/ne H
+x/0
+/= H
+x/1
+/\ C /(/[/0 /; T /] /; S
+/n
+/)/, thenIx
+/( /' /) /=
+/8/</:
+/1/2
+RT/0
+Pni /=/1
+/( /_ /'i
+/( t /) /BnZr bi
+/( /' /( t /)/)/)
+/2/'i
+/( t /)
+dt/; /' /2 H
+x/0/1 /; /' /6/2 H
+x/0
+/(/3/./7/)Theorem /3/./3 F or any x /2 S
+/n
+/, the family f P
+/"x
+g/"/> /0
+satis/es a LDP on sp ac e C /(/[/0 /; T /] /; Sn
+/) with thego o d r ate function Ix
+/( / /) and sp e e d /"
+/2/.Remark/: If w e in tro duce a map /	 b et w een spaces Sn
+and /n
+suc h that/	/( x/1
+/; / / / /; xn /BnZr /1
+/) /= /( x/1
+/; / / / /; xn /BnZr /1
+/; /1 /BnZr
+n /BnZr /1Xi /=/1
+xi
+/) /;and for simplicit y /, let f P
+/"x
+g/"/> /0
+denote its image probabilit y on space C /(/[/0 /; T /] /; /n
+/) under the map/	/, then b y con traction principle w e ha v e that for an y x /2 /
+/n
+/, the family f P
+/"x
+g/"/> /0
+satis/es a largedeviation principle on space C /(/[/0 /; T /] /; /n
+/) with the go o d rate function Ix
+/( / /) and sp eed /"
+/2/.Pro of/: By Corollary /3/./4 in Pukhalskii /[/1/0 /] and Lemma /3/./1/, it su/ces to sho w that for ev ery/' /2 Cx
+/(/[/0 /; T /] /; Sn
+/) /;lim/ /! /0
+lim inf/" /! /0
+/"
+/2log P
+/"x
+f supt /2 /[/0 /;T /]
+j x /( t /) /BnZr /' /( t /) j / / g /(/3/./8/)/= lim/ /! /0
+lim sup/" /! /0
+/"
+/2log P
+/"x
+f supt /2 /[/0 /;T /]
+j x /( t /) /BnZr /' /( t /) j / / g /= /BnZr Ix
+/( /' /) /:First w e assume that the path of /' is con tained in S
+/n
+/. Cho ose //0
+small enough suc h thatB / f x /( / /) /2 Cx
+/(/[/0 /; T /] /; Sn
+/)/; supt /2 /[/0 /;T /]
+j x /( t /) /BnZr /' /( t /) j / //0
+g / Cx
+/(/[/0 /; T /] /; S
+/n
+/) /:Then w e ha v e/ /
+/1/2
+inft /2 /[/0 /;T /] /;x /( / /) /2 B
+d /( x /( t /) /; /@ Sn
+/) /> /0 /:where d /( y /; /@ Sn
+/) /= infz /2 /@ Sn
+j y /BnZr z j /.De/ne/~ / /( x /) /
+/8/</:
+/ /( x /) /; d /( x/; /@ Sn
+/) / /smo oth and uniform Lipsc hitz con tin uous /; elseBy replacing / /( x /) with /~ / /( x /)/, w e de/ne the di/usion /~ x
+/"/( t /)/, the la w
+/~P
+/"x
+/, the matrix
+/~A /( x /)/, andthe function
+/~Ix
+/( / /) resp ectiv ely /. It is easy to see that Ix
+/( /' /) /=
+/~Ix
+/( /' /)/. By using Theorem /5/./6/./7 in/1/3
+Dem b o and Zeitouni /[/4 /] and Theorem /3/./5 of Chapter /3 in F reidlin and W en tzell /[/8/]/, w e ha v e foran y f /2 Cx
+/(/[/0 /; T /] /; Sn
+/)/,lim/ /! /0
+lim inf/" /! /0
+/"
+/2log
+/~P
+/"x
+f supt /2 /[/0 /;T /]
+j x /( t /) /BnZr f /( t /) j / / g /(/3/./9/)/= lim/ /! /0
+lim sup/" /! /0
+/"
+/2log
+/~P
+/"x
+f supt /2 /[/0 /;T /]
+j x /( t /) /BnZr f /( t /) j / / g /= /BnZr
+/~Ix
+/( f /) /:Replacing f with /' in /(/3 /: /9/) /, w e end up with /(/3 /: /8/) b ecause the corresp onding probabilities inb oth equations are the same for / /< //0
+/.No w w e are ready to pro v e /(/3 /: /8/) for paths that hit the b oundary of Sn
+/. Let /' b e suc h a path/.The follo wing is trivially true/.lim/ /! /0
+lim inf/" /! /0
+/"
+/2log P
+/"x
+f supt /2 /[/0 /;T /]
+j x /( t /) /BnZr /' /( t /) j / / g / /BnZr Ix
+/( /' /) /= /BnZr/1 /: /(/3/./1/0/)On the other hand/, let t/0
+/> /0 b e the /rst time when /' hits the b oundary /. Then for an yt /2 /(/0 /; t/0
+/)/, /' will not hit the b oundary on /[/0 /; t /]/. By using an argumen t similar to that used in thederiv ation of /(/3 /: /9/) w e getlim/ /! /0
+lim sup/" /! /0
+/"
+/2log
+/~P
+/"x
+f sups /2 /[/0 /;t /]
+j x /( s /) /BnZr /' /( s /) j / / g /= /BnZr I
+tx
+/( /' /) /; /(/3/./1/1/)where I
+tx
+/( /' /) is the restriction of Ix
+/( /' /) on /[/0 /; t /]/. Hencelim/ /! /0
+lim sup/" /! /0
+/"
+/2log
+/~P
+/"x
+f sups /2 /[/0 /;T /]
+j x /( s /) /BnZr /' /( s /) j / / g /(/3/./1/2/)/ lim/ /! /0
+lim sup/" /! /0
+/"
+/2log
+/~P
+/"x
+f sups /2 /[/0 /;t /]
+j x /( s /) /BnZr /' /( s /) j / / g /= /BnZr I
+tx
+/( /' /) /:F rom the pro of of lemma /3/./2/, w e get that I
+tx
+/( /' /) con v erges to in/nit y as t /% t/0
+whic h implieslim/ /! /0
+lim sup/" /! /0
+/"
+/2log
+/~P
+/"x
+f sups /2 /[/0 /;T /]
+j x /( s /) /BnZr /' /( s /) j / / g /= /BnZr/1 /: /(/3/./1/3/)Lemma /3/./2 com bined with /(/3 /: /1/0/) and /(/3 /: /1/3/) implies that /(/3 /: /8/) holds for all /' /2 C /(/[/0 /; T /] /; Sn
+/)/. /2/3/./2 LDP for Fleming/-Viot Pro cesses with Neutral MutationThe Fleming/-Viot pro cess with neutral m utation has man y nice prop erties/. One of them is calledthe partition prop ert y /, namely /, giv en an y /nite partition of the t yp e space E /= /[
+Ki /=/1
+Ei
+/, thenf X /( t/; Ei
+/) /: i /= /1 /; / / / /; K g is a /nite dimensional di/usion pro cess as in section /3/./1/./(cf/. Ethier andKurtz /[/7 /]/./) By using this prop ert y and the pro jectiv e limit tec hnique/, w e will establish a LDP for/1/4
+the Fleming/-Viot pro cess with neutral m utation/. This kind of result can b e view ed as an in/nitedimensional generalization of the F reidlin/-W en tzel l theory /. In the remainder of this article w e willha v e E /= /[/0 /; /1/]/.Consider the follo wing family of partitions of space EJ /= ff /[/0 /; t/1
+/] /; /( t/1
+/; t/2
+/] /; / / / /; /( tn
+/; /1/] g /: /0 /< t/1
+/< t/2
+/< / / / /< tn
+/< /1/; n /= /1 /; /2 /; / / / g /;with the same partial ordering / as in P of /(/2 /: /1/2/) /. It is clear that J / P /. Th us w e will denotegeneric elemen t of J b y /{/; /|/; etc/./, and for an y /{/; /| /2 J /, the space X/{
+and the mappings //{/|
+/; //{
+arede/ned accordingly /.By an argumen t similar to that used in Section /2/, w e can sho w that the pro jectiv e limit of/( X/{
+/; //{/|
+/)/{/;/| /2J
+is M/1
+/( E /) and pro jectiv e top ology is stronger than the w eak top ology but w eak er thanthe / /-top ology /. W e will use M
+pr o/1
+/( E /) to denote the space M/1
+/( E /) with this pro jectiv e limit top ology /.Let C/|
+/= C /(/[/0 /; T /] /; X/|
+/) b e equipp ed with the usual uniform top ology /. F or an y /| /= f B/1
+/; / / / /; Br
+g //{ /= f C/1
+/; / / / /; Cl
+g /, de/ne a map p/{/|
+b et w een spaces C/|
+and C/{
+suc h thatp/{/|
+/: C/|
+/! C/{
+/; /( xB/1
+/( t /) /; / / / /; xBr
+/( t /)/) /! /(
+XBk
+/ C/1
+xBk
+/( t /) /; / / / /;
+XBk
+/ Cl
+xBk
+/( t /)/) /:It is clear that p/{/|
+is con tin uous/, and for an y /` / /| / /{ /, p/{/`
+/= p/{/|
+/ p/|/`
+/. No w let C b e the pro jectiv elimit of the family f /( C/{
+/; p/{/|
+/)/; /{/; /| /2 J g and p/|
+/: C /! C/|
+b e the corresp onding pro jection/. Ob viouslyC /(/[/0 /; T /] /; M
+p r o/1
+/(/[/0 /; /1/]/)/) is a subset of C /. On the other hand/, let f /
+/|/( / /) /: /| /2 J g b e an y elemen t of C /.Then for an y t /2 /[/0 /; T /]/, f /
+/|/( t /) /: /| /2 J g can b e iden ti/ed as a unique elemen t / /( t /) of M
+pr o/1
+/( E /) andth us f /
+/|/( / /) /: /| /2 J g can b e iden ti/ed as / /( / /)/. F or an y /( a/; b /] / E /, b y the de/nition of pro jectiv elimit/, / /( t /)/(/( a/; b /]/) is con tin uous in t /. Hence / /( / /) /2 C /(/[/0 /; T /] /; M
+pr o/1
+/( E /)/) and C can b e iden ti/ed asC /(/[/0 /; T /] /; M
+p r o/1
+/( E /)/)/.F or an y / /2 M/1
+/( E /)/, let P
+/ /;/ /;//0/
+b e the unique solution of the martingale problem asso ciatedwith generator L in /(/2 /: /1/5/) starting at / /.De/nition /3/./1 A pr ob ability me asur e / /2 M/1
+/( E /) is c al le d non/-de gener ate if for any /| /2 J /, //|
+/( / /)has no zer o c omp onent/. A p ath / /( / /) /2 C /(/[/0 /; T /] /; M
+pr o/1
+/( E /)/) is c al le d non/-de gener ate if for every t in/[/0 /; T /] /, / /( t /) is non/-de gener ate/.Remark/: An y probabilit y measure with supp ort E is non/-degenerate/.De/nition /3/./2 A p ath / /( / /) /2 C /(/[/0 /; T /] /; M
+pr o/1
+/( E /)/) is c al le d absolutely c ontinuous if for every /{ /2 J /,//{
+/( / /)/( t /) is absolutely c ontinuous as a multidimensional r e al value d function/./1/5
+Theorem /3/./4 F or any non/-de gener ate / /2 M/1
+/( E /) /, the family f P
+/ /;/ /;//0/
+g satis/es a LDP on sp ac eC /(/[/0 /; T /] /; M
+p r o/1
+/( E /)/) as / go es to zer o with the go o d r ate functionI/
+/( / /( / /)/) /= sup/| /2J
+I//|
+/( / /)
+/( p/|
+/( / /( / /)/)/) /: /(/3/./1/4/)Remark/: Let / /( t /) b e a path of the Fleming/-Viot pro cess with neutral m utation/. Then for ev eryt /> /0/, the supp ort of / /( t /) is a subset of the supp ort of //0
+/. Therefore the essen tial part of the t yp espace is the supp ort of //0
+/. If w e c ho ose E to b e the supp ort of //0
+/, then the result still holds/. Becauseof this w e assume in the sequel/, without loss of generalit y /, that the supp ort of //0
+is E /= /[/0 /; /1/]/.Pro of/: Since the path of Fleming/-Viot pro cess is con tin uous in the / /-top ology /(cf/. Shiga/[/1/2 /]/)/, w e ha v e that P
+/ /;/ /;//0/
+f C /(/[/0 /; T /] /; M
+pr o/1
+/( E /)/) g /= /1/. On the other hand for an y /| /2 J /, b y thenondegeneracy of / /, Theorem /3/./3 and the remark follo wing it/, w e ha v e that p/|
+/( P
+/ /;/ /;//0/
+/) satis/esa LDP on space C/|
+with the go o d rate function I//|
+/( / /)
+/( / /)/. Applying Theorem /3/./3 in Da wson andG/ artner /[/3/] w e get the result/. /2Let C
+/1 /; /0/(/[/0 /; T /] / E /) denote the set of all con tin uous functions on /[/0 /; T /] / E with con tin uous /rstorder deriv ativ e in time/. F or an y / /2 M/1
+/( E /)/, / /( / /) /2 C /(/[/0 /; T /] /; M
+pro/1
+/( E /)/)/, de/neS/
+/( / /( / /)/) /= supf /2 C
+/1 /; /0/(/[/0 /;T /] / E /)
+fh / /( T /) /; f /( T /) i /BnZr h / /(/0/) /; f /(/0/) i /(/3/./1/5/)/BnZr
+ZT/0
+h / /( s /) /; /(
+/@/@ s
+/+ A /) f i ds /BnZr
+/1/2
+ZT/0
+Z Zf /( s/; x /) f /( s/; y /) Q /( / /( s /)/; dx/; dy /) ds g /;andH/
+/= f / /( / /) /2 C /(/[/0 /; T /] /; M
+p r o/1
+/( E /)/) /: / /(/0/) /= //; / /( / /) is absolutely con tin uous/,non/-degenerate/, and for an y /| /2 J /; p/|
+/( / /)/( / /) /2 L
+/2/(/[/0 /; T /]/) g /:Remark/: It is clear that I/
+/( / /( / /)/) /= /1 for an y / /( / /) not in H/
+/.The next theorem giv es an v ariational form of the rate function I/
+/( / /( / /)/)/.Theorem /3/./5 F or any non/-de gener ate / /2 M/1
+/( E /) /, and any / /( / /) /2 H/
+/, we haveI/
+/( / /( / /)/) /= S/
+/( / /( / /)/) /:Pro of/: F or an y/| /= f B/1
+/= /[/0 /; b/1
+/) /; B/2
+/= /[ b/1
+/; b/2
+/) /; / / / /; Bn /BnZr /1
+/= /[ bn /BnZr /1
+/; /1/] g /2 J /;and f /( t/; y /) /2 C
+/1 /; /0/(/[/0 /; T /] / E /)/, let b/0
+/= /0 and//|
+/( f /)/( t/; y /) /= f /( t/; bk
+/) /; for y /2 Bk
+/; k /= /0 /; / / / /; n /BnZr /1 /:/1/6
+Then from the absolute con tin uit y of / /( / /)/, w e ha v eZT/0
+h /_ / /( s /) /; //|
+/( f /)/( s /) i d s /= h / /( T /) /; //|
+/( f /)/( T /) i /BnZr h / /(/0/) /; //|
+/( f /)/(/0/) i /BnZr
+ZT/0
+h / /( s /) /;
+/@/@ s
+//|
+/( f /)/( s /) i d s/: /(/3/./1/6/)Appro ximating f b y //|
+/( f /)/, w e obtain the follo wing result of in tegration b y parts/:ZT/0
+h /_ / /( s /) /; f /( s /) i d s /= h / /( T /) /; f /( T /) i /BnZr h / /(/0/) /; f /(/0/) i /BnZr
+ZT/0
+h / /( s /) /;
+/_f /( s /) i d s/: /(/3/./1/7/)Let x /= //|
+/( / /) /: F or k /= /0 /; / / / /; n /BnZr /1/, let /'k
+/( t /) /= p/|
+/( / /)/( t /)/( Bk
+/) /, /' /( t /) /= /( /'/0
+/( t /) /; / / / /; /'n /BnZr /1
+/( t /)/) andg /( t/; y /) /= /( /_ /'k
+/( t /) /BnZr bk
+/( /' /( t /)/)/)
+/2/=/'k
+/( t /) for y /2 Bk
+/: Here / corrupted/ g /( t/; y /) is w ell de/ned since / /( / /) is non/-degenerate/,and absolutely con tin uous/. Then b y direct calculation w e ha v eI//|
+/( / /)
+/( p/|
+/( / /( / /)/) /= Ix
+/( /' /) /=
+/1/2
+n /BnZr /1Xk /=/0
+ZT/0
+/( /_ /'k
+/( s /) /BnZr bk
+/( /' /( s /)/)/)
+/2/'k
+/( s /)
+ds/=
+ZT/0
+h /_ / /( s /) /; g /( s /) i ds /BnZr
+ZT/0
+h / /( s /) /; Ag i ds/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+g /( s/; x /) g /( s/; y /) Q /( / /( s /)/; dx/; dy /) ds /(/3/./1/8/)/ supf /2 C
+/1 /; /0/(/[/0 /;T /]/) / E /)
+f
+ZT/0
+h /_ / /( s /) /; //|
+/( f /)/( s /) i ds /BnZr
+ZT/0
+h / /( s /) /; A /( //|
+/( f /)/) i ds/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+//|
+/( f /)/( s/; x /) //|
+/( f /)/( s/; y /) Q /( / /( s /)/; dx/; dy /) ds g /;where the inequalit y holds b ecause g can b e appro ximated p oin t wise b y functions in the set f //|
+/( f /) /:f /2 C
+/1 /; /0/(/[/0 /; T /] / E /) g /.On the other hand/,supf /2 C
+/1 /; /0/(/[/0 /;T /]/) / E /)
+f
+ZT/0
+h /_ / /( s /) /; //|
+/( f /)/( s /) i ds /BnZr
+ZT/0
+h / /( s /) /; A /( //|
+/( f /)/) i ds/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+//|
+/( f /)/( s/; x /) //|
+/( f /)/( s/; y /) Q /( / /( s /)/; dx/; dy /) d s g/ supf /2 C
+/1 /; /0/(/[/0 /;T /]/) / E /)
+ZT/0
+/[
+n /BnZr /1Xk /=/1
+f /( s/; Bk
+/)/( /_ /'k
+/( s /) /BnZr bk
+/( /' /( s /)/) /(/3/./1/9/)/BnZr
+/1/2
+n /BnZr /1Xk /;l /=/1
+f /( s/; Bk
+/) Dk l
+/( /' /( s /)/) f /( s/; Bl
+/)/] ds/
+ZT/0
+sup/ /2 R
+n
+/[
+n /BnZr /1Xk /=/1
+/k
+/( /_ /'k
+/( s /) /BnZr bk
+/( /' /( s /)/) /BnZr
+/1/2
+n /BnZr /1Xk /;l /=/1
+/k
+Dk l
+/( /' /( s /)/) /l
+/] ds/= Ix
+/( /' /) /;whic h/, together with /(/3 /: /1/8/) /, implies thatI//|
+/( / /)
+/( p/|
+/( / /( / /)/) /= supf /2 C
+/1 /; /0/(/[/0 /;T /]/) / E /)
+f
+ZT/0
+h /_ / /( s /) /; //|
+/( f /)/( s /) i ds /BnZr
+ZT/0
+h / /( s /) /; A /( //|
+/( f /)/) i ds /(/3/./2/0/)/1/7
+/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+//|
+/( f /)/( s/; x /) //|
+/( f /)/( s/; y /) Q /( / /( s /)/; dx/; dy /) ds g /:By using the inequalit y/( a /+ b /)
+/2c /+ d
+/
+a
+/2c
+/+
+b
+/2d
+/; a/; b/; c/; d /> /0 /;and the expression /(/3 /: /7/) for Ix
+/( /' /)/, w e ha v e that for an y /|/2
+/ /|/1
+/,I//|/2
+/( / /)
+/( p/|/2
+/( / /( / /)/) / I//|/1
+/( / /)
+/( p/|/1
+/( / /( / /)/) /:T aking the suprem um on b oth sides of /(/3 /: /2/0/) o v er the set J /, w e /nally getI/( / /)
+/(/( / /( / /)/) /= supf /2 C
+/1 /; /0/(/[/0 /;T /]/) / E /)
+f
+ZT/0
+h /_ / /( s /) /; f /( s /) i ds /BnZr
+ZT/0
+h / /( s /) /; Af i ds/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+f /( s/; x /) f /( s/; y /) Q /( / /( s /)/; d x/; dy /) ds g /(/3/./2/1/)/= S/
+/( / /( / /)/) /;where the last equalit y follo ws from in tegration b y parts /(/3 /: /1/7/) /. /2Let C
+/1/( E /) b e the family of all con tin uous functions on E p ossessing con tin uous deriv ativ es ofall order/. F or an y linear functional /# on space C
+/1/( E /)/, de/nejj /# jj
+/2/
+/= supf /2 C
+/1/( E /)
+/[ h /#/; f i /BnZr
+/1/2
+ZE
+ZE
+f /( x /) f /( y /) Q /( / /; dx/; dy /) /] /:Then w e ha v eTheorem /3/./6 F or any non/-de gener ate / /2 M/1
+/( E /) /, and any / /( / /) in H/
+/, we haveI/
+/( / /( / /)/) /=
+ZT/0
+jj /_ / /( s /) /BnZr A
+//( / /( s /)/) jj
+/2/ /( s /)
+ds/; /(/3/./2/2/)wher e A
+/is the formal adjoint of A de/ne thr ough the e quality h A
+//( / /) /; f i /= h //; Af i /.W e defer the pro of of this theorem to App endix/./3/./3 LDP for Fleming/-Viot Pro cesses with SelectionFinally w e turn to pro v e the LDP of the Fleming/-Viot pro cess with selection/. The generator of thepro cess is giv en in /(/2 /: /1/6/) /. W e will assume that the /tness function V /( x/; y /) is con tin uous on E
+/
+ /2inthe sequel/.F or an y / /2 M/1
+/( E /)/, let P
+/ /;/ /;V /;//0/
+b e the unique solution of the martingale problem asso ciatedwith generator LV
+started at / /. F or simplicit y w e will not distinguish b et w een P
+/ /;/ /;//0/
+/, P
+/ /;/ /;V /;//0//1/8
+and their resp ectiv e restrictions on C /(/[/0 /; T /] /; M
+pr o/1
+/( E /)/)/. By the Cameron/-Martin/-Girsano v transfor/-mation /(see Da wson /[/2/]/) w e ha v e that/, restricted on C /(/[/0 /; T /] /; M
+pr o/1
+/( E /)/)/,dP
+/ /;/ /;//0/dP
+/ /;/ /;V /;//0/
+/= ZV
+/( T /) /= exp /[
+/1/
+GV
+/( / /( / /)/)/] /> /0 /; /(/3/./2/3/)whereGV
+/( / /( / /)/) /=
+ZT/0
+ZE
+/[
+ZE
+V /( y /; z /) / /( s/; dz /)/] M /( ds/; dy /) /(/3/./2/4/)/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+/[
+ZE
+V /( x/; z /) / /( s/; dz /)/]/[
+ZE
+V /( y /; z /) / /( s/; dz /)/] Q /( / /( s /)/; dx/; d y /) ds/;and M /( ds/; dy /) is the martingale measure obtained from the martingaleMt
+/( / /) /= h / /( t /) /; / i /BnZr h / /(/0/) /; / i /BnZr
+Zt/0
+h / /( s /) /; A/ i ds/:Let / b e the Prohoro v metric on M/1
+/( E /)/, and C
+w/(/[/0 /; T /] /; M
+pr o/1
+/( E /)/) denote C /(/[/0 /; T /] /; M
+pr o/1
+/( E /)/)equipp ed with the subspace top ology of C /(/[/0 /; T /] /; M/1
+/( E /)/)/. F or an y / /( / /) /; / /( / /) /2 C
+w/(/[/0 /; T /] /; M
+pr o/1
+/( E /)/)/,let/% /( / /( / /) /; / /( / /)/) /= supt /2 /[/0 /;T /]
+/ /( / /( t /) /; / /( t /)/) /:De/neR /( //; dx /) /=
+ZE
+/[
+ZE
+V /( y /; z /) / /( dz /)/] Q /( / /; d x/; dy /) /:Then w e ha v e the follo wing theorem/.Theorem /3/./7 F or any non/-de gener ate / /2 M/1
+/( E /) /, the family f P
+/ /;/ /;V /;//0/
+g satis/es the fol lowinglo c al LDP on sp ac e C
+w/(/[/0 /; T /] /; M
+p r o/1
+/( E /)/) as / go es to zer o with the go o d r ate function I//;V
+/( / /( / /)/) /:lim/ /! /0
+lim inf/ /! /0
+/ log P
+/ /;/ /;V /;//0/
+f /% /( / /( / /) /; / /( / /)/) /< / g /(/3/./2/5/)/= lim/ /! /0
+lim sup/ /! /0
+/ log P
+/ /;/ /;V /;//0/
+f /% /( / /( / /) /; / /( / /) /) / / g /= /BnZr I//;V
+/( / /( / /)/) /;wher e/(/3/./2/6/)I//;V
+/( / /( / /)/) /=
+/8/>/>/>/</>/>/>/:
+RT/0
+jj /_ / /( s /) /BnZr R /( / /( s /)/) /BnZr A
+//( / /( s /)/) jj
+/2/ /( s /)
+ds/; if / /(/0/) /= /and / /( / /) is absolutely c ontinuous/,/1 /: elsewher e/1/9
+Remark/: This yields the w eak LDP /, that is/, the upp er b ound holds for compact sets only /.Pro of/: Theorem /3/./4 com bined with Theorem /3/./5 in /[/8 /]/, w e ha v e for / /( / /) /2 C /(/[/0 /; T /] /; M
+pr o/1
+/( E /)/)/,lim/ /! /0
+lim inf/ /! /0
+/ log P
+/ /;/ /;//0/
+f / /: /% /( / /( / /) /; / /( / /)/) /< / g /(/3/./2/7/)/= lim/ /! /0
+lim sup/ /! /0
+/ log P
+/ /;/ /;//0/
+f / /: /% /( / /( / /) /; / /( / /) /) / / g /= /BnZr I/
+/( / /( / /)/) /:LetC /= sup/ /( / /) /2 C
+w/(/[/0 /;T /] /;M
+pr o/1
+/( E /)/)
+j
+ZT/0
+ZE
+ZE
+/[
+ZE
+V /( x/; z /) / /( s/; dz /)/]/[
+ZE
+V /( y /; z /) / /( s/; dz /)/] Q /( / /( s /)/; dx/; d y /) ds j /:Since V is uniformly b ounded/, C is a /nite constan t/. F or an y measurable subset B of spaceC
+w/(/[/0 /; T /] /; M
+pr o/1
+/( E /)/)/, b y using /(/3 /: /2/3/) /, H/ older/'s inequalit y /, and martingle prop ert y /, w e get for an y/ /> /0 /; / /> /0 /;
+/1/
+/+
+/1/
+/= /1/,P
+/ /;/ /;V /;//0/
+f B g /=
+ZB
+ZV
+/( T /) dP
+/ /;/ /;//0// e
+C/2 //(
+Zexp /[
+//
+ZT/0
+ZE
+/(
+ZE
+V /( y /; z /) / /( s/; dz /)/) M /( ds/; d y /)/] dP
+/ /;/ /;//0/
+/)
+/1 /=/P
+/ /;/ /;//0/
+f B g
+/1 /=//(/3/./2/8/)/ e
+C/2 /
+/(/1/+ / /)P
+/ /;/ /;//0/
+f B g
+/1 /=//(
+ZZ/V
+/( T /) dP
+/ /;/ /;//0/
+/)
+/1 /=//= e
+C/2 /
+/(/1/+ / /)P
+/ /;/ /;//0/
+f B g
+/1 /=//:By c ho osing B /= f / /: /% /( / /( / /) /; / /( / /)/) / / g in /(/3 /: /2/8/) /, w e getlim/ /! /0
+lim sup/ /! /0
+/ log P
+/ /;/ /;V /;//0/
+f /% /( / /( / /) /; / /( / /)/) / / g /
+C /(/1 /+ / /)/2
+/BnZr
+/1/
+I/
+/( / /( / /)/) /(/3/./2/9/)whic h implies /(/3 /: /2/5/) for paths that are not absolutely con tin uous/.Let / / /( / /) b e an arbitrary absolutely con tin uous path in C
+w/(/[/0 /; T /] /; M
+pr o/1
+/( E /)/)/. F or an y / /2 M/1
+/( E /)/,let V /( / /)/( y /) /= V /( //; y /) /=
+RE
+V /( y /; z /) / /( dz /)/. Then w e ha v eZT/0
+ZE
+V /( / / /( s /) /; y /) M /( ds/; dy /) /= h / /( T /) /; V /( / / /( T /)/) i /BnZr h / /(/0/) /; V /( / / /(/0/)/) i /(/3/./3/0/)/BnZr
+ZT/0
+h / /( s /) /; /(
+/@/@ s
+/+ A /) V /( / / /( s /)/) i ds/;whic h is con tin uous in / /( / /) in the top ology generated b y /% /. On the other handZE
+ZE
+V /( //; x /) V /( //; y /) Q /( / /; dx/; dy /) /=
+ZE
+ZE
+ZE
+V /( x/; z/1
+/) V /( x/; z/2
+/) / /( dz/1
+/) / /( dz/2
+/) / /( dx /)/BnZr
+ZE
+ZE
+ZE
+ZE
+V /( x/; z/1
+/) V /( y /; z/2
+/) / /( dz/1
+/) / /( dz/2
+/) / /( dx /) / /( dy /) /;whic h is also con tin uous in the top ology generated b y /% /./2/0
+De/ne/BnZrV
+/( / /( / /)/) /= h / /( T /) /; V /( / /( T /)/) i /BnZr h / /(/0/) /; V /( / /(/0/)/) i /(/3/./3/1/)/BnZr
+ZT/0
+h / /( s /) /; /(
+/@/@ s
+/+ A /) V /( / /( s /)/) i ds/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+/[
+ZE
+V /( x/; z /) / /( s/; dz /)/]/[
+ZE
+V /( y /; z /) / /( s/; dz /)/] Q /( / /( s /)/; dx/; d y /) ds/:Let B
+//( / / /( / /) /; / /) denote the in terior of B /( / / /( / /) /; / /)/. F or an y /" /> /0/, w e can c ho ose / /> /0 smallenough suc h thatj lim inf/ /! /0
+/ log P
+/ /;/ /;//0/
+f B
+//( / / /( / /) /; / /) g /+ I/
+/( / / /( / /)/) j /< /"/; /(/3/./3/2/)j lim sup/ /! /0
+/ log P
+/ /;/ /;//0/
+f B /( / / /( / /) /; / /) g /+ I/
+/( / / /( / /)/) j /< /"/; /(/3/./3/3/)j
+ZT/0
+ZE
+V /( / / /( s /) /; y /) M /( ds/; dy /) /BnZr /( h / / /( T /) /; V /( / / /( T /)/) i /BnZr h / / /(/0/) /; V /( / / /(/0/)/) i /(/3/./3/4/)/BnZr
+ZT/0
+h / / /( s /) /; /(
+/@/@ s
+/+ A /) V /( / / /( s /)/) i ds /) j /< /"/;j
+ZT/0
+ZE
+ZE
+V /( / /( s /) /; x /) V /( / /( s /) /; y /) Q /( / /( s /)/; dx/; d y /) ds /(/3/./3/5/)/BnZr
+ZT/0
+ZE
+ZE
+V /( / / /( s /) /; x /) V /( / / /( s /) /; y /) Q /( / /( s /)/; dx/; d y /) ds j /< /"/;j
+ZT/0
+ZE
+ZE
+V /( / / /( s /) /; x /) V /( / / /( s /) /; y /) Q /( / /; dx/; dy /) ds /(/3/./3/6/)/BnZr
+ZT/0
+ZE
+ZE
+V /( / / /( s /) /; x /) V /( / / /( s /) /; y /) Q /( / / /( s /)/; dx/; dy /) ds j /< /"/;j
+ZT/0
+ZE
+ZE
+/( V /( / /( s /) /; x /) /BnZr V /( / / /( s /) /; x /)/)/( V /( / /( s /) /; y /) /BnZr V /( / / /( s /) /; y /)/) Q /( / /( s /)/; d x/; dy /) d s j /< /"/: /(/3/./3/7/)By /(/3 /: /3/4/) /-/(/3 /: /3/7/) /, w e getP
+/ /;/ /;V /;//0/
+f B /( / / /( / /) /; / /) g /=
+ZB /( / / /( / /) /;/ /)
+exp /[
+/1/
+GV
+/( / /( / /)/)/] dP
+/ /;/ /;//0// exp f
+/1/
+/[/BnZrV
+/( / / /( / /)/) /+
+/3/2
+/" /] g/2/1
+/
+ZB /( / / /( / /) /;/ /)
+exp f
+/1/
+/[
+ZT/0
+ZE
+/[
+ZE
+V /( y /; z /)/( / /( ds/; dz /) /BnZr / / /( s/; dz /)/)/] M /( ds/; dy /)/] g dP
+/ /;/ /;//0// exp f
+/1/
+/[/BnZrV
+/( / / /( / /)/) /+
+/3 /+ //2
+/" /] g P
+/ /;/ /;//0/
+f B /( / / /( / /) /; / /) g
+/1 /=//(/3/./3/8/)/ /(
+Zexp f
+/1/
+/[
+ZT/0
+ZE
+/[
+ZE
+/V /( y /; z /)/( / /( ds/; dz /) /BnZr / / /( s/; dz /)/)/] M /( ds/; d y /)/BnZr
+/
+/2/2
+ZT/0
+ZE
+ZE
+/( V /( / /( s /) /; x /) /BnZr V /( / / /( s /) /; x /)/)/ /( V /( / /( s /) /; y /) /BnZr V /( / / /( s /) /; y /)/) Q /( / /( s /)/; dx/; dy /) ds /] g dP
+/ /;/ /;//0/
+/)
+/1 /=//= exp f
+/1/
+/[/BnZrV
+/( / / /( / /)/) /+
+/3 /+ //2
+/" /] g P
+/ /;/ /;//0/
+f B /( / / /( / /) /; / /) g
+/1 /=//:T ogether with /(/3 /: /3/3/) this implieslim/ /! /0
+lim sup/ /! /0
+/ log P
+/ /;/ /;//0/
+f B /( / / /( / /) /; / /) g / /BnZrV
+/( / / /( / /)/) /+
+/3 /+ //2
+/" /BnZr
+/1/
+I/
+/( / / /( / /)/) /:By letting /" /! /0/, then / /! /1/, w e getlim/ /! /0
+lim sup/ /! /0
+/ log P
+/ /;/ /;//0/
+f B /( / / /( / /) /; / /) g / /BnZrV
+/( / / /( / /)/) /BnZr I/
+/( / / /( / /)/) /: /(/3/./3/9/)By an argumen t similar to that used in the deriv ation of /(/3 /: /3/8/) and H/ older/'s inequalit y w e getP
+/ /;/ /;V /;//0/
+f B
+//( / / /( / /) /; / /) g /=
+ZB
+//( / / /( / /) /;/ /)
+exp /[
+/1/
+GV
+/( / /( / /)/)/] dP
+/ /;/ /;//0// exp f
+/1/
+/[/BnZrV
+/( / / /( / /)/) /BnZr
+/3/2
+/" /] g/
+ZB
+//( / / /( / /) /;/ /)
+exp f
+/1/
+/[
+ZT/0
+ZE
+/[
+ZE
+V /( y /; z /)/( / /( ds/; dz /) /BnZr / / /( s/; dz /)/)/] M /( ds/; dy /)/] g dP
+/ /;/ /;//0// exp f
+/1/
+/[/BnZrV
+/( / / /( / /)/) /BnZr /(
+/3/2
+/+
+//2 /
+/) /" /] g/
+ZB
+//( / / /( / /) /;/ /)
+exp f
+/1/
+/[
+ZT/0
+ZE
+/(
+ZE
+V /( y /; z /)/( / /( ds/; dz /) /BnZr / / /( s/; dz /)/)/) M /( ds/; dy /)/+
+//2 /
+ZT/0
+ZE
+ZE
+/( V /( / /( s /) /; x /) /BnZr V /( / / /( s /) /; x /)/)/ /( V /( / /( s /) /; y /) /BnZr V /( / / /( s /) /; y /)/) Q /( / /( s /)/; dx/; dy /) ds /] g dP
+/ /;/ /;//0// exp f
+/1/
+/[/BnZrV
+/( / / /( / /)/) /BnZr /(
+/3/2
+/+
+//2 /
+/) /" /] g P
+/ /;/ /;//0/
+f B
+//( / / /( / /) /; / /) g
+//(/3/./4/0/)/ /(
+Zexp f
+/1/
+/[
+ZT/0
+ZE
+/[
+ZE
+/BnZr
+//
+V /( y /; z /)/( / /( ds/; dz /) /BnZr / / /( s/; dz /)/)/] M /( ds/; dy /)/BnZr
+/
+/2/2 /
+/2
+ZT/0
+ZE
+ZE
+/( V /( / /( s /) /; x /) /BnZr V /( / / /( s /) /; x /)/)/ /( V /( / /( s /) /; y /) /BnZr V /( / / /( s /) /; y /)/) Q /( / /( s /)/; dx/; dy /) ds /] g dP
+/ /;/ /;//0/
+/)
+/BnZr
+///= exp f
+/1/
+/[/BnZrV
+/( / / /( / /)/) /BnZr /(
+/3/2
+/+
+//2 /
+/) /" /] g P
+/ /;/ /;//0/
+f B
+//( / / /( / /) /; / /) g
+//;/2/2
+whic h/, com bined with /(/3 /: /3/2/) /, leads tolim/ /! /0
+lim inf/ /! /0
+/ log P
+/ /;/ /;//0/
+f B
+//( / / /( / /) /; / /) g / /BnZrV
+/( / / /( / /)/) /BnZr /(
+/3/2
+/+
+//2 /
+/) /" /+ / I/
+/( / / /( / /)/) /:By letting /" /! /0/, then / /! /1/, w e getlim/ /! /0
+lim inf/ /! /0
+/ log P
+/ /;/ /;//0/
+f B
+//( / / /( / /) /; / /) g / /BnZrV
+/( / / /( / /)/) /BnZr I/
+/( / / /( / /)/) /: /(/3/./4/1/)The equalities in /(/3 /: /2/5/) will follo w if w e can sho w that for absolutely con tin uous path / /( / /)/,I//;V
+/( / /( / /)/) /= /BnZr /BnZrV
+/( / /( / /)/) /+ I/
+/( / /( / /)/) /: /(/3/./4/2/)By direct calculation w e ha v eI/
+/( / /( / /)/) /BnZr /BnZrV
+/( / /( / /)/) /= supf /2 C
+/1 /; /0/(/[/0 /;T /] / E /)
+fh / /( T /) /; f /( T /) /BnZr V /( / /( T /)/) i /BnZr h / /(/0/) /; f /(/0/) /BnZr V /( / /(/0/)/) i/BnZr
+ZT/0
+/[ h / /( s /) /; /(
+/@/@ s
+/+ A /) f /BnZr V /( / /( s /)/) i /+ h R /( / /( s /)/) /; f /( s /) /BnZr V /( / /( s /)/) i /] ds /(/3/./4/3/)/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+/( f /( s/; x /) /BnZr V /( / /( s /) /; x /)/) /( f /( s/; y /) /BnZr V /( / /( s /) /; y /)/) Q /( / /( s /)/; dx/; dy /) ds g/= supf /2 C
+/1 /; /0/(/[/0 /;T /] / E /)
+fh / /( T /) /; f /( T /) i /BnZr h / /(/0/) /; f /(/0/) i/BnZr
+ZT/0
+/[ h / /( s /) /; /(
+/@/@ s
+/+ A /) f i /+ h R /( / /( s /)/) /; f /( s /) i /] ds/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+f /( s/; x /) f /( s/; y /) Q /( / /( s /)/; d x/; dy /) ds g /;whic h leads to /(/3 /: /4/2/) /.Finally b y /(/3 /: /4/2/) /, w e get that the lev el sets asso ciated with I//;V
+/( / /( / /)/) are compact/. /2Ac kno wledgemen ts/. W e thank an anon ymous referee for commen ts and suggestions that help edimpro v e the presen tation of this pap er/.App endixThe pro of of Theorem /3/./6/:F or an y f in C
+/1 /; /0/(/[/0 /; T /] / E /)/, and / /( / /) in H/
+/, w e ha v e thath / /( T /) /; f /( T /) i /BnZr h / /(/0/) /; f /(/0/) i /BnZr
+ZT/0
+h / /( u /) /; /(
+/@/@ u
+/+ A /) f i du/2/3
+/BnZr
+/1/2
+ZT/0
+ZE
+ZE
+f /( u/; x /) f /( u/; y /) Q /( / /( u /)/; dx/; dy /) du/=
+ZT/0
+h /_ / /( u /) /BnZr A
+//( / /( u /)/) /; f /( u /) i d u /BnZr
+/1/2
+ZT/0
+ZE
+ZE
+f /( u/; x /) f /( u/; y /) Q /( / /( u /)/; d x/; d y /) du/
+ZT/0
+jj /_ / /( u /) /BnZr A
+//( / /( u /)/) jj/ /( u /)
+du/;whic h/, together with Theorem /3/./5/, implies thatI/
+/( / /( / /)/) /
+ZT/0
+jj /_ / /( u /) /BnZr A
+//( / /( u /)/) jj/ /( u /)
+du/: /(A/./1/)W e next sho w thatI/
+/( / /( / /)/) /
+ZT/0
+jj /_ / /( u /) /BnZr A
+//( / /( u /)/) jj/ /( u /)
+du/: /(A/./2/)Since / is non/-degenerate and / /( / /) is in H/
+/, w e ha v e thatI/
+/( / /( / /)/) /= S/
+/( / /( / /)/) /< /1 /:F or an y /[ s/; t /] / /[/0 /; T /] /; and an y f in C
+/1 /; /0/(/[ s/; t /] / E /)/, letls/;t
+/( f /) /= h / /( t /) /; f /( t /) i /BnZr h / /( s /) /; f /( s /) i /BnZr
+Zts
+h / /( u /) /; /(
+/@/@ u
+/+ A /) f i d u/:LetL
+/2/(/[ s/; t /] / E /) /= f f /:
+Zts
+ZE
+f
+/2/( u/; x /) / /( u/; dx /) d u /< /1g /;and L is the linear subspace of L
+/2/(/[ s/; t /] / E /) of all functions whic h are constan t in space v ariable x /.Let L
+/2/(/[ s/; t /] / E /) /=L b e the quotien t space of L
+/2/(/[ s/; t /] / E /) mo dule L /. W e in tro duce on L
+/2/(/[ s/; t /] / E /) /=Lthe follo wing normjj h jj /=
+n
+Zts
+ZE
+ZE
+h /( u/; x /) h /( u/; y /) Q /( / /( u /)/; dx/; dy /) d u
+o/1 /= /2/;and the inner pro ducth h/1
+/; h/2
+i /=
+Zts
+ZE
+ZE
+h/1
+/( u/; x /) h/2
+/( u/; y /) Q /( / /( u /)/; d x/; dy /) d u/:It is not hard to c hec k that space /( L
+/2/(/[ s/; t /] / E /) /=L/; jj / jj /) is a pre/-Hilb ert space/. Let L
+/2/(/[ s/; t /] / E /)b e the completion of space L
+/2/(/[ s/; t /] / E /) /=L /(cf/. for existence refer to page /5/6 of Y osida /[/1/5 /]/)/. Then/( L
+/2/(/[ s/; t /] / E /) /; jj / jj /) b ecomes a Hilb ert space/.Let L
+/2sub
+/(/[ s/; t /] / E /) denote the closure in L
+/2/(/[ s/; t /] / E /) of the linear span of the set C
+/1 /; /0/(/[ s/; t /] /E /)/. By an argumen t similar to Da wson and G/ artner /[/3 /] on pages /2/7/7/-/2/8/0/, and the Hahn/-Banac hExtension Theorem /(cf/. page /1/0/6 of Y osida /[/1/5 /]/) w e ha v e that ls/;t
+is a b ounded linear functional/2/4
+on L
+/2sub
+/(/[ s/; t /] / E /)/. Th us b y the Riesz Represen tation Theorem/, one can /nd a function h inL
+/2sub
+/(/[/0 /; T /] / E /) suc h thatls/;t
+/( f /) /=
+Zts
+ZE
+ZE
+f /( u/; x /) h /( u/; y /) Q /( / /( u /) /; d x/; dy /) d u/; /(A/./3/)inff /2 C
+/1 /; /0/(/[ s/;t /] / E /)
+Zts
+ZE
+ZE
+/( h /( u/; x /) /BnZr f /( u/; x /)/)/( h /( u/; y /) /BnZr f /( u/; y /)/) Q /( / /( u /)/; dx/; d y /) d u /= /0 /; /(A/./4/)S/
+/( / /( / /)/) /=
+/1/2
+ZT/0
+ZE
+ZE
+h /( u/; x /) h /( u/; y /) Q /( / /( u /)/; d x/; d y /) d u/; /(A/./5/)whic h implies thatZT/0
+jj /_ / /( u /) /BnZr A
+//( / /( u /)/) jj/ /( u /)
+du /=
+ZT/0
+supg /2 C
+/1/( E /)
+fh /_ / /( u /) /BnZr A
+//; g i/BnZr
+/1/2
+ZE
+ZE
+g /( x /) g /( y /) Q /( / /( u /)/; dx/; dy /) g/=
+ZT/0
+supf /2 C
+/1 /; /0/(/[/0 /;T /] / E /)
+fh /_ / /( u /) /BnZr A
+//; f /( u /) i /BnZr h / /( u /) /;
+/_f /( u /) i/BnZr
+/1/2
+ZE
+ZE
+f /( u/; x /) f /( u/; y /) Q /( / /( u /)/; dx/; dy /) g/= S/
+/( / /( / /)/) /BnZr
+/1/2
+inff /2 C
+/1 /; /0/(/[/0 /;T /] / E /)
+ZT/0
+ZE
+ZE
+/( h /( u/; x /) /BnZr f /( u/; x /)/)/( h /( u/; y /) /BnZr f /( u/; y /)/) Q /( / /( u /)/; dx/; d y /) d u/= S/
+/( / /( / /)/) /;where /( A/: /3/) is used in deriving the third equalit y /, and /( A/: /4/) and /( A/: /5/) are used in reac hing the lastequalit y /. This together with Theorem /3/./5 implies /(/3 /: /2/2/) /. /2References/[/1/] Bauer/,H/. Pr ob ability The ory and Elements of Me asur e The ory /. Academic Press/, London /1/9/8/1/./[/2/] Da wson/, D/.A/./(/1/9/7/8/)/. Geosto c hastic calculus/. Canadian Journal of Statistics /, /6 /:/1/4/3/{/1/6/8/./[/3/] Da wson/, D/.A/. and G/ artner/, J/./(/1/9/8/7/)/. Large deviations from the McKean/-Vlaso v limit for w eaklyin teracting di/usions/. Sto chastics /, /2/0 /:/2/4/7/{/3/0/8/./[/4/] Dem b o/, A/. and Zeitouni/, O/. L ar ge Deviations and Applic ations /. Jones and Bartlett Publishers/,Boston /1/9/9/3/./[/5/] Donsk er/, M/.D/. and V aradhan/, S/.R/.S/./(/1/9/7/5/)/. Asymptotic ev aluation of certain Mark o v pro cessexp ectations for large time/, I/. Comm/. Pur e Appl/. Math/. /, /2/8 /, pp/. /1/-/4/7/./[/6/] Ethier/, S/.N/. and Kurtz/, T/.G/./(/1/9/9/3/)/. Fleming/-Viot pro cesses in p opulation genetics/. SIAM J/.Contr ol and Optimization /, /3/1 /, N/./2/:/3/4/5/{/3/8/6/./2/5
+/[/7/] Ethier/, S/.N/. and Kurtz/, T/.G/./(/1/9/9/4/)/. Con v ergence to Fleming/-Viot pro cesses in the w eak atomictop ology /. Sto ch/. Pr o c/. Appl/. /, /5/4 /, /1/{/2/7/./[/8/] F reidlin/, M/.I/. and W en tzell/, A/.D/. R andom Perturb ations of Dynamic al Systems /. Springer/-V erlag/, New Y ork /1/9/8/4/./[/9/] Hartl/, D/.L/. and Clark/, A/.G/. Principles of Population Genetics /, /2nd ed/. Sinauer Asso ciates/,Inc/./, Sunderland/, Massac h usetts/, /1/9/8/9/./[/1/0/] Pukhalskii/, A/.A/./(/1/9/9/1/)/. On functional principle of large deviations/. in New T rends in Proba/-bilit y and Statistics/, ed/. V/. Sazono v and T/. Sherv ashidze/, VSP Moks/'las/, Moskv a/./[/1/1/] Shiga/, T/./(/1/9/8/1/)/. Di/usion pro cesses in p opulation genetics/. J/. Math/. and Kyoto Univ/. /, /2/1 /:/1/3/3/{/1/5/1/./[/1/2/] Shiga/, T/./(/1/9/9/0/)/. A sto c hastic equation based on a P oisson system for a class of measure/-v alueddi/usion pro cesses/. J/. Math/. and Kyoto Univ/. /, /3/0 /:/2/4/5/{/2/7/9/./[/1/3/] Stro o c k/, D/.W/. and V aradhan/, S/.R/.S/. Multidimensional Di/usion Pr o c esses /. Springer/-V erlag/,Berlin /1/9/7/9/./[/1/4/] W righ t/, S/./(/1/9/4/9/)/. Adaptation and selection/. in Genetics/, Pale ontolo gy/, and Evolution /. ed/. G/.L/.Jepson et al/, /3/6/5/-/3/8/9/, Princeton Univ/. Press/./[/1/5/] Y osida/, K/. F unctional A nalysis/, Sixth Ed/. /. Springer/-V erlag/, Berlin /1/9/8/0/.Donald A/. Da wsonThe Fields Institute/2/2/2 College StreetT oron to/, On tarioCanada M/5T /3J/1e/-mail/: don/@/elds/./elds/.utoron to/.caSh ui F engDepartmen t of Mathematicsand StatisticsMcMaster Univ ersit yHamilton/, On tarioCanada L/8S /4K/1e/-mail/:sh uifeng/@mcmail/.cis/.mcmaster/.ca/2/6

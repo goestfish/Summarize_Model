@@ -1,0 +1,504 @@
+arXiv:math/0305013v1  [math.DS]  1 May 2003ICM 2002 ·Vol. III·1–3
+Rhythms of the Nervous System:
+Mathematical Themes and Variations
+Nancy Kopell∗
+Abstract
+The nervous system displays a variety of rhythms in both waki ng and
+sleep. These rhythms have been closely associated with diﬀe rent behavioral
+and cognitive states, but it is still unknown how the nervous system makes use
+of these rhythms to perform functionally important tasks. T o address those
+questions, it is ﬁrst useful to understood in a mechanistic w ay the origin of
+the rhythms, their interactions, the signals which create t he transitions among
+rhythms, and the ways in which rhythms ﬁlter the signals to a n etwork of
+neurons.
+This talk discusses how dynamical systems have been used to i nvestigate
+the origin, properties and interactions of rhythms in the ne rvous system. It
+focuses on how the underlying physiology of the cells and syn apses of the
+networks shape the dynamics of the network in diﬀerent conte xts, allowing the
+variety ofdynamical behaviors tobedisplayed bythesame ne twork. The work
+is presented using a series of related case studies on diﬀere nt rhythms. These
+case studies are chosen to highlight mathematical issues, a nd suggest further
+mathematical work tobedone. The topics include: diﬀerentr oles ofexcitation
+and inhibition in creating synchronous assemblies of cells , diﬀerent kinds of
+building blocks for neural oscillations, and transitions a mong rhythms. The
+mathematical issues include reduction of large networks to low dimensional
+maps, role of noise, global bifurcations, use of probabilis tic formulations.
+2000 Mathematics Subject Classiﬁcation: 37N25, 92C20.
+1. Introduction
+The nervous system creates many diﬀerent rhythms, each assoc iated with a
+range of behaviors and cognitive states. The rhythms were ﬁrst d iscovered from
+scalp recordings of humans, and the names by which they are known still come
+mainly from the electroencephalograph (EEG) literature, which pay s attention to
+∗Boston University, Department of Mathematics and Center fo r BioDynamics, Boston, MA
+02215, USA. E-mail: nk@bu.edu
+806 Nancy Kopell
+the frequency and behavioralcontext of those rhythms, but no t to their mechanistic
+origins. Therhythmicpatternsincludethealpha(9-11Hz), beta(1 2-30Hz), gamma
+(30-80 Hz), theta (4-8 Hz), delta (2-4) Hz and slow wave (.5-2 Hz) rhythms. The
+boundaries of these ranges are rough. More will be said about the c ircumstances in
+which some of these rhythms are displayed.
+Itisnowpossibletogetfarmoreinformationaboutthemechanismsb ehind the
+dynamics of the nervous system from other techniques, including e lectrophysiology.
+The revolutions in experimental techniques, data acquisition and an alysis, and fast
+computation have opened up a broad and deep avenue for mathema tical analysis.
+The general question addressed by those interested in rhythms is : how does the
+brain make use of these rhythms in sensory processing, sensory- motor coordination
+and cognition? The mathematical strategy, to be discussed below, is to investigate
+the “dynamical structure” of the diﬀerent rhythms to get clues t o function. Most
+of this talk is about dynamical structure, and the mathematical iss ues surrounding
+its investigation. I’ll return at the end to issues of function.
+2. Neuromath
+Themathematicalframeworkforthe studyofbraindynamicsaret heHodgkin-
+Huxley(HH) equations. Thesearepartialdiﬀerentialequationsde scribingthe prop-
+agation of action potentials in neurons (cells of the nervoussystem ). The equations,
+which play the same role in neural dynamics that Navier-Stokes does in ﬂuid dy-
+namics, are an elaborate analogy to a distributed electrical circuit. The central
+equation,
+Cv′=/summationdisplay
+Iion+▽2v+/summationdisplay
+Isyn+Iext
+describes conservation of current across a piece of a cell membra ne;vis the cross-
+membrane voltage and the left hand side is the capacitive current. T he ﬁrst sum on
+the right hand side represents the intrinsically generated ionic curr ents across the
+membrane. The term ▽2vrepresents the spatial diﬀusion, and Iextthe current fed
+intothe cell./summationtextIsynrepresentsthe currentsintroducedby couplingfrom othercells.
+Thus, these equations can also be used to model networks of inter acting neurons,
+the focus of this talk.
+Each of the intrinsic currents Iionis described by Ohm’s law: Iionis electro-
+motive force divided by resistance. In this context, one usually use s the concept
+of “conductance”, which is the reciprocal of resistance. The elec tromotive force
+depends on the type of charged ion (e.g., Na, K, Ca, Cl) and the volta ge of the cell;
+it has the form [ v−Vion], where Vionis the so-called “reversal potential” of that
+ion.
+The dynamics of the conductances are what make the equations so mathemat-
+ically interesting and rich. In a simple description of the conductance , each ionic
+current has up to two “gates”, which open or close at rates that a re dependent on
+the voltage of the cell. For each such gate, there is then a ﬁrst ord er equation of
+the form
+x′= [x∞(v)−x]/τx(v)
+Rhythms of the Nervous System: Mathematical Themes and Variat ions 807
+where x denotes the fraction of channels of that type that are op en at any given
+time,x∞(v) is the steady state value of xfor a ﬁxed voltage, and τx(v) is the rate
+constant of that gating variable. For example, the standard Na cu rrent has the
+formINa=gm3h[v−VNa], wheregis the maximal conductance, and mandhare
+gatingvariablessatisfyingtheaboveequationfor x. Thedynamicsfor mandhdiﬀer
+becausem∞(v) is an increasing function of v, whileh∞(v) is a decreasing function;
+alsoτm(v) is much smaller than τh(v). The (chemical) synaptic currents have the
+same form as the intrinsic ones, with the diﬀerence that the depend ence of the
+driving force on voltage uses that of the post-synaptic cell, while th e conductance
+depends on the pre-synaptic voltage. That is, Isynhas the form g/hatwidex[v−Vsyn],
+where/hatwidexsatisﬁes the equation for x above, with vreplaced by /hatwidev, the voltage of
+the cell sending the signal, and Vsynis the reversal potential of the synapse. The
+coupling is said to be excitatory if the current is inward (increases vo ltage toward
+the threshold for ﬁring an action potential) or inhibitory if the curre nt is outward
+(moves voltage away from threshold for ﬁring.)
+For a simple version of the HH equations, there are three ionic curre nts; one
+of these (Na) creates an inward current leading to an action poten tial, one (K) an
+outward current helping to end the action potential, and a leak curr ent (mainly Cl)
+with no gating variable. The HH equations are not one single set of equ ations, but a
+general(and generalizable)formforafamilyofequations, corres pondingto diﬀerent
+sets of intrinsic currents (which can depend on position on the neur on), diﬀerent
+neuron geometries, and diﬀerent networks created by interactio ns of neurons, which
+may themselves be highly inhomogeneous. Numerical computation ha s become
+highly important for observing the behavior of these equations, bu t does not suﬃce
+to understand the behavior, especially to get insight into what the s peciﬁc ionic
+currents contribute; this is where the analysis, including simpliﬁcatio n, comes in.
+For an introduction to HH equations, some analysis and some of its us es in models,
+see [1].
+2.1. Some mathematical issues associated with rhythms
+It is not possible to analyze the full class of equations in all generality . Our
+strategy is to look for mathematical structures underlying some c lasses of behav-
+ior observed experimentally; the emphasis is on the role of dynamical systems, as
+opposed to statistics, though probabilistic ideas enter the analysis .
+Ourcentralscientiﬁcquestionhereishowrhythmsemergefromth e“wetware”,
+as modeled by the HH equations. As we will see, diﬀerent rhythms can be based on
+diﬀerent sets of intrinsic currents, diﬀerent classes of neurons, and diﬀerent ways of
+hooking up those cells. There are some behaviors we can see by lookin g at small
+networks, and others that do not appear until the networks are large and somewhat
+heterogeneous. Even in the small networks, there are a multiplicity of diﬀerent
+building blocks for the rhythms, with excitation and inhibition playing diﬀ erent
+roles. Noise appears, and plays diﬀerent roles from heterogeneity .
+Investigators often use simpliﬁcations of the HH equations. For ex ample, this
+talk deals only with “space clamped” cells in which the spatial distributio n of each
+cell is ignored, and the equations become ODEs. (There are circums tances under
+808 Nancy Kopell
+which this can be a bad approximation, as in [2]). Under some circumsta nces, the
+4-dimensional simplest space-clamped HH equations (one current e quation, three
+gating variables) can be reduced to a one-dimensional equation; th us, networks of
+neurons can be described by a fraction of the equations that one n eeds for the full
+HH network equations. Another kind of reduction replaces the full HH ODEs by
+maps that follow the times of the spikes. In both cases, there are a t least heuristic
+explanations for why these reductions are often very successfu l, and hints about
+how and why the simpliﬁcations can be expected to break down.
+3. Mathematics and small networks of neurons
+3.1. Centrality of inhibition in rhythms
+Some kinds of cells coupled by inhibition like to form rhythms and synchr o-
+nize [3-5]. This is unintuitive, because inhibition to cells can temporarily k eep the
+latter from ﬁring (see below for important exceptions), but mutua l inhibition can
+encourage cells to ﬁre simultaneously.
+There are various ways to see this, with methods that are valid in diﬀe rent
+contexts. For weak coupling, it can be shown rigorously that the fu ll equations
+reduce to interactions between phases of the oscillators [6]; the pa rticular coupling
+associated with inhibition can then be shown to be synchronizing (tho ugh over
+many cycles) [7]. If the equations can be reduced to one-dimensiona l “integrate and
+ﬁre” models, one can use “spike-response methods” to see the sy nchronizing eﬀect
+of inhibitory synapses on timing of spikes . Both of these are describ ed in [6] along
+with more references.
+Another method, which I believe is most intuitive, looks at the ongoing eﬀect
+of forced inhibition on the voltage of the cells, and how some of the pr ocesses
+are “slaved” to others. This is seen most clearly in the context of an other one-
+dimensional reduction that has become known as the “theta” mode l, because of
+the symbols used for the phase of the oscillations [8]. The reduced eq uations have
+been shown to be a canonical reduction of equations that are near a saddle-node
+bifurcation on an invariant circle (limit cycle). Many versions of HH-like models
+(and some kinds of real neurons) have this property for paramet er values near onset
+of periodic spiking, and they are known as “Type 1” neurons.
+The “theta model” has the form
+θ′= (1−cosθ)+I(1+cosθ).
+Heretheequationforthephase θhasperiodicsolutionsiftheparameter Iispositive,
+and two ﬁxed points (stable, saddle) if Iis negative. To understand the eﬀects of
+forced inhibition, we replace Iby a time dependent inhibition given by I−gs(t),
+wheres(t) = exp(−t/τ) fort >0,and zero otherwise. With the change of variables
+J(t) = 1−gexp(−t/τ), this is a 2-D autonomous system. Figures [9] and analysis
+show that the system has two special orbits, known in the non-sta ndard analysis
+literature as “rivers” [10], and that almost all of the trajectories f eed quickly into
+Rhythms of the Nervous System: Mathematical Themes and Variat ions 809
+one of these, and are repelled from the other. The essential eﬀec t is that initial
+conditions become irrelevant to the outcome of the trajectories. A similar eﬀect
+works for mutually coupled systems of inhibitory neurons.
+The rhythm formed in this way is highly dependent on the time scale of d ecay
+of the inhibition for the frequency of the network [11, 12]. These mo dels, and
+the “fast-ﬁring” inhibitory cells that they represent, can display a large range of
+frequencies depending on the bias ( Iextin HH, the parameter Iin the theta model);
+however, in the presence of a small amount of heterogeneity in par ameters, the
+rhythm falls apart unless the frequency is in the gamma range (30-8 0 Hz) [4, 13].
+This can be understood from spike response methods or in terms of rivers.
+The above rhythm is known as ING or interneuron gamma [14, 15]. A va ria-
+tion on this uses networks with fast-ﬁring inhibitory cells (interneur ons or I cells)
+and excitatory cells (pyramidal cells or E-cells). This is called PING (py ramidal
+interneurongamma) [14, 15]. Heuristically, it is easyto understand t he rhythm: the
+inhibitory cells are set so they do not ﬁre without input from the E-ce lls. When the
+E-cells ﬁre, they cause the I-cells to cross ﬁring threshold and inhib it the E-cells,
+which ﬁre again when the inhibition wears oﬀ. This simple mechanism beco mes
+much more subtle when there is heterogeneity and noise in large netw orks, which
+will be discussed later.
+3.2. Excitation and timing maps
+The fast-ﬁring cells described above are modeled using only the ionic c urrents
+needed to create a spike. Most other neurons have channels to ex press many other
+ionic currents as well, with channel kinetics that range over a large s pan of time
+constants. These diﬀerent currents change the dynamical beha vior of the cells, and
+allow such cells to be “Type II”, which means that the onset of rhyth mic spiking
+as bias is changed is accompanied by a Hopf bifurcation instead of a sa ddle node.
+The type of onset has important consequences for the ability of pa ir of such cells
+to synchronize. E.g., models of the fast-ﬁring neuron, if connecte d by excitatory
+synapses, do not synchronize, as can be shownfrom weak coupling or other methods
+described above (e.g., [7]). However, if the cells are Type II, they do synchronize
+stably with excitation (and not with inhibition). This was shown by Gutk in and
+Ermentrout using weak coupling methods [16]. A more speciﬁc case st udy was done
+by Acker et al. [17], motivated by neurons in the part of the cortex t hat constitutes
+the input-output pathways to the hippocampus, a structure of t he brain important
+to learning and recall. These cells are excitatory and of Type II (J.Wh ite, in prep.);
+models of these cells, based on knowledge of the currents that the y express, do
+synchronize with excitatory synapses, and do not with inhibitory sy napses.
+The synchronizationproperties of the such cells can be understoo d from spike-
+timing functions and maps [17]. Given the HH equations for the cell, one can
+introduce at any time in the cycle excitation or inhibition whose time cou rse is
+similar to what the synapse would provide. From this, one can comput e how much
+the next spike is advanced or delayed by this synapse. From such a g raph, one can
+compute a spike-time map which takes the diﬀerence in spike times in a s ingle cycle
+to the diﬀerence in the next cycle.
+810 Nancy Kopell
+The analysis of such a map is easy, but the process raises deeper ma thematical
+issues. One set of issues concerns what is happening at the biophys ical level that
+gives rise to the Type II bifurcation, which is associated with a partic ular shape of
+the spike advance function [18]. Analysis shows that the Type II is as sociated with
+slow outward currents or certain slow inward currents that (para doxically) turn on
+when the cell is inhibited [16, 17]; this shows how biophysical structur e is connected
+with mathematical structure.
+Asecondsetofquestionsconcernswhythe high-dimensionalcoup ledHHequa-
+tions can be well approximated by a 1-D map. (In some parameter ra nges, but not
+all, this is any excellent approximation). The mathematical issues her e concern
+how large subsets of high-dimensional phase space collapse onto wh at is essentially
+a one-dimensional space. Ideas similar to those in Section 3.1 are rele vant, but
+with diﬀerent biophysics creating the collapse of the trajectories. In this case (and
+others) there are many diﬀerent ionic currents, with many diﬀeren t time scales, so
+that a given current can be dominant in some portion of the traject ory and then
+decrease to zero while others take over; this leads to structure t hat is more com-
+plex than that of the traditional “fast-slow” equations, and which is not nearly as
+understood. Such reductions to 1-D maps have been used in other investigations of
+synchrony [19-21] involving multiple cells and multiple kinds of currents .
+3.3. More complex building blocks: Fancier inhibitory cell s
+So far, I’vetalked about networkscontainingfast-ﬁringneurons (inhibitory) or
+excitatory cells. But there are many diﬀerent kinds of cells in the ner vous system,
+with intrinsicand synapticcurrentsthat makethem dynamicallyvery diﬀerentfrom
+one another. Once there are more currents with more time scales, it is easier to
+create more rhythms with diﬀerent frequency. That is, the diﬀere nces in frequencies
+often (but not always) come from some time scales in the interacting currents, and
+cannot be scaled away.
+The stellate cell of Section 3.2 is an excellent example of currents cre ating
+frequencies; in a wide range of parameters, these cells, even witho ut coupling, form
+a theta rhythm. Indeed, they are believed to be one of the primary sources of that
+rhythm in the hippocampus, which is thought by many to use these rh ythms in
+tasks involving learning and recall. As described above, these cells ar e excitatory,
+and synchronize when coupled by excitation.
+More puzzling are inhibitory cells in the hippocampus that are capable o f
+forming theta rhythms as isolated cells with ionic currents similar to th ose in the
+stellatecells. Thepuzzleisthatthesecellsdonotcohere(inmodels)u singinhibitory
+coupling. (The decay time of inhibition caused by these cells is roughly f our times
+longer than the inhibition caused by the fast-ﬁring cells, but neither fast nor this
+slower decaying inhibition creates synchrony in models.) So what is pro viding the
+coherence seen in the theta rhythm? (The rhythm can be seen in sm all slices that
+do not have inputs from other parts of the brain producing theta, so in such a
+paradigm, the rhythm must be produced locally.)
+One suggestion (Rotstein, Kopell, Whittington, in preparation) is th at the
+inhibitory rhythms seen in slice preparations with excitation blocked p harmacolog-
+Rhythms of the Nervous System: Mathematical Themes and Variat ions 811
+ically depend on both kinds of inhibitory cells discussed, the special on es (called
+O-LM cells [22]) and the others. Simulations show that networks of th ese cells can
+have the O-LM cells synchronize and I-cells synchronize at a diﬀeren t phase, to
+create an inhibitory network with considerably more complexity than interacting
+fast-ﬁring cells involved in ING. Again, this can be reduced to a low-dim ensional
+map for a minimal network (two O-LM cells, one fast ﬁring I-cell). How ever, the
+reduction now requires properties of the currents involved in the O -LM model, in-
+cluding the kinetics of the gating variables.
+3.4. Interaction of rhythms
+Anothersetofmathematicalissuesisassociatedwithtransitionsa mongrhythms.
+In general, rhythms slower than gamma (e.g., beta, theta and alpha ) make use of
+ionic currents that are active between spikes. These currents ar evoltage-dependent,
+so that changes in voltage, in the sub- and super-threshold regime s, can turn on
+or oﬀ these currents. Thus, neuromodulators that change the v oltage range of a
+neuron (e.g., by changing a leak current) can change which other cu rrents are ac-
+tively expressed. In that way, they can cause a switch from one rh ythm to another.
+For example, models of the alpha rhythm [20] suggest that this rhyt hm makes use
+the inhibition-activated “h-current”; this current is eﬀectively oﬀ line if the voltage
+is increased (even below threshold level). Thus, a switch from alpha t o a faster
+rhythm (gamma or beta) can be eﬀected by simply making the E-cells o perate in a
+moderately higher voltage regime.
+These switches can be seen in simulations (Pinto, Jones, Kaper, Kop ell, in
+prep.), but are still understood only heuristically. The mathematica l issues are as-
+sociated with reduction of dimension methods. In the regime in which t he network
+is displaying alpha, there are many more variables that are actively ch anging, no-
+tably the gating variables of each of the currents that is important in this rhythm.
+When there is a switch to gamma and those currents go oﬀ line, the ph ase space
+becomeseﬀectivelysmaller. The mathematicshereinvolvesunderst andinghowthat
+phase compression takes place.
+A related set of mathematical questions concerns rhythms that a re “nested”,
+one within another. For example, the theta rhythm often present s as the envelope
+of a series of faster gamma cycles, and the beta rhythm, at least in some mani-
+festations, occur with the I-cells ﬁring at a gamma rhythm and the E -cells ﬁring
+at the slower beta rhythm, missing some cycles of the inhibitory rhyt hm. The
+gamma/beta switch has been understood from a physiological point of view (see
+[19] and its references) and has been simulated. The gamma/theta nesting is less
+understood, though new data and simulations are providing the phy siological and
+heuristic basis for this [22; Rotstein, Kopell, Whittington, in prep.].
+4. Large networks
+Though there are many more examples of other building blocks, I’m tu rning
+812 Nancy Kopell
+to issues that do not appear in small network analysis. I’m going to go back to a
+very simple building block, but now put many such together. The simple building
+block is one E cell, one I-cell, which together can create a gamma rhyt hm.
+4.1. Sparse coupling
+We now considera networkwith N E-cellsand M I-cells, with randomcou pling
+from the E-cells to the I-cells and vica versa. Suppose, for example , there is a
+ﬁxed probability of connection in each direction between any pair of E and I cells.
+Then the number of inputs to any cell is distributed across the popu lation, leading
+to heterogeneity of excitation and inhibition. Is it still possible to get coherent
+gammarhythms? Thiscanbeansweredwithmathematicalanalysisus ingthe“theta
+neuron” model described above [9]. To understand synchrony in E/ I networks, it
+is helpful to understand what each pulse of inhibition does to the pop ulation of
+excitatory cells and vica versa. The part in which both probability and dynamical
+systems play a large role is the eﬀect of a pulse of inhibition on a populat ion. The
+“rivers” referred to above in Section 3.1 create synchronization if the inputs to cells
+have no variance, but with variation in the size of the inputs, there is a spread in
+the times of the outputs. This can be accurately computed using fe atures of the
+dynamicsandprobabilitytheory. Similarly, butwith lessaccuracy,on ecancompute
+the the eﬀect of variation of inputs on the spike times of the receivin g population
+due to a pulse of excitation. The results lead to unintutive conclusion s, e.g., that
+increasing the strength of the inhibition (which strengthens the sy nchronizing eﬀect
+of the rivers) does not reduce the desynchronizing eﬀects of ran dom connectivity.
+Furthermore, tight synchrony can be obtained even with extreme ly sparse coupling
+provided that variance in the size of the inputs is small.
+4.2. Loss of coherence
+The above analyses can be put together to understand synchron y of “PING”.
+However, they leave only partially answered many questions about la rger networks.
+One such question, which is central to understanding how the asse mblies of neurons
+are created and destroyed, is the circumstances under which the synchrony falls
+apart, i.e., what modulations of cells and/or synapses will lead to loss o f coherence
+of the gamma rhythm. The above analysis shows that too large a var iation in size
+of inputs to diﬀerent cells of the same population can be fatal. Similar p henomena
+occur with too much variation in drive or intrinsic currents. There ar e less obvi-
+ous constraints that are understood from working with smaller net works described
+above. From those, it is possible to see that ING and PING operate in diﬀerent pa-
+rameter regimes: the ﬁring times of the population in ING are govern ed by the bias
+of the I-cells (as well as the decay time of the inhibition); in PING, the inhibitory
+cells are more passive until driven by the E-cells, and the timing comes from bias of
+the E-cells (as well as decay of inhibition). This means that the mecha nism of co-
+herence can switch between ING and PING by changing relative excit ability of the
+two populations. Changing the strengths of the I-E and E-I synap ses can also get
+Rhythms of the Nervous System: Mathematical Themes and Variat ions 813
+the population (large or small) out of the regime in which the E-cells syn chronize
+the I-cells, and vica versa.
+A more mysterious issue that cannot be addressed within minimal net works is
+howthesize ofthe sub-populationsrespondingonagivencycleaﬀec tsthe coherence
+on the next cycle and the numbers of cells participating, especially wh en there is
+some heterogeneity in the network. E.g., as the number of inhibitory neurons ﬁring
+in a cycle changes, it changes the total inhibition to the E-cells, which changes the
+number of E-cells that are ready to ﬁre when inhibition wears oﬀ, and before the
+next bout of inhibition. If the amount of inhibition gets too small, or inh ibition
+gets too dispersed, the coherence can rapidly die. Without taking in to account
+the trajectories of each of the large number of cells, it is likely that s ome possibly
+probabilistic account of the numbers of cells spiking per cycle can give some insight
+into the dynamical mechanisms surrounding failure of coherence.
+Such a reduction has been successfully used in a diﬀerent setting, in volving the
+long-distance coherence of two populations of heterogeneous ce lls. In this case, if
+the populations are each minimal (one E/I pair) for each site, there is 1-D map that
+describes the synchronization, with the variable the timing between the E and I
+sites [19] . For large and heterogeneous networks, the synchron ization (within some
+parameter regimes) can be described by a 3-dimensional map, in whic h the ﬁrst
+variable is the time between the ﬁrst spikes of a cycle in the two E-cell populations,
+and the others are the fraction of I-cells ﬁring on that cycle in each of the two I-cell
+populations (McMillen and Kopell, in prep.).
+Related work has been done from a diﬀerent perspective, starting with asyn-
+chronous networks and asking how the asynchrony can lose stabilit y [23-25]. Work
+using multiple time scales to address the formation of “clusters” whe n synchrony
+fails is in [26].
+4.3. Noise, PING, and frequency control
+One of the main diﬀerences between ING and PING is the diﬀerence in r obust-
+ness. Small amounts of heterogeneity of any kind make ING cohere nce fall apart
+dramatically [4,13]. By contrast, PING is tolerant to large ranges of h eterogene-
+ity. The “ping-pong” mechanism of PING is also able to produce frequ encies that
+cover a much wider range than the ING mechanism, which is constrain ed by loss
+of coherence to lie in the gamma range of approximately 30-80 Hz [4,13 ]. Since
+many versions of gamma seen in experiments are of the PING variety , this raises
+the question of what constrains the PING rhythms to stay in the ga mma frequency
+range.
+A possible answer to this comes from simulations. C. Borgers, D. McM illen
+and I found that heterogeneity, unless extreme, would not disrup t the PING coher-
+ence. However, a very small amount of noise (with ﬁxed amplitude an d poisson-
+distributed times) could entirely destroy coherence of the PING, p rovided the latter
+had a frequency below approximately 30 Hz; if the same noise is introd uced when
+the networkis in the gammarange, the behavioris onlyslightly pertur bed. Further-
+more, the ability to withstand the noise is related to adding some I-I c onnections,
+as in ING. A heuristic explanation is that, at low frequencies, the inhib ition to the
+814 Nancy Kopell
+I-cells (which has a time constant around 10ms) wears oﬀ before th e excitation from
+the E-cells causes these cells to spike. Thus, those cells hang aroun d the threshold
+for signiﬁcant amounts of time, and are therefore vulnerable to be ing pushed over
+threshold by noise. The mathematics has yet to be understood rigo rously.
+5. Mathematics and clues to function
+The mathematical questions are themselves interesting, but the f ull richness of
+the scientiﬁc endeavor comes from the potential for understand ing how the rhythms
+generatedby the brain might be used in sensoryprocessing, motor coordinationand
+cognition. We are still at the outer edges of such an investigation, b ut there are
+many clues from animal behavior, physiology and mathematics. Work done with
+EEGs(see, e.g., reviews[27,28])has shown that many cognitiveand mo tortasks are
+associated with speciﬁc rhythms appearing in diﬀerent parts of the tasks. Gamma
+is often associated with attention, awareness and perception, be ta with preparation
+for motor activies and high-order cognitive tasks, theta with learn ing and recall and
+alpha with quiet awareness (there are several diﬀerent versions o f alpha in diﬀerent
+parts of the brain and found in diﬀerent circumstances). Work don e in whole
+animalsandin slicepreparationsaregivingclues to the underlyingphys iologyofthe
+rhythms, and how various neuromodulators change the rhythms, e.g., [14]. Much
+of the math done so far has concerned how the networks produce their rhythms
+from their ionic currents and connectivity, and has not directly add ressed function.
+However, the issues of function are starting to be addressed in te rms of how the
+dynamics of networks aﬀects the computational properties of th e latter.
+One of the potential functions for these rhythms is the creation o f “cell as-
+semblies”, temporary sets of neurons that ﬁre synchronously. T hese assemblies are
+believed to be important in distributed processing; they enhance th e eﬀect of the
+synchronized pulses downstream, and provide a substrate for ch anges in synapses
+that help to encode experience. (“Cells that ﬁre together wire tog ether.”) Simula-
+tions show, and help to explain, why gamma rhythms have especially go od prop-
+erties for creating cells assemblies, and repressing cells with lower ex citatbility or
+input [29]. Furthermore, the changesin synapsesknown to occur d uring gammacan
+facilitate the creation of the beta rhythm (see [19] for reference s), which appears
+in higher-order processing. Mathematical analysis shows that the beta rhythm is
+more eﬀective for creating synchrony over distances where the c onduction time is
+longer. Thus, we can understand the spontaneous gamma-beta s witch seen in vari-
+ous circumstances (see [19] and [29]) as creating cell assemblies (du ring the gamma
+portion), using the synaptic changes to get cell assemblies encode d in the beta
+rhythm, and then using the beta rhythm to form highly distributed c ell assemblies.
+The new ﬂood of data, plus the new insights from the mathematics, a re open-
+ing up many avenues for mathematical research related to rhythm s and function.
+A large class of such questions concerns how networks that are dis playing given
+rhythmsﬁlterinputswith spatio-temporalstructure, andhowth is aﬀectsthechang-
+ing cell assemblies. This question is closely related to the central and controversial
+questions of what is the neural code and how does it operate. Thes e questions will
+Rhythms of the Nervous System: Mathematical Themes and Variat ions 815
+likely require new techniques to combine dynamical systems and prob ability, new
+ways to reduce huge networks to ones amenable to analysis, and ne w ideas within
+dynamical systems itself, e.g., to understand switches as global bif urcations; these
+are large and exciting challenges to the mathematical community.
+References
+[1] C. Koch and I. Segev, Methods in Neuronal Modeling , MIT Press, Cambridge
+MA., 1998.
+[2] P.F. Pinsky and J. Rinzel, Intrinsic and network rhythmogenesis in a reduced
+Traub model, J. Comput. Neurosci. 1(1994), 39–60.
+[3] X.J. Wang and J. Rinzel, Alternating and synchronous rhythms in r eciprocally
+inhibitory model neurons, Neural Comput .4(1992), 84–97.
+[4] J. White, C. Chow, J. Ritt, C. Soto-Trevino and N. Kopell, Synchr oniza-
+tion and oscillatory dynamics in heterogeneous, mutually inhibited neu rons,
+J. Comput. Neurosci. 5(1998), 5–16.
+[5] D. Terman, N. Kopell and A. Bose, Dynamics of two mutually couple d slow
+inhibitory neurons, Physica D 117(1998), 241–275.
+[6] C. van Vreeswijk, L.F. Abbott, G.B. Ermentrout, When inhibition, not exci-
+tation, synchronizes neural ﬁring, J. Comput. Neurosci. 1(1994), 313–321.
+[7] N. Kopell and G.B. Ermentrout, Mechanisms of phase-locking and frequency
+control in pairs of coupled neural oscillators, in Handbook on Dynamical Sys-
+tems, vol. 2,Toward Applications . Ed. B. Fiedler, Elsevier (2002), 3–54.
+[8] G.B. Ermentrout and N. Kopell, Parabolic bursting in an excitable sy stem
+coupled with a slow oscillation, SIAM J. Appl. Math. 46(1986), 233–253.
+[9] C. Borger and N. Kopell, Synchronization in network of excitator y and in-
+hibitory neurons with sparse, random connectivity, to appear in Neural Com-
+put.
+[10] F. Diener, Proprietes asymptotiques des ﬂeuves, C.R. Acad. Sci Paris 302
+(1985), 55–58.
+[11] C. Chow, J. White, J. Ritt, and N. Kopell, Frequency control in s ynchronous
+networks of inhibitory neurons, J. Comput. Neurosci. ,5(1998), 407–420.
+[12] M.A. Whittington, R.D. Traub and J. Jeﬀerys, Synchronized osc illation in
+interneuron networks driven by metabotropic glutamate recepto r activation,
+Nature373(1995), 612–615.
+[13] X.-J. Wang and G. Buzsaki, Gamma oscillation by synaptic inhibition in a
+hippocampal interneuronal network model, J. Neurosci. 16(1996), 6402–6413.
+[14] R.D.Traub,J.G.T.JeﬀerysandM.A.Whittington, Fast oscillations in Cortical
+Circuits, MIT Press, Cambridge MA, 1999.
+[15] M.A. Whittington, R.D. Traub, N. Kopell, G.B. Ermentrout and E.H. Buhl,
+Inhibition-basedrhythms: Experimentalandmathematicalobser vationonnet-
+work dynamics, Int. J. of Psychophysiology 38(2000), 315–336.
+[16] G.B. Ermentrout, M. Pascal and B. Gutkin, The eﬀects of spike frequency
+adaptation and negative feedback on the synchronization of neur al oscillators,
+Neural Comput. 13(2001), 1285–1310.
+816 Nancy Kopell
+[17] C. Acker, N. Kopell and J. White, Synchronization of strongly c oupled excita-
+tory neurons: relating network behavior to biophysics, to appear inJ. Comput.
+Neurosci.
+[18] G.B. Ermentrout, Type I membranes, phase resetting curves and synchrony,
+Neural Comput. 8(1996), 879–1001.
+[19] N. Kopell, G.B. Ermentrout, M. Whittington and R.D. Traub, Gamm a
+rhythms and beta rhythms have diﬀerent synchronization proper ties,Proc.
+Nat. Acad. Sci. USA ,97(2000), 1867–1872.
+[20] S.R.Jones,D.Pinto,T.KaperandN.Kopell,Alpha-frequency rhythmsdesyn-
+chronize over long cortical distances: a modeling study, J. Comput. Neurosci. ,
+9(2000), 271–291.
+[21] T.LoFaroandN. Kopell, Timing regulationin anetworkreducedfr omvoltage-
+gated equations to a one-dimensional map, J. Math Biol. 38(1999), 479–533.
+[22] M.J. Gillies, R.D. Traub, F.E.N LeBeau, C.H. Davies, T. Gloveli, E.H. Buh l
+and M.A. Whittington, Stratum oriens interneurons temporally coor dinate
+atropine-resistant theta oscillations in hippocampal area CA1, to a ppear in
+J. Neurophysiol .
+[23] D. Golomb and B. Hansel, The number of synaptic inputs and sync hrony of
+large sparse neuronal networks, Neural Comp. 12(2000), 1095–1139.
+[24] D. Hansel and G. Mato, Existence and stability of persistent st ates in large
+neuronal networks, Phys. Rev. Lett. 86(2001), 4175–4178.
+[25] N. Brunel, Dynamics of sparsely connected networks of excita tory and in-
+hibitory spiking neurons, J. Comput. Neurosci. 8(2000), 183–208.
+[26] J. Rubin and D. Terman, Geometric analysis of population rhythm s in synap-
+tically coupled neuronal networks, Neural Comp .12(2000), 597–645.
+[27] S.F Farmer, Rhythmicity, synchronization and binding in human an d primate
+motor systems, J. Physiol. 509(1998), 3–14.
+[28] C. Tallon-Baudry and O. Bertrand, Oscillatory gamma activity in h umans and
+its role in object representation, Trends in Cognitive Neurosci. 3(1999), 151–
+162.
+[29] M. Olufsen, MA. Whittington, M. Camperi and N. Kopell, New func tions
+for the gamma rhythm: Population tuning and preprocessing, to ap pear in
+J.Comput. Neurosci.

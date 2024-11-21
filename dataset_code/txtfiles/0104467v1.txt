@@ -1,0 +1,463 @@
+arXiv:cond-mat/0104467v1  [cond-mat.dis-nn]  24 Apr 2001Extinctions in the random replicator model
+Viviane M. de Oliveira and J. F. Fontanari
+Instituto de F´ ısica de S˜ ao Carlos
+Universidade de S˜ ao Paulo
+Caixa Postal 369
+13560-970 S˜ ao Carlos SP, Brazil
+Abstract
+The statistical properties of an ecosystem composed of species in -
+teracting via pairwise, random interactions and deterministic, conc en-
+tration limiting self-interactions are studied analytically with tools of
+equilibrium statistical mechanics of disordered systems. Emphasis is
+given to the eﬀects of externally induced extinction of a ﬁxed fract ion
+of species at the outset of the evolutionary process. The manner the
+ecosystem copes with the initial extinction event depends on the de -
+gree of competition among the species as well as on the strength of
+that event. For instance, in the regime of high competition the ecos ys-
+tem diversity, given by the fraction of surviving species, is practica lly
+insensitive to the strength of the initial extinction provided it is not
+too large, while in the less competitive regime the diversity decreases
+linearlywith the size ofthe event. In the case oflargeextinction eve nts
+we ﬁnd that no further biotic extinctions take place and, furtherm ore,
+that rare species become very unlikely to be found in the ecosystem at
+equilibrium. In addition, we show that the reciprocal of the Edwards -
+Anderson order parameter yields a good measure of the diversity o f
+the model ecosystem.
+PACS: 87.10+e, 87.90.+y, 89.90+n
+1
+1 Introduction
+Extinction seems to be the ﬁnal outcome of the evolution of species . In fact, as
+species survive about 10 million years in the average, nearly all specie s that have
+everexistedareextinct andonlyaverysmallfractionofthemhave left theirimpres-
+sions in the fossil record [1, 2]. The causes of the mass extinction ev ents is currently
+a matter of dispute as there are two main types of explanations [3]. T he more tra-
+ditional one asserts that extinction is caused by external stress es as, for instance,
+major climate changes and asteroids impacts. This point of view is sup ported by
+some evidences such as the unusual quantity of iridium and other no ble metals in
+the rocks that marked the boundary between the Cretaceous an d Tertiary periods,
+when the era of the dinosaurs was replaced by the era of the mamma ls [4]. Since
+iridium is more common in asteroids than in the Earth’s crust, this ﬁndin g can be
+viewed as evidence for an asteroid impact. The alternative explanat ion asserts that
+extinctions are caused by the interactions between the species in t he ecosystems.
+In particular, Paine [5] has shown that species richness sometimes c an be increased
+by the predator-mediated coexistence, and the removal of pred ators can lead to
+additional species extinctions. Some recent studies indicate that f ood webs with
+many species or high connectivity are more likely to lose species as a co nsequence
+of the extinction of a single species when compared with more simple fo od webs
+[6, 7]. Although this kind of argument seems well suited to explain the s o-called
+background extinctions, it certainly needs some new ingredients to explain mass
+extinctions as well. In fact, the missing ingredient seems to be the se lf-organized
+criticality concept [8], which in this context is best illustrated by the po pular Bak-
+Sneppen model [9]. According to this model, the ﬁtness of each spec ies is aﬀected
+by the other species to which it is coupled in the ecosystem so that lar ge events
+in the evolutionary history may be thought of as large coevolutionar y avalanches
+caused by the intrinsic dynamics of the model. In this model, the distr ibution of
+the extinction sizes follows a power law, which is a valid candidate for ﬁt ting to the
+experimental data.
+Although we recognize that evolution and hence extinction are, as p ictured by
+the models mentioned above, essentially dynamical phenomena, in th is work we
+study these phenomena within the equilibrium statistical mechanics f ramework of
+the random replicator model for species coevolution [10, 11, 12, 13 ]. Deterministic
+replicator models are commonly used to describe the evolution of self -reproducing
+entities in a variety of ﬁelds such as game theory, prebiotic evolution and sociobiol-
+ogy [14, 15]. The random replicator model introduced by Diederich an d Opper [10]
+attempts to model the uncertainties and the overwhelming complex ity of the in-
+terspecies interactions in biological ecosystems by assuming that t hose interactions
+are random. However, it is also assumed that the dynamics is such th at a ﬁtness
+functional (Lyapunov function) is maximized so that the only statio nary states are
+ﬁxed points. In fact, the existence of such a functional leads to a replicator equa-
+tion with symmetric interspecies interactions[15] which is a severeas sumption from
+the biological standpoint. It allows, however, full use of tools of th e equilibrium
+2
+statistical mechanics to study analytically the averageproperties of the equilibrium
+states of this kind of disordered ecosystems.
+An interesting result of the random replicator model is that in the eq uilibrium
+state a fraction of the species is extinct [10]. The mechanism of extin ction is clearly
+outcompetition and, in the absence of any cooperation pressure, only the pair of
+species with the largest reinforcing interactions will thrive. In this c ontribution we
+study the eﬀects of random elimination of a ﬁxed fraction of the spe cies at the out-
+set of the evolutionaryprocess, giving emphasis to the distribution of the remaining
+species concentrations in the equilibrium state. There are several interesting issues
+that can be addressed in this framework. For instance, what is the equilibrium situ-
+ation when the fraction of species eliminated at the beginning is alread y largerthan
+the fraction that would be extinct naturally due to outcompetition? Furthermore,
+how does the ecosystem cope with large initial extinction events? In this paper we
+give clear-cut analytic answers to these questions which are partly corroborated by
+numerical simulations of the model ecosystem.
+The remainder of the paper is organized as follows. In Sec. 2 we intro duce the
+model and discussthe ecologicalinterpretationofthe controlpa rameters. The equi-
+librium properties ofthe model arederived within the replica-symmet ricframework
+in Sec. 3 and the use of the reciprocal of the Edwards-Anderson o rder parameter
+as a measure for the diversity of the ecosystem is suggested. In S ec. 4 we calculate
+the distribution of probability of the concentrations of a given spec ies, allowing
+thus the explicit calculation of the ecosystem diversity as the fract ion of surviving
+species at equilibrium. Finally, in Sec. 5 we present some concluding rem arks.
+2 Model
+We consider an inﬁnite population (ecosystem) composed of individua ls belonging
+toNdiﬀerent species whose ﬁtness Fi(i= 1,...,N) are the derivatives Fi=
+∂F/∂xiof the ﬁtness functional Fdeﬁned as
+−F=H(x) =u/summationdisplay
+ibix2
+i+/summationdisplay
+i<jJijbixibjxj (1)
+wherexi∈[0,∞) is the fraction of species iandbiis a quenched random variable
+that takes the values 0 and 1 with probabilities aand 1−a, respectively. Hence Na
+randomly chosen species are eliminated at the outset in the average and so hence-
+forth we will refer to a∈[0,1] as the dilution parameter. An eﬀective competition
+among the species is enforced by requiring that the concentration s of the surviving
+species satisfy the constraint
+N/summationdisplay
+i=1bixi=Q0N, (2)
+whereQ0is an arbitrary positive constant which gives the scale of the concen -
+trations xi. The coupling strengths Jijbetween species iandjare statistically
+3
+independent quenched random variables with a Gaussian distribution
+P(Jij) =/radicalbigg
+N
+2πexp/bracketleftBigg
+−(Jij)2N
+2/bracketrightBigg
+(3)
+so thatJij<0 corresponds to pairs of cooperating species while Jij>0 to pairs of
+competing species. The self-interaction parameter u≥0 acts as a global coopera-
+tion pressure limiting the growth of any single species, and it is crucial to guarantee
+the existence of a nontrivial thermodynamic limit, N→ ∞. In fact, for large u
+the minimum of Hcorresponds to a homogeneous ecosystem where the surviving
+species have concentrations xi/Q0= 1/(1−a)∀i. The positive self-interactions
+means that individuals of a same species compete against themselves , which is
+quite reasonable as they certainly share the same resources (eco logical niche).
+The time evolution of the species concentrations is given by the replic ator equa-
+tion
+dxi
+dt=−xi/bracketleftBigg
+∂H(x)
+∂xi−1
+N/summationdisplay
+kxk∂H(x)
+∂xk/bracketrightBigg
+∀i (4)
+whichminimizes H(x)whilekeepingtheterm/summationtext
+ibixiconstantduringtheevolution.
+Hence the ﬁxed points of this equation are the minima of H(x) and in the following
+we use the replica formalism to study analytically the statistical prop erties of these
+minima.
+3 The replica approach
+Following the standard prescription of performing quenched avera ges on extensive
+quantities only [16], we deﬁne the average free-energy density fas
+−βf= lim
+N→∞1
+N/angbracketleftlnZ/angbracketright (5)
+where
+Z=/integraldisplay∞
+0/productdisplay
+idxiδ/parenleftBigg
+Q0N−/summationdisplay
+ibixi/parenrightBigg/parenleftBigg
+QN−/summationdisplay
+ixi(1−bi)/parenrightBigg
+e−βH(x)(6)
+is the partition function and β= 1/Tis the inverse temperature. Taking the limit
+T→0 in Eq. (6) ensures that only the states that minimize H(x) will contribute
+toZ. We impose the additional constraint
+/summationdisplay
+ixi(1−bi) =QN (7)
+to avoid divergences when carrying out the integrals over xi. Here/angbracketleft.../angbracketrightstands for
+the average over the coupling strengths Jijas well as over the auxiliary variables
+4
+bi. As usual, the evaluation of the quenched average in Eq. (5) can be carried out
+through the replica method: using the identity
+/angbracketleftlnZ/angbracketright= lim
+n→01
+nln/angbracketleftZn/angbracketright (8)
+we ﬁrst calculate /angbracketleftZn/angbracketrightforintegern, i.e.,Zn=/producttextn
+ρ=1Zρ, and then analytically
+continue to n= 0. The ﬁnal result is
+−βf= lim
+n→0extr1
+n/braceleftbigg/summationdisplay
+ρˆpρpρ−βu
+2/summationdisplay
+ρpρ+β2
+4/summationdisplay
+ρ(pρ)2+/summationdisplay
+ρ<δˆqρδqρδ+/summationdisplay
+ρQˆQρ
++β2
+2/summationdisplay
+ρ<δ(qρδ)2+/summationdisplay
+ρQ0ˆRρ+1/summationdisplay
+b=0PblnG0(b,ˆpρ,ˆqρδ,ˆRρ,ˆQρ)/bracerightbigg
+(9)
+whereP0=a,P1= 1−a, and
+G0=/integraldisplay∞
+0/productdisplay
+ρdxρexp/braceleftbigg
+−b/summationdisplay
+ρˆpρ(xρ)2−b/summationdisplay
+ρ<δˆqρδxρxδ
+−b/summationdisplay
+ρˆRρxρ−(1−b)/summationdisplay
+ρˆQρxρ/bracerightbigg
+. (10)
+We note that while we have calculated the average over the couplings Jijexplicitly,
+we have used the self-averaging property1
+N/summationtext
+ilnG0(bi) =/summationtext
+bPblnG0(b) to elimi-
+nate the site dependence of the bivariables. The relevant physical order parameters
+are
+qρδ=1
+N/summationdisplay
+i/angbracketleft/angbracketleftxρ
+ixδ
+i/angbracketrightT/angbracketrightρ < δ (11)
+pρ=1
+N/summationdisplay
+i/angbracketleft/angbracketleft(xρ
+i)2/angbracketrightT/angbracketright (12)
+which measure the overlap between a pair of diﬀerent equilibrium stat esxρand
+xδ, and the overlap of an equilibrium state xρwith itself, respectively. Here, /angbracketleft.../angbracketrightT
+stands for a thermal average taken with the Gibbs probability distr ibution
+W(x) =1
+Zδ/parenleftBigg
+Q0N−/summationdisplay
+ixi/parenrightBigg
+δ/parenleftBigg
+QN−/summationdisplay
+i(1−bi)xi/parenrightBigg
+exp[−βH(x)].(13)
+To proceed further we assume that the saddle-point parameters are symmetric
+under permutations of the replica indices, i.e., pρ=p, ˆpρ= ˆp,qρδ=q, ˆqρδ=
+ˆq,ˆRρ=ˆRandˆQρ=ˆQ. With this prescription the evaluation of Eq. (9) is
+straightforward yielding the following replica-symmetric free energ y density
+−βf=−βqy
+2−βQ0ˆR+a+aln(Q
+a)+1−a
+2ln/parenleftbiggπ
+2β(2u−y)/parenrightbigg
+5
++β(1−a)ˆR2+q
+2(2u−y)+(1−a)/integraldisplay∞
+−∞Dzlnerfc/bracketleftBigg√β(ˆR+z√q)/radicalbig
+2(2u−y)/bracketrightBigg
+(14)
+wherey=β(p−q)andDz=dzexp(−z2/2)/√
+2πistheGaussianmeasure. Already
+at this stage we can see that the concentration of species eliminate d at the outset,
+given by the parameter Q, decouples from the other physical parameters and hence
+does not have any eﬀect upon them. In the zero-temperature limit the saddle-point
+equations ∂f/∂q= 0,∂f/∂y= 0 and ∂f/∂ˆR= 0 are given by
+∆ = 2√q
+Q0(u−y), (15)
+2y(2u−y) = (1−a) erfc/parenleftBig
+−∆/√
+2/parenrightBig
+, (16)
+and
+(1−a)∆√
+2πexp/parenleftbig
+−∆2/2/parenrightbig
+= (2u−y)2−(2u−y)/parenleftbig
+∆2+1/parenrightbig
+y. (17)
+We note that the parameter associated to the concentration of s urviving species
+Q0appears only as a scale of qand so henceforth we will set Q0= 1 without loss
+of generality. In the replica-symmetric framework the Edwards-A nderson order
+parameter qis deﬁned by
+q=/angbracketleftBigg
+1
+N/summationdisplay
+i/angbracketleftxi/angbracketright2
+T/angbracketrightBigg
+. (18)
+If the concentrations xiwere normalized to 1 rather than to Nthenqwould give
+the probability that two randomly selected individuals are of the same species, a
+quantity known as Simpson’s index [17]. Nevertheless, we can still give a simple
+physical interpretation to q. For instance, values of qof order of 1 indicate the
+coexistence of a macroscopicnumber of species (i.e., xi≈1 for an extensive number
+of species), while large values of qsignalize the dominance ofa few species only (i.e.,
+xi≈Nfor a ﬁnite number of species). Of course, this interpretation is eq uivalent
+to that given above for Simpson’s index, and so we can view 1 /qas a measure
+of the diversity of the ecosystem. In Fig. 1 we present 1 /qas a function of the
+dilution parameter afor several values of the cooperation pressure u. The results
+of the numerical solution of the replicator equation, Eq. (4), for N= 500 are also
+presented. Each data point is the average over 100 realizations of the matrix of
+coupling strengths, starting with an uniform distribution of concen trations. Since
+the labeling of the species is arbitrary we can set bi= 0 fori≤aNandbi= 1
+otherwise, without loss of generality. In addition, we choose asuch that aNis
+integer for simplicity. In agreement with our interpretation, for aclose to 1 we
+can observe the vanishing of 1 /q, which characterizes an ecosystem composed of
+a few species only. For small values of uthe analytical results show the existence
+of a maximum of diversity for a nonzero value of the dilution paramete r (see the
+inset in Fig. 1); the numerical results however do not corroborate this ﬁnding. This
+6
+0 0.2 0.4 0.6 0.8 1
+a00.20.40.60.81/q0.5 0.75 100.050.1
+Figure 1: The diversity 1 /qas a funcion of the dilution parameter afor
+(top to bottom) u= 1.3 (/circleco√yrt),0.8 (▽),0.6 (✸),0.4 (✷) and 0.3 (△). The
+symbols are the results of the numerical solution of the repl icator equation.
+The inset highlights the region of the diversity maximum.
+discrepancy can be explained by the instability of the replica-symmet ric solution.
+In fact, carrying out the standard local stability analysis [18], we ﬁn d that this
+solution is locally stable wherever the condition
+λ=−1+1
+2(2u−y)2erfc/parenleftbigg
+−∆√
+2/parenrightbigg
+<0 (19)
+is satisﬁed. Figure 2 shows the regions in the plane ( a,u) where the replica-
+symmetric solution is stable. In particular, we ﬁnd that for a= 0 this solution
+is stable for u >1/√
+2 while for a= 1 it is stable for u >1/2. Hence, the maxima
+observed in Fig. 1 are indeed artifacts of the replica-symmetry fra mework. Nev-
+ertheless, the agreement between the analytical and numerical r esults is already
+excelent for u >0.6. The rather puzzling independence of the diversity on the
+dilution parameter for small uhas a simple explanation as will be seen in the next
+section.
+4 Discussion
+Although the interpretation of the reciprocal of the Edwards-An derson order pa-
+rameter as the ecosystem diversity yields some information on the d istribution of
+species at equilibrium, a better understanding is achieved by calculat ing explicitly
+7
+0 0.2 0.4 0.6 0.8 1
+a0.50.60.70.8u
+λ > 0λ < 0
+Figure 2: Almeida-Thouless line separating the regions of s tability ( λ <0)
+and instability ( λ >0) of the replica-symmetric solution.
+the probability distribution that the concentration of one of the (1 −a)Nremaining
+species, say xk, assumes the value x, deﬁned by
+Pk(x) = lim
+β→∞/angbracketleftBigg/integraldisplay∞
+0/productdisplay
+jdxjbkδ(xk−x)W(x)/angbracketrightBigg
+(20)
+withW(x) given by Eq. (13). As all non-vanishing species concentrations ar e
+equivalent we can write Pk(x) =P(x)∀k. Hence to evaluate Eq. (20) we introduce
+the auxiliary energy
+Haux(x) =H(x)+h/summationdisplay
+kbkδ(xk−x), (21)
+so that
+P(x) =−lim
+β→∞1
+Nβ∂/angbracketleftlnZaux/angbracketright
+∂h/vextendsingle/vextendsingle/vextendsingle/vextendsingle
+h=0(22)
+whereZauxis the partition function (6) with Hreplaced by Haux. Using Eq.
+(22) the calculations needed to evaluate P(x) become analogous to those used in
+the evaluation of the free-energy density (14). In addition, to ha ndle a possible
+singularity in the limit β→ ∞it is more convenient to deal with the cumulative
+distribution function C(x) =/integraltextx
+0dx′P(x′). Carrying out the calculations within
+the replica-symmetric framework we obtain
+C(x) = (1−a)/braceleftbigg
+1−1
+2erfc/bracketleftbigg1√
+2/parenleftbiggx(2u−y)√q−∆/parenrightbigg/bracketrightbigg/bracerightbigg
+(23)
+8
+whereq,yand ∆ are given by the saddle-point equations (15)-(17). In Fig. 3 w e
+showC(x) foru= 0.8 and several values of a. The ﬁrst point to note is that
+limx→∞C(x) = 1−ayields the fraction of surviving species at the outset, as
+expected. In addition, a nonzero value of C(0) indicates that the probability dis-
+tribution P(x) has a delta peak at x= 0 and so C(0) actually yields the fraction
+of the species that survived the initial externally induced extinction event but that
+were extinct later on due to outcompetition. In the regime of large d ilution, say
+a >0.8 in Fig. 3, the cumulative distribution is very small and practically cons tant
+for small concentrations, indicating that no further extinctions h ave taken place
+and, furthermore, that rare species are very unlikely to be found in the ecosystem
+at equilibrium. We note that the numerical simulations yield results pra ctically in-
+distinguishable from the analytical ones. The rough independence o f the diversity
+1/qon the dilution parameter aobserved in Fig. 1 for small uis easily understood
+with the aid of the cumulated distributions. In fact, a direct measur e of the ecosys-
+tem diversity is given by the fraction of surviving species 1 −a− C(0), which is
+shown in Fig. 4 as function of a. (We recall that ais the fraction of species that
+were extinct at the outset due to some external stress and C(0) is the fraction that
+died out due to outcompetition.) The remarkable similarity between th ese ﬁgures
+corroborates our interpretation of 1 /qas a measure of the diversity. Clearly, the
+diversity is insensitive to variations of awhenever the fraction of extinct species in
+the undisturbed ecosystem (i.e. C(0) calculated at a= 0) is already considerably
+largerthan a, sothat the species eliminated at the outset wouldprobablybe extin ct
+later on anyway.
+5 Conclusion
+Although the dynamics of the random replicator model may not look v ery appeal-
+ing, in the sense that it always leads to ﬁxed points, the frustration caused by the
+competition between the concentration limiting self-interactions ( u >0) and the
+tendency to unlimited growth of pairs of strongly cooperative ( Jij<0) species
+results in a highly nontrivial equilibrium, characterized by many meta- stable states
+[10] and a phase of replica symmetry breaking [11]. Of course, these very features
+make some aspects of the dynamics (e.g., slow relaxation and hyster esis eﬀects)
+nontrivial as well. The wealth of ecologically relevant issues that can b e addressed
+within this equilibrium framework can be appreciated, for instance, in the case of
+high-orderinteractionsamongthe species where it has been repor tedthe emergence
+of a threshold value which gives a lower bound to the concentration o f the surviv-
+ing species, preventing then the existence of rare (low concentra tion) species in the
+ecosystem [13].
+An important outcome of the equilibrium analysis of the random replica tor
+model is the ﬁnding that in order to reduce the degree of frustrat ion a fraction
+of the species dies out [10]. This type of extinction has clearly a biotic c ause,
+namely, outcompetition [19]. In this paper we study how the model ec osystem
+9
+0 2 4 6 8
+x00.20.40.60.81C0
+0.4
+0.6
+0.8
+Figure 3: Cumulative distribution of the concentration of t he initially sur-
+viving species in equilibrium for u= 0.8 and (top to bottom) a= 0, 0.4,
+0.6, and 0.8. The dashed curves are the results of the numerical solutio n of
+the replicator equation.
+copes with abiotic or externally induced extinction, in which a fraction of randomly
+chosen species is eliminated at the beginning of the coevolutionarypr ocess. We ﬁnd
+that in the regime of high competition (small u) the ecosystem diversity, i.e., the
+fraction of surviving species is practically insensitive to the strengt haof the initial
+extinction provided it is not too large, while in the less competitive regim e (largeu)
+the diversity decreases linearly with increasing a. In the case of a large extinction
+event we ﬁnd that no further (biotic) extinctions take place and, f urthermore, that
+rare species become very unlikely to be found in the ecosystem at eq uilibrium. This
+is distinct from the result mentioned above for the case of high-ord er interactions
+where the probability of ﬁnding rare species in the ecosystem is stric tly null [13].
+An interesting by-product of our investigation is the ﬁnding that th e recipro-
+cal of the Edwards-Anderson order parameter (i.e., the replica-s ymmetric overlap
+between two equilibrium states) serves as an easy-to-calculate me asure of the di-
+versity of the model ecosystem. This opens the exciting possibility o f interpreting
+the diﬀerent hierarquical levels of the overlap order parameter in t he full replica
+symmetry breaking scheme [16] as diﬀerent levels of a phylogenetic t ree that gives
+the relations of dependence (viewed as ancestrality) among the sp ecies.
+Acknowledgments
+The work of J.F.F. is supported in part by Conselho Nacional de Desen volvi
+10
+0 0.2 0.4 0.6 0.8 1
+a00.20.40.60.81−a−C(0)1
+Figure 4: Fraction of surviving species as a function of the d ilution pa-
+rameter afor (top to bottom) u= 1.3 (/circleco√yrt),1.0 (✷),0.8 (▽),0.6 (✸) and
+0.3 (△). The symbols are the results of the numerical solution of th e repli-
+cator equation. The dashed line is the fraction of species at the beginning
+of the coevolutionary process.
+11
+mento Cient´ ıﬁco e Tecnol´ ogico (CNPq) and Funda¸ c˜ ao de Amparo ` a Pesquisa do
+Estado de S˜ ao Paulo (FAPESP), Proj. No. 99/09644-9. V.M.O. is su pported by
+FAPESP.
+References
+[1] D. Raup and J. J. Sepkoski Jr, Proc. Natl. Acad. Sci. U.S.A. 81, 801 (1984).
+[2] M. E. J. Newman, adap-org/9910003, 1999
+[3] M. E. J. Newman and R. G. Palmer, adap-org/9908002, 1999
+[4] L. W. Alvarez, W. Alvarez, F. Asaro and H. V. Michel, Science 208, 1095
+(1980).
+[5] R. T. Paine, Am. Nat. 100, 65 (1966).
+[6] S. L. Pimm, Oikos 33, 351 (1979).
+[7] S. L. Pimm, Oikos 35, 139 (1980).
+[8] P. Bak, C. Tang and K. Wiesenfeld, Phys. Rev. Lett. 59, 381 (1987).
+[9] P. Bak and K. Sneppen, Phys. Rev. Lett. 71, 4083 (1993).
+[10] S. Diederich and M. Opper, Phys. Rev. A 39, 4333 (1989).
+[11] P. Biscari and G. Parisi, J. Phys. A 28, 4697 (1995).
+[12] M. Opper and S. Diederich, Comp. Phys. Comm. 121, 141 (1999).
+[13] V. M. de Oliveira and J. F. Fontanari, Phys. Rev. Lett 85, 4984 (2000).
+[14] P. Schuster and K. Sigmund, J. Theor. Biol 100, 533 (1983).
+[15] J. Hofbauer and K. Sigmund, Dynamical Systems and the Theory of Evolution
+(Cambridge Univ. Press, Cambridge UK, 1988).
+[16] M. M´ ezard, G. Parisi and M. A. Virasoro, Spin Glass Theory and Beyond
+(World Scientiﬁc, Singapore, 1987).
+[17] E. H. Simpson, Nature 163, 688 (1949).
+[18] J. R. L. Almeida and D. J. Thouless, J. Phys. A 11, 983 (1978).
+[19] J. Maynard Smith, Phil. Trans. R. Soc. London B 325, 241 (1989)
+12

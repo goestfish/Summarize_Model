@@ -1,0 +1,449 @@
+arXiv:math/0009223v2  [math.CA]  18 Feb 2001The Dynamics of a Vertically Transmitted Disease
+M.R. Razvan
+Institute for Studies in Theoretical Physics and Mathematics
+P.O.Box: 19395−5746, Tehran, IRAN
+Email: razvan@karun.ipm.ac.ir
+Fax: 009821-2290648
+Abstract
+An SIRS epidemiological model for a vertically transmitted disease is discussed.
+We give a complete global analysis in terms of three explicit threshold parame-
+ters which respectively govern the existence and stability of an endemic proportion
+equilibrium, the increase of the total population and the gr owth of the infective
+population. This paper generalizes the results of Busenber g and van den Driessche.
+Keywords: Epidemiological model, endemic proportions, global stability, Poincar ´ e in-
+dex, threshold, vertical transmission.
+Subject Classiﬁcation: 92D30
+1 Introduction
+In 1990, a complete global analysis of an SIRS model of disease tran smission in a pop-
+ulation with varying size was given by Busenberg and van den Driessch [4]. In an SIRS
+epidemiological model, we divide the population into three groups, Sus ceptibles, Infec-
+tives and Removeds, and the problem is to examine the behavior of th e size of each group
+when the time goes to inﬁnity. They considered a disease with horizon al transmission,
+that is a disease which is transmitted by contact between an infectiv e and a susceptible
+individual. We intend to generalize their results for a vertically transm itted disease, that
+is a disease which is also transmitted from infective parents to their n ewborns. The as-
+sumption of vertical transmission has two consequences. First it c auses some newborns
+1
+to die and forces us to assume that the birth rate diﬀers from one g roup to another. (See
+the demographic assumption in [3, 9, 10].) The second fact is that som e newborns are
+infected, hence a group of newborns enter to the infective class [1 , 2, 6]. We also assume
+that a part of these infected newborns are known and removed af ter their birth. We shall
+show that the latter parameter can play an important role in the epid emic process.
+We consider an SIRS epidemiological model for a vertically transmitte d disease. In
+our model, the incidence function is of proportionate mixing type intr oduced by Nold
+[11]. Natural births and deaths are assumed to be proportional to the class numbers with
+diﬀerent rates. We also assume that a proportion of the infected n ewborns are known and
+removed. We follow [4] to examine our model equation which is homogen eous of degree
+one. We consider the proportions system and show that this syste m has no periodic
+orbit in its feasibility region. This reduces our analysis to the discussio n of existence and
+stability of rest points of a palnar system. The technique used here to show the uniquness
+of endemic equilibria is based on the Poincar´ e index. This technique ha s no hard analysis
+and can be easily applied to other similar systems [13, 14]. The reader c an verify that
+our results hold for similar SIRI systems as well [7].
+We ﬁrst in the next section state the model and a result concerning the non-existence
+of certain types of solutions [5]. We consider the proportions syste m and prove that every
+solution in the feasibility region tends to a rest point of this system. I n Section 3., we
+introduce a quadratic planar system with the same dynamics as the p roportions system
+and then we discuss the existence and stability of rest points of this quadratic planar
+system. This gives a complete global analysis of the proportions sys tem which is used to
+provide a global analysis of the original system is Section 4.
+2 The model
+In order to derive our model equations, we divide the population into three classes, the
+susceptible, the infective and the removed individuals with total num bersS,IandR
+respectively,. We set N=S+I+Rwhich is the total size of the population. The
+following parameters are used in our model equations:
+b0: per capita birth rate of susceptible individuals,
+2
+b1: per capita birth rate of infective individuals born uninfected,
+β: per capita birth rate of infective individuals born infected,
+b2: per capita birth rate of removed individuals,
+d: per capita disease free death rate,
+ε1: excess per capita death rate of infected individuals,
+ε2: excess per capita death rate of removed individuals,
+α: per capita removal rate of infective individuals,
+γ: per capita recovery rate of removed individuals,
+λ: eﬀective per capita contact rate of infective individuals.
+As mentioned before, we assume that the infected newborns ente r the classes IandR
+of proportions β1andβ2respectively, hence β=β1+β2. In this paper, all the above
+parameters, are positive, however some of them can also be zero. These hypotheses yield
+the following system of diﬀerential equation in R+
+3, where “′” denotes the derivatives
+with respect to t, the time.
+
+
+S′= (b0−d)S+b1I+(b2+γ)R−λIS
+N(2−1)
+I′= (β1−d−ε1−α)I+λIS
+N(2−2)
+R′= (β2+α)I−(d+ε2+γ)R (2−3)
+whereλIS
+Nis of the proportionate or random mixing type [8, 11]. By adding the ab ove
+three equations, the total population equation is
+N=b0S+(b1+β−ε1)I+(b2−ε2)R−dN.
+If we consider the proportions s=S
+N,i=I
+N,r=R
+N, we get the following system of
+equations.
+
+
+s′=b0s+b1i+(b2+γ)r−b0s2−(b1+β+λ−ε1)is−(b2−ε2)sr(2−1)′
+i′= (β1−ε1−α)i+(λ−b0)is−(b1+β−ε1)i2−(b2−ε2)ir (2−2)′
+r′= (β2+α)i−(ε2+γ)r−b0sr−(b1+β−ε1)ir−(b2−ε2)r2(2−3)′
+3
+This system is called proportions system and the feasibility region of t his system is the
+triangle
+D={(s,i,r)|s≥0,i≥0,r≥0,s+i+r= 1}.
+If we set Σ = s+i+rthen Σ′= (1−Σ)(b0s+(b1+β−ε1)i+(b2−ε2)r). Thus the plane
+Σ = 1 is invariant. Moreover, on the sides of D, we have:
+
+
+s= 0⇒s′=b1i+(b2+γ)r≥0,
+i= 0⇒i′= 0 hence the line {i= 0}is invariant ,
+r= 0⇒r′= (β2+α)i.
+Therefore, Dis positively invariant. On the invariant line {Σ = 1}∩{i= 0}, we have
+r′=−(ε2+γ)r−b0r(1−r)−(b2−ε2)r2=−(b0+ε2+γ)r+(b0−b2+ε2)r2.
+It follows that this invariant line contains two rest points, the Diseas e-Free Equilibrium
+(1,0,0) and possibly another one which is outside of D. It is easy to see tha t the DFE
+attracts the side D∩{i= 0}. Furthermore, our vector ﬁeld is strictly inward on the other
+sides ofD. Thus◦
+D, the interior of D, is positively invariant too. The following theorem
+reduces our problem to the discussion of existence and stability of r est points in D.
+Theorem 2.1. Theω-limit set of any solution for the system (2 −1)′−(2−3)′with
+initial point in Dis a rest point in D.
+Proof. SinceDis compact and positively invariant, the ω-limit set of any solution with
+initial point in Dis a compact nonempty invariant subset of D. Here we use the Poincar´ e-
+Bendixon theorem and the terminology used to prove it [12]. In the ne xt section, we will
+see that this system has at most three rest points in D. Thus it satisﬁes the assumptions
+of Poincar´ e-Bendixon theorem. We follow [4, 5] and deﬁne the vect or ﬁeldg= (g1,g2,g3)
+onDby
+g1(i,r) =/bracketleftbigg
+0,−f3(i,r)
+ir,f2(i,r)
+ir/bracketrightbigg
+,
+g2(s,r) =/bracketleftbiggf3(s,r)
+sr,0,−f1(s,r)
+sr/bracketrightbigg
+,
+g3(s,i) =/bracketleftbigg
+−f2(s,i)
+si,f1(s,i)
+si,0/bracketrightbigg
+,
+4
+wheref1, f2andf3are the right hand side of (2 −1)′, (2−2)′and (2−3)′reduced to
+functions of two variables by using/summationtext= 1 respectively. Clearly g.f= 0 in◦
+Dand after
+some computations [7], we get
+(curlg).(1,1,1) =−/parenleftbiggb1
+s2r+b2+γ
+s2i+β2+α
+sr2/parenrightbigg
+.
+Since the DFE is the only invariant subset of ∂D(i.e. the boundary of D), theω-limit
+set must have some regular point in◦
+Dif it is not a rest point. Let xbe such a regular
+point and hbe the ﬁrst return map (Poincar´ e map) deﬁned on a tranversal a tx. For a
+pointynearxon the transversal, Let Vbe the region surrounded by the orbit Γ from y
+toh(y) and the segment between them. (This region is known as Bendixon S ack, Sec Fig
+2.1) Now by Stokes’ theorem
+/integraldisplay /integraldisplay
+V(curlg).(1,1,1)dσ=/integraldisplay
+Γg.fdt+/integraldisplay1
+0g(ty+(1−t)h(y)).(y−h(y))dt
+Sinceg.f= 0 andh(x) =x, the right hand side of the above equality tends to zero when
+ytends to x, but the left hand side tends to the integral over the region bound ed by the
+ω-limit set, this is a contradiction since (curl g).(1,1,1)<0 in◦
+D./square
+❅
+❅
+❅
+❅
+❅✒
+✸
+Fig. 2.1. The Bendixon Sack.
+3 The planar system
+using therelation s+i+r= 1, we see thatour system isessentially two dimensional. Thus
+we can eliminate one of the variable to arrive at the following quadratic planar system:
+/braceleftBigg
+i′= (λ+β1−b0−ε1−α)i+(b0+ε1−λ−b1−β)i2+(b0+ε2−λ−b2)ir(3−1)
+r′= (β2+α)i−(b0+ε2+γ)r+(b0+ε1−b1−β)ir+(b0+ε2−b2)r2(3−2)
+5
+The dynamics of the system (2 −1)′−(2−3′) inDis equivalent to the dynamics of this
+planar system in the positively invariant region D1={(i,r) :i≥0,r≥0,i+r≤1}.
+This quadratic system has at most four rest points and since D1misses a rest point on
+i= 0, there are at most three rest points in D1. One of these rest points is the origin
+which comes from the DFE. The matrix of the linearization of the syst em (3−1),(3−2)
+at the origin is:/bracketleftBigg
+λ+β1−b0−ε1−α 0
+β2+α −(b0+ε2+γ)/bracketrightBigg
+with the eigenvalues λ+β1−b0−ε1−αand−(b0+ε2+γ). Now we deﬁne the ﬁrst
+threshold parameter R0=λ+β1
+b0+ε1+αwhich governs the stability of the origin.
+Theorem 3.1. The origin is globally asymptotically stable in the feasibility region D1
+whenR0≤1 and it is a saddle point when R0>1.
+Proof. By Theorem 2.1. it is enough to prove that if R0≤1, then the origin is the only
+rest point in D1. If there exists a rest point in◦
+D1, we have i′= 0 andi/ne}ationslash= 0 at this point.
+Thus it belongs to the line
+(λ+β1−b0−ε1−α)+(b0+ε1−λ−b1−β)i+(b0+ε2−λ−b2)r= 0.(3−3)
+Sinces′= 0 at this point, from (2 −1)′we obtain
+b0s+b1i+(b2+γ)r−b0s2−(b1+β+λ−ε1)is−(b2−ε2)sr= 0.
+and by using the relation s+i+r= 1, we can write
+b1i+(b2+γ)r+(b0+ε1−b1−β−λ)is+(b0+ε2−b2)sr= 0.
+Multiplying (3-3) by ( −s) and adding it to the above expression, we get the following
+equality
+b1i+(b2+γ)r+λsr+(b0+ε1+α−λ−β1)s= 0.
+But the left hand side is positive when R0≤1 and this is a contradiction. /square
+WhenR0>1, the origin is a saddle point and it does not attract any point of
+D1−{i= 0}. Thus the orbits with initial point in D1− {i= 0}must be attracted by
+6
+some rest points in◦
+D1by Theorem 2.1. These rest points belong to the line (3-3) and
+the conic section
+r′= (β2+α)i−(b0+ε2+γ)r+(b0+ε1−b1−β)ir+(b0+ε2−b2)r2= 0.
+It follows that there are at most two rest points in◦
+D1. Notice that a nondegenerate rest
+point of the planar system is obtained by a transverse intersection of the line (3-3) and
+the above conic section. The following lemma has two immediate conseq uences which will
+be very helpful.
+Lemma 3.2. The trace of the linearization of the system (3-1),(3-2) at a rest p oint in
+◦
+D1is negative.
+Proof: We compute the trace at a rest point.
+∂i′
+∂i= (λ+β1−b0−ε1−α)+2(b0+ε1−λ−b1−β)i+(b0+ε2−λ−b2)r,
+∂r′
+∂r=−(b0+ε2+γ)+(b0+ε1−b1−β)i+2(b0+ε2−b2)r.
+Fromi′= 0 and r′= 0 at a rest point, we can write
+∂i′
+∂i= (b0+ε1−λ−b1−β)iand∂r′
+∂r= (b0+ε2−b2)r−(β2+α)i
+r.
+Sinces′=b1i+ (b2+γ)r+ (b0+ε1−λ−b1−β)si+ (b0+ε2−b2)sr, it follows that
+(b0+ε1−λ−b1−β)si+(b0+ε1−λ−b1−β)sr <0 and hence∂i′
+∂i+∂r′
+∂r<0./square
+Corollary 3.3. The system (3-1),(3-2) has no source point in◦
+D1
+Corollary 3.4. Every nondegenerate rest point in◦
+D1is hyperbolic.
+Theorem 3.5. IfR0>1, then there exists a unique rest point ( i∗,r∗) in◦
+D1which is
+hyperbolic and attracts D1−{i= 0}.
+7
+Proof. WhenR0>1, the origin is a saddle point with the unstable eigenvector
+/bracketleftBigg
+λ+β1−b0−ε1−α+b0+ε2+γ
+β2+α/bracketrightBigg
+.
+SinceR0>1, we have λ+β1−b0−ε1−α >0 and hence this vector belongs to the ﬁrst
+quadrant of the plane ( i,r). Since◦
+D1is positively invariant it follows that a branch of
+the unstable manifold of the origin lies in◦
+D1. (See Figure 3.1.)
+❅
+❅
+❅
+❅
+❅
+❅
+❅
+❅❅ s❄
+❅❅❅❅❅❅❅❅
+✯✶
+✑✑✑ ✸
+Figure 3.1. Local behavior of planar system near the origin w henR0>1
+This helps us to ﬁnd a piece-wise smooth Jordan curve Con which our vector ﬁeld Xis
+either tangent or inward. (See Figure 3.2.) The Poincar´ e index of su ch a Jordan curve is
+1. (See [13], Lemma 5.1.)
+❅
+❅
+❅
+❅
+❅
+❅
+❅
+❅❅ s ❅❅ ■   ✠❄
+❅❅❅❅❅❅❅❅
+❏❏
+✚✚ ❃
+Figure 3.2. The Jordan curve C
+We choose this Jordan curve so that it contains all rest points in◦
+D1. If there are two
+rest points in◦
+D1, they are obtain by a transverse intersection of the line (3-3) and the
+conic section r′= 0 and hence both are nondegenerate. Thus their Poincar´ e index must
+be±1 which contradicts IX(C) = 1. Therefore there is a unique rest point in◦
+D1which
+attractsD1−{i= 0}byTheorem2.1. Itremainstoprovethatthisrestpointishyperbolic .
+Supposethecontratry, thenitmustbenondegeneratebyCorolla ry3.4. Thusitisobtained
+by a tangent (non-transverse) intersection of the line (3-3) and the conic section r′= 0.
+8
+With a slight perturbation in γ, we will have either two transverse intersection in◦
+D1or
+nothing. ( γappears only in the coeﬃcient of rinr′= 0 and does not appear in (3-3) and
+R0). This is a contradiction with the uniqueness of the rest point in◦
+D1proven above. /square
+Theorem 3.1. and Theorem 3.5. provide a complete global analysis of t he planar
+system (3-1),(3-2) in◦
+D1. Since the dynamics of this system in◦
+D1is equivalent to the
+dynamics of proportions system (2 −1)′−(2−3)′inD, we have proved the following
+result which gives a complete global analysis of the proportions syst em in the feasibility
+regionD.
+Theorem 3.6. Consider the proportions system (2 −1)′−(2−3)′.
+(i) IfR0≤1, then the disease free equilibrium proportions (1 ,0,0) is globally asymp-
+totically stable in D.
+(ii) IfR0>1,thenthereisauniquerestpoint( s∗,i∗,r∗)whichisgloballyasymptotically
+stable in D−{i= 0}.
+4 Analysis of the model equations
+Consider theoriginalmodel equation(2-1)-(2-3)andrecall that thepopulationequationis
+N′=b0S+(b1+β−ε1)I+(b2−ε2)R−dN.Thus
+N′
+N=b0s+(b1+β−ε1)i+(b2−ε2)r−d. (4−1)
+IfR0≤1, then ( s,i,r)−→(1,0,0) by Theorem 3.6., henceN′
+N−→b0−d. Moreover if
+R0>1 andI >0, then (s,i,r)−→(s∗,i∗,r∗), i.e. the unique rest point in◦
+D1, and
+N′
+N−→b0s∗+(b1+β−ε)i∗+(b2−ε2)r∗−d.
+We deﬁne the second threshold parameter which governs the tota l population as follows.
+R1=
+
+b0
+difR0≤1,
+b0s∗+(b1+β)i∗+b2r∗
+d+ε1i∗+ε2r∗ifR0>1.
+9
+SinceI= 0 is invariant with a linear equation, we may assume that I >0. Now from
+(2-2), we write
+I′
+I= (β1−d−ε1−α)+λs. (4−2)
+IfR0≤1, thenI′
+I−→β1−d−ε1−α+λand ifR0>1,I′
+I−→β1−d−ε1−α+λs∗.
+So we deﬁne the third threshold parameter which governs the tota l number of infective
+individuals.
+R2=
+
+β1+λ
+d+ε1+αifR0≤1,
+β1+λs∗
+d+ε1+αifR0>1.
+Notice that ddoes not appear in the proportions system and hence ( s∗,i∗,r∗) is indepen-
+dent ofd. The following results provide a rather complete global analysis of th e model
+equations (2-1)-(2-3).
+Lemma 4.1. IfI(t)≤Mfor every t≥t0, thenR(t)−→0 and if I(t)−→ ∞, then
+R(t)−→ ∞.
+Proof. From (2-3), we have R′(t) = (β2+α)I(t)−(d+ε2+γ)R(t). IfI(t)≤M
+fort≥t0, thenR′(t)≤M(β2+α)−(d+ε2+γ)R(t) and by Granvell’s inequality
+[12],R(t)≤M(β2+α)e−(d+ε2+γ)(t−t0)which follows that R(t)−→0. Now suppose that
+I(t)−→ ∞. Then by (2-3), we have R′(t)+(d+ε2+γ)R(t) = (β2+α)I(t) which implies
+thatd
+dt(R(t)e(d+ε2+γ)t) = (β2+α)I(t)e(d+ε2+γ)t. For every M∈R+, there is a t0∈Rsuch
+thatI(t)> Mfort > t0. Thus
+R(t)e(d+ε2+γ)t−R(t0)e(d+ε2+γ)t0=/integraldisplayt
+t0(β2+α)I(t)e(d+ε2+γ)t> M(β2+α)/integraldisplayt
+t0e(d+ε2+γ)tdt.
+⇒R(t)>/parenleftbigg
+R(t0)−M(β2+α)
+d+ε2+γ/parenrightbigg
+e−(d+ε2+γ)(t−t0)+M(β2+α)
+d+ε2+γ.
+Sincee−(d+ε2+γ)(t−t0)goes to zero as t−→ ∞,R(t)>M(β2+α)
+2(d+ε2+γ)for large values of t.
+It means that R(t)−→ ∞./square
+Theorem 4.2. (i) IfR1>1, thenN(t)−→ ∞and ifR1<1, thenN(t)−→0.
+(ii) IfR2>1, then (I(t),R(t))−→(∞,∞) and ifR2<1, then (I(t),R(t))−→(0,0).
+10
+Proof: First suppose that R0≤1 which implies that ( s,i,r)−→(1,0,0) by Theorem
+3.6. ThusN′
+N−→b−dby (4-1) andI′
+I−→β1−d−ε1−α+λby (4-2). If R1<1,
+thenb−d <0, hence N(t)−→0. Similarly if R1>1, thenb−d >0, hence N(t)−→0.
+Furthermore If R2<1, thenB1−d−ε1−α+λ <0, hence I(t)−→0 and by the above
+lemmaR(t)−→0. Similarly if R2>1, thenβ1−d−ε1−α+λ >0, hence I(t)−→ ∞
+and by the above lemma R(t)−→ ∞.
+Now suppose that R0>1. We assumed that I(t)>0, hence i >0 and (s,i,r)−→
+(s∗,i∗,r∗) by Theorem 3.6. ThusN′
+N−→b0s∗+(b1+β−ε1)i∗+(b2−ε2)r∗−dwhich is
+positive if R1>1, henceN(t)−→ ∞and negative if R1<1, henceN(t)−→0. Moreover
+I′
+I−→(β1−d−ε1−α) +λs∗which is positive if R2>1, hence I(t)−→ ∞and then
+R(t)−→ ∞by the above lemma. Similarly β1−dε1−α+λs∗<0 ifR2<1 and then
+(I(t),R(t))−→(0,0)./square
+We summarize our results in the following table which is the same as Table 1. in [4].
+R0R1R2N−→(s,i,r)−→(S,I,R)−→
+≤1<1<1α0(1,0,0) (0,0,0)
+>1<1<1α0(s∗,i∗,r∗)(0,0,0)
+≤1>1<1∞(1,0,0)(∞,0,0)
+≤1>1>1∞(1,0,0)(∞,∞,∞)
+>1>1>1α∞(s∗,i∗,r)(∞,∞,∞)
+αGivenR0andR1, this condition is automatically satisﬁed.
+Conclusion Remarks. Here we will make some comparison between the result in [4]
+and the above results.
+1. If we set b0=b1=b2=bandβ1=β2=β= 0 in the system (2-1)-(2-3), we obtain
+the system (2-1)-(2-3) in [4]. Moreover by these assumptions, we getR0=λ
+b+ε1+α,
+R2=
+
+b
+difR0≤1,
+b
+d+ε1i∗+ε2r∗ifR0>1,
+11
+R3=
+
+λ
+d+ε1+αifR0≤1,
+λs∗
+d+ε1+αifR0>1.
+which are the same threshold parameters as in [4].
+2. Comparing their threshold parameters with our ones, we see tha t the eﬀect of
+b0,b1andb2appears more clearly instead of b. For example when R0>1, ourR1is
+b0s∗+(b1+β)i∗+b2r∗
+d+ε1i∗+ε2r∗, but they obtain R1=b
+d+ε1i∗+ε2r∗in which the eﬀects of b0,b1andb2are
+hidden in b.
+3. There are two vertical transmission parameter, β1andβ1, in our model. The eﬀect
+ofβ1inR0andR2is crucial. Since β1+β2=β, we can decrease β1by increasing β2.
+Therefore removing more infected newborns causes more safe sit uation.
+Acknowledgments. TheauthorwouldliketothankInstituteforStudiesinTheoretical
+Physics and Mathematics for supporting this research.
+References
+[1] Busenberg, S., Cooke, K., Vertically Transmitted Disease, Models and Dynamics ,
+Biomathematics 23, Springer-Verlag, 1993.
+[2] Busenberg, S., Cooke, K., Pozio, M.A., Analysis of a model of vertic ally transmitted
+disease.J. Math. Biol. ,17(1983), 305–329.
+[3] Busenberg, S., Hadeler K.P., Demograpphy and Epidemics, Math. Biosci. 101(1990),
+63–74.
+[4] Busenberg, S., van den Driessche, P., Analysis of a disease trans mission model in a
+population with varying size. J. Math. Bio. ,28(1990), 257–270.
+[5] Busenberg, S., van den Driessche, P., A method for proving the n onexistence of limit
+cycles,J. Math. Anal. Appl. 172(1993), 463–479.
+[6] Cooke, K., Mathematical models of vertical transmission of infec tion.Mathematical
+Ecology, 344–355, Lecture Notes in Biomath. 54, Springer, Berlin, 1984.
+12
+[7] Derrick, W.R., van den Driessche, P., A disease transmission modelin a nonconstant
+population, J. Math. Bio. 31(1993), 495-512.
+[8] Hethcote, H.W. and van Ark, J.W., Epidemiological models for heter ogeneous pop-
+ulations: proportionate mixing, parameter estimation and immunizat ion programs.
+Math. Biosci. 84(1987), 85–118.
+[9] May, R.M., Anderson, R.M., McLean, A.R., Possible demographic cons equences of
+HIV/AIDS epidemics I. Assuming HIV infection always leads to AIDS. Math. Biosci.
+90(1988), 475–505.
+[10] May, R.M., Anderson, R.M., McLean, A.R., Possible demographic con sequences of
+HIV/AIDS epidemics II. Assuming HIV infection does not necessarily lead to AIDS,
+InMathematical Approaches to problem in Resourcc Management and Epidemiol-
+ogy, (Edited by C. Castillo-Chavez, C. Levin and C.A. Shoemaker), Lect ure Notes
+in Biomathematics vol. 81, Springer-Verlag, Berlin, Heidelberg, 1989 .
+[11] Nold, A., Heterogenity in disease transmission. Math. Biosci. 52(1980), 227-240.
+[12] Perko, L., DiﬀerentialEquations and DynamicalSystems ,Springer-Verlag,NewYork,
+Inc., 1991.
+[13] Razvan, M.R., Multiple equilibria for an SIRS epidemiological system, Preprint
+math.CA/0101051.
+[14] Razvan, M.R., Katanforush, A., Multiple equilibria for an SIS epidem iological sys-
+tem, preprint.
+13

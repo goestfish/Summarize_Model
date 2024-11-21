@@ -1,0 +1,1652 @@
+arXiv:math/0210410v1  [math.DS]  26 Oct 2002A Model of Blood Flow in a Circulation Network
+Weihua Ruan†, M.E. Clark‡, Meide Zhao‡and Anthony Curcio‡
+†Department of Mathematics, Computer Science and Statistic s,
+Purdue University Calumet
+and
+‡VasSol, Inc.
+Abstract. We study a mathematical model of a blood circulation network which is a
+generalization of the coronary model proposed by Smith, Pullan and Hunter. We prove the
+existence and uniqueness of the solution to the initial-boundary valu e problem and discuss
+the continuity of dependence of the solution and its derivatives on in itial, boundary and
+forcing functions and their derivatives.
+1 Introduction
+In a recent paper [13], Smith, Pullan and Hunter propose a mathemat ical model of blood
+circulation in the coronary network, and conduct a numerical analy sis. In their model, major
+vessels (with cross-sectional areas larger thana certain value) a re treated as a connected one-
+dimensional network, andsmall vessels, such asarterioles, capillar ies andvenules, aretreated
+as lumped elements which are connected to the network of vessels. The ﬂow on vessels are
+assumed to be incompressible, homogeneous, Newtonian, and has a small Reynolds number.
+Thus, the mass balance equation and Navier-Stokes equation can b e written to describe the
+pressure and the ﬂow rate on vessels. Equations on lumped element s are written in analogy
+with the current and voltage in an electric circuit. The result is an initia l-boundary value
+problem of a system of hyperbolic type partial diﬀerential equation s coupled at junctions
+of the network. Although the result of the numerical analysis cond ucted in [13] matches
+closely with measured data, the well-posedness problem of the syst em of partial diﬀerential
+equations, that is, the existence, uniqueness and the continuous dependence on initial and
+boundary data of the solution, has not been established before. T he main objective of this
+paper is to establish the well-posedness. We prove that the system is well-posed under
+certain natural conditions. This work is an extension of our earlier w ork [12] on a model
+of blood circulation in the brain. The main diﬀerences between the two models are that
+the network conﬁguration in [12] is more complicated owing to the pre sence of Willis loops,
+but the coupling junction conditions in the model of [13] are more com plicated due to the
+diﬀerent formulation and the inclusion of the capillaries and veinal sys tem. We combine
+both features in a more general system with the hope that our res ult will be useful in the
+1
+modelling of circulation systems of higher complexity, including the who le body circulation
+system.
+Before stating our system, let us brieﬂy describe the model in [13]. L etPiandRi
+represent the pressure and radius on the i-th vessel, respectively, and let Vibe the cross-
+sectional average of the axial component vi,xof the velocity on the i-th vessel. Assuming
+that the radial component vi,rof the velocity is small compared to the axial component vi,x
+of the velocity, one can write equations of mass balance
+∂Ri
+∂t+Vi∂Ri
+∂x+Ri
+2∂Vi
+∂x= 0, (1.1)
+and momentum balance
+∂Vi
+∂t+2(1−αi)Vi
+Ri∂Ri
+∂t+αiVi∂Vi
+∂x+1
+ρ∂Pi
+∂x=2ν
+Ri/bracketleftbigg∂vi,x
+∂r/bracketrightbigg
+r=Ri. (1.2)
+Hereνis the viscosity constant and
+αi=1
+R2
+iV2
+i/integraldisplayRi
+02rv2
+i,xdr
+is the energy quantity. Taking into consideration of no-slip boundar y condition ( vi,x= 0
+ifr=Ri), the viscous axisymmetry ( ∂vi,x/∂r= 0 ifr= 0), and the fact that Viis the
+cross-sectional average of vi,x, Smith, Pullan and Hunter propose the velocity proﬁle
+vi,x(r,x) =γi+2
+γiVi(x)/bracketleftbigg
+1−/parenleftbiggr
+Ri/parenrightbiggγi/bracketrightbigg
+whereγiis a positive number. Using this proﬁle and the mass balance condition ( 1.1), Eq.
+(1.2) becomes
+∂Vi
+∂t+(2αi−1)Vi∂Vi
+∂x+2(αi−1)V2
+i
+Ri∂Ri
+∂x+1
+ρ∂Pi
+∂x=−2ναi
+αi−1Vi
+R2
+i(1.3)
+with
+αi=γi+2
+γi∈(1,∞).
+The pressure Piand the radius Riare related by a function
+Pi=Pi(x,Ri).
+In [13], it is assumed that
+Pi(x,Ri) =C/bracketleftigg/parenleftbiggRi
+R0/parenrightbiggβ
+−1/bracketrightigg
+2
+whereC,R0andβare constants. We do not make such an assumption, only assume th at it
+is a diﬀerentiable function and∂Pi
+∂Ri>0
+for allxandRi. Let
+Ai=πR2
+i, Qi=AiVi
+be the cross-section area and the ﬂow rate, respectively. It can be shown that the system of
+equations (1.1) and (1.3) is equivalent to
+∂Ai
+∂t+∂Qi
+∂x= 0,
+∂Qi
+∂t+αi∂
+∂x/parenleftbiggQ2
+i
+A/parenrightbigg
++Ai
+ρ∂Pi
+∂x=−4πναi
+αi−1Qi
+Ai.(1.4)
+Also, by rescaling the spatial variable x, we may assume that each vessel is parameterized
+tox∈(0,1).
+The system of diﬀerential equations are supplemented with the initia l condition
+Pi(x,0) =PI
+i(x), Qi(x,0) =QI
+i(x) (1.5)
+and boundary conditions. Boundary conditions at each end of the v essel are given according
+to the type of the end. If it is an external end of the network, eith er the pressure
+Pi=PB
+i(t) (1.6)
+or the ﬂow rate
+Qi=QB
+i(t) (1.7)
+is speciﬁed. If the end is a branching junction, a junction connecting several vessels, let
+j1,...,j νandjν+1,...,j µdenote the incoming and outgoing vessels, respectively. One im-
+poses the mass balance condition
+ν/summationdisplay
+l=1Qjl(1,t) =µ/summationdisplay
+l′=ν+1Qjl′(0,t), (1.8)
+and the momentum balance condition
+ρjl∂Qjl
+∂t=Ajl(Pjl−Pjunc), ρjl′∂Qjl′
+∂t=Ajl′/parenleftbig
+Pjunc−Pjl′/parenrightbig
+(1.9)
+forl= 1...,ν,l′=ν+1,...,µ,whereρiaresmallpositiveconstantsand Pjuncisthepressure
+at the junction. (In [13], every branching junction connects only t hree vessels, it is either a
+3
+bifurcation point of one artery into two smaller ones or a joining point of two veins into a
+bigger one. Our prescription allows more general conﬁguration of t he network, including the
+presence of Willis loops.) If the end is a transitional junction , which connects the vessel to a
+network of arterioles, capillaries and venules, we follow the so called microcirculation model
+proposed in [13, 14]. Generalizing from [13], arterioles or venules conn ected to the vessel jl
+are represented by a lumped resistive element Rjl. The capillary bed is also represented by
+a resistive element RC.Rjl’s are connected to RCthrough capacitive elements C1andC2
+on the two ends.
+4jR1C2CCR1jR
+2jR3jR
+5jR
+Figure 1: Microcirculation model of the network of arterioles, capilla ries and venules.
+Letj1,...,j νbethearteriesandlet jν+1,...,j µbetheveins thatareconnected toaarteriole-
+capillary-venule network. The boundary conditions for Pjl,Qjlare
+RjlQjl(1,t) =Pjl(1,t)−PC1(t),forl= 1,...,ν,
+Rjl′Qjl′(0,t) =PC2(0,t)−Pjl′(t),forl′=ν+1,...,µ(1.10)
+and
+C1dPC1
+dt=ν/summationdisplay
+l=1Qjl(1,t)−QC, C2dPC2
+dt=QC(t)−µ/summationdisplay
+l′=ν+1Qjl′(0,t) (1.11)
+wherePCi,i= 1,2 represent the pressure in the capacitive elements C1,C2, and
+QC=PC1−PC2
+RC(1.12)
+represents the ﬂow rate in the resistive element RC. (In [13], there is only one artery and
+one vein connected to the system of arteriole-capillary-venule at t he two ends. We do not
+rule out the possibility of multiple arteries and veins join together to s uch a system.)
+4
+The system we study in this paper consists of the equations
+∂Pi
+∂t+ai∂Qi
+∂x=fi,
+∂Qi
+∂t+bi∂Pi
+∂x+2ci∂Qi
+∂x=gi,x∈(0,1), t >0 (1.13)
+and the initial and boundary conditions given by (1.5)–(1.12). For co nvenience, we also use
+the vector form
+(Ui)t+Bi(Ui)x=Fi (1.14)
+whereUi= (Pi,Qi),Fi= (fi,gi) and
+Bi=/parenleftbigg0ai
+bi2ci/parenrightbigg
+.
+Eq. (1.4) is a special case of this system where
+ai=∂Pi
+∂Ai, bi=Ai
+ρ−αQ2
+i
+A2
+i/parenleftbigg∂Pi
+∂Ai/parenrightbigg−1
+, ci=αQi
+Ai, fi= 0, gi=αQ2
+i
+A2
+i∂Ai
+∂x−4πνα
+α−1Qi
+Ai.
+We do not assume any particular form of these functions though, t hey are general diﬀer-
+entiable functions of ( x,t,Pi,Qi). Our basic assumptions are ai>0 andAi> ε0for some
+positive constant ε0. Other assumptions will follow. Apart from the junction conditions,
+this system is the same as the one we study in [12]. Also, the junction c onditions in [12] is
+the special case of (1.8)–( 1.9) above with ρi= 0. As in [12], we use a ﬁxed point principle
+to prove the solvability of the problem. Substituting a pair of functio ns (pi,qi) for (Pi,Qi) in
+the coeﬃcients ai,bi,ci,Aiand forcing functions fi,gi, the system becomes linear. That is,
+all the functions ai, etc. are independent of unknowns. If the linear system has a uniq ue so-
+lution, then, one can establish a mapping from ( pi,qi) to the linear problem solution ( Pi,Qi).
+If one also shows that this mapping has a unique ﬁxed point, then the ﬁxed point is neces-
+sarily the unique solution of the quasilinear system. Hence, we shall ﬁ rst give a condition
+for the linear system to have a unique solution, then examine under w hat conditions the
+mapping has a unique ﬁxed point. The ﬁrst aspect of the problem is inv estigated in Section
+2 and the second in Section 3. We also prove a result on the continuity of dependence of
+solutions on the initial, boundary and forcing functions for linear and quasilinear systems,
+thus, completing the analysis of the well-posedness of the problem. In spite of similarity in
+parts of the analysis to the one used in [12], the more general branc hing junction condition
+and the new transitional junction conditions require more careful treatments. Hence, there
+are substantial variations in the analysis. For completeness and to beneﬁt the reader, we
+include all the major arguments in this paper.
+5
+2 The linear system
+In this section, we analyze (1.13) as a linear system with ai,bi,ci,fi,gi,Aiindependent of
+PiandQi. The initial and boundary conditions are given by (1.5)–(1.12) excep t that the
+junction condition (1.9) is substituted by the more general conditio n
+ρjl∂Qjl
+∂t=Ajl(Pjl−Pjunc)+Cjl, ρjl′∂Qjl′
+∂t=Ajl′/parenleftbig
+Pjunc−Pjl′/parenrightbig
++Cjl′(2.1)
+whereCiare diﬀerentiable functions of ( x,t). The inclusion of Ciis needed in the next
+section in order that the result of this section can be extended to t he quasilinear system.
+We give conditions for the linear system to have a unique global solutio n. The conditions
+are most naturally given in terms of the eigenvalues of the matrix Bi, which have the form
+λR
+i=ci+ui, λL
+i=ci−ui,
+where
+ui=/radicalig
+c2
+i+aibi.
+These eigenvalues are real if
+c2
+i+aibi>0, x∈(0,1), t >0, i= 1,...,n. (2.2)
+In this case,
+λR
+i(x,t)>0, λL
+i(x,t)< λR
+i(x,t) (2.3)
+and the system is hyperbolic. Under the condition (2.2), we show tha t the linear system has
+a unique solution if
+λL
+i(0,t)<0, λL
+i(1,t)<0, i= 1,...,n
+which is equivalent to
+aibi>0, t≥0, i= 1,...,n. (2.4)
+atx= 0,1 only. It needs not hold for x∈(0,1).
+Theorem 2.1 Assume that the functions ai,bi,ci,fi,gi,AiandCiare independent of
+(Pi,Qi). Suppose that these functions and the initial and boundary f unctions PI
+i,QI
+i,PB
+i,
+QB
+iall have bounded ﬁrst-order derivatives. Suppose also that ai>0,Ai>0and that the
+conditions (2.2) and (2.4) hold. Then, for any T >0there is a unique solution in a bounded
+subset of the space C([0,1]×[0,T],R2n)to the linear system (1.13) with the initial and
+boundary conditions given by (1.5)–(1.8), (1.10)–(1.12), and (2.1).
+6
+Proof. We ﬁrst show that the system has a unique solution for 0 < t < δfor some δ >0.
+The proof is based on the method of characteristics and a ﬁxed poin t principle. For systems
+deﬁned on only one branch with boundary conditions of the forms of (1.6) or (1.7), this is a
+standard approach. In our case, special care is needed to handle the junction conditions.
+Consider the i-th branch. From any point ( ξ,τ) on the left, right, and lower boundary of
+the rectangle D=: [0,1]×[0,T], we construct the left-going and right-going characteristic
+curvesx=xL
+i(t;ξ,τ) andx=xR
+i(t;ξ,τ) by
+dxL
+i
+dt=λL
+i/parenleftbig
+xL
+i,t/parenrightbig
+, xL
+i(τ) =ξ,
+dxR
+i
+dt=λR
+i/parenleftbig
+xR
+i,t/parenrightbig
+, xR
+i(τ) =ξ,
+respectively, where λL
+iandλR
+iare the two eigenvalues of the matrix Bi. By the uniqueness of
+solutions to these diﬀerential equations, a left-going (resp. right -going) characteristic curve
+cannot intersect with another left-going (resp. right-going) cha racteristic curve. Let XL
+iand
+XR
+ibe the right-most left-going and left-most right-going character istic curves,
+x=xL
+i(t;1,0) andx=xR
+i(t;0,0)
+starting from the lower boundary of D, respectively. It can be shown from (2.3) that the
+two curves can have at most one intersection. Let tibe the value of tat the intersection.
+If the two curves do not intersect in D, we simply deﬁne ti=T. By condition (2.4), XL
+i
+cannot reach the right vertical line x= 1 at any t >0, and by λR
+i>0,XR
+icannot reach the
+vertical line x= 0 at any t >0. Thus, the rectangle Di=: [0,1]×[0,ti] can be divided into
+three parts
+Di=DL
+i∪DC
+i∪DR
+i,
+whereDL
+iis between the vertical line x= 0 and the characteristic curve XR
+i,DC
+iis between
+the two characteristic curves, and DR
+iis between XL
+iandx= 1.
+itR
+iXL
+iX
+1xL
+iD
+C
+iDR
+iDt
+Figure 2: Three parts of Di
+7
+We show that there is a δi≤tisuch that the solution ( Pi,Qi) for the i-th branch exists in
+the restriction of Dito the strip {0≤t≤δi}.
+First, observe that the initial conditions alone determine the solutio n completely in the
+central region DC
+i. This follows from the theory of ﬁrst-order linear hyperbolic syste ms and
+the fact that from any point ( x,t)∈DC
+i, the two characteristic curves, followed backwards,
+must land on the horizontal line t= 0. (The latter is a consequence of (2.3).) To extend
+the solution to other parts of Di, we make a change of unknowns and derive a set of integral
+equations. Note that lR
+i=:/parenleftbig
+−λL
+i,ai/parenrightbig
+andlL
+i=:/parenleftbig
+−λR
+i,ai/parenrightbig
+are the left eigenvectors of Bi
+corresponding to λR
+iandλL
+i, respectively. Introduce new unknowns
+ri=lR
+iUi≡ −λL
+iPi+aiQi, si=lL
+iUi≡ −λR
+iPi+aiQi. (2.5)
+The system (1.13) can be written in terms of riandsiby multiplying the left eigenvectors
+to (1.14) and substituting in
+Pi=1
+2ui(ri−si), Qi=1
+2uiai/parenleftbig
+λR
+iri−λL
+isi/parenrightbig
+. (2.6)
+This results in the equations
+∂R
+iri=FR
+i(x,t,ri,si), ∂L
+isi=FL
+i(x,t,ri,si), (2.7)
+where
+∂R
+i=∂
+∂t+λR
+i∂
+∂x, ∂L
+i=∂
+∂t+λL
+i∂
+∂x, (2.8)
+and
+FR
+i(x,t,ri,si) =lR
+iFi+/parenleftbig
+∂R
+ilR
+i/parenrightbig
+Ui, FL
+i(x,t,ri,si) =lL
+iFi+/parenleftbig
+∂L
+ilL
+i/parenrightbig
+Ui.(2.9)
+(A diﬀerential operator acting on a vector means that it acts on ea ch component of the
+vector.) Let ( x,t)∈Di. We integrate the ﬁrst equation of (2.7) along the right-going
+characteristic curve xR(t;ξ,τ) which passes through ( x,t) and reaches the left or lower
+boundary of Diat (ξ,τ). It can be shown that for ( x,t)∈DC
+i∪DR
+i,τ= 0, and for
+(x,t)∈DL
+i,ξ= 0. In the former case, we obtain
+ri(x,t) =rI
+i(ξ)+/integraldisplayt
+0FR
+i/parenleftbig
+xR
+i(t′;ξ,0),t′,ri,si/parenrightbig
+dt′(2.10)
+In the latter case, we have
+ri(x,t) =ri(0,τ)+/integraldisplayt
+τFR
+i/parenleftbig
+xR
+i(t′;0,τ),t′,ri,si/parenrightbig
+dt′. (2.11)
+8
+Similarly, by integrating the second equation of (2.7) along the left-g oing characteristic curve
+xL
+i(t;ξ,τ) that passes through both ( x,t) and (ξ,τ) (which is on either the right or lower
+boundary of Di), the equations are
+si(x,t) =sI
+i(ξ)+/integraldisplayt
+0FL
+i/parenleftbig
+xL
+i(t′;ξ,0),t′,ri,si/parenrightbig
+dt′(2.12)
+if (x,t)∈DL
+i∪DC
+iand
+si(x,t) =si(1,τ)+/integraldisplayt
+τFL
+i/parenleftbig
+xL
+i(t′;1,τ),t′,ri,si/parenrightbig
+dt′(2.13)
+if (x,t)∈DR
+i. These are the integral equations we need.
+For anyδi≤tiwe useDL
+i,δi,DC
+i,δiandDR
+i,δito denote the restrictions of DL
+i,DC
+iandDR
+i
+to the strip {0≤t≤δi}, respectively. First, consider the case where the end of the bran ch is
+an external end. We discuss the case of a left end only, the case of a right end can be treated
+similarly. If the boundary condition is given by (1.6), we deﬁne ˆ si=si/εwhereε <1 is any
+constant. Using the ﬁrst equation of (2.6) in the integral equation s (2.11) and (2.12),
+/parenleftbigg
+ri(x,t)
+ˆsi(x,t)/parenrightbigg
+=
+2ui(0,τ)PB
+i(τ)+εˆsi(0,τ)+/integraldisplayt
+τFR
+i/parenleftbig
+xR
+i(t′;0,τ),t′,ri,εˆsi/parenrightbig
+dt′
+1
+εsI
+i(ξ)+1
+ε/integraldisplayt
+0FL
+i/parenleftbig
+xL
+i(t′;ξ,0),t′,ri,εˆsi/parenrightbig
+dt′
+.
+(2.14)
+This is a ﬁxed point equation for ( ri,ˆsi) if we deﬁne the right hand side as a mapping of an
+operator Kon (ri,ˆsi) in a bounded subset of C/parenleftbig
+DL
+i,δi∪DC
+i,δi,R2/parenrightbig
+. In a standard approach,
+it can be shown that Kis a contraction mapping if δiis suﬃciently small. Hence, the ﬁxed
+point exists and is unique, and the solution ( ri,si) is uniquely extended to DL
+i,δi∪DC
+i,δi. If
+the boundary condition is given by (1.7), we deﬁne ˆ si=si/ε, whereε >0 is so small such
+that
+ε/vextendsingle/vextendsingle/vextendsingle/vextendsingleλL
+i(0,τ)
+λR
+i(0,τ)/vextendsingle/vextendsingle/vextendsingle/vextendsingle<1, τ∈(0,ti).
+The ﬁxed point equation is then
+/parenleftbiggri(x,t)
+ˆsi(x,t)/parenrightbigg
+=
+2aiui(0,τ)
+λR
+i(0,τ)QB
+i(τ)+λL
+i(0,τ)
+λR
+i(0,τ)εˆsi(0,τ)+/integraldisplayt
+τFR
+i/parenleftbig
+xR
+i(t′;0,τ),t′,ri,εˆsi/parenrightbig
+dt′
+1
+εsI
+i(ξ)+1
+ε/integraldisplayt
+0FL
+i/parenleftbig
+xL
+i(t′;ξ,0),t′,ri,εˆsi/parenrightbig
+dt′
+.
+(2.15)
+By a similar argument, the solution can again be uniquely extended.
+We next extend the solution to either DL
+i,δiorDR
+i,δiif the end is a branching junction.
+In this case, we shall extend the solution on all the branches that a re connected to the
+9
+same junction simultaneously. Let j1,...,j νbe the incoming and jν+1,...,j µthe outgoing
+branches to the junction. Equations (1.8), (2.1) and (2.6) give rise to a 2µ×µhomogenous
+system of linear (ordinary) diﬀerential equations for ri(1,t),si(1,t),i=j1,...,j νand
+ri(0,t),si(0,t),i=jν+1,...,j µ:
+ρj1
+Aj1d
+dtQj1(1,t)−Cj1
+Aj1−Pj1(1,t) =ρi
+Aid
+dtQi(1,t)−Ci
+Ai−Pi(1,t), i=j2,...,j ν,
+ρj1
+Aj1d
+dtQj1(1,t)−Cj1
+Aj1−Pj1(1,t) =−ρi
+Aid
+dtQi(0,t)−Ci
+Ai−Pi(0,t), i=jν+1,...,j µ,
+ν/summationdisplay
+l=1Qjl(1,t)−µ/summationdisplay
+l′=ν+1Qjl′(0,τ) = 0.
+(2.16)
+Diﬀerentiatethelastequationwithrespect to tandregard sj1(1,t),...,sjν(1,t),rjν+1(0,t),...,
+rjµ(0,t) as unknowns. The derivatives of unknowns can be solved from (2.1 6) because the
+coeﬃcient matrix of dsi/dtanddri/dtin (2.16),
+
+−ρj1λL
+j1(1,t)
+2uj1aj1Aj1(1,t)ρj2λL
+j2(1,t)
+2uj2aj2Aj2(1,t)··· 0
+............
+−ρj1λL
+j1(1,t)
+2uj1aj1Aj1(1,t)0···ρjµλR
+jµ(0,t)
+2ujµajµAjµ(0,t)
+−λL
+j1(1,t)
+2uj1aj1(1,t)−λL
+j2(1,t)
+2uj2aj2(1,t)··· −λR
+jµ(0,t)
+2ujµajµ(0,t)
+
+has the determinant
+/parenleftbigg−1
+2/parenrightbiggµν/productdisplay
+l=1ρjlλL
+jl(1,t)
+ujlajlAjl(1,t)µ/productdisplay
+l′=ν+1ρjl′λR
+jl′(0,t)
+ujl′ajl′Ajl′(0,t)µ/summationdisplay
+l=1Ajl
+ρjl.
+SinceλL
+i<0< λR
+iat the junction, the determinant is not zero. Thus, the derivative s of
+the unknowns, sjl(1,t) andrjl′(0,t), are each a linear combination of the functions rjl(1,t),
+sjl(1,t),rjl′(0,t),sjl′(0,t)togetherwiththederivatives of rjl(1,t)andsjl′(0,t),l= 1,...,ν,
+l′=ν+1,...,µ. Integrating and using the initial condition determined by (1.5) and ( 2.5),
+we can write
+si(1,τ) =si(1,0)+ν/summationdisplay
+l=1mi
+jl(τ)rjl(1,τ)+µ/summationdisplay
+l′=ν+1mi
+jl′(τ)sjl′(0,τ)+/integraldisplayτ
+0Hidt′,(2.17)
+fori=j1,...,j νand
+ri(0,τ) =ri(0,0)+ν/summationdisplay
+l=1ni
+jl(τ)rjl(1,τ)+µ/summationdisplay
+l′=ν+1ni
+jl′(τ)sjl′(0,τ)+/integraldisplayτ
+0Hidt′,(2.18)
+10
+fori=jν+1,...,j µ, wheremi
+j,ni
+jare continuous functions and Hiare linear combinations of
+rjl(1,t),sjl(1,t),rjl′(0,t),sjl′(0,t) andCi(t) with coeﬃcients depending only on t. Choose
+anε >0 such that
+εmax/braceleftiggµ/summationdisplay
+l=1/vextendsingle/vextendsinglemi
+jl(τ)/vextendsingle/vextendsingle,µ/summationdisplay
+l=1/vextendsingle/vextendsingleni
+jl(τ)/vextendsingle/vextendsingle/bracerightigg
+<1, i=j1,...,j µ, τ∈[0,ti]
+and introduce
+ˆrjl=rjl
+ε,ˆsjl′=sjl′
+ε, l= 1,...,ν, l′=ν+1,...,µ.
+Then, from (2.10)–(2.13), the integral equations for the 2 µunknowns ˆ rjl,sjl,rjl′, ˆsjl′,l=
+1,...,ν,l′=ν+1,...,µconstitute a ﬁxed point equation, w=Kw, where
+w=/parenleftbig
+ˆrj1,...,ˆrjν,sj1,...,s jν,rjν+1,...,r jµ,ˆsjν+1,...,ˆsjµ/parenrightbig
+(2.19)
+and
+Kw=/parenleftig
+1
+εrI
+j1/parenleftbig
+ξj1/parenrightbig
++1
+ε/integraltextt
+0FR
+j1dt′,...,
+sj1(1,0)+ε/parenleftig/summationtextν
+k=1m1
+jkˆrjk(1,τ)+/summationtextµ
+k′=ν+1m1
+jk′ˆsjk′(0,τ)/parenrightig
++/integraltextτ
+0Hj1dt′+/integraltextt
+τFL
+j1dt′,...,
+rjν+1(0,0)+ε/parenleftig/summationtextν
+k=1n1
+jkˆrjk(1,τ)+/summationtextµ
+k′=ν+1n1
+jk′ˆsjk′(1,τ)/parenrightig
++/integraltextτ
+0Hjν+1dt′+/integraltextt
+τFR
+jν+1dt′,...,
+1
+εsI
+jν+1/parenleftbig
+ξjν+1/parenrightbig
++1
+ε/integraltextt
+0FL
+jν+1dt′,.../parenrightig
+(2.20)
+in which
+FR
+jl=FR
+jl/parenleftbig
+xR
+jl,t′,εˆrjl,sjl/parenrightbig
+, FL
+jl=FL
+jl/parenleftbig
+xL
+jl,t′,εˆrjl,sjl/parenrightbig
+forl= 1,...,ν, and
+FR
+jl′=FR
+jl′/parenleftig
+xR
+jl′,t′,rjl′,εˆsjl′/parenrightig
+, FL
+jl′=FL
+jl′/parenleftig
+xL
+jl′,t′,rjl′,εˆsjl′/parenrightig
+forl′=ν+ 1,...,µ. It can be shown by a standard argument that Kis a contraction
+mapping in the space
+Xj=:ν/productdisplay
+l=1C/parenleftig
+DC
+jl,δj∪DR
+jl,δj,R2/parenrightig
+×µ/productdisplay
+l=ν+1C/parenleftig
+DL
+jl,δj∪DL
+jl,δj,R2/parenrightig
+ifδjis suﬃciently small. Hence, it has a unique ﬁxed point in Xj. This extends the solution
+(ri,si) for the neighboring branches of the junction.
+Itremainstoextendthesolutiontoaregionadjacenttoatransitio naljunction. Similarto
+thecaseofabranchingjunction, wesimultaneousely treatalltheb ranches thatareconnected
+to the same transitional junction. Let j1,...,j νbe the arteries and jν+1,...,j µbe the veins.
+11
+The condition connecting the vessels are given by (1.10), (1.11) and (1.12). Diﬀerentiate the
+equations in (1.10) with respect to t, the resulting equations together with (1.11) is a linear
+system of the derivatives of the functions rjl(1,t),sjl(1,t),rjl′(0,t),sjl′(0,t),l= 1,...,ν,
+l′=ν+1,...,µ, andPC1(t),PC2(t). The coeﬃcient matrix of dsjl(1,t)/dt,drjl′(0,t)/dt,
+forl= 1,...,ν,l′=ν+1,...,µandP′
+C1,P′
+C2is
+
+D10B1
+0D2B2
+0 0 I2
+
+where
+D1= diag/parenleftigg
+−Rj1λL
+j1
+2uj1aj1+1
+2uj1,...,−RjνλL
+jν
+2ujνajν+1
+2ujν/parenrightigg
+,
+D2= diag/parenleftigg
+Rjν+1λR
+jν+1
+2ujν+1ajν+1+1
+2ujν+1,...,RjµλR
+jµ
+2ujµajµ+1
+2ujµ/parenrightigg
+,
+I2is the 2×2 identity matrix, and B1,B2are some constant matrices. Since all the elements
+of the diagonal matrices D1andD2are positive, the system can be uniquely solved for these
+derivatives. Thus, each of dsjl(1,t)/dt,drjl′(0,t)/dtforl= 1,...,ν,l′=ν+1,...,µis a
+linear combination of rjl(1,t),sjl(1,t),rjl′(0,t),sjl′(0,t), anddrjl(1,t)/dt,dsjl′(0,t)/dt,
+l= 1,...,ν,l′=ν+ 1,...,µas well as PC1andPC2. We can also eliminate PC1andPC2
+by (1.10). Integrating the resulting equations, we obtain equation s (2.17)–(2.18) for some
+functions mi
+j,ni
+j, andHi. The remaining of the previous paragraph can then be used here
+to give the extension of the solution to the left or right regions for t he branches.
+Finally, if we let δbe the minimum of all δioccurring above, we see that δ >0 and the
+solution exists and is unique in ( x,t)∈Dδ=: [0,1]×[0,δ]. Observe that δdepends only
+on the bounds of the system functions ai, etc., the initial and boundary functions PI
+i, etc.,
+and their ﬁrst-order derivatives in D= [0,1]×[0,T]. Hence, it is independent of t, and we
+can extend the solution successively in the time intervals [0 ,δ], [δ,2δ], etc. In this way, the
+solution is obtained in Din ﬁnitely many steps.
+We next derive an estimate of the deviation of solution in term of the d eviations of the
+initial, boundary and forcing functions. This estimate is needed in the next section. For
+any vector function v= (v1,...,v k) deﬁned in C/parenleftbig
+X;Rk/parenrightbig
+, we use |v|Xto denote the norm
+maxi/braceleftig
+|vi|C(X)/bracerightig
+, whereXrepresents a closed subset of either RorR2.
+Lemma 2.1 LetU= (P,Q)and˜U=/parenleftig
+˜P,˜Q/parenrightig
+be two solutions of the linear problem (1.14)
+with diﬀerent initial, boundary, and forcing functions. Su ppose the conditions of Theorem
+2.1 hold for both solutions. Suppose also that there is a posi tive lower bound for all Ai. Then,
+12
+there exists a constant M >0, independent of initial, boundary and forcing functions, s uch
+that
+/vextendsingle/vextendsingle/vextendsingleU−˜U/vextendsingle/vextendsingle/vextendsingle
+C(Dδ)≤M/parenleftbigg/vextendsingle/vextendsingle/vextendsinglePI−˜PI/vextendsingle/vextendsingle/vextendsingle
+C[0,1]+/vextendsingle/vextendsingle/vextendsingleQI−˜QI/vextendsingle/vextendsingle/vextendsingle
+C[0,1]+/vextendsingle/vextendsingle/vextendsinglePB−˜PB/vextendsingle/vextendsingle/vextendsingle
+C[0,δ]+/vextendsingle/vextendsingle/vextendsingleQB−˜QB/vextendsingle/vextendsingle/vextendsingle
+C[0,δ]
++/vextendsingle/vextendsingle/vextendsingleC−˜C/vextendsingle/vextendsingle/vextendsingle
+C[0,δ]+δ/vextendsingle/vextendsingle/vextendsinglef−˜f/vextendsingle/vextendsingle/vextendsingle
+C(Dδ)+δ|g−˜g|C(Dδ)/parenrightbigg
+.
+(2.21)
+Proof. We need only prove (2.21) for a δ≤mini{δi}, whereδirepresents the constants
+occurring in the proof of Theorem 2.1. This is because for larger δ, we can divide the
+interval [0 ,δ] into subintervals, each has a length less than min i{δi}, and apply (2.21) in
+each subinterval. We can then take the maximum on each side of the in equalities to derive
+the inequality of in [0 ,δ]. In the sequel, DC
+δ,DL
+δandDR
+δare the restrictions of DC
+i,DL
+iand
+DR
+ito the strip {0≤t≤δ}, respectively.
+By linearity, U−˜Uis the solution of the system with the initial, boundary and forcing
+functions PI
+i−˜PI
+i,QI
+i−˜QI
+i,PB
+i−˜PB
+i,QB
+i−˜QB
+i,fi−˜fi,gi−˜giandCi−˜Ci. Letri, ˆri,si,
+ˆsibe deﬁned as in the proof of Theorem 2.1, corresponding to U−˜U. We show that these
+quantities have upper bounds in the form of the right hand side of (2 .21) inDC
+δ,DL
+δand
+DR
+δ.
+InDC
+δ, (2.10) and (2.12) hold. Notice that the functions FR
+iandFL
+iare linear in ri, and
+si. Hence, there exists a constant M(we will use Mgenerically for any constant bounds
+that are independent of solutions) such that
+RC
+i(t)+SC
+i(t)≤/vextendsingle/vextendsinglerI
+i/vextendsingle/vextendsingle
+C[0,1]+/vextendsingle/vextendsinglesI
+i/vextendsingle/vextendsingle
+C[0,1]+M/integraldisplayt
+0/parenleftbig
+RC
+i(t′)+SC
+i(t′)+TC
+i(t′)/parenrightbig
+dt′,
+where
+RC
+i(t) = sup
+{x:(x,t)∈DC
+δ}|ri(x,t)|, SC
+i(t) = sup
+{x:(x,t)∈DC
+δ}|si(x,t)|, (2.22)
+and
+TC
+i(t) = sup
+{x:(x,t)∈DC
+δ}/parenleftig/vextendsingle/vextendsingle/vextendsinglefi(x,t)−˜fi(x,t)/vextendsingle/vextendsingle/vextendsingle+|gi(x,t)−˜gi(x,t)|/parenrightig
+.(2.23)
+Hence, by Gronwall’s inequality (see, e.g. [8, p.327]),
+RC
+i(t)+SC
+i(t)≤M/parenleftigg
+/vextendsingle/vextendsinglerI
+i/vextendsingle/vextendsingle
+C[0,1]+/vextendsingle/vextendsinglesI
+i/vextendsingle/vextendsingle
+C[0,1]+δsup
+t∈(0,δ)TC
+i(t)/parenrightigg
+fort∈[0,δ]. This proves that RC
+iandSC
+ihave upper bounds in the form of the right side
+of (2.21).
+13
+We next consider the left or right regions if it is adjacent to an exter nal end. Since the
+both cases are similar, we will only treat the case where the left end is an external. The
+integral equations to be used are (2.14) or (2.15) according to the type of the boundary
+condition. The resulting inequality has the form
+RL
+i(t)+ˆSL
+i(t)≤σˆSL
+i(t)+M/parenleftbigg/vextendsingle/vextendsinglesI
+i/vextendsingle/vextendsingle
+C[0,1]+/vextendsingle/vextendsingleξB
+i/vextendsingle/vextendsingle
+C[0,δ]+/integraldisplayt
+0/parenleftig
+RL
+i(τ)+ˆSL
+i(τ)+TL
+i(τ)/parenrightig
+dτ/parenrightbigg
+whereξB
+iis eitherPB
+iorQB
+idepending on the boundary condition, and RL
+i,ˆSL
+iandTL
+iare
+deﬁned in the same way as in (2.22)–(2.23), with DC
+δsubstituted by DL
+δ∪DC
+δ, andσ >0 is
+a positive constant such that σ=εif the boundary condition is (1.6) and
+σ=εsup
+t∈(0,δ)/vextendsingle/vextendsingle/vextendsingle/vextendsingleλL
+i(0,t)
+λR
+i(0,t)/vextendsingle/vextendsingle/vextendsingle/vextendsingle<1
+if the boundary condition is (1.7). Replacing Mby (1−σ)M, we can write
+RL
+i(t)+ˆSL
+i(t)≤M/parenleftbigg/vextendsingle/vextendsinglesI
+i/vextendsingle/vextendsingle
+C[0,1]+/vextendsingle/vextendsingleξB
+i/vextendsingle/vextendsingle
+C[0,δ]+/integraldisplayt
+0/parenleftig
+RL
+i(τ)+ˆSL
+i(τ)+TL
+i(τ)/parenrightig
+dτ/parenrightbigg
+.
+Hence, by Gronwall’s inequality
+RL
+i(t)+ˆSL
+i(t)≤M/parenleftbigg/vextendsingle/vextendsinglesI
+i/vextendsingle/vextendsingle
+C[0,1]+/vextendsingle/vextendsingleξB
+i/vextendsingle/vextendsingle
+C[0,δ]+δmax
+t∈(0,δ)TL
+i(t)/parenrightbigg
+.
+This proves that both RL
+i(t) andSL
+i(t) have upper bounds in the form of the right hand
+side of (2.21).
+We next extend the estimate to DL
+i,δorDR
+i,δif the end is either a branching junction or
+a transitional junction. In either case, the solutions on the branc hesj1,...,j µconnecting to
+the junction constitute a ﬁxed point of the operator K, which is deﬁned in (2.20). Let
+W(t) =ν/summationdisplay
+l=1/parenleftig
+ˆRR
+jl(t)+SR
+jl(t)/parenrightig
++µ/summationdisplay
+l′=ν+1/parenleftig
+RL
+jl′(t)+ˆSL
+jl′(t)/parenrightig
+whereˆRR
+iandSR
+iare deﬁned as in (2.22) with DC
+δsubstituted by DC
+δ∪DR
+δ. Then, from
+w=Kwand in view of the assumption that Aihas a positive lower bound for all iand
+t >0, we can deduce
+W(t)≤σ/parenleftiggν/summationdisplay
+l=1ˆRR
+jl(t)+µ/summationdisplay
+l′=ν+1ˆSL
+jl′(t)/parenrightigg
++M/parenleftiggν/summationdisplay
+l=1/vextendsingle/vextendsinglerI
+jl/vextendsingle/vextendsingle
+C[0,1]+µ/summationdisplay
+l′=ν/vextendsingle/vextendsingle/vextendsinglesI
+jl′/vextendsingle/vextendsingle/vextendsingle
+C[0,1]+/integraldisplayt
+0(W(τ)+T(τ))dτ/parenrightigg
+,
+14
+where
+T(τ) =ν/summationdisplay
+l=1TR
+jl(τ)+µ/summationdisplay
+l′=ν+1TL
+jl′(τ)+µ/summationdisplay
+l=1/vextendsingle/vextendsingle/vextendsingleCjl(τ)−˜Cjl(τ)/vextendsingle/vextendsingle/vextendsingle
+andTR
+i(t) is deﬁned as in (2.23) with DC
+δsubstituted by DC
+δ∪DR
+δ. Replacing Mby
+(1−σ)M, we obtain
+W(t)≤M/parenleftiggν/summationdisplay
+l=1/vextendsingle/vextendsinglerI
+jl/vextendsingle/vextendsingle
+C[0,1]+µ/summationdisplay
+l′=ν/vextendsingle/vextendsingle/vextendsinglesI
+jl′/vextendsingle/vextendsingle/vextendsingle
+C[0,1]+/integraldisplayt
+0(W(τ)+T(τ))dτ/parenrightigg
+.
+Hence, by Gronwall’s inequality,
+W(t)≤M/parenleftiggν/summationdisplay
+l=1/vextendsingle/vextendsinglerI
+jl/vextendsingle/vextendsingle
+C[0,1]+µ/summationdisplay
+l′=ν/vextendsingle/vextendsingle/vextendsinglesI
+jl′/vextendsingle/vextendsingle/vextendsingle
+C[0,1]+δmax
+t∈(0,δ)T(t)/parenrightigg
+.
+This leads to an upper bound in the form of the right hand side of (2.21 ) forRR
+i(t),SR
+i(t),
+i=j1,...,j ν, andRL
+i(t),SL
+i(t),i=jν+1,...,j µ.
+We have thus obtained an upper bound in the form of the right hand s ide of (2.21) for
+the quantities |ri−˜ri|C(Dδ)and|si−si|C(Dδ). The conclusion of the lemma follows now from
+(2.6).
+3 The quasilinear system
+In this section, we study the quasilinear system where the coeﬃcien tsai,bi,ci,fi,gi,Aiand
+Cidepend on both ( x,t) and (Pi,Qi). Under certain conditions, we show that the system
+has a unique local solution. We then present a theorem on the contin uity of dependence of
+the solution on initial, boundary and forcing function.
+Thebasicideaintheproofoftheexistenceofsolutionistoconstruc taniterativesequence.
+Substituting any vector function ( pi,qi) for (Pi,Qi) inai, etc., the system becomes linear.
+Thus, we can use Theorem 2.1 to get a solution ( Pi,Qi). This deﬁnes a mapping Sfrom
+u=: (pi,qi) toU=: (Pi,Qi), and the solution for the quasilinear system is a ﬁxed point of
+S. If there is a subset of a Banach space that is invariant under S, then, we can construct a
+sequence
+uk+1=Suk, k= 0,1,....
+In the case where the limit exists and is unique, it gives rise to ﬁxed poin t ofS. This is our
+approach in this section.
+In this approach, conditions (2.2) and (2.4) are repeatedly used. O ne might want to
+impose them for all the values of the variables. This would give the exis tence and uniqueness
+for the global solution, as in the case of the linear system. However , such a requirement is
+15
+so restrictive that even the original system (1.4) cannot meet it. T herefore, we will impose
+them only for t= 0, and obtain the local solution for the quasilinear system.
+Theorem 3.1 Assume that the initial and boundary functions PI
+i,QI
+i,PB
+i,QB
+iand the
+system functions ai,bi,ci,fi,gi,AiandCiall have continuous ﬁrst-order derivatives with
+respect to each variable. Suppose that aiis positive and Aihas a positive lower bound for all
+the values of their arguments, and that conditions (2.2)–(2 .4) hold at t= 0. Suppose also
+that the initial functions PI
+i,QI
+isatisfy any relevant boundary conditions at t= 0. Then,
+for some δ >0, there is a unique solution for 0≤t < δto the quasilinear system (1.13) with
+the initial and boundary conditions given by (1.5)–(1.8), ( 2.1), and (1.10)–(1.12).
+Proof. We ﬁrst consider the simpler case where UI=:/parenleftbig
+PI,QI/parenrightbig
+= 0. Let v={vi},
+vi= (pi,qi) be a family of vector functions (not necessarily constitutes a solu tion) that
+satisfy the initial and boundary conditions. Substitute vforUin the functions ai,bi,ci,fi,
+gi,AiandCi. Then, the system becomes linear and we can invoke Theorem 2.1 to o btain
+a solution Uto the linear system. This deﬁnes a mapping S:v/mapsto→U. A solution to the
+quasilinear system is then a ﬁxed point of S. We will choose a subset Xδ,M0of a Banach
+space such that (1) SXδ,M0⊂Xδ,M0, and (2) Sis contracting in Xδ,M0. For any scalar
+or vector function f∈Ck(Dδ), let|f|k,δdenote the maximum norm of all the k-th order
+derivatives of finDδ. (Iffis a vector function, |f|k,δ= max i/braceleftig
+|fi|k,δ/bracerightig
+.) LetCB(Dδ,R2n)
+denote the subset of the vector-valued functions in C(Dδ,R2n) that satisfy the initial and
+boundary conditions. We seek Xδ,M0in the form
+Xδ,M0=/braceleftig
+v∈CB/parenleftbig
+Dδ,R2n/parenrightbig
+:|v|0,δ≤M0,|v|1,δ≤M1/bracerightig
+(3.1)
+whereM0is an arbitrary positive constant and M1is a constant to be determined. Note
+that by the vanishing initial condition, for any M1,|U|1,δ≤M1implies|U|0,δ≤M1δ. Hence,
+for anyM0, we can ensure |U|0,δ≤M0by reducing δ. It remains, therefore, only to show
+that for M1suﬃciently large and δsuﬃciently small, |v|1,δ≤M1implies|Sv|1,δ≤M1.
+Throughout this proof, we use Mto represent any positive constant that may depend on M1
+but is otherwise independent of vandδ, and use ˜Mfor any constant that is independent of
+M1,vandδ. The values of Mor˜Min diﬀerent occurrences need not be equal.
+LetU=Svand letriandsibe deﬁned by (2.5). On each branch, we show that
+max{|(ri)x|,|(si)x|,} ≤M1 (3.2)
+and
+max{|(ri)t|,|(si)t|} ≤M1 (3.3)
+16
+inDC
+δ,DL
+δandDR
+δifM1is large and δis small. (Recall that DC
+δetc. are the intersections
+DC
+i∩Dδetc., respectively.) In fact, only (3.2) needs to be shown. To see th is, ﬁrst ob-
+serve that the vanishing initial condition and the compatibility of the in itial and boundary
+conditions gives
+max
+i/braceleftig/vextendsingle/vextendsinglePB
+i/vextendsingle/vextendsingle
+C[0,δ],/vextendsingle/vextendsingleQB
+i/vextendsingle/vextendsingle
+C[0,δ]/bracerightig
+≤Mδ.
+Hence, we obtain from Lemma 2.1 with ˜U= 0 that
+|U|0,δ≤Mδ. (3.4)
+From (2.7) and (2.9), there are constants ˜MandMsuch that
+/vextendsingle/vextendsingle∂R
+iri/vextendsingle/vextendsingle≤/vextendsingle/vextendsinglelR
+iFi/vextendsingle/vextendsingle+/vextendsingle/vextendsingle∂R
+ilR
+i/vextendsingle/vextendsingle|Ui| ≤˜M+Mδ,
+/vextendsingle/vextendsingle∂L
+isi/vextendsingle/vextendsingle≤/vextendsingle/vextendsinglelL
+iFi/vextendsingle/vextendsingle+/vextendsingle/vextendsingle∂L
+ilL
+i/vextendsingle/vextendsingle|Ui| ≤˜M+Mδ(3.5)
+for eachi= 1,...,n. Hence, (3.3) follows from (3.2), (3.5) and the deﬁnition of ∂L
+iand∂R
+i
+in (2.8). We also note that (2.6) and (3.5) imply
+/vextendsingle/vextendsingle∂R
+iUi/vextendsingle/vextendsingle
+0,δ≤˜M+Mδ,/vextendsingle/vextendsingle∂R
+iUi/vextendsingle/vextendsingle
+0,δ≤˜M+Mδ (3.6)
+for alli. This will be used later.
+We ﬁrst consider the middle region DC
+δ, where the solution ( ri,si) satisﬁes the integral
+equations (2.10) and (2.12) with rI
+i=sI
+i= 0. Diﬀerentiating the equations with respect to
+x, we have
+(ri)x=/parenleftbig
+lR
+i/parenrightbig
+xUi(x,t)+/integraldisplayt
+0/bracketleftbig/parenleftbig
+lR
+iFi/parenrightbig
+x+/parenleftbig
+∂R
+ilR
+i/parenrightbig
+(Ui)x−/parenleftbig
+lR
+i/parenrightbig
+x/parenleftbig
+∂R
+iUi/parenrightbig/bracketrightbig/parenleftbig
+xR
+i/parenrightbig
+xdt,
+(si)x=/parenleftbig
+lL
+i/parenrightbig
+xUi(x,t)+/integraldisplayt
+0/bracketleftbig/parenleftbig
+lL
+iFi/parenrightbig
+x+/parenleftbig
+∂L
+ilL
+i/parenrightbig
+(Ui)x−/parenleftbig
+lL
+i/parenrightbig
+x/parenleftbig
+∂L
+iUi/parenrightbig/bracketrightbig/parenleftbig
+xL
+i/parenrightbig
+xdt.(3.7)
+Here, we used an identity from [6, p.469]:
+d
+dξ/integraldisplayb
+af(x(t),t)Dg(x(t),t)dt
+=f(x(b),b)gx(x(b),b)xξ(b)−f(x(a),a)gx(x(a),a)xξ(a)
++/integraldisplayb
+a[fx(x(t),t)Dg(x(t),t)−Df(x(t),t)gx(x(t),t)]xξ(t)dt(3.8)
+wherex(t) is a function such that x(b) =ξandD=∂
+∂t+x′(t)∂
+∂x. (Notice that xξ(b) = 1.)
+Let
+RC
+i(t) = sup
+{x:(x,t)∈DC
+δ}{|(ri)x(x,t)|}, SC
+i(t) = sup
+{x:(x,t)∈DC
+δ}{|(si)x(x,t)|}.(3.9)
+17
+From (3.4), (3.6) and (3.7), we derive
+RC
+i(t)+SC
+i(t)≤Mδ+M/integraldisplayt
+0/parenleftbig
+1+RC
+i(t′)+SC
+i(t′)/parenrightbig
+dt′
+fort∈[0,δ]. Hence, Gronwall’s inequality gives
+|(ri)x| ≤MδeMδ,|(si)x| ≤MδeMδ
+inDC
+δ. This proves (3.2) in DC
+δifM1is suﬃciently large and δis suﬃciently small .
+We next consider the left and right regions DL
+δ,DR
+δwhich are next to an external end.
+Since the two cases are similar, we will consider the left region only. Le t ˆsi=si/εfor any
+ε >0. Then, the pair ( ri,ˆsi) satisﬁes the ﬁxed point equations of either (2.14) or (2.15),
+depending on the type of the boundary condition. Diﬀerentiating th e equations with respect
+toxand using a slightly modiﬁed version of (3.8) where the lower limit aof the integral also
+depends on ξ:
+d
+dξ/integraldisplayb
+af(x(t),t)Dg(x(t),t)dt
+=f(x(b),b)gx(x(b),b)xξ(b)−f(x(a),a)gx(x(a),a)xξ(a)
+−f(x(a),a)Dg(x(a),a)aξ
++/integraldisplayb
+a[fx(x(t),t)Dg(x(t),t)−Df(x(t),t)gx(x(t),t)]xξ(t)dt,
+we have
+(ri)x=/parenleftbig
+ζi−lR
+iFi−/parenleftbig
+∂R
+ilR
+i/parenrightbig
+Ui/parenrightbig
+(0,τ)τx+/parenleftbig
+lR
+i/parenrightbig
+xUi(x,t)−/parenleftbig
+lR
+i/parenrightbig
+xUi/parenleftbig
+xR
+i/parenrightbig
+x(0,τ)
++/integraldisplayt
+τ/bracketleftbig/parenleftbig
+lR
+iFi/parenrightbig
+x+/parenleftbig
+∂R
+ilR
+i/parenrightbig
+(Ui)x−/parenleftbig
+lR
+i/parenrightbig
+x/parenleftbig
+∂R
+iUi/parenrightbig/bracketrightbig/parenleftbig
+xR
+i/parenrightbig
+xdt,
+(ˆsi)x=1
+ε/parenleftbig
+lL
+i/parenrightbig
+xUi(t,x)+1
+ε/integraldisplayt
+0/bracketleftbig/parenleftbig
+lL
+iFi/parenrightbig
+x+/parenleftbig
+∂L
+ilL
+i/parenrightbig
+(Ui)x−/parenleftbig
+lL
+i/parenrightbig
+x/parenleftbig
+∂L
+iUi/parenrightbig/bracketrightbig/parenleftbig
+xL
+i/parenrightbig
+xdt,(3.10)
+where
+ζi= 2/parenleftbig
+uiPB
+i/parenrightbig
+t+ε(ˆsi)t
+if the boundary condition is given by (1.6), and
+ζi= 2/parenleftbiggaiui
+λR
+iQB
+i/parenrightbigg
+t+ε/parenleftbiggλL
+i
+λR
+i/parenrightbigg
+tˆsi+ε/parenleftbiggλL
+i
+λR
+i/parenrightbigg
+(ˆsi)t
+if the boundary condition is given by (1.7). This equation is valid for any ε. So, we may
+chooseεso small such that
+σ=:ε/vextendsingle/vextendsingleλL
+iτx(0,t)/vextendsingle/vextendsinglemax/braceleftbigg
+1,/vextendsingle/vextendsingle/vextendsingle/vextendsingle/parenleftbiggλL
+i(0,t)
+λR
+i(0,t)/parenrightbigg/vextendsingle/vextendsingle/vextendsingle/vextendsingle/bracerightbigg
+<1, t∈[0,δ].
+18
+Toproceedfurther, weneedanestimateof |τx(0,t)|. Observethat τ(x)satisﬁestheequation
+xR
+i(τ;x,t) = 0
+wherexR
+i(τ;x,t) is the solution of the initial value problem
+dxR
+i
+ds=λR
+i/parenleftbig
+xR
+i,s/parenrightbig
+, xR
+i(t;x,t) =x.
+By diﬀerentiation,
+λR
+i(0,τ(x))τx+∂xR
+i
+∂x/vextendsingle/vextendsingle/vextendsingle/vextendsingle
+(τ(x);x,t)= 0. (3.11)
+Letwi=∂xR
+i/∂x. Then,wiis the solution to the linear equation
+dwi
+ds=/parenleftbig
+λR
+i/parenrightbig
+x/parenleftbig
+xR
+i(s;x,t),s/parenrightbig
+wi, wi(t) = 1.
+Solving the equation,
+wi(s) = exp/parenleftbigg/integraldisplays
+t/parenleftbig
+λR
+i/parenrightbig
+x/parenleftbig
+xR
+i(s′;x,t),s′/parenrightbig
+ds′/parenrightbigg
+.
+Returning to (3.11), we ﬁnd
+τx=−1
+λR
+i(0,τ(x))exp/parenleftigg/integraldisplayτ(x)
+t/parenleftbig
+λR
+i/parenrightbig
+x/parenleftbig
+xR
+i(s′;x,t),s′/parenrightbig
+ds′/parenrightigg
+.
+Observe that 0 < τ(x)< t≤δand the integrand is bounded. Hence,
+|τx| ≤˜MeMδ. (3.12)
+This is the estimate we need. By this estimate, for any M1, we can choose δsmall enough
+such that the constants σandεare independent of M1. LetRL
+i(t) andˆSL
+i(t) be deﬁned as
+in (3.9) except that siis substituted by ˆ siandDC
+δis substituted by DL
+δ∪DC
+δ, We derive
+from (3.10) and the identity
+(ˆsi)t=∂L
+iˆsi−λL
+i(ˆsi)x
+that
+RL
+i(t)+ˆSL
+i(t)≤σˆSL
+i(t)+˜M+Mδ+M/integraldisplayt
+0/parenleftig
+1+RL
+i(t′)+ˆSL
+i(t′)/parenrightig
+dt′.
+Replacing Mand˜MbyM(1−σ) and˜M(1−σ), respectively, and applying Gronwall’s
+inequality, we obtain
+RL
+i(t)+ˆSL
+i(t)≤/parenleftig
+˜M+Mδ/parenrightig
+eMδ.
+19
+Since|si| ≤ |ˆsi|, it follows that
+max{|(ri)x|,|(si)x|} ≤/parenleftig
+˜M+Mδ/parenrightig
+eMδ
+inDL
+δ∪DC
+δ. This proves (3.2) in DL
+δ∪DC
+δifM1is large and δis small.
+We next consider the case where the end of the branch is a branchin g or transitional
+junction. As before, all the branches that are connected to the same junction are considered
+simultaneously. Diﬀerentiating the ﬁxed point equation w=KwwherewandKware
+deﬁned in (2.19) and (2.20), respectively, we obtain (3.10) in DL
+δ∪DC
+δfori=jν+1,...,j µ
+and
+(ˆri)x=1
+ε/parenleftbig
+lR
+i/parenrightbig
+xUi(x,t)+1
+ε/integraldisplayt
+0/bracketleftbig/parenleftbig
+lR
+iFi/parenrightbig
+x+/parenleftbig
+∂R
+ilR
+i/parenrightbig
+(Ui)x−/parenleftbig
+lR
+i/parenrightbig
+x/parenleftbig
+∂R
+iUi/parenrightbig/bracketrightbig/parenleftbig
+xR
+i/parenrightbig
+xdt,
+(si)x=/parenleftbig
+θi−lL
+iFi−/parenleftbig
+∂L
+ilL
+i/parenrightbig
+Ui/parenrightbig
+(1,τ)τx+/parenleftbig
+lL
+i/parenrightbig
+xUi(x,t)−/parenleftbig
+lL
+i/parenrightbig
+xUi/parenleftbig
+xL
+i/parenrightbig
+x(1,τ)
++/integraldisplayt
+τ/bracketleftbig/parenleftbig
+lL
+iFi/parenrightbig
+x+/parenleftbig
+∂L
+ilL
+i/parenrightbig
+(Ui)x−/parenleftbig
+lL
+i/parenrightbig
+x/parenleftbig
+∂L
+iUi/parenrightbig/bracketrightbig/parenleftbig
+xL
+i/parenrightbig
+xdt,(3.13)
+inDC
+δ∪DR
+δfori=j1,...,j ν, where
+ζi=εν/summationdisplay
+l=1/parenleftbig
+ni
+jlˆrjl/parenrightbig
+t(1,τ)+εµ/summationdisplay
+l′=ν+1/parenleftig
+ni
+jl′ˆsjl′/parenrightig
+t(0,τ)+Hi,
+θi=εν/summationdisplay
+l=1/parenleftbig
+mi
+jlˆrjl/parenrightbig
+t(1,τ)+εµ/summationdisplay
+l′=ν+1/parenleftig
+mi
+jl′ˆsjl′/parenrightig
+t(0,τ)+Hi,
+andmi
+j,ni
+jaredeﬁnedintheproofofTheorem 2.1. Notethattheestimate (3.1 2)holdsfor τx
+in both (3.10) and (3.13), although in the latter case, τis thet-coordinate of the intersection
+of the left-going characteristic curve xL
+iwith the vertical line x= 1. The derivation is
+identical. Hence, there is a constant ε, independent of M1, such that
+ε|τx|/parenleftiggν/summationdisplay
+k=1/vextendsingle/vextendsinglemi
+jk(t)/vextendsingle/vextendsingle+µ/summationdisplay
+k′=ν+1/vextendsingle/vextendsingle/vextendsinglemi
+jk′(t)/vextendsingle/vextendsingle/vextendsingle/parenrightigg
+<1,
+ε|τx|/parenleftiggν/summationdisplay
+k=1/vextendsingle/vextendsingleni
+jk(t)/vextendsingle/vextendsingle+µ/summationdisplay
+k′=ν+1/vextendsingle/vextendsingle/vextendsingleni
+jk′(t)/vextendsingle/vextendsingle/vextendsingle/parenrightigg
+<1
+in [0,δ]. Letσbe the maximum of the quantities on the left hand side of the above ine qual-
+ities. Deﬁne ˆRR
+i,SR
+i,RL
+iandˆSL
+ias in (3.9) with obvious modiﬁcations. We see that the
+function
+W(t) =ν/summationdisplay
+l=1/parenleftig
+ˆRR
+jl(t)+SR
+jl(t)/parenrightig
++µ/summationdisplay
+l′=ν+1/parenleftig
+RL
+jl′(t)+ˆSL
+jl′(t)/parenrightig
+20
+satisﬁes the inequality
+(1−σ)W(t)≤ν/summationdisplay
+l=1/parenleftig
+(1−σ)ˆRR
+jl(t)+SR
+jl(t)/parenrightig
++µ/summationdisplay
+l′=ν+1/parenleftig
+RL
+jl′(t)+(1−σ)ˆSL
+jl′(t)/parenrightig
+≤˜M+Mδ+M/integraldisplayt
+0(1+W(t′))dt′.
+Hence, by rescaling and using Gronwall’s inequality, we achieve
+W(t)≤/parenleftig
+˜M+Mδ/parenrightig
+eMδ.
+This proves that
+max{|(ri)x|,|(si)x|} ≤M1
+inDR
+δfori=j1,...,j νand inDL
+δfori=jν+1,...,j µifM1is suﬃciently large and δis
+suﬃciently small. We have thus proved (3.2) in this case.
+This completes the proof of (3.2) in all cases. By choosing appropria te values of M1and
+δ, we thus obtain a set Xδ,M0in the form of (3.1) which is invariant under the mapping S.
+We now show that Sis a contraction in Xδ,M0. LetU=Sv,˜U=S˜vfor some v,˜v∈Xδ,
+and letW=U−˜U.Wsatisﬁes the vanishing initial and external boundary conditions and
+its diﬀerential equations takes the form of (1.13) with the coeﬃcien ts
+ai=ai(x,t,v), bi=bi(x,t,v), ci=ci(x,t,v), Ai=Ai(x,t,v)
+the forcing functions fiandgireplaced by
+ˆfi=:fi(x,t,v)−fi(x,t,˜v)+(ai(x,t,v)−ai(x,t,˜v))∂˜Qi
+∂x(3.14)
+and
+ˆgi=:gi(x,t,v)−gi(x,t,˜v)+(bi(x,t,v)−bi(x,t,˜v))∂˜Pi
+∂x
++2(ci(x,t,v)−ci(x,t,˜v))∂˜Qi
+∂x,(3.15)
+respectively, and the functions Ciin (2.1) replaced by
+ˆCjl=Cjl(x,t,v)−Cjl(x,t,˜v)+(Ajl(x,t,v)−Ajl(x,t,˜v))/parenleftig
+˜Pjl−˜Pjunc/parenrightig
+,
+ˆCjl′=Cjl′(x,t,v)−Cjl′(x,t,˜v)+/parenleftbig
+Ajl′(x,t,v)−Ajl′(x,t,˜v)/parenrightbig/parenleftig
+˜Pjunc−˜Pjl′/parenrightig
+21
+forl= 1,...,ν,l′=ν+1,...,µ. By the Lipschitz property and the boundedness/vextendsingle/vextendsingle/vextendsingle˜U/vextendsingle/vextendsingle/vextendsingle
+1,δ≤
+M1, there is a constant Msuch that
+/vextendsingle/vextendsingle/vextendsingleˆf/vextendsingle/vextendsingle/vextendsingle
+0,δ≤M|v−˜v|0,δ,|ˆg|0,δ≤M|v−˜v|0,δ,/vextendsingle/vextendsingle/vextendsingleˆC/vextendsingle/vextendsingle/vextendsingle
+0,δ≤M|v−˜v|0,δ
+Hence, by Theorem 2.1,
+|Sv−S˜v|0,δ≤Mδ|v−˜v|0,δ.
+Therefore, Sis contracting in Xδ,M0ifδis suﬃciently small.
+The rest is standard (cf. e.g., [6]). Starting with a v0∈Xδ,M0, we generate an iterative
+sequence vk+1=Svk. Clearly, each vklies inXδ,M0and the sequence converges uniformly.
+The limit then satisﬁes the integral equations in the proof of Theore m 2.1, and hence, is
+diﬀerentiable. Therefore, it is the solution of the quasilinear diﬀeren tial equations. This
+proves the existence and uniqueness of the solution when UI= 0.
+IfUI/ne}ationslash= 0, we regard UIas a vector function of xandtand introduce ˜U=U−UI. It
+follows that ˜Uis a solution of the quasilinear equations (1.13) with the forcing funct ions˜fi
+and ˜gigiven by
+˜fi=fi−/parenleftbig
+QI
+i/parenrightbig
+xai,˜gi=gi−/parenleftbig
+PI
+i/parenrightbig
+xbi−/parenleftbig
+QI
+i/parenrightbig
+x2ci
+and the boundary functions are given by
+˜PB
+i=PB
+i−PI
+i,˜QB
+i=QB
+i−QI
+i,
+and
+˜Cjl=Cjl+AjlPI
+jl,˜Cjl′=Cjl′−Ajl′PI
+jl′
+forl= 1,...,ν,l′=ν+1,...,µ. Since˜Uhas the vanishing initial values, it can be uniquely
+solved for an interval of t∈[0,δ]. This gives rise to a solution U.
+Remark: Examples can be constructed to show that if the condition (2.4) fails att= 0,
+then, the local solution need not exist or may be not unique. In part icular, if (2.4) fails at
+a source end, then, the system is under-determined, and if it fails a t a terminal end, the
+system is over-determined.
+We give next a result for the continuity of dependence of the solutio n and its derivatives
+on the initial, boundary and forcing functions and their derivatives. This follows from an
+argument similar to the proofs of Lemma 2.1 and Theorem 3.1.
+Corollary 3.1 LetU= (P,Q)and˜U=/parenleftig
+˜P,˜Q/parenrightig
+be two solutions of the quasilinear problem
+of Theorem 3.1. Suppose the conditions of that theorem hold f or the initial and boundary
+22
+functions of both solutions. Then, there exists a constant M >0, independent of initial,
+boundary and forcing functions, such that
+/vextendsingle/vextendsingle/vextendsingleU−˜U/vextendsingle/vextendsingle/vextendsingle
+k,δ≤M/parenleftbigg/vextendsingle/vextendsingle/vextendsinglePI−˜PI/vextendsingle/vextendsingle/vextendsingle
+Ck[0,1]+/vextendsingle/vextendsingle/vextendsingleQI−˜QI/vextendsingle/vextendsingle/vextendsingle
+Ck[0,1]+/vextendsingle/vextendsingle/vextendsinglePB−˜PB/vextendsingle/vextendsingle/vextendsingle
+Ck[0,δ]+/vextendsingle/vextendsingle/vextendsingleQB−˜QB/vextendsingle/vextendsingle/vextendsingle
+Ck[0,δ]
++δ/vextendsingle/vextendsingle/vextendsinglef−˜f/vextendsingle/vextendsingle/vextendsingle
+Ck(Dδ)+δ|g−˜g|Ck(Dδ)+δ/vextendsingle/vextendsingle/vextendsingleC−˜C/vextendsingle/vextendsingle/vextendsingle
+Ck[0,δ]/parenrightbigg
+.
+(3.16)
+fork= 0,1.
+Proof. Fork= 0, the result follows from substituting one of the solutions into the coeﬃ-
+cients, modifying the forcing functions by (3.14)–(3.15), and using Lemma 2.1. For k= 1, we
+diﬀerentiate the equations and apply the lemma to the resulting equa tions for the derivatives
+of the solution. The process is standard and is omitted.
+References
+[1] Christian Almeder, Felix Breitenecker, et al, Modelling of the human arterial network
+for an expert system for preoperative predictions, in Proceedings of the 2ndMathmod,
+Vienna, Austria, Feb. 5-7, 1997.
+[2] Charbel, F.T., Clark, M.E., et al, The application of a computerized model of the
+cerebral circulation in skull base surgery, 2nd Intern. Skull Base Congress, San Diego,
+210, 1996.
+[3] Charbel, F.T., Misra, M., Clark, M.E., and Ausman, J.I., Computer simu lation of
+cerebral bloodﬂowinMoyamoya andtheresultsofsurgicaltherap ies,Clinical Neurology
+and Neurosurgery, Supp. 2 , 1997.
+[4] ClarkM.E., ZhaoM., LothF., AlperinN., SadlerL., GuppyK.,CharbelF.T .,Apatient-
+speciﬁc computer model for prediction of clinical outcomes in the ce rebral circulation
+using MR ﬂow measurements, MICCAI , Cambridge, England, 1999.
+[5] Clark, M.E. and Kufahl, R.H., Simulation of the cerebral macrocircu lation,Cardiovas-
+cular Systems Dynamics, M.I.T. Press, pp. 380–390, 1978.
+[6] Courant, R. and Hilbert, D., Methods of Mathematical Physics, Vol. II, John Wiley &
+Sons, 1962.
+[7] Kufahl, R.H. and Clark, M.E., A circle of Willis simulation using distensible v essels and
+pulsatile ﬂow, J. Biomechanical Engineering 107, pp. 112-122, 1985.
+23
+[8] McOwen R., Partial Diﬀerential Equations, Prentice Hall, 1995.
+[9] Porenta, G., Young, D.F., Rogge, T.R., A ﬁnite-element model of blo od ﬂow in arteries
+including taper, branches, and obstructions, J. Biomechanical Engineering, Vol. 108,
+pp. 161-167, 1986.
+[10] Raines, Jeﬀrey K., Yaﬀrin, Michel Y. and Shapiro, Ascher H., A co mputer simulation
+of the human arterial system, Proceedings of the 1971 Summer Computer Conference,
+Vol. 2, pp. 171-178.
+[11] Raines, Jeﬀrey K., Yaﬀrin, Michel Y. and Shapiro, Ascher H., A co mputer simulation
+of arterial dynamics in the human leg, J. Biomechanics, Vol. 7, pp. 77-91, 1974.
+[12] Ruan, Weihua, Clark, M.E., Zhao, Meide and Curcio, Anthony, A hy perbolic system in
+a one-dimensional network, arXiv: math-ph/0209015.
+[13] Smith, N.P., Pullan, A.J. and Hunter, P.J., An anatomically based mod el of transient
+coronary blood ﬂow in the heart, SIAM J. Appl. Math., Vol. 62, pp. 990–1018, 2002.
+[14] Spaan, J.A., Breuls, N.P.W. and Laird, J.D., Diastolic-systolic coron ary ﬂow diﬀerences
+are caused by intramyocardial pump action in the anesthetised dog ,Circ. Res. Vol. 49,
+pp. 584-593, 1981.
+[15] Zhao M., Charbel F.T., Alperin N., Loth F., Clark M.E., Improved phas e-contrast
+ﬂow quantiﬁcation by three-dimensional vessel localization, Mag. Reson. Imag., Vol.
+18, 697-706, 2000
+24

@@ -1,0 +1,761 @@
+arXiv:math/0006127v1  [math.DS]  19 Jun 2000Modeling the inﬂuence of TH1 and TH2 type cells in
+autoimmune diseases
+Key words: EAE,IDDM,Mathematical models,TH1,Network
+Yoram Louzoun (1),Henri Atlan (2),Irun. R. Cohen (3)
+(1) Interdisciplinary Center for Neural Computation, Hebr ew University, Jerusalem Israel. yoraml@alice.nc.huji.a c.il
+(2) Human Biology Research Center, Hadassah Hebrew Univers ity Hospital, Jerusalem Israel.
+(3) Department of Immunology, The Weizmann Institute of Sci ence.
+1
+Abstract
+A sharp TH1/TH2 dichotomy has often been used to deﬁne the
+eﬀects of cytokines on autoimmune diseases. However contrad ictory
+resultsin recent research indicate that thesituation may b emorecom-
+plex. We build here a simple mathematical model aimed at sett ling
+the contradictions. The model is based on a neural network pa radigm,
+and is applied using Partial Diﬀerential Equations (PDE). We show
+here that a TH1/TH2 paradigm is only an external view of a comp lex
+multivariate system.
+2
+1 Introduction
+Immunologists generally agree that in the course of many autoimmun e dis-
+eases, TH1 type cells have a damaging eﬀect, whereas TH2 type cells have
+a beneﬁcial eﬀect [1]. Thus the disease is aggravated by a high ratio o f
+TH1/TH2 T cells and cytokines. This view is contradicted by many expe r-
+imental results showing an inverse eﬀect [2]: TH2 type cells may enhan ce
+disease, if administrated at a certain time [3], and TH1 type cells can st op
+the evolution of the disease, if given at the appropriate time [4, 5]. Ot her
+works show that gene knock-out mice with no INF γor TNFαstill man-
+age to produce the pathological features of a TH1-dependent au toimmune
+disease [6, 7]. Based on results from EAE (experimental autoimmune en-
+cephalomyelitis) [8] and insulin dependent diabetes melitus (IDDM) [9, 1 0]
+in Non Obese Diabetic (NOD) mice [11], we propose a larger model explain -
+ing both the general agreement and the contradictory results. W e suggest
+that the TH1 and TH2 cells are not the cause of the disease, but a ma rker
+for a more general steady state. To settle the contradictions, w e use a nu-
+merical model and general mechanisms of safe information transm ission [12]
+to explain the discrepancy in the case of gene knock-out mice. We sh ow the
+explanatory power of our model andits ability to produce theknown features
+of TH1 type diseases.
+2 Model
+Our model is based on a neural network paradigm [13], where the ove rall
+situation is not described by the properties of any one cell type, bu t by
+the steady state of the network. We use PDE in order to get a cont inuous
+description of the network. Each cell in the network represents a class of cells
+withthesamegeneralproperties, atleastfromthemostrelevant aspectofthe
+TH1/TH2 dichotomy. The model is an ad hoc description of the dynam ics,
+but most of the links we use have some experimental backing. We built the
+model with the smallest number of cell types needed to explain qualita tively
+the experimental results.
+3
+2.1 Experimental results
+EAE is an autoimmune disease studied mainly in rats and in mice, and is
+used as a model for human multiple sclerosis [14, 15] . In EAE, myelin in t he
+CNS becomes inﬂamed inducing paralysis and even death [16]. This disea se
+is classically deﬁned by a TH1/TH2 dichotomy in which TH1 T cells induce
+the disease whereas TH2 cells prevent it [1].
+Classical EAE experiments show that:
+•EAE can be induced either by adoptive transfer of CD4 T cells from a
+sick rodent, or by active immunization by an injection of a myelin anti-
+gen in adjuvant to a healthy rodent [17]. We will show that these two
+procedures lead, in fact, to two separate pathways of disease ind uction.
+•Administration of free antigen arrests EAE [18]. We propose to show
+that antigen-induced inhibition could be due to the eﬀect of regulato ry
+anti-idiotypic (anti-id) suppressor cells.
+•The disease can be prevented by the continuous administration of I L-4,
+which is a TH2 type cytokine thought to push the immune system into
+a healthy TH2 dominated state REF FROM EAE[19]. But IL-4 can
+also aggravate disease (see below).
+However, recentresearchresultsappeartocontradicttheclas sicalTH1/TH2
+hypothesis:
+•A small amount of IL-4 administrated during disease induction can
+block the suppressive eﬀect of free antigen.[20] This paradox will be
+explained by the eﬀect of TH2 type cytokines on anti-id regulatory
+cells.
+•A short administration of a TH1 cytokine can heal the disease [4, 5].
+This eﬀect too can be attributed to an anti-id regulatory cell.
+•Gene knock-out mice, lacking one or some of the TH1 cytokines, can
+still develop EAE or IDDM [6, 7]. This paradox will be explained by
+the nature of regulation.
+These facts regarding EAE are combined in our analysis with results
+regardingthestructureofid-anti-idcell interactions andthecyt okine proﬁle
+expressed during the evolution of IDDM in NOD mice [9, 10] , and in the
+mouse model of EAE [8, 21].
+4
+2.2 Cells and Cytokine Types
+Ourmodel iscomposedofﬁvecelltypes, threecytokinetypesand theantigen
+(Table 1). The ﬁrst cell type is the naive CD4 T cell that can diﬀerent iate
+into the second and third cell types: TH1 and TH2 type CD4 T cells [22].
+Theanti-idcellsaregroupedasasinglecelltype, thefourthcelltyp e. Amore
+detailedmodel shouldusenaive anti-idcells anddiverse anti-idcells sec reting
+TH1 type cytokines and TH2 type cytokines. For the sake of simplicit y,
+however, we group all anti-id cells into one cell type, and assume the y have
+thesameeﬀect. SinceweknowfromIDDMandEAEthatanti-idcellsse crete
+more TH1 cytokines than TH2 [10, 8] , we designate the anti-id popula tion
+as TH1 type cells. The CD4 T id cells can present themselves directly to
+the anti-id cells [10]. The ﬁfth type of cells are macrophages, which pla y
+additional roles as APC [23] and as cytokine-secreting cells. The ant igen
+represents the quantity of antigen presented to the CD4 T cells. W e assume
+that there is a large enough number of APCs so that the CD4 T cells ca n
+see the antigen.
+The three types of cytokines are:
+•TH1 type cytokines that enhance the diﬀerentiation of naive cells int o
+TH1 type cells.
+•TH2 type cytokines that enhance the development of TH2 type cells .
+•Cytokines secreted by macrophages that enhance the proliferat ion and
+diﬀerentiation of TH1 cells [24]. We shall ignore the eﬀect of TH2 type
+cytokines secreted by macrophages (like IL-10) and the eﬀects o f B
+cells. We will group together all the macrophage-derived cytokines as
+type C cytokines.
+2.3 Model equations.
+We compute the time derivatives of each cell type concentration xiand of
+the cytokine concentration yi, assuming both are aﬀected by all other cells
+and cytokines.
+x′
+i= Σwijxixj+max(Σ w1ijxoriginixj,0)−dixi (1)
+y′
+i=max(Σw2ijxj,0)−diyi (2)
+5
+Group Cell Type Notation
+1 Naive cells id - 0
+2 Idiotypic TH1 cells A
+3 Idiotypic TH2 cells B
+4 Anti-id cells anti-id
+5 Macrophages MΦ
+6 TH1 cytokines Cyt A
+7 TH2 cytokines Cyt B
+8Cytokines secreted by macrophages Cyt C
+Table 1: Cell types and cytokines. The cytokines are labeled accord ing to
+the cell type producing them. We grouped cells as follows: TH1 id cells c an
+include all types of lymphocytes producing TH1 cytokines. Anti-id ce lls are
+all cell types speciﬁcally reactive to the id cells. They can either be cy totoxic
+cells, or limit the proliferation rate of the id cells.
+xoriginiis the origin of the cell number i (for example, the TH1 cells
+originate in the naive cells, the naive cells originate in themselves). The
+other cells and cytokines can either induce or inhibit the proliferation of this
+(xi) cell type. The cytokines originate from the cells that secrete the m, so
+that the right side of eq’ 2 is not multiplied by the cytokine concentra tion.
+The secretion rate of the cytokines ( yi) by cells ( xj) is linear to the other
+cell and cytokine concentrations. For example, if TH2 type cytokin es inhibit
+the production of TH1 cytokines, then we use a term in the equation for the
+TH1 cytokines −w2ijx(th2), and we do not multiply the term by the TH1
+cytokine concentration.
+A cell’s proliferation rate cannot be negative. Thus we deﬁne the pro lif-
+eration rate of any cell to be greater than 0. But of course, the n atural death
+rate (−dixi) can lead to a decrease in the cell concentration. T he cytokine
+production rate ( y′
+i) is assumed not to depend on the cytokine concentration,
+but on the number of cells secreting the cytokine. The equations ar e solved
+numerically using a second order precision scheme [25].
+We start every computation at a steady state
+x′
+i= 0,y′
+i= 0 (3)
+Since the time constants in this process are short, we could assume that
+the system had already reached a steady state before the appea rance of the
+autoimmune disease.
+6
+Macrophages do not reproduce during the response to the antige n but,
+rather,areattractedtotheaﬀectedregion[26],sothat,likethe cytokines,their
+growth rate is not multiplied by their own concentration.
+Thediﬀerencesbetweenpossiblemodelsareintheassignedweights wij,w1ij
+andw2ijin eq’ 1 and 2. But we have tried to use the most uniform deﬁnition
+of weights, and all the weights are of the same order of magnitude. If we had
+no special reason to believe that two weights of the same type were diﬀerent,
+we ﬁxed them at the same value (the eﬀect of TH1 cells on TH1 cytokin es
+and the eﬀect of TH2 cells on TH2 cytokines, for example). This was d one
+in order to limit the size of the parameter space.
+2.4 Model description
+The structure of the model is simply a mathematical description of t he ﬁnd-
+ingsinIDDMandEAE.Thebasicpartofthemodelistheoppositionbet ween
+id cells and anti-id cells. The CD4 are the id cells and the naive CD4 popula-
+tionproliferatesproportionallytotheantigenconcentration. The suppressors
+are the anti-id cells, and they proliferate proportionally to the conc entration
+of id cells (Figure 1A).
+The second division of this model is into TH1 and TH2 id cells. Both
+the TH1 and TH2 cells originate from the naive id cell. The TH1 cell type is
+associated with a TH1 cytokine type andthe TH2 cell type is associat ed with
+a TH2 cytokine type. We assume that each cell enhances its own cyt okine
+type [27] and inhibits the production of the opposing type. Each cyt okine
+encourages the production of the appropriate cell type and inhibit s the other
+type (Figure 1B).
+The macrophages have a double eﬀect: They serve as APCs and act ivate
+naive CD4 cells [23], and they secrete cytokines that enhance T cell d iﬀeren-
+tiation into TH1 type cells [28] (and inhibit diﬀerentiation into TH2 cells).
+The macrophages are inﬂuenced by the TH1 cytokines, which activa te them
+to migrate into the inﬂammatory site. Since macrophages respond t o TH1
+cytokine and are inhibited by TH2 cytokines, changes in the macroph age
+concentration depend on the diﬀerences between the concentra tions of TH1
+and TH2 cytokine types.
+The anti-id cells are of a TH1 type. This assumption is based on data
+from EAE and IDDM [10, 8]. We thus postulate that the anti-id cells are
+inhibited by TH2 type cytokines. And ﬁnally, we assume that there is a basic
+concentration and diﬀerentiation rate of CD4 cells into TH1 and TH2; but
+7
+1A 1B
+✗
+✖✔
+✕APC+Antigen
+✗
+✖✔
+✕Idiotopic cell
+✗
+✖✔
+✕Anti Id cell❄♣♣♣♣♣♣♣♣♣♣✻❄✗
+✖✔
+✕APC+Antigen
+✗
+✖✔
+✕Naive Id cell
+✗
+✖✔
+✕Th1 Id cell✗
+✖✔
+✕Th2 Id cell
+✗
+✖✔
+✕Th1 cytokine✗
+✖✔
+✕Th2 cytokine❄
+❄ ❄✻ ✻❄ ❄✻ ✻
+♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣
+♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣✒ ■
+Figure 1: The basic features of the model. 1A-Regulation of the id ce ll
+population by anti-id cells. 1B - Competition between TH1 T cells and TH2
+T cells. Full lines designate activation. Broken lines designate suppre ssion.
+thenaturalsituation(when thereareno cytokines involved) tend s towardthe
+TH2 dominated state (a healthy situation). The above model is desc ribed in
+Figure 2
+2.5 Model mechanism
+We have two basic steady states (Figure 3), and all the cells and cyt okines
+administrated only move the model from one steady state to the ot her, and
+back. The basic situation is a TH2 type steady state, which is assume d
+to be healthy, whereas the TH1 steady state leads to autoimmune d isease.
+In contrast to the general view, the TH2 steady state represen ts a global
+situation of the system, and not the concentration of a single cell o r cytokine.
+Note that the absence of disease does not mean that the system is at rest; the
+8
+✗
+✖✔
+✕APC+Antigen
+✗
+✖✔
+✕Naive Id
+✗
+✖✔
+✕TH1 Id✗
+✖✔
+✕TH2 Id
+✗
+✖✔
+✕TH1 cytokine✗
+✖✔
+✕TH2 cytokine✗
+✖✔
+✕C cytokine
+✗
+✖✔
+✕Anti Id✗
+✖✔
+✕MΦ❄
+♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣
+✻
+❄♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣✻❈
+❈
+❈
+❈
+❈
+❈
+❈
+❈
+❈
+❈
+❈❈❲♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣✻✄
+✄
+✄
+✄
+✄
+✄
+✄
+✄
+✄
+✄
+✄✄✎❄ ❄✻ ✻❄ ❄✻ ✻
+♣♣♣♣♣♣♣♣✠✛✻
+❄✲
+✒
+Figure 2: Flow chart of the model. The model is based on a TH1/TH2
+balance. If the TH1 concentration is too high the target organ is at tacked. If
+there is a high TH2 concentration, the target organ remains health y. Dotted
+lines indicate inhibition; full lines indicate stimulation. There is also an
+inhibition of TH2 on the production of TH1 and vice versa, but these lin es
+were not drawn in order not to overload the graph.
+9
+TH2 steady state is associated with relatively low concentrations of reacting
+cells. Nevertheless the id and ant-id cells are still reacting at the sam e rate,
+but at a lower concentration. In other words the healthy state me rely looks
+like it is at rest; on the contrary health like disease is a state of intera ctions
+[29].
+When we administer cells or antigen and adjuvant, we push the syste m
+toward the TH1 state (Figure 4). Following administration of T cells, w hich
+are primarily TH1 type cells, the number of TH1 cells is high enough to
+start the production of TH1 cytokines that inhibit the TH2 cytokine s. The
+system then falls into the TH1 steady state, which is the diseased st ate.
+Another way to induce disease is to immunize the animal with antigen an d
+adjuvant. We propose that the adjuvant stimulates macrophage s to produce
+C type cytokines. The antigen together with the cytokines induces CD4 T
+cell proliferationanddiﬀerentiation into TH1 cells, bringing thesyste m again
+to a TH1 type steady state.
+One way to heal the disease is to administer free antigen (Figure 5) in
+an amount that can raise the total number of naive CD4 cells that be come
+TH1 CD4 cells. The resulting high concentration of CD4 cells will activat e
+an increase in the number of anti-id cells. At this point, we assume tha t the
+lifespan of the anti-id cells is longer than that of the CD4 cells; the num ber of
+anti-id cells will remain high even after the number of CD4 id cells decrea ses
+(due to the fall in antigenic stimulation). Once the total number of C D4 cells
+is below a certain threshold, the system returns by itself to the hea lthy TH2
+situation.The basic situation is the TH2 situation.
+The return to a TH2 state, following antigen administration, can be p ara-
+doxically inhibited by the administration of IL-4 with the antigen (Figur e 6).
+The reason is as follows: When we administer IL-4 (which is represent ed
+by type B cytokines), we inhibit the production of anti-id cells. In the ab-
+sence of a suﬃcient number of anti-id cells, the number of CD4 eﬀect ors cells
+remains above the threshold and the system stays in a TH1 state. I f, how-
+ever, the quantity of IL-4 is high enough to overcome TH1 dominanc e and
+starts activating TH2 T cells directly, then the TH1 cell concentrat ion will
+decrease due to the production of TH2 cytokines by the newly form ed TH2
+cells, despite the low number of anti-id cells.
+The administration of anti-IL-4 antibody with the antigen can parad oxi-
+cally act in a manner similar to the administration of IL-4 with the antige n.
+Note that in both cases the inhibition of disease is weaker than the eﬀ ect of
+administrating free antigen. The administration of anti-IL-4 antibo dy has
+10
+012
+0120100200300
+TH1TH1 steady stateTH1 vs TH2 concentration as a function of time.
+TH2TH2 steady statetime
+0 50 100 150 20000.20.40.60.81Concentration of cytokines
+time [arbitrary units]TH1 cytokines
+TH2 cytokines
+C cytokines  
+0 50 100 150 2000.511.522.5Concentration of antigen, id and anti−id cells
+timeid cells     
+anti−id cells
+free antigen 
+11.522.5
+00.510100200300
+anti−id cellConcentration of id vs anti−id cells
+id celltime3A 
+TH1 steady state 
+012
+0120100200300
+TH1TH1 vs TH2 concentration as a function of time.
+TH2TH2 steady statetime
+0 50 100 150 20000.20.40.60.811.21.4Concentration of cytokines
+time [arbitrary units]TH1 cytokines
+TH2 cytokines
+C cytokines  
+0 50 100 150 2000.40.50.60.70.80.91Concentration of antigen, id and anti−id cells
+timeid cells     
+anti−id cells
+free antigen 
+0.511.5
+00.511.50100200300
+anti−id cellConcentration of id vs anti−id cells
+TH2 steady state
+id celltime3B 
+Figure 3: The basic steady states. The ﬁrst steady state is TH1 do minated
+(3A)andthesecond isTH2 dominated(3B). Themodel issuch that, starting
+from a naive state, the system equilibrates into a TH2 steady state . 3A and
+3B show concentrations in arbitrary units. Both 3A and 3B are comp osed of
+4 graphs. The evolution in time of the TH1 and TH2 T cells concentratio n
+is depicted in the upper left drawing. The upper right drawing shows t he
+cytokines concentration as a function of time. The drawing in the se cond
+row to the left shows the average concentration of id cells (TH1, TH 2 and
+naive cells), the concentration of anti-id cells and the concentratio n of free
+antigen. The drawing at the right of the second row show the evolut ion in
+time of the id and the anti-id cell concentration. Note that the TH2 s teady
+state (3B) manifests a lower concentration of both id and anti-id ce lls.11
+012
+0120100200300
+[TH1]TH1 steady stateTH1 vs TH2 concentration as a function of time.
+[TH2]TH2 steady statetime
+0 50 100 15000.20.40.60.811.21.4Concentration of cytokines
+time [arbitrary units]TH1 cytokines
+TH2 cytokines
+C cytokines  
+0 50 100 1500.511.52Concentration of antigen, id and anti−id cells
+timeid cells     
+anti−id cells
+free antigen 
+0.511.52
+0.40.60.810100200300
+anti−id cellConcentration of id vs anti−id cells
+id celltimeTH1 steady state 
+TH2 steady state4A 
+012
+0120100200300
+TH1TH1 steady stateTH1 vs TH2 concentration as a function of time.
+TH2TH2 steady statetime
+0 50 100 15000.511.522.53Concentration of cytokines
+time [arbitrary units]TH1 cytokines
+TH2 cytokines
+C cytokines  
+0 50 100 15000.511.522.533.5Concentration of antigen, id and anti−Id cells
+timeid cells     
+anti−id cells
+free antigen 
+024
+0120100200300
+anti−id cellTH1 steady stateConcentration of id vs anti−id cells
+id celltime
+TH2 steady state4B 
+Figure 4: The Transition fromTH2 (healthy) steady state to a TH1 ( disease)
+steady state. 4A shows the eﬀect of adminstrating (arrow) TH1 c ells. 4B
+shows the eﬀect of immunization with antigen and adjuvant (arrow) . Note
+that the TH1 steady state is associated with enhancement of the a nti-id cells.
+12
+012
+0120200400
+TH1TH1 steady stateTH1 vs TH2 concentration as a function of time.
+TH2TH2 steady statetime
+0 50 100 150 20000.511.522.5Concentration of cytokines
+time [arbitrary units]TH1 cytokines
+TH2 cytokines
+C cytokines  
+0 50 100 150 20001234Concentration of antigen, id and anti−id cells
+timeid cells     
+anti−id cells
+free antigen 
+024
+0120100200300400
+anti−id cellTH1 steady stateConcentration of id vs anti−id cells
+id celltimeTH2 steady state
+Figure 5: Healing with free antigen. Administrating free antigen raise s the
+TH1 cell concentration, and then stimulates anti-id cells. Folowing it t he
+anti-id cells concentration rises. The anti-id in turn supress the sys tem and
+it returns back to its natural TH2 steady state. The notation use d in this
+ﬁgure is identical to the notation used in ﬁgure 3.
+13
+012
+0120100200300
+TH1TH1 vs TH2 concentration as a function of time.
+TH1 steady state
+TH2TH2 steady statetime
+0 50 100 15000.511.522.5Concentration of cytokines
+time [arbitrary units]TH1 cytokines
+TH2 cytokines
+C cytokines  
+0 50 100 15001234Concentration of antigen, id and anti−id cells
+timeid cells     
+anti−id cells
+free antigen 
+024
+0120100200300
+anti−id cellTH1 steady stateConcentration of id vs anti−id cells
+id celltimeTH2 steady state
+Figure 6: Inhibition of the healing eﬀect of free antigen by administra tion
+of IL4. IL4 has a double role in this case. At the ﬁrst stage it reduce s the
+number of TH1 id cells, and at the second stage it reduces the numbe r of
+anti-id cells, so that their eﬀect is weakened. The notation used in th is ﬁgure
+is identical to the notation used in ﬁgure 3.
+14
+no eﬀect on the system at ﬁrst, since the concentration of IL-4 is low. The
+eﬀect of the antigen is then as described at the beginning of the sec tion; the
+antigen induces a sharp rise in the concentration of id CD4 cells, and f ollow-
+ing the id CD4 cells, the anti-id cell concentration raises. These anti- id cells
+produce a long term decrease in the concentration of the CD4 id cells . At
+a later stage, when the concentration of CD4 id cells has decreased to a low
+level, the eﬀect of the anti-IL-4 antibody becomes important. The level of
+id CD4 TH1 type cells at this stage is low, and the system should now sta rt
+to produce TH2 type cells and cytokines. However the anti-IL-4 an tibody
+now inhibits the production of IL-4, and the system has a lower prob ability
+to return to a TH2 state.
+Just as the administration of TH2 cytokines can inhibit the transition
+back to a TH2 state, the administration of TH1 cytokines can rise th e prob-
+ability of such a transition. The continuous administration of TH1 cyt okines
+will of course keep the cytokines in the TH1 proﬁle and induce or enha nce
+the disease. Administration of the TH1 cytokines at the onset of th e disease
+(Figure 7) will lead to an increase in the production rate of TH1 id CD4
+cells; the high concentration of TH1 cells will raise the concentration of the
+anti-id cells, which will later feed back to decrease the concentratio n of CD4
+id cells. If the CD4 id cell concentration decreases to a low level, the s ys-
+tem will return to its natural steady state, which is a TH2 steady st ate, as
+described above.
+The administration of some cytokines has been shown to have no obs erv-
+able eﬀect on the system. This does not mean that these cytokines have no
+important role in the dynamics of this system. In fact the lack of an o bserv-
+able eﬀect can be due to a high endogenous concentration of the cy tokines;
+adding additional amounts cannot enhance the eﬀect.
+Administration of a cytokine may have no eﬀect if the cytokine conce n-
+tration is close to, or above its threshold for causing an eﬀect. For example,
+administration of IL-12 at the onset of disease may have no eﬀect if the IL-12
+eﬀect is already at its maximum. Paradoxically in this case, the administ ra-
+tion of a low dose of anti-IL-12 antibody will also have no eﬀect, since the
+precise concentration of the molecule is not important. A large chan ge in the
+concentration of the molecule leads to a small change in its eﬀects. T his can
+be understood if the eﬀect is bell shaped as a function of the conce ntration.
+At low concentrations, a small change in the concentration leads to a large
+change in the function value. However at the top of the bell, a large c hange
+in the concentration leads to very small change in the function value .
+15
+012
+0120100200300
+TH1TH1 steady stateTH1 vs TH2 concentration as a function of time.
+TH2TH2 steady statetime
+0 50 100 15000.511.522.5Concentration of cytokines
+time [arbitrary units]TH1 cytokines
+TH2 cytokines
+C cytokines  
+0 50 100 15000.511.52Concentration of antigen, id and anti−id cells
+timeid cells     
+anti−id cells
+free antigen 
+0.511.52
+00.511.50100200300
+anti−id cellTH1 steady stateConcentration of id vs anti−id cells
+id celltimeTH2 steady state
+Figure 7: Healing by administrating TH1 cytokines. The TH1 Cytokines
+raise the TH1 cell concentration, inducing a rise in the concentratio n of anti-
+id cells. The anti-id cells lower the concentration of the id cells, return ing the
+system back to its normal (healthy) TH2 steady state. The notat ion used in
+this ﬁgure is identical to the notation used in ﬁgure 3.
+16
+2.6 Redundancy and gene knock-out mice
+Gene knock-out mice lacking some of the TH1 cytokines can still deve lop
+a TH1-dependent disease. However this does not contradict the m odel we
+presented, which describes the evolution of the disease as the tra nsition to
+a TH1 type cytokine proﬁle. The cytokines in this model are describe d
+as a group with the same approximate action. Even if such a group lac ks
+one of its components, the eﬀect of the group as a whole is not alter ed.
+The TH1/TH2 phenotype does not depend on a single cytokine, since the
+concentration of each one of the TH1 and TH2 cytokines can chang e by a
+large number of mechanisms. The immune system cannot aﬀord to ch ange
+its general phenotype each time an external factor modiﬁes the c oncentration
+of a single cytokine. The immune system achieves its robustness to e xternal
+changes in the cytokine proﬁle through redundancy [29]. A large num ber of
+cytokines can each have common eﬀects. Thus a certain result can occur
+even if not all the cytokines leading to the eﬀect are expressed.
+Indeed, the fact that the body uses many redundant cytokines c an have a
+larger meaning. Consider that the eﬀects mediated by cytokines ha ve at least
+two functions. The ﬁrst function is to maintain a healthy steady sta te, and
+the second function relates to the ﬁne details of the steady state . In normal
+behavior, the changes are felt at the level of the details, but in ext reme
+situations, like the response to an external pathogen, the body w ill try to
+change its total steady state and produce a fast and strong res ponse.
+3 Discussion
+3.1 Regulation of autoimmunity
+This paper presents a simpliﬁed model of thekinetics ofthe concent rations of
+the main cell and cytokine types in the evolution of a TH1 type autoimm une
+disease. It shows thateven simple dynamics canexplainmanyofthec omplex
+features in the evolution of the response. We have grouped the ma jor cells
+and cytokines into single types, although there are obviously diﬀere nces in
+the roles taken by each one of the cells we have grouped together. This
+model ignores the eﬀects of localization and of tissue barriers (for example,
+theblood/brainbarrier inEAE) in inhibiting the passage ofsome of cells and
+allowing others. We did not take into account the eﬀects of the tissu e cells
+(for example astrocytes in EAE, or islet cells in IDDM), of the cytokin es they
+17
+secrete, and of B cells and antibodies. Some major mechanisms were ignored
+including anergy and the release of free antigen due to cell destruc tion.
+All these simpliﬁcations render this a general feature model rathe r than
+a precise quantitative description of the cell concentrations. Our model is
+built on a double system of positive and negative feedback between id and
+anti-id cells, and between TH1 and TH2 states. Such a structure co uld
+be the basic feature of the selection between TH1 and TH2 for a gro up of
+important antigens in the body. This model seems to describe the sit uation
+both in EAE and in IDDM, and we have no reason to believe that it is
+not general. Negative feedback keeps the general concentratio ns of all kinds
+of cells within reasonable limits, and positive feedback enables the sys tem
+to mount a fast enough response to an antigen when needed. With t his
+structure, it is possible to maintain a population of T cells responding t o
+self-antigens of the body, keeping them in a TH2 state where they m ay be
+restrained.
+3.2 Models
+This kind of model shows the complex dynamics attained even by a sma ll
+system containing only 5 cell types and 3 cytokine types. It shows t hat
+even small systems need a kinetic description, and the system cann ot be
+understood by an overall estimation of the eﬀect of one cell type o n the
+others. Such models must be robust to changes in parameters, sin ce it is
+obvious that the interactions between the cells in the body are not p recisely
+ﬁxed and that the cells are constantly subjected to chemical noise impinging
+onthem. Nevertheless, the body must keep its general steady st ate, although
+the precise quantity of any cell is not very important.
+3.3 Feedback loops
+The present type of modeling shifts our attention from the number s of each
+cell type to the global state of the immune system, which most of th e time
+should be in some quasi-equilibrium between many opposing inﬂuences. The
+way to analyze such a global state is by positive and negative feedba ck loops
+and the interactions between them. According to this formalism, ou r model
+can be described as a large negative feedback loop, built of 4 interna l loops :
+•The id-anti-id cell negative feedback loop, in which are nested three
+18
+positive and one negative feedback loop. These include:
+•The TH1 and TH2 cells each of which feedsback positively on itself.
+•The TH1 and macrophage positive feedback.
+•The TH2 and anti-id cell negative feedback.
+In conclusion, the description of disease evolution can be based on a global
+kineticview, andthesubsystems arenotcelltypesbutfeedbacklo ops. (ﬁgure
+8)
+4 Acknowledgment
+We wish to thank Prof G. Steinman for the useful data on EAE he gra ciously
+supplied.
+Irun R.Cohen is the incumbent of the Mauerberg Chair in Immunology,
+Director of the Robrt Kock-Minerva Center for Research in Autoim mune
+Disease, and Director of the Center for the Study of emerging Dise ases.
+19
+8A
+8B 8C
+8D
+8E✗
+✖✔
+✕id cell
+✗
+✖✔
+✕Anti-id cell❄ ♣♣♣♣♣♣♣♣♣♣✻
+✗
+✖✔
+✕TH1 id cell✗
+✖✔
+✕TH2 id cell
+✗
+✖✔
+✕TH1 cytokine✗
+✖✔
+✕TH2 cytokine❄ ❄✻ ✻
+✗
+✖✔
+✕C cyt✗
+✖✔
+✕TH1 id
+✗
+✖✔
+✕MΦ✗
+✖✔
+✕TH1 cyt✲
+✛❄✻
+✗
+✖✔
+✕TH2 id
+✗
+✖✔
+✕anti-id
+✗
+✖✔
+✕TH2 cyt✟✟✟✟✟✟ ✙
+❄✻ ♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣
+♣♣♣♣♣♣♣♣♣♣♣♣♣♣♣✒
+■
+Figure 8: A schematic description of the ﬁve feedback loops. 8A Sho ws the
+negative feedback loop between id and the anti-id cells. 8B and 8C sho w the
+positive feedback of the TH1 and TH2 cell and cytokines on themselv es. 8D
+shows the positive feedback of the macrophages and the TH1 id cells and
+macrophages. 8E shows the negative feedback between the TH2 c ytokines
+and the anti-id cells.20
+References
+[1] Liblau R.S., Singer S.M., McDevitt H.O. 1995. TH1 and TH2
+CD4+ T cells in the pathogenesis of organ-speciﬁc autoim-
+mune diseases. Immunol Today 16(1):34-38
+[2] Lafaille J.J. 1998. The role of helper T cell subsets in autoim-
+mune diseases. Cytokine Growth Factor Rev 9(2):139-51
+[3] Nagelkerken L., Blauw B., Tielemans M. 1997. IL-4 abrogates
+the inhibitory eﬀect of IL-10 on the development of experi-
+mental allergic encephalomyelitis in SJL mice. Int Immunol
+9(9):1243-51
+[4] Tanuma N., Shin T., Kogure K, Matsumoto Y. 1999. Diﬀer-
+ential role of TNF-alpha and IFN-gamma in the brain of rats
+with chronic relapsing autoimmune encephalomyelitis. Journal
+Of Neuroimmunology 96,1:57-65
+[5] Thomas H.E., Parker J.L., Schreiber R.D., Kay T.W. 1998.
+IFN-gammaactiononpancreaticbetacellscauses classIMHC
+upregulation but not diabetes. Clin Invest 102(6):1249-57
+[6] Ferber I.A., Brocke S., Taylor-Edwards C., Ridgway W.,
+Dinisco C., Steinman L., Dalton D., Fathman C.G. 1996. Mice
+withadisruptedIFN-gammagenearesusceptibletotheinduc-
+tion of experimental autoimmune encephalomyelitis (EAE). J
+Immunol 156(1):5-7
+[7] Hultgren B., Huang X., Dybdal N., Stewart, T.A. 1996. Ge-
+netic Absence of γInterferon Delays but Does Not Prevent
+Diabetes in NOD Mice, Diabetes 45:812-817
+[8] Kumar V. , Sercarz E. 1993. T cell regulatory circuitry:
+antigen-speciﬁc and TCR-idiopeptide-speciﬁc T cell interac-
+tions in EAE. Int Rev immunol 9(4):287-297
+[9] Ablamunits V., Elias D., Reshef T. and Cohen I.R. 1998. Islet
+T Cells Secreting IFN- γin NOD Mouse Diabetes Arrest by
+p277 Peptide Treatment. Journal of Autoimmunity 11:73-81
+21
+[10] Elias D., Tikochinski Y., Frankel G., Cohen I.R. 1999. Reg-
+ulation of NOD mouse autoimmune diabetes by T cells that
+recognize a TCR CDR3 peptide. Int Immunol 11(6):957-66
+[11] Makino A., Kunimoto K, Muraoka Y., Mizushima Y., Katagiri
+K., Tochino Y. 1980. Breeding of a non-obese diabetic strain
+of mice. Exp Anim 29:1-13
+[12] Cover T.M., Thomas J.A. 1991. Elements of Information The-
+ory, Wiley, John and Sons, Incorporated
+[13] Haykin S., 1998. Neural Networks, A comprehensive founda-
+tion, Macmillan publishing company
+[14] Zamvil S.S. and Steinman L. 1990. The T Lymphocyte In Ex-
+perimental Allergic Encephalomyelitis. Annu. Rev. Immunol.
+8:579-621.
+[15] Swanborg R.H. 1995. Experimental autoimmune en-
+cephalomyelitis inrodentsasamodelforhumandemyelinating
+disease. Clin Immunol Immunopathol 77(1):4-13
+[16] Sobel R.A., Blanchette B.W., Bhan A.K., Colvin R.B.
+1984. The immunopathology of experimental allergic en-
+cephalomyelitis. I. Quantitative analysis of inﬂammatory cells
+in situ. J Immunol 132(5):2393-401
+[17] Ben-NunA., CohenI.R.1981Vaccinationagainstautoimmune
+encephalomyelitis (EAE): attenuated autoimmune T lympho-
+cytes confer resistance to induction of active EAE but not to
+EAE mediated by the intact T lymphocyte line. Eur J Im-
+munol 11:949-52
+[18] Xiao B.G., Huang Y.M., Xu L.Y, Ishikawa M., Link H.
+1999. Mechanisms of recovery from experimental allergic en-
+cephalomyelitis induced with myelin basic protein peptide 68-
+86 in Lewis rats: a role for dendritic cells in inducing apoptosis
+of CD4+ T cells. Neuroimmunol 97(1-2):25-36
+[19] Cameron M.J., Arreaza G.A., Zucker P., Chensue S.W., Stri-
+eter R.M., Chakrabarti S.,. Delovitch T.L. 1997. IL-4 prevents
+22
+insulitis and insulin-dependent diabetes mellitus in nonobese
+diabetic mice by potentiation of regulatory T helper-2 cell
+function. J Immunol 159(10):4686-92
+[20] Steinman L. Personal comunication
+[21] Rossini A.A. Mordes J.P., and Lik A.A. 1985. Immunology of
+Insulin-Dependent Diabetes Mellitus. Annu. Rev. Immunol 3:
+289-320. .
+[22] Kamogawa Y., Minasi L.A., Carding S.R., Bottomly K.,
+Flavell R.A.1993. The relationship of IL-4- and IFN gamma-
+producingTcellsstudiedbylineageablationofIL-4-producing
+cells. Cell 75(5):985-95
+[23] SantinA.D., Hermonat P.L., RavaggiA., Chiriva-Internati M.,
+Cannon M.J., Hiserodt J.C., Pecorelli S., Parham G.P. 1999.
+Expression of surface antigens during the diﬀerentiation of hu-
+man dendritic cells vs macrophages from blood monocytes in
+vitro. Immunobiology 200(2):187-204
+[24] Paul W.E., Seder R.A. 1994. Lymphocyte response and cy-
+tokines. Cell 76:241-251
+[25] Press W.H., Teukolsky S.A. VetterLing W.T. 1992. Numerical
+Recipes in Fortarn, Cambridge University Press
+[26] Wahl, S. M., D. A. Hunt, L. Wakeﬁeld, N. McCartney-Francis,
+L. M. Wahl, A. B. Roberts and M. B. Sporn 1987. Trans-
+forming growth factor beta induces monocyte chemotaxis and
+growth factor production. Proc. Natl. Acad. Sci. USA 84:5788-
+5792
+[27] Tian J., Lehmann P.V., Kaufman D.L. 1997. Determinant
+spreading of T helper cell 2 (Th2) responses to pancreatic islet
+autoantigens. J Exp Med 186(12):2039-43
+[28] Waldburger K.E., Hastings R.C., Schaub R.G., Goldman
+S.J., Leonard J.P. 1996. Adoptive transfer of experimental
+allergic encephalomyelitis after in vitro treatment with re-
+combinant murine interleukin-12. Preferential expansion of
+23
+interferon-gamma-producing cells and increased expression of
+macrophage-associated inducible nitric oxide synthase as im-
+munomodulatory mechanisms. Am J Pathol 148(2):375-82
+[29] Cohen I.R. 2000. Tending Adam’s garden: Evolving the Cog-
+nitive Immune Self. Academic Press, San Diego CA.
+[30] Lider O., Reshef T., Beraud E., Ben-Nun A., Cohen I.R.
+1988. Anti-idiotypic network induced by T cell vaccination
+against experimental autoimmune encephalomyelitis. Science
+239(4836):181-3
+24

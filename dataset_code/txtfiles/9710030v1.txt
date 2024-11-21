@@ -1,0 +1,973 @@
+arXiv:cond-mat/9710030v1  [cond-mat.stat-mech]  2 Oct 1997Testing a new Monte Carlo Algorithm for Protein Folding
+Ugo Bastolla1, Helge Frauenkron1, Erwin Gerstner1,2, Peter Grassberger1,2, and Walter Nadler1
+1HLRZ c/o Forschungszentrum J¨ ulich, D-52425 J¨ ulich, Germ any
+2Physics Department, University of Wuppertal, D-42097 Wupp ertal, Germany
+(August 8, 2018)
+Wedemonstratethattherecentlyproposedpruned-enriched RosenbluthmethodPERM(P.Grass-
+berger, Phys. Rev. E, in press (1997) ) leads to extremely eﬃcient algorithms for the folding of
+simple model proteins. We test it on several models for latti ce heteropolymers, and compare to
+published Monte Carlo studies of the properties of particul ar sequences. In allcases our method is
+faster than the previous ones, and in several cases we ﬁnd new minimal energy states. In addition to
+producing more reliable candidates for ground states, our m ethod gives detailed information about
+the thermal spectrum and, thus, allows to analyze static asp ects of the folding behavior of arbitrary
+sequences.
+INTRODUCTION
+Protein folding [1–4] is one of the most interesting and
+challenging problems in polymer physics and mathemat-
+ical biology. It is concerned with the problem of how a
+heteropolymer of a given sequence of amino acids folds
+intopreciselythat geometricalshapeinwhichit performs
+its biological function as a molecular machine [5,6]. Cur-
+rently, it is much simpler to ﬁnd coding DNA — and,
+thus, also amino acid — sequences than to elucidate the
+3-dstructures of given proteins. Therefore, solving the
+protein folding problem would be a major break-through
+in understanding the biochemistry of the cell, and, fur-
+thermore, in designing artiﬁcial proteins.
+In this contribution we are concerned with the direct
+approach: given a sequence of amino acids, a molecu-
+lar potential, and no other information, ﬁnd the ground
+state and the equilibrium state at physiological temper-
+atures. Note that we are not concerned with the kinetics
+of folding, but only in the ﬁnal outcome. Also, we will
+not address the problems of how to ﬁnd good molecular
+potentials [7–9], and what is the proper level of detail
+in describing proteins [8]. Instead, we will use simple
+coarse-grained models which have been proposed in the
+literature and have become standards in testing the eﬃ-
+ciency of folding algorithms.
+Aplethoraofmethodshavebeenproposedtosolvethis
+problem, ranging from simple Metropolis Monte Carlo
+simulations at some nonzero temperature [10] overmulti-
+canonical simulation approaches [11] to stochastic op-
+timization schemes based, e.g., on simulated annealing
+[12], and genetic algorithms [13,14]. Alternative methods
+use heuristic principles [15], information from databases
+of known protein structures, [16], sometimes in combi-
+nation with known physico-chemical properties of small
+peptides.
+The algorithms we apply here are variants of thepruned-enriched Rosenbluth method (PERM) [17]. This
+is a chain growth approach based on the Rosenbluth-
+Rosenbluth (RR) [18] method. Preliminary results have
+been published before [19]. Here we will provide more
+details on the algorithm and on the analyses that can be
+performed, and we will present more detailed results on
+ground state and spectral properties, and on the folding
+behavior of the sequences analyzed.
+THE MODELS
+The models we study in this contribution are het-
+eropolymers that live on 2- and 3-dimensional regular
+lattices. They are self-avoiding chains with attractive or
+repulsive interactions between neighboring non-bonded
+monomers.
+The majority of authors considered only two kinds of
+monomers. Although also diﬀerent interpretations are
+possible for such a binary choice, e.g. in terms of positive
+and negative electric charges [20], the most important
+model of this class is the HP model [21,22]. There, the
+two monomer types are assumed to be hydrophobic (H)
+and polar (P), with energies ǫHH=−1, ǫHP=ǫPP=
+0 for interaction between not covalently bound neigh-
+bors. Since this parameter set leads to highly degener-
+ate ground states, alternative parameters were proposed,
+e.g.ǫ= (−3,−1,−3) [23] and ǫ= (−1,0,−1) [24]. Note,
+however, that in these latter parameter sets, since they
+are symmetric upon exchange of H and P, the intuitive
+distinction between hydrophilicand polarmonomersgets
+lost.
+An interesting extension to the HP model can be ob-
+tained by allowing the interactions to be anisotropic.
+This is done by introducing amphipatic (A) monomers
+that have hydrophobic as well as polar sides [25]. Such
+a generalization is possible for all lattice types, but we
+conﬁne ourselves to two dimensions (2d) here. It can be
+1
+shown that in this HAP model for a wide range of inter-
+action parameters the inverse folding problem — i.e. the
+determination of a sequence that has a particular confor-
+mation as ground state — can be solved by construction
+[25]. While 3-dimensional chiral amphipatic monomers
+can be considered as well as non-chiral (the sides are
+allowed to rotate in the latter), in 2d only non-chiral
+monomers are possible.
+In the other extremal case of models, all monomers of
+a sequence are considered to be diﬀerent, and interaction
+energies are drawn randomly from a continuous distri-bution [26,27]. These models correspond, eﬀectively, to
+assuming an inﬁnite number of monomer types.
+THE SEQUENCES
+For the above models various sequences were analyzed
+in the literature, and in [19] we took these analyses as a
+test for our algorithm. Here we will take a closer look at
+the properties of some of the sequences that were consid-
+ered there.
+TABLE I. Newly found lowest energy states for binary sequenc es with interactions ǫ= (ǫHH,ǫHP,ǫPP). Conﬁgurations are
+encoded as sequences of r(ight),l(eft),u(p),d(own),f(orward), and b(ackward).
+N d ǫ sequence oldEminRef.
+conﬁguration E
+100 2 ( −1,0,0) P6HPH 2P5H3PH5PH2P2(P2H2)2PH5PH10PH2PH7P11H7P2HPH 3P6HPH 2 −44 [28]
+r6ur2u3rd5luldl2drd2ru2r3(rulu)2urdrd 2ru3lur3dld2rur5d3l5uldl2d3ru2r3d3l2urul −47
+rdldldrd 2r2d3l2drdldr 2dl2dl2(urul)2urur2ul2u2l2drd2lul2uru2r2u4rul3drd3l2d2−
+ldlu2ru2lu3rd2rdr −47
+u3r3ur5dl4drd2r2ulur4dr2dld2lu2luld2rdl2ul3dr2dr2drurdr 3d2luld2lu2l2drd2lulu3l2ul2u3ru−47
+rdr3dldl3drdrur 2ur2ulur2urd2(ldrd)2l2u2ldl2dr2dr3dl2dlulul 2ul2d3ldr3u2rdrdldl−
+dr2urur4u3rul −47
+rd3rdldl2uld3ld2rur3dl2dr6ul3u2l3ur3ur2dld2rur2ulu2l2u3lu3r2d5r2d2rdru2lu2r2u2ldl2dl−47
+r3u3ru2ru3l2ur2ul2urul4dr2dldrdld 2rur2dld2luld2rdl3uru2ldld3l3ururu 2rur2ulu−
+ldldl2u3ld4r −47
+100 2 ( −1,0,0) P3H2P2H4P2H3(PH2)3H2P8H6P2H6P9HPH 2PH11P2H3PH2PHP2HPH 3P6H3 −46 [28]
+ru2ldlu2ld2lu2lurulur 2d2ru4r2dld4ru3rdrdld 6rdru3rul2u2rdr2ululu2(rd)3rur2dldld4lulu2ru−49
+u3rdru2rd2ru2r2u2ldluldlu 5ld6l2d2lu3r2u6l2d3ldr2dl2dldlu2ru2ldl2drdl2d2rurdrd 3ru3ru−49
+ul2drdl2u3ld4ldrdl2u2l2d3l2uru3r2u3rd3ru4rul5dldr2d2luldldrdldlu 3lul2ulur2dr2u3rd4l−49
+60 2 (−1,0,0) P2H3PH8P3H10PHP3H12P4H6PH2PHP −34 [13]
+r5d2lul3dld2(ru)2rd2ldldrdr 2uluru 2rd2rdldr2u3lu3rd2rur −36
+80 3 (−1,0,−1) PH2P3(H3P2H3P3H2P3)3H4P4(H3P2H3P3H2P3)H2 −94 [24,29]
+lbruflbl 2br2drur2dldl3ulfrdr 3urfldl 3ulurur 3drblul 3br3bl3dldrdr 3urul2dlu −98
+2d HP model
+Two-dimensional HP chains were used in several pa-
+pers as test cases for folding algorithms. We shall discuss
+the following ones:
+(a)Severalchainsoflength20to64werestudiedin[13]
+by means of a genetic algorithm. These authors quote
+supposedly exact ground state energies, and lowest en-
+ergies obtained by simulations. While these coincide for
+the shorter chains ( N≤50), the authors were unable to
+fold the longer chains with N= 60 and 64.
+(b) Two chains with N= 100 were studied in [28].
+Theauthorsclaimedthattheirnativeconﬁgurationswere
+compact, ﬁtting exactly into a 10 ×10 square, and had
+energies −44 and−46, see Table I for the sequences and
+Fig. 1 and 2 for the respective proposed ground state
+structures. These conformations were found by a spe-
+cially designed MC algorithm which should be particu-
+larly eﬃcient for compact conﬁgurations.FIG. 1. Putative compact native structure of sequence 1
+from Table I ( E=−45) according to [28]; (ﬁlled circle) H
+monomers, (open circle) P monomers.
+2
+FIG. 2. Putative compact native structure of sequence 2
+from Table I ( E=−46) according to [28].
+2d HAP model
+To analyze the performance of PERM on the HAP
+model we used ǫ= (−4,−1,2) as energy parame-
+ters, for which set the inverse folding problem is solv-
+able [25]. We choose a 3-helix structure with N= 42,
+see Fig. 3, which is the ground state of the se-
+quencepA(HAAH)3PA3H10A3P(HAAH)3Ap, whereA
+denotes an amphipatic intra-chain group with one hy-
+drophobic and one polar side, while pdenotes an am-
+phipatic end group with one hydrophobic and two polar
+sides.
+FIG. 3. Ground state structure of the HAP sequence;
+(ﬁlled circle) H monomers, (structured circle) A monomers,
+(open circle) P monomers.
+3d HP model
+Ten sequences of length N= 48 were given in [30].
+Each of these sequences was designed by minimizing the
+energy of a particular target conformation in sequence
+space under the constraint of constant composition [31].The authors tried to ﬁnd the lowest energy states with
+two diﬀerent methods, one being an heuristic stochastic
+approach [15], the other based on exact enumeration of
+low energy states [32]. With the ﬁrst method they failed
+in all but one case to reach the lowest energy. With the
+second method in all but one cases they obtained con-
+formations with energies that were even lower than the
+putative ground states the sequences were designed for,
+while forone casethe groundstateenergywasconﬁrmed.
+Precise CPU times were not quoted.
+3d modiﬁed HP model
+A most interesting case is a 2-species 80-mer with in-
+teractions ( −1,0,−1) studied ﬁrst in [24]. These partic-
+ular interactions were chosen instead of the HP choice
+(−1,0,0) because it was hoped that this would lead to
+compact conﬁgurations. Indeed, the sequence was spe-
+cially designed to form a “four helix bundle” which ﬁts
+perfectly into a 4 ×4×5 box, see Fig. 4. Its energy in
+this putative native state is −94. Although the authors
+of [24] used highly optimized codes, they were not able
+to recover this state by MC. Instead, they reached only
+E=−91. Supposedly, a diﬀerent state with E=−94
+was found in [28], but ﬁgure 10 of this paper, which is
+claimed to show this conﬁguration, has a much higher
+value of E. Conﬁgurations with E=−94 but slightly
+diﬀerent from that in [24] and with E=−95 were found
+in [29] by means of an algorithm similar to that in [28].
+For each of these low energy states the author needed
+about one week of CPU time on a Pentium.
+FIG. 4. Putative native state of the “four helix bundle”
+sequence, see Table I, as proposed by O’Toole et al.. It has
+E=−94, ﬁts into a rectangular box, and consists of three ho-
+mogeneous layers. Structurally, it can be interpreted as fo ur
+helix bundles.
+3
+3d∞monomer types
+Sequences with N= 27 and with continuous inter-
+actions were studied in [27]. Interaction strengths were
+sampled from Gaussians with ﬁxed non-zero mean and
+ﬁxed variance. These N(N−1)/2 numbers were ﬁrst at-
+tributed randomly to the monomer pairs, then they were
+randomly permuted, using a Metropolis accept/reject
+strategy with a suitable cost function, to obtain good
+folders. Such “breeding” strategies to obtain good fold-
+ers were also developed and employed by other authors
+forvariousmodels [31,33,34],and seemnecessarytoelim-
+inate sequences which fold too slowly and/or unreliably.
+It is believed that also during biological evolution opti-
+mization processestook place with similareﬀects, sothat
+actual proteins are better folders than random amino se-
+quences.
+THE ALGORITHM
+The algorithms we apply here are variants of the
+pruned-enriched Rosenbluth method (PERM) [17], a
+chain growth algorithm based on the Rosenbluth-
+Rosenbluth (RR) [18] method. There, monomers are
+placed sequentially at vacant sites either with uniform
+probability, or with some non-uniform probability distri-
+bution. In either case it leads to weighted samples where
+each conﬁguration carries a weight W. For long chains
+or low temperatures, the spread in weights can become
+very wide which then leads to serious problems [35]. But
+since the weights accumulate as the chains grow, one can
+interfere during the growth process by ‘pruning’ conﬁg-
+urations with low weights and replacing them by copies
+of high-weight conﬁgurations. This is in principle simi-
+lar to population based methods in polymer simulations
+[36,37] and in quantum Monte Carlo (MC) [38], but the
+implementation is diﬀerent. Pruning is done stochasti-
+cally: if the weight of a conﬁguration has decreased be-
+lowathreshold W<, itiseliminatedwithprobability1/2,
+while it is kept and its weight is doubled in the other half
+of cases. Copying (‘enrichment’ [39]) is done indepen-
+dently of this. If Wincreases above another threshold
+W>, the conﬁguration is replaced by ncopies, each with
+weightW/n. Technically, this is done by putting onto a
+stack all information needed about conﬁgurations which
+still have to be copied. This is most easily implemented
+by recursive function calls. Thereby one avoids the need
+for keeping large populations of conﬁgurations [36–38].
+PERM has proven extremely eﬃcient for studies of lat-
+tice homopolymers near the θpoint [17]. It has also been
+successfully applied to phase equilibria [40], to the order-
+ing transition in semi-stiﬀ polymers [41], and to spiraling
+transitions of polymers with interactions depending on
+relative orientation of monomers [42]. We refer to thesepapers for more detailed descriptions of the basic algo-
+rithm.
+The main freedom when applying PERM consists in
+the a priori choice of the sites where to place the next
+monomer, in the thresholds W<andW>forpruningand
+copying,and inthe numberofcopiesmadeeachtime. All
+these features do not aﬀect the formal correctness of the
+algorithm, but they can greatly inﬂuence its eﬃciency.
+They may depend arbitrarily on chain lengths and on
+local conﬁgurations, and they can be changed freely at
+any time during the simulation. Thus the algorithm can
+‘learn’ during the simulation.
+In orderto applyPERM to heteropolymersat verylow
+temperatures,thestrategiesproposedin[17]aremodiﬁed
+as follows.
+(1) For homopolymersnear the theta-point it had been
+foundthat thebest choicefortheplacementofmonomers
+was not according to their Boltzmann weights, but uni-
+formly on all allowed sites [17,40]. This might be surpris-
+ing since the Boltzmann factor has then to be included
+into the weight of the conﬁguration, which might lead to
+large ﬂuctuations. Obviously, this eﬀect is counterbal-
+anced by the fact that larger Boltzmann factors corre-
+spond to higher densities and thus to smaller Rosenbluth
+factors [35].
+For a heteropolymer this has to be modiﬁed, as there
+is no longer a unique relationship between density and
+Boltzmann factor. In a strategy of ‘anticipated impor-
+tance sampling’ we should preferentially place monomers
+on sites with mostly attractive neighbors. Assume that
+we have two kinds of monomers, and we want to place a
+type-Amonomer. If an allowed site has mBneighbors of
+typeB(B=H,P), we select this site with a probability
+∝1+aAHmH+aAPmP. Here,aABare constants with
+aAB>0 forǫAB<0 and vice versa.
+(2) Most naturally, W>andW<are chosen propor-
+tional to the estimated partition sum Zn[17]. This be-
+comes ineﬃcient at very low TsinceZnwill be underes-
+timated as long as no low-energy state is found. When
+this ﬁnally happens, W>is too small. Thus too many
+copies are made which are all correlated but cost much
+CPU time.
+This problem can be avoided by increasing W>and
+W<during particularly successful ‘tours’ (a tour is the
+set of conﬁgurations derived by copying from a single
+start [17]). But then also the average number of long
+chains is decreased in comparison with short ones. To
+reduce this eﬀect and to create a bias towards a sample
+which is ﬂat in chain length, we multiply by some power
+ofMn/M1, whereMnis the number of generated chains
+of length n. WithN(n) denoting the number of chains
+generated during the current tour we used therefore
+W<=C Zn[(1+N(n)/M)(Mn+M)/(M1+M)]2,
+andW>=rW<. Here,Cis a constant of order unity,
+r≈10, andMis a constant of order 104−105.
+4
+(3) Creating only one new copy at each enrichment
+event (as done in [17]), cannot prevent the weights from
+exploding at very low T. Thus we have to make several
+copies if the weight is large and surpasses W>substan-
+tially. Agoodchoiceforthenumberofnewcopiescreated
+whenW > W>is int[/radicalbig
+W/W>].
+(4) Two special tricks were employed for ‘compact’
+conﬁgurations of the 2- dHP model ﬁlling a square. First
+of all, since we know in this case where the boundary
+should be, we added a bias for polar monomers to actu-
+ally be on that boundary, by adding an additional energy
+of -1per boundary site. Note that this bias has to be cor-
+rected in the weights, thus the ﬁnal distributions are un-
+aﬀected by it and unbiased. Secondly, in two dimensions
+we can immediately delete chains which cut the free do-
+main into two disjoint parts, since they never can grow
+to full length. In the present simulations, we checked
+for this by looking ahead one time step. In spite of the
+additional work this was very eﬃcient, since it reduced
+considerably the time spent on dead-end conﬁgurations.
+(5) In some cases we did not start to grow the chain
+from one end but from a point in the middle. We grew
+ﬁrst one half, and then the other. Results were aver-
+aged over all possible starting points. The idea behind
+this is that real proteins have folding nuclei [43], and it
+should be most eﬃcient to start from such a nucleus.
+In some cases this trick was very successful and speeded
+up the ground state search substantially, in others not.
+We take this observation as an indication that in vari-
+ous sequences the end groups already provide eﬀective
+nucleation sites. This is e.g. the case for the 80-mer
+with modiﬁed HP interactions of [24]. We also tried to
+grow the chain on both sides simultaneously. However it
+turned out that this is not eﬀective computationally [44].
+(6) In the case of the HAP model it turned out that,
+while the ground state conﬁguration of the chain geom-
+etry could be reached easily, the ground state conﬁgura-
+tionsofthesidegroups(i.e., oftheH/Pbondattributions
+of amphiphilic monomers [25]) could note be reached ef-
+fectively using PERM alone. Therefore, after building
+the chain conformation to its full length we let the side
+groups of the amphipatic monomers rotate thermally us-
+ing a Metropolis algorithm. This approach utilizes the
+short relaxation time of side group ﬂuctuations within
+the subphase of a ﬁxed chain conformation and leads to
+the desired ground states [45].
+(7) For an eﬀective sampling of low-lying states the
+choice of simulation temperature Tappears to be of im-
+portance. Ifitistoolarge,low-lyingstateswillhavealow
+statistical weight and will not be sampled reliably. On
+the other hand, if Tis too low, the algorithm becomes
+too greedy: conﬁgurations which look good at ﬁrst sight
+but lead to dead ends are sampled too often, while low
+energy conﬁgurations, whose qualities become apparent
+only at late stages of the chain assembly, are sampled
+rarely. Of course they then get huge weights (since thealgorithm is correct after all), but statistical ﬂuctuations
+become huge as well. This is in complete analogy to the
+slow relaxation hampering more traditional (Metropolis
+type) simulations at low T– note, however, that “relax-
+ation” in the proper sense does not exist in the present
+algorithm.
+In the cases we considered it turned out to be most ef-
+fective to choose a temperature that is below the collapse
+transition temperature (note, however, that this transi-
+tion is smeared out, see the results below) but somewhat
+above the temperature corresponding to the structural
+transition which leads to the native state. This obser-
+vation corresponds qualitatively to the considerations of
+[46], although a quantitative comparison appears not to
+be possible.
+(8) For 2-dimensional HP chains, we performed also
+some runs where we restricted the search for native con-
+ﬁgurationsfurther, by disallowingnon-bonded HP neigh-
+borpairs. The idea behind this wasthat sucha paircosts
+energy, and is thus less likely to appear in a native state.
+But this is only a weak heuristic argument. Forbidding
+such pairs certainly gives wrong thermal averages, and it
+might prevent the native state to be found, if it happens
+to contain such a pair. But in two cases this restriction
+did work, and gave states with lower energies than those
+we could reach without this trick.
+RESULTS
+Let us now discuss our results. All CPU times quote
+below refer to SPARC Ultra machines with 167 MHz.
+2d HP model
+(a) For all chains of [13] we easily reached the ground
+state, except for the longest chain ( N= 64). For this
+chain the ground state is very regular, with all polar
+monomers on the outside, and with no non-bonded HP
+neighbors. Its energy is -42 (see ﬁg.5). The authors of
+[13] were unable to recover by simulations this state and
+any other state with E <−37. Although we could not
+reachE=−42 either without special tricks, we obtained
+at least E=−40 after ca. 4h CPU time. Forbidding
+non-bonded HP neighborpairs, wefound the nativestate
+easily, but thiscannotbe reallycountedasasuccesssince
+we knew in advance that such pairs do not appear in the
+native state. The diﬃculty posed by this sequence for
+PERM is obvious from ﬁg.5: there is no folding center
+in this chain. No matter where one starts the assembly,
+one ﬁrst has to construct a large part of the boundary
+before the interiorbehind this boundary is ﬁlled up. This
+intermediate state has a very low Boltzmann weight and
+acts thus as a bottleneck for PERM.
+5
+FIG. 5. One of the ground states of the N= 64 sequence
+of [13]. The other ground states diﬀer in the conﬁgurations
+of the chain ends ﬁlling the interior of the structure, but ha ve
+the same boundary and overall shape.
+NotethattheconﬁgurationofFig.5cannotbeobtained
+by popular local moves including, e.g., bond exchange or
+crankshaft, or by reptation. But it can be reached if
+pivot moves are included. This illustrates that folding
+properties can depend strongly on the chosen kinetics.
+In contrast to the sequence with N= 64, we had no
+problem with the shorter sequences of [13]. In particular,
+for theN= 60 sequence we found a conﬁguration with
+E=−36 (see Table I), although the authors had quoted
+E=−34 as supposedly exact ground state energy.
+FIG. 6. One of the compact structures of sequence 1 with
+energy (E=−46) lower than the “native” state proposed by
+Ramakrishnan et al..
+(b) For the two HP chains of [28] with N= 100, see
+Table I, we found several compact states (within ca. 40
+hours of CPU time) that had energies lower than those
+of the compact putative ground states proposed in [28].
+Figures 6 and 7 show representative compact structures
+withE=−46 for sequence 1 and E=−47 for sequence
+2. Moreover, we found (again within 1-2 days of CPU
+time) several non-compact conﬁgurations with energieseven lower: E=−47 andE=−48 for sequence 1 and
+2, respectively. Forbidding non-bonded HP pairs, we ob-
+tained even E=−49 for sequence 2. Figures 8 and 9
+show representative non-compact structures with these
+energies; a non-exhaustive collection of these is listed in
+FIG. 7. One of the compact structures of sequence 2 with
+lower energy ( E=−47).
+FIG. 8. Oneofthe(non-compact)lowest energysequences
+for sequence 1 ( E=−47).
+FIG. 9. Oneofthe(non-compact)lowest energysequences
+for sequence 2 ( E=−49).
+6
+Table I. These results reﬂect the well-known property
+that HP sequences (and those of other models) usually
+have ground states that are not maximally compact, see,
+e.g. [30], although there is a persistent prejudice to the
+contrary [24,28,47].
+2d HAP model
+The ground state of the HAP triple helix was found
+within several minutes of CPU time using the PERM-
+Metropolis hybrid algorithm. It was not found to be
+degenerate.
+In order to obtain information about the folding tran-
+sition, energy and contact matrix (see below) histograms
+weredeterminedat T= 1.25,2,and4. Freeenergydiﬀer-
+ences, necessary for combining the histograms [48], were
+determined using Bennet’s acceptance ratio method [49].
+0.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0
+T0.010.020.030.0
+<|E|>/4
+<#native contacts>
+<#contacts>
+FIG. 10. Number of native contacts, total number of con-
+tacts, and energy E vstemperature Tfor the HAP sequence
+of Fig. 3.
+In Fig. 10 the thermal behavior of the mean number
+of contacts, number of native contacts, and of the mean
+energy is shown. While the structural transition to the
+ground state phase is best monitored by the number of
+native contacts and takes place around T= 1, the com-
+pactiﬁcation of the polymer chain is most clearly seen in
+the mean number of all contacts and in the radius of gy-
+ration (not shown here). It takes place already at much
+higher temperatures and is smeared out over a wide tem-
+perature range. Note that the number of all contacts
+follows closely the behavior of the energy.
+These two transitions are seen more clearly when the
+ﬂuctuations of the above order parameters are consid-
+ered, see Fig. 11. Energy and contact number ﬂuctua-
+tions exhibit a broad maximum around T= 3.5, while
+the structural transition is indicated by a narrow peak of
+the ﬂuctuations of the number of native contacts and ofthe speciﬁc heat near T= 1.0. Note that speciﬁc heat
+and energy ﬂuctuations emphasize the two transitions
+diﬀerently due to the factor T2by which they diﬀer.
+0.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0
+T0.020.040.060.0
+<#native contacts2>−<#native contacts>2
+<#contacts2>−<#contacts>2
+(<E2>−<E>2)/4
+specific heat
+FIG. 11. Fluctuations of the number of native contacts,
+total number of contacts, and energy E vstemperature Tfor
+the HAP sequence of Fig. 3; Since energy ﬂuctuations and
+speciﬁc heat emphasize the polymer collapse and structural
+transition diﬀerently, we have included the speciﬁc heat, t oo.
+3d HP model
+With PERM we succeeded to reach ground states of
+the ten sequences of length N= 48 given in [30] in all
+cases, in CPU times between a few seconds and 5 hours,
+see Table II. In these simulations we used a rather sim-
+ple version of PERM, where we started assembly always
+from the same end of the chain. We found that the se-
+quences most diﬃcult to fold were also those which had
+resisted previous Monte Carlo attempts [30]. In those
+cases where a ground state was hit more than once, we
+veriﬁed also that the ground states were highly degen-
+erate. In no case there were gaps between ground and
+ﬁrst excited states, see Fig. 12. Therefore, none of these
+sequences is a good folder, though they were designed
+speciﬁcally for this purpose.
+3d modiﬁed HP model
+For the two-species 80-mer with interactions
+(−1,0,−1), even without much tuning our algorithm
+gaveE=−94 after a few hours, but it did not stop
+there. After a number of rather disordered conﬁgura-
+tions with successively lower energies, the ﬁnal candidate
+for the native state has E=−98. It again has a highly
+symmetric shape, although it does not ﬁt into a 4 ×4×5
+box, see Fig. 13. It has twofold degeneracy (the central
+2×2×2 box in the front of Fig. 13 can be ﬂipped), and
+7
+both conﬁgurations were actually found in the simula-
+tions. Optimal parameters for the ground state search
+in this model are β= 1/kT≈2.0,aPP=aHH≈2,
+TABLE II. PERM performance for the binary se-
+quences from [30].
+sequence −Emina−EMCbnsuccesscCPU time
+nr. (min)
+1 32 31 101 6.9
+2 34 32 16 40.5
+3 34 31 5 100.2
+4 33 30 5 284.0
+5 32 30 19 74.7
+6 32 30 24 59.2
+7 32 31 16 144.7
+8 31 31 11 26.6
+9 34 31 1 1420.0
+10 33 33 16 18.3
+aGround state energies [30].
+bPreviously reached energies with Monte Carlo methods
+[30].
+cNumber of independent tours in which a ground state
+was hit.
+10-1410-1210-1010-810-610-410-21
+5101520253035lineograms,  T = 0.334  (arbitrary normalizations)
+- Energynr. 1
+nr. 2
+nr. 3
+nr. 4
+nr. 5
+nr. 6
+nr. 7
+nr. 8
+nr. 9
+nr. 10
+FIG. 12. Energy spectrum of the ten sequences given in
+[30]. More precisely, to emphasize the low-energy part of th e
+spectrum, we show the histograms obtained from the spectra
+by multiplying with eE/T, T= 0.334. Note that there are no
+energy gaps in any of these spectra.
+andaHP≈ −0.13. With these, average times for ﬁnding
+E=−94 andE=−98 in new tours are ca. 20 min and
+80 hours, respectively.
+A surprising result is that the monomers are arranged
+in four homogeneous layers in Fig. 13, while they had
+formed only three layers in the putative ground state of
+Fig. 4. Since the interaction should favor the segregation
+of diﬀerent type monomers, one might have guessed that
+a conﬁguration with a smaller number of layers should
+be favored. We see that this is outweighed by the fact
+that both monomer types can form large double layersin the new conﬁguration. Again, our new ground state is
+not ‘compact’ in the sense of minimizing the surface, and
+hence it also disagrees with the wide spread prejudice
+that native states are compact.
+In terms of secondary structure, the new ground state
+is fundamentally diﬀerent from the putative ground state
+FIG. 13. Conformation of the “four helix bundle” se-
+quence with E=−98. We propose that this is the actual
+ground state. Its shape is highly symmetric although it does
+not ﬁt into a rectangular box. It is not degenerate except for
+a ﬂipping of the central front 2 ×2×2 box.
+01020304050607080
+1020304050607080
+FIG. 14. Contact matrix of the structure in Fig. 13; a
+black point at ( i,j) indicates that there is a contact between
+monomer iand monomer j; grey points indicate contacts in
+onlyone of the twonativestates, correspondingtothe twofo ld
+degeneracy of the central 2 ×2×2 box. Note that the lines
+orthogonal to the main diagonal correspond to anti-paralle lβ
+sheet secondary structure elements, see e.g. [50].
+8
+01020304050607080
+1020304050607080
+FIG. 15. For comparison, the contact matrix of the puta-
+tive ground state of Ref. [28] in Fig. 4; note that point tripl es
+close to the diagonal parallel as well as orthogonal to it are
+signatures of 3d helical secondary structure elements, see e.g.
+[50]; theother points denote tertiary contacts between hel ices.
+0 20 40 60 80 100
+− Energy0.010.020.030.0RG20.0100.0200.0Ree210−1510−1010−5100histogram
+FIG. 16. Histograms of (top) thermal weight, (middle) ra-
+dius of gyration, R2
+G, and (bottom) end-to-end distance, R2
+ee,
+vsenergyEfor the 80-mer “four helix bundle” at T= 0.75.0.0 0.5 1.0 1.5 2.0 2.5
+Temperature−1.00−0.50<E>0.01.02.0Cv0.050.0100.0150.0Ree2
+0.010.020.0
+RG2
+RG2
+Ree2
+FIG. 17. (top) Average end-to-end distance, R2
+ee, and ra-
+dius of gyration, R2
+G, (middle) speciﬁc heat per monomer, Cv,
+and average energy per monomer, < E >,vstemperature T
+for the 80-mer “four helix bundle”.
+01020304050607080
+1020304050607080T=2.0
+>.0125
+>.025
+>.05
+>.125
+>.25
+>.5
+FIG. 18. Thermally averaged contact matrix for the
+80-mer “four helix bundle” in the random coil phase
+(T= 2.0). Diﬀerent shades of grey denote diﬀerent proba-
+bilities for the contact to exist.
+9
+of Ref. [28]. While the new structure (Fig. 13) is domi-
+nated by βsheets, which can most clearly be seen in the
+contact matrix (see Fig. 14), the structure in Fig. 4 is
+dominated by helices, see also the corresponding contact
+matrix in Fig. 15.
+01020304050607080
+1020304050607080T=0.85
+>.0125
+>.025
+>.05
+>.125
+>.25
+>.5
+FIG. 19. Thermally averaged contact matrix for the
+80-mer “four helix bundle” in the collapsed but unstructure d
+phase (T= 0.85).
+In order to analyze the folding transition of this se-
+quence we again constructed histograms of the distribu-
+tion of energy, end to end distance, and radius of gyra-
+tion, by combining the results obtained at various tem-
+peratures between T= 0.45 and 3. Figure 16 shows
+these distributions, reweighted so that it corresponds to
+T= 0.75. The thermal behavior of these order parame-
+ters as functions of Tis obtained by Laplace transform,
+and is shown in Fig. 17. The behavior of energy, end-to-
+end distance and radius of gyration follow closely each
+other and exhibit clearly only the smeared out collapse
+of the chain from a random coil to some unstructured
+compact phase. In contrast, the speciﬁc heat exhibits
+more structure: the shoulder around T= 1 corresponds
+againtothecoil-globulecollapse, butthereareadditional
+transitions seen around T= 0.62 andT= 0.45. The
+last one is the transition to the β-sheet dominated na-
+tive phase. However, the transition at T= 0.62 is from
+a unstructured globule to an intermediate phase that is
+helix-dominatedbutexhibits strongtertiaryﬂuctuations.
+These structural transitions are illustrated in Figs 18 to
+22 where the thermally averaged contact matrices are
+shown for the respective phases.
+The intermediate, helix-dominated phase is particu-
+larly interesting. To it apply some of the usual charac-
+teristics of a molten globule state [51]: i) compactness,
+ii) largesecondarystructurecontent (althoughnot neces-
+sarily native), and iii) strong ﬂuctuations. This qualiﬁesit as a candidate for a molten globule state, a phase that
+is absent in the folding transition of the HAP sequence
+[52].
+01020304050607080
+1020304050607080T=0.5
+>.0125
+>.025
+>.05
+>.125
+>.25
+>.5
+FIG. 20. Thermally averaged contact matrix for
+the 80-mer “four helix bundle” in the intermediate he-
+lix-dominated phase ( T= 0.5).
+01020304050607080
+1020304050607080T=0.4
+>.0125
+>.025
+>.05
+>.125
+>.25
+>.5
+FIG. 21. Thermally averaged contact matrix for the
+80-mer “four helix bundle”at the transition from theinterm e-
+diate helix-dominated phase to the β-sheet dominated phase
+(T= 0.4).
+3d∞monomer types
+For all sequenceswith N= 27 from [27]we could reach
+the supposed ground state energies within <1 hour. In
+10
+no case we found energies lower than those quoted in
+[27], and we veriﬁed also the energies of low-lying ex-
+cited states given in [27]. Notice that these sequences
+were designed to be good folders by the authors of [27].
+01020304050607080
+1020304050607080T=0.3
+>.0125
+>.025
+>.05
+>.125
+>.25
+>.5
+FIG. 22. Thermally averaged contact matrix for the
+80-mer “four helix bundle” in the β-sheet dominated phase
+(T= 0.3).
+Thistimethedesignhadobviouslybeensuccessful,which
+is mainly due to the fact that the number of diﬀerent
+monomer types is large. All sequences showed some gaps
+betweenthegroundstateandthebulkoflow-lyingstates,
+although these gaps are not very pronounced in some
+cases.
+More conspicuous than these gaps was another fea-
+ture: all low lying excited states were very similar to
+the ground state, as measured by the fraction of contacts
+which existedalsoin the nativeconﬁguration. Stated dif-
+ferently, if the gaps were not immediately obvious, this
+wasbecausethey wereﬁlled byconﬁgurationswhichwere
+very similar to the ground state and can therefore easily
+transform into the native state and back. Such states
+therefore cannot prevent a sequence from being a good
+folder. For none of the sequences of [27] we found truely
+misfolded low-lying states with small overlap with the
+ground state.
+Figure 23 illustrates this feature for one particular se-
+quence. Thereweshowthe overlapQ, deﬁnedasthefrac-
+tion by non-bonded nearest-neighbor ground state con-
+tacts which exist also in the excited state, against the
+excitation energy. For this and for each of the follow-
+ing ﬁgures, the 500 lowest-lying states were determined.
+We see no low energy state with a small value of Q. To
+demonstrate that this is due to design, and is not a prop-
+erty of random sequences with the same potential distri-
+bution, we show in Fig. 24 the analogous distribution for
+a random sequence.0.00 0.05 0.10
+(E−E0)/E00.500.600.700.800.901.00Q
+FIG. 23. Overlap with ground state, Q,vsenergyEof
+the lowest energy conformations for sequence no. 70 of Ref.
+[27].
+0.00 0.02 0.04 0.06 0.08
+(E−E0)/E00.00.20.40.60.81.0Q
+FIG. 24. Overlapwith ground state, Q,vsenergyEof the
+lowest energy conformations for a single random sequence.
+To demonstrate that this diﬀerence is not merely due
+to a statistical ﬂuctuation, we show in Fig. 25 the distri-
+butions for ten sequences from [27] collected in a single
+plot. Since the ground state energies diﬀer considerably
+fordiﬀerent sequences, we used normalizedexcitationen-
+ergies (E−E0)/E0on the x-axis. Analogous results for
+ten random sequences are shown in Fig. 26. While there
+is no obvious correlation between Qand excitation ener-
+gies for the random case, all low energy states with small
+Qhave been eliminated in the designed sequences (note
+the diﬀerent ranges of Qin Figs. 25 and 26).
+This elimination of truely misfolded low energy states
+withouteliminationofnative-likelowenergystatesmight
+beanunphysicalpropertyofthedesignprocedureusedin
+[27], but we do not believe that this is the case. Rather,
+11
+0.00 0.05 0.10
+(E−E0)/E00.50.60.70.80.91.0Q
+FIG. 25. Overlap with ground state, Q,vsenergyEof
+the lowest energy conformations for sequences no. 61 to 70 of
+Ref. [27]; for better visibility, the same symbol is used for all
+sequences.
+0.00 0.05
+(E−E0)/E00.00.20.40.60.81.0Q
+FIG. 26. Overlap with ground state, Q,vsenergy of the
+lowest energy conformations for ten random sequences; for
+better visibility, the same symbol is used for all sequences .
+it should be a generalfeature ofanydesign procedure, in-
+cludingthe onedue tobiologicalevolution. It contradicts
+the claim of [26] that it is only the gap between native
+and ﬁrst excited state which determines foldicity. On the
+other hand, our results are consistent with the “funnel”
+scenario for the protein folding process [53], where the
+folding pathway consists of states successively lower in
+energy and closer to the native state.
+We note that for random sequences there are also ex-
+cited states that have unit overlap with the native state,
+a feature not present in the folding sequences. These
+are cases where the native state has open loops and/or
+dangling ends, so that more compact conformations have
+all contacts of the native state, but have – in addition
+– energetically unfavorable contacts resulting in a higher
+total energy.SUMMARY AND OUTLOOK
+We showed that the pruned-enriched Rosenbluth
+method (PERM) can be very eﬀectively applied to pro-
+tein structure prediction in simple lattice models. It is
+suited for calculating statistical properties and is very
+successful in ﬁnding native states. In all cases it did bet-
+ter than any previous MC method, and in several cases
+it found lower energy states than those which had previ-
+ously been conjectured to be native.
+We veriﬁed that ground states of the HP model are
+highly degenerate and have no gap, leading to bad fold-
+ers. For sequences that are good folders we have estab-
+lished a funnel structure in state space: low-lying excited
+states of well-folding sequences have strong similarities
+to the ground state, while this is not true for non-folders
+with otherwise similar properties.
+Especially, we have presented a new candidate for
+the native conﬁguration of a “four helix bundle” se-
+quence which had been studied before by severalauthors.
+The ground state structure of the “four helix bundle”
+sequence, being actually beta-sheet dominated, diﬀers
+strongly from the helix-dominated intermediate phase.
+This sequence, therefore, should not be a good folder.
+Although we have considered only lattice models in
+this paper, we should stress that this is not an inher-
+ent limitation of PERM. Straightforward extensions to
+oﬀ-lattice systems are possible and are eﬃcient for ho-
+mopolymers at relatively high temperatures [17]. Pre-
+liminary attempts to study oﬀ-lattice heteropolymers at
+lowThave not yet been particularly successful, but the
+inherent ﬂexibility of PERM suggests several modiﬁca-
+tions which have not yet been investigated in detail. One
+of them are hybrid PERM-Metropolis approaches simi-
+lar to that used for the HAP model in the present pa-
+per. Its success also suggests that similar hybrid ap-
+proaches should be useful for models with more compli-
+cated monomers. Another improvement of PERM which
+could be particularly useful for oﬀ-lattice simulations
+might consist in more sophisticated algorithms for posi-
+tioning the monomers when assembling the chain. Work
+along these lines is in progress, and we hope to report on
+it soon.
+ACKNOWLEDGMENTS
+The authors are grateful to Gerard Barkema for help-
+ful discussions during this work. One of them (P.G.)
+wants to thank also Eytan Domany and Michele Vendr-
+uscolo for very informative discussions, and to Drs. D.K.
+Klimov and R. Ramakrishnan for correspondence.
+12
+[1] L. M. Gierasch and J. King (eds.), Protein Folding, De-
+ciphering the Second Half of the Genetic Code (AAAS,
+New York, 1990)
+[2] T.E. Creighton (ed.), Protein Folding (Freeman, New
+York, 1992)
+[3] K. M. Merz Jr. and S. M. LeGrand (eds.), The Pro-
+tein Folding Problem and Tertiary Structure Prediction
+(Birkh¨ auser, Boston, 1994)
+[4] H. Bohr and S. Brunak(eds.), Protein Folds: A Distance
+Based Approach (CRC Press, Boca-Raton/FL. 1996).
+[5] K. E. Drexler, Engines of Creation , (Anchor Books,
+1986); available also on the web at the URL
+http://www.asiapac.com/EnginesOfCreation/.
+[6] M. Groß, Expeditionen in den Nanokosmos , (Birkh¨ auser,
+Basel, 1995).
+[7] G. M. Crippen and V. N. Maiorov, in [3], p.231-277.
+[8] A. Kolinski and J. Skolnick, Lattice Models of Protein
+Folding, Dynamics and Thermodynamics , (Chapman &
+Hall, New York, 1996).
+[9] L. A. Mirny and E. I. Shakhnovich, J. Mol. Biol. 264
+1164 (1996).
+[10] A. Sali, E. I. Shakhnovich and M. Karplus J. Mol. Biol.
+2351614 (1994).
+[11] U. H. E. Hansmann and Y. Okamoto, J. Comp. Chem.
+14, 1333 (1993); Physica A 212, 415 (1994); Phys. Rev.
+E54, 5863 (1996).
+[12] S. R. Wilson and W. Cui, in [3], p.43-70.
+[13] R. Unger and J. Moult, J. Mol. Biol. 231, 75 (1993)
+[14] S. M. LeGrand and K. M. Merz jr., in [3], p.109-124.
+[15] K. A. Dill, K. M. Fiebig and H. S. Chan, Proc. Natl.
+Acad. Sci USA 90, 1942 (1993).
+[16] F. Eisenhaber, B. Persson and P. Argos, Crit. Rev.
+Biochem. Mol. Biol. 30, 1 (1995).
+[17] P. Grassberger, Phys. Rev. E, in press (1997)
+[18] M.N. Rosenbluth and A.W. Rosenbluth, J. Chem. Phys.
+23, 256 (1955)
+[19] H. Frauenkron, U. Bastolla, E. Gerstner, P. Grassberge r
+and W. Nadler, submitted (1997).
+[20] Y.KantorandM.Kardar, Europhys.Lett. 28, 169(1994)
+[21] K.A. Dill, Biochemistry 24, 1501 (1985)
+[22] K.F. Lau and K.A. Dill, Macromolecules 22, 3986
+(1989); J. Chem. Phys. 95, 3775 (1991); H.S. Chan, and
+K.A. Dill, J. Chem. Phys. 95, 3775 (1991)
+[23] N.D. Socci and J.N. Onuchic, J. Chem. Phys. 101, 1519
+(1994)
+[24] E. O’Toole and A. Panagiotopoulos, J. Chem. Phys. 97,
+8644 (1992)
+[25] T. Krausche and W. Nadler, to be published (1997).
+[26] A. Sali, E. I. Shakhnovich and M. Karplus, Nature 369
+248 (1994).
+[27] D.K. Klimov and D. Thirumalai, PROTEINS: Structure,
+Function and Genetics 26, 411 (1996); sequences are
+available from http://www.glue.umd.edu/ ∼klimov.
+[28] R. Ramakrishnan, B. Ramachandran and J.F. Pekney,
+J. Chem. Phys. 106, 2418 (1997)
+[29] J.M. Deutsch, J. Chem. Phys. 106, 8849 (1997).
+[30] K. Yue et al., Proc. Natl. Acad. Sci. USA 92, 325 (1995)
+[31] E. I. Shakhnovich and A. M. Gutin, Proc. Natl. Acad.
+Sci USA 90, 7195 (1993); E. I. Shakhnovich, Phys. Rev.
+Lett.72, 3907 (1994).
+[32] K. Yue and K. A. Dill, Proc. Natl. Acad. Sci USA 92,146 (1995).
+[33] M. Ebeling and W. Nadler, Proc. Natl. Acad. Sci. USA
+92, 8798 (1995); Biopolymers 41, 165 (1997).
+[34] J.M. Deutsch and T. Kurosky, Phys. Rev. Lett. 76, 323
+(1996).
+[35] J. Batoulis and K. Kremer, J. Phys. A 21, 127 (1988)
+[36] T. Garel and H. Orland, J. Phys. A 23, L621 (1990)
+[37] B. Velikson, T. Garel, J.-C. Niel, H. Orland and J.C.
+Smith, J. Comput. Chem. 13, 1216 (1992)
+[38] C.J. Umrigar, M.P. Nightingale, and K.J. Runge, J.
+Chem. Phys. 99, 2865 (1993)
+[39] F.T. Wall and J.J. Erpenbeck, J. Chem. Phys. 30, 634,
+637 (1959)
+[40] H. Frauenkron and P. Grassberger, preprint cond-
+mat/9707101 (1997)
+[41] U. Bastolla and P.Grassberger, preprint
+cond-mat/9705178 (1997)
+[42] G. T. Barkema, U. Bastolla, andP. Grassberger, preprin t
+cond-mat/9707312 (1997)
+[43] R. R. Matheson and H. A. Scheraga, Macromolecules 11,
+819 (1978).
+[44] At ﬁrst sight, one might believe that allowing the chain
+to grow at both ends should decrease the attrition rate
+and hence be advantageous. For homopolymers one can
+see easily that this is not true. Attrition is actually de-
+creased, since chains which have one end blocked can
+still grow at the other end. But such chains have small
+Rosenbluth factors and thus extremely low Win aver-
+age. Therefore, they just cost eﬀorts without eﬃciently
+contributing to statistical averages. For heteropolymers
+this argument no longer holds, however, and it is not
+clear why growing the chain at both ends is not eﬃcient
+either.
+[45] Note, however, that there exists an alternative approa ch:
+for a ﬁxed chain geometry a computationally eﬀective (
+O(N) instead of O(2N) )complete enumeration ofall side
+group conformations is possible; E. Gerstner, P. Grass-
+berger and W. Nadler, to be published.
+[46] A. V. Finkelstein, A. M. Gutin and A. Y. Badretdinov
+PROTEINS: Structure, Function and Genetics 23, 151
+(1995).
+[47] E. I. Shakhnovich and A. M. Gutin, J. Chem. Phys.
+935967 (1990); A. M. Gutin and E. I. Shakhnovich, J.
+Chem. Phys. 988174 (1993).
+[48] A.M. Ferrenberg and R.H. Swendsen, Phys. Rev. Lett.
+61, 2635 (1988); 63, 1195 (1989)
+[49] C. H. Bennet, J. Comp. Phys. 22, 245 (1976).
+[50] H. S. Chan and K. A. Dill, Macromolecules 224559
+(1989); J. Chem. Phys. 92, 3118 (1990).
+[51] H. Christensen and R. H.Pain, Europ. Biophys. J. 19,
+221 (1991).
+[52] In [29], indications for the β-sheet phase were found, too,
+and on this basis an analogy to the competition of struc-
+tures in the prion problem [see, e.g., J. Nguyen et al.,
+Biochemistry 34, 4186 (1995)] was drawn. However, our
+results showing that the helical phase is strongly struc-
+turally disordered demonstrate that this analogy cannot
+be perfect. In a model for prions, both competing phases
+should be much more well deﬁned.
+[53] P. G. Wolynes, J. N. Onuchic, and D. Thirumalai, Sci-
+ence267, 1619 1995).
+13

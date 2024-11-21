@@ -1,0 +1,616 @@
+arXiv:physics/0202034v1  [physics.bio-ph]  11 Feb 2002Solvation model dependency of helix-coil
+transition in polyalanine
+Yong Peng1and Ulrich H.E. Hansmann2
+Department of Physics, Michigan Technological University , Houghton, MI
+49931-1291, USA
+October 24, 2018
+Abstract
+Helix-coil transitions in poly-alanine molecules of lengt h 10 are studied by
+multicanonical Monte Carlo simulations. The solvation eﬀec ts are included
+by either a distance-dependent dielectric permittivity or by a term that is
+proportional to the solvent-accessible surface area of the peptide. We found a
+strong dependence of the characteristics of the helix-coil transition from the
+details of the solvation model.
+Keywords: Helix-coil transition, Protein folding, Generalized ense mble
+simulations, solvation models
+1 Introduction
+There has been recently a renewed interest in the conditions under whichα-helices,
+a common structure in proteins, are formed or dissolved. It is long k nown thatα-
+helices undergo asharptransitiontowards arandomcoil statewhe nthetemperature
+is increased. The characteristics of this so-called helix-coil transit ion have been
+studied extensively [1], most recently in Refs. [2, 3]. In Refs. [4, 5] ev idence was
+presented thatthehelix-coil transitioninpolyalanineexhibits atrue thermodynamic
+phase transition when interactions between all atoms in the molecule are taken into
+account [4, 5].
+Thelaterresultswereobtainedfromgas-phasesimulationsofpoly- alanine. While
+thereissomeexperimental evidence [6]supportingthenumerical r esultsofthese gas-
+phase simulations, the question remains how these results relate to the biologically
+more relevant case of solvated molecules. First investigations of th is question were
+described in Refs.[7, 8] where it was claimed that the transition tempe rature is lower
+1E-mail:ypeng@mtu.edu
+2E-mail: hansmann@mtu.edu; to whom all correspondence should be a ddressed
+1
+in water than in vacuum. However, that investigation relies on a single represen-
+tation of the protein-water interaction and the dependence of th eir results on the
+details of the solvation term is not clear.
+In this paper, we have investigated how the characteristics of helix -coil transition
+change with the details of the solvation term. For this purpose, we h ave performed
+multicanonical simulations of polyalanine molecules of length 10. The pr otein-water
+interaction was included in two ways: either by a distance-dependen t dielectric per-
+mittivity or by a term that is proportional to the solvent-accessible surface area of
+the peptide. For the later case we have considered four diﬀerent p arameter sets:
+OONS [9], JRF [10], W92 [11] and SCH [12]. Quantities such as the energy, helicity
+and susceptibility were calculated as function of temperature. Our result were com-
+pared with that of gas phase simulations. A strong dependence of t he characteristics
+of the helix-coil transition from the details of the solvation term was found.
+2 Methods
+Our investigation of the helix-coil transition for polyalanine is based o n a detailed,
+all-atom representation of that homopolymer. The interaction bet ween the atoms
+was described by a standard force ﬁeld, ECEPP/2,[13] (as implement ed in the pro-
+gram package SMMP [14]) and is given by:
+Etot=EC+ELJ+EHB+Etor, (1)
+EC=/summationdisplay
+(i,j)332qiqj
+ǫrij, (2)
+ELJ=/summationdisplay
+(i,j)/parenleftBiggAij
+r12
+ij−Bij
+r6
+ij/parenrightBigg
+, (3)
+EHB=/summationdisplay
+(i,j)/parenleftBiggCij
+r12
+ij−Dij
+r10
+ij/parenrightBigg
+, (4)
+Etor=/summationdisplay
+lUl(1±cos(nlχl)). (5)
+Here,rij(in˚A) is the distance between the atoms iandj, andχlis thel-th torsion
+angle. We have chosen ECEPP/2 instead of the newer ECEPP/3 diﬀer s because
+this choice allows a more easy comparison with our previous work. Bot h force ﬁelds
+diﬀer from each other only in the way in which prolines and end groups a re treated.
+In preliminary polyalanine simulations we found no qualitative diﬀerence s in our
+results when ECEPP/3 was used instead of ECEPP/2 (data not show n).
+2
+The interactions between our homo-oligomer and water are approx imated by
+means of two implicit water models. In the ﬁrst model (DDE) the elect rostatic
+interactions in the presence of water rely on a distance dependent electrostatic per-
+mittivity [15]:
+ε(r) =D−D−2
+2[(sr)2+2sr+2]e−sr. (6)
+For the parameters Dandsempirical values are chosen such that for large distances
+the permittivity takes the value of bulk water ( ε≈80), and the value ε= 2 for short
+distances (protein interior space). Equation (6) is the result of int erpolation of two
+types of interactions. For short distances it models the interactio n of two charges
+placed in continuum medium, while over long distances it represents a D ebye curve.
+This is clearly a gross over-simpliﬁcation of protein-solvent interact ions. However,
+approximating solvation eﬀects by a distance-dependent dielectric permittivity was
+used by many authors to study the proteins and nucleic acids (e.g. [1 6]) since it
+does not signiﬁcantly slow down protein simulations below that of simple in vacuo
+simulations.
+Inanothercommonapproximationoftheprotein-solvent interact iononeassumes
+that the free energy contributions from atomic groups immersed in the protein in-
+terior diﬀer from contributions of groups exposed to the water. I t is commonly
+accepted [9, 11, 17, 18] that this free-energy diﬀerence is propo rtional to the surface
+area of the atomic group which is exposed to the solvent. Within this a pproxima-
+tion, the total solvation energy of a protein is given by the sum of co ntributions
+from each solvated atomic groups:
+Esol=/summationdisplay
+iσiAi, (7)
+whereEsolis the solvation energy, Aiis the conformational dependent solvent acces-
+sible area of the surface of the i−thatom andσiis the atomic solvation parameter
+for the atom i. The summation is extended over all atomic groups. The solvation
+parameters are evaluated experimentally by measuring the free en ergy needed to
+bring the group from a nonpolar environment (usually octanol or et hanol are used
+as convenient compounds) into water. Many sets of solvation para meters were eval-
+uated by several authors with diﬀerent methods, but unfortuna tely it is not always
+obvious which one isthemost appropriateone. The sets we study he re arenamed by
+us OONS [9], JRF [10], W92 [11] and SCH [12], and are described in the resp ective
+references.
+3
+Simulations of detailed models of biological macromolecules are notorio usly dif-
+ﬁcult. This is because the various competing interactions within the p olymer lead
+to an energy landscape characterized by a multitude of local minima. Hence, in
+the low-temperature region, canonical Monte Carlo or molecular dy namics simu-
+lations will tend to get trapped in one of these minima and the simulation will
+not thermalize within the available CPU time. Only recently, with the intr oduc-
+tion of new and sophisticated algorithms such as multicanonical sampling [19] and
+othergeneralized-ensemble techniques [20] was it possible to alleviate this problem
+in protein simulations [21]. For polyalanine, both the failure of standar d Monte
+Carlo techniques and the superior performance of the multicanonic al algorithm are
+extensively documented in earlier work [22]. For this reason, we use a gain this
+sophisticated simulation technique for our project.
+In the multicanonical algorithm [19] conformations with energy Eare assigned
+a weightwmu(E)∝1/n(E). Here,n(E) is the density of states. A simulation with
+this weight will lead to a uniform distribution of energy:
+Pmu(E)∝n(E)wmu(E) = const. (8)
+This is because the simulation generates a 1D random walk in the energ y space,
+allowing itself to escape from any local minimum. Since a large range of e nergies are
+sampled, one can use the reweighting techniques [23] to calculate th ermodynamic
+quantities over a wide range of temperatures Tby
+<A>T=/integraltextdxA(x)w−1(E(x))e−βE(x)
+/integraltextdxw−1(E(x))e−βE(x), (9)
+wherexstands for conﬁgurations.
+Unlike in the case of canonical simulations the weights
+w(E) =n−1(E) =e−S(E)(10)
+are not a priori known. Instead estimators for these weights hav e to be determined.
+This is often done by an iterative procedure in which for reasons of n umerical sta-
+bility Eq. 10 is replaced by
+w(E) =e−β(E)E−α(E). (11)
+The multicanonical parameters β(E) andα(E) are deﬁned through
+β(E) =S(E′)−S(E)
+E′−Eandα(E) =/braceleftBigg
+0 , E≥Emax
+α(E′)+(β(E′)−β(E))E′, E <E max
+(12)
+4
+withEandE′adjacent bins in the array S(E). Theβ(E) are then iteratively
+updated [24] by the relation
+βi+1(E) =βi(E)+g0(E)·/parenleftBig
+lnHi(E′)−lnHi(E)/parenrightBig
+/(E′−E),(13)
+in whichHi(E) is the histogram of the i-th run (and H(E)≥1). In Ref. [24] the
+factorg0(E) in Eq. 13 was deﬁned through
+g0(E) =ˆgi(E)
+ˆgi(E)+/summationtexti−1
+jˆgj(E)with ˆgi(E) =Hi(E′)·Hi(E)
+Hi(E′)+Hi(E).(14)
+The above relation assumes that the histogram H(E) counts independent events
+which is in general not true. Hence, it is more appropriate and leads t o a faster
+convergence of β(E) if the array ˆ gi(E) in Eq. 14 is instead deﬁned by
+ˆgi(E) =Ki(E′)Ki(E)
+Ki(E′)+Ki(E)(15)
+where the auxiliary array K(E) now counts only the number of independent visits
+at energyE.
+With the above described iterative procedure we needed 200,000 sw eeps for the
+weight factor calculations. All thermodynamic quantities were then estimated from
+one production run of 1 ,000,000 Monte Carlo sweeps starting from a random initial
+conformation, i.e. without introducing any bias.
+3 Results and Discussion
+In previous gas-phase simulations of poly-alanine [3, 4, 5, 22] we obs erved atT=
+430Ka pronounced transition between a high-temperature phase domin ated by dis-
+orderedcoil structures andanorderedphasewithsingle, extend ed helices. Anatural
+order parameter for this helix-coil transition is the average numbe r< nH(T)>of
+residues in the oligomer which are part of an α−helix. Following earlier work [22]
+we deﬁne a residue as helical if the pair of backbone dihedral angles φ,ψtakes a
+value in the range ( −70±20,−37±20). In Fig. 1a this order parameter is displayed
+as function of temperature for a gas-phase simulation (GP) of Ala 10and simulations
+with the various solvation terms. Fig. 1b shows the corresponding p lots for the
+susceptibility χ(T) deﬁned by
+χ(T) =<n2
+H(T)>−<nH(T)>2. (16)
+5
+In Fig. 1a and 1b the curves, representing the various simulations, fall into
+three groups. For the case where the protein-solvent interactio n was approximated
+by a distance-dependent permittivity (DDE), both < nH>andχhave a similar
+temperature dependence than is observed for poly-alanine in gas- phase simulations
+(GP). However, the transition temperature Tcis shifted from T= 435±20 K (gas-
+phase) to a highervalueT= 495±20. This temperature was determined from the
+maximum of the susceptibility χ(T) in Fig. 1b and is listed in table 1. To the same
+group belong the simulations in which the solvation energy was approx imated by
+a solvent accessible surface term with either the OONS [9] or SCH [12] parameter
+set. In both cases susceptibility χand order parameter < nH(T)>show also a
+temperature dependence similar to the one of gas-phase simulation s. Only now,
+the transition temperature Tcis shifted to lowertemperatures. The corresponding
+transitiontemperatures canbeagaindetermined fromtheposition softhemaximum
+inχ(T) and are also listed in table 1. The shift towards lower temperatures was one
+of the main results reported in Refs. [7, 8] for simulations with the OO NS solvation
+energy, and our Tc= 345±20 K agrees well with their value Tc= 340 K (no errors
+quoted) in Refs. [7, 8].
+A somehow diﬀerent behavior is observed in the simulation where the p rotein-
+water interaction was approximated by a solvent accessible surfac e term relying on
+the W92 [11] parameter set. Here, the form of <nH>indicates only partial helix
+formation and occurs only at much lower temperatures. The susce ptibilityχ(T) in
+Fig. 1b gives no indication for a helix-coil transition. For this reason n o value ofTc
+is listed for the W92 parameter set in table 1. Instead, we observe in Fig. 2 for this
+case at low temperatures even the appearance of residues whose backbone dihedral
+anglesφ,ψtake values typical for a β-sheet (−150±30,150±30).
+Yet another behavior is observed in simulations where the solvation e nergy of
+Eq. 7 is evaluated by means of the JRF parameter set. No formation of helices
+or sheets is observed in Figs. 1 and 2. Since no transition temperatu re can be
+determined, we do not list a value of Tcfor the JRF parameter set in table 1.
+The same grouping can be found in Fig. 3a-f where we display various e nergy
+terms as a function of temperature. In these ﬁgures we have shif ted the solvation
+energies and the partial ECEPP/2 energies EC,ELJ,EHBandEtorof Eq. 5 by a
+constant term such that we have for all solvation models at T= 1000 KEsol= 0 and
+EC=ELJ=EHB=Etor= 0. Such a shift by an irrelevant constant allows a better
+comparison of the diﬀerent simulations. The average total energy < Etot>which
+6
+is the sum of intramolecular potential energy EECEEP/ 2and the solvation energy
+Esol, is displayed in Fig. 3a. We observe again that simulations with the para meters
+sets OONS and SCH, and such with distant dependent permittivity (D DE), have
+a similar temperature dependence as gas phase simulations (GP). On the other
+hand, in simulations relying on the W92 parameter set, the energy va ries less with
+temperature and is at low temperatures considerably higher than in the simulations
+with other solvation energy terms. Finally, the energy in simulations w ith the JRF
+parameter set is an almost linear function of temperature and is esp ecially at high
+temperatures much lower than the energies found in gas phase simu lations.
+The dissimilar behavior of energy for simulations with diﬀerent solvatio n terms
+is even more obvious in Fig. 3b where the average intramolecular ener gyEECEPP/ 2
+is drawn. While this energy term decreases between 1000 K and 150 K by≈50
+Kcal/mol (with most of that change, ≈30 Kcal/mol, happing around the respective
+transition temperature Tc) in gas-phase simulations (GP) and in simulations with
+OONS, SCH and DDE solvation terms, it changes in the same temperat ure interval
+only by≈20 Kcal/mol in simulations utilizing the JRF or W92 parameter sets.
+Since for these two parameter sets also no or only little helix formatio n was observed
+it seems likely that the formation of helices is related to the large gain in potential
+energy observed for GP, OONS,SCH and DDE simulations. This gain in po tential
+energy is in part due to the formation of hydrogen bonds between a residue and
+the fourth following one in the polypeptide chain which stabilize an α-helix. Fig. 3c
+displays the average hydrogen-bonding energy < EHB>of Eq. 5 as a function of
+temperature and one can clearly see the gain in energy for the GP, D DE, OONS and
+SCH simulations at the respective helix-coil transition temperature s of table 1. No
+such gainis observed in W92 andJRFsimulations where also no helix form ationwas
+found. A similar gain in energy with helix formations in gas-phase and sim ulations
+with DDE,OONS and SCH solvent representations is also observed for the average
+Lennard-Jones energy < ELJ>and the electrostatic energy < EC>displayed in
+Fig. 3d and 3e, respectively. Note also in Fig. 3e the large gain in ECfor DDE at
+the helix-coil transition temperature which additionally stabilizes the α-helix in this
+model.
+A complementary picture is found in Fig. 3f where the solvation energ yEsol
+is shown as a function of temperature. The observed helix formatio n in gas phase
+simulationsandsuchwithOONS,SCHandDDEsolvent representations iscorrelated
+with an increases of the solvation energies by ≈5 Kcal/mol. On the other hand,
+7
+in simulations with the W92 and JRF parameter sets, for which no helix- formation
+was observed in Fig. 1, Esoldecreases with temperature. This decrease is only ≈5
+kcal/mol for W92, but it is much larger (of order 30 kcal/mol) in the ca se of JRF
+where the solvation energy is the dominant term.
+TheeﬀectsofthedominantsolvationterminsimulationswiththeJRFp arameter
+set can also be seen in Fig. 4. In this ﬁgure the average radius of gyr ation, a measure
+for the compactness of conﬁgurations, is shown as a function tem perature. One can
+see that this quantity changes little with temperature for the JRF d ata. However,
+its value is over the whole temperature range considerably smaller th an observed in
+the other simulations. This indicates that the JRF solvation term fav ors already at
+high temperatures compact conﬁgurations, and that the pressu re towards compact
+structure is such that the more elongated helices cannot be forme d. Note however,
+that the tendency towards compact conﬁgurations does not lead to a lower Lennard-
+Jones energy ELJas one would expect. Fig. 3d indicates that < ELJ>is at low
+temperatures in JRF simulations even larger than in GP, DDE, OONS an d SCG
+simulations where helix-formation was observed. The tendency tow ards compact
+structures in JRF simulations may be due to the fact that JRF param eter set was
+developed from minimum energy (i.e. compact) conformations of pep tides (the
+low-energy conformations of 13 tetrapeptides derived by NMR stu dies [10]), and
+therefore this parameter set may have an intrinsic bias towards co mpact structures.
+On the other hand, the W92 parameter set was developed from mea surements of
+free energies of amino acid side chain analogs from vapor to water [26 ]. The param-
+eters for this set are negative for all atoms except carbon meanin g that the nitrogen,
+oxygen and sulfur atoms are considered hydrophilic, i.e. favoring so lvent exposure.
+This explains not only the small solvation energies observed for this p arameter set
+in Fig. 3f, but also why in Fig. 4 the radius of gyration is consistently lar ger for
+this parameter set than for the others indicating that extended c onﬁgurations are
+favored with this parameter set. This bias towards extended stru ctures limits again
+the formation of α-helices.
+While the OONS parameter set was derived from experimental free e nergies of
+gas-to-water transfer of small aliphatic and aromatic molecules, t he SCH is not
+directly based on experimental free energy data. Instead, it was developed as an
+optimized parameter set to complement the CHARMM force ﬁeld [25]. I n both
+parameter sets the hydrophobic character of the carbon atoms is increased and the
+hydrophilic character of uncharge oxygen and nitrogen atoms dec reased resulting
+8
+into the large solvation energies of these two parameter sets (whe n compared with
+the one of the W92 parameter set) that one observes in Fig. 3f. Th e OONS andSCH
+solvation energies again favor extended structures (the radius o f gyration has larger
+values than found in gas-phase simulations), however, the interpla y of solvation
+energies and intramolecular ECEPP/2 energy is such that the radius of gyrations
+(and consequently the compactness) of polyalanine conﬁguration s as a function of
+temperature shows a similar behavior as the gas-phase simulation. T he same is true
+for the DDE simulation where the protein-solvent interaction was ap proximated by
+a distance-dependent permittivity.
+Our results demonstrate that the helix formation is due to the gain in poten-
+tial (intramolecular) energy while (with the exception of the JRF par ameter set)
+the solvent-accessible surface terms favor extended peptide co nﬁgurations. Table 2
+summarizes the diﬀerences in total energy ∆ Etot, solvation energy ∆ Esol, poten-
+tial energy ∆ EECEEP/ 2, and the partial energies ∆ EC, ∆ELJ, ∆EHBand ∆Etor
+between complete helical conﬁgurations (all residues with exceptio n of the terminal
+ones are part of an α-helix) and coil conﬁgurations at temperature T= 300 K for
+gas-phase, DDE OONS and SCH simulations. Note, that the intramole cular energy
+diﬀerences ∆ EECEPP/ 2of gas-phase, OONS and SCH simulations have within their
+error bars the same values. For simulations with the W92 parameter set the longest
+found helix consists of 6 consecutive residues. Hence, we measure d for this case only
+the energy diﬀerence between conﬁgurations with at least three c onsecutive helical
+residues (i.e. one turn of an α-helix) and coil conﬁgurations. This modiﬁed deﬁni-
+tion of the energy diﬀerences is also the reason for the smaller value of ∆EECEPP/ 2
+listed for W92 in table 2. We do not list energy diﬀerences for the JRF p arameter
+set since no helices were found in simulations utilizing this parameter se t.
+Note that in simulations with distant dependent permittivity (DDE) he lices are
+energetically more favored than in the gas-phase simulations. This is due to the
+increased contribution from the Coulomb term ECas one can also see in Fig. 3e.
+The larger energy gap between helical and coil conformations (whe n compared with
+gas-phase simulations) explains why the transition temperature is h igher in DDE
+simulations than in gas-phase simulations.
+FortheOONSandtheSCHparametersetthesolvationenergydiﬀer ence∆Esolis
+positive (indicating that coil structures are energetically favored ), but its magnitude
+isonlyapproximatelyhalfthatofthepotentialenergydiﬀerence∆ EECEPP/ 2. Hence,
+there is still an overall energetic gain connected with helix formation . However,
+9
+in both cases the total energy diﬀerence between helical and coil c onﬁgurations is
+reduced by the solvationenergy when compared withthe gas-phas e simulation. This
+reduction of the energy gap leads to the lower transition temperat ures observed in
+OONS and SCH simulations.
+On the other hand, for the W92 parameter set we ﬁnd that ∆ EECCP/ 2and
+∆Esolare of same magnitude so that helical conﬁgurations are not or only weakly
+energetically favored. This is consistent with our results in Fig. 1a an d 1b where
+we ﬁnd atT= 280 K a high average helicity in OONS and SCH simulations but
+only a small value of < nH>and no indications for a helix-coil transition in W92
+simulations. An evaluation of energy diﬀerences was not possible for simulations
+with the JRF parameter set since no helices were found.
+The above results indicate that the existence and characteristics of the helix-coil
+transition in polyalanine depend strong on the details of the solvent r epresentation.
+In order to evaluate the validity of the diﬀerent solvent models one h as to compare
+the numerical results with experimental data. For this purpose we have calculated
+the helix propagation parameter swhich was also determined by experiments [28,
+29]. According to the Zimm-Bragg model [27] the average number of helical residues
+<n>and the average length <ℓ>of a helical segment are given for large number
+of residues Nby
+<n>
+N=1
+2−1−s
+2/radicalBig
+(1−s)2+4sσ, (17)
+<ℓ> = 1+2s
+1−s+/radicalBig
+(1−s)2+4sσ, (18)
+wheresis the helix propagation parameter and σthe nucleation parameter of the
+Zimm-Bragg model. From these equations with the values of <n>/N and< ℓ >
+calculated from the multicanonical production runs, we have calcula tedsat tem-
+peratureT= 280 K for gas-phase and the diﬀerent solvation models. Our values are
+summarized in table 3 which also lists our σvalues. Our results for gas-phase, DDE
+and OONS simulations are in agreement with the experimental results of Ref. [29]
+where they list values of s(Ala) between 1 .5 and 2.19. On the other hand, the s
+value obtained in the SCH simulation agrees well with the one obtained b y the host-
+guest technique of Ref. [28]. However, the svalues which were obtained in W92 or
+JRF simulations do not agree with either of the experimental data. H ence, we con-
+clude that the W92 and JRF parameter sets are not appropriate so lvation models
+in simulations of polyalanine. Otherwise, the variation in the experimen tal data is
+10
+too large to give indications whether one of the remaining solvent rep resentations
+(DDE, OONS, SCH or even no solvent at all (GP)) is preferable over t he others.
+4 Conclusions
+We have performed multicanonical simulations of polyalanine. The intr amolecular
+forces were modeled by the ECEPP/2 force ﬁeld and various approx imations for the
+solvation energy were studied. We observed that whether a helix-c oil transition is
+observed for poly-alanine, and at what temperature, depends st rongly on the chosen
+approximation for the protein-solvent interaction. Our results de monstrate both the
+importance (and need) of including solvation terms into protein simula tions and the
+diﬃculties in chosing an adequate representation of the protein-wa ter interactions.
+Especially when using the solvent-accessible surface approach, it s eems necessary to
+carefullychoosea parameterset that issuitable fortheproblemun der consideration.
+Use of a speciﬁc parameter set without further justiﬁcation could otherwise generate
+miss-leading results.
+Acknowledgement
+U.Hansmann gratefullyacknowledges support byaresearch gran tfromtheNational
+Science Foundation (CHE-9981874). This article was written in part while U.H. was
+visitor at the Department of Physics at University of Central Florid a. He thanks
+Alfons Schulte, Weili Luo, Aniket Bhattacharya and Brian Tonner fo r their kind
+hospitality during his stay in Orlando.
+References
+[1] D. Poland and H.A. Scheraga, Theory of Helix-Coil Transitions in Biopolymers
+(Academic Press, New York, 1970).
+[2] Kemp,J.P., and Chen,Z.Y. 1998. Formation of Helical States in Wormlik e Poly-
+mer Chains. Phys. Rev. Lett. 81:3880-3883.
+[3] Hansmann, U.H.E., and Okamoto Y. 1999. Finite-size scaling of helix- coil tran-
+sitions in poly-alanine studied by multicanonical simulations. J. Chem. Phys.
+110:1267-1276; 111: 1339(E).
+11
+[4] Alves, N.A., and Hansmann, U.H.E. 2000. Partition Function Zeros a nd Finite
+Size Scaling of Helix-Coil Transitions in a Polypeptide. Phys. Rev. Lett. 84:
+1836-1839.
+[5] Alves, N.A., and Hansmann, U.H.E. 2001. Yang-Lee zeros and the h elix-coil
+transition in a continuum model of polyalanine. Physica A 292: 509-518.
+[6] Hudgins,R.R., Ratner, M.A., and Jarrold, M.F. 1998. Design of Helices that
+are stable in vacuo. J. Am. Chem. Soc. 120: 12974-12975.
+[7] Mitsutake, A., and Okamoto, Y. 1999. α-Helix propensities of homo-oligomers
+in aqueous solution my multicanonical algorithm. Chem. Phys. Let. 309: 95-
+100.
+[8] Mitsutake, A., and Okamoto, Y. 2000. Helix-coil transitions of am ino-acid
+homo-oligomers in aqueous solution studied by multicanonical simulatio ns.J.
+Chem. Phys. 112: 10638-10647.
+[9] Ooi,T., Obatake,M., Nemethy, G., and Scheraga, H.A. 1987. Access ible surface
+areas as a measure of the thermodynamic parameters of hydratio n of peptides.
+Proc. Natl. Acad. Sci. USA 8:3086-3090.
+[10] Vila, J., Williams, R.L, V´ asquez, M., andScheraga, H.A. 1991.Empir ical solva-
+tion models can be used to diﬀerentiate native from near-native con formations
+ofbovine pancreatictrypsin inhibitor. Proteins Struct Funct Genet 10: 199-218.
+[11] Wesson,M., and Eisenberg, D. 1992. Atomic solvation parameter s applied to
+molecular dynamics ofproteins in solution. Protein Science 1:227-235.
+[12] Schiﬀer, C.A., Caldwell, J.W., Kollman, P.A., and Stroud, R.M. 1993. Pr otein
+structure prediction with a combined solvation free energy molecula r mechanics
+force ﬁeld. Mol. Simul. 10: 121-149.
+[13] Sippl, M.J., N´ emethy, G., and Scheraga, H.A. 1984. Intermolecu lar potentials
+from crystal data. 6. Determination of empirical potentials for O- H···O=C
+hydrogen bonds from packing conﬁguration. J. Phys. Chem. 88: 6231-6233;
+and references therein.
+[14] Eisenmenger, F., Hansmann, U.H.E., Hayryan,Sh., andHu, C.K.200 1.[SMMP]
+A Modern Package for Simulation of Proteins. Comp. Phys. Comm. 138: 192-
+212.
+12
+[15] Hingerty, B., Richie, R.H., Ferrel, T.L., and Turner, J. 1985. Dielec tric Eﬀects
+in Biopolymers-The Theory of Ionic Saturation Revisited. Biopolymers 24:
+427-439.
+[16] Lavery,R., Sklenar, H., Zakrzewska, K., and Pullman, B. 1986. Th e Flexibility
+of the Nucleic Acids:(II) The Calculation of Internal Energy and App lications
+to Mononucleotide Repeat DNA. J. Biomol. Struct. & Dynamics 3: 989-1014.
+[17] Lee, B., and Richards, F.M. 1971 Interpretation of Protein Str uctures: Estima-
+tion of Static Accessibility. J. Mol. Biol. 55(3): 379-400.
+[18] Eisenberg, D., and McLachlan, A.D. 1986. Solvation energy in pro tein folding
+and binding. Nature319: 199-203.
+[19] Berg, B.A., and Neuhaus, T. 1991. Multicanonical algorithms for ﬁrst order
+phase transitions. Phys. Lett. B 267:249-253.
+[20] Hansmann, U.H.E., and Okamoto, Y. 1998. The Generalized-Ense mble Ap-
+proach for Protein Folding Simulations. in: Stauﬀer, D. (ed.) “ Annual Reviews
+in Computational Physics VI ” (Singapore: World Scientiﬁc), 129-157.
+[21] Hansmann, U.H.E., and Okamoto, Y. 1993. Prediction of peptide c onformation
+by multicanonical algorithm: a new approach to the multiple-minima pro blem.
+J. Comp. Chem. 14: 1333-1338.
+[22] Okamoto, Y., and Hansmann, U.H.E. 1995. Thermodynamics of He lix - Coil
+Transitions Studied by Multicanonical Algorithms. J. Phys. Chem. 99: 11276-
+11287.
+[23] Ferrenberg, A.M., and Swendsen, R.H. 1988. New Monte Carlo te chnique for
+studying phase transitions. Phys. Rev. Lett. 61:2635-2638.
+[24] Berg, B.A. 1996 Multicanonical Recursions. J. Stat. Phys. 82: 323-342.
+[25] Brooks, B.R., Bruccolieri, R.E., Olafson, B.D., States, D.J., Swamina than,
+S., and Karplus, M. 1983. CHARMM: a program for macromolecular en ergy,
+minimization, and dynamics calculations. J. Comp. Chem. 4: 187- 217.
+[26] Wolfenden, R., Andersson, L., Cullis, P.M., and Southgate, C.C.B. 1 981. Aﬃni-
+ties of Amino-Acid Side Chains for Solvent Water. Biochemistry 20: 849-855.
+13
+[27] Zimm B.H., and Bragg, J.K. 1959. Theory of the Phase Transition B etween
+Helix and Random Coil in Polypeptide Chains. J. Chem. Phys. 31: 526 -535.
+[28] Wojcik, J., Altmann, K.H., and Scheraga, H.A. 1990. Helix-Coil Sta bility Con-
+stants for the Naturally-Occuring Amino-Acids in Water. 24. Half-C ystine
+Parameters from Random Poly(Hydroxibutylglutamnie CO-S-Methy lthiol-
+Lcystine)Biopolymers 30, 121-134.
+[29] Chakrabartty, A.; R.L. Baldwin, R.L. 1993. In: Protein Folding: In Vivo and
+In Vitro; Cleland J.; King, J. eds.; ACS Press: Washington, D.C., pp. 166–177.
+14
+Tables:
+Table 1: Transition temperatures for the helix-coil transition in ALA 10as obtained
+fromgas-phasesimulations andsimulations withvarioussolvent repr esentations. All
+results rely on multicanonical simulations of 1,000,000 Monte Carlo swe eps each.
+Model Tc
+GP 435(20)
+DDE 495(20)
+OONS 345(15)
+SCH 285(25)
+W92 -
+JRF -
+Table 2: Energy diﬀerences between helical and conﬁgurations (se e text) atT=
+280 K as measured in gas-phase simulations and simulations with variou s solvent
+representations. All results rely on multicanonical simulations of 1,0 00,000 Monte
+Carlo sweeps of ALA 10for each case.
+Model ∆ Etot∆Esol∆EECEPP/ 2∆EC∆ELJ∆EHB∆Etor
+GP−16.9(1) - −16.9(1) 0.4(3)−12.1(1)−4.3(3)−0.8(1)
+DDE−17.9(6) - −17.9(6)−3.6(2)−10.1(4)−3.9(2)−0.3(1)
+OONS −11.3(9) 4.1(3)−15.4(6)−0.2(1)−10.7(4)−4.1(1)−0.4(1)
+SCH−7.1(5) 8.7(1)−15.8(5) 0.7(3)−11.2(2)−4.6(3)−0.7(1)
+W92−0.7(7) 5.6(6)−6.3(1.1) 0.8(1)−5.8(9)−1.0(2)−0.3(1)
+JRF – – – – – – –
+15
+Table 3: Helix propagation parameter sand nucleation parameter σatT= 280 K
+for Ala 10as measured in gas-phase simulations and simulations with various solv ent
+representations. All results rely on multicanonical simulations of 1,0 00,000 Monte
+Carlo sweeps for each case.
+Model s σ
+GP 1.67(9) 0.15(1)
+DDE 1.78(12) 0.15(1)
+OONS 1.31(15) 0.13(1)
+SCH 1.02(15) 0.11(2)
+W92 ≈0>1
+JRF ≈0>1
+16
+Figure Captions:
+Fig. 1Temperature dependence of (a) the average number < nH>of helical
+residues and (b) the susceptibility χ(T) for ALA 10as calculated from a gas-
+phase simulation and from simulations with various solvation energy te rms.
+All results rely on multicanonical simulations of 1,000,000 Monte Carlo s weeps
+each.
+Fig. 2Temperature dependence of the average number < nB>of residues whose
+backbone dihedral angles φ,ψtake values as typically found in β-sheets. Re-
+sults from a gas-phase simulation and such with various solvation ter ms are
+presented for ALA 10. All data rely on multicanonical simulations of 1,000,000
+Monte Carlo sweeps.
+Fig. 3Temperature dependence of (a) the total energy < Etotal=EECEEP/ 2+
+Esol>, (b) the intramolecular energy < EECEPP/ 2>, (c) the hydrogen-
+bonding energy < EHB>, (d) Lennard-Jones energy < ELJ>, (e) Coulomb
+energy< EC>, and (f) the solvation energy < Esol>as calculated from
+a gas-phase simulation and from simulations with various solvation ene rgy
+terms. All results rely on multicanonical simulations of ALA 10with 1,000,000
+Monte Carlo sweeps for each case.
+Fig. 4Temperature dependence of the average radius-of-gyration <Rgy>as mea-
+sured in gas-phase simulations and simulations with various solvent re presen-
+tations. All data rely on multicanonical simulations of 1,000,000 Monte Carlo
+sweeps.
+17
+012345678910
+2003004005006007008009001000<n_H>(T) 
+T [K]Number of helical residues
+GP
+DDE
+OONS
+SCH
+W92
+JRF
+012345678910
+2003004005006007008009001000<chi>(T) 
+T [K]Susceptibility
+GP
+DDE
+OONS
+SCH
+W92
+JRF
+00.511.522.533.544.5
+2003004005006007008009001000<n_B>(T) 
+T [K]GP
+DDE
+OONS
+SCH
+W92
+JRF
+-60-50-40-30-20-10010
+2003004005006007008009001000<E>(T) [Kcal/Mol]
+T [K]Total Energy
+GP
+DDE
+OONS
+SCH
+W92
+JRF
+-60-50-40-30-20-10010
+2003004005006007008009001000<E>(T) [Kcal/Mol]
+T [K]ECEPP/2 Energy
+GP
+DDE
+OONS
+SCH
+W92
+JRF
+-9-8-7-6-5-4-3-2-101
+2003004005006007008009001000<E>(T) [Kcal/Mol]
+T [K]Hydrogen Bond Energy Term
+GP
+DDE
+OONS
+SCH
+W92
+JRF
+-35-30-25-20-15-10-505
+2003004005006007008009001000<E>(T) [Kcal/Mol]
+T [K]Lennard-Jones Energy Term
+GP
+DDE
+OONS
+SCH
+W92
+JRF
+-7-6-5-4-3-2-101
+2003004005006007008009001000<E>(T) [Kcal/Mol]
+T [K]Electrostatic Energy Term
+GP
+DDE
+OONS
+SCH
+W92
+JRF
+-35-30-25-20-15-10-50510
+2003004005006007008009001000<E>(T) [Kcal/Mol]
+T [K]Solvation Energy
+GP
+DDE
+OONS
+SCH
+W92
+JRF
+345678
+2003004005006007008009001000<r_GY>(T) 
+T [K]Radius of gyration
+GP
+DDE
+OONS
+SCH
+W92
+JRF

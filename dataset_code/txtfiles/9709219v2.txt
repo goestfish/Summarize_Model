@@ -1,0 +1,821 @@
+arXiv:cond-mat/9709219v2  [cond-mat.dis-nn]  9 Nov 1997Stability of the replica symmetric solution for the informa tion
+conveyed by a neural network
+Simon Schultz †and Alessandro Treves ‡
+†Department of Experimental Psychology, South Parks Rd., Un iversity of Oxford, Oxford OX1
+3UD, U.K.
+‡Programme in Neuroscience, International School for Advanc ed Studies, via Beirut 2-4, 34013
+Trieste, Italy
+(October 26, 2018)
+Abstract
+The information that a pattern of ﬁring in the output layer of a feedforward
+network of threshold-linear neurons conveys about the netw ork’s inputs is
+considered. A replica-symmetric solution is found to be sta ble for all but
+small amounts of noise. The region of instability depends on the contribution
+of the threshold and the sparseness: for distributed patter n distributions,
+the unstable region extends to higher noise variances than f or very sparse
+distributions, for which it is almost nonexistant.
+84.35.+i,89.70.+c,87.10.+e
+Typeset using REVT EX
+1
+I. INTRODUCTION
+Advances in techniques for the formal analysis of neural network s [1–5] oﬀer insight into
+the behaviour of models of biological interest. Of particular interes t are methods which
+allow the calculation of the information that can be conveyed by a give n neural structure,
+as these oﬀer both useful intuitions and the prospect of conduct ing pertinent experiments
+[6]. The replica trick [7] has been used to achieve this in the case of bina ry units [5] and
+threshold-linear units [8,9], by appealing to an assumption of replica sy mmetry. In the
+case of binary units with continuous inputs, the validity of the replica -symmetric ansatz is
+justiﬁed by the duality with the Gardner calculation of the storage c apacity for continuous
+couplings [2,5,10]. We now analyse the stability of the replica symmetric s olution for mutual
+information in a network of threshold-linear units.
+Themodeldescribesafeedforwardnetworkofthreshold-linearu nitswithpartiallydiluted
+connectivity. This is a simpler version of the calculation described in [8,9 ]. In the calculation
+considered here, there is only one mode of operation (which we might call “transmission”),
+as opposed to the division into storage and recall modes in that calcu lation. There are N
+cells in the input layer, and M(proportional to N) in the output layer. The limit of interest
+isN→ ∞.
+{ηi}arethe ﬁring rates of each cell iinthe input layer. The probability density of ﬁnding
+a given ﬁring pattern is taken to be:
+P({ηi})/productdisplay
+idηi=/productdisplay
+iPη(ηi)dηi (1)
+Each input cell is thus assumed to code independent information.
+{ξj}are the ﬁring rates produced in each cell in the output layer. They a re determined
+by the matrix multiplication of the pattern {ηi}with the synaptic weights Jij, followed by
+Gaussian distortion, thresholding and rectiﬁcation.
+ξj=/bracketleftBigg
+ξ0+/summationdisplay
+icijJijηi+ǫj/bracketrightBigg+
+=/bracketleftBig˜ξj/bracketrightBig+(2)
+/angbracketleftBig
+(ǫj)2/angbracketrightBig
+=σ2
+ǫ (3)
+Each output cell receives Cj(which we will take to be of the order of 104) connections from
+input layer cells:
+cij∈ {0,1} /an}bracketle{tcij/an}bracketri}htN=Cj(C≡ /an}bracketle{tCj/an}bracketri}ht) (4)
+The mean value across all patterns of each synaptic weight is taken to be equal across
+synapses, and is therefore taken into the threshold term. The sy naptic weights Jijare thus
+of zero mean, and variance σ2
+J(all that aﬀects the calculation is the ﬁrst two moments of
+their distribution).
+/angbracketleftBig
+(Jij)2/angbracketrightBig
+=σ2
+J. (5)
+2
+The average of the mutual information
+I({ηi},{ξj}) =/integraldisplay/productdisplay
+idηi/integraldisplay/productdisplay
+jdξjP({ηi},{ξj})lnP({ηi},{ξj})
+P({ηi})P({ξj})(6)
+over the quenched variables cij,Jijis written using the replica trick as
+/an}bracketle{tI(η,ξ)/an}bracketri}htc,J= lim
+n→01
+n/angbracketleftBigg/integraldisplay
+dηdξP(η,ξ)/braceleftBigg/bracketleftBiggP(η,ξ)
+P(η)/bracketrightBiggn
+−[P(ξ)]n/bracerightBigg/angbracketrightBigg
+c,J. (7)
+The calculation is valid only for non-zero noise variance, and it will be se en that the only
+region in which the solution is not well behaved is that of very low noise v ariance.
+II. CALCULATION OF MUTUAL INFORMATION
+First, introducing replica indices α= 1,..,n+ 1, and breaking the integral over ξinto
+subthreshold and suprathreshold components, we observe that
+/an}bracketle{tI(η,ξ)/an}bracketri}htc,J= lim
+n→01
+n/braceleftBigg/integraldisplay
+dη/bracketleftBigg1
+P(η)/bracketrightBiggn/productdisplay
+α/parenleftbigg/integraldisplay0
+−∞d˜ξα/angbracketleftBig
+P(ηα,˜ξα)|ηα=η/angbracketrightBig
+c,J/parenrightbigg
++/integraldisplay
+dη/bracketleftBigg1
+P(η)/bracketrightBiggn/integraldisplay∞
+0d˜ξ/productdisplay
+α/angbracketleftBig
+P(ηα,˜ξα)|ηα=η,˜ξα=˜ξ/angbracketrightBig
+c,J
+−/productdisplay
+α/parenleftbigg/integraldisplay0
+−∞d˜ξα/integraldisplay
+dηα/angbracketleftBig
+P(ηα,˜ξα)/angbracketrightBig
+c,J/parenrightbigg
+−/integraldisplay∞
+0d˜ξ/productdisplay
+α/parenleftbigg/integraldisplay
+dηα/angbracketleftBig
+P(ηα,˜ξα)|˜ξα=˜ξ/angbracketrightBig
+c,J/parenrightbigg/bracerightBigg
+(8)
+This allows us to treat both terms of Eq. 7 in the same manner. To obt ain the probability
+density/angbracketleftBig
+P(ηα,˜ξα)/angbracketrightBig
+, we use Dirac delta functions to implement the constraints deﬁned b y
+(2):
+/angbracketleftBig
+P(ηα,˜ξα)/angbracketrightBig
+c,J=/angbracketleftBigg/integraldisplay
+/productdisplay
+jD/parenleftBiggǫα
+j
+σǫ/parenrightBigg
+
+/productdisplay
+ijD/parenleftbiggJij
+σJ/parenrightbigg
+/productdisplay
+jδ/bracketleftBigg
+˜ξα
+j−ξ0−/summationdisplay
+icijJijηα
+i−ǫα
+j/bracketrightBigg
+×P({ηα
+i})n+1/angbracketrightBigg
+c(9)
+where
+Du=du√
+2πe−u2/2(10)
+Using the integral form of the Dirac delta function introduces a Lag range multiplier xα
+j.
+The integrals over the noise and interaction distributions are perfo rmed, and the quenched
+average over the connections performed in the thermodynamic limit , so that
+3
+/angbracketleftBig
+P(η,˜ξ)n+1/angbracketrightBig
+=/integraldisplay
+(/productdisplay
+jαdxα
+j
+2π)exp
+
+i/summationdisplay
+jαxα
+j(˜ξα
+j−ξ0)
+−1
+2/summationdisplay
+jαβxα
+jxβ
+j/bracketleftBigg
+σ2
+ǫδαβ+σ2
+JC
+N/summationdisplay
+iηα
+iηβ
+i/bracketrightBigg
+P({ηα
+i})n+1
+
+(11)
+whereδαβis the Kronecker delta. A Lagrange multiplier
+zαβ=1
+N/summationdisplay
+iηα
+iηβ
+i (12)
+is introduced using the integral form of the Dirac delta function via a n auxiliary variable
+˜zαβ. We then obtain
+/angbracketleftBig
+P(η,˜ξ)n+1/angbracketrightBig
+=/integraldisplay
+(/productdisplay
+αdzαd˜zα
+2π/N)(/productdisplay
+(αβ)dzαβd˜zαβ
+2π/N)exp/braceleftBigg
+iN/summationdisplay
+αzα˜zα+iN/summationdisplay
+(αβ)zαβ˜zαβ
+−/summationdisplay
+α˜zα/summationdisplay
+i(ηα
+i)2−/summationdisplay
+(αβ)˜zαβ/summationdisplay
+iηα
+iηβ
+i−1
+2/summationdisplay
+jαβ(˜ξα
+j−ξ0)Eαβ(˜ξβ
+j−ξ0)
+−1
+2TrlnM/bracerightBigg
+(2π)−n+1
+2P({ηα
+i})n+1(13)
+whereM=σ2
+ǫI+σ2
+JCZandE=M−1.Zis the matrix with elements zαβ, and (αβ) is the
+pairαβ,α/ne}ationslash=β.
+Thus
+/an}bracketle{tI/an}bracketri}ht= lim
+n→0/braceleftBigg/integraldisplay
+(/productdisplay
+αdzαd˜zα
+2π/N)exp/bracketleftBigg
+iN/summationdisplay
+αzα˜zα−NHA(˜zα)−MG(zα,zα)/bracketrightBigg
+−/integraldisplay
+(/productdisplay
+αdzαd˜zα
+2π/N)(/productdisplay
+(αβ)dzαβd˜zαβ
+2π/N)exp/bracketleftBigg
+iN/summationdisplay
+αzα˜zα+iN/summationdisplay
+(αβ)zαβ˜zαβ
+−NHB(˜zα,˜zαβ)−MG(zα,zαβ)/bracketrightBigg/bracerightBigg
+(14)
+where
+e−HA(˜zα) =/integraldisplay
+ηdηP(η)exp/parenleftBigg
+−/summationdisplay
+α˜zαη2/parenrightBigg
+(15)
+e−HB(˜zα,˜zαβ) =/integraldisplay
+η(/productdisplay
+αdηαP(ηα))exp
+−/summationdisplay
+α˜zα(ηα)2−/summationdisplay
+(αβ)˜zαβηαηβ
+ (16)
+e−G(zα,zαβ) =e−1
+2TrlnM/braceleftBigg/integraldisplay∞
+0d˜ξ√
+2πexp−1
+2(˜ξ−ξ0)2/summationdisplay
+αβEαβ
++/integraldisplay0
+−∞(/productdisplay
+αd˜ξα
+√
+2π)exp
+−1
+2/summationdisplay
+αβ(˜ξα−ξ0)Eαβ(˜ξβ−ξ0)
+/bracerightBigg
+(17)
+4
+III. REPLICA SYMMETRIC SOLUTION
+The assumption of replica symmetry can be written
+zα
+A=zαβ
+A=z0A(n)i˜zα
+A= ˜z0A(n)
+zα
+B=z0B(n)i˜zα
+B= ˜z0B(n)
+zαβ
+B=z1(n)i˜zαβ
+B=−˜z1(n)
+(18)
+The saddle-point method is utilized in the thermodynamic limit, yielding th e saddle-point
+equations
+z0A=/angbracketleftBig
+η2/angbracketrightBig
+η(19a)
+˜z0A= 0 (19b)
+z0B=/angbracketleftBig
+η2/angbracketrightBig
+η(19c)
+˜z0B= 0 (19d)
+z1=−/integraldisplay∞
+−∞Ds/angbracketleftBigg
+(η2+sη√˜z1)exp(−˜z1
+2η2−s√
+˜z1η)/angbracketrightBigg
+ηln/angbracketleftbigg
+exp(−˜z1
+2η2−s√
+˜z1η)/angbracketrightbigg
+η(19e)
+˜z1=−σ2
+JCr/braceleftBiggξ0
+(pB+qB)3/2σ(ξ0√pB+qB)−1
+pBφ/parenleftBiggξ0√pB+qB/parenrightBigg
++/integraldisplay∞
+−∞Dt/bracketleftBigg
+1+lnφ/parenleftBigg−ξ0−t√qB√pB/parenrightBigg/bracketrightBigg
+σ/parenleftBigg−ξ0−t√qB√pB/parenrightBigg
+p−3/2
+B/parenleftBigg
+ξ0+t(pB+qB)√qB/parenrightBigg/bracerightBigg
+(19f)
+and the expression for the information per input cell
+/an}bracketle{ti/an}bracketri}ht=r G(pA,qA)+1
+2z1˜z1−rG(pB,qB)
+−/integraldisplay∞
+−∞Ds/angbracketleftbigg
+exp(−1
+2˜z1η2−s√
+˜z1η)/angbracketrightbigg
+ηln/angbracketleftbigg
+exp(−1
+2˜z1η2−s√
+˜z1η)/angbracketrightbigg
+η(20)
+where
+G(p,q) =pξ0
+2(p+q)3/2σ/parenleftBiggξ0√p+q/parenrightBigg
+−1
+2(1+lnp)φ/parenleftBiggξ0√p+q/parenrightBigg
++/integraldisplay∞
+−∞Dtφ/parenleftBigg−ξ0−t√q√p/parenrightBigg
+lnφ/parenleftBigg−ξ0−t√q√p/parenrightBigg
+(21)
+5
+and
+/an}bracketle{tx(η)/an}bracketri}htη=/integraldisplay
+ηdηP(η)x(η)
+φ(x) =/integraldisplayx
+−∞Ds
+σ(x) =1√
+2πe−x2/2
+pA=σ2
+ǫpB=σ2
+ǫ+σ2
+JC(z0B−z1)
+qA=σ2
+JCz0AqB=σ2
+JCz1.
+(22)
+We refer to r=M/Nas the anatomical divergence.
+This expression must in general be evaluated numerically. However, considering some
+limiting cases can give us some insight into the behaviour of the solution . In particular, the
+limit of linear processing can be obtained by taking ξ0→+∞. In this limit, Eq. 19f reduces
+to
+˜z1→σ2
+JCr
+pB. (23)
+The information per neuron obtained in the linear limit is
+/an}bracketle{ti/an}bracketri}ht →1
+2rlnpB
+pA+1
+2z1˜z1
+−/integraldisplay∞
+−∞Ds/angbracketleftbigg
+exp(−1
+2˜z1η2−s√
+˜z1η)/angbracketrightbigg
+ηln/angbracketleftbigg
+exp(−1
+2˜z1η2−s√
+˜z1η)/angbracketrightbigg
+η.(24)
+The information obtained in this limit is bounded by that which would be ob tained from
+a simple Gaussian channel calculation, where we consider the channe l
+ξ∗
+j=/summationdisplay
+icijJijηi+ǫj, (25)
+and perform the annealed and quenched averages to obtain the sig nal variance σ2
+JC(/an}bracketle{tη2/an}bracketri}htη−
+/an}bracketle{tη/an}bracketri}ht2
+η), and information per input cell
+Igauss=r
+2ln
+1+σ2
+JC(/an}bracketle{tη2/an}bracketri}htη−/an}bracketle{tη/an}bracketri}ht2
+η)
+σ2ǫ
+. (26)
+The Gaussian channel information provides an upper limit correspon ding to the optimal η
+distribution (for transmitting maximal information given a constrain t on the signal power),
+and no dependence upon the same inputs of the output cells.
+Within the linear limit, we can consider the special case of high noise var iance (low signal
+to noise ratio). As σ2
+ǫ→ ∞,
+6
+˜z1∼σ2
+JCr
+σ2ǫ, (27)
+and
+z1≃ /an}bracketle{tη/an}bracketri}ht2+O(˜z1). (28)
+The information therefore falls to zero as
+/an}bracketle{ti/an}bracketri}ht ∼σ2
+JCr(/an}bracketle{tη2/an}bracketri}htη−/an}bracketle{tη/an}bracketri}ht2
+η)
+2σ2
+ǫ, (29)
+i.e. inversely with noise variance, as one would expect. We thus can se e that for linear
+neurons with low signal to noise ratio, the transmitted information a pproaches the Gaussian
+channel limit.1
+The numerical solution of the mutual information expression, as a f unction of the noise
+variance, is shown in Fig. 1, both for the case of linear units and for u nits with a threshold of
+ξ0=−0.4, representing threshold-linear behaviour. This is shown for a bina ry pattern dis-
+tribution of sparseness a, where the sparseness of a distribution is a mean-invariant measur e
+of spread and is deﬁned in general as
+a=/an}bracketle{tη/an}bracketri}ht2
+η
+/an}bracketle{tη2/an}bracketri}htη. (30)
+This measure is ‘more sparse’ for smaller a, and reduces to the fraction of units ‘on’ in the
+case of a binary distribution. The Gaussian channel bound appears on the same graphs for
+comparison.
+The mutual information should be bounded by the pattern entropy as the noise vari-
+ance becomes very small. As the noise variance decreases, the rep lica-symmetric solution
+approaches this bound in both the linear and threshold-linear cases . It can be seen, how-
+ever, that for very small noise variances, the replica-symmetric s olution changes direction
+and crosses this physical boundary. Inspection of Eq. 21 reveals divergence of the mutual
+information solution in the limit σ2
+ǫ→0; this is in keeping with our intuition from the
+beginning that the calculation should not be valid in the deterministic limit . However, for
+such low noise variance the information has essentially saturated in a ny case. For threshold-
+linear neurons, the solution is also unstable to replica-symmetry-br eaking ﬂuctuations for
+relatively low noise variance, as will be discussed in the next section.
+IV. STABILITY OF THE REPLICA-SYMMETRIC SOLUTION
+The stability of the replica-symmetric solution is analysed after the s tyle of de Almeida-
+Thouless [11]. For the solution for free energy this was addressed in the context of Hopﬁeld-
+Little type autoassociative neural networks in [1], and for an autoa ssociator with threshold-
+linear units and for a threshold-linear variant of the Sherrington-K irkpatrick model in [12].
+1It can also be shown (we have done so for the case of a Gaussian ηdistribution), that as r→0,
+the Gaussian channel bound is also reached.
+7
+For the solution for another quantity, the Gardner volume, this wa s addressed in [2] for Ising
+(±1) neurons. In contrast, here we are determining the stability of t he solution for mutual
+information in a network comprised of threshold-linear neurons, alt hough the technique
+proceeds very similarly.
+Fluctuations in the transverse (replica-symmetry breaking, RSB) and longitudinal
+(replica-symmetric, RS) directions are decoupled, and hence can b e analysed separately.
+Longitudinal ﬂuctuations can be disregarded [11,13] if a unique sadd le-point is obtained,
+which appears to be the case. We will therefore concentrate upon transverse ﬂuctuations.
+We wish to consider small deviations in the saddle-point parameters a bout the replica-
+symmetric saddle-point,
+zαβ=z1+δzαβ
+˜zαβ= ˜z1+δ˜zαβ(31)
+Quadratic ﬂuctuations in the function
+B(zα,˜zα,zαβ,˜zαβ) =iN/summationdisplay
+αzα˜zα+iN/summationdisplay
+(αβ)zαβ˜zαβ−NHB(˜zα,˜zαβ)−MG(zα,zαβ).(32)
+give us the stability matrix
+Γ=
+∂2B
+∂zαβ∂zγδ∂2B
+∂zαβ∂(i˜zγδ)
+∂2B
+∂(i˜zαβ)∂zγδ∂2B
+∂(i˜zαβ)∂(i˜zγδ)
+=/bracketleftbiggA(αβ)(γδ)δ(αβ)(γδ)
+δ(αβ)(γδ)B(αβ)(γδ)/bracketrightbigg
+(33)
+whereδ(αβ),(γδ)=δαγδβδ+δαδδβγ. In constrast to previous calculations based on quantities
+such as free energy, the expression for mutual information involv esn+1 replicas. There are
+n(n+1)/2 independent variables zαβ, and the same number of independent ˜ zαβ.Γis thus
+ann(n+1)×n(n+1) matrix.
+The transverse eigenvalues of this matrix are given by the eigenvalu es of the matrix
+/parenleftbiggλA1
+1λB/parenrightbigg
+, (34)
+whereλAandλBare the transverse eigenvalues of the submatrices A(αβ)(γδ)andB(αβ)(γδ)
+respectively. Calculation of these involves consideration of the sym metry properties of the
+submatrices, and is detailed in the Appendix. The eigenvalue equation s reduce to
+λA+c=λ
+1 +cλB=cλ (35)
+We thus have the two replicon mode eigenvalues
+λ±=1
+2(λA+λB)±/radicalBigg
+1
+4(λA−λB)2+1 (36)
+For stability, the product of the eigenvalues must be non-negative . A further subtlety
+is introduced here. λ+can be seen to be >0 irrespective of σ2
+ǫora.λ−, on the other
+8
+hand, changes sign, moving from negative to positive for smaller σ2
+ǫ. However, intuitively we
+expect, from the analogy of the noise with the ‘temperature’ para meter in other models of
+neural networks [1] and physical systems [14] that if replica-symm etry breaking is to set in,
+it will do so at low noise variances. This is conﬁrmed by the eminently sen sible behaviour of
+the mutual information curves of Fig. 1 at medium to high noise, but n onphysical behaviour
+at very low noise values. It can be concluded that, as occurs in [1,12], a sign reversal has
+been introduced due to the integration contour, which must be cor rected.
+These equations have been numerically solved for λ−. Fig. 2 shows the behavior of λ−
+for a range of sparsenesses and thresholds. Where the eigenvalu e passes above the zero axis
+(dottedline), a phaseofRS-instabilityisindicated. Fig.2aisforthes ituationofquitesparse
+coding of the patterns. As the noise is reduced from the high noise r egion, in which the RS
+solution is stable, the eigenvalue changes sign, and an unstable regio n is entered. In the case
+of threshold ξ0= 0.4, which represents only a very small degree of threshold-like be havior,
+the eigenvalue can be seen to curve back and change sign again at low er noise values still.
+Due to non-convergence of numerical integration, it is not possible to examine extremely
+small noise values; therefore it is not clear from this diagram whethe r the eigenvalue also
+falls below zero again for the other curves plotted in this ﬁgure, or if it instead has a ﬁnite
+value at zero noise. However, any region of RS stability at noise varia nces this low would
+obviously be irrelevant for the same numerical reasons.
+It is apparent from Figs. 2(b) and (c) that as the input distribution is made less sparse
+(ais increased), the critical amount of noise below which instability arise s increases. This
+will be discussed again shortly. Another eﬀect that can be seen in Fig s. 2(a) and (b) is that,
+as the neurons are made more linear ( ξ0is increased), the critical noise ﬁrst rises, then falls.
+This becomes more clear after plotting a phase diagram of noise again stξ0(Fig. 3). For low
+a(sparse distributions), the critical noise rises, falls, and then cur ves back around on itself
+– after the neurons become suﬃciently linear, there is no more regio n of instability. As the
+pattern code becomes less sparse, at ﬁrst the region of instability merely expands. When a
+reaches a certain value, however, the edge of the unstable region no longer curls in on itself,
+but extends outwards. At a sparseness of 0.5, for instance, the critical noise thus ﬁrst rises
+with increasing linearity, taking longer to reach its peak than for mor e sparse distributions,
+then falls, and ﬁnally levels oﬀ and decreases slowly. The sparseness at which this change in
+behavior is exhibited is independent of the parameters of the syste m, and can be seen from
+Fig. 3 to lie somewhere between 0.2 and 0.5.
+In the special case of the linear limit, in which ξ0→ ∞,λAdisappears (see Appendix),
+and stability is assured. For ﬁnite ξ0and above the coeﬃcient of sparseness referred to in
+the previous paragraph, though, there is a distinct and reasonab ly large region of instability.
+The resulting phase diagrams are shown in Fig. 4. Fig. 4(a) shows the situation for
+ξ0=−0.4, which corresponds to threshold-linear behavior. As ξ0is increased (Fig. 4b-
+d; the neurons are made progressively “more linear”), the critical noise variance at which
+instability of the RS solution sets in ﬁrst increases, and then decrea ses, as would be expected
+fromFig. 3. In Fig. 4(d), the line of critical noise variance abruptly s tops ata∼0.23: at this
+point, the replicon-mode eigenvalue passes below the zero axis, and stability is assured. In
+all cases, it is apparent that in particular for very sparse distribut ions, the replica-symmetric
+equationsarevaliddowntoquitelownoise. Forlesssparsecoding, wh erethepatternentropy
+is signiﬁcantly higher, the replica-symmetry-broken solution would s eem to be relevant for
+9
+higher noise variances.
+It should be noted that the sparseness of the distribution of outp uts is not the same as
+that of the inputs. This can be determined by
+aout=/an}bracketle{tξ/an}bracketri}ht2
+ξ+
+/an}bracketle{tξ2/an}bracketri}htξ+(37)
+where
+/an}bracketle{tx(ξ)/an}bracketri}htξ+=/integraldisplay∞
+0dξ/radicalBig
+2πσ2
+ξx(ξ)exp−(ξ−ξ0)2
+2σ2
+ξ
+σ2
+ξ=σ2
+ǫ+σ2
+JC(/angbracketleftBig
+η2/angbracketrightBig
+η−/an}bracketle{tη/an}bracketri}ht2
+η). (38)
+The lines of marginal stability for ξ0=−0.4,ξ0= 0.0,ξ0= 0.4 andξ0= 0.80 are replotted
+in Fig. 5 against the output sparseness. Although the phase diagra ms look fairly similar
+when plotted as a function of input sparseness, they occupy diﬀer ent regions of the output
+sparseness domain because of the thresholding. It is also worth no ting that because of the
+mapping performed by Eq. 37, the boundaries of the regions in Fig. 4 do not necessarily
+form the boundaries of the regions in the output-sparseness plan e, which in some instances
+constitute points from inside the above curves.
+For neurons operating in the threshold-linear regime (left curve, ξ0<0.0), where output
+sparseness is eﬀectively constrained by the thresholding, the sta bility characteristics are
+qualitatively as has been described earlier. For ξ0= 0.0, it is apparent from Eqs. 37 and
+38 that the output sparseness is constant (regardless of the inp ut sparseness) at a value of
+1/π. Asξ0is increased above zero, the output becomes less sparse, and the line of marginal
+stability is ﬂipped horizontally (because in this range the entropy is hig her for smaller
+aout; right curves). Assuming that the sparseness of coding in connec ted sets of neurons in
+the brain tends to be similar, the former curve (for threshold-linea r behaviour) might be
+considered the more biologically applicable, with the threshold in this mo del incorporating
+functionally the constraint on the degree of neural activity.
+V. CONCLUSIONS
+This paper has detailed the replica symmetric solution for the informa tion transmitted
+by a feedforward network of threshold-linear neurons, and exam ined its stability to ﬂuc-
+tuations in the direction of replica symmetry breaking. It appears t hat for sparse pattern
+distributions, replica-symmetry breaking only sets in at noise varian ces suﬃciently small
+that we might reasonably consider them to be ‘beyond the realm of bio logical interest’, at
+least for noisy cortical cells. We believe that, quite importantly, the re is every reason to
+expect that these results carry over to the slightly more complicat ed ‘Schaﬀer collateral’ cal-
+culation described in [8,9]. There is thus reason to feel conﬁdence in t he replica-symmetric
+assumption when analysing neural networks in areas such as the hip pocampus which are
+known to code sparsely.
+When more distributed (less sparse) encoding is used, the mutual in formation solution
+is prone to instability to replica-symmetry-breaking ﬂuctuations at higher amounts of noise
+10
+than in the sparse case. It is not clear from the current analysis wh at the quantitative eﬀect
+of broken replica symmetry might be, or what the form of the exact solution would be in
+that case (e.g. the Parisi ansatz [15]). Care should therefore be t aken when analysing the
+information conveyed by networks using more distributed encoding .
+ACKNOWLEDGEMENTS
+We would like to thank S Panzeri, F Battaglia and C Fulvi-Mari for usefu l discussions.
+In particular, we would like to thank ET Rolls for his role in the collaborat ive research
+environment that allowed this work to be undertaken. SS would also lik e to thank the
+Oxford McDonnell-Pew Centre for Cognitive Neuroscience for a Res earch Studentship.
+11
+APPENDIX
+In this appendix the transverse eigenvalues of the submatrices A(αβ)(γδ)andB(αβ)(γδ)
+are calculated. Both A(αβ),(γδ)andB(αβ),(γδ)have three diﬀerent types of matrix elements
+depending on whether none, one or two replica indices of the pair ( αβ) equal those of the
+pair (γδ). The three possible values A(αβ),(γδ)can take are:
+P=∂2B
+∂zαβ∂zαβ=σ4
+JCr
+4W(q2+2pq)2
+p4(p+q)4/braceleftBigg/integraldisplay∞
+0dξ√
+2π(ξ−ξ0)4exp/bracketleftBigg
+−(ξ−ξ0)2
+2(p+q)/bracketrightBigg
++/integraldisplay∞
+−∞dt√
+2π/bracketleftbigg
+(ξ−ξ0)2/bracketrightbigg2
+ξ−(1
+2,t)/bracerightBigg
+Q=∂2B
+∂zαβ∂zαγ=σ4
+JCr
+4W(q2+2pq)2
+p4(p+q)4/braceleftBigg/integraldisplay∞
+0dξ√
+2π(ξ−ξ0)4exp/bracketleftBigg
+−(ξ−ξ0)2
+2(p+q)/bracketrightBigg
++/integraldisplay∞
+−∞dt√
+2π/bracketleftbigg
+(ξ−ξ0)2/bracketrightbigg
+ξ−(1
+3,t)/bracketleftbigg
+(ξ−ξ0)/bracketrightbigg2
+ξ−(1
+3,t)/bracerightBigg
+(β/ne}ationslash=γ)
+R=∂2B
+∂zαβ∂zγδ=σ4
+JCr
+4W(q2+2pq)2
+p4(p+q)4/braceleftBigg/integraldisplay∞
+0dξ√
+2π(ξ−ξ0)4exp/bracketleftBigg
+−(ξ−ξ0)2
+2(p+q)/bracketrightBigg
++/integraldisplay∞
+−∞dt√
+2π/bracketleftbigg
+(ξ−ξ0)/bracketrightbigg4
+ξ−(1
+4,t)/bracerightBigg
+(α/ne}ationslash=γ,β/ne}ationslash=δ),
+(39)
+where/bracketleftbigg
+x(ξ)/bracketrightbigg
+ξ−(k,t) is deﬁned as
+/bracketleftbigg
+x(ξ)/bracketrightbigg
+ξ−(k,t) =/integraldisplay0
+−∞dξ√
+2πx(ξ)exp/bracketleftBigg
+−k
+2p(ξ−ξ0)2+kt/radicalBiggq
+p(p+q)(ξ−ξ0)−kt2
+2/bracketrightBigg
+,(40)
+which can be considered to be a weighted average of x(ξ) over the subthreshold values of ξ.
+kis used to normalise the weight factor over the tintegral in each of Eqs. 39. Also,
+W=φ/parenleftBiggξ0√p+q/parenrightBigg
++/integraldisplay∞
+−∞dt√
+2πφ/parenleftBigg
+−ξ0√p−t/radicalBiggq
+p+q/parenrightBigg
+exp/bracketleftBigg
+−t2(2p+q)
+4(p+q)/bracketrightBigg√p.(41)
+andp,qare herepBandqBfrom Eq. 22.
+We have to solve the eigenvalue equation
+Aψ=λψ. (42)
+The eigenvectors ψhave the column-vector form
+ψ=/parenleftBig
+{δzαβ}/parenrightBig
+(α<β= 1,..,n+1) (43)
+We now proceed as described in [11]. There are three classes of eigen vectors (and cor-
+responding eigenvalues) – those invariant under interchange of all indices, those invariant
+under interchange of all but one index, and those invariant under in terchange of all but two
+indices. These last describe the transverse mode, in which we are int erested.
+12
+Let us consider ﬂuctuations of the form
+δzαβ= ∆αβ(α<β= 1,..,n+1)
+(44)
+with
+∆αβ= ∆α,β/ne}ationslash=α0,β0
+∆α0β= ∆αβ0=2−n
+2∆α/ne}ationslash=α0,β0
+∆α0β0=(2−n)(1−n)
+2∆ (45)
+ensuring orthogonality between the eigenvectors describing RS an d RSB ﬂuctuations. As
+with [11], we have for A(αβ),(γδ)an eigenvalue
+λA=P−2Q+R (46)
+with in this case1
+2(n+1)(n−2)-fold degeneracy, and P,QandRas described above.
+ForB(αβ),(γδ), we consider ﬂuctuations
+δ˜zαβ=c∆αβ(α<β= 1,..,n+1)
+(47)
+and obtain similarly the eigenvalue
+λB=P′−2Q′+R′, (48)
+where
+P′=∂2B
+∂(i˜zαβ)∂(i˜zαβ)=/integraldisplay∞
+−∞Dt/bracketleftbigg
+η2/bracketrightbigg2
+η(1
+2,t)
+Q′=∂2B
+∂(i˜zαβ)∂(i˜zαγ)=/integraldisplay∞
+−∞Dt/bracketleftbigg
+η2/bracketrightbigg
+η(1
+3,t)/bracketleftbigg
+η/bracketrightbigg2
+η(1
+3,t)
+R′=∂2B
+∂(i˜zαβ)∂(i˜zγδ)=/integraldisplay∞
+−∞Dt/bracketleftbigg
+η/bracketrightbigg4
+η(1
+4,t),
+(49)
+and/bracketleftbigg
+x(η)/bracketrightbigg
+η(k,t), the weighted pattern average, is deﬁned as
+/bracketleftbigg
+x(η)/bracketrightbigg
+η(k,t) =/integraldisplay
+ηdηP(η)x(η)exp/bracketleftBigg
+−k
+2˜z1η2−kt√
+˜z1η/bracketrightBigg
+. (50)
+13
+REFERENCES
+[1] D. Amit, H. Gutfreund, and H. Sompolinsky, Ann. Phys. (N.Y.) 173, 30 (1987).
+[2] E. Gardner, J. Phys. A: Math. Gen. 21, 257 (1988).
+[3] W. Bialek and A. Zee, Phys. Rev. Lett. 61, 1512 (1988).
+[4] A. Treves, J. Phys. A: Math. Gen. 23, 2631 (1990).
+[5] J.-P. Nadal and N. Parga, Network 4, 295 (1993).
+[6] A. Treves, C. A. Barnes, and E. T. Rolls, in Perception, Memory and Emotion: Frontier
+in Neuroscience , edited by T. Ono et al.(Elsevier, Amsterdam, 1996), Chap. 37, pp.
+567–579.
+[7] M. Mezard, G. Parisi, and M. Virasoro, Spin glass theory and beyond (World Scientiﬁc,
+Singapore, 1987).
+[8] A. Treves, J. Comput. Neurosci. 2, 259 (1995).
+[9] S. Schultz, S. Panzeri, E. T. Rolls, and A. Treves, in Information Theory and the
+Brain, edited by R. Baddeley, P. F¨ oldi´ ak, and P. Hancock (Cambridge Un iversity Press,
+Cambridge, U.K., 1997).
+[10] J.-P. Nadal and N. Parga, Neural Computation 6, 491 (1994).
+[11] J. R. L. de Almeida and D. J. Thouless, J. Phy. A: Math. Gen. 11, 983 (1978).
+[12] A. Treves, J. Phys. A: Math. Gen. 24, 2645 (1991).
+[13] E. Gardner and B. Derrida, J. Phys. A: Meth. Gen. 21, 271 (1988).
+[14] D. Sherrington and S. Kirkpatrick, Phys. Rev. Lett. 35, 1792 (1975).
+[15] G. Parisi, J. Phys. A: Math. Gen. 13, L115 (1980).
+14
+FIGURES
+a0 0.2 0.4 0.6 0.8 100.050.10.150.20.250.30.350.4
+σε2 (Hz2)〈i〉
+00.020.040.060.08 0.10.250.260.270.280.290.3
+b0 0.2 0.4 0.6 0.8 100.20.40.60.811.2
+σε2 (Hz2)〈i〉threshold−linear
+linear          
+gaussian channel
+FIG. 1. Mutual information, measured in bits, as a function o f noise variance. The dashed
+line is for a threshold ξ0=−0.4, whereas the solid line is for the limit of linear neurons. T he
+dot-dashed line indicates the simple gaussian channel for c omparison. The entropy of the input
+pattern distribution is indicated by the horizontal dotted line. (a) Input pattern distribution
+sparseness of 0.05. (b) Sparseness of 0.50.
+15
+a00.020.040.060.080.1−4−202x 10−3
+λ−
+σε2 (Hz2) b00.020.040.060.080.1−0.04−0.0200.02
+λ−
+σε2 (Hz2)
+c00.05 0.1 0.15 0.2−0.2−0.100.1
+λ−
+σε2 (Hz2)
+FIG. 2. The behavior of the replicon mode eigenvalue λ−as a function of noise variance. (a)
+Input sparseness a= 0.05 (b)a= 0.10 (c)a= 0.50. In each of these graphs the solid line indicates
+the eigenvalue for threshold ξ0=−0.4, the dashed curve ξ0= 0.0, the dot-dashed curve ξ0= 0.4,
+and the dotted curve ξ0= 0.8. The replica symmetric solution is unstable in regions whe re these
+curves lie above the horizontal dotted line. In case (a), the ξ0= 0.8 line lies below the region
+examined in the graph.
+16
+−0.5 0 0.5 1 1.500.050.10.150.2σε(crit)2 (Hz2)
+ξ0 (Hz)unstablestable
+FIG. 3. A phase diagram showing the critical noise variance a s a function of the threshold
+parameter, ξ0– the larger ξ0is, the more linear the regime. Solid curve, sparseness a= 0.05;
+dashed curve, a= 0.10; dot-dashed curve, a= 0.20; dotted curve, a= 0.50.
+17
+a0 0.2 0.4 0.6 0.8 100.020.040.060.080.10.120.140.16
+aσε(crit)2 (Hz2)stable
+unstable
+b0 0.2 0.4 0.6 0.8 100.020.040.060.080.10.120.140.16
+aσε(crit)2 (Hz2)stable
+unstable
+c0 0.2 0.4 0.6 0.8 100.020.040.060.080.10.120.140.16
+aσε(crit)2 (Hz2)stable
+unstable
+d0 0.2 0.4 0.6 0.8 100.020.040.060.080.10.120.140.16
+aσε(crit)2 (Hz2)stable
+unstable
+FIG. 4. The phase diagram for information transmission, for r= 2 and σ2
+J= 1/C. (a) Thresh-
+oldξ0=−0.4. (b) Threshold ξ0= +0.0. (c) Threshold ξ0= +0.4. (d) Threshold ξ0= +0.8.
+18
+00.20.40.60.80.040.060.080.10.120.140.16
+ aoutσε(crit)2 (Hz2)
+FIG. 5. The marginal noise variance as a function of the spars eness of the outputdistribution.
+The solid line represents the curve for ξ0=−0.40 (the same situation as Fig. 4a), the dashed
+curveξ0= 0.0, the dot-dashed curve ξ0= +0.40, and the dotted curve ξ0= +0.80. Note that for
+ξ0= 0.0 the output sparseness is ﬁxed at 1 /π, as explained in the text, so this particular line is
+not informative about the relative region of instability.
+19

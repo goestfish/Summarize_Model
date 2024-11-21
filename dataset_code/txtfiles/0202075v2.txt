@@ -1,0 +1,502 @@
+arXiv:physics/0202075v2  [physics.bio-ph]  20 Mar 2002Long range correlations in DNA sequences
+A. K. Mohanty and A. V. S. S. Narayana Rao∗
+Nuclear Physics Division, Bhabha Atomic Research Centre, M umbai-400085
+∗Molecular Biology and Agriculture Division,Bhabha Atomic Research Centre, Mumbai-400085
+The so called long range correlation properties of DNA seque nces are studied using the variance
+analyses of the density distribution of a single or a group of nucleotides in a model independent way.
+This new method which was suggested earlier has been applied to extract slope parameters that
+characterize the correlation properties for several intro n containing and intron less DNA sequences.
+Animportantaspectofall theDNAsequencesisthepropertie s ofcomplimentaritybyvirtueofwhich
+any two complimentary distributions (like GAis complimentary to TCorGis complimentary to
+ATC) have identical ﬂuctuations at all scales although their di stribution functions need not be
+identical. Due to this complimentarity, the famous DNA walk representation whose statistical
+interpretation is still unresolved is shown to be a special c ase of the present formalism with a
+density distribution corresponding to a purine or a pyrimid ine group. Another interesting aspect
+of most of the DNA sequences is that the factorial moments as a function of length exceed unity
+around a region where the variance versus length in a log-log plot shows a bending. This is a
+pure phenomenological observation which is found for sever al DNA sequences with a few exception.
+Therefore, this length scale has been used as an approximate measure to exclude the bending regions
+from the slope analyses. The asymmetries in the nucleotide c ontents or the patchy structure as a
+possible origin of the long range correlations has also been investigated.
+PAC(s) 87.14.Gg.87.16.AC,05.10.-a
+I. INTRODUCTION
+Recently, therehasbeen considerableinterestin the ﬁndingoflong rangecorrelationsin genomicDNA sequences[1].
+ADNAsequenceisachainofsites, eachoccupiedbyeitherapurine(A denineandGuanine)orapyrimidine(Cytocyine
+and Thymine) group. For mathematical modeling, the DNA sequence might be considered as a string of symbols
+(G, A, T and C) whose correlation structure can be characterized completely by all possible base-base correlation
+functions or their corresponding power spectra. Diﬀerent techn iques including mutual information functions and
+power spectra analyses [1–9], auto correlation [10–12], DNA walk rep resentation [13–20], wavelet analysis [21,22]
+and Zipf analysis [23] were used for statistical analyses of DNA sequ ences. But despite the eﬀort spent, it is still
+an open question whether the long range correlation properties ar e diﬀerent for protein coding (exonic) and non
+coding (intronic, intergenemic) sequences [24]. One more fundamen tal ground, there is still continuing debate as to
+whether the reported long range correlations really mean a lack of in dependence at long distances or simply reﬂect
+the patchiness (bias in nucleotide composition) of DNA sequences. T here have been attempts to eliminate local
+patchiness using methods such as min-max [13], detrended ﬂuctuat ion analysis (DFA) [24,25] and wavelet analysis
+[21]. In spite of its success in modeling the long range correlations obs erved in DNA sequences, as indicated by the
+power law increase in the variance and the inverse power law spectru m [5,9], the problem of the correct statistical
+interpretation of DNA walk is still unresolved and is attracting the at tention of an increasing number of investigators.
+Since approaches based on diﬀerent models predict diﬀerent corre lation structure, there is no unique measure of the
+degree of correlation in DNA sequences. Therefore, it is very impor tant to investigate the correlations and extract
+the power law exponent αrather in a model independent way so that the interpretation of th e data including the
+theoretical analysis becomes more meaningful. There is another co nfusion related to this study is the absence of a
+clear deﬁnition of the term ”long range”. Clearly, what is considered to be long is relative to what is considered
+to be short. To over come some of these problems, recently we hav e suggested a new method [26] to measure the
+degree of correlations using the variance analysis of the density dis tribution of a single or a group of nucleotides. We
+have also suggested a way to ﬁnd out an approximate length scale ab ove which all DNA sequences show strong long
+range correlations irrespective of their intron contents while below this, the correlation is relatively weak. Further,
+the density distribution which is nearly Gaussian at short distances s hows signiﬁcant deviations from the Gaussian
+statistics at large distances. In this paper, we present the details of the analyses and also extract the correlation
+parameter αfor several intron containing and intronless sequences.
+1
+II. DENSITY DISTRIBUTION AND FACTORIAL MOMENTS:
+In the present method, we build the frequency spectrum of a single or a group of nucleotides by dividing the DNA
+sequence into many equal intervals of length l. For example, to build a purine spectrum, we compute
+n=l0+l/summationdisplay
+i=l0ui (1)
+whereui=1 if the site is occupied by a G or A and ui=0 otherwise. Ideally, one can divide the entire DNA sequence of
+lengthLintomequal intervals of size l(l=L/m). The purine or GA spectrum can be built by computing nfrom all
+the intervals. Alternatively, ncan be computed in any segment between l0andl0+land the spectrum ( ndistribution
+orPn) is built by varying the starting position l0from 1, 2, 3 etc upto L−lso as to cover the whole sequence1. We
+adopt this second procedure for better statistics. Finally, the st andard deviation (SD) of this Pndistribution can be
+obtained from σ2=< n2−n02>which in general will depend on the interval or the window size l.
+In addition to the standard deviation σ2, we also compute the factorial moments Fq’s ofPn. The normalized
+factorial moments of order q are written as
+Fq=fq
+fq
+1(2)
+where
+fq=∞/summationdisplay
+n=qPnn(n−1).....(n−q+1) =∞/summationdisplay
+n=qn!
+(n−q)!Pn (3)
+As will be shown later, the factorial moment has the distinct advant age over the normal moments in identifying the
+genomic sequence from the random one. It may be mentioned here t hat for random Poisson distribution, the factorial
+moments for all q’s become unity i.e. for
+Pn=ane−a
+n!(4)
+the above factor for fqbecomes
+fq=∞/summationdisplay
+n=qn!
+(n−q)!ane−a
+n!=∞/summationdisplay
+n=qane−a
+(n−q)!=∞/summationdisplay
+m=0am+qe−a
+m!=aq∞/summationdisplay
+m=0ame−a
+m!=aq(5)
+which gives Fq=1.
+In this work, we have applied the above factorial moment analysis (g enerally used to study the ﬂuctuations during
+a phase transition [27]) to study the dynamical ﬂuctuations presen t in the DNA sequences.
+III. PRINCIPLE OF COMPLIMENTARITY
+A general property noticed for all the genomic sequences (of sta tistically signiﬁcant length) with a few exceptions
+is that the distributions of any single or group of nucleotides which ha s a probability of occurrence phas the same
+variance σas that of its complimentary group that has the probability of occur rence (1 −p), although both have
+diﬀerent distribution functions. This would imply that even a single nuc leotide distribution say Gdistribution will
+have same variance as that of ATCdistribution or a GAdistribution will have identical variance as that of TC
+distribution. Figure 1 shows σversuslplots for GandGAdistributions (solid curves) for two typical sequences of
+DROMHC (Drosphilia Melanogaster, MHC, 22663 bps, 20 .5%G, 30.3%A, 25.4%T, 23.8%C) andSCMIT(yeast
+1At short distances, ncan be zero due to the non occurence of a given nucleotide. In s uch cases, the density spectrum can be
+built either including or excluding zerothchannel. In this analysis, we include zerothchannel also so that the complementarity
+is satisﬁed which is unlike the case when the zerothchannel is excluded. See appendix B for details
+2
+mitochondrial DNA, 9 .1%G, 42.2%A, 40.7%T, 8.0%C). As can be seen from the ﬁgure, the GandGAdistributions
+have same σat all scale as that of ATCandTCdistributions (ﬁlled circles) although the distribution functions of
+the two complimentary groups need not be identical. The above agre ement is exact for most of the DNA sequences
+(with a few exceptions) as well as for the random sequences. For e xample, the σforGandATCdistributions of
+SCMITandE.Coli:TN10 (E.Coliwith aTN10 mobile transposion (9147 bps) at location 22000 bps) show 2% to
+3% deviations at all scale depending on the total length of the seque nces where as for other DNA as well as random
+sequences, this agreement is exact. (This diﬀerence is not visible fr om ﬁgure 1 in case of SCMITas the deviation
+is insigniﬁcant over a large distance).
+FIG. 1. The variance σversuslforGandGAdistributions (solid curves). Top panel is for DROMHC (Drosophilia
+Melanogaster, MHC) while the bottom panel for SCMIT(yeast mitocondrial DNA). The ﬁlled circles are for the comp limen-
+taryATCandTCdistributions. The curve RW(dotted curve) corresponds to the slope in case of random wal k (see text for
+details). The curves are scaled up appropriately for better clarity.
+Within the present formalism, we can also reproduce the result of ra ndom walk ( RW) model (See appendix for
+more detail) by assigning ui= 1 for purine group ( GandA) andui=−1 for pyrimidine group ( TandC). However,
+unlike the random walk model of interpreting +1 and −1 as the probability of step up and step down, Pncan be
+considered as the frequency distribution of nwhich gives the excess or deﬁcit of purines over pyrimidines. The σ
+versuslas obtained from this assignment has also been shown in ﬁgure 1 (see the dotted curves labeled RW) for
+comparison. It is interesting to note that the RWcurves shows a parallel shift with respect to the GAorTCcurves
+indicating that GAorTCdistributions and RWmodel have similar ﬂuctuations at all scale. This is an interesting
+observations, as we can now use GAorTCdistributions as alternatives to the DNA walk representation to stu dy the
+correlation. The advantage is, since nrepresents a sum, unlike the DNA walk model, the entire spectrum lies to the
+positive side of the coordinates which is essential to compute variou s higher moments like Fqof the distributions.
+It is also important to note that although the complimentary distribu tions have same σat all scale, the distribution
+functions need not be exactly identical. Figure 2 shows a typical nor malized density distribution functions Pnof
+two complimentary distributions GandATCfor the above two sequences ( SCMITandDROMHC ) as a function
+ofn−n0(wheren0is the average count ) at a typical length scale of l= 150 (ﬁgures in left). The ﬁgures to the
+right shows Pndistributions ( x-axis is shifted by 100 for clarity) corresponding to the two purely r andom sequences
+having same length and nucleotide contents as that of DROMHC andSCMITsequences. It is interesting to note
+that although σversuslplots are (nearly) identical i.e., both distributions have same ﬂuctuations at all scales, the
+distribution functions are not identical. This is an important charact eristic of a DNA sequence which is not found in
+case of a random one.
+3
+FIG. 2. The complimentary GandATCdensity distributions at a typical distance of l= 150 for above two sequences.
+The curves on the right (shifted by 100 units) shows the corre sponding distributions in case of a purely random sequence o f
+appropriate G,A,TandCcontents.
+IV. EXTRACTION OF SLOPE PARAMETER
+The long range correlations are generally studied from the relation σ∼lαwhere the parameter αis extracted from
+theσversuslplot in the log-log scale. For the case of a completely random sequenc e,α∼0.5. The deviation of
+αfrom 0.5 indicates presence of long range correlations. We have estimated σofG,A,T,CandGAdistributions
+for several DNA sequences and found that σversuslplot in the log-log scale is not linear over the entire length2.
+Figure 3 shows σversuslplot (bottom panel) for a typical E.Colisequence of length L= 1.2 Mbps (solid curves)
+andL= 30 Kbps (dotted curves) respectively. The top panel shows the factorial distributions of q=2, 3, 4 and 6 for
+a typical Adistributions, although similar plots can be obtained for other nucleo tide distributions as well. A general
+feature of the factorial moments of the DNA sequence with a few e xception is that at short distances, Fq<1.0 for all
+q′sand exceeds unity at some point say at lq. This behavior is not found in case of a purely random sequence wher e
+Fqis always ≤1.0. Further, all q’s do not cross unity exactly at the same point, lqbeing more for higher qvalues.
+However, this variation is insigniﬁcant over a very large scale if we res trict to some of the lower moments say up to
+q= 6.
+From these plots and also from the several other studies, we make following few observations; (i) The σversusl
+plot is not linear through out, rather starts bending around some r egion (say lc, which could be diﬀerent for diﬀerent
+distributions) indicating a change of slope from α1toα2, (ii) For most of the cases, while α1shows weak deviation
+from 0.5,α2deviates signiﬁcantly from 0 .5 and also depends on the sequence length L, (iii) The individual nucleotide
+distributions may have stronger correlations than any sum like GAandTCdistributions or any other combinations.
+2We consider only the G,A,TandCdistributions to extract the correlation parameters for th e individual nucelotides and
+GAdistributions to simulate the results of random walk model
+4
+FIG. 3. (a) The factorial moments Fqversuslfor a typical Adistributions of E.Colisequence of length 1.2 Mbps. (b) The
+corresponding slope parameter σversuslforE.Coliof length 1.2 Mbps (solid curves) and of length 30 Kbps (dashe d curves).
+The curves are scaled up appropriately for clarity.
+Sinceσversuslin the log-log plot starts bending around lc, we can extract the slope by dividing the entire length
+into two segments; one for l < lcand the other one for l > lc. This can be done by examining each case individually.
+However, we have noticed an approximate correlationbetween this bending region in σversuslplot and the cross over
+pointslqof the corresponding factorial moments i.e. the slope changes aro und the same region where the factorial
+moments become unity. This is a pure phenomenological observation which is found for several DNA sequences as
+listed in tables with a few exceptions which we will discuss below. It may b e mentioned here that although, the
+two complimentary distributions have same ﬂuctuations, both need not have identical factorial moments. Figure 4
+shows the plots of FqversuslforAandGTCdistribution for a LAMCG sequence. Since both are complimentary,
+they have identical ﬂuctuations at all scales (hence same bending r egion), but the cross over regions in Fqplots are
+diﬀerent, being higher for ATCdistributions (due to large average values n0at all scales). While the lqvalue of the A
+distribution shows an approximate correlation with the bending regio n ofσversuslplot where a possible slope change
+occurs, the lqvalues of GTCdistribution has no such correlations. This is true for any complemen tary distributions
+ofG,A,TandCexcept for GAandTCdistributions since both have nearly same overlapping cross over re gions.
+5
+FIG. 4. The factorial moments FqversuslforGandATCdistributions of LAMCG sequence
+Therefore, only the lqvalues of the G,A,T,CandGAdistributions are used as an approximate length scales
+(lc). The entire length of the sequence is divided into two parts one for 0< l < l c1and other for lc2< l < L max
+wherelc1andlc2are the minimum and maximum of all the lccorresponding to G,A,T,CandGAdistributions.
+TheLmax=L/30, i.e. we have at least 30 independent data sets so that the statis tical analysis becomes meaningful.
+Therefore, excluding the region lc1< l < l c2, we have extracted α1andα2since the linearity in these two segments
+are found to be extremely good for most of the cases. The results are summarized in three tables which covers both
+intronless and intron containing sequences. The table shows the len gth of the sequence Lused in the analyses, the
+cross over values lq( same as lc), the slope parameters α1andα2and also the corresponding percentage of the
+nucleotide contents P. A general observation is that the sequence is weakly correlated a t short distance with α1
+which is quite close to 0 .5 where as for l > lc, the correlation is relatively stronger with a larger value of α2. Now we
+discuss a few exceptions like in the case of SCMITandPODOT 7 (T7 bacteriophage, 39936 bps). Figure 5 shows
+the factorial moments of a typical Gdistributions. In both the cases, the factorial moments do not ha ve any cross
+over point. In case of SCMIT, the factorial moments are much higher than unity even at small dis tance and starts
+decreasing afterwards. The similar behavior is found for Cdistribution also. However, the A,TandGAdistributions
+do have lcpoints. Therefore, using lc1as∼36 andlc2∼184, we estimated α1andα2forG,A,T,CandGA
+distributions which are listed in table III. The symbol′∗′indicates absence of any critical value. It is interesting to
+note that α1is quite large and in some cases α1> α2. On the other hand , the factorial moments of the sequence like
+PODOT 7 do not reach unity at any scale. The absence of such type of scale has been indicated by the symbol′−′
+in table III. This type of sequences behave like a pure random one ha vingαvalues quite close to 0 .5. We have listed
+a few such sequences with exceptions in table III.
+6
+FIG. 5. The factorial moments FqversuslforGdistributions of SCMIT(scaled up) and PODOT7 (T7 bacteriophage)
+sequences.
+Further, we would like to mention here that we have noticed that the factorial moments for many sequences starts
+decreasing at large distances. Also for a few cases, the factorial moments start decreasing even at a very short
+distances. Consequently, the slope also changes accordingly. How ever, we would not like to assign any reasons due to
+lack of enough statistics.
+The slope with α= 0.5 corresponds to the case of a normal diﬀusion process of a rando m Brownian trajectory. The
+basic idea of a Brownian motion is that of a random walk having a Gaussia n distribution probability for the position
+of the random walker after a time twith the variance ( σ2) proportional to t(σ∼tαwhereα= 0.5). This corresponds
+to the case of normal diﬀusion. However, nature shows enough ex amples of anomalous diﬀusion characterized by a
+variance which does not follow a linear growth in time [28]. In such cases either the diﬀusion is accelerated if α >0.5
+or the growth is dispersive if α <0.5. As found in the analyses (see tables I and II), α2>0.5 at large distances for
+most of the sequences irrespective of their intron contents. How ever, a few sequences as shown in table III, not only
+peculiar, may also have αwhich decreases at large distances. In such cases, α <0.5 which may indicate the inﬂuence
+of dispersive dynamics. This aspect needs further investigations. Finally, we would like to add here that α1is close to
+0.5 for most of the sequences at short distance (see tables I and II ). Although, α= 0.5 would imply about a random
+behavior, it can not be told conclusively from the present analyses u nless the short distance eﬀects are taken into
+consideration [29].
+V. PATCHY SEQUENCES
+In the following, we investigate whether the mosaic character of DN A consisting of patches of diﬀerent composition
+can account for apparent long range correlations in DNA sequence s [18]. The Chargaﬀ’s second parity rule states
+that in a single strand G≈CandT≈A. However, asymmetries in base composition have been observed in m any
+sequences. A quantitative estimate of the GCandATskews can be obtained from the relation ( G−C)/(G+C)
+(Excess of Gnucleotides over Cnucleotides) and ( A−T)/(A+T) (Excess of Anucleotides over Tnucleotides). This
+is, operationally equivalent to estimating nas deﬁned in Eq.(1) except nnow represents the count ( G−C)/(G+C)
+forGCskew and ( A−T)/(A+T)forATskew in a ﬁxed window size of ( L/20). We consider LAMCG as an example
+and plot n(deﬁned appropriately) versus l0where the starting position of the sliding window l0varies from 1, 2, 3 etc
+7
+uptoL−l. Figure 6 shows the plots of GCandATskews as a function of the length for a typical LAMCG sequence.
+The plots show a change in the direction of the slope with a change in sig n of the skew. The quantity and quality of
+the skew can be assessed from the Vor from the inverted- Vshape of the curves.
+FIG. 6. The GCandATskews as a function of l0forLAMCG sequence.
+From the above plots, we can identify three well known compositiona l domains of LAMCG of size 22000 bps ( GA
+contents 0.54), 17000 bps ( GAcontents 0.47) and 9000 bps ( GAcontents 0.54). We also consider an artiﬁcially
+generated sequence by joining three random patches of size 2200 0 bps, 17000 bps and 9000 bps respectively with
+appropriate G,A,TandCcontents. We also consider another heterogeneous sequence ge nerated from E.ColiDNA
+by a mobile insertion of TN10 at location 22000 bps. The correspondin g random patches are of size 22000 bps, 9147
+bps and 22000 bps respectively3
+3Please note the distinction between the random sequence whi ch is generated by joining three random patches of total leng th
+Land a pure random one of length L. Although, both the sequence has same percentage of nucleot ide contents in the length
+L, the former is random only patch wise.
+8
+FIG. 7. The FqversuslofCdistribution of for LAMCG and an artiﬁcially sequence generated by joining three rand omly
+generated patches of size 22000 bps, 17000 bps and 9000 bps wi th the same G,A,TandCcontents as that of LAMCG .
+Figure 7 showsthe Fqversuslplot of a typical Cdistribution for LAMCG and for an artiﬁciallygenerated sequence
+(random only patch wise). Interestingly, the factorial moments f or both the cases behave similarly. Figure 8 shows a
+similarσ(l) versuslplot both for real and artiﬁcially generated (from random patches ) sequences. Although, in some
+cases both agree, in general they are not identical at the individua l nucleotide levels particularly at large distances
+(Note that the scale is highly compressed). This deviation would mean that at large distances, the density distribution
+functions will have signiﬁcant discrepancy due to diﬀerent widths. S o at a ﬁrst look from the σversuslplot, we can
+say that the actual DNA sequences and the RANDOM patches need not have identical slopes α(hence the width
+σ) at large distances for all the nucelotides although they agree in so me cases. Even at short distances, although
+the DNA and the RANDOM sequences have nearly identical width σ, the full shape of the distributions need not be
+identical. To demonstrate this, we invoke the principle of complimenta ry which was mentioned before.
+9
+FIG. 8. The variance σversuslforG,A,T,C, andGAdistributions. (a) LAMCG and an artiﬁcial sequence generated
+by joining three randomly generated patches of size 22000 bp s, 17000 bps and 9000 bps with the same G,A,TandCcontents
+as that of LAMCG . (b) for E.Coliwith aTN10 mobile transposition (9147 bps) at location 22000 bps. Th e three random
+patches are of size 22000 bps, 9147 bps and 22000 bps with appr opriateG,A,TandCcontents.
+Figure 9(a) shows a GandATCdistribution (left most) for a LAMCG sequence at l= 300. Notice that although
+σversuslplots are identical, i.e. both distributions have same ﬂuctuations at a ll scales, the distribution functions
+are not same. Such diﬀerences are not found for a real random se quence (right most). The middle ﬁgure corresponds
+to the case of artiﬁcially generated random sequence. Although, t he artiﬁcially generated sequence mimics the real
+sequence to some extent, it is not fully capable of reproducing the c haracteristic of a real sequence. Figure 9(b) shows
+another comparison for a E.Coli::TN10 sequence for AandGTCdistributions. This discrepancy will be more
+prominent at higher lvalues which the artiﬁcially generated sequence can not reproduce .
+FIG. 9. The density distribution Pnversusn−n0(wheren0is average density) for a real DNA sequence (left most), for
+an artiﬁcially generated sequence (middle) and for a comple tely random sequence (right most) shown for two complementa ry
+distributions. (a) for LAMCG and (b) for E.Coli::TN10.
+10
+VI. DENSITY DISTRIBUTIONS
+In [26], we had demonstrated that the density distribution Pnis Gaussian at short distances and starts deviating
+from it as the distance increases. Figure 10 shows another example wherePnhas been plotted for two complimentary
+distributions at l= 25, 100 and 200 respectively. The complimentary distributions are nearly identical at short
+distance and coincide with the random distributions where as Pndistributions for G,ATCand pure random one are
+all diﬀerent at larger distances.
+FIG. 10. The density distribution Pnversusn−n0(wheren0is average density) for LAMCG sequence at l= 25, 100 and
+200 respectively. The solid and the dashed curves are for GandATCdistributions respectively where as the dotted curve is
+for a purely random sequence.
+Thus, irrespective of intron contents, most of the sequences fo llow Gaussian statistics at short distances. However,
+at large distances, the statistics deviates signiﬁcantly from the Ga ussian nature.
+VII. CONCLUSIONS
+In conclusion, we have extended our previous work to extract the slope parameter αfor several intron containing
+and intron less DNA sequences. The advantage of the present met hod is that the variance analysis can be applied
+to any individual or group of nucleotides. We believe that the individua l nucleotides provide a more fundamental
+measure of the correlation than any combination or group (like the D NA walk representation) where the eﬀects may
+get reduced or washed out. Another interesting aspect is the (low er) factorial moments of most of the DNA sequences
+cross unity in a very narrow region in lwhere the σversuslplot in the log-log scale also shows a bending. Although,
+a formal justiﬁcation to this correlation has not been provided, we have used this scale as an approximate measure
+to exclude the bending regions from the slope analyses. Based on th is scale, we divide the DNA sequence into two
+segments to extract the slope parameters. It is found that below this scale, the correlation is weak and the DNA
+statistics is essentially Gaussian while above this all DNA sequences sh ow strong long range correlations irrespective
+of their intron contents with a signiﬁcant deviation from the Gaussia n behavior. It may be mentioned here that the
+controversies that exist in this ﬁeld of research are primarily due to diﬀerent approaches that are adopted in various
+models. In this context, our analyses is model independent as it only involves the counting of an individual or a group
+of nucleotides in a given length to build the density distribution. In this work, we do not advocate for any speciﬁc
+model, although the extracted slope parameters indicate the pres ence of anomalous diﬀusion of both enhanced and
+dispersive nature. Instead, we provide an elegant tool to measur e the degree of correlations unambiguously so that
+the interpretation of the data including theoretical analyses will be come more meaningful. This work will also provide
+further impetus to develop models for the understanding of the DN A dynamics.
+11
+TABLE I. Summary of the correlation analysis of intron conta ining sequences. lcis the characteristic length scale. α1is
+the slope parameter for l < lc1andα2is the slope parameter for lc2< l < l max, wherelc1andlc2are the minimum and the
+maximum of all the lc,lmax=L/30 where L is the total length of the sequence. The acronym in column 1 is the name of the
+GenBank. Since the factorial moments for all qdo not cross exactly at same point, we have chosen lcfor which Fqforq= 2,3,4
+and 6 approaches unity simultaneously. Pdenotes percentage of G,A,TandCin the sequence. We have also not ﬁne tuned
+the cross over point lc, it is only approximate.
+Sequence L lc,α G A T C GA
+Human β-globin 73,308 lc 12 14 14 14 32
+(Chromosomal region) α1 0.640 0.644 0.671 0.620 0.652
+HUMHBB α2 0.703 0.783 0.812 0.655 0.758
+P 20.2 30.1 30.4 19.3 50.3
+Adenovirus type 2 35,937 lc 24 12 12 36 132
+(Intron containing) α1 0.598 0.586 0.567 0.583 0.564
+ADRCG α2 0.862 0.815 0.816 0.758 0.661
+P 27.3 23.2 21.6 27.9 50.5
+Chicken embryonic MHC 31,111 lc 24 36 14 28 48
+(Gene) α1 0.644 0.578 0.658 0.581 0.623
+CHKMYHE α2 0.775 0.698 0.800 0.715 0.762
+P 22.2 31.3 26.7 19.8 53.5
+Human β-cardiac MHC 28,438 lc 16 16 10 18 20
+(Gene) α1 0.638 0.579 0.627 0.620 0.664
+HUMBMYH7 α2 0.681 0.663 0.700 0.673 0.688
+P 25.9 23.6 23.0 27.5 49.5
+Drosophila melanogaster MHC 22,663 lc 20 20 14 36 156
+(Gene) α1 0.648 0.594 0.644 0.562 0.569
+DROMHC α2 0.820 0.652 0.798 0.707 0.719
+P 20.5 30.3 25.4 23.8 50.8
+Chicken c-myb oncogene 8200 lc 14 10 10 12 48
+(Gene) α1 0.663 0.661 0.688 0.670 0.645
+CHKMYB15 α2 0.749 0.873 0.752 0.852 0.550
+P 28.4 21.9 23.5 22.2 50.3
+12
+TABLE II. Same as table I, but for intron less sequences. For E.Coli,lmaxis chosen as 120,0000 bps. The data is taken
+from the site http://www.ncbi.nlm.nih.gov .
+Sequence L lc,α G A T C GA
+E.ColiK 12 1200000 lc 100 32 32 92 684
+α1 0.535 0.542 0.549 0.532 0.529
+α2 0.665 0.639 0.664 0.674 0.614
+α2 0.654 0.654 0.655 0.715 0.563
+P 27.2 23.6 24.2 25.0 50.8
+H. Inﬂuenzae 240000 lc 52 48 56 52 214
+α1 0.542 0.552 0.543 0.547 0.543
+α2 0.720 0.712 0.635 0.770 0.709
+P 17.9 31.6 30.7 19.8 49.5
+Bacillus subtilis 3840x60 lc 80 40 22 132 274
+α1 0.538 0.545 0.550 0.508 0.536
+α2 0.815 0.770 0.816 0.779 0.766
+P 24.5 29.5 26.5 19.5 54.0
+Mycobacterium 9665x60 lc 20 64 44 24 136
+tuberculosis α1 0.549 0.535 0.548 0.540 0.542
+α2 0.827 0.681 0.826 0.765 0.791
+P 15.92 34.57 33.73 15.78 50.49
+Cyano bacterium 4166x60 lc 32 40 28 24 304
+α1 0.545 0.532 0.542 0.541 0.535
+α2 0.730 0.678 0.763 0.733 0.587
+P 24.1 26.0 26.0 23.9 50.1
+Schizosaccharomyces 19431 lc 32 60 80 304 160
+Mitochondiron α1 0.547 0.561 0.568 0.504 0.543
+NC-001326 α2 0.698 0.690 0.774 0.465 0.773
+P 15.8 33.8 36.1 14.3 49.6
+Human Cytomegalovirus 229354 lc 36 10 10 32 148
+Strain AD169 α1 0.582 0.588 0.596 0.581 0.575
+HEHCMVCG α2 0.806 0.799 0.800 0.800 0.682
+dmal 889x60 lc 20 12 12 22 68
+α1 0.575 0.628 0.599 0.559 0.60
+α2 0.730 0.782 0.602 0.720 0.596
+Chicken nonmuscle MHC 7003 lc 96 72 12 28 64
+(cDNA) α1 0.573 0.538 0.569 0.554 0.627
+CHKMYHN α2 0.722 0.833 0.841 0.601 0.842
+P 27.0 31.2 20.6 21.2 58.2
+Bacteriophage λ 48,502 lc 56 36 18 124 168
+(Intronless virus) α1 0.563 0.541 0.598 0.513 0.550
+LAMCG α2 0.935 0.819 0.911 0.810 0.866
+P 26.4 25.4 24.7 23.5 51.8
+Human dystrophin 13,957 lc 136 56 14 22 128
+(cDNA) α1 0.530 0.552 0.569 0.552 0.544
+HUMDYS:M18533 α2 0.738 0.634 0.777 0.720 0.725
+P 22.4 33.0 24.7 19.9 55.4
+13
+TABLE III. Same as table II. The symbol ∗indicates that the factorial moments are larger than unity e ven at very short
+distance where as −indicates that the factorial moments do not reach unity.
+Sequence L lc,α G A T C GA
+SC-MIT 85779 lc * 36 36 * 184
+Nc-001224 α1 0.732 0.697 0.680 0.720 0.578
+α2 0.698 0.540 0.747 0.508 0.730
+P 9.1 42.2 40.7 8.0 51.3
+Pichia canadensis 27694 lc * 36 64 * 96
+Mitochondiron α1 0.654 0.688 0.624 0.615 0.620
+NC-001762 α2 0.662 0.755 0.784 0.660 0.801
+P 10.2 41.6 40.2 8.0 51.84
+Ti(Plasmid) 24595 lc 76 24 32 40 -
+α1 0.543 0.564 0.552 0.586 0.508
+α2 0.706 .700 0.676 0.728 0.433
+P 23.5 26.6 27.5 22.4 50.1
+BacteriophageT7 39937 lc - 116 884 1284 -
+NC-001604 α1<116 0.526 0.571 0.529 0.530 0.530
+116< α2<1330 0.560 0.587 0.590 0.566 0.551
+P 25.8 27.2 24.4 22.6 53.0
+Tyorg 196x60 lc - 96 - 36 96
+α1 0.491 0.560 0.515 0.620 0.587
+α2 0.370 0.715 0.514 0.799 0.704
+P 16.0 35.9 26.7 21.4 51.9
+14
+APPENDIX: RANDOM WALK MODEL
+The method of DNA walks, ﬁrst suggested by Peng et al [13] is based on the rule that the walker either moves
+up (ui= 1) or down ui=−1) for each step iof the walk. This is the case of a correlated random walk and diﬀers
+from an uncorrelated walk where the direction of each step is indepe ndent of the previous steps. Further they assign
+ui= 1 if a pyrimidine occurs at the site iwhereas ui=−1 if the site contains a purine. The net displacement ( y) of
+the walker after lsteps is deﬁned as
+y(l) =l/summationdisplay
+i=1u(i) (A1)
+The standard deviation of the above quantity can be estimated fro m
+σ2(l,L) =1
+L−lL−l/summationdisplay
+l0=1(∆y(l0,l)−¯∆(l))2(A2)
+whereLis the number of nucleotides in the entire sequence and
+¯∆y(l) =1
+L−lL−l/summationdisplay
+l0=1∆y(l0,l) (A3)
+where ∆y(l0,l) =y(l0+l)−y(l0). It was found [13] that the ﬂuctuations can be approximated by
+σ(l,L)∼lα(A4)
+whereαis the correlation exponents. For αclose to 0 .5, there is no correlation or only short range correlation in the
+sequence. If αis signiﬁcantly diﬀerent from 0 .5, it indicates long range correlations.
+APPENDIX: B
+In the previos analyses, we account for the non-occurenceof a p articular nucleotide. This is operationallyequivalent
+to building the density spectrum Pnincluding n= 0. If the nucleotide compositional asymmetry is quite large like
+SCMIT, the occurence ncan be zero for some nucleotides particularly at short distances. T herefore, we can build
+Pndistribution either including or excluding zerothchannel. The ﬁgure B1(a) shows the comparison of σversusl
+plot for two complimentary distributions corresponding to a LAMCG sequence both with (top panel where Gand
+ATCdistributions have identical slopes at all scales) and without (botto m panel) inclusion of n= 0 channel in the
+Pnspectra. Interestingly, absence of n= 0 channel does not satisfy the complimentarity relation particular ly at short
+distances. However, the diﬀerence does not exist at larger distan ces where always n >1. Figure B1(b) shows another
+example of Fqversuslplot for a typical SCMITsequence. The spectrum with exclusion of n= 0 channel behaves
+diﬀerently when zerothchannel is included (compare it with ﬁgure 5 where Fqversuslhas no cross over).
+15
+FIG. B1. (a) The variance σversuslforG(solid curves) and ATCdistributions (dotted curves) for LAMCG sequence. Top
+panel is for distribution for which the complimentarity is p reserved while complimentarity is not satisﬁed in the case o f bottom
+panel particularly at small distances. (b) Fqversuslplot forGdistribution of SCMITfor the case when complimentarity is
+not preserved. The curves are scaled up appropriately for be tter clarity.
+Since the spectrum behaves diﬀerently when zerothchannel is not included, we have analysed the spectrum of three
+typical sequences listed in the table below. Notice now that while α2values are essentially same as before, the α1
+values are quite diﬀerent. In fact, we have noticed a general tren d whereα1is higer than the previous values although
+the corresponding density distributions do not deviate signiﬁcantly from the Gaussian behavior at short distances.
+However, in the previous analysis, we alwyas include the zerothchannel so that the complimentarity properties is
+satisﬁed at all scales. Moreover, we also found a correlation betwe enαand Gaussian statistics, namely the deviation
+ofαfrom 0.5 also shows a corresponding deviation of Pndistribution from Gaussian behavior. For example, in case of
+SCMIT, theαis quite large at a short distance. Accordingly, the Pndistribution also shows strong deviation from
+the Gaussian statistics. However, this is not necessarilly true when complimentarity is not preserved while building
+the spectrum. At short distances, the deviation of αfrom 0.5 does not always mean a strong deviation from the
+Gaussian statistics.
+TABLE IV. The slope parameters for three typical sequences w here the complimenraity is not preserved.
+Sequence L lc,α G A T C GA
+Bacteriophage λ 48,502 lc 56 36 18 124 168
+(Intronless virus) α1 0.720 0.670 0.740 0.680 0.580
+LAMCG α2 0.935 0.819 0.910 0.800 0.860
+P 26.4 25.4 24.7 23.5 51.8
+SC-MIT 85779 lc 14 36 40 12 184
+Nc-001224 α1 0.703 0.760 0.750 0.700 0.630
+α2 0.694 0.540 0.750 0.510 0.730
+P 9.1 42.2 40.7 8.0 51.3
+BacteriophageT7 39937 lc - 116 884 1284 -
+NC-001604 α1<116 0.560 0.610 0.570 0.570 0.530
+116< α2<1330 0.560 0.587 0.590 0.566 0.551
+P 25.8 27.2 24.4 22.6 53.0
+16
+[1] For a review on long range correlation in DNA sequences, s ee for example, W. Li, Computers Chem, 21, 257 (1997);
+http://linkage.rockefeller.edu/wli/dna corr.html
+[2] W. Li, Int. Journal of Bifurcation and Chaos, 2(1), 137 (1992).
+[3] W. Li and K. Kaneko, Euro Phys. Lett, 17, 655 (1992).
+[4] W. Li, T. Marr and K. Kaneko, Physica D75, 392 (1994).
+[5] R. F. Voss, Phys. Rev. Lett., 68, 3805 (1992); Fractals 2, 1 (1994).
+[6] S.V. Buldyrev, A. L. Goldberger, S. Havlin, C. K. Peng, M. Simons, F. Sciortino and H. E. Stanley, Phys. Rev. Lett., 71,
+1776 (1993).
+[7] B. Borstnik, D. Pumpernik, and D. Lukman, Euro phys. Lett .,23, 389 (1993).
+[8] X. Lu, Z. Sun, H. Chen, and Y. Li, Phys. Rev. E58, 3578 (1998).
+[9] M. de Vieira, Phys. Rev. E60, 5932 (1999).
+[10] M. Ya. Azbel, Phys. Rev. Lett., 75, 168 (1995).
+[11] H. Herzel, I. Gro βe, Physica A216, 518 (1995).
+[12] Liaofu Luo, Weijiang Lee, Lijun Jia, Fengmin Ji, and Lu T sai, Phys. Rev. E58, 861 (1998).
+[13] C. K. Peng, S.V. Buldyrev, A. L. Goldberger, S. Havlin, F . Sciortino, M. Simons, and H. E. Stanley, Nature (London),
+356, 168 (1992).
+[14] J. Maddox, Nature (London), 358, 103 (1992).
+[15] S. Nee, Nature (London), 357, 450 (1992)
+[16] Chatzidimitriou-Dreismann and Larhammar D, Nature (L ondon), 361, 212 (1993).
+[17] V. V. Prabhu, and J. M. Claverie, Nature (London), 357, 782 (1992).
+[18] S. Karlin and V. Brendel Science, 259, 677 (1993).
+[19] H. E. Stanley, S.V. Buldyrev, A. L. Goldberger, Z. D. Gol dberg, S. Havlin, R. N. Mantegna, S. M. Ossadnik, C. K. Peng,
+and M. Simons, Physica A205, 214 (1994).
+[20] S.V. Buldyrev, N. V. Dokholyan, A. L. Goldberger, S. Hav lin, C. K. Peng, H. E. Stanley and G. M. Visvanathan, Physica
+A249, 430 (1998).
+[21] A. Arnedo, E. Bacry, P. V. Graves and J. F. Muzy, Phys. Rev . Lett.,74, 3293 (1995).
+[22] A. Arnedo, Y. D’Aubenton-Carafa, B. Audit, E. Bacry, J. F. Muzy, and C. Thermes, Physica bf A249, 439 (1998).
+[23] R. N. Mantegna, S.V. Buldyrev, A. L. Goldberger, S. Havl in, C. K. Peng, M. Simons, and H. E. Stanley, Phy. Rev. Lett.,
+73, 333 (1994); Phys. Rev. E52, 2939 (1995).
+[24] S.V. Buldyrev, A. L. Goldberger, S. V. Havlin, R. N. Mant egna, M. E. Matsa, C. K. Peng, M. Simons, and H. E. Stanley,
+Phys. Rev. E51, 5084 (1995).
+[25] C. K. Peng, S.V. Buldyrev, S. V. Havlin, M. Simons, H. E. S tanley, and A. L. Goldberger, Phys. Rev. E49, 1685 (1994).
+[26] A. K. Mohanty, and A. V. S. S. Narayana Rao, Phys. Rev. Let t.,84, 1832 (2000).
+[27] A. K. Mohanty, and S. K. Kataria, Phys. Rev. Lett, 73, 2672 (1994); Phys. Rev. Lett, 75, 2449 (1995); Phys. Rev. C,
+C53, 887 (1996).
+[28] For a review see, J. Klafter, M. F. Shlesinger and G. Zumo fen, Physics Today, 49, 33 (1996); M. F. Shlesinger, J. Klafter
+and G. Zumofen, Am. J. Phys., 67, 1253 (1999).
+[29] Bernaola- Galvan and P. Carpena, (To be published).
+17

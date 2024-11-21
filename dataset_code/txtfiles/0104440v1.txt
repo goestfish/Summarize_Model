@@ -1,0 +1,322 @@
+arXiv:cond-mat/0104440v1  [cond-mat.soft]  23 Apr 2001IL NUOVO CIMENTO Vol. 20D, N. 12bis 1998
+A Study of Sequence Distributionof a Painted Globule as a Mod el
+for Proteins with Good Folding Properties (∗)
+M-T. Kechadi (1), R.G. Reilly (1), K.A. Dawson (2),
+Yu.A. Kuznetsov (2),andE.G. Timoshenko (2)(∗∗)
+(1)Department of Computer Science, University College Dublin , Belﬁeld, Dublin 4, Ire-
+land.
+(2)Department of Chemistry, University College Dublin, Belﬁe ld, Dublin 4, Ireland.
+Summary. — In this paper we present a method to study the folding struct ure of
+a simple model consisting of two kinds of monomers, hydropho bic and hydrophilic.
+This method has three main steps: an eﬃcient simulation meth od to bring an open
+sequence of homopolymer to a folded state, the application o f a painting method
+calledregular hull to the folded globule and the refolding process of the obtain ed
+copolymer sequence. This study allows us to suggest a theore tical function of dis-
+order distribution for copolymer sequences that give rise t o a compacted and well
+micro-phase separated globule.
+PACS 07.05.T – Computer modeling and simulation.
+PACS 36.20 – Proteins.
+PACS 02.50.N – Monte Carlo method.
+PACS 01.30.C – Conference proceedings.
+1. – Introduction
+Proteins are made up of elementary building blocks - 20 diﬀer ent amino acids. Once
+synthesized, the protein chain folds into a unique 3-dimens ional shape, determined solely
+by the amino acid primary structure. The equilibrium foldin g is a free energy minimiza-
+tion process that depends on interactions among amino acids . Once folded, a protein
+is usually a compact globule. The compactness of the globule is maintained by the hy-
+drophobic eﬀect, so that the hydrophobic units are mainly lo cated inside the globule
+and the hydrophilic ones on the surface. These hydrophilic u nits screen the hydrophobic
+(∗)Paper presented at the International Conference on Morphol ogy and Kinetics of Phase
+Separating Complex Fluids, Messina, Italy, June 24-28, 199 7. Published in: Il Nuovo
+Cimento. Vol. 20D, No 12bis, pp. 2383-2391 (1998). Typos of the original publication
+corrected by E.G.T.
+(∗∗) E-mail: Edward.Timoshenko@ucd.ie. Web page: http://dar kstar.ucd.ie.
+c/circlecopyrtSociet` a Italiana di Fisica 1
+2 M-T. KECHADI, R.G. REILLY, K.A. DAWSON, YU.A. KUZNETSOV, andE.G. TIMOSHENKO
+units thereby preventing aggregation in solution. Althoug h this phase separation feature
+is well understood, biologists can neither accurately pred ict the folded protein shape
+for a given primary sequence, nor which sequences will fold a nd be stable, rather than
+aggregate.
+In this paper we present a method to study the folding propert ies of a model of
+proteins containing only two kinds of amino acids; hydropho bic and hydrophilic. This
+model is referred to as the AB-model. The idea is to try to ﬁnd t he distribution of disorder
+for copolymer sequences that give rise to a compact globule e xpressed as hydrophobic
+core and hydrophilic exterior.
+The study rests on two complementary methods, the painting m ethod and artiﬁcial
+neural networks (ANN) method. The painting method is applie d to quite short sequences
+and the ANN method to long sequences. The ﬁrst is necessary to train the ANN. In other
+words the ANN needs the training process (which can be done by the painting method)
+to study longer sequences which cannot be characterized by t he painting method. At
+ﬁrst we only consider short sequences to prove the validity o f the painting method and
+the applicability of windowing technique of ANN to the probl em of polymer collapse.
+The paper is organized as follows: The next section describe s the model to study
+the goodness of a sequence for the purposes of folding. The de scription of the method of
+simulations used to collapse a homopolymer is given in secti on 3. The painting method
+applied to a collapsed homopolymer globule is presented is s ection 4. Section 5 describes
+a study of the distribution of disorder in sequences of a gene ric model of protein expressed
+in terms of hydrophobic and hydrophilic units. This is done b y calculating the correlation
+function of monomers along the chain. The choice of using the ANN method is also
+discussed in the same section. We conclude in section 6.
+2. – The Model
+The model presented here rests mainly on the principle that w hen a protein folds it
+turns into a globule, so that predominantly the hydrophobic units constitute the core of
+the globule and the hydrophilic units the surface. We theref ore wish to create an ensemble
+of condensed chains all of which possess a hydrophobic core a nd hydrophilic exterior with
+ﬁxed sizes. Each chain sequence of this ensemble is then know n to possess at least one
+acceptable folded state. To produce the painting structure of hydrophobic-hydrophilic
+monomers we proceed in the following manner:
+1. Consider an open sequence of a homopolymer of a ﬁxed size,
+2. We perform numerical simulations based on the method desc ribed in the following
+section to bring the system to its folded state.
+3. The globule shape depends on the position of each monomer i n the sequence and
+the interactions between them. This globule is not always co mpact. Testing the
+compactness of the globule becomes necessary as only the sph erical globules are
+considered.
+4. The core of the globule is painted. The volume of the colore d core is deﬁned by
+the hydrophobicity ratio along the chain. The painting tech nique is described in
+section 4.
+5. We can now ask if all the sequences, each of which has, a good folded state, can
+be refolded from an open conformation to that state. Thus, th e obtained colored
+A STUDY OF SEQUENCE DISTRIBUTION ETC. 3
+Fig. 1. – Regular Hull painting method.
+sequences are considered as an AB-model consisting of two ki nds of monomers A
+and B. The Monte Carlo simulation method is again used for cop olymer sequences
+to discriminate the good sequences from the bad ones. A seque nce is considered to
+be good if it refolds eﬃciently and bad otherwise. The colore d sequences are also
+used to train the ANN.
+The primary concern in this paper is to identify any implied h ydrophilic-hydrophobic
+correlations created by having a hydrophobic core structur e. Thus, we study the distri-
+bution of the AB-model. A sequence of monomers of length N can be described by
+the binary variables λ1,· · ·, λN. Without loss of generality we consider λi= +1 for hy-
+drophilic and −1 for hydrophobic. Λ is a random variable and its probability distribution
+function can be deduced from the averages Mkdeﬁned over the set {λm1,· · ·, λmk}. The
+random variables λ1,· · ·, λNare mutually independent. The cumulant M2is given by
+M2(m1, m2) =γm1m2=/an}bracketle{tλm1λm2/an}bracketri}ht − /an}bracketle{tλm1/an}bracketri}ht/an}bracketle{tλm2/an}bracketri}ht (1)
+3. – Method of the Simulation
+There are two approaches commonly used for computer simulat ions of polymer sys-
+tems. One can proceed by straightforward numerical integra tion of, for example, the
+Langevin equation [4], or Newton’s equation in the molecula r dynamics method. Alter-
+natively, one can apply the method of Monte Carlo simulation [1, 2, 3]. The complete
+description of the model and simulation methods is given in [ 5] based on the package
+manycopdeveloped by Yu.A. Kuznetsov.
+There are two obvious restrictions on the set of all possible updates or moves of
+the system. Namely, we must ensure polymer connectivity, an d excluded volume. In a
+continuous–space model one requires a calculation of all fo rces to ensure that excluded
+volume is preserved, and there is an inner “space” loop in the Monte Carlo code. This
+can be avoided in a model with a ﬁnite–size discrete space, si nce a look–up table is used
+to manage this procedure. The dynamics can be performed by pe rmutations of monomer
+and solvent beads on the lattice. We call such a permutation a n elementary move.
+4 M-T. KECHADI, R.G. REILLY, K.A. DAWSON, YU.A. KUZNETSOV, andE.G. TIMOSHENKO
+We consider a model of a copolymer consisting of only two diﬀe rent monomer types
+distributed in a certain way along the chain. The total numbe r of each monomer type is
+held ﬁxed for every conﬁguration in the ensemble. The chain s tructure does not change
+under time evolution.
+We work on a three-dimensional lattice with unit spacing. We restrict our model
+by making the following particular choices of elementary mo ves. The maximum distance
+between the nearest neighbors along the chain (NNC) is equal tormax=√
+3. Thus,
+for every bead the NNC are located in the nearest lattice site s along the vertices of the
+lattice, or on second or third lattice neighbors. This condi tion provides for connectivity
+of the chain. Furthermore, excluded volume is incorporated by ensuring that only NNC
+are permitted in the nearest neighbor lattice sites, i. e. th e minimum distance between
+beads is rmin= 1 for NNC beads (NNC cannot overlap), and rmin=√
+2 otherwise.
+The model discussed above is described by the Hamiltonian,
+H=1
+2/summationdisplay
+i/negationslash=jw(rij)Isisj, (2)
+where i,jenumerate lattice sites; silabels the state of site i,Isisjis a 3x3 symmetric
+matrix and the matrix indices sitake three diﬀerent values, solvent sand monomer
+types denoted as aandb. Here we denote rij=|ri−rj|. For short–range interactions
+we take the weight function w(r) = 0, for r > R max, where Rmaxis some range of
+interaction. As in Ref. [5] we choose w(1) = 1, w(√
+2) = 1, w(√
+3) = 0 .7,w(2) = 1 /2
+andw(r) = 0 for r >2. Thus, the range of interaction includes the nearest and se cond–
+nearest neighbors. We have used the Metropolis algorithm [1 , 2, 3] for calculation of the
+transition probability in a system at temperature T.
+Copolymers can be described by three independent Flory para meters:
+χaa=2Isa− Iaa− Iss
+kBT,
+χbb=2Isb− Ibb− Iss
+kBT, (3)
+χab=Isa+Isb− Iab− Iss
+kBT.
+In fact, we shall consider only a special cut of parameter spa ce with the condition,
+Iaa+Ibb= 2Iab. We can therefore reduce the number of parameters to two via t he
+relation, χab= (χaa+χbb)/2. We further restrict our model by assuming that the
+a–monomers are hydrophilic, χaa= 0.
+4. – Method of Painting
+The painting method was used to identify the two types of mono mer - hydrophobic
+and hydrophilic. For a given hydrophobicity percentage the method consists in coloring
+the interior of the globule with a radius corresponding to th e hydrophobicity ratio τb.
+For this we consider that the globule is spherical with radiu s (Rg±δr) with δr< ǫr,
+where ǫris the maximum value, and is called parameter of compactness .
+There are diﬀerent ways to implement the painting procedure , depending on the
+constraints to be satisﬁed. For example, if the globule is co nsidered a sphere, the easiest
+way is to mark hydrophobic all the monomers in a ﬁxed radius Rbwhich corresponds
+A STUDY OF SEQUENCE DISTRIBUTION ETC. 5
+-0.1-0.0500.050.10.150.20.250.30.35
+0 20 40 60 80 100 120
+m✲γm✻
+Fig. 2. – Correlation function γm=1
+N−m/summationtext
+nγn,n+mforτb= 10% and sequence length N=
+120 (circles). The theoretical g(m) plot (solid curve) corresponds to A= 0.07,ξ= 37±5,
+d= 23.6±0.4 and φ= 90.
+to the given amount of hydrophobicity. Rbis called the hydrophobic radius and the
+diﬀerence ( Rg−Rb) is the depth of painting.
+Another method consists in bringing the centre of mass of the globule to the origin
+of a 3-D Cartesian grid. Calculate the coordinates of the hyd rophobic radius along the 3
+axes (x, y, z). This method is quicker than the ﬁrst; marking p rocess consists of a simple
+coordinate test for each unit compared to those in the radius of hydrophobicity.
+The advantage of these two methods is their simple implement ation. However the
+constraint imposed on the form of the globule is very restric tive, especially for short
+sequences, since: 1) a collapsed globule is never a perfect s phere and 2) the coordinates
+of monomers in the lattice are integers. These approximatio ns cause anomalies in the
+ﬁnal form of the globule.
+The method of painting we have chosen involves the regular hull . It consists of
+deﬁning an internal volume of the same form as that of the glob ule. The method proceeds
+in two phases: 1) determining the units which constitute the surface of the globule
+Γg={u0, u1,· · ·, un}. 2) For each ui∈Γgits distance is calculated from the centre of
+mass of the globule Rui. The depth of painting ∆ is ﬁxed, the distance separating a
+unitvjof a contour in the internal volume Γ p={v0, v1,· · ·, vm}from the centre of mass
+is given by the equation ∆ = Rui−Rvj, so the line [ ui, vj] passes through the centre
+of mass. The hydrophobic units are therefore delimited by Γ p. Figure 1 illustrates this
+6 M-T. KECHADI, R.G. REILLY, K.A. DAWSON, YU.A. KUZNETSOV, andE.G. TIMOSHENKO
+-0.2-0.100.10.20.30.40.50.60.7
+0 20 40 60 80 100 120
+m✲γm✻
+Fig. 3. – Correlation function for τb= 25% and sequence length N= 120. The g(m) plot
+corresponds to A= 0.17,ξ= 45±6,d= 22.4±0.3 and φ= 90.
+procedure. Note that as we are working on a lattice, the unit ui∈Γgcorresponding to
+vjis chosen in such a way so as to guarantee the painting depth di stance.
+5. – Simulations
+We performed Monte Carlo simulations of systems without rep tation for both folding
+and refolding processes. The simulations were run on workst ations (DEC Alpha 3100
+and SGI R10000). The method has two important steps which are very time consuming -
+Monte Carlo simulations and neural network windowing metho d. For each Monte Carlo
+simulation run more than N2sweeps were carried out, which requires approximately N2
+seconds on the underlined machines. For N= 120, 4 hours CPU time required to bring
+the initial sequence to folding state. Due to the enormous am ount of time needed to
+simulate sequences of diﬀerent size, we only ran simulation s forN= 120 ,250,and 400.
+For each ﬁgure, we plotted both the simulation results and a t heoretical function
+that approximates these results. This function is given by
+g(m) =A×exp(−m
+ξ)sin(2πm
+d+φ) (4)
+where A, ξ, d , andφare ﬁtting parameters. Here Ais the (uninteresting) normalisa-
+tion constant, ξis the correlation length, dis the period of periodicity and φis a phase
+A STUDY OF SEQUENCE DISTRIBUTION ETC. 7
+shift.
+Figures 2,3,4 and 5 plot the correlation function obtained b y using more than 2,500
+diﬀerent sequences of length 120 chosen randomly from an ens emble of 25,000. The
+only diﬀerence between these 4 experiments is the hydrophob icity ratio. We distinguish
+three diﬀerent regions in each graph. 1) initial region: the results are aﬀected by two
+phenomena - the discretisation of the simulation space onto a lattice and the eﬀect of
+painting which will be considered later. 2) the central regi on: results are stable and
+coincide with equation 4. 3) Final region: this is character ized by a lack of correlations.
+Since the chains are open the ends tend to be more hydrophilic , clearly shown in ﬁgure
+5.
+5.1.The Eﬀect of Painting . – The oscillations and their amplitudes are controlled by
+the parameters ξandArespectively, and dcontrols the period. These three parameters
+depend on the hydrophobicity ratio τb, and the sequence length N. We have determined
+the function corresponding to each parameter, as well as the ir physical relation to the
+painting method applied to folded sequences. In what follow s we analyze the results of
+the painting method and demonstrate its limitations.
+In a statistically signiﬁcant way, it was shown that the amin o acid sequences in
+proteins diﬀer from what is expected from random sequences. The results of this study
+based upon real protein sequences in the SWISS-PROT data bas e can be found in [7, 8].
+Our study conﬁrm the non-random distribution of hydrophobi c-hydrophilic monomers
+along the chain, and indicate that part of that correlation m ay be due to an implied
+geometry of the condensed globule.
+It is well known that the folding process brings residues geo metrically close together
+which are also close along the chain. These residues are clas siﬁed as domains. The
+current painting method does not take domains into account. Quite interesting results
+for the monomer structure of folded sequences are obtained a pplying the method to
+short sequences with an appropriate hydrophobicity ratio ( Figure 3). In the case shown
+in ﬁgure 3 the domain structure does not get overwhelmed by th e large globule volumes.
+When the domain structure is very small with respect to the gl obule volume only
+those monomers at the border of the two volumes (global and hy drophobic) are considered
+(see Figure 6). This border is negligible compared to the res t of the globule. It is vital
+to take the domain structure into account to extend the paint ing method beyond the
+globule core.
+5.2.Improvement . – To overcome the limitations of the preceding method we mus t
+therefore take the domain structure into account. We procee d as follows:
+1. let τandNbe the hydrophobicity ratio and the sequence length respect ively.
+2. choose a point P0belonging to the globule such that the distance from P0to the
+surface of the globule is bigger than τ.
+3. mark the monomers belonging to the volume of radius τand centre P0, and derive
+the characteristics of the folding structure of the monomer s (using the correlation
+function).
+4. repeat steps 2 and 3 with a new point until all possible poin ts have been chosen.
+5. calculate the total correlation function from the preced ing ones.
+8 M-T. KECHADI, R.G. REILLY, K.A. DAWSON, YU.A. KUZNETSOV, andE.G. TIMOSHENKO
+-0.200.20.40.60.81
+0 20 40 60 80 100 120
+m✲γm✻
+Fig. 4. – Correlation function for τb= 50% and sequence length N= 120. The g(m) plot
+corresponds to A= 0.13,ξ= 69±11,d= 21.4±0.2 and φ= 90.
+A STUDY OF SEQUENCE DISTRIBUTION ETC. 9
+-0.100.10.20.30.40.50.60.7
+0 20 40 60 80 100 120
+m✲γm✻
+Fig. 5. – Correlation function for τb= 75% and sequence length N= 120. The g(m) plot
+corresponds to A= 0.04,ξ= 77±25,d= 21.7±0.3 and φ= 90. Note that in this ﬁgure the
+quality of ﬁtting is the worst due to the deep level of paintin g.
+This new technique allows the analysis of the monomer foldin g structure for each
+domain structure in the whole globule. However it is very tim e consuming, since all
+points which satisfy the hydrophobicity radius τmust be examined. The method uses
+the same exploration procedure as the neural network window ing method.
+5.3.Neural Network . – Artiﬁcial neural networks are usually used to ﬁnd an ap-
+proximate solution to a precisely (or an imprecisely) formu lated problem. ANNs are
+characterized by the network topology, the connection weig ht between pairs of nodes,
+node properties, and the deﬁnition of updating rules. Usual ly, an objective function is
+deﬁned that represents the complete state of the network, an d its set of minima corre-
+spond to diﬀerent stable states of the network. Learning in a n ANN, whether supervised
+or unsupervised, is accomplished by adjusting the weights b etween connections in re-
+sponse to new inputs or training patterns.
+The advantage of the neural network approach is that it allow s us to generalize our
+predictions about the compactness of folded proteins beyon d the sequences used to train
+the network. The results of the neural network method are ful ly described in [6].
+10 M-T. KECHADI, R.G. REILLY, K.A. DAWSON, YU.A. KUZNETSOV, andE.G. TIMOSHENKO
+Fig. 6. – This ﬁgure shows the monomers belonging to the borde r between the two volumes.
+This border becomes negligible as the length of the chain inc rease.
+6. – Conclusion
+In this paper a method to create geometrical objects with pro tein-like structure
+and thereby generate sequences is suggested. This techniqu e used two complementary
+methods - painting method and neural network windowing meth od. The ﬁrst one is
+suitable to the short sequences. As opposed to the painting m ethod the ANN windowing
+method has non-local eﬀect in the folding process (length of sequences, etc.). However,
+a learning process is needed in order to predict the goodness of folded structure for any
+sequence length.
+We deduce that there are implied chain sequence correlation s indicating a sort of
+block-like structure to the hydrophobic-hydrophilic stru cture. We see from the ﬁtting
+of the experimental function γmby the theoretical one g(m) that increasing the depth
+of painting increases the correlation length ξ, while it has practically no eﬀect on the
+periodicity dor phase φ. The periodicity dis believed to be related to the size of the
+globule while the phase φto the actual procedure involved and thus both are independe nt
+of the painting depth.
+The method presented here is very time consuming especially the Monte Carlo sim-
+ulation and neural network steps. The performance of these m ethods can be improved
+by using high performance and eﬃcient parallelization tech niques.
+∗ ∗ ∗
+The authors acknowledge interesting discussions with Dr A. V. Gorelov who was
+ﬁrst to experimentally propose the idea of a painted globule back in 1994 and to Stephen
+Connolly who performed an undergraduate project with one of us (E.G.T.) in 1995,
+during the course of which the correlation functions of pain ted globule were ﬁrst though
+yet fairly inaccurately determined from Monte Carlo simula tion.
+A STUDY OF SEQUENCE DISTRIBUTION ETC. 11
+REFERENCES
+[1] K. Binder, Ed., Monte Carlo Methods in Statistical Physics, 2nd ed., Spring er–Verlag,
+Berlin (1986) .
+[2] K. Binder, Ed., Applications of Monte Carlo Method in Statistical Physics, 2nd ed.,
+Springer–Verlag, Berlin (1987) .
+[3] M.P. Allen, D.J. Tildesley, Computer Simulations of Liquids, Clarendon Press, Oxford
+(1987) .
+[4] A. Byrne, P. Kiernan, D. Green, K.A. Dawson, J. Chem. Phys. ,102(1995) 573.
+[5] Yu. A. Kuznetsov, E. G. Timoshenko, K. A. Dawson, J. Chem. Phys. ,103(1995) 4807.
+[6] R.G. Reilly, Kechadi M-T., K.A. Dawson, Yu. A. Kuznetsov and E.G. Timoshenko, Il
+Nuovo Cimento. ,20D (12bis) (1998) 2565.
+[7] A. Irback, C. Peterson and F. Potthast, Physical Review E ,55(1997) 860.
+[8] A. Bairoch and B. Boeckmann, Nucleic Acids Res. ,22(1994) 3578.

@@ -1,0 +1,1062 @@
+arXiv:physics/0202056v1  [physics.bio-ph]  21 Feb 2002Translocation Properties of Primitive
+Molecular Machines and Their Relevance to
+the Structure of the Genetic Code
+M Aldana-Gonz´ alez†, G Cocho§,
+H. Larralde¶, G Mart´ ınez-Mekler¶.
+†The James Franck Institute, The University of Chicago 5640 South Ellis
+Avenue, Chicago, Il, 60637, US.
+§Instituto de F´ ısica, UNAM. Apdo. Postal 20-364, 01000 M´ exi co D.F., M´ exico.
+¶Centro de Ciencias F´ ısicas, UNAM. Apdo. Postal 48-3, 62251 Cue rnavaca,
+Morelos, M´ exico.
+Submitted to the Journal of Theoretical Biology.
+November 2001.
+Abstract
+We address the question, related with the origin of the genet ic
+code, of why are there three bases per codon in the translatio n to
+protein process. As a followup to our previous work, [1, 2, 3] we
+approach this problem by considering the translocation pro perties
+of primitive molecular machines, which capture basic featu res of ri-
+bosomal/messenger RNA interactions, while operating unde r prebi-
+otic conditions. Our model consists of a short one-dimensio nal chain
+of charged particles(rRNA antecedent) interacting with a p olymer
+(mRNA antecedent) via electrostatic forces. The chain is su bject to
+external forcing that causes it to move along the polymer whi ch is
+ﬁxed in a quasi one dimensional geometry. Our numerical and a n-
+alytic studies of statistical properties of random chain/p olymer po-
+tentials suggest that, under very general conditions, a dyn amics is
+attained in which the chain moves along the polymer in steps o f three
+1
+monomers. By adjusting the model in order to consider presen t day
+genetic sequences, we show that the above property is enhanc ed for
+coding regions. Intergenic sequences display a behavior cl oser to the
+random situation. We argue that this dynamical property cou ld be
+one of the underlying causes for the three base codon structu re of the
+genetic code
+1 Introduction
+The origin of the genetic code has been a subject of intense resear ch since
+its structure was completely elucidated in the early 1970’s. In subse quent
+years, the scientiﬁc community has produced several theories in o rder to ex-
+plain why the genetic code has this structure. Among these theorie s, the
+most prominent ones are the stereochemical theory, the frozen -accident the-
+ory and the coevolutionary theory [4]-[9]. Roughly speaking, these t heories
+try to account for the structure of the genetic code by looking at the in-
+teractions between codons and amino acids, the biosynthetic relat ionships
+among diﬀerent amino acids and how the metabolic pathways between them
+have been selected throughout evolution. Nevertheless, the fac t that all the
+codons are made up of three nucleotides, has mostly been taken fo r granted
+and barely brought into question.
+One of the most widely used arguments found in the literature to exp lain
+the trinucleotide codon structure of the genetic code, was given b y Sidney
+Brenner in 1961 [10, 11]. According to this argument, codons are ma de up of
+three nucleotides (or bases, for short) because there are 20 am ino acids to be
+speciﬁed by the genetic information expressed by a 4 letter “alphab et” (the
+four bases A,G,C,U). If codons were composed of only two bases, th ere would
+be only 16 diﬀerent combinations (42), which are not enough to specify for
+20 amino acids. If instead, codons were made up of more than three bases,
+there would be at least 256 combinations (44), and these are too many for
+only 20 amino acids. Hence, less than three bases per codon are not enough,
+and more than three would imply an excessive degeneration of the co de. The
+result coming out from this argument is that three bases per codon is the
+optimal “bit of information” that can be used in order to specify for the 20
+diﬀerent amino acids by means of a 4 letter “alphabet”.
+The above argument, however, does not constitute an explanatio n by
+2
+itself, mainly because it only moves the question of “why three?” to t he
+questions of “why twenty?” or for that matter “why four?”. The re is no
+reason for the genetic information to codify for only 20 amino acids s ince
+living organisms use more than those speciﬁed by the genetic code [12 ]. In
+addition, this argument assumes that all the codons must have the same
+length (number of bases), even though more eﬃcient codes can be obtained
+byallowing thelengthofthecodonstovary[13]. Finally, giventhat20amino
+acids have to be speciﬁed by using 4 diﬀerent bases, Brenner’s argu ment
+leads to the simplest code that might be thought of. But even in such a case,
+simplicity has to be accounted for as a relevant criterium.
+In this work we address the question of the origin of the three-bas e codon
+structure of the genetic code from a dynamical point of view. We co nsider
+a simple molecular machine model which captures some of the principal fea-
+tures of the interaction between primitive realizations of the riboso me and
+of the mRNA. Our main objective is to present a dynamical scenario, com-
+patible with prebiotic conditions, of how the triplet structure of the genetic
+code could have arisen. The model we propose is a follow up of the one
+introduced by Aldana, Cocho and Mart´ ınez-Mekler [1, 2, 3] and is co nsistent
+with the current evidence suggesting the “RNA world” hypothesi1s [14]. In
+this scheme the crucial molecules involved in the prebiotic and protob iotic
+processes, that eventually led to codiﬁcation and translation mech anisms of
+the genetic information, were RNA related.q
+In our model, based on the setup depicted in Fig. 1, a short one-
+dimensional polymer composed of Mmonomers interacts with a much longer
+one, via electrostatic forces. In order to avoid confusion, from n ow on we will
+refer to the short polymer as “the chain”, and to the long polymer s imply
+as “the polymer”. The electrostatic interaction between the chain and the
+polymer is due to the presence of electric charges, or multipolar mom ents, in
+the monomers of both the chain and the polymer.
+The charges ofthe monomers ofthechain andof thepolymer areas signed
+at random following a uniform distribution. Therefore, the resulting chain-
+polymer interaction potential has a random proﬁle. The chain is allowe d to
+movealongthepolymer, butisconstrainedtoremainataﬁxedperpe ndicular
+distance σfrom it. Consequently, transport is one-dimensional. One of our
+main results is to show that under very general conditions, a dynam ics is
+attained in which the chain moves along the polymer in eﬀective “steps ”
+whose mean length is three monomers. We argue that this dynamical feature
+3
+q 1q 2q 3 q N . . .Fex p1 pM . . .x
+σ
+..
+Figure 1: The molecular machine model. A one dimensional chain compos ed
+ofMmonomers interacts with a one dimensional polymer, Nmonomers
+in length. The charges {pi}along the chain, as well as the charges {qj}
+of the polymer are independent random variables. The chain is at a ﬁx ed
+perpendicular distance σfrom the polymer, but can move along the polymer.
+xis the horizontal position of the chain with respect to the polymer.
+may be one of the underlying causes of the three base codon struc ture of the
+genetic code.
+This paper is organized as follows: section 2 describes in detail the mo del
+and the assumptions introduced. In section 3 we recall some statis tical as-
+pects of our previous analysis [1, 2, 3] of the random interaction po tentials
+between the chain and the polymer for the simplest case in which the f ormer
+is composed of just one particle ( M= 1). We exhibit numerically that, even
+in this simple case, the mean distance ¯dbetween consecutive minima along
+the interaction potential is very close to three: ¯d∼3 (taking the monomer
+length as spatial unit). After retrieving the analytical expression for this
+distance [1], we then look into the probability Pm(d) of two neighboring po-
+tential minima being separated by a distance d. Subindex mrefers to the
+number of diﬀerent types of monomers in the polymer and in the chain . This
+probability function shows that, even though the mean distance ¯dis close to
+three, the most probable distance between consecutive minima is d∗= 2 for
+m >2. In section 4 the monomer charges along the polymer are assigned
+in correspondence with protein-coding regions of the genome of re al organ-
+isms (e.g. Drosophila orE. coli) instead of at random. For this case, the
+probability function Pm(d) is modiﬁed so that not only the mean distance is
+¯d∼3, but also the most probable one happens to be d∗= 3.
+4
+In section 5 we introduce the more realistic case M >1, which takes
+into account the fact that the ribosome is not a point particle, that it has
+spatial structure and presents several simultaneous contact p oints between
+its own rRNA and the mRNA polymer. For small chain lengths ( M∼10),
+theprobability distribution Pm(d)is indicative ofwide ﬂuctuationsandhasa
+formstrongly dependent ontheparticular assignment ofcharges inthechain.
+One ofour main ﬁndings is that for such chains themost likely conﬁgur ations
+are those in which both, the mean distance ¯dand the most probable one d∗
+are equal to three, even when the monomer charges along the polymer and
+the chain are assigned at random . In section 6 we analyze the dynamics
+resulting from the model when an external force is pulling the chain, forcing
+it to move as a rigid object along the polymer. The power spectrum of the
+velocity of the chain reveals that, under some very general circum stances, for
+small chain lengths ( M∼10), there is a sharp periodicity in the dynamics
+of the system, with a slowing down of the velocity of the chain every t hree
+monomers. Finally, section 7 is devoted to the discussion of the resu lts and
+their relevance to the origin of the genetic code.
+2 The model
+The model we propose consists of a chain of Mmonomers interacting with
+a very long polymer composed of Nmonomers, with N→ ∞(see Fig.1).
+The chain is constrained to remain at a given distance σperpendicular to
+the polymer and is allowed to move in along the polymer, we shall deﬁne
+xas its position in this direction relative to the polymer. We will denote
+the monomer charges in the chain and in the polymer by {pi}and{qj},
+respectively. Weshouldmentionthatby“charge”wedonotnecess arily mean
+Coulomb charge. Both {pi}and{qj}could be dipolar moments, induced
+polarizabilities, or similar quantities resulting from electrostatic inter actions
+between chain monomers and polymer monomers with potentials of th e form
+1/rα, whereαcharacterizes the “charge” type.
+We will assume that all the monomers in the chain, and separately, all
+the monomers in the polymer, are of the same nature, namely, all of them
+are either Coulomb charges, or dipolar moments, or polarizable molec ules,
+etc. In addition, taking into account that in the origin of life condition s the
+genetic molecules were not yet likely to convey any structured infor mation,
+5
+we will consider the charges {pi}and{qj}to be discrete independent random
+variables, acquiring one of the mdiﬀerent values ξ1, ξ2, ..., ξ mwith the
+same probability. Hence, the probability function P(q) for both, the {pi}
+and{qj}variables, will be
+P(q) =1
+mm/summationdisplay
+j=1δ(q−ξj) (1)
+whereδ(q) is the Dirac delta function. In general, in this work we will take
+the values ξ1, ξ2, ..., ξ mas integers. Parameter mrepresents the number of
+diﬀerent types of monomers from which the polymer and the chain ar e made
+of. For the case of real genetic sequences m= 4, but we will not restrict the
+value ofmto be 4.
+All the monomers will have the same length L, which we take as the
+spatial unit of measure: L= 1. We also assume the charge in each of the
+monomers to be uniformly distributed along the length L, so that the charge
+densityλj(x) in the jth-monomer of the polymer, for example, is a constant
+whose value is λj(x) =qj/L. Nevertheless, it is worth mentioning that the
+dynamics of the model does not depend strongly on the particular s hape
+of the monomer charge density λj(x), as long it is a smooth function of x
+(“smooth” in the sense of diﬀerentiability).
+With the preceding assumptions, the interaction potential Vij(x) between
+the ith-monomer in the chain and the jth-monomer in the polymer is giv en
+by
+Vij(x) =Kpiqj/integraldisplayx+i
+x+i−1/integraldisplayj
+j−1dx′dx′′
+[(x′−x′′)2+σ2]α/2(2)
+whereKis a constant whose value depends on the unit system used to
+measure the physical quantities. In the above expression, Lhas already been
+set equal to 1. Parameter αcharacterizes the kind of interaction between
+the chain and the polymer: α= 1 corresponds to an ion-ion interaction,
+α= 2 represents an ion-dipole interaction, and so forth. Note that t his
+parameter does not depend on the indices iandj, since all the monomers
+in the chain are of the same nature and those in the polymer are them selves
+of the same nature, diﬀering from each other only in the value of the charge
+they contain. The overall interaction potential Vα
+σ(x) between the whole
+6
+chain and the entire polymer is given by the superposition of the individ ual
+potentials Vij(x):
+Vα
+σ(x) =M/summationdisplay
+i=1N/summationdisplay
+j=1Vij(x) (3)
+Equations (2) and (3) establish the type of random potentials we will be
+considering. Our ﬁrst aim is to analyze the spatial structure of the se poten-
+tials, giving their statistical characterization. This will be done in the three
+following sections. Subsequently, we will consider the dynamics of th e chain
+moving along the polymer interacting with it by means of a random pote n-
+tial, subject to an external driving force and seek under what con ditions, if
+any, transport in “steps” of three monomers can be achieved.
+3 Random potentials: M= 1
+Let us start with the simplest case M= 1, in which the chain consists of
+just one monomer. We will refer to this case as the “single-monomer -chain”
+case, and to the chain simply as “the particle”. The reason to consid er this
+simple situation is twofold: on one hand, it is useful in order to introdu ce
+the relevant ideas behind the model. On the other hand, it is simple eno ugh
+as to obtain exact analytical results in a more o less straightforwar d way.
+In previous work we have already analyzed some statistical proper ties of
+the random potentials given by expressions (2) and (3) for the cas eM= 1
+[1, 2, 3]. After a short review of some of those results we center ou r attention
+on the probability distribution Pm(d).
+The overall particle-polymer interaction potential is given by
+Vα
+σ(x) =N/summationdisplay
+j=1qj/integraldisplayx+1
+x/integraldisplayj
+j−1dx′dx′′
+[(x′−x′′)2+σ2]α/2(4)
+Note that in the previous expression we have set Kp1, the only charge in
+the chain, equal to one. Fig.2 shows three graphs of the potential Vα
+σ(x) for
+σ= 0.5 and diﬀerent values of the parameter α. To generate these graphs,
+the following probability function for the charges {qj}was used:
+7
+P(q) =1
+63/summationdisplay
+µ=−3δ(q−µ) (5)
+namely, each one of the variables {qj}acquired one of the six diﬀerent values
+{±1,±2,±3}with probability 1 /6 (m= 6). In Fig.2, the random realization
+of the charges {qj}along the polymer was the same for the three graphs.
+As can be seen from this ﬁgure, the distribution of maxima and minima
+along the potential does not change by varying the value of the par ameter
+α, in the sense that all the maxima and minima remain essentially at the
+same positions. What occurs as αtakes larger and larger values is that the
+potential becomes a step-like function.
+Fig.3presentsananalogoussituation, butnowkeeping αconstant( α= 2)
+and varying σ. The behavior of the potential is similar to the previous case:
+the potential becomes a step-like function as σdecreases and the positions
+of the maxima and minima are not appreciably modiﬁed.
+Theaboveconsiderationsexhibit thatforsmallvaluesof σ, say0< σ≤1,
+the distribution of maxima and minima along the potential is entirely det er-
+mined by the distribution of charges along the polymer and is independ ent of
+the particular values acquired by the parameters αandσ. Therefore, in or-
+der to ﬁnd out the distribution of maxima and minima along the interact ion
+potential, it is possible to substitute the continuous random potent ial given
+by expressions (2) and (3), by the equivalent step-like potential d eﬁned by
+V(x) =N/summationdisplay
+j=1Vj[H(x−(j−1))−H(x−j)] (6)
+whereH(x) is the Heaviside function1, andVjis a random variable whose
+value is directly proportional to the charge qjof the jth-monomer in the
+polymer:
+Vj=Kp1qj (7)
+wherep1is the charge of the particle (the only monomer in the chain).
+Since the random charges {qj}are statistically independent, so are the
+{Vj}. Expression (6), whichwewillrefer toasthe step-like limit , issuitable
+for the analytical determination of the probability function of the d istances
+1The Heaviside function H(x) is deﬁned as H(x) = 0 ifx <0 andH(x) = 1 ifx≥0
+8
+0 20 40 60 80 100
+(c)−5−3−11350 20 40 60 80 100
+(b)−10−505100 20 40 60 80 100
+(a)−25−15−551525
+σαV  (x)
+x
+Figure 2: Particle-polymer interaction potential for σ= 0.2 and diﬀerent
+values of α. (a)α= 1; (b)α= 3; (c)α= 5. The charges along the polymer,
+selected at random, are the same in the three graphs shown. Note that as
+αincreases, the potential becomes a step-like function, but the po sitions of
+the maxima and minima do not change. Also note that there are 33 pot en-
+tial minima distributed along 100 monomers. Therefore the mean dist ance
+between consecutive minima is ¯d= 100/33 = 3.03.
+9
+0 20 40 60 80 100
+(c) −10−505100 20 40 60 80 100
+(b)−10−505100 20 40 60 80 100
+(a)−10−50510
+V  (x)σα
+x
+Figure 3: Particle-polymer interaction potential for α= 2 and diﬀerent
+values of σ. (a)σ= 0.2; (b)σ= 0.1; (c)σ= 0.01. Asσacquires smaller
+values, the interaction potential becomes a step-like function. As before, the
+distribution of maxima and minima does not change when σ→0. Note that
+in this case there are 34 minima in the interval [0 ,100]. Therefore, the mean
+distance between neighboring minima is ¯d= 100/34 = 2.94.
+10
+/0/0/0/0/0/0/0/0
+/1/1/1/1/1/1/1/1V(x)
+x
+Figure 4: In a one dimensional potential, the dynamics is determined b y
+the distribution of maxima and minima. If a molecule is moving along the
+potential and is subject to an external force, it will spend more tim e in the
+potential minima thaninthe maxima. This kind ofmotioncan beconsider ed
+as if the molecule were “jumping” from one minimum to the next.
+between consecutive potential minima. This probability function give s im-
+portant information concerning the dynamics of the system. If so me external
+force is acting on the particle (or the chain), forcing it to move in one di-
+rection (right or left) along the polymer, the particle will spend more time
+in the energy minima than in the maxima. Such a movement may be inter-
+preted by considering the particle as “jumping” from one minimum to t he
+next (see Fig.4). It is worth noticing that the mean distance betwee n con-
+secutive minima in the potentials shown in Fig.2 and Fig.3 is nearly three.
+In Fig.2 there are 33 minima distributed among 100 monomers, and con -
+sequently the mean distance between consecutive minima in this case is
+¯d= 100/33≃3.03. Analogously, the mean distance between neighboring
+minima in Fig.3 is ¯d= 100/34≃2.94. Therefore, it is expected that in its
+motion along the polymer, the velocity of the particle will slow down, on
+average, every three monomers, being momentarily “trapped” in e ach of the
+potential minima.
+By using the step-like limit, in reference [1] we have shown that the me an
+distance ¯dbetween consecutive potential minima for a long polymer (the
+11
+d
+d.
+(a)
+(b).
+.
+Figure 5: In the step-like limit, the probability function Pm(d) can be
+calculated by counting all the possible conﬁgurations like the one sho wn in
+this ﬁgure. (a) Two minima, one at Vjand the other at Vj+dare separated by
+a distance d, with no other minima in between. (b) The extended minimum
+on the right is due to the fact that several adjacent monomers ac quired the
+same charge value. The distance dwill be measured between the mid points
+of the two minima.
+12
+large N limit) is given by
+¯d=6m
+2m−1(8)
+wheremis the number of diﬀerent monomer types. The above equation
+shows that the mean distance ¯dis always between 3 and 4, and approaches
+3 asymptotically as m→ ∞. In particular, for m= 4 (the biological value)
+we have ¯d≃3.43.
+In order to characterize the ﬂuctuations around the mean distan ce¯d, it
+is useful to compute the probability distribution function Pm(d), which we
+recall, gives the probability of two consecutive minima being separate d by a
+distance dwhen there are mdiﬀerent types of monomers. In the step-like
+limit, this computation is carried out by counting all the conﬁguration s of
+the step-like variables {Vj}in which there are two minima, one at Vjand the
+other atVj+d, with no other minima in between. The situation is illustrated
+in Fig.5a. Since in the step-like limit the interaction potential is constan t
+along every monomer, we will adopt the convention to measure the d istance
+dbetween two adjacent minima from the mid point of the ﬁrst minimum to
+the mid point of the second one, as illustrated in Fig.5b. With the above
+convention, the resulting distances dcan only acquire integer or half-integer
+values. For a ﬁnite number mof diﬀerent charges, the explicit calculation of
+the probability function Pm(d) consists mainly on counting conﬁgurations,
+though conceptually straightforward, it involves a considerable am ount of
+algebra. Here we present the ﬁnal expressions:
+Pm(d) =6
+2m−1d−2/summationdisplay
+k=02k+1
+mk+d+2Nm(d−k) (9)
+ifdis integer: d= 2,3,4,..., and
+Pm(d) =12
+2m−1d′−2/summationdisplay
+k=02k+1
+mk+d′+3Nm(d′−k) (10)
+ifdis half-integer: d= 5/2, d= 7/2, d= 9/2,..., whered′=Int[d]. In
+the above expressions, Nm(d) is a polynomial whose degree and coeﬃcients
+depend on m. Form= 2,m= 3 and m= 4 the polynomials are given by
+N2(d) = 1
+13
+N3(d) = 1+2 d+2d2(11)
+N4(d) =−2+1
+8/bracketleftBig
+30d+73d2+22d3+3d4/bracketrightBig
+For the case of m=∞we have also derived a closed expression [15],
+which has a much simpler form:
+P∞(d) = 32d
+(d+3)!/parenleftBig
+d2+d−2/parenrightBig
+(12)
+The preceding distributions are plotted in Fig.6. It can be seen from
+this ﬁgure that the most probable distance d∗between consecutive potential
+minima is d∗= 2, except for the case m= 2 in which d∗= 3. Hence,
+according to the transport mechanism suggested in Fig.4, wheneve r there
+are more than two diﬀerent types of monomers, the particle will mov e along
+the polymer in “jumps” whose mean length is close to three, but whos e most
+probable length is actually two. The diﬀerence between the mean dist ance
+¯dand the most probable distance d∗is due to the presence of “tails” in the
+probability function Pm(d). Namely, to the fact that Pm(d) has non zero
+values even for large d. Nevertheless, in section 5 we will show that these
+“tails” can be shrunk almost to zero when the chain is made up of more than
+one particle ( M >1). This is one of the main results of this paper.
+To end this section, it is worth mentioning that half-integer distance s be-
+tween two neighboring minima occur when one or both of these minima e x-
+tend over several monomers (see Fig.5b). In these conﬁguration s, the charges
+of the adjacent monomers constituting the extended minimum have the same
+value. Conﬁgurations in which groups of adjacent equally charged m onomers
+occur, are less likely than conﬁgurations in which adjacent monomer s have
+diﬀerent charges, andtheformer tendto disappear as mincreases (seeFig.6).
+4 Real genetic sequences: M= 1
+The charges {qj}along the polymer can be assigned in correspondence with
+the genetic sequence of an organism, rather than in a random way. The
+purpose of doing so is to ﬁnd out how the potential minima and maxima
+along real genetic sequences are distributed, and to compare the resulting
+distribution with the one corresponding to the random case. Since g enetic
+14
+0 2 4 6 8 10 12 14
+d0.000.100.200.300.400 2 4 6 8 10 12 140.000.100.200.300 2 4 6 8 10 12 140.000.100.200.30
+P(d)0 2 4 6 8 10 12 140.000.050.100.150.20
+∞m = 2
+m = 3
+m = 4
+m = 
+Figure6: Probability function Pm(d)fordiﬀerent valuesof m. These graphs
+correspond to the case in which the charges along the polymer are a ssigned
+at random. Note that for m >2, the most probable distance d∗occurs at
+d∗= 2.
+15
+sequences are made out of four diﬀerent bases (A, U, C and G) we c onsider
+four diﬀerent possible values ξ1, ξ2, ξ3, ξ4for the charges {qj}, i.e.m= 4.
+To proceed further, it is necessary to establish a correspondenc e between the
+charge values ξ1,...,ξ 4and the four bases A, U, C and G. An arbitrary look
+up table is the following:
+basecharge value
+A −2
+U −1
+C +1
+G +2(13)
+Withtheabovecorrespondence, ifthejth-baseinagivengenetics equence
+happens to be A, for example, then the charge of the correspond ing jth-
+monomer in the polymer will be qj=−2.
+Figure Fig.7a shows the probability distribution P4(d) computed numer-
+ically by using a Drosophila melanogaster protein-coding sequence, 45500
+bases in length (several genes were concatenated to construct this sequence).
+The mean distance between consecutive potential minima for this se quence
+is¯d≃3.15 and, as follows from the ﬁgure, the most probable distance is
+d∗= 3. Therefore, in the “real sequence case” not only is the mean dis tance
+¯dvery close to 3, but also the most probable distance d∗turns out to be 3.
+A comparison of Fig.6c with Fig.7a, shows that for protein-coding gen etic
+sequences, the potential minima along the polymer are more often s eparated
+by three monomers thanin therandom case. When protein-coding s equences
+are used, the value of P4(d) increases at d= 3 and decreases at d= 2.
+The above behavior does not occur when non-coding sequences of the
+genome are used for the monomer charge assignment along the poly mer.
+Fig.7bshowstheprobabilityfunction P4(d)forthecaseinwhichthemonomer
+charges areincorrespondence withanintergenic sequence ofthe Drosophila’s
+genome. The length of the sequence is again 45500 bases. As can be seen
+from the ﬁgure, in this case the probability function P4(d) looks much more
+like the one obtained in the random case.
+It is important to remark that the behavior of P4(d) exhibited in Fig.7a
+for real protein-coding sequences does not depend on the partic ular corre-
+spondence (13) between bases and charge values being used, as lo ng as they
+are of similar order of magnitude and they can allow for an order relat ion.
+These conditions hold for the four bases A, T, C and G which have cha rges
+16
+0 1 2 3 4 5 6 7 8 9 10
+(b)0.00.10.20.3
+P(d)0 1 2 3 4 5 6 7 8 9 10
+(a)0.00.10.20.3
+P(d)
+d
+d
+Figure 7: Probability function P4(d) computed by assigning the charges
+in the polymer in correspondence with genetic sequences of the Drosophila
+malanogaster genome. (a) The genetic sequence used is a concatenation of
+several protein-coding genes. For this sequence, the mean dista nce between
+consecutiveminimainthepotentialis ¯d≃3.15. Notetheprobabilityfunction
+has its highest value at d∗= 3. (b) In this case the sequence is an intergenic
+region of the genome (non-coding) with mean distance ¯d≃3.43 and most
+probable value d∗= 2.
+17
+of the same order of magnitude [16]2and are fulﬁlled by our present choice
+of{±1,±2}. The order relation is necessary for the interaction potential to
+have maxima and minima. It is worth asking the eﬀect that changes in t he
+order relation have on the probability function P4(d). There are 24 possi-
+ble order relations among the four bases A, T, C, and G (4! permuta tions).
+The 24 probability functions P4(d) corresponding to these permutations are
+plotted in Fig.8a for Drosophila’s protein-coding sequence. As can be seen
+from the ﬁgure, the probability functions basically overlap, indepen dently
+of the particular order relation between the bases, with a peak at d∗= 3.
+The invariance of P4(d) under base permutations also holds for non-coding
+sequences as is shown in Fig. 8.b., where d∗= 2 for intergenic sequences of
+Drosophila Drosophila’s . This valueof d∗suggests that non-coding sequences
+behave as random structures.
+The “peaking at d∗= 3” of the probability function P4(d) seems to be a
+general characteristic associated with the protein-coding seque nces of living
+organisms, not only with Drosophila . In Fig.9 we show the probability func-
+tions obtained from protein-coding sequences of diﬀerent organis ms, and in
+all the cases the probability functions present their highest value a td∗= 3
+(the mean distance ¯dis also very close to 3). The fact that the above charac-
+teristicisabsent innon-codinggeneticsequences maybeinterpret ed inevolu-
+tionary terms. Genetic sequences directly involved in the protein-t ranslation
+processes were selected (among other things) as to bring the dist ance be-
+tween consecutive potential minima closer to 3, both in mean and fre quency
+of occurrence. This interpretation raises a question: how likely is it t o obtain
+a randomly generated sequence with a structure similar to that of p rotein-
+coding sequences? In other words, if we generate a random seque nce and
+compute its probability function Pm(d), how likely is it to come up with a
+probability function peaking at d∗= 3?.
+In order to answer this question, we deﬁne the parameters p3/2andp3/4
+as
+2The real physical charge values will depend on the system of units, which is contained
+basically in the constant Kappearing in expression (2)
+18
+0 1 2 3 4 5 6 7 8 9 10
+(b)0.000.100.200.30
+P(d)0 1 2 3 4 5 6 7 8 9 10
+(a)0.000.100.200.30
+P(d)
+d
+d
+Figure 8: Plot of the 24 probability functions P4(d) corresponding to the 24
+permutations of the charge values given in table (13) using: (a) Drosophila ’s
+protein-coding sequence and (b) Drosophila ’s non-coding sequence (inter-
+genic). Note that the shape of the probability function is invariant u nder the
+permutations.
+19
+0 2 4 6 8 1000.10.20.3Chlorella vulgaris0 2 4 6 8 1000.10.20.3
+P(d)Deinococcus radiodurans0 2 4 6 8 1000.10.20.3Pyrococcus abyssi
+0 2 4 6 8 1000.10.20.3Caernohabditis elegans0 2 4 6 8 1000.10.20.3Mycobacterium tuberculosis0 2 4 6 8 1000.10.20.3Aeropyrum pernix
+d
+Figure 9: Probability functions obtained when protein-coding seque nces
+of diﬀerent organisms are used for the assignment of monomer cha rges in
+the polymer. Note that in all the cases, the probability function rea ches its
+maximum value at d∗= 3. The above seems to be a generic property of
+protein-coding sequences.
+20
+0 1 2 3 4 502468Mycobacterium tuberculosis0 1 2 3 4 502468Drosophila melanogaster0 1 201234random sequence
+0 1 2 3 4 502468Aeropyrum pernix0 1 2 3 4 502468Deinococcus radiodurans0 1 2 3 4 502468Chlorella vulgaris
+I II I II
+I II I II
+I II I IIp
+p3/23/4(a) (b)
+(c) (d)
+(e) (f).
+Figure 10: Fluctuations of the probability function P4(d) exhibited through
+the parameters p3/2andp3/4. (a) Plot of p3/2versusp3/4for 4500 random
+sequences, each one 500 bases in length. (b)-(f) The same as abo ve but using
+protein-codingsequencesofdiﬀerentorganisms. Thenumberofp ointsvaryin
+each graph since the available genetic sequences used in the calculat ions had
+diﬀerent lengths. These sequences were divided into small pieces, e ach one
+composed of 500 bases. Note that for protein-coding sequences , the majority
+of the points fall in region I, for which both p3/2andp3/4are greater than 1.
+Note also the scale on the axes.
+21
+p3/2=P4(3)
+P4(2)
+(14)
+p3/4=P4(3)
+P4(4)
+If the probability function P4(d) associated with a given sequence has its
+highest value at d∗= 3, then the corresponding parameters p3/2andp3/4will
+both be greater than one. Otherwise, one or both of these param eters will
+be smaller than one.
+Fig.10a is a plot of p3/2vs.p3/4for 1000 random sequences, each one con-
+sisting of 500 bases (which is a typical length of sequences coding fu nctional
+proteins [17]). It can be seen from the ﬁgure that only a small fract ion of the
+points (about 0.224)fall in region I, for which p3/2>1 andp3/4>1. The rest
+of the points fall in region II, in which p3/2<1 andp3/4>1. Therefore, the
+probability of having a random sequence, 500 bases long, whose con secutive
+potential minima are more often separated by a distance d∗= 3, is close to
+0.224.
+On the other hand, Figs.10b-f show similar graphs, but using protein -
+coding sequences of real organisms. These graphs were constru cted by an-
+alyzing short coding sequences 500 bases in length. The fraction of points
+falling in region I ( p3/2>1 andp3/4>1) for the diﬀerent organisms of Fig.10
+is summarized in the following table:
+Organism Frac. region I
+random sequence 0.224000
+Chlorella vulg. 0.788235
+Drosophila 0.780220
+Deinococcus rad. 0.803525
+Myc. tuberculosis 0.802643
+Aeropyrum pernix 0.719973
+These results show that protein-coding sequences are much more likely
+to have their consecutive potential minima separated by a distance d∗= 3.
+To end thissection, we shouldmake a further comment. The fact th atthe
+most probabledistance d∗between consecutive potential minima is d∗= 3for
+22
+protein-coding sequences, is a consequence of the order in which t he bases or
+codons appear along the sequence and are not related to the relat ive weight
+(fraction) of their occurrence. For example, Fig.11a shows the pr obability
+function P4(d) corresponding to a protein-coding sequence of Escherichia
+coli, 45000 bases in length. In Fig.11b the codon composition, expresse d as
+fractional occurrence, of this sequence is depicted. To constru ct this last
+graph, we labelled each codon in an arbitrary way, by assigning an inte ger
+number, from 0 for AAA up to 63 for GGG. On the horizontal axis the num-
+ber of the codon is plotted, and on the vertical axis its fractional o ccurrence
+ontheE. colisequence. Finally, Fig.11cshows theprobabilityfunction P4(d)
+corresponding to a random sequence, of the same length and codo n compo-
+sition as the one used in Fig.11a. As can be seen, for the “randomized ”E.
+colisequence the most probable distance is no longer d∗= 3 as in Fig.11a,
+butd∗= 2.
+5 Extended chain: M >1
+In this section we consider the case in which the chain is composed of m ore
+than one single monomer. As mentioned before, this reﬂects the fa ct that
+the ribosome is not a point particle after all. At each given time, the rib o-
+some interacts with the mRNA at several points, giving rise to a collec tive
+interaction. Electron microscopy has revealed that the mRNA thre ad passes
+across the ribosome throughout a tunnelabout 10nm long and 2nm in di-
+ameter [17]. Since nucleotide length is about 0.5nm, around 20 nucleot ides
+may be in a position to interact simultaneously with the ribosome. Takin g
+the above into account, we will work with a small chain, assuming M= 10
+as a reasonable length.
+In the step-like limit, the interaction potential equation can be writt en
+by equation (3) now with the variables {Vj}given by:
+Vj=KqjM/summationdisplay
+i=1pi (15)
+Themainmodiﬁcationcausedbyusingequation(15)insteadof(7)fo rthe
+random variables {Vj}is that they are no longer statistically independent.
+Due to the collective interaction between the chain and the polymer, these
+variables are strongly correlated. This makes the problem of ﬁnding the
+23
+0 1 2 3 4 5 6 7 8 9 10
+(c)00.10.20.3
+P(d)0 10 20 30 40 50 60
+(b)00.010.020.030.040.05
+c(n)0 1 2 3 4 5 6 7 8 9 10
+(a)00.10.20.3
+P(d)
+d
+dn
+Figure 11: (a) Probability function corresponding to a protein-cod ing se-
+quence of Escherichia coli . (b) Codon composition c(n) of this E. colise-
+quence. Each codon was labeled with an integer number n, from 0 for AAA
+up to 63 for GGG. The horizontal axis is the codon number nand the verti-
+cal axis is the codon composition c(n) expressed as the fractional occurrence
+of codon n. (c) Probability function corresponding to a random sequence
+with the same codon composition as in (b). Note that for this random ized
+sequence, the peak at d= 3 is lost.
+24
+probability function Pm(d) too diﬃcult for analytical treatment. Therefore,
+we will present only numerical results.
+In our simulations, Pm(d) presents an erratic behavior. The shape of this
+function strongly depends on the particular realization of monomer charges
+in the chain. For example, Fig.12a shows the probability function Pm(d) for
+a polymer 500 monomers in length and a particular realization of charg es in
+a 10-monomer chain. The charge values we used to generate these graphs
+were{±1,±2}. Fig.12b shows a similar graph but for a diﬀerent realization
+of charges along the chain (the realization of charges in the polymer was the
+sameinbothcases). Ascanbeseen, these twographsdiﬀerconsid erably: the
+ﬁrst presents a very sharp maximum at d∗= 2, whereas the second does so
+atd∗= 3. Wide ﬂuctuations in the probability function Pm(d) were always
+present in our numerical simulations.
+This ﬂuctuating behavior did not occur in thesingle-monomer-chain c ase.
+It is apparent from Fig.10a that the ﬂuctuations of the probability f unction
+Pm(d) in that case are rather small: the probability function has its highes t
+valueatd∗= 2forthemajorityoftherealizations(77.6%)inthecase M= 1.
+Also, the ﬂuctuations are concentrated in a small region of the ( p3/2,p3/4)
+plane.
+In order to have an idea of the magnitude of the ﬂuctuations of the
+probability function Pm(d) in the extended-chain case, we can make use of
+the parameters p3/2andp3/4deﬁned in expression (14). The ﬂuctuations of
+the probability function in the extenden-chain case are shown in Fig.1 3. To
+construct this ﬁgure, a polymer 500 monomers in length was used alo ng with
+a 10-monomer chain. The charge values in thepolymer aswell asinthe chain
+were again {±1,±2}. The parameters p3/2andp3/4were calculated for 4500
+charge realizations in the chain (the realization of charges in the poly mer was
+the same in all the cases). Fig.13 is the plot of p3/2versusp3/4for these 4500
+realizations. Two remarks are worth mentioning about this ﬁgure:
+•The points are spread out over a much wider region than in the single-
+monomer-chain case (Fig.10a).
+•The majority of the points fall in the region in which both p3/2>1 and
+p3/4>1.
+The following table shows the fractions of the points falling in each of t he
+four regions of the graph:
+25
+0 1 2 3 4 5 6 7 8 9 10
+(b)00.20.40.60.8
+P(d)0 1 2 3 4 5 6 7 8 9 10
+(a)00.20.40.60.8
+P(d)
+d
+d
+Figure 12: Two graphs of the probability function P4(d) corresponding
+to two diﬀerent realizations of monomer charges for a 10-monomer chain
+interacting with a 500 monomer polymer. As can be seen, the shape o f the
+probability function depends strongly on the particular realization o f charges
+in the chain. The mean distance ¯dis¯d≃2.36 for (a) and ¯d≃2.98 for (b).
+26
+0 10 20 3005101520
+ 
+3/4
+3/2p
+p.
+Figure 13: Fluctuations of the probability function exhibited by the p aram-
+etersp3/2andp3/4for the extended-chain case. A 10-particle chain was used
+along with a polymer 500 monomers in extent. The graph shows the ab ove
+parameters for 4500 realizations or monomer charges in the chain. Note that
+the points spread out over a much wider region than in Fig.10a. Also, in
+this case the majority of the points fall in the region for which p3/2>1 and
+p3/4>1.
+27
+Region Fraction
+p3/2>1,p3/4>10.52978
+p3/2<1,p3/4>10.33800
+p3/2>1,p3/4<10.07778
+p3/2<1,p3/4<10.05444
+Therefore, when a collective interaction between the polymer and t he
+chain prevails, a remarkable property arises: The probability of hav ing a
+random interaction potential, whose consecutive minima are more of ten sep-
+arated by three monomers, is the largest.
+6 Dynamics
+Recent experimental evidence suggests that the ribosome-mRNA system
+presents a ratchet-like behavior in the protein synthesis transloc ation pro-
+cess [18]. In this view, the ribosome is tightly attached to the mRNA th read
+intheabsenceofGTP.Thisissobecausethechannelintheribosome through
+which the mRNA passes, is more or less closed. When a GTP molecule is
+supplied (and transformed into GDP), this channel opens leaving th e mRNA
+thread free to move one codon. Subsequently the mRNA passage in the
+ribosome closes again, trapping the mRNA molecule.
+In this clamping mechanism several physicochemical factors are inv olved,
+which if taken into account in detail would lead to complex dynamical eq ua-
+tions hard to handle. In this work our approach is to look into the beh avior
+of oversimpliﬁed molecular models which might capture some of the ess en-
+tial dynamical features of the system and may shed some light on ho w this
+mechanism could have arisen in the origin of life conditions.
+In our modelling the dynamics of the system is governed by the appli-
+cation of an external force Fexto the chain in the horizontal direction, i.e.
+parallel to the polymer. By this means the chain will be forced to move
+along the polymer. In principle, the force Fexmay be time dependent, but
+we will restrict ourselves to a constant term. This force might come from a
+chemical pump (like GDP)or fromany other electromagnetic forcep resent in
+prebiotic conditions. The only purpose of this force in our model is to drive
+the chain along the polymer (which is assumed to be ﬁxed, N→ ∞limit),
+avoiding it from getting trapped in some of the minima of the polymer-c hain
+28
+interaction potential V(x). Therefore, we will also assume that Fexsatisﬁes
+|Fex|>max|∂V(x)/∂x|.
+Our analysis relies on Newton’s equation of motion in a high friction
+regime, where inertial eﬀects can be neglected. This regime actually exists in
+biological molecular ratchets similar to the one we are considering [19, 20].
+Under such conditions, the Newton’s equation of motion acquires th e form
+γdx
+dt=−∂Vα
+σ(x)
+∂x+Fex (16)
+whereγis the friction coeﬃcient. In what follows, we will set γ= 1, which is
+equivalent to setting the measure of the time unit. The above, thou gh a de-
+terministic equation, gives rise to a random dynamics due to the rand omness
+of the interaction potential Vα
+σ(x). In order to start analyzing this random
+dynamics, let us consider ﬁrst the single-monomer-chain case M= 1. In this
+case, as before, we will refer to the chain simply as “the particle”.
+6.1 Single-monomer chain: M= 1. Random sequences.
+In Fig.14a we show a typical realization of the velocity of the particle v(x) as
+a function of its position xalong the polymer. This graph was constructed
+by solving numerically the equation of motion (16), using the fourth o rder
+Runge-Kuta method. The parameter values used were α= 2 and σ= 0.5,
+and the monomer charge values were {±1,±2}(casem= 4). Fig.14b shows
+the local-transit times of the particle along a short segment of the p olymer
+(40 monomers in length). This transit time is represented in arbitrar y units,
+and was computed by counting how many time steps the particle spen t in
+every spatial interval ∆ xthroughout the polymer. In the graph shown, the
+value of ∆ xwas ∆x= 0.25. It is apparent from this ﬁgure that, in its way
+along the polymer, the particle spends more time in certain regions th an in
+others, the former being more or less regularly spaced along the po lymer.
+In order to ﬁnd out the spatial regularities in the dynamics of the sy stem,
+it is convenient to take the Fourier transform of the velocity v(x) of the
+particle. Let us call ˆ v(k) the Fourier transform of v(x),kbeing the Fourier
+variable conjugate to x.
+Fig.15 shows the Fourier power spectrum of the velocity, |ˆv(k)|2, for two
+diﬀerent realizations of monomer charges in the polymer. The param eter
+values in Fig.15a and Fig.15b are {σ= 0.5, α= 1}and{σ= 0.5, α= 4}
+29
+40 50 60 70 80
+(b)02040
+t(x)40 50 60 70 80
+(a)050100150
+v(x)
+x
+x
+Figure 14: (a) Typical realization of the velocity of the particle along the
+polymer as a function of the position x. (b) Local transit time tas a function
+of the position x. Note that the particle eﬀectively spends more time in
+certain regions of the polymer than in others. Also, note the regula rity in
+the positions of the maxima of the local transit time.
+30
+0 2 4 6
+(b)00.511.5
+|v(k)|0 2 4 6
+(a)00.20.40.60.81
+|v(k)|
+k
+k2
+2k  = 1.85
+k  = 1.90*
+*λ  = 3.29
+λ  = 3.30*
+*
+Figure 15: Power spectrum of the velocity of the particle along the p olymer,
+for two random realizations of monomer charges in the polymer. Not e that
+there exist dominant frequencies k∗even though the charges of the polymer
+were assigned at random. These dominant frequencies correspon d to spatial
+regularities λ∗= 2π/k∗with values (a) λ∗≃3.29 and (b) λ∗≃3.30.
+31
+respectively. These graphs were computed for the case m= 4, using the
+charge values {±1,±2}. From the ﬁgure, it is evident that there exists a
+dominant frequency k∗in the power spectrum of the velocity (the highest
+peak), whose corresponding spatial periodicity is λ∗= 2π/k∗∼3.3. The
+power spectrum reveals a dynamical regularity in the motion of the p article
+throughout the polymer. This regularity is inherited from the one pr esent
+in the random potential, in the sense that the particle spends more t ime in
+the minima than in the maxima. The consequence is a slowing down of the
+velocity nearly every three monomers, which is reﬂected in the powe r spec-
+trum. Our interpretation is that the peak occurring in the power sp ectrum
+of the velocity conveys the information on the average distance ¯dbetween
+consecutive potential minima, which for the case m= 4 is¯d∼3.4.
+6.2 Single-monomer chain: M= 1. Real sequences.
+As in section 4, we can assign the charges along the polymer in corres pon-
+dence with the genetic sequence of real organisms. In order to do that, we
+will use the same base-charge correspondence as in expression (1 3). The ob-
+jective is to ﬁnd out how the dynamics of the system changes when u sing
+real genetic sequences instead of random ones. In what follows, t he value of
+the parameters αandσwill beα= 1,σ= 0.5.
+The power spectrum of the velocity of the particle throughout the poly-
+mer, when using protein-coding sequences of diﬀerent organisms, is shown
+in Fig.16. To generate these graphs, short coding sequences of se veral or-
+ganisms, each 10000 monomers in length, were used. Two points are worth
+noticing in this ﬁgure. First, the peak in the power spectrum is much h igher
+than in the random case. This indicates that there is a much more well de-
+ﬁned periodicity in the dynamics generated by interaction potentials when
+protein-coding sequences are used. Second, the spatial periodic ity reﬂected
+in the peak of the power spectrum is much closer to 3 than in the rand om
+case.
+This dynamical behavior is not present when real but non-coding se -
+quences are used. For example, in Fig.17 we show the power spectru m of
+the velocity of the particle along the polymer, for two cases in which t he
+monomer charges in the polymer were assigned in correspondence w ith inter-
+genic regions of two organisms. As can be seen, the structure of s uch spectra
+is similar to the one obtained in the random case. In this sense, interg enic
+32
+0 2 4 60.000.050.100.150.20Influenza A virus0 2 4 60.000.050.100.150.20
+|v(k)| HIV−10 2 4 60.000.100.200.300.40Drosophila
+0 2 4 60.000.100.200.30M. tuberculosis0 2 4 60.000.050.100.150.20Rabies virus0 2 4 60.000.050.100.150.20E. coli
+k2λ  = 2.99 λ  = 2.99
+λ  = 3.00  λ  = 2.99
+λ  = 3.00 λ  = 2.99* *
+* *
+* *
+Figure 16: Power spectrum of the velocity of the particle using prot ein-
+coding sequences of diﬀerent organisms to assign the charges on t he polymer.
+Note the very sharp peaks in all the spectra. The above means tha t the
+dynamics generated by protein-coding sequences presents very well deﬁned
+periodicities. Also, note that these spatial periodicities are almost e qual to
+3. The peak around k= 4 is a resonant frequency (second harmonic) of the
+ﬁrst peak.
+33
+1 2 3 4 5 6
+k02468
+|v(k)| Saccharomyces cerevisiae1 2 3 4 5 602468
+|v(k)| Caenorhabditis elegans
+2
+2
+Figure 17: Power spectrum of the velocity of the particle using non- coding
+sequences of S. cerevisiade (yeast) and C. elegans (worm). In this case the
+spatial periodicity is weaker (or absent) than in Fig.16. It seems tha t the
+non-coding sequences of real organisms have a random like struct ure.
+34
+regions again seem to have a random structure.
+The fact that the power spectrum corresponding to protein-cod ing se-
+quences exhibits a very sharp periodicity at λ∗≃3, whereas the one corre-
+sponding to non-coding sequences does not, has already been rep orted in the
+literature [21]. Nonetheless, in these previous works the power spe ctrum of
+the “bare” genetic sequences is analyzed, namely, without conside ring any
+kind of interaction potential or dynamical behavior. What we have s hown
+here, though, is that this “structural” periodicity around three t ransforms
+into adynamical periodicity in the motion of the particle along the polymer.
+6.3 Extended chain: M=10
+The most interesting dynamics occurs when an extended chain is inte racting
+with the polymer. In such a situation, a collective interaction prevails . At
+every moment there are several contact points between the cha in and the
+polymer. As we have already pointed out, collective interaction betw een the
+chain and the polymer gives rise to a widely ﬂuctuating probability func tion
+Pm(d). The sameoccurs with thepower spectrum ofthe velocity ofthe c hain
+along the polymer. However, these ﬂuctuations, far from being an noying,
+produce a much richer dynamical behavior than in the single-monome r-chain
+case.
+In Fig.18 we show the power spectra of the velocity of the chain along
+the polymer for two diﬀerent random realizations of monomer charg es in
+the chain. The charges in the polymer were the same in both cases. T hese
+graphs were constructed with a polymer 500 monomers in length and a 10-
+monomer chain. The parameter values used were σ= 0.5 andα= 1. Also,
+the charge values were, as above {±1,±2}. From the ﬁgure, it is apparent
+that thepower spectrum ofthe velocity exhibits a very well deﬁned dominant
+frequency, even though the charges in both the polymer and the chain were
+assigned at random . The power spectrum in Fig.18a presents a dominant
+frequency corresponding to a spatial periodicity λ∗≃2, whereas the corre-
+sponding periodicity in the power spectrum shown in Fig.18b is λ∗≃3. We
+should explain this diﬀerence.
+The power spectrum appearing in Fig.18a was constructed by using a
+polymer and a chain whose associated probability function P4(d) has the
+same shape as the one of Fig.12a. Namely, for this system the proba bility
+function has a very high value at d∗= 2. On the other hand, the power
+35
+0 2 4 6 8
+(b)02040600 2 4 6 8
+(a)010203040
+|v(k)|
+k
+k|v(k)|2
+2k  = 3.14
+k  = 2.18*
+*λ  = 2.01
+λ  = 2.88**
+Figure 18: Power spectrum of the velocity of a 10-monomer chain alo ng
+a polymer 500 monomers in length. These two graphs correspond to two
+diﬀerent random realizations of monomer charges in the chain. (a) T he
+spatial periodicity is λ∗≃2.01 and (b) λ∗≃2.88. In (a) the corresponding
+probability function had a shape like the one in Fig.12a with d∗= 2 and
+bard≃2, whereas in (b) the probability function was as in Fig.12b with
+d∗= 3 and ¯d≃3. In the extended-chain case, there is a ﬁnite correlation
+lengt along the potential (equal to the size of the chain), which is re ﬂected
+in the little “heaps” appearing in the power spectrum.
+36
+spectrum in Fig.18b corresponds to a system whose probability func tion has
+avery sharppeakat d∗= 3, astheoneshowninFig.12b. Fromournumerical
+simulations, we can conclude that whenever the probability function has a
+sharp maximum at a distance d∗, the power spectrum of the velocity also
+presents a sharp peak corresponding to a spatial periodicit yλ∗=d∗.
+As we have seen, in the collective-interaction case the most probab le con-
+ﬁgurations are those in which the probability function P4(d) has its highest
+value atd∗= 3 (see Fig.13). Therefore, if we assign at random the monomer
+charges in the polymer and in the chain, with high probability we will come
+up with a dynamics possessing a very well deﬁned periodicity: the cha in will
+move along the polymer in “jumps” whose length is nearly three monom ers.
+7 Summary and discussion
+The results presented throughout this work suggest a possible sc enario for
+the origin of the three base codon structure of the genetic code. In this sce-
+nario, primitive one dimensional molecular machines, initially with a rando m
+structure, exhibited a regular dynamics with a “preference” for a movement
+in steps of three bases. By “steps” we mean a slowing down of the ve locity
+of the chain along the polymer, nearly every three monomers (see F ig.14b).
+Even in the simplest case in which the chain consists of only one monome r,
+the above dynamical regularity is apparent. We can think of the dyn amics
+of primitive molecular machines as being “biased towards three”.
+The preceding property is quite robust inasmuch as it hardly depend s on
+the particular kind of interaction between the polymer and the chain . On
+one hand, the kind of electrostatic potentials we have used is repre sentative
+of the actual interaction potentials between particles occurring in Nature.
+These potentials are characterized in our model by the parameter α. We
+have also seen that the distribution distances between neighboring maxima
+and minima along the interaction potential, characterized by the pro bability
+function Pm(d), does not depend on this parameter (for small values of σ),
+i.e. it will be the same whether the interaction is coulombian or dipolar or
+of any other (electrostatic) type.
+On the other hand, the spatial distribution of interaction potentia l min-
+ima also does not depend on the particular values of the monomer cha rges
+{qj}and{pi}, as long as these values are of the same order of magnitude. An
+37
+important feature that the charges must comply with is that they t ake more
+than two diﬀerent values. This allows for an order relation to be esta blished
+among the diﬀerent types of monomers, leading to a maxima and minima
+structure of the interaction potential. The probability function Pm(d), which
+givestheprobabilityoftwo consecutive minima beingseparatedbyad istance
+d, only depends on m, namely, onthe number of diﬀerent types of monomers.
+Asmincreases, the mean distance ¯dbetween consecutive potential minima
+approaches three. Nevertheless, in the particle (single-monomer -chain) case,
+the most probable distance is d∗= 2 (form >2).
+Stillinthisparticlecase, considerablechangestakeplacewhenthec harges
+alongthepolymer areassignedincorrespondence withprotein-cod inggenetic
+sequences of real organisms. In this case, not only is the mean dist ance¯d
+between neighboring potential minima nearly three, but also the mos t prob-
+able one, d∗, happens to be three. This is a remarkable property of protein-
+coding sequences, perhaps acquired throughout evolution. Furh termore the
+fact that this “reﬁnement” is absent in non-coding sequences of r eal organ-
+isms, strongly suggests that it is a consequence of the dynamical p rocesses
+involved in the protein synthesis mechanisms.
+This interpretation is supported by the results obtained when the dynam-
+icsof the particle moving along the polymer is considered. In the random
+sequence case, there are dominant frequencies in the power spec trum of the
+particle velocity related with the spatial regularities of the interact ion po-
+tential. Moreover in the protein-coding sequence case, the power spectrum
+of the velocity shows a very well deﬁned periodicity corresponding a lmost
+exactly to a spatial distance λ∗= 3. Again, this behavior does not occur
+for non-coding sequences of real organisms, which are not involve d in the
+translation processes.
+A richer dynamics emerges when the chain is composed of several mo -
+nomers. In this, more realistic, collective-interaction case, the pr obability
+function Pm(d) presents very wide ﬂuctuations, depending on the particular
+assignmentofmonomerchargesinthechain. Nevertheless, themo stprobable
+conﬁgurations are those for which the probability function has its h ighest
+value at d∗= 3. For these conﬁgurations, the power spectrum of the chain
+velocity along the polymer exhibits a very well deﬁned spatial periodic ity at
+λ∗≃3.
+Our results suggest an origin of life scenario in which primordial molec-
+ular machines of chains moving along polymers in quasi one-dimensiona l
+38
+geometries, that eventually led to the protein synthesis processe s, were bi-
+ased towards a dynamics favoring the motion in “steps” or “jumps” of three
+monomers. The higher likelyhood of these primitive“ribosomes” may h ave
+led to the present ribosomal dynamics where mRNA moves along rRNA in a
+channel conformed by the ribosome. Dynamics may have acted in th is sense
+as one of the evolutionary ﬁlter favoring the three base codon com position
+of the genetic code.
+Acknowledgements
+We would like to thank Leo Kadanoﬀ, Sue Coppersmith, Haim Diamant an d
+Cristian Huepe for very useful discussions and corrections. This w ork was
+sponsoredbytheDGAPA-UNAMprojectIN103300, theMRSECPro gramof
+the National Science Foundation(NSF) under Award Number DMR 98 08595
+and by the NSF Program DMR 0094569. M. Aldana also acknowledges
+CONACyT-M´ exico a posdoctoral grant.
+39
+References
+[1] Mart´ ınez-Mekler G, Aldana M, C´ azarez-Bush F, Garcia-Pelayo R, Co-
+cho G (1999) Primitive molecular machine scenario for the origin of the
+three base codon composition. Org Life Evol Bios 29:203-214
+[2] Aldana M, C´ azarez-Bush F, Cocho G, Mart´ ınez-Mekler G (1998 ) Pri-
+mordial synthesis machines and the origin of the genetic code. Phys ica
+A 257:119-127
+[3] Mart´ ınez-Mekler G, Aldana M, Cocho G(1999) Onthe roleof molec ular
+machines in the origin of the genetic code, in ”Statistical mechanics o f
+biocomplexity: proceedings of the XV Sitges Conference, held at Sit ges,
+Barcelona, Spain 8-12 June 1998”, editors Reguera D, Vilar JMG, Ru bi
+JM, (Springer Verlag Lecture Notes in Physics 527:112-123).
+[4] Alberti S (1997) The origin of the genetic code and protein Synth esis. J
+Mol Evol 45:352-358
+[5] Alberti S (1999) Evolution of the genetic code, protein synthes is and
+nucleic acid replication. Cell Mol Life Sci 56:85-93
+[6] Amirnovin R (1997) An analysis of the metabolic theory of the origin
+of the genetic code. J Mol Evol 44:473-476
+[7] Di Gulio M, Medugno M (1998) The historical factor: the biosynth etic
+relationships between amino acids and their physicochemical proper ties
+in the origin of the genetic code. J Mol Evol 46:615-621
+[8] Di Gulio M (1997) On the origin of the genetic code. J Theor Biol
+191:573-581
+[9] Freeland SJ, Laurence DH (1998) The genetic code is one in a million.
+J Mol Evol 47:238-248
+[10] Brener S, Jacob F, Meselson M (1961) An unstable intermidiate c arry-
+ing information from genes to ribosomes for protein synthesis. Nat ure
+190:575-80
+[11] Brenner S (1989) Molecular Biology: A selection of papers (Acad emic
+Press, Orlando, Fl).
+40
+[12] Lehninger AL, Nelson DL, Cox MM (2000) Principles of biochemest ry.
+W H Freeman and Co. Third edition.
+[13] Doig AJ (1997) Inproving the eﬃcency of the genetic code by va rying
+the codon length: the perfect genetic code. J. Theor Biol 188:355 -360
+[14] Gilbert W (1986) The RNA world. Nature 319:618-625
+[15] Aldana M, Cocho G, Larralde H, Mart´ ınez-Mekler G, CCF-UNAM
+preprint to be submitted for publication.
+[16] MacKerell Jr AD, Wi´ orkiewicz-Kuczera J, Karplus M (1995) An a ll-
+atom empirical energy function for the simulation of nucleic acids. J
+Am Chem Soc 117:11946-11975
+[17] Lewin B (1999) Genes VII. Oxford University Press.
+[18] Frank J, Agrawal RK (2000) A ratchet-like inter-subunit reor ganization
+of the ribosome during translocation. Nature 405:318-322
+[19] Bier M (1997) Brownian ratchets in physics and biology. Cont Phy s
+38(6):371-379
+[20] J¨ ulicher F, Ajdari A, Prost J (1997) Modeling molecular motors . Rev
+Mod Phys 69(4):1269-1281
+[21] Lobzin VV, Chechetkin VR (2000) Order and correlations in DNA s e-
+quences. The spectral approach. Physics-Uspekhi 43(1):55-7 8
+41

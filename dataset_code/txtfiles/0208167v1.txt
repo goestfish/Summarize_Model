@@ -1,0 +1,506 @@
+arXiv:math/0208167v1  [math.OC]  22 Aug 2002Automated tuning of bifurcations via feedback
+Luc Moreau∗Eduardo Sontag†Murat Arcak‡
+October 24, 2018
+1 Introduction
+The present paper studies a feedback regulation problem that aris es in at least
+two diﬀerent biological applications. The feedback regulation proble m under
+consideration may be interpreted as an adaptive control problem, but has not
+yet been studied in the control literature. The goal of the paper is to introduce
+this problem and to present some ﬁrst results.
+The feedback regulation problem is concerned with a forced dynamic al sys-
+tem
+˙x=fµ(x,u(t)) (1)
+which depends on a parameter µ. The input u(t) in equation (1) represents an
+external stimulus; it is not a control variable. We are interested in t he input-
+to-state properties of equation (1). In general, the input-to-s tate properties
+of equation (1) depend on the parameter µ. In particular, the input-to-state
+propertiesmaychangedrasticallyasafunction of µwhentheunforceddynamics
+exhibitabifurcation. Inthiscase,quiteinterestingandremarkable ampliﬁcation
+properties may result from operating in the proximity of the bifurca tion point.
+We illustrate this with two biological examples from the literature.
+The ﬁrst example is concerned with the auditory system. In order t o detect
+the sounds of the outside world, hair cells in the cochlea operate as n anosen-
+sors which transform acoustic stimuli into electric signals. In a serie s of recent
+∗Postdoctoral Fellow of the Fund for Scientiﬁc Research - Fla nders (Belgium) (F.W.O.-
+Vlaanderen) and recipient of an Honorary Fellowship of the B elgian American Educational
+Foundation. This paper presents research results of the Bel gian Programme on Inter-
+University Poles of Attraction, initiated by the Belgian St ate, Prime Minister’s Oﬃce for
+Science, Technology and Culture. The scientiﬁc responsibi lity rests with its authors. SYS-
+TeMS, Ghent University, Technologiepark 9, 9052 Zwijnaard e, Belgium. Currently visiting
+Mechanical and Aerospace Engineering Department, Princet on University, Princeton N.J.
+08544, USA
+†Department of Mathematics, Rutgers, The State University o f New Jersey, Piscat-
+away N.J. 08854, USA. This work was supported in part by US Air Force Grant F49620-
+01-1-0063, and by National Institutes of Health Grant P20 GM 64375.
+‡Dept. of Electrical, Computer and Systems Engineering, Ren sselaer Polytechnic Institute,
+Troy, NY 12180, USA
+1
+papers [4, 5, 6, 7], the hair cells in the cochlea are modeled as active, a lmost
+self-oscillating systems. Ions such as Ca++are believed to contribute to the
+hair cell’s tendency to exhibit spontaneous oscillations. For low conce ntrations
+of the ions, the viscous damping forces of the ﬂuid that surrounds the hair cells
+dominate and the hair cell oscillations are damped. As the concentra tion in-
+creasesthe system undergoes a Hopf bifurcation, the dynamics b ecome unstable
+and the hair cells exhibit spontaneous oscillations. It is argued in thes e papers
+that the hair cells operate in the proximity of this bifurcation point, w here
+the activity of the ions compensates the damping eﬀects. In this ca se, even a
+weak sound stimulus can cause a detectable oscillation. (This follows f rom the
+generic properties of a forced dynamical system exhibiting a Hopf b ifurcation).
+This mechanism thus provides an explanation for the experimentally o bserved
+ultrahigh sensitivity of the ear.
+The second example arises in the study of persistent neural activit y [3, 12,
+14, 13]. Neural activity of a single neuron has a natural tendency t o decay with
+a relaxation time of about 5–100 ms. This natural tendency to deca y can be
+opposed by positive synaptic feedback loops. If this feedback is we ak, then the
+natural tendency to decay dominates and neural activity still dec reases. As the
+feedback gain is increased, the neural dynamics undergo a bifurca tion and the
+dynamics become unstable. When the feedback is tuned to exactly b alance the
+decay, then neural activity neither increases nor decreases but persists without
+change. According to a long-standing hypothesis, this is the mecha nism that so-
+called neural integrators use to maintain persistent neural activit y. A transient
+stimulus of a neural integrator can then cause a persistent chang e in neural
+activity. This mechanism forms the basis for short-term analogue m emory and
+plays a central role in the oculomotor control system.
+Both examples illustrate the remarkable and interesting input-to-s tate prop-
+erties of a dynamical system poised at a bifurcation. It is clear, how ever, that
+operatingin the proximityofabifurcationpoint requiresaﬁne-tunin g ofparam-
+eters. And thus the question arises as to how a (biological) system c an be tuned
+with high precisionto its critical bifurcation point. In both examplesit has been
+suggested that feedback regulation of the bifurcation paramete r may provide a
+robust mechanism to ensure the required ﬁne-tuning of paramete rs [4, 6, 3, 16].
+In the literature on hearing this has given rise to the terminology of “ self-tuned
+Hopf bifurcation”. Quite remarkably both studies have been pursu ed indepen-
+dently of each other in spite of their strong similarities which are obvio us from
+a control engineering perspective.
+The present paper aims to initiate a mathematical study of this feed back
+regulation problem. The problem may be formulated as follows. Find an adap-
+tation law which steers the bifurcation parameter µto its critical value µ0
+without prior knowledge of this critical value µ0. Our main motivation for
+studying this problem stems from the fact that the precise biophys ical nature
+of the feedback mechanisms involved in the above biological applicatio ns is still
+unknown. A theoretical study of this problem may guide the search for pos-
+sible biophysical mechanisms. Even when the precise biophysical ada ptation
+mechanisms will have been discovered, it is to be expected that a pro found un-
+2
+derstanding of the mechanisms involved can only be achieved when ins ight has
+been gained in the fundamental trade-oﬀs and limitations that may b e inherent
+to this problem. This is very similar in spirit to the internal model princip le
+which has turned out to be central to the understanding of adapt ation in bacte-
+rial chemotaxis [17], and it may be seen as an illustration of the importa nt role
+that control engineering may play in the emerging ﬁeld of systems bio logy.
+A second motivation for the present study is of a more fundamenta l nature.
+In view of the quite remarkable and interesting input-to-state pro perties that
+arise when operating in the proximity of a bifurcation point, the prob lem under
+considerationmayturnouttobeofindependentinterest. Despite itsmathemat-
+ical appeal, it has not attracted attention before in the control c ommunity. The
+present paper brings together severalwell-established techniqu es from nonlinear
+and adaptive control to derive some ﬁrst results for this problem.
+We end this introduction with some references to related work. The present
+research bears some similarity with the problem of experimental inst ability de-
+tection [2], where an operating parameter is adapted online in order t o eﬃ-
+ciently locate bifurcations through experiments. A diﬀerent proble m which is
+related to the present study concerns the detection and predict ion of instabili-
+ties via closed-loop monitoring techniques [9, 10]. The possible implicatio ns of
+the present work for the problems studied in these papers remains a topic for
+further research.
+2 Self-tuning of a ﬁrst-order system
+The one-dimensional system
+˙x= (µ−µ0)x+u(t) (2)
+captures some of the essential features of the neural integrat or. In this interpre-
+tationµ0represents the natural decay rate of neural activity and µcorresponds
+to the synaptic feedback gain. We view µas an adjustable parameter and µ0as
+an unknown constant. Clearly this system exhibits a bifurcation. If µ=µ0then
+equation (2) behaves as a perfect integrator, if µ < µ 0(respectively µ > µ 0)
+then equation (2) is referred to as a leaky(respectively unstable) integrator. We
+ask the question as to how proximity to the bifurcation point may be e nsured.
+We study this question from an engineering perspective. In a ﬁrst a pproxi-
+mation we ignore the presence of the input and ask the following simple r ques-
+tion. Find an adaptation law for the parameter µwhich steers µto its bifurca-
+tion value µ0for the system
+˙x= (µ−µ0)x. (3)
+This adaptation law may depend on xandµ, but should be independent of µ0,
+as this value is not known (precisely). Let us ﬁrst discuss the feasib ility of this
+problem. It is easy to see that if x= 0 at some time instant then x= 0 for
+all times and in this case it is clearly impossible to steer µtoµ0without prior
+3
+knowledge of µ0. We therefore restrict attention to the set of strictly positive
+valuesfor x, whichisinvariantunderthedynamics(3). Consideringonlystrictly
+positive values for xis physically relevant, as this variable represents a level of
+neural activity (rate of action potential ﬁring).
+The following theorem provides suﬃcient conditions for the adaptat ion law
+˙µ=f(x)−g(µ) (4)
+to steerµto its bifurcation value µ0for the system (3).
+Theorem 1. Letµ0∈Rand consider continuously diﬀerentiable functions f:
+R>0→Randg:R→R. Assume that fis strictly decreasing, gis strictly
+increasing, and g(µ0)is in the image of f. Then the nonlinear system (3)–
+(4)withx∈R>0andµ∈Rhas a unique equilibrium point, which is globally
+asymptotically stable (and locally exponentially stable i fdf/dxtakes only strictly
+negative values and dg/dµonly strictly positive values). At equilibrium µequals
+µ0.
+The proof relies on a coordinate transformation which converts (3 )–(4) into
+a nonlinear mass-spring-damper system. Global asymptotic stabilit y follows
+readily from LaSalle’s theorem. Local exponential stability is shown b y means
+of the linearization principle.
+Proof.We introducenew coordinates q= ln(x)−ln(f−1(g(µ0))) andp=µ−µ0.
+This transformation from ( x,µ) to (q,p) is a global C∞-diﬀeomorphism from
+R>0×RtoR2. Expressed in these new coordinates (3)–(4) becomes
+˙q=p, (5)
+˙p=f(exp(q)f−1(g(µ0)))−g(p+µ0). (6)
+The system of equations (5)–(6) has a unique equilibrium point at the origin.
+This equilibrium corresponds to an equilibrium in original coordinates wh ere
+µ=µ0.
+First we prove that the null-solution of (5)–(6) is globally asymptotic ally
+stable. We rewrite (5)–(6) as
+˙q=p, (7)
+˙p=−˜f(q)−˜g(p), (8)
+with˜f(q) =−f(exp(q)f−1(g(µ0)))+g(µ0) and ˜g(p) =g(p+µ0)−g(µ0). Clearly
+˜fand ˜gare both strictly increasing, continuously diﬀerentiable functions f rom
+RtoRwhich are zero at zero. The candidate Lyapunov function
+V:R2→R: (q,p)/mapsto→/integraldisplayq
+0˜f(ξ)dξ+p2
+2(9)
+4
+is twice continuously diﬀerentiable, positive deﬁnite and radially unbou nded.
+Its time derivative along the solutions of (7)–(8) satisﬁes
+˙V(q,p) =−p˜g(p)/braceleftBigg
+<0 ifp/\e}atio\slash= 0,
+= 0 ifp= 0.(10)
+Since the null-solution is the only solution of (7)–(8) along which pvanishes
+identically, global asymptotic stability of the origin follows from LaSalle ’s the-
+orem [8, Corollary 3.2].
+Next we prove that the equilibrium of (3)–(4) is locally exponentially st able
+if df/dxtakes only strictly negative values and d g/dµonly strictly positive
+values. Since the transformation from ( x,µ) to (q,p) is aC∞-diﬀeomorphism it
+suﬃces to prove that the null-solution of (5)–(6) is locally exponent ially stable.
+This followsreadilyfromthe linearizationprinciple. The linearizationof ( 5)–(6)
+around the origin is given by
+˙q=p, (11)
+˙p=df
+dx(f−1(g(µ0)))f−1(g(µ0))q−dg
+dµ(µ0)p. (12)
+If df/dxtakes only strictly negative values and d g/dµonly strictly positive
+values then the linearization (11)–(12) is exponentially stable, as re quired.
+Discussion of Theorem 1
+1. A mathematically appealing adaptation law which satisﬁes the assum p-
+tions of Theorem 1 for all possible values of µ0is given by
+˙µ=−aln(x)−bµ (13)
+witha,b >0. This adaptation law ensures convergence to the bifurcation
+point for any possible value of µ0. It has the interesting property that the
+coordinate transformation introduced in the proof of Theorem 1 c onverts
+(3), (13) into the linearsystem
+˙q=p, (14)
+˙p=−aq−bp. (15)
+From a biological point of view however this adaptation law is probably
+not very relevant, among others because the right hand side of (1 3) is not
+bounded. A bounded adaptation law which could be more relevant for
+biological applications is for example
+˙µ= 1/(1+x2)−1/(1+exp( −µ)). (16)
+This bounded adaptation law also ensures convergence to the bifur cation
+point for any possible value of µ0.
+5
+2. There is a subtle relationship between self-tuning of bifurcations and ideas
+from robust control theory. This relation is made explicit by equatio n (5),
+which represents an integrator and corresponds to integral act ion stud-
+ied in robust control theory. Although perhaps surprising at ﬁrst sight,
+this relation may be understood by regarding the constant µ0as an un-
+known perturbation acting on the system. It is well-known from rob ust
+control theory that (under appropriate conditions) rejecting o r tracking
+an unknown, constant disturbance requires integral action. (Th is is a spe-
+cial case of the internal model principle—see [17, 15] for a discussio n of
+the internal model principle from a systems biology perspective). T he
+present manifestation of integral action, however, diﬀers from t raditional
+robust control situations because the integral action is not gene rated by
+the adaptation law but is inherent to the dynamics of system (3) itse lf.
+3. If an additional perturbation term εp(x,µ,t) is considered
+˙x= (µ−µ0)x+εp(x,µ,t), (17)
+we may conclude that the adaptation law (4) steers µapproximately to
+µ0under the conditions of Theorem 1 provided the perturbation is sma ll
+enough.
+Theorem 2. Letµ0∈Rand consider continuously diﬀerentiable func-
+tionsf:R>0→Randg:R→R. Assume that fis strictly decreas-
+ing,gis strictly increasing, and g(µ0)is in the image of f. Consider a
+strictly positive parameter εand a continuous function p:R>0×R2→
+R: (x,µ,t)→p(x,µ,t)and assume that pis bounded in tuniformly with
+respect to (x,µ)belonging to compact subsets of R>0×R. Then the unique
+equilibrium point for the original system (3)–(4)is uniformly semiglobally
+practically asymptotically stable for the perturbed syste m(17)–(4).
+(We refer to the Appendix for a deﬁnition of uniform semiglobal prac tical
+asymptotic stability.) In particular, this theorem guarantees that along
+all trajectories of (17)–(4) originating in an arbitrarily large compa ct sub-
+set ofR>0×R,µwill eventually converge to an arbitrarily small open
+neighborhood of µ0provided εis small enough. This result is a manifesta-
+tion of the well-known robustness of asymptotic stability with respe ct to
+small perturbations. It provides some justiﬁcation for ignoring th e exter-
+nal stimulus in equation(2) and studying the simplerequation (3) inst ead,
+at least in a ﬁrst approximation.
+3 A second-order system
+In a series of articles [4, 5, 6, 7] it is argued that various nonlinear ph enomena
+in the auditory system (such as ultrahigh sensitivity to weak signals) may be
+understood in terms of the generic properties of a forced dynamic al system
+6
+exhibiting a Hopf bifurcation. In [6] this is illustrated by means of a sta ndard
+model for nonlinear oscillations which (with the notation of the prese nt paper)
+takes the form
+¨x+(µ0−µ)˙x+λ˙x3+ω2x=u(t). (18)
+As before µis an adjustable parameter and µ0is an unknown constant. In the
+absence of an external input u, equation (18) describes damped oscillations if
+µ < µ 0. Atµ=µ0the system undergoes a Hopf bifurcation and for µ > µ 0
+spontaneous oscillations are being generated. Assuming that it is po ssible to
+tuneµ=µ0suchamodel capturesthe biophysicalnatureofhaircelloscillation s
+within the cochleawhere the hair cells are thought of as active, almost self-
+oscillating systems rather than passive oscillators. In [4, 5, 6, 7] it is shown how
+such a dynamical system operating at a Hopf bifurcation indeed may account
+for several of the observed nonlinear phenomena in hearing. Again the question
+arises as to how proximity to the bifurcation point may be ensured. I n [4, 6] it
+is suggested that a feedback mechanism is responsible for this self- tuning and
+numerical simulations are provided to support this claim.
+Here we want to contribute to a mathematical analysis of self-tunin g of an
+oscillator. In a ﬁrst approximation we ignore the cubic damping term a nd the
+external input and we study the following question. Find an adaptat ion law
+for the parameter µwhich does not depend on µ0and which steers µto its
+bifurcation value µ0for the system
+¨x+(µ0−µ)˙x+ω2x= 0. (19)
+As before let us ﬁrst discuss the feasibility of this problem. It is easy to see
+that ifx= ˙x= 0 at some time instant then x= ˙x= 0 for all times and in this
+case it is clearly impossible to steer µtoµ0without prior knowledge of µ0. We
+therefore restrict attention to the set where xand ˙xare not both zero—this set
+is invariant under the dynamics (19).
+The following theorem asserts that the adaptation law
+˙µ=−aln(/radicalbig
+x2+(˙x/ω)2)−bµ (20)
+steersµto its bifurcation value µ0for the system (19) if 0 < a≤b2andb >0.
+Theorem 3. Letµ0∈Randa,b,ω∈R>0. Assume that a≤b2. The nonlinear
+system(19)–(20)with(x,˙x)∈R2\ {(0,0)}andµ∈Rhas a unique periodic
+orbit1which is globally asymptotically stable and locally expone ntially stable. On
+this periodic orbit µ=µ0.
+The proof of global asymptotic stability is based on passivity techniq ues.
+We interpret (19)–(20) (in a diﬀerent coordinate system) as a fee dback inter-
+connection of a linear system with a dynamic feedback which satisﬁes a sector
+condition. Via the Kalman-Yakubovich-Popov lemma we obtain a prope r, non-
+increasing Lyapunov function. Global asymptotic stability of the pe riodic orbit
+then follows from LaSalle’s invariance principle.
+1A periodic orbit is a subset of the state-space which is the im age of a periodic solution.
+7
+Proof.First we introduce new coordinates randφaccording to x=rcos(φ)
+and ˙x=−rωsin(φ). The transformation from ( x,˙x) to (r,φ) is a global
+C∞-diﬀeomorphism from R2\ {(0,0)}toR>0×S1. Expressed in the coor-
+dinates ( r,φ,µ), equations (19)–(20) become
+˙r= (µ−µ0)rsin2(φ), (21)
+˙φ=ω+(µ−µ0)sin(φ)cos(φ), (22)
+˙µ=−aln(r)−bµ. (23)
+Next we introduce new coordinates q= ln(r) +bµ0/aandp=µ−µ0. The
+transformationfrom ( r,µ) to (q,p) is a global C∞-diﬀeomorphism from R>0×R
+toR2. Expressed in the coordinates ( q,φ,p), equations (21)–(23) become
+˙q=psin2(φ), (24)
+˙φ=ω+psin(φ)cos(φ), (25)
+˙p=−aq−bp. (26)
+Clearly the system of equations (24)–(26) has a periodic orbit {(q,φ,p)∈R×
+S1×R:q=p= 0}which we denote by A. This periodic orbit corresponds
+to a periodic orbit in original coordinates where µ=µ0. It is clear from the
+following paragraph that this periodic orbit is unique.
+First we prove that the periodic orbit Aof (24)–(26) is globally asymptot-
+ically stable. We interpret (24)–(26) as a feedback interconnectio n of a linear
+control system
+˙q=−u, (27)
+˙p=−aq−bp, (28)
+with a negative, dynamic feedback u=−sin2(φ)pwhereφsatisﬁes (25). The
+transfer function H(s) of (27)–(28) from utopis given by
+H(s) =a
+s(s+b). (29)
+Sinceaandbare strictly positive and a≤b2the transfer function H(s)+1 is
+positive real. Hence by (a modiﬁed version of) the Kalman-Yakubovic h-Popov
+lemma (proven in [1] and described in [8, Exercise 10.2]) there exists a p ositive
+deﬁnite, quadratic Lyapunov function ( q,p)/mapsto→V(q,p) whose time derivative
+along the solutions of the control system (27)–(28) satisﬁes
+˙V(q,p,u)≤up+u2. (30)
+In other words the control system (27)–(28) with input uand output pis input
+feedforwardpassivewith a shortageofpassivity [11]. Since the fee dback satisﬁes
+up+u2= (sin4(φ)−sin2(φ))p2=−(sin(φ)cos(φ)p)2, (31)
+8
+it follows that the time-derivative of Valong the solutions of (24)–(26) satisﬁes
+˙V(q,φ,p)/braceleftBigg
+<0 if sin( φ)cos(φ)p/\e}atio\slash= 0,
+= 0 if sin( φ)cos(φ)p= 0.(32)
+Since (q,φ,p)/mapsto→V(q,p) is positive deﬁnite with respect to the periodic orbit A
+it follows that Ais stable. In addition, since ( q,φ,p)/mapsto→V(q,p) is radially
+unbounded with respect to Aand since Ais compact it follows that every
+solution of (24)–(26) is bounded. Finally, since Ais the largest invariant set of
+(24)–(26) contained in {(q,φ,p)∈R×S1×R:˙V(q,φ,p) = 0}it follows from
+LaSalle’s theorem that every solution of (24)–(26) converges to A.
+It remains to be proven that the periodic orbit of (19)–(20) is locally ex-
+ponentially stable. This follows directly from Theorem 4 which is stated and
+proven below.
+Although mathematically appealing, the adaptation law (20) is probab lynot
+very relevant from a biological point of view, among others because the right
+hand side is not bounded. It would therefore be interesting to have a result
+available that applies to more general adaptation laws
+˙µ=f(/radicalbig
+x2+(˙x/ω)2)−g(µ). (33)
+This is the subject of Theorem 4. Unlike the previous results, Theor em 4 is a
+local stability result.
+Theorem 4. Letµ0∈Rand consider continuously diﬀerentiable functions f:
+R>0→Randg:R→R. Assume that g(µ0)is in the image of f. Consider
+r∗∈f−1(g(µ0))and assume that 0<−(df/dr)(r∗)r∗≤((dg/dµ)(µ0))2and
+(dg/dµ)(µ0)>0. Then the system of equations (19)and(33)with(x,˙x)∈
+R2\{(0,0)}andµ∈Rhas a periodic orbit which is locally exponentially stable
+and where µ=µ0.
+Proof.We proceed along the lines of the proof of Theorem 3. First we introd uce
+new coordinates randφaccording to x=rcos(φ) and ˙x=−rωsin(φ). The
+transformation from ( x,˙x) to (r,φ) is a global C∞-diﬀeomorphism from R2\
+{(0,0)}toR>0×S1. Expressed in the coordinates ( r,φ,µ), equations (19) and
+(33) become
+˙r= (µ−µ0)rsin2(φ), (34)
+˙φ=ω+(µ−µ0)sin(φ)cos(φ), (35)
+˙µ=f(r)−g(µ). (36)
+Next we introduce new coordinates q= ln(r)−ln(r∗) andp=µ−µ0. The
+transformationfrom ( r,µ) to (q,p) is a global C∞-diﬀeomorphism from R>0×R
+toR2. Expressed in the coordinates ( q,φ,p), equations (34)–(36) become
+˙q=psin2(φ), (37)
+˙φ=ω+psin(φ)cos(φ), (38)
+˙p=f(exp(q)r∗)−g(p+µ0). (39)
+9
+Clearly the system of equations (37)–(39) has a periodic orbit {(q,φ,p)∈R×
+S1×R:q=p= 0}which we denote by A. This periodic orbit corresponds to
+a periodic orbit in original coordinates where µ=µ0.
+Since the transformation from ( x,˙x,µ) to (q,φ,p) is aC∞-diﬀeomorphism it
+suﬃces to prove that the periodic orbit Aof (37)–(39) is locally exponentially
+stable. We ﬁrst ignore the “higher order” terms in the right hand sid e of (38)
+and (39) and consider the simpler system
+˙q=psin2(φ), (40)
+˙φ=ω, (41)
+˙p=−aq−bp, (42)
+wherewehaveintroducedthenotation a=−(df/dr)(r∗)r∗andb= (dg/dµ)(µ0).
+By the assumptions of the theorem 0 < a≤b2andb >0. Repeating the ar-
+guments of the proof of Theorem 4 it is easy to see that the set Ais a globally
+asymptotically stable periodic orbit of (40)–(42). Because of the s pecial struc-
+ture of equation (41) we may interpret φas a time variable and the system of
+equations (40) and (42) as a periodically time-varying linear system. With this
+interpretation the periodic orbit Aof (40)–(42) corresponds to the null-solution
+of the linear system of equations (40) and (42). Standard conver se theorems
+for periodically time-varying linear systems (see for example [8, Theo rem 3.10])
+yield the existence of strictly positive real numbers c1,c2andc3and a continu-
+ously diﬀerentiable Lyapunov function ( q,φ,p)/mapsto→V(q,φ,p) which is quadratic
+in (q,p) and (together with its partial derivative ∂V/∂φ) bounded in φsuch
+that
+c1(q2+p2)≤V(q,φ,p)≤c2(q2+p2) (43)
+and such that the time derivative of Valong the solutions of (40)–(42) satisﬁes
+˙V(q,φ,p)≤ −c3(q2+p2). (44)
+With this Lyapunov function Vwe now prove that the periodic orbit Aof (37)–
+(39) is locally exponentially stable. Indeed, for qandpsuﬃciently close to zero
+the time derivative of Vevaluated along the solutions of (37)–(39) satisﬁes
+˙V(q,φ,p)≤ −c3
+2(q2+p2) (45)
+since the extra terms in the right hand side of (38) and (39) give rise to extra
+terms in the Lyapunov balance which are bounded in φand of order higher
+than two in ( q,p). This shows that the periodic orbit Aof (37)–(39) is locally
+exponentially stable.
+Discussion of Theorems 3 and 4
+1. The assumptions of Theorem 4 involve the unknown critical value µ0.
+Ifµ0is known to belong to some interval, it is of interest to have an
+10
+adaptation law which satisﬁes the assumptions of the theorem for a llµ0
+in this interval. For example, it is easily veriﬁed that the adaptation law
+˙µ= 1/(1+/parenleftBig/radicalbig
+x2+(˙x/ω)2/parenrightBiga
+)−bµ (46)
+with 0< a≤4b2andb >0 satisﬁes all assumptions of the theorem if
+0< µ0<1/b.
+2. The proposed adaptation laws (20) and (33) depend not only on xand
+µbut also on ˙ xandω. Their implementation requires that the state
+variable ˙ xis measured and the parameter ωis known. This may be a
+disadvantage.
+3. If an additional perturbation term εp(x,˙x,µ,t) is considered
+¨x+(µ0−µ)˙x+ω2x=εp(x,˙x,µ,t), (47)
+we may conclude that the adaptation law (20) or (33) steers µapproxi-
+mately to µ0under the conditions of Theorem 3 or Theorem 4 provided
+the perturbation is small enough.
+Theorem 5. Letµ0∈Rand consider continuously diﬀerentiable func-
+tionsf:R>0→Randg:R→R. Assume that g(µ0)is in the image
+off. Consider r∗∈f−1(g(µ0))and assume that 0<−(df/dr)(r∗)r∗≤
+((dg/dµ)(µ0))2and(dg/dµ)(µ0)>0. Consider a strictly positive param-
+eterεand a continuous function p: (R2\{0})×R2→R: (x,˙x,µ,t)→
+p(x,˙x,µ,t)and assume that pis bounded in tuniformly with respect
+to(x,˙x,µ)belonging to compact subsets of (R2\ {0})×R. Then there
+is a subset of (R2\{0})×Rwhereµ=µ0and which is uniformly practi-
+cally asymptotically stable for the perturbed system (47)and(33). Iff(·)
+andg(µ)take the particular form −aln(·)respectively bµ, then there is a
+subset of (R2\{0})×Rwhereµ=µ0and which is uniformly semiglobally
+practically asymptotically stable.
+(WerefertotheAppendixforadeﬁnitionofthenotionofuniform(s emiglobal)
+practical asymptotic stability.) This result is a manifestation of the w ell-
+known robustness of asymptotic (or exponential) stability with res pect to
+small perturbations. It provides some justiﬁcation for ignoring th e cu-
+bic nonlinearity and external stimulus in equation (18) and studying t he
+simpler equation (19) instead, at least in a ﬁrst approximation.
+References
+[1] B. D. O. Anderson. A system theory criterion for positive real m atrices.
+SIAM J. Control , 5(2):171–182, 1967.
+11
+[2] J. S. Anderson, S. Y. Shvartsman, G. Fl¨ atgen, I. G. Kevrekid is, R. Rico-
+Mart´ ınez,andK.Krischer. Adaptivemethodfortheexperimenta ldetection
+of instabilities. Phys. Rev. Lett. , 82(3):532–535, Jan. 1999.
+[3] D. B. Arnold and D. A. Robinson. A learning network model of the n eural
+integrator of the oculomotor system. Biol. Cybern. , 64:447–454, 1991.
+[4] S. Camelet, T. Duke, F. J¨ ulicher, and J. Prost. Auditory sensit ivity pro-
+vided by self-tuned critical oscillations of hair cells. Proc. Natl. Acad. Sci.
+USA, 97(7):3183–3188, 2000.
+[5] V. Egu´ ıluz, M. Ospeck, Y. Choe, A. Hudspeth, andM. Magnasco . Essential
+nonlinearities in hearing. Phys. Rev. Lett. , 84(22):5232–5235, 2000.
+[6] F. J¨ ulicher. Mechanical oscillations at the cellular scale. C. R. Acad. Sci.
+Paris S´ er. IV , pages 849–860, 2001.
+[7] F. J¨ ulicher, D. Andor, and T. Duke. Physical basis of two-tone interference
+in hearing. Proc. Natl. Acad. Sci. USA , 98(16):9080–9085, 2001.
+[8] H. Khalil. Nonlinear Systems . Prentice-Hall, 2nd edition, 1996.
+[9] T. Kim and E. H. Abed. Closed-loop monitoring systems for detect ing
+impending instability. IEEE Trans. Circuits Systems I Fund. Theory Appl. ,
+47(10):1479–1493, Oct. 2000.
+[10] L. Omberg, K. Dolan, A. Neiman, and F. Moss. Detecting the ons et of
+bifurcationsandtheirprecursorsfromnoisydata. Phys. Rev.E ,61(5):4848–
+4853, May 2000.
+[11] R. Sepulchre, M. Jankovi´ c, and P. V. Kokotovi´ c. Constructive Nonlin-
+ear Control . Communications and Control Engineering. Springer, London,
+1997.
+[12] H. S. Seung. How the brain keeps the eyes still. Proc. Natl. Acad. Sci.
+USA, 93:13339–13344, Nov. 1996.
+[13] H. S. Seung, D. D. Lee, B. Y. Reis, and D. W. Tank. The autapse : A
+simple illustration of short-term analog memory storage by tuned sy naptic
+feedback. J. Comput. Neurosci. , 9:171–185, 2000.
+[14] H. S. Seung, D. D. Lee, B. Y. Reis, and D. W. Tank. Stability of th e
+memory of eye position in a recurrent network of conductance-ba sed model
+neurons. Neuron, 26:259–271, Apr. 2000.
+[15] E. Sontag. Adaptation implies internal model. arXiv.org math.OC/0203228 .
+[16] X. Xie and H. S. Seung. Spike-based learning rules and stabilizatio n of
+persistentneuralactivity. Adv. Neural Inf. Process. Syst. , 12:199–205,2000.
+[17] T.-M. Yi, Y. Huang, M. I. Simon, and J. Doyle. Robust perfect ad aptation
+in bacterialchemotaxisthroughintegralfeedbackcontrol. Proc. Natl. Acad.
+Sci. USA , 97(9):4649–4653, 2000.
+12
+A Practical and semiglobal stability deﬁnitions
+Let Ω be an open subset of Rn(n∈N) and consider a family of continuous
+functions fε:R×Ω→Rn, labeled by a parameter ε >0. We are interested in
+the stability properties of the family of diﬀerential equations
+˙x=fε(t,x) (48)
+forsmall valuesof ε. LetAbe acompactsubset ofΩ, which need not necessarily
+be forward invariant for (48).
+Deﬁnition 1. For the family of diﬀerential equations (48), the set Ais:
+1. Uniformly practically stable if for every open neighborh oodU2ofAthere
+isε∗>0and an open neighborhood U1ofAsuch that for all ε∈(0, ε∗]
+every solution ξof(48)satisﬁes: if ξ(t0)∈U1for some t0in the domain
+ofξ, thenξ(t)∈U2for allt≥t0in the domain of ξ.
+2. Uniformly practically asymptotically stable if it is uni formly practically
+stable and, in addition, there is an open neighborhood U1ofAsuch that
+for every open neighborhood U2ofAthere is T≥0andε∗>0such
+that for all ε∈(0, ε∗]every solution ξof(48)satisﬁes: if ξ(t0)∈U1for
+somet0in the domain of ξ, thenξ(t)∈U2for allt≥t0+Tin the domain
+ofξ.
+3. Uniformly semiglobally bounded if for every compact subs etK1ofΩthere
+isε∗>0and a compact subset K2ofΩsuch that for all ε∈(0, ε∗]every
+solution ξof(48)satisﬁes: if ξ(t0)∈K1for some t0in the domain of ξ,
+thenξ(t)∈K2for allt≥t0in the domain of ξ.
+4. Uniformly semiglobally practically asymptotically sta ble if it is uniformly
+practically stable and uniformly semiglobally bounded and , in addition, for
+every compact subset KofΩand every open neighborhood UofAthere
+isT≥0andε∗>0such that for all ε∈(0, ε∗]every solution ξof(48)
+satisﬁes: if ξ(t0)∈Kfor some t0in the domain of ξ, thenξ(t)∈Ufor
+allt≥t0+Tin the domain of ξ.
+13

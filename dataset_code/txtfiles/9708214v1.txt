@@ -1,0 +1,664 @@
+arXiv:cond-mat/9708214v1  [cond-mat.dis-nn]  28 Aug 1997The Modular Structure of Kauﬀman Networks
+U. Bastolla1,2and G. Parisi1
+October 2, 2018
+1Dipartimento di Fisica, Universit` a “La Sapienza”, P.le Aldo Moro 2, I- 00185 Roma Italy
+2HLRZ, Forschungszentrum J¨ ulich, D-52425 J¨ ulich Germany
+Keywords: Disordered Systems, Genetic Regulatory Networks,
+Random Boolean Networks, Cellular Automata
+Abstract
+This is the second paper of a series of two about the structura l properties that
+inﬂuence the asymptotic dynamics of Random Boolean Network s. Here we study the
+functionally independent clusters in which the relevant el ements, introduced and stud-
+ied in our ﬁrstpaper [3], are subdivided. We show that the pha se transition in Random
+Boolean Networks can also be described as a percolation tran sition. The statistical
+properties of the clusters of relevant elements (that we cal lmodules) give an insight
+on the scaling behavior of the attractors of the critical net works that, according to
+Kauﬀman, have a biological analogy as a model of genetic regul atory systems.
+1 Introduction
+Kauﬀman networks are networks of randomly interconnected bina ry elements under recip-
+rocal regulation. Every node is controlled by Kelements extracted at random in the set of
+the nodes. The boolean control rules, which associate a binary valu e to every conﬁguration
+of the controlling elements, are also extracted at random at the be ginning and kept ﬁxed
+during the evolution of the system.
+The relevant parameter of the distribution of the control rules is ρ, the probability that
+two diﬀerent conﬁgurations of the controlling elements produce a d iﬀerent output. For every
+value of the bare connectivity Kthere is a critical value of ρ,ρc= 1/K, which separates a
+frozen phase (small ρ) from a chaotic one (large ρ). According to Kauﬀman [1], this model
+reproduces on its critical line some features of the genetic regulat ory systems acting in the
+cells.
+In the preceding paper [3] we deﬁned the relevant elements of Kauﬀ man networks, which
+are the only elements that inﬂuence the asymptotic dynamics, and w e measured their dis-
+tribution. We refer to that paper for the description of the prope rties of the model, of
+the distribution of the relevant elements and of the relations betwe en the number of rele-
+vant elements and the properties of the limit cycles of the dynamics. In the present paper
+1
+we are going to describe how such elements are spontaneously orga nized into dynamically
+disconnected clusters that we will call modules.
+It is known [7] that some of the elements in the network evolve to a co nstant state
+independent of the initial conﬁguration and don’t take part to the a symptotic dynamics.
+The relevant elements are the elements whose state is not constan t and that control at least
+onerelevant element. Thus every relevant element must becontro lledby atleast onerelevant
+element (eventually itself) and must control at least one of them (e ventually itself). It is
+then clear that loops of relevant elements must exist.
+The set of relevant elements can thus be partitioned into diﬀerent c lusters, that we call
+modules, deﬁned by the following equivalence relation: two relevant e lements belong to the
+same module if one of them controls the other one. It is clear from th is deﬁnition that
+elements in diﬀerent modules cannot communicate among each other after a transient time:
+thus the dynamics induce spontaneously upon the network a cluste rization of the relevant
+elements. The number of the limit cycles and their lengths depend only on this modular
+organization.
+As expected, the statistical properties of the modules are very d iﬀerent in the two dy-
+namical regimes of the model.
+•In the frozen phase the number of relevant elements remains ﬁnite in the inﬁnite size
+limit [4, 3]. In this case, on the ground of the argument presented in [3 ], we expect that
+the modules are, in the inﬁnite size limit, loops of eﬀective connectivity exactly equal
+to 1 (i.e., every relevant element is under the control of only one relevant e lement),
+and that the distribution of modules and, consequently, the numbe r and the length of
+the attractors depend in this phase only on the parameter c=Kρ <1.
+•In the chaotic phase the number of relevant elements is proportion al toN, and the
+number of irrelevant elements tends to zero very fast as the bare connectivity increases
+(already for K= 3 andρ= 1/2 the fraction of irrelevant elements is about 0 .01 for an
+inﬁnite system). The set of the relevant elements is fully connected in the inﬁnite size
+limit, where the number of modules tends to 1 also for K= 3 andρ= 1/2, as we shall
+see below. Nevertheless, in chaotic systems with low connectivity so me signatures of
+a modular organization are present as a ﬁnite size eﬀect.
+•At the border between the two phases, the critical line shows an int eresting behav-
+ior. Here the number of relevant elements scales as√
+N,i.e.the number of relevant
+elements increases with system size but they become more and more sparse. In this
+situation we expect that also the number of modules grows with syst em size, and that
+is actually what we observe in our simulations. The increase of the ave rage number
+of modules is slow, apparently logarithmic in N, but it is responsible of important
+eﬀects, such as the fact that the average weights of attraction basins tends to zero in
+the inﬁnite size limit, or that the distributions of the length and the nu mber of the
+limit cycles become broader and broader as Nincreases.
+Thus the phase transition in Kauﬀman model is reminiscent of a perco lation transition.
+Below the threshold, the set of relevant elements is divided into a ﬁnit e number of ﬁnite
+clusters. Above, it is completely connected. In critical systems, a n inﬁnite number of
+2
+clusters is present. In this case it is an open problem whether the pr obability that all the
+relevant elements are connected tends to zero or to a ﬁnite limit in th e inﬁnite size limit.
+Derrida and Stauﬀer were the ﬁrst ones to notice the analogy with p ercolation theory
+for a lattice version of Kauﬀman model [5]. The study of the modular o rganization shows
+that the analogy with percolation theory remains pertinent also in th e model with random
+neighbors.
+We start presenting our numerical results from the statistical an alysis of the divisors of
+cycle lengths (section 2), which allows the simplest numerical investig ation of the modular
+organization. Section 3 isabout thedirect measure ofthe distribut ion ofthe number andsize
+of modules, both in the chaotic phase and on the critical line. In sect ion 4 we show how the
+number ofmodules andtheeﬀective connectivity dependonthenum ber ofrelevant elements.
+A simple argument predicts the qualitative behavior of these quantit ies in agreement with
+numerical results. Section 5 concerns the relation between the nu mber of modules and the
+length and number of the limit cycles, and section 6 deals with the distr ibution of attraction
+basins weights, interpreting results that we presented in [8]. An ove rall discussion concludes
+the paper.
+2 Divisors of cycle length
+2.1 Analytic considerations in the frozen phase
+The distributions of the length of the cycles in critical networks ( K= 2,ρ= 1/2) and
+supercritical networks close to the phase transition ( K= 3,ρ= 1/2) show an oscillatory
+behavior: the cycles of even length are more frequent than the od d ones (in other words, the
+closing probability is larger when a cycle of even length is reached) [6]. F igure 1 shows the
+period distribution for a network on the critical line, with K= 4 and ρ= 1/4.
+This is what should be expected if the relevant elements are subdivide d into independent
+modules. In this case an attractor is the composition of the local cy cles of the diﬀerent
+modules, and its length is the least common multiple of the lengths of th e local cycles, so
+that if at least one of the modules has a local cycle of even length also the global cycle
+will be even. Studying in more detail the statistical properties of th e numbers that are
+integer divisors of cycle length it is thus possible to test this hypothe sis and to obtain
+qualitative informations about the distribution of the modules, while t he direct inspection
+of the modules is numerically more cumbersome (with this method it is en ough to simulate
+one or two trajectories in every network, while for the direct stud y of the relevant elements
+and of the modules several hundreds of trajectories must be simu lated).
+We simulated two large systems in the chaotic phase and on the critica l line, generating
+thousands of sample networks and two trajectories on each of th em. For any small integer l
+up tolmaxwe measured the probability to ﬁnd an attractor with length multiple o fl,Pd(l),
+and, only for those networks where the two trajectories had rea ched diﬀerent attractors, we
+measured the conditional probability that the length of the second cycle is multiple of lgiven
+that the length of the ﬁrst one is multiple of l(we call this quantity Pd(l|l)). We measured
+such quantities for diﬀerent sets of networks, deﬁned by the con dition that both cycles are
+shorter than a threshold length L0, and studied how the results vary as a function of L0.
+3
+P
+t1 5 10 50 10010ù-410ù-310ù-210ù-1
+Figure 1: Probability to ﬁnd a cycle with period tin a random network with K= 2,ρ= 1/2
+andN= 120. The dotted line is the probability that the transient time i s equal to t.
+4
+As discussed in [3], there is a positive correlation between the length o f the cycles and the
+number of relevant elements in a network, so that we expect that t he condition imposed on
+the length of the cycles selects networks with less and less relevant elements as L0decreases.
+2.2 Critical system
+Wediscuss separately theresults obtainedfor thecritical andfor the chaotic system, starting
+from the former one, which is a system with 2160 elements and param etersK= 4 and
+ρ=ρc= 1/4.
+Inthis case themodular organizationisvery evident. In thecase of a RandomMap, Pd(l)
+is proportional to 1 /l. In the present case, instead, we have to distinguish between valu es of
+lwhich are prime numbers and values which are not prime. For lprime the probability Pd(l)
+has initially a value larger than 1 /l(for instance, Pd(2) = 0.87 when cycles shorter than 512
+are selected), but then decreases faster than l−1. The decrease become faster when shorter
+cycles are selected. This fact is consistent with the hypothesis of t he modular organization,
+and, within this interpretation, shows that the probability to ﬁnd a m odule with local cycle
+larger than ldecays faster than 1 /l, and even faster if the number of relevant elements is
+small.
+Iflis not prime, on the other hand, Pd(l) is larger than for the prime numbers nearby,
+and it is usually close to the product of the probability of its prime fact ors (see ﬁgure 2).
+This is a strong hint to interpret these prime factors as the length o f the local cycles of
+individual modules
+The eﬀect of changing the threshold on cycle length, L0, is shown in ﬁgure 3. For a ﬁxed
+l, the probability to ﬁnd a cycle whose length is a multiple of lincreases, reach a maximum
+value and then decreases. Since the abscissa can be related to an in creasing number of
+relevant elements, a possible interpretation of this behavior is that the number of modules
+ﬁrst increases with the number of relevant elements, then reache s a maximum value and
+ultimately decreases. We will see in section 4 that this is just what hap pens.
+At last, the condition that we already found in the same network a cy cle multiple of
+llargely improves the probability to ﬁnd another cycle multiple of l, consistently with the
+modular interpretation. This probability decreases when we select n etworks characterized by
+longer attractors (this can be interpreted as another indication o f the fact that the number
+of modules may decrease as the number of relevant elements increa ses).
+2.3 Chaotic system
+The network that we examined is close to the critical phase: K= 3,ρ= 1/2,N= 100. This
+is a very large size concerning the duration of the simulation, since in t he chaotic phase the
+length of the cycles increases exponentially with system size, but it s till shows important
+ﬁnite size eﬀects. We think that the signs of the modular organizatio n that we observed
+can disappear in an inﬁnite system, since this signs decrease when we select networks with
+longer attractors, i.e.with more relevant elements, and in an inﬁnite system the fraction of
+relevant elements tends to 0 .99. A direct study of the modules for smaller systems shows in
+fact that the average number of modules tends to 1 in this limit (see n ext section).
+5
+lPd(l)
+2 3 4 5 6 7 8 9 10 20 300.010.050.100.501.00
+Figure 2: Probability to ﬁnd a cycle of length multiple of l, wherelis a prime number, in
+critical networks with K= 4,ρ= 1/4andN= 2160. The dashed line represents 1/l. The
+isolated point above that line shows the same probability fo rl= 8.
+6
+L0Pd(l|L0)
+Figure 3: Probability to ﬁnd a cycle of length multiple of 2 (*) and 3 ( ♦) restricted to the
+set of cycles shorter than L0, as a function of L0, in critical networks with K= 4,ρ= 1/4
+andN= 2160.
+7
+Also in this case, however, the probability to ﬁnd a global period which is multiple of l
+decreases faster than 1 /lwhenlis a prime number, but the diﬀerence from 1 /lis smaller
+than in the previous case (in networks with attractors shorter th an 50 steps, its value is 0 .70
+forl= 2 and 0 .29 forl= 3). Also this probability is larger when lmay be decomposed
+into prime factors. However this features tend to disappear when larger cycles are selected,
+andPd(l) approaches 1 /lwhen the threshold L0increases, thus indicating that the modular
+organization tends to disappear when the number of relevant eleme nts increases.
+Correlations between the divisors of diﬀerent cycles on the same ne twork seem to be
+present (the conditional probability Pd(l|l) is larger than Pd(l)), but they are of little signif-
+icance (the diﬀerence between the two probabilities is, at most, of t he order of two or three
+standard deviations) and our simulations can not even prove that s uch correlations exist.
+In any case the correlations, if any, are much smaller than in the crit ical system, and they
+appear to decrease when networks with longer attractors are se lected.
+3 Distribution of modules
+In this section we deal with a direct study of the number of modules. Before presenting the
+results that we obtained, however, we shall describe brieﬂy our alg orithm, also in order to
+give an operative deﬁnition of the modules.
+The ﬁrst step, as it is discussed in [3], consists in identifying the stable elements. To
+this aim we simulate 300 trajectories for each of the networks that we generate. The stable
+elements are those ones that reach the same stable state in all the diﬀerent runs. The set of
+the unstable elements is then reduced to the relevant elements alon e (the ones that control
+at least one relevant element), and in this process the irrelevant co nnections are eliminated
+(the connection between aandbis irrelevant if the response function does not depend on the
+state ofawhen all the stable values of the stable elements have been substitu ted in it, i.e.
+if the function reduced to the unstable arguments alone is a consta nt function of the state
+ofa). Now every relevant element receives a diﬀerent label, and the follo wing procedure is
+iterated: if either acontrolsborbcontrolsa, and their labels are diﬀerent, their labels are
+set equal to the smaller one, and all the labels equal to the one that is changed are set to
+the same value. We check that no label is changed more than once in a n iteration. When no
+label changes anymore the iterations are interrupted. At this poin t to every diﬀerent label
+corresponds a diﬀerent module, and we count their number and the ir size.
+3.1 Chaotic systems
+We start to present results relative to the chaotic phase, where t he existence of a modular
+organization appears only as a ﬁnite size eﬀect. We investigated num erically systems not
+far from the critical line, with K= 3,ρ= 1/2 andNcomprised between 20 and 75. For
+such systems, the probability to generate a network with more tha n one module tends to
+zero roughly as 1 /N.
+Comparing this result with the analysis of the divisors of cycle length ( section 2) we see
+that the modular organization is not the only explanation for the high frequency of even
+periods, which would be smaller if it were due only to the presence of diﬀ erent modules. It is
+8
+possible however that some other structures generalizing the not ion of module can give the
+same eﬀect and are present with larger probability. For example, we can deﬁne in-going and
+outgoing submodules as sets of relevant elements that do not, res pectively, receive from or
+send to the outside any relevant signals. The length of a local cycle is then multiple of the
+period of all the in-going submodules, and the situation described in t he previous section
+may occur because of the submodules. Another structure that c ould play a role is that of
+cycle-depending modules. Globally stable elements are deﬁned as the elements that reach
+the same ﬁxed state independently on the initial conﬁguration. The elements stable on a
+cycle are a subset of those, and are deﬁned as the elements whose value does not change
+along the cycle. Thus the network can be decomposed into cycle-de pending modules that
+do not communicate between each other when the system is on the a ttractor. Once again,
+the period of the attractor is the least common multiple of the period s of all cycles of the
+partial modules that compose it. Or it may be that the statistical pr operties of the divisors
+of cycle length do not depend on the presence of modules.
+However, it is clear that the modular organization tends to disappea r in the inﬁnite size
+limit.
+3.2 Critical systems
+The distributions of the number of modules in critical systems with K= 4 and ρ= 1/4
+have a maximum corresponding to a single module and then decrease r oughly exponentially,
+but with a rate that becomes slower and slower as system size increa ses (ﬁgure 4). The
+probability to ﬁnd a single module, or no module at all (this means that a ll the elements
+are stable) decreases with system size, while the probabilities to ﬁnd 2 or more modules
+increases. It is not clear whether the probability of networks with o nly one module tends to
+zero or to a ﬁnite limit. The average number of modules increases with system size. T, and
+the best ﬁt is logarithmic:
+∝angbracketleftNmod∝angbracketright ≈0.40+0.39logN. (1)
+We prefer the logarithmic ﬁt to a power law with a small exponent, also compatible with
+our data, for two reasons: ﬁrst, because the inclusion of the larg estNvalue modiﬁes the ﬁt
+parameters by 5 percent in the ﬁrst case and by 10 percent in the s econd one, and second
+because at the “critical point” K= 1,ρ= 1 the analogy between the modules and the cycles
+of a Random Map shows that the average number of modules grows lo garithmically with
+system size in this case [4]. This point is not a real critical point since it is not at the border
+between two phases (with K= 1 only the frozen phase is possible), but still the analogy
+with it can give useful indications.
+Mostofthemoduleshaveonlyoneelement, andthedistributionofth esizeofthemodules
+decreases monotonically. The probability to ﬁnd a module with 1, 2 or 3 elements depends
+very little on the system size N. On the other hand, this probability increases with Nfor
+modules of large size (ﬁgure 5), consistently with what we saw in [3]: th e number of relevant
+elements, which is the sum of the sizes of all the modules, scales as√
+Non the critical line.
+9
+0 2 4 6
+m10−410−310−210−1100Pm(m)
+N = 120
+N = 240
+N = 480
+N = 720
+N = 1280
+N = 1600
+Figure 4: Distribution of the number of modules in a random network at t he critical point
+K= 4andρ= 1/4.Nis ranging from 120 to 1600.
+10
+RP
+Figure 5: Distribution of the number of modules with Rrelevant elements, at the critical
+pointK= 4,ρ= 1/4;Nis respectively equal to 120 (squares), 240 (X) and 480 ( ♦).
+11
+4 Eﬀective connectivity
+In this section we examine how the number of modules depends on the number of relevant
+elements. A useful notion to understand this relation is the eﬀectiv e connectivity of the
+network. Also in this case the simulations were done with critical netw orks with K= 4 nd
+ρ= 1/4.
+We plot in ﬁg. 6 the average number of modules as a function of the nu mber of relevant
+elements in the network, R, for systems of diﬀerent sizes. This quantity shows a non mono-
+tonic behavior: the number of modules increases with Rat the beginning, then it reaches a
+maximum and starts to decrease towards the value 1.
+The plot of the average number of relevant elements as a function o f the number of
+modules (ﬁgure 7) contains a similar information. Contrarily to the na ive expectation, the
+largest number of relevant elements is attained in networks with only one module. It seems
+that then the curve reaches a minimum and starts to increase, but we have the networks
+with such a large number of modules are very rare and we can not mak e any signiﬁcant
+statement about this point.
+It is not diﬃcult to explain qualitatively this behavior. At this end we use the same
+argument that we used in [3] to estimate the scale of the number of r elevant elements. We
+suppose to add a new element to a network with Rrelevant element. If the new added
+element happens to be relevant, three situations are possible:
+1. The new relevant element is added to a previously existing module an d the number of
+modules does not change;
+2. The new relevant element constitutes a new module itself and the n umber of modules
+increases by one unit;
+3. The new relevant element connects two modules and the number o f modules decreases
+by one unit.
+WhenNis large all other possibilities can be neglected. The situation is trivial in the
+frozen phase, where an asymptotic (for large N) distribution of the relevant elements is
+reached and all the three cases above have negligible probability, an d in the chaotic phase,
+where only one module is present in systems of large size, but it is very interesting on
+the critical line, since the properties of the attractors vary acco rding to which of the three
+situations is the typical one.
+To understand how the number of modules depends on Ron the critical line, we have to
+compare case 2 and case 3. If, for a given value of R, the second case prevails, the number
+of modules increases with R. In the other case, it decreases. The probability of case 2
+should not depend on R, while the probability of case 3 is proportional to/summationtext
+ininj, where
+niis the size of module iand the sum runs over diﬀerent modules. When Rincreases, we
+should expect this quantity to increase so that case 3 prevails. The quantity that allows to
+understand quantitatively the situation is the average rescaled siz e of a module, deﬁned as
+S2=/angbracketleftBigg/summationdisplay
+in2
+i//parenleftBigg/summationdisplay
+ini/parenrightBigg2/angbracketrightBigg
+. (2)
+12
+10−210−1100101
+r=R/N1/20.01.02.03.0<m>N = 240
+N = 480
+N = 1280
+N = 1600
+Figure 6: Average number of modules in networks with Rrelevant nodes as a function of
+r=R/N1/2at the critical point K= 4,ρ= 1/4.
+13
+1 2 3 4 5
+m0.020.040.060.080.0100.0<R>N = 120
+N = 240
+N = 480
+N = 780
+N = 1280
+N = 1600
+Figure 7: Average number of relevant elements in networks with mmodules at the critical
+pointK= 4,ρ= 1/4.
+14
+If this quantity is large (close to 1) case 2 prevails also for large value s ofR=/summationtext
+ini,
+otherwise case 3 is the prevailing one.
+This argument is supported by the study of the average number of relevant connections1
+in the network, that we called the eﬀective connectivity of the network. In critical networks,
+this quantity is much smaller than the bare connectivity, K, and tends to 1 as a power law
+whenNincreases. We are interested to the behavior of Keffas a function of the number of
+relevant elements inthenetwork (inotherwords, Keff(R)isaconditioned average, restricted
+to the set of networks with exactly Rrelevant elements).
+For large Rthis function is asymptotic to a straight line with intercept close to 1 ( see
+ﬁgure 8)2. It holds:
+Keff(R)≈a(N)R+b(N), (3)
+where the parameter adecreases as a power law: a(N)≈1.7N−0.93, andb(N) tends to 1
+from above (every relevant element must have at least one relevan t connection, so that Keff
+can not be less than 1).
+This is very close to what we expect on the basis of the above argume nt [3]. We expect
+that the conditional probability that the new element has two releva nt connections, given
+that it is a relevant element, is proportional to R/N2. This is a quantity of order 1 /N, so this
+argument predicts a(N)∝1/N, to be compared with our best numerical ﬁt a(N)∝N−0.93.
+From this argument, we would expect also that Keff=b(N)+∝angbracketleftR∝angbracketrighta(N) is equal to 1 plus a
+term vanishing as 1 /√
+N. It turns out, however, that the correction decreases as N−0.3: this
+discrepancy is due to the term b(N), and we don’t have a good explanation for it.
+Thebehavioroftheeﬀective connectivity andthatofthenumber o fmodulesasafunction
+ofRshowtheexistence ofacrossover between twosituationsreminisc ent ofthetwo phasesas
+the number of relevant elements changes along the critical line. For smallRwe ﬁnd networks
+with small eﬀective connectivity: most of the modules are loops wher e each relevant element
+has only one connection, as it is typical in the frozen phase. To the o pposite side, where R
+is large, the networks are much more connected and there are few modules. This situation
+is similar to what happens in chaotic networks, but on the critical line o nly a ﬁnite number
+of elements have more than 1 connection in the inﬁnite size limit.
+We thus expect that the properties of the attractors change wid ely with the number of
+relevant elements, from a situation reminiscent of the frozen phas e to a situation reminiscent
+of the chaotic phase. We dedicate the rest of this paper to describ e how the properties of
+the attractors are inﬂuenced by the properties of the modules.
+5 Attractors and modules
+1In this context, we say that element ahas a connection with element bonly ifais controlled by b, and
+not ifbis controlled by a.
+2Of course, Keffshould saturate to a value smaller than Kwhen all elements are relevant, but such
+networks occur with negligible probability on the critical line.
+15
+0.0 5.0 10.0 15.0
+r0.01.02.03.04.0KeffN = 120
+N = 240
+N = 480
+N = 780
+N = 1280
+N = 1600
+Figure 8: Eﬀective connectivity in networks with Rrelevant nodes as a function of r=
+R/N1/2at the critical point K= 4,ρ= 1/4.
+16
+5.1 Simply connected modules
+We saw in the previous section that the eﬀective connectivity of crit ical and frozen systems
+tends to 1 in the inﬁnite size limit. This means that most of the elements receive and
+send only one relevant signal. Thus simply connected modules play an im portant role in
+critical networks, and are found with probability one in the frozen p hase. Such modules
+were analytically studied by Flyvbjerg and Kjaer in the case of K= 1 networks [4]. Here
+we recall for completeness their properties, adding some more info rmation.
+A simply connected module is a loop of relevant elements i= 1,···l, such that the node
+i−1 controls node ithrough the Boolean function fi(σ) (we assume periodic boundary
+conditions). There are only two kinds of non-constant Boolean fun ctions of one Boolean
+argument: tautology ( f(σ) =σ) and contradiction ( f(σ) =σ).
+The number and length of the cycles of such modules do not depend o n the details of
+the distribution of the Boolean functions, but only on the parity of t he number of negative
+functions [4]. All the 2lconﬁgurations of the module belong to some cycle of length equal
+to an integer divisor of l(if the number of negative functions is even) or of 2 l(if it is odd):
+in fact, after at most lsteps in the ﬁrst case, and 2 lsteps in the second one, every initial
+conﬁguration is reproduced. This is the ﬁrst important property: the length of the cycles
+increases only linearly with the size of the module.
+The number gl(m) of cycles of length min a module of size lis easily found. First, it
+is easy to see that gl(m) does not depend on l. In fact, let us assume an even number of
+negative functions. A module made out of lelements may be thought of as the repetition of
+kmodules made of melements, as mmust be an integer divisor of l=km. But for all the
+initial conﬁgurations whose periodicity is mthe dynamics is independent on the value of k;
+on the other hand, the conﬁgurations that are not periodic in spac e can not be reproduced
+aftermsteps. For an odd number of negative functions the argument is ex actly the same,
+but thekmodules of size mcan be equal only if kis odd. Thus gl(m) depends only on m
+and on the parity of the number of negative functions, that we sha ll denote by a superscript:
+(0) to indicate even, and (1) to indicate odd. It holds
+/summationdisplay
+{m|l/minteger }mg(0)(m) = 2l, (4)
+/summationdisplay
+{m|l/modd}2mg(0)(2m) = 2l, (5)
+whence it can be seen that g(0)(l) is asymptotic to 2l/landg(1)(2l) is asymptotic to 2(l−1)/l.
+In the large llimit, most of the cycles have the maximal length.
+5.2 Global attractors
+A global attractor is made out of the composition of the limit cycles of all the modules. Its
+period is thus the least common multiple of the periods of the cycles th at compose it. The
+number of attractors is larger than or equal to the product of th e number of cycles in the
+diﬀerent modules. In fact the number of attractors that can be f ormed with a set of limit
+cycles, each one taken from a diﬀerent module, is equal to the maxim um common divisor of
+the periods of the cycles.
+17
+Even in the absence of an analytic description of the statistical pro perties of the modules,
+the study of the modular structure allows us to better interpret t he numerical results about
+the distributions of the number andof the length of the attractor sin critical networks [8] and
+sheds light on the large size behavior of these quantities. In the follo wing we will concentrate
+our discussion on critical networks.
+First, we note that the two extremal situations of very high and ve ry low connectivity,
+which are reminiscent respectively of the chaotic and of the frozen phase, are expected to be
+very diﬀerent also from the point of view of the properties of the at tractors.
+In high connectivity critical networks the attractors are reminisc ent of the chaotic phase
+(we have to remember, nevertheless, that for critical networks Kefftends to 1 in the inﬁnite
+size limit, so that high connectivity means that there is a large but ﬁnit e number of elements
+with two connections. Such networks are characterized, as it is dis cussed above, by few
+modules of large size). We observed in fact that the average length of the cycles increases
+exponentially with the number of relevant elements for large R, as it happens in the chaotic
+phase. Thus in such networks the average length of the cycles sho uld increase as a stretched
+exponential of system size. This result is consistent with the fact t hat the distribution of
+the length of the cycles seems to have an eﬀective scale increasing a s a stretched exponential
+[8]. Similarly, we expect that the number of attractors in such netwo rks is not very large (in
+the chaotic phase the number of attractors increases linearly with the number of relevant
+elements), but we don’t have data to compare to this prediction.
+In low connectivity critical networks there are several modules wit h very few elements.
+Most of the modules are just loops with eﬀective connectivity exact ly equal to 1, so that
+the length of the local periods is proportional to the size of the loop and the number of cy-
+cles increases almost exponentially with it. Thus, in this situation we ex pect to ﬁnd a very
+large number of attractors, exponentially increasing with the numb er of relevant elements.
+This means that in such networks the number of cycles should increa se approximately as a
+stretched exponential of system size. The distribution of the num ber of attractors is consis-
+tent with this prediction, since it has an eﬀective scale increasing as a stretched exponential
+of system size. On the other hand, we expect to ﬁnd in such networ ks short cycles: the typ-
+ical length should be the minimal common multiple of the size of the modu les, and it should
+increase as the square root of the number of elements, as far as t he number of modules is
+not very large. But, as Nincreases, this scaling should be lost and substituted by a faster
+increase.
+It can thus be understood why both the distributions of the length of the cycles and the
+distribution of their number become broader and broader when sys tem size increases: in the
+ensemble of critical networks quite diﬀerent situations coexist. It seems also that networks
+characterized by a small number of short attractors (meaning by this that the number and
+the length increase not faster than a power law of N) can be found only if the number of
+relevant elements is very small, thus with vanishing probability as Nincreases. However,
+this qualitative picture still requires more accurate further invest igations to be conﬁrmed or
+rejected.
+18
+6 Attraction basins
+While the number and the length of the attractors depend only on th e number and the size
+of the modules, this is not true for the size of the attraction basins .
+In fact, when we extract at random an initial conﬁguration, the ele ments that are going
+to become stable are not yet stable and the modules are not yet for med (the case K= 1
+is an exception, since in this case the modules are present from the b eginning), since the
+elements of diﬀerent modules can still communicate. Thus the attra ction basins of two
+critical networks with the same modular structure but with diﬀeren t bare connectivity don’t
+need to be identical. In fact, we expect that the attraction basins for critical systems are
+larger the larger is K, since then ρc= 1/Kis smaller and a large number of the input
+conﬁgurations produce the same state. In the following, we will be m ainly dealing with
+critical systems, unless otherwise stated.
+The simulations of critical systems with K= 2 and K= 4 conﬁrm that, for a given
+system size, the attraction basins are on the average larger for K= 4 than for K= 2 [8],
+but show also that the main characteristics of the distribution of th e weight of the attraction
+basins are the same in both cases. The weight of the attraction bas inα,Wα, is deﬁned as the
+fraction of conﬁgurations that evolve towards attractor α. This quantity has to be averaged
+over all the attractors and over several realizations of the dyna mical rules. Following [9] we
+use the notation
+∝angbracketleftY2∝angbracketright=/summationdisplay
+α/angbracketleftBig
+W2
+α/angbracketrightBig
+. (6)
+(the angular brackets represent the average over the disorder ).
+For both the Kvalues that we examined, ∝angbracketleftY2∝angbracketrightvanishes as system size increases, and
+in both cases our data are compatible with a power law decay with the s ame exponent for
+the two parameters considered, suggesting that this behavior is u niversal along the critical
+line. Moments of higher order of the weight of the attraction basins also seem to vanish as
+a power law of system size, but with an exponent which is not proport ional to the order of
+the moment, so that a typical weight of the attraction basins can n ot be deﬁned and the
+distribution of the weights has multi-fractal properties [10].
+The fact that the average weight of the attractor basins vanish in the inﬁnite size limit
+can be qualitatively explained considering the modular structure of c ritical networks. We
+measured ∝angbracketleftY2∝angbracketrightselecting only networks with a number mof modules and we observed that
+this conditional average is a decreasing function of m, as ﬁgure 9 shows.
+This behavior has a clear explanation in networks with K= 1, where the modules are
+independent form the beginning. In this case, two conﬁgurations b elong to the same attrac-
+tion basin if and only if all their components on diﬀerent modules belong to the attraction
+basins of the same local cycles. Since all such components are extr acted independently, the
+probability of such an event is the product of the probabilities relativ e to individual modules
+and vanishes as the number of modules increases. This reasoning ca n not be applied to
+networks with connectivity larger than one, as we said previously, b ut the result that the
+average value of Y2decreases with the number of modules remains valid also in this case.
+On the other hand, the average weight of the attraction basins ha s not a monotonic
+behavior as a function of the number of relevant elements in the net work,R. This fact
+19
+0 1 2 3 4 5
+m0.00.20.40.60.81.0<Y2>N = 120
+N = 240
+N = 480
+N = 720
+N = 1280
+N = 1600
+Figure 9: Conditional average of Y2=/summationtext
+αW2
+ain networks with mmodules. K= 4,ρ= 1/4.
+20
+can be explained as a consequence of the fact that the number of m odules does not grow
+monotonically with the number of relevant elements in the network. I n the low-connectivity
+regime the number of modules increases with R, thus the weight of the attraction basins
+decreases. The contrary happens in the high-connectivity regime .
+These characteristics do not change in the chaotic phase. Also for chaotic systems the
+average weight of the attractionbasins decreases with the numbe r of modules in thenetwork,
+but in this case the probability to ﬁnd more than one module goes to ze ro in the inﬁnite
+size limit, and the eﬀects of the modular organization disappear. In p articular, the average
+basin weight remains ﬁnite and its limit value appears to be very close to the Random Map
+value∝angbracketleftY2∝angbracketright= 2/3, as predicted by the annealed approximation [6].
+Weobserved insimulations reportedin[6]thatinchaoticsystems not farfromthecritical
+line (K= 3,ρ= 1/2) the average basin weight, ∝angbracketleftY2∝angbracketright, is not a monotonic function of system
+size: at ﬁrst it decreases with N, then attains a minimum value of about 0 .59 atN= 40
+and starts to increase, apparently toward the Random Map value o f 2/3. One could think
+that this not monotonic behavior is related to the modular structur e, supposing that its
+eﬀects are not monotonic in system size. This does not appear to be the case, as the same
+not monotonic behavior as a function of system size can be observe d restricting the sample
+to networks with a single module (they are the big majority even for s mall sizes, in the
+chaotic phase). Nevertheless, it is possible that the extension of t he concept of modules
+that we proposed in section 2 in order to ﬁll the gap between the obs erved distribution of
+modules and the eﬀects of factorization of cycle lengths can give a b etter comprehension of
+this behavior.
+7 Discussion
+The dynamical transition taking place in Kauﬀman networks can be ch aracterized as a
+percolation transition in the set of the relevant elements (the analo gy with percolation was
+already proposed by Derrida and Stauﬀer with respect to Random b oolean networks on a
+lattice [5]).
+In the frozen phase, the relevant elements are ﬁnite in number also in the inﬁnite size
+limit and they are divided into asymptotically independent modules. In t he chaotic phase
+all the relevant elements belong to the same cluster, and their numb er is proportional to
+system size. At the border between these two phases, the critica l line is characterized by a
+number of relevant elements increasing as√
+Nand a number of modules that grows with
+system size (apparently with a logarithmic behavior).
+Critical networks have a wide range of modular structures, rangin g from networks remi-
+niscent of the frozen phase (with few relevant elements and low eﬀe ctive connectivity and a
+number of modules that increases with the number of relevant eleme nts) to networks remi-
+niscent of the chaotic phase (with many relevant elements, larger e ﬀective connectivity and
+a number of modules that decreases with the number of relevant ele ments).
+The modular organization can explain qualitatively – and, maybe, also q uantitatively
+– the main properties of the attractors of critical networks. The se attractors are the com-
+position of the undecomposable cycles of the elements of the single m odules, so that their
+21
+length is the minimal common multiple of the lengths of these cycles and their number is
+the product of the numbers of these cycles. One expects then th at networks closer to the
+frozen phase, whose modules have eﬀective connectivity very clos e to 1, are characterized
+by a large number of attractors (exponentially increasing with R, the number of relevant
+elements) whose length increases as Ror faster. In networks close to the chaotic phase, on
+the other hand, one expects to ﬁnd less attractors (for the sam e value of R), but longer ones.
+This is in agreement with the observed distributions of the number an d of the length of the
+attractors, that become broader and broader as system size inc reases.
+It seems to us that these results imply that the typical values of th e number and of the
+length of the attractors increase asymptotically faster than any power law. In simulations of
+small systems, Kauﬀman [1] observed that this quantities behave a s√
+N. Simulating larger
+critical systems [8], we observed that the distributions of these qu antities are compatible
+with two eﬀective scales, one increasing as√
+Nand another one, for rare but not vanishingly
+rare networks, increasing as a stretched exponential of N. This observation is consistent
+with the conclusions that can be drawn from the study of the modula r organization.
+The study of the modular structure can also explain why the averag e weight of the
+attraction basins of critical networks vanishes in the inﬁnite size limit .
+Thusitwouldbeinterestingtoinvestigateanalyticallythedistribution ofsizeandnumber
+of the modules. We think that the approach that we used to estimat e the number of relevant
+elements, consisting in adding a new element to the network and comp uting the modiﬁcation
+of the modular structure, could be a good tool for a more quantita tive understanding of the
+modular organization of critical networks, if the approximation tha t we used can be in some
+way controlled.
+The modular organization of Kauﬀman networks is a consequence of the ﬁnite connectiv-
+ity of this model. It is because of the ﬁnite connectivity that some ele ments become stable,
+and act as a barrier in the transmission of information among diﬀeren t modules. Thus the
+structures described in this work are peculiar to this kind of cellular a utomata, and they are
+not common to other models, for other aspects very similar to this o ne, such as asymmetric
+neural networks. It would be interesting to understand if and how the existence of a modular
+organization is related to the biological situation that Kauﬀman netw orks are intended to
+model,i.e.genetic regulatory systems.
+Wethinkthatthespontaneousemergenceofamodularorganizatio nincriticalnetworksis
+one of the most interesting features of such systems, and could h ave played an important role
+in the emergence of cellular organization from an hypothetical netw ork of chemical reactions
+where the primordial regulatory rules were of a probabilistic type. O ne of the advantages
+of modularity is the possibility to build many independent objects, whic h could have been
+shaped more easily by natural selection. This interpretation is highly speculative but very
+appealing, and raises for the biological modelization the challenging qu estion about the
+mechanisms which could drive to criticality such an hypothetical ense mble of self regulated
+chemical reactions.
+We argue from this study that for large system size the typical sca le of the number and of
+the length of the attractors increase much faster than√
+N, as it was observed by Kauﬀman
+in early works [1]. The√
+Nlaw was considered by Kauﬀman an important argument in
+favor of the fact that randomly assembled networks of regulator y systems can behave in a
+22
+way very reminiscent of the behavior of true biological organisms. T his law, and thus the
+biological analogy, still holds approximately for a small enough numbe r of elements. When
+thenumber of genes becomes large, on theother hand, thenumbe r of cycles (in thebiological
+metaphor, the number of cellular types) and especially their length ( which in the biological
+metaphor represents cycle cell time) become too large to allow a biolo gical interpretation. In
+this case it seems unlikely that critical random boolean networks beh ave as control networks
+in the cells, and that the scaling laws observed for real organisms ar e just a reﬂex of the
+typical properties of random regulatory networks. Random boole an networks with a number
+of elements of the same order as the number of genes in higher euka riots have with ﬁnite
+probability too many and too long attractors, and some kind of selec tion must come into
+play to maintain the approximate power law scaling observed for small systems. But it may
+be that genetically interesting networks are not vanishingly rare in t he ensemble of critical
+Kauﬀmannetworks in the inﬁnite size limit. In the biological picture pro posed by Kauﬀman,
+thiswouldmeanthatsomepropertiesofrealcellscanstillbeinterpr etedastypical properties
+of an ensemble of randomly assembled regulatory networks, even if this ensemble has not to
+be identiﬁed with the whole ensemble of critical Kauﬀman networks.
+Acknowledgments
+U.B. would like to thank Henrik Flyvbjerg and Peter Grassberger for interesting discussions
+and for reading the manuscripts.
+References
+[1] S.A. Kauﬀman (1969), Metabolic Stability and Epigenesis in Random C onstructed
+Genetic Nets, J. Theor. Biol. 22, 437-467.
+[2] S.A. Kauﬀman (1990), Origins of Order: Self-Organization and Selection in Evolu tion,
+Oxford University Press
+[3] U. Bastolla and G. Parisi (1996), Relevant Elements, Magnetizat ion and Dynamical
+Properties in Kauﬀman Networks: a Numerical Study, Physica D .
+[4] H. Flyvbjerg, N.J. Kjaer (1988), Exact Solution of Kauﬀman Mod el with Connectivity
+One,J.Phys. A:Math.Gen. 21(7), 1695-1718
+[5] B. Derrida, D. Stauﬀer (1986): Phase Transitions in Two-dimens ional Kauﬀman Cel-
+lular Automata, Europhys. Lett. 2(10), 739-745
+[6] U. Bastolla and G. Parisi (1996), Closing Probabilities in the Kauﬀma n model: an
+Annealed Computation, Physica D 98, 1
+[7] H. Flyvbjerg (1988), An Order Parameter for Networks of Aut omata,J.Phys.
+A:Math.Gen. 21L955-L960
+[8] U. Bastolla and G. Parisi (1996), The Critical Line of Kauﬀman Net works,Journal of
+Theoretical Biology , in press.
+23
+[9] B. Derrida and H. Flyvbjerg (1986), Multivalley Structure in Kauﬀ man’s Model: Anal-
+ogy with Spin Glasses, J.Phys.A: Math.Gen. 19, L1003-L1008
+[10] G. Paladin and A. Vulpiani (1987), Anomalous Scaling Laws in Multifr actal Objects,
+Phys. Rep. 156, 147-225.
+24

@@ -1,0 +1,253 @@
+arXiv:cond-mat/9809410v1  [cond-mat.soft]  30 Sep 1998Stability of Designed Proteins Against Mutations
+R. A. Broglia1,2,3, G. Tiana3,1, H. E. Roman1,2, E. Vigezzi1,2and E. Shakhnovich4
+1Dipartimento di Fisica, Universit` a di Milano, Via Celoria 1 6, I-20133 Milano, Italy.
+2INFN, Sezione di Milano, Via Celoria 16, I-20133 Milano, Italy.
+3The Niels Bohr Institute, University of Copenhagen, 2100 Copenh agen, Denmark.
+4Department of Chemistry and Chemical Biology, Harvard Univer sity, 12 Oxford Street,
+Cambridge, MA 02138
+(June 26, 2021)
+Abstract
+The stability of model proteins with designed sequences is a ssessed in terms
+of the number of sequences (obtained from the designed seque nce through
+mutations), which fold into the “native” conformation. By a complete enu-
+meration of the total number of sequences obtained by introd ucing up to 4
+point mutations and up to 7 composition–conserving mutatio ns (swapping
+of amino acids) in a 36mers chain, it is found that there are 108−109se-
+quences which in the folding process target onto the “native ” conformation.
+Consequently, proteins with designed sequences display a r emarkable degree
+of stability and, to a large extent, of designability.
+1
+A number of previous analyses [1–6] (reviewed in [7,8]) have provided a rguments and
+supporting evidence for the deep connection existing between the energetic properties of
+protein sequences and their ability to fold fast into their native conf ormations. In particular
+it was found [2–4] that the presence of a large (compared to the dis persion of interaction
+energies) energy gap between the native state and the bulk of misf olded conformations that
+are structurally dissimilar to the native state is an important factor that ensures fast folding
+into the native conformation (foldability requirement). A number of observations support
+the notion that sequences of natural proteins have been optimize d to satisfy the foldability
+requirement:
+1) Random sequences undergo non-cooperative folding transition [9,10] while designed
+sequences and proteins fold cooperatively [1,3,4,11,12].
+2) The native state of random sequences is very unstable even to s mall changes in poten-
+tial function [13] while the ones that have larger gaps are much more robust with respect to
+changes in the energy function [14,15]. The latter behavior is charac teristic of real proteins
+that exhibit the remarkable ability to maintain their native structure intact in a wide range
+of conditions including variation of temperature, pH, solvent compo sition etc.
+3) It was shown theoretically that ground (native) states of rand om sequences are very
+unstable with respect to point mutations: the probability that a mut ated sequence has the
+same native state scales as γ−8whereγis the number of conformations per one residue in
+the chain [16]. In contrast, real proteins are able to accomodate n umerous mutations that
+are neutral with respect to structure changes [17] . This fact ha s obvious implication for the
+molecular evolution ofproteins: it accounts forthe existence of lar gefamilies of proteins that
+may have diverged from a common root. Proteins belonging to a family have homologous
+sequences and their native states are structurally similar.
+While the stability of designed sequences with respect to point mutat ions has been
+demonstrated [18] in simulations, and the fact that larger energy g aps imply greater ability
+of the designed sequence to accomodate many neutral mutations acknowledged [1–4,19–21],
+the actual quantitative analysis of how many mutations exist that p reserve the native state
+2
+was missing.
+In what follows we present a quantitative analysis of how many neutr al mutations can
+proteinlike sequences of various degree of gap optimization accomo date. The outcome of
+this analysis is baﬄing. In fact, it will be concluded that designed prot eins can accomodate
+billions of multiple mutations without changing their ability to fold on shor t call into the
+native conformation.
+For the analysis we use lattice model of a protein that has been used earlier by us
+[18,23,24] and others [25,26]. The model sequences are composed of aminoacids of 20 types
+and contain 36 monomers. Two aminoacids are considered interactin g if they occupy neigh-
+boring positions on the lattice but are not sequence neighbors. The energy of the interaction
+depends on the identity of the aminoacids involved, so that there is a 20×20 parameter
+matrix that describes the energetics in the model. We used the set o f parameters suggested
+by Miyazawa and Jernigan ( table 6 of Ref. [27]). The associated stan dard deviation of the
+interaction energies between diﬀerent aminoacid types is σ= 0.3.
+Our approach to protein simulations is based on the idea of designing s equences having a
+large energy gap in the target conformation chosen to serve as a n ative state for simulations
+[4,28].
+A sequence that has suﬃciently low energy in a conformation chosen as native is denoted
+as S36(cf. caption to Fig. 1). This sequence is the same as was studied in pr evious
+publications [18,23,24]. In the units we are considering ( RTroom= 0.6 kcal/mol), the energy
+of S36in its native conformation (cf. Fig. 1(a) ) is Enat=−16.5. Starting from a random
+conﬁguration, the sequence S 36always reaches the native conﬁguration, and it does it in
+a rather short time, of the order of 106MC steps. This is a consequence of the fact that
+the value of the energy gap δ(=2.5), that is, the energy diﬀerence between the native and
+the lowest dissimilar conﬁguration (conﬁguration with a similarity para meterq[29] much
+smaller than one) is large, much larger than the variance of the cont act energies. The goal of
+our present analysis is to characterize quantitatively how many mut ations can S36tolerate
+without losing the ability to fold into its native state. In other words, our study aims at
+3
+providing an estimate of the number of sequences, having a certain degree of homology to
+S36, that fold into its native structure.
+To characterize quantitatively single or multiple mutations, we ascrib e to them a value
+∆E[18], deﬁned as the diﬀerence between the energies of the altered s equence (S’ 36) and
+of the intact chain (S 36), both calculated in the native conﬁguration (Fig. 1(a) ). The
+quantity ∆ Eis a measure of how the energy gap changes upon a mutation provide d that
+the distribution of energies of conformations that are dissimilar to t he native state remains
+unaﬀected by the mutation [18]. This was shown to be the case when m utations do not
+change the aminoacid compositions [3,4,18]. In this study we have analy sed both the kinds
+of mutations which conserve and which do not conserve the compos ition of the protein.
+This gives a lower and an upper limit for the number of mutations which t he “wild–type”
+sequence can tollerate.
+Acompleteenumerationofallsequences S′
+36hasbeendoneuptosevenmutationskeeping
+ﬁxed the amino acid composition of the chain (swapping), and up to fo ur without this
+constraint (pointlike). Simulating the dynamics [4] of ﬁfty sequence s chosen among the
+mutated sequences, with the same composition of S 36and with ∆ E < δ, it turned out that
+in 100% of the cases, they can reach the native conformation in a tim e comparable to the
+folding time of S 36. Repeating the same analysis on ﬁfty sequences with up to four poin tlike
+mutations, we observed that only in three cases the chain ﬁnds con formations dissimilar
+from the native one, with lower energy, and it is not able to ﬁnd the na tive conformation
+within the simulation time.
+Furtherwestudiedtheimpactofpointlikemutationsonsequences h avingdiﬀerentdegree
+of design. To this end we calculated the distributions n2(∆E) associated with two pointlike
+mutationsforthecaseofthreesequences designedtofoldintoth estructureshowninFig.1(a)
+withdiﬀerent energygaps. Thedistributionsforallthreesequenc es appeartobevery similar
+to each other (Fig.2). This is also true for composition–conserving m utations and for the
+diﬀerent numbers of mutations we have analyzed (data not shown) . These results suggest
+that the distribution nm(∆E) associated with mmutations has some degree of universality.
+4
+Given a sequence characterized by an energy gap δ, it is then possible to calculate the
+number of sequences which fold to the same native structure (i.e. f or which there is still
+some energy gap between the native structure and the bulk of dec oys) and which diﬀer from
+the ”wild–type” sequence by mmutations. To do this one has to calculate the quantity
+Nm(δ) =/integraldisplayδ
+−∞dE nm(E). (1)
+As an example we provide the function Nm(δ) form= 4 and for the case of pointlike
+mutations (Fig.3). The corresponding values of Nmfor the sequence S 36(whose gap is
+δ= 2.5) for up to 4 pointlike and 7 swap mutations are shown in Table 1. The c alculation of
+the total number of sequences N(δ) =/summationtext
+mNm(δ) is beyond our calculational power, and can
+be established only with approximate methods [30]. The results obtain ed with the “small”
+number of mutations shown in Table 1, and which provide a lower limit to t he total number
+of sequences folding to the same native structure is in any case impr essive, namely 108−109.
+The same study has been repeated using other two fully compact ta rget structures (Figs.
+1(b) and 1(c) ), generated by the collapse of a 36 monomers homop olymeric chain at low
+temperature (below the θ–point, see e.g. [31]). The results are virtually identical to the ones
+shown in Fig. 2.
+The present study further suggests that the normalized gap ξ=δ/σ(or the closely
+related to it z-score [1,29,32]) is a major determinant of the ability of s equences to fold. To
+this end, the ”resilience” of sequences against point mutations is dir ectly related to their
+energetic impact: if the cumulative eﬀect of mutations on the energ y of the native state
+is weak enough so that the energy gap for the native state remains , the mutations are
+neutral and the mutated sequences will still fold into the native sta te, albeit at a decreased
+stability. Therefore, the whole issue of the estimating the number o f mutations that are
+tolerated by a sequence (and hence the number of homologous seq uences that fold to the
+sameconformation)isreduced toenumerating mutationsthatkee ptheenergygapasdeﬁned
+before.
+Anotheraspect ofsequence designknownas”designability” wasdis cussed byanumber of
+5
+authors [19,33,34]. The concept of ”designability” focuses on the en tropy in sequence space
+stating that structures that can accomodate more sequences t hat have them as the non–
+degenerate ground state are more ”designable”, and represent the structures of naturally
+existing proteins. Our study is not entirely unrelated to the issue of designability since it
+showsthatthegreaterthegapis, themoresequenceshomologou stothe“wildtype”sequence
+exist that target on the “native” conformation in the folding proce ss and, as a consequence,
+has this conformation as its non–degenerate ground state. Howe ver, it addresses in fact
+a diﬀerent question, namely: how many sequences homologous to th e ”wild-type” exist
+that fold into the same conformation, being this number a lower limit fo r the degree of
+designability of a structure. In order to fully address this question within our approach one
+has to consider two further issues: a) that there exist many non- homologous sequences that
+can still fold to the same conformation [20,35,36], and b) that the des ignability principle
+emphasizes the strong dependence of the number of sequences o n the properties of the target
+structure. In any case, we have provided circumstantial evidenc e concerning the fact that
+designability of a given structure may be closely related to the maxima l gap with which
+sequences can be ﬁt into it. (A similar point was also made earlier by sev eral authors
+[19–21,33]). In this case the issue of designability reduces to the que stion of what structures
+allow sequences with greater gaps. We are planning to address this is sue in the near future.
+Summing up, in thispaper we provided a quantitative estimate ofthe n umber ofmutated
+sequences that are still able to fold to the same conformation and f ound it to be ”astro-
+nomically” large. The actual number of these sequences, and thus the designability of the
+corresponding conformation, is controlled by the dimensionless par ameterξ=δ/σ, which
+in turn also controls the folding ability of the notional protein.
+ACKNOWLEDGEMENTS
+This work was partially supported by NIH grant RO1 GM52126 (to ES) . Financial
+support by NATO under grant CRG 940231 is gratefully acknowledge d.
+6
+TABLES
+TABLE I. The number of mutated sequences S’ 36which fold into the native conformation
+shown in Fig 1(a). In column one the number of mutations mis shown. Columns 2 and 3 are
+associated with composition conserving results (c.), whil e columns 3 and 4 correspond to pointlike
+mutations (n. c.). Columns 2 and 4 display the number of seque nces associated with a change in
+energy ∆ Esmaller than the gap δ, while columns 3 and 5 display the total number of sequences
+associated with the number of mutations m.
+m ∆E < δ(c.) Tot (c.) ∆E < δ(n.c.) Tot (n.c.)
+1 613 684
+2 447 630 1.59·1052.27·105
+3 3339 14280 2.30·1074.89·107
+4 1.37·1055.30·1051.99·1097.68·109
+5 4.29·1053.39·106
+6 2.53·1075.14·108
+7 2.78·1081.55·1010
+7
+FIGURES
+FIG. 1. (a)Conformationontowhichthesequence S36≡SQKWLERGATRIADGDLPVNGT-
+YFSCKIMENVHPLA has been designed. In (b) and (c) we display t wo other fully compact target
+structures, used also as natives (for another sequences). T hese conformations were generated by
+collapsing a homopolymeric chain at low temperature.
+FIG. 2. Distribution n2(∆E) associated with two pointlike mutations, carried out in th ree
+diﬀerent sequences, with gaps δ= 1.3 (dashed curve), δ= 1.6 (continuous curve) and δ= 2.5
+(dotted curve) respectively. The three ”root” sequences di splay no appreciable similarity.
+FIG. 3. Number of sequences which fold into the conformation shown in Fig.1(a) and obtained
+from all possible four-aminoacid pointlike mutations of S 36that still preserve the gap.
+8
+REFERENCES
+[1] R.Goldstein, Z.A. Luthey-Schulten, and P.Wolynes. (1992) Proc. Natl. Acad. Sci. USA
+89, 4918–4922.
+[2] A.Sali, E.I.Shakhnovich, and M.Karplus. (1994) Journ. Mol. Biol. 235, 1614–1636.
+[3] E.Shakhnovich and A.Gutin. (1993) Proc.Natl. Acad. Sci. USA 90,7195–7199.
+[4] E.I.Shakhnovich. (1994) Phys.Rev.Lett. 72, 3907–3910.
+[5] S. Govindarajan and R.Goldstein. (1995) Biopolymers 36, 43–51.
+[6] A.Gutin, V.Abkevich, and E.Shakhnovich. (1996) Phys Rev Lett 77, 5433.
+[7] J.Bryngelson, J.N.Onuchic, N.D.Socci, and P.Wolynes. (1995) Proteins: Struct. Funct.
+and Genetics 21,167–195.
+[8] E.I.Shakhnovich. (1997) Curr. Opin. Struct. Biol. 7, 29–40.
+[9] K.Gast,A.F.Chafotte,D.Zirwer,Y.Guillou, M.Mueller-fromme, C.Ca dieux, M.Hodges,
+G.Damaschun, and M.Goldberg. (1997) Protein Science 6,2578–2588.
+[10] A.Davidson and R.Sauer. (1994) Proc. Natl. Acad. Sci. USA 91,2146–2150.
+[11] G. Makhatadze and P.L.Privalov. (1995) Adv.Prot.Chem. 47,307–425.
+[12] S.E.Jackson and A.R.Fersht. (1991) Biochemistry 30,10428–10435.
+[13] J.D.Bryngelson. (1994) J.Chem.Phys. 103,6038–6045.
+[14] V.Pande, A.Yu. Grosberg, and T.Tanaka. (1995) J.Chem.Phys. 103, 1–10.
+[15] A.P. de Araujo and T.Pochapsky. (1996) Folding & Design 1,299–314.
+[16] E.I.Shakhnovich and A.M.Gutin. (1991) J.Theor.Biol. 149, 537–546.
+[17] T.Creighton. Proteins. Structure and Molecular Properties . W.H.Freeman & Co, N.Y.,
+(1992).
+9
+[18] G.Tiana, R.Broglia H.E.Roman, E.Vigezzi, and E.I.Shakhnovich. (1998 )J.Chem.Phys.
+108, 757–761.
+[19] S. Govindarajan and R.Goldstein. (1995) Proc. Natl. Acad. Sci. USA 93,3341–3345.
+[20] E.I.Shakhnovich. (1998) Folding&Design 3,R45–R58.
+[21] M.Vendruscolo. (1998) Physica A 249, 576–580.
+[22] HJ Bussemaker, D.Thirumalai, JK Bhattacharjee (1997) Phys.Rev.Lett. 79,3530–3533.
+[23] V.Abkevich, A. Gutin, and E.Shakhnovich. (1994) Biochemistry 33, 10026–10036.
+[24] V.Abkevich, A. Gutin, and E.Shakhnovich. (1994) J.Chem.Phys 101, 6052–6062.
+[25] N.Socci, W.Bialek, and J.Onuchic. (1994) Phys.Rev.E 49, 3440–3443.
+[26] D.Klimov and D.Thirumalai. (1996) Phys.Rev.Lett 76, 4070–4073.
+[27] S.Miyazawa and R.Jernigan. (1985) Macromolecules 18, 534–552.
+[28] E.Shakhnovich, V. Abkevich, and O.Ptitsyn. (1996) Nature379, 96–98.
+[29] A. Gutin, V.Abkevich, and E.Shakhnovich. (1995) Proc Natl. Acad. Sci. USA 92, 1282–
+1286.
+[30] R. A. Broglia, G. Tiana and H. E. Roman, (to be published)
+[31] I. Lifshitz, A. Grosberg, A. Khokhlov, Rev. Mod. Phys. 50, 683 (1978)
+[32] J.U.Bowie, R.Luthy, and D.Eisenberg. (1991) Science253, 164–169.
+[33] A.V.Finkelstein, A.Gutin, and A.Badretdinov. (1995) Proteins: Struct. Function genet-
+ics23, 142–149.
+[34] H.Li, N.Wingreen, and C.Tang. (1996) Science273,666–669.
+[35] L.Holm and C.Sander. (1993) J.Mol.Biol 233,123–138.
+10
+[36] E.Shakhnovich and A.Gutin. (1993) Protein Engineering 6, 793–800.
+11
+12
+3
+456789101112131415
+161718
+19
+202122232425
+26
+2728
+2930313233343536(b)
+(c)(a)
+−5 0 5 10E∆0200040006000800010000 n2
+−2 0 2 4 6 8 10
+δ0109109109109
+4 x2 x6 x8 x
+n. of sequences

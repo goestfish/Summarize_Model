@@ -1,0 +1,860 @@
+arXiv:cond-mat/9708215v1  [cond-mat.dis-nn]  28 Aug 1997Attractors in fully asymmetric neural networks
+U. Bastolla1,2and G. Parisi1
+August 31, 2021
+1Dipartimento di Fisica, Universit` a “La Sapienza”, P.le Aldo Moro 2, I- 00185 Roma Italy
+2HLRZ, Forschungszentrum J¨ ulich, D-52425 J¨ ulich Germany
+Keywords: Disordered Systems, Attractor Neural Networks
+Abstract
+The statistical properties of the length of the cycles and of the weights of the at-
+traction basins in fully asymmetric neural networks ( i.e.with completely uncorrelated
+synapses) are computed in the framework of the annealed appr oximation which we
+previously introduced for the study of Kauﬀman networks. Our results show that this
+model behaves essentially as a Random Map possessing a rever sal symmetry. Compar-
+ison with numerical results suggests that the approximatio n could become exact in the
+large size limit.
+1 Introduction
+In the past decade Attractor Neural Networks were the subjec t of an intense study as a
+model of associative memory. The ”ancestor” of these models, th e Hopﬁeld model [1], was
+deﬁned as follows: there is a set of Nneurons, each one associated with a binary variable
+σi∈ {0,1},i∈Ω ={1,···N}, representing its activity. The synaptic couplings between
+these model neurons, Jij, are chosen at random at the beginning and kept ﬁxed, and then
+the system evolves deterministically according to the equation
+σi(t+1) = sign
+/summationdisplay
+jJijσj(t)
+ (1)
+(parallel updating; alternatively, one can consider sequential upd ating when σi(t+ 1) is
+determined by the state of σj(t+1) forj < iand byσj(t) forj > i).
+This procedure deﬁnes a disordered dynamical system: the evolut ion is deterministic,
+but its rules are chosen at random at the beginning and kept ﬁxed. I n other words, we can
+rewrite the dynamic law in the form
+C(t+1) =fJ(C(t)), (2)
+1
+whereCrepresents a conﬁguration of the system, i.e.a set of values of the Nvariables σi,fJ
+is a random realization of a deterministic map and the set of indices Jlabels the realization
+of the dynamic rules.
+The most natural distance in conﬁguration space is the normalized H amming distance,
+deﬁned as
+d(C,C′) =1
+N/summationdisplay
+i|σi−σ′
+i|. (3)
+We are interested in the statistical properties of the motion asymp totically in time and
+system size. As the motion is deterministic and conﬁguration space is ﬁnite, asymptotically
+in time the dynamics takes place on periodic orbits, and the quantities of interest are the
+lengths and the number of such orbits as well as the size of their att raction basins. Such
+quantities are random variables, depending on the realization of the dynamical rules, and
+we will study their probability distribution.
+When the couplings are symmetric ( Jij=Jji) it is possible to deﬁne a Hamiltonian so
+that equation (1) represents the zero temperature dynamics of a thermodynamic system.
+In particular, if the Jijare chosen from a distribution with zero mean and variance 1 /N
+(for instance a Gaussian distribution) we are dealing with the zero te mperature dynamics
+of the SK model (in the case of sequential updating: the parallel up dating does not imply
+a relaxational dynamics). In the Hopﬁeld model the couplings are sy mmetric, too, but they
+are chosen according to the Hebbian rule:
+Jij=P/summationdisplay
+µ=1ξµ
+iξµ
+j, (4)
+wherethe Pvectors of Nbinaryvariables, ξµ, represent thememorizedpatterns. Thesystem
+is able to memorize, in the sense that the patterns are ﬁxed points o f the dynamics and they
+are stable against random perturbations if their number does not e xceed the capacity of the
+network, i.e.ifPis not larger than αcN, withαc≈0.14. So, given a number of microscopic
+states growing as 2N, the Hopﬁeld model is able to memorize a number of patterns growing
+linearly with N.
+Asymmetric neural networks received a largeattention in the litera ture in the late ’80s[3,
+4, 5, 6, 7, 8]. In 1986 it was proposed to generalize the Hopﬁeld mode l by taking into account
+also asymmetric couplings [2].This generalization appears more realistic , since synapses in
+nature are in general not symmetric, and it suggests a possible way to distinguish between
+a network that has remembered a learned pattern and a network w hich is in a confused
+state (such a distinction is not possible in the Hopﬁeld model). In fact , in asymmetric
+neural networks, two kind of attractors are present: “ordere d” attractors, that are either
+short cycles or ﬁxed points, and “chaotic” attractors, whose len gth grows exponentially with
+system size. The ﬁrst numerical observations of this twofold natu re of the attractors are due
+to Gutfreund, Reger and Young [5] and to N¨ utzel [9].
+In this note we are mainly interested in the study of the properties o f the attractors,
+such as the probability distributions of their lengths, of their numbe r and of the size of their
+attraction basins. We will consider only the case of fully asymmetric c ouplings, i.e.Jij
+andJjiare independent random variables. In this case analytical results h ave already been
+obtained about the correlation functions [6, 7] and about the numb er of attractors [11], but
+2
+moreabouttheattractorscanbesaidusingasimplestochasticsch eme basedontheannealed
+approximation. This approximation was introduced in the study of dis ordered dynamical
+systems by Derrida and Pomeau [12] to study damage spreading in Ka uﬀman networks (a
+disordered dynamical system proposed as a model of the genetic r egulation in cells [13]). In
+[14] we showed that it can also be used to obtain information about th e attractors of that
+model.
+A reason of interest of this study is that asymmetric neural netwo rks are the limit case
+of a one parameter family of models, the parameter ηrepresenting the symmetry of the
+synaptic couplings:
+η=∝an}bracketle{tJijJji∝an}bracketri}ht
+∝an}bracketle{tJij∝an}bracketri}ht2. (5)
+The case η= 0 represents the present model (fully asymmetric couplings), wh ile for
+η= 1 the couplings are fully symmetric and we obtain the mean ﬁeld model of spin glasses.
+Thus the parameter ηconnects with continuity asymmetric neural networks to a disorde red
+system of statistical mechanics.
+It was suggested through numerical simulations that the model wit h generic correlation
+undergoes a dynamical transition when ηis changed [9, 10, 15]. The transition seems to
+take place when the absolute value of ηcrosses the value 1 /2. For|η|<1/2 the dynamics
+is chaotic and the typical length of the cycles increases exponentia lly with the number of
+neuronsN, while for |η|>1/2 the dynamics is frozen and the typical length of the cycles
+does not increase with system size (most of the cycles have length 2 , for positive η, and 4
+for negative η).
+This transition is reminiscent of the dynamical transition taking place in Kauﬀman net-
+works. Also in that case the typical length of the cycles grows expo nentially with Nin the
+so called chaotic phase, remains ﬁnite in the frozen phase and grows less than exponentially
+withNon the critical line [13, 14]. It was claimed by Kauﬀman that the critical line of
+his model can be a good model of the genetic regulatory systems ac ting in cell diﬀerentia-
+tion, thus showing that such systems do not need to be tuned in the very details by natural
+selection but behave similarly to typical realizations of an ensemble of random regulatory
+networks [13]. It is possible that, analogously, also the supposed cr itical point in attractor
+neural networks, where chaotic and ordered cycles coexist, can suggest something interesting
+from a biological point of view. We think that our method can be modiﬁe d to give informa-
+tion about systems with generic asymmetry and about the suppose d phase transition that
+they undergo, though this probably requires to go beyond the ann ealed approximation.
+2 Closing probabilities
+2.1 General framework
+Ourstrategyforthestudyofattractorsindisordereddynamica l systems hasasstartingpoint
+the probability distribution of the distance at diﬀerent time steps. A ctually, the information
+contained in the distribution of the distance is much more than what w e need and this
+distribution is in principle a very complicated object, so that our appr oach may seem to
+3
+complicate the problem. But, in some cases, the distance can be well approximated by a
+suitably deﬁned stochastic process and the computation becomes much easier. The simplest
+possibility is to approximate the distance with a Markovian stochastic process. This is what
+we call here the annealed approximation .
+An apparently paradoxical aspect of this approach is that in disord ered dynamical sys-
+tems attractors exist due to the fact that the motion is determinis tic. Stochastic processes,
+on the other hand, have nothing similar to a limit cycle. Nevertheless, all the properties of
+theattractorscanbederived fromthedistribution ofdistances, which is awell deﬁned object
+in both kinds of models. We can not pursue this analogy up to times larg er than the time
+of ﬁrst recurrence of a conﬁguration already visited, when the de terministic motion becomes
+periodic. But this is enough, since the ﬁrst recurrence provides us with every information
+about the length of the cycles and the transient time.
+The fundamental object of our study will be then the distribution o f distances between
+conﬁgurations at time steps tandt′> ton the same trajectory, restricted to trajectories
+that have not yet visited twice any conﬁguration up to the larger tim et′(thus the eﬀects of
+periodicity do not yet appear). We will call this condition the opening c ondition, and denote
+it by the symbol At′. The closing probability πN(t,t′) is the probability that conﬁgurations
+at time steps tandt′are equal ( d(t,t′) = 0), subject to the opening condition:
+πN(t,t′) = Pr{d(t,t′) = 0|At′} (6)
+(the subscript Nis there to remember the dependence on system size).
+After the closing time t′the trajectory enters a periodic orbit of length l=t′−t, where
+tis the transient time. In terms of the closing probabilities, the proba bility to ﬁnd such
+a trajectory is easily computed. First we have to know the probabilit yFN(t) that the
+trajectory was not closed before time t′=t+l. This obeys the equation FN(t+ 1) =
+FN(t)/parenleftBig
+1−/summationtextt−1
+t′=0πN(t′,t)/parenrightBig
+, whence, introducing a continuous time variable, we get
+FN(t) = exp/parenleftBigg
+−/integraldisplayt
+0dt′/integraldisplayt′
+0dt′′πN(t′,t′′)/parenrightBigg
+(7)
+(to have a slightly simpler formula we made the hypothesis that the ty pical closing times are
+long, which is normally the case in the chaotic phase, where they grow exponentially with
+system size N, and we transformed the sum into an integral).
+The probability to ﬁnd a trajectory that, after a transient time t, enters a cycle of length
+lis then obtained multiplying FN(t+l) times the closing probability πN(t,t+l).
+2.2 The annealed approximation
+Regarding the distance as a Markovian stochastic process is a very drastic approximation.
+In our case it sounds reasonable when the temporal distance lis large, since the model that
+we study is known to have a behavior very reminiscent of chaos [15]. H owever in this way
+we neglect some memory eﬀects, which can play a fundamental role in systems with nonzero
+symmetry.
+This approximation was ﬁrst used in this context by Derrida and Pome au [12], who
+studied the damage spreading in Kauﬀman networks. They showed t hat the average value
+4
+of the Hamming distance between two diﬀerent trajectories is equiv alent, in the inﬁnite
+system limit, to the average value of the Markovian stochastic proc ess obtained extracting
+new dynamical rules at every time step and keeping memory only of th e value of the distance
+at time step t−1. Thus the disorder is treated as annealed rather than as quench ed. In
+other words, instead of considering an ensemble of trajectories, each one taking place on a
+ﬁxed realization of the dynamical rules, they consider an ensemble o f trajectories moving
+from one realization of the dynamical rules to another one, in the sa me spirit in which the
+annealed average is used for disordered thermodynamical system s.
+The above procedure can be shown to describe exactly the evolutio n of the average
+distance up to time of order log Nin disordered systems with ﬁnite connectivity [16, 17],
+but we think that its validity is more general. In systems with inﬁnite co nnectivity like the
+one that we are studying here, or when one is interested in the whole distribution of the
+distance, the equivalence between the two dynamics has not been p roved, and we have to
+assume that a typical trajectory of the quenched system loses m emory of the details of the
+realization of dynamical rules under which it evolves. In the Random M ap model [18] this
+is trivially true. In other cases this can be thought of as a maximal ign orance hypothesis,
+whose consequences must then be compared with numerical simulat ions.
+Let us state some of these consequences. A Markovian stochast ic process, if its transition
+probabilityisergodic1, converges toastationarystochasticvariableindependent ofth einitial
+distribution. This means that the closing probability πN(t,t+l) converges to a stationary
+valueπ∗
+N. This is also independent of lif the transition probability does not depend on this
+quantity. We will show that this happens in the present case, at leas t forllarge enough.
+It is then easy to compute the probability of a trajectory which, af ter a transient time
+t, enters a cycle of length l(withlandtlarge enough, so that the closing probability has
+reached its asymptotic value): using the results of last section, we get
+Pr{T=t,L=l}=1
+τ2
+Nexp
+−1
+2/parenleftBiggt+l
+τN/parenrightBigg2
+, (8)
+whereτN=π∗
+N−1/2is the typical time scale of the problem, in the sense that the random
+variable t/τNhas a well deﬁned density of probability even in the limit where τgoes to
+inﬁnity. All the dependence on system size is contained into the fact orπ∗
+N, which is expected
+to decrease exponentially with Nin the chaotic phase. For instance, for a uniform Random
+Map [18], which is the most chaotic disordered dynamical system, it ho ldsπ∗
+N= 1/2N, and
+consequently the typical time scale of the attractors grows as 2N/2.
+The properties of Random Maps can be easily generalized starting fr om equation (8). An
+interesting quantity is the distribution of the attraction basin weigh ts. This was analytically
+computed by Derrida and Flyvbjerg for the case of the uniform RM [1 9]. The weight of the
+attraction basin of cycle α,Wα, is deﬁned as the probability to extract at random an initial
+conﬁguration which will reach asymptotically the attractor α. The statistical information
+about the distribution of the weights can be expressed through th e “moments” ∝an}bracketle{tYn∝an}bracketri}ht, deﬁned
+1In the present case, in order to have an ergodic transition probab ility, we must exclude as starting
+point the distance d= 0 which is an absorbing point (if d(t,t+l) = 0, we must have with probability one
+d(t′,t′+l) = 0 for every t′≥t), that is we have to impose the condition that the trajectory is not yet closed,
+as we did.
+5
+as
+∝an}bracketle{tYn∝an}bracketri}ht=/summationdisplay
+α∝an}bracketle{tWn
+α∝an}bracketri}ht. (9)
+Y1is equal to 1 due to the normalization of the weights and Y2represents the average
+weight in a given dynamical system. Its extreme values, 1 and 0, cor respond respectively
+to the “ergodic” case where there is only one relevant attractor a nd to the case where there
+is an inﬁnite number of relevant attractors, while a ﬁnite value of Y2means that there is a
+ﬁnite number of attractors with non vanishing weight. This quantity ﬂuctuates from sample
+to sample, so it is necessary to consider an average over the realiza tions of the dynamical
+rules, that is represented by the angular brackets.
+The method used in[19] to compute the distribution of theweight can be applied without
+modiﬁcations to all disordered dynamical systems where the closing probability reaches an
+asymptotic value, π∗
+N, andthe result do not depend onthis value in the largesize limit. Thus
+the distribution of the attraction basin weights is universal for all the disordered dynamical
+systems where the closing probability reaches a stationary value [14 , 21], apart for systems
+which possess some symmetry. The result for the average value of theYnis [19]
+∝an}bracketle{tYn∝an}bracketri}ht=4n−1[(n−1)!]2
+(2n−1)!. (10)
+The ﬂuctuations from sample to sample can also be computed. For ex ample the ﬂuctu-
+ations of Y2are measured by ∝an}bracketle{tY2
+2∝an}bracketri}ht−∝an}bracketle{tY2∝an}bracketri}ht2, and do not cancel even in the inﬁnite size limit
+N→ ∞.
+The average number of attractors of length lcan be computed starting with the relation
+∝an}bracketle{tna(l)∝an}bracketri}ht=2N
+lPr{T= 0,L=l}. (11)
+In this formula, the probability Pr {L=l,T= 0}should be computed multiplying
+FN(l), given in equation (7), times the closing probability πN(0,l). This is diﬀerent from
+the asymptotic value (for large t) ofπN(t,t+l). According to the hypothesis, on which the
+annealed approximation relies, that the system is going to lose memor y of the details of the
+evolution, we expect no correlations between the initial conﬁgurat ion and a conﬁguration at
+a large time lor, in other words, we expect the closing probability to be, asympto tically in
+l,πN(0,l) = 1/2N. For chaotic Kauﬀman networks this can be explicitly computed in the
+framework of the annealed approximation, which is then consistent under this point of view.
+Moreover, we ﬁnd in this case πN(0,l) =cl1/2N, wherecldoes not depend on N. Thus it
+holds
+∝an}bracketle{tna(l)∝an}bracketri}ht ≈cl
+lexp/parenleftBig
+−l2/2τ2/parenrightBig
+. (12)
+Summing over lwe obtain the average value of the total number of cycles, whose le ading
+term inNis equal to log τN. Since in the chaotic phase the time scale grows exponentially
+withsystemsize, thenumberofattractorsisproportionalto Ninthiscase. Thiscomputation
+holds for chaotic Kauﬀman networks in the framework of the annea led approximation, but
+we expect it to hold more generally under the hypothesis discussed a bove.
+6
+2.3 Master equation
+The general scheme described above must be modiﬁed in the case st udied in this note, to
+take into account the symmetry ofthe problem. Let us deﬁne the r eversal operator, R, which
+reverses all the spins. This operator commutes with the dynamics o f the system. Using the
+notation deﬁned in equation (2), we can write:
+fJ(RC) =RfJ(C), (13)
+This implies that we can deﬁne two diﬀerent closing times:
+1. The ﬁrst time twhenC(t) is equal to C(t+l).
+2. Theﬁrsttimewhen C(t+l)isequalto RC(t): thenequation(13)implies C(t+2l) =C(t).
+In other words, the trajectory has reached, after a transient timet, a cycle of length
+2l.
+These closing events can be described in terms of the Hamming distan ce between con-
+ﬁgurations: the ﬁrst one corresponds to d(t,t+l) = 0, while the second one corresponds to
+d(t,t+l) = 1. Thus two closing probabilities must be deﬁned:
+π(0)
+N(t,t′) = Pr{d(t,t′) = 0|At′}, (14)
+π(1)
+N(t,t′) = Pr{d(t,t′) = 1|At′}, (15)
+and the opening condition, At, has the meaning that up to time tit never occurred either
+d(t1,t2) = 0 or d(t1,t2) = 1. Our task is now to compute the master equation for the
+distribution of the distance under the opening condition (this means that we consider only
+trajectories not yet closed) and under the hypothesis that the d istribution of d(t+1,t′+1)
+depends only on the distribution of d(t,t′). This is not a diﬃcult task. To simplify slightly
+theformulaswewillconsider, insteadofthedistance, theoverlap q= 1−d, whichismeasured
+by the number of elements whose state is the same in the two conﬁgu rations, divided by N.
+An element σiis in the same state at time t+1 andt′+1 if its local ﬁeld has the same
+sign at time steps tandt′. Thus it holds
+σi(t+1)σi(t′+1) = sign
+/summationdisplay
+jkJijJikσk(t)σj(t′)
+. (16)
+Let us consider separately the contribution to this sum coming from the spins whose
+state is the same at time steps tandt′, whose number is Nq(t,t′), and that belong to a set
+that we indicate with the name I(t,t′). We can then write
+σi(t+1)σi(t′+1) = sign/parenleftBig
+(h+
+i(t))2−(h−
+i(t))2/parenrightBig
+, (17)
+where
+h+
+i(t) =/summationdisplay
+j∈I(t,t′)Jijσj(t), (18)
+h−
+i(t) =/summationdisplay
+j∈Ω/I(t,t′))Jijσj(t).
+7
+The annealed approximation consists in considering the local ﬁelds as random variables,
+correlated to the previous story of the system only through the v alue ofq(t,t′). In this spirit,
+we consider a dynamics in which the local ﬁelds are extracted at rand om at every time step,
+under the following assumptions:
+1. The local ﬁelds at diﬀerent points are independent random variab les;
+2. The value of σj(t) is independent on the synaptic coupling Jij.
+Both these assumptions have troubles when the synaptic couplings are correlated with
+each other, but they are quite reasonable for η= 0, which is the case that we are studying
+now. Assumption 1 implies that the transition probability is a binomial on e:
+Pr{q(t+1,t′+1) =qn|q(t,t′) =qm}=/parenleftBiggN
+n/parenrightBigg
+(γ(qm))n(1−γ(qm))N−n,(19)
+whereqn=n/N, andγ(q) is the probability that |˜h+(q)|>|˜h−(1−q)|, where, following
+assumption 2, ˜h±(q) is a Gaussian variable with mean value zero and variance q(this result
+is independent on the details of the distribution of the couplings, pro vided that they are all
+independent variables with mean value zero and with the same varianc e). A straightforward
+computation shows that
+γ(q) =2
+πarcsin√q. (20)
+The Markov process associated to this transition probability is ergo dic if we exclude as
+starting points the values q= 0 and q= 1, as we do imposing the opening condition, and
+the distribution of the distance evolves towards a stationary distr ibution. Moreover, since
+the transition probability is independent on l=t′−t, also the stationary distribution is
+independent on l, which appears only in the initial distribution of the variable q(0,l). It is
+also evident from the symmetry of the problem that it must hold γ(q) = 1−γ(1−q), so, if
+also the initial distribution is symmetric ( e.g.a binomial distribution around q= 1/2), the
+overlap distribution will be symmetric at every time step and it will be co ncentrated around
+the value Q(t,t′) =D(t,t′) = 1/2 (the distributions of the overlap and of the distance are
+perfectly equivalent in this case). The stationary distribution is, ind ependently on the initial
+one, concentrated around the value Q∗solution of the self-consistent equation:
+Q∗=γ(Q∗) =2
+πarcsin/radicalBig
+Q∗. (21)
+This equation has three solutions: 1 /2, 1 and 0, but only the ﬁrst one can be accepted,
+accordingtothecriterion |γ′(Q∗)|<1, whichcanbeobtainedeitherasthestabilitycondition
+of the ﬁxed point Q∗of the map Q(t+1,t′+1) =γ(Q(t,t′)), or as the condition that the
+variance of the stationary distribution is positive (see equation (25 ) below).
+Equation (21) is equivalent to the equation for the stationary value of the correlation
+function rigorously derived in [6] through a functional integral app roach, so that one can
+see from this comparison that the annealed approximation gives an e xact (though trivial)
+result concerning the average overlap. But our task here is to com pute the whole stationary
+8
+distribution of the overlap, and we can not prove that the annealed approximation is correct
+to this extent, so we have to rely upon simulations to control its valid ity.
+Though it is concentrated around Q∗= 1/2, the stationary distribution is much broader
+than a binomial one and thus the closing probability is exponentially larg er than 1 /2N. In
+order to compute its value, we proceed in this way [14]: since the tran sition probability is
+exponentially concentrated, we look for a solution of the form:
+PN(q(t,t′) =qn) =CN(qn,t)exp(−Nαt(qn)), (22)
+where we have dropped the ldependence of the probability, which disappears at stationarity.
+Using Stirling approximation for the binomial coeﬃcient and the saddle point approximation
+to average over the distribution at time step t−1, we get the following equation for the
+evolution of the exponent of the distribution, αt(x):
+αt(x) =αt−1(qt(x))+xlog/parenleftBiggx
+γ(qt(x))/parenrightBigg
++(1−x)log/parenleftBigg1−x
+1−γ(qt(x))/parenrightBigg
+,(23)
+where the function qt(x) must be determined self consistently solving the equation
+α′
+t−1(qt(x))−γ′(qt(x))/parenleftBiggx
+γ(qt(x))−1−x
+1−γ(qt(x))/parenrightBigg
+, (24)
+with the conditions qt(x)>0 andqt(x)<1.
+At stationarity the most probable overlap (the point where αt(q) has a minimum) is
+given by equation (21), and the variance of the distribution can be o btained taking the
+second derivative of equation (23) and solving it together with the ﬁ rst derivative of the
+saddle point condition (24). The result is
+V∗=Q∗(1−Q∗)
+1−(γ′(Q∗))2=1/4
+1−(2/π)2≈0.4204, (25)
+whereV∗is the variance of the stationary distribution multiplied times N. Thus the vari-
+ance is larger than in the case of a binomial distribution, since the dyn amics has produced
+correlations between diﬀerent elements.
+Thevalueoftheclosingprobabilitycannotbecomputedanalytically: w eneedforthisthe
+wholefunction α(x), andtoobtainitweshouldsolveatranscendent nonlocalequation . Thus
+we had to solve numerically equation (23), obtaining the stationary d istribution reported in
+Figure 1. The asymptotic closing probability, deﬁned as P∗
+N(q= 1)+P∗
+N(q= 0), is thus
+π∗
+N= 2exp(αN), (26)
+withα= 0.4554. As discussed in the previous section, the exponent of the av erage length of
+the cycles should be equal to α/2. This prediction is in good agreement with the numerical
+simulations that will be reported in section 4.
+2.4 Initial distribution
+In order to compute the average number of cycles we have to know the distribution of the
+overlapwiththeinitialconﬁguration, q(0,l), whichplaystheroleoftheinitialdistributionfor
+9
+the stochastic process studied in the previous subsection. Althou gh the number of cycles in
+fullyasymmetric neural networks wasalreadyexactly studied bySc hreckenberg [11], wewant
+to sketch the annealed computation of it, since it is much simpler and it can be generalized
+to more complex situations.
+Our aim is to compute the distribution of q(0,l). After one time step the annealed
+approximation is exact (we have still to extract all the couplings) an d trivial: every spin
+can be either in its initial state or in the reversed one with probability 1 /2, and the overlap
+q(0,1) multiplied times Nhas a binomial distribution with p= 1/2. After two time steps
+we distinguish two contributions in the local ﬁeld: one coming from the setI1of the spins
+which are in the same state at t= 0 and at t= 1 and another one coming from all the other
+spins. We write
+σi(0)σi(2) = sign
+/summationdisplay
+j∈I1σi(0)Jijσj(0)−/summationdisplay
+j∈Ω/I1σi(0)Jijσj(0)
+. (27)
+Since the states σi(0) andσj(0) are independent both one on each other and on the cou-
+plings, wecansetthemequal to1. Ifwechangethesignofthelast s um, weobtain σi(0)σi(1).
+Thus, depending on whether this is positive or negative, there are t wo possibilities:
+σi(0)σi(2) =
+
+sign/parenleftbigg/parenleftBig/summationtext
+j∈I1Jij/parenrightBig2−/parenleftBig/summationtext
+j∈Ω/I1Jij/parenrightBig2/parenrightbigg
+, if σ i(0)σi(1)>0
+sign/parenleftbigg/parenleftBig/summationtext
+j∈Ω/I1Jij/parenrightBig2−/parenleftBig/summationtext
+j∈I1Jij/parenrightBig2/parenrightbigg
+, if σ i(0)σi(1)<0(28)
+(there is indeed in this formula a small imprecision, which becomes neglig ible in the inﬁnite
+size limit: since the coupling Jiiis set equal to zero, we have not to take into account the spin
+j=iitself, which contributes to the ﬁrst sum in both lines). The probabilit y that the sum
+ofnGaussian variables has a module larger than that of the sum of N−nother Gaussian
+variables was already computed in the previous section, where it rec eived the name γ(n/N).
+Taking all this into account, we come to the transition probability
+Pr{q(0,2) =m/N|q(0,1) =n/N}= (29)
+=/summationdisplay
+k/parenleftBiggn
+k/parenrightBigg/parenleftBiggN−n
+m−k/parenrightBigg
+(γ(n/N))N−n−m+2k(1−γ(n/N))n+m−2k,
+where, as usual, the opening condition imposes to exclude as startin g points n= 0 and
+n=N, and the sum runs over all the values of kfor which the factorial is well deﬁned.
+The closing probability which can be deduced from this formula setting eitherm=Nor
+m= 0 coincides with the one exactly computed in ref. [11]. It can be easily seen that it is
+proportional to 1 /2N, as expected (the system loses memory of the initial conﬁguration quite
+fast), and the proportionality coeﬃcient can be computed with the saddle point method [11]
+In the general case, the information about q(0,l) is not enough to compute the distribu-
+tion ofq(0,l+1): we have also to know the value of q(0,1), as it can be seen from equation
+(28) where we have to substitute 1 with land 2 with l+1 in the equations but we have to
+keep memory of σi(0)σi(1) in the conditions. In the general case the transition probability
+has thus the form
+10
+Pr{q(0,l+1) =m/N|q(0,1) =n1/N,q(0,l) =n/N}= (30)
+=/summationdisplay
+k/parenleftBiggn1
+k/parenrightBigg/parenleftBiggN−n1
+m−k/parenrightBigg
+(γ(n/N))N−n1−m+2k(1−γ(n/N))n1+m−2k,
+and we have to consider the evolution of the joint distribution of the variables q(0,1) and
+q(0,l). As expected, the correlations between these two variables van ish very fast as lgrows,
+and the stationary distribution is the product of two binomial distrib utions, as it can be
+easily checked, so that for large lthe closing probability is π(a)
+N(0,l) = 1/2N(withaequal
+either to 1 or to 0), consistently with the supposed loss of memory a nd in agreement with
+the exact results of ref [11]. For small values of lit can be seen that π(a)
+N(0,l) =cl/2N, where
+clgoes to a ﬁnite value in the inﬁnite size limit, so that the total number o f cycles increases
+only proportionally to system size.
+3 Reversal symmetry
+The computations shown in section 2.2 must be modiﬁed to take into ac count the twofold
+nature of the closing probability. We have to distinguish between two kinds of cycles, with
+diﬀerent properties under the reversal operation:
+1. Cycles that close when C(t+l) =RC(t) (or, in other words, q(t,t+l) = 0), whose
+length is 2 l. They are invariant under the reversal operation: each conﬁgur ation is
+present together with its reversed one.
+2. Cycles that close when q(t,t+l) = 1. In this case the reversal operator applied to the
+cycle Γ produces a new cycle RΓ with equal length and equally large attraction basin.
+Taking this into account, we have to distinguish between cycles of ev en length, which
+can be of one of the two kinds, and cycles of odd length, which can be only of the ﬁrst kind.
+Cycle length distribution is then
+Pr{T=t,L=l}=1
+2τ2exp/parenleftBigg
+−(t+l)2
+2τ2/parenrightBigg
+, lodd; (31)
+=1
+2τ2exp/parenleftBigg
+−(t+l)2
+2τ2/parenrightBigg
++1
+2τ2exp/parenleftBigg
+−(t+l/2)2
+2τ2/parenrightBigg
+, leven,(32)
+withτ= 1/√π∗= 1/√
+2exp(0.2277N).
+The cycles of the ﬁrst type have only even length, so that their num ber is half of the
+number of the cycles of the second type. Using the result of subse ction 2.2 and summing up
+the contributions of both types of cycles we obtain, at the leading o rder inN,
+/summationdisplay
+l∝an}bracketle{tna(l)∝an}bracketri}ht ≈3
+2logτ=3
+4αN, (33)
+11
+which is 3 /2 times larger than in a Random Map with the same closing probability.
+The most important diﬀerence between attractors in Asymmetric N eural Networks and
+in a Random Map involves the distribution of the attraction basins weig hts. Let us consider
+separately cycles of the ﬁrst type and cycles of the second type ( taking only one cycle to
+represent each pair of cycles of the second type). We then get th e expression of the moments
+∝an}bracketle{tYn∝an}bracketri}htof the distribution of the weights:
+∝an}bracketle{tYn∝an}bracketri}ht=1
+2/angbracketleftBigg/summationdisplay
+α′Wn
+α′+2/summationdisplay
+α′′(Wα′′/2)n/angbracketrightBigg
+, (34)
+where the sum over α′andα′′of the weights are both normalized to one. Under the hypoth-
+esis that each of the two sets of weights is distributed as in a Random Map, we get
+∝an}bracketle{tYn∝an}bracketri}ht=/parenleftbigg1
+2+1
+2n/parenrightbigg
+∝an}bracketle{tYn∝an}bracketri}htRM, (35)
+or, using (10),
+∝an}bracketle{tYn+1∝an}bracketri}ht=1
+2(n!)2
+(2n+1)!(4n+2n). (36)
+Thusthemomentsofthedistributionoftheweightsaresmaller than intheusualRandom
+Map, for instance ∝an}bracketle{tY2∝an}bracketri}ht= 1/2 instead of 2/3. These results are in very good agreement with
+numerical simulations.
+To prove equation (35) let us recall that ∝an}bracketle{tYn∝an}bracketri}htcan be interpreted as the probability that
+nrandomly chosen trajectories reach the same attractor. We can compute such quantity
+using the closing probabilities and following exactly the same lines as in [19 ], but we have to
+remember that a closing event has two diﬀerent meanings: either a c losure on an identical
+conﬁguration ( q= 1) or a closure on a reversed conﬁguration ( q= 0). Thus not all the
+events which represent the closure of the ntrajectories, and whose probability is exactly
+∝an}bracketle{tYn∝an}bracketri}htRM, have the meaning that the trajectories will ultimately meet. If the ﬁrst trajectory
+closes with q= 0 (this happens with probability 1/2), its attraction basin contains also all of
+the reversed conﬁgurations, and the following n−1 trajectories which close on it will then go
+to the same attractor, regardless on how they close. On the cont rary, if the ﬁrst trajectory
+closes with q= 1, the following n−1 trajectories have also to close with q= 1 in order to
+go to the same attraction basin (if they close with q= 0, they go to the reversed basin).
+In this case, whose probability is again 1 /2, a closing event is equivalent to an asymptotic
+meeting of the ntrajectories only with probability 1 /2n−1. Equation (35) is thus proved.
+3.1 Explicit symmetry breaking
+The above picture of the distribution of the attraction basins weigh ts is completely destroyed
+by the introduction of a magnetic ﬁeld, however small, in the equation s of motion (1), which
+restores the distribution typical of a Random Map. We considered t he dynamic rules
+σi(t+1) = sign
+/summationdisplay
+jJijσj(t)−h
+ (37)
+12
+The magnetic ﬁeld hhas the biological meaning of the threshold of activation of the
+neurons. In real neurons, such non-zero threshold exists and c an be diﬀerent from one
+neuron to another one. In our simpliﬁed model, we take a threshold w hich is constant
+among the diﬀerent neurons. Its introduction explicitly breaks the symmetry respect to the
+reversal of all the neural activities.
+In the framework of the annealed approximation, the conditional p robability that the
+activity of a neuron is the same in two diﬀerent time steps is not more s ymmetric, i.e.
+γ(1−q) is diﬀerent from 1 −γ(q) andγ(1) increases very fast respect to the above case,
+thus making very unlikely a reversed closure, while γ(0) decreases. After a straightforward
+calculation we get
+γ(q) = 1−2
+π/integraldisplayπ/2
+arcsin√qexp/parenleftbigg
+−1
+2(h/sint)2/parenrightbigg
+dt. (38)
+For large threshold the closing probability diﬀers from 1 by a value tha t cancels very fast,
+as exp(−h2/2).
+The attractors of the ﬁrst type (such that Γ = RΓ) are completely destroyed in this way,
+while attractors of the second type do not live in pairs anymore, and the distribution of the
+weights is of the Random Map type.
+4 Numerical results
+4.1 Distribution of the overlap and closing probabilities
+Our ﬁrst aim was to compare the distribution of the overlap predicte d by the annealed
+approximation with the same distribution in the quenched system. As we wrote, the analogy
+holds if we measure the overlap between conﬁgurations only along th e trajectories that
+are not yet closed when we do the measurement. Under this conditio n, we computed the
+distribution of the overlap q(t,t+l) forlﬁxed and tlarge enough to suppose that the
+distribution has attained stationarity.
+The exponent α(q) of the distribution of the overlap is deﬁned by the equation PN(q) =
+CN(q)exp(−Nα(q)), wherethefactor CN(q), proportionalto1 /√
+N, comes fromtheStirling
+expansion of the binomial coeﬃcient. Thus we computed α(q) using the formula
+α(q) =−1
+N/parenleftbigg
+log(PN(q))+1
+2logN/parenrightbigg
+. (39)
+The logarithmic term must not be subtracted when qis equal to 0 or 1, because in this
+case the 1 /√
+Nfactor is no more present in the expansion of the binomial coeﬃcient , and
+so we did not consider it for q= 0 and 1, interpolating linearly between the two formulas
+for values of qbetween 0 and 0 .1 and between 0 .9 and 1. In such data analysis we neglect
+terms of order 1 /N(there is also an unknown coeﬃcient in the expression of the probab ility
+P(q)), and the agreement between the annealed prediction for α(q) and the quenched data,
+compared in Figure 1, is then very satisfactory even for a system o f such a small size (we
+considered N= 20). When l, the temporal distance between conﬁgurations, is small, there
+aresomediscrepancies (forinstance, for l= 2thequencheddistributionismuchbroaderthan
+expected, and the closing probability is consequently much higher), but when lis large the
+13
+0.0 0.2 0.4 0.6 0.8 1.0
+q0.00.10.20.30.40.5α(q)l=2
+l=32
+Figure 1: Exponent α(q)computed from the equation PN(q) =CN(q)exp(−Nα(q)), where
+PN(q)is the stationary overlap distribution, with both q=q(t,t+ 2)(diamonds) and q=
+q(t,t+32)(triangles). The solid line shows the annealed prediction. The agreement is better
+in the second case, when the temporal distance between conﬁg urations is larger. System size
+isN= 20andh= 0.
+agreement improves (in particular, the variance of the distribution and the exponents α(0)
+andα(1) of the closing probabilities coincide within the errors with the pred icted values).
+This fact sustains our interpretation that the annealed approxima tion is valid when the
+temporal distance is large, so that the system has lost memory of t he details of its evolution
+[14, 21].
+Next we measured the closing probability πN(t,t+l). Figure 2 represents this quantity
+as a function of tfor diﬀerent values of l, kept ﬁxed. The statistic errors are large, but it
+appears that π(t,t+l) reaches a value approximately stationary in t, in agreement with
+the annealed prediction, when lis large (in ﬁgure 2b we have l= 11) but when lis small
+(in ﬁgure 2a l= 2) the closing probability reaches a maximum value and then decreas es,
+as a function of t. We already observed this kind of non monotonic behavior of the clos ing
+probabilities in simulations of Kauﬀman model. In both cases we interpr et the decreasing
+part ofπ(t) as due to the opening condition: the condition that the trajector y is not closed
+up to time tselects, as tgrows, trajectories which are more and more unlikely to close.
+14
+0 20 40 60
+t0e+001e−042e−043e−044e−045e−04π(t,t+11)
+0 20 40 60 80
+t0e+002e−044e−046e−04π(t,t+2)
+(b) (a)
+Figure 2: Closing probability πN(t,t+l)as a function of t, forl= 2(a) andl= 11(b).
+System size is N= 20withh= 0.
+The opening condition cannot be imposed in the annealed scheme, bec ause we consider the
+stochastic process d(t,t+l) withlﬁxed and we cannot control d(t,t′) for generic tand
+t′. So the annealed scheme must be modiﬁed to take into account this f act [14]. But in
+asymmetric neural networks, diﬀerently from what we observed in Kauﬀman networks, the
+opening condition seems to be irrelevant when the temporal distanc elis large, and the
+closing probability appears to reach in this case an approximately sta tionary value.
+The non-stationarity of the distribution of q(t,t+ 2) shows the existence of memory
+eﬀects in the model: the statistical properties of q(t,t+ 2) still depend on t, even after
+an arbitrarily long transient time. It would be interesting to ﬁnd out w hether the lack of
+time translation invariance in the system with completely uncorrelate d couplings has some
+relation with aging in the relaxational dynamics of the SK spin glass mod el [22]. In the
+present case, however, the lack of time translation invariance is on ly a minor eﬀect and
+does not prevent the overlap q(t,t+l) from reaching a stationary distribution for llarge
+enough. The macroscopic properties of the dynamics can be predic ted, in good agreement
+with numerical results, also neglecting this eﬀect at all.
+We conclude this subsection showing a plot of the integral closing pro bability ˜πN(t),
+15
+0.0 20.0 40.0 60.0 80.0
+t0.0000.0050.0100.015πN
+Figure 3: Integral closing probability, πN(t) =/summationtext
+t′πN(t′,t)as a function of tin a system of
+size 20 with h= 0
+deﬁned as
+˜πN(t) =t−1/summationdisplay
+t′=0πN(t′,t) (40)
+this is the probability that a trajectory not closed at time t−1 closes at time t). In Kauﬀman
+networks, this quantity is non-monotonic as a function of t: it increases to a maximum value
+and then decreases with t. On the other hand, from the annealed approximation we would
+expect ittoincrease linearlywith tinthestationarystate. Inasymmetric neuralnetworks we
+found that the integral closing probability increases monotonically w itht. After a transient
+phase of very fast increase it slows down, and asymptotically it appe ars to behave as a power
+law. For the largest systems that we simulated our data are very no isy, and we could ﬁt
+the asymptotic tbehavior only for N= 20, ﬁnding that the best ﬁt exponent of the power
+law is approximately 0 .6. So, at least for systems of not very large size, deviations from t he
+annealed approximation are present also in this case.
+16
+10 20 30 40
+N0.00.10.20.30.40.5<Yn>
+Figure 4: Moments of the distribution of the attraction basin weights versus system size N
+forh= 0:∝an}bracketle{tY2∝an}bracketri}ht(diamonds); ∝an}bracketle{tY2
+2∝an}bracketri}ht(squares); ∝an}bracketle{tY3∝an}bracketri}ht(triangles) and ∝an}bracketle{tY4∝an}bracketri}ht(stars). The dotted
+lines show the predictions of the annealed approximation.
+4.2 Properties of attractors: zero threshold
+To obtain the ﬁrst three moments of the distribution of the attrac tion basins we followed
+the method indicated in [20]. For every value of the parameters Nandh= 0 we generated
+at random 2000 networks, extracting the synaptic couplings with G aussian distribution, and
+we simulated four randomly chosen trajectories on each of them.
+The average weight of the basins, ∝an}bracketle{tY2∝an}bracketri}ht, was estimated from the probability that two
+diﬀerent trajectories end up on the same periodic orbit. In genera l [20],∝an}bracketle{tYn∝an}bracketri}htcan be mea-
+sured as the probability that ndiﬀerent initial conﬁgurations evolve to the same attractor.
+Simulating four initial conﬁgurations it is also possible to measure ∝an}bracketle{tY2
+2∝an}bracketri}htas the probability
+that each of two pairs of conﬁgurations end up on a same attracto r, the two attractors being
+either diﬀerent or equal.
+Figure 4 shows data which report the behavior of the moments of at traction basin dis-
+tribution for systems of diﬀerent size, N. It can be seen that they rapidly converge to
+the predictions of the annealed approximation, corrected to take into account the reversal
+symmetry.
+17
+0 10 20 30 40 50 60
+N100101102103104105<L>
+Figure 5: Average length of the cycles as a function of system size for h= 0.
+The average cycles length increases exponentially with system size, ∝an}bracketle{tL∝an}bracketri}ht ∝exp(αL/2N).
+The exponent αL/2 is less than log2 /2 = 0.347, as it would be in a completely random
+map. Its value αL/2 = 0.224 is in good agreement with the prediction of the annealed
+approximation, α/2 = 0.228 (the small discrepancy could be a ﬁnite size eﬀect, as the expo-
+nent estimated from numerical data increases when only the larges t systems are considered).
+Figure 5 shows the average length of the cycles versus system size .
+The distribution of cycle length is much broader than it is expected on the basis of the
+annealed approximation, and asymptotically behaves as a stretche d exponential:
+Pr{L > l} ≈exp(−(l/τN)γN). (41)
+As discussed in the previous sections, the distribution is diﬀerent fo r the two diﬀerent
+types of cycles. We considered only odd cycles, in order to select on ly attractors of the
+second type, and we checked that the scale of the distribution, τN, increases exponentially
+withN,τN∝exp(αP/2N), where the exponent αPcoincides with αLwithin the errors.
+On the other hand the exponent γNof the stretched exponential, for which the annealed
+approximation predicts the value 2, is instead less than 1 for all of th e system sizes that we
+examined, but it appears to increase slightly as Ngrows (though are data about this point
+are very noisy), so that it is possible that this discrepancy shall disa ppear in the inﬁnite size
+18
+limit.
+The fact that we ﬁnd γNless than 1 appears challenging also because the distribution
+of the closing time ( i.e.the sum of the transient time plus the length of the cycle), which
+should have the same behavior of the distribution of cycle length, ac cording to the annealed
+approximation, is indeed much steeper: it can be ﬁtted to a stretch ed exponential of the
+same form (41), but with a much larger exponent γ′
+N. For instance, for N= 20, we ﬁnd
+γ′
+N= 1.9, in good agreement with the annealed prediction, while the value of γNis 0.69.
+4.3 Properties of attractors: broken symmetry
+When we consider the evolution equation (37) with a threshold h, the reversal symmetry
+is explicitly broken and the distribution of the weights is the same as in t he usual Random
+Map.
+Figure 6 shows the behavior of the ﬁrst moments of the distribution of the weights as a
+function of system size Nforh= 0.1. Such threshold is so small that it modiﬁes the value
+of the exponent αby less than 2 percent. The annealed approximation predicts in this c ase
+α= 0.448, to be compared to the value 0 .455 found with zero threshold. The prediction is
+in good agreement with numerical simulations: a ﬁt of the average len gth of the cycles gives
+αL= 0.44. For such a small threshold we can observe traces of the broke n symmetry present
+as ﬁnite size eﬀects: the moments of the distribution at small Nfall below the Random
+Map values, even if of a very small amount, and then increase to tho se values, which are
+maintained asymptotically in system size.
+On the other hand, when the threshold is larger, we do not see at all the signs of the
+symmetry on the distribution: for h= 1, the average basin weight decreases monotonically
+from the value 1 at small Ntoward the Random Map value ∝an}bracketle{tY2∝an}bracketri}ht= 2/3. For such a threshold
+theaveragelengthofthecyclesstillbehaves exponentiallywith N, buttheexponent αisvery
+small and power law corrections have important eﬀects also for sys tems large to simulate,
+as it appears from the fact that the best ﬁt exponent depends sig niﬁcantly on system size
+(it decrease as system size increases), and we could not estimate it accurately. Nevertheless,
+the agreement between the annealed approximation, which predict sα= 0.128, and the
+numerical result αL= 0.15, is worse than in the previous cases but still not bad.
+5 Summary and conclusions
+In this work we used a stochastic scheme, based on the closing prob abilities and on their ap-
+proximation by means of a Markovian stochastic process, in order t o compute the properties
+of the attractors in fully asymmetric neural networks. The funda mental hypothesis behind
+this approximation is that the system forgets fast enough the det ails of its past evolution,
+so that a one step memory is already enough to describe the gross f eatures of the dynamics.
+Our method is able to predict very satisfactorily the Nbehavior of the typical lengths of the
+cycles and typical transient times, the number of cycles, the distr ibution of their attraction
+basin weights and also the main features of the distribution of the dis tances. On the other
+hand, the approximation fails to predict the shape of the distributio n of cycle length, which
+is much broader than we would expect.
+19
+0 10 20 30
+N0.40.60.8<Yn>
+Figure 6: Moments of the distribution of the attraction basin weights versus system size N
+forh= 0.1. :∝an}bracketle{tY2∝an}bracketri}ht(diamonds); ∝an}bracketle{tY2
+2∝an}bracketri}ht(squares); ∝an}bracketle{tY3∝an}bracketri}ht(triangles) and ∝an}bracketle{tY4∝an}bracketri}ht(stars). The dotted
+lines show the predictions of the annealed approximation.
+20
+The average number of cycles had already been exactly computed, and perhaps other
+quantities can be exactly computed in this model, but the present me thod has the advan-
+tage of being very simple, and we hope that it can be applied to more co mplex situations.
+In particular with this method we argue that the distribution of attr action basins is, for
+disordered dynamical systems that are “chaotic enough”, always equal to the one computed
+by Derrida and Flyvbjerg for the case of an uniform Random Map [19].
+A possible extension of our method, that we consider very interest ing and that we plan
+to pursue further, is towards the study of neural networks with ﬁnite symmetry. Numerical
+studies suggest that such systems undergo an abrupt change of dynamical regime when the
+symmetry ηis changed [9], but a “mean ﬁeld” description of this transition from an ordered
+behavior to chaos is still lacking. The possibility that such a change ca n be characterized as
+a transition between memory and loss of memory is very appealing. Me mory eﬀects are more
+andmoreimportantfornetworkswithnon-zerocouplingsymmetry (tillthewell-known aging
+propertiesoftheSKmodelareapproached). Becauseofthesee ﬀects, itisnecessarytomodify
+our method also to study the chaotic regime of the model (low symme try). Technically this
+is not an easy task, since for non zero symmetry correlations arise both between the local
+ﬁelds (see equations (18)) of diﬀerent neurons and, more diﬃcult t o treat, between synaptic
+couplings and dynamical variables. The latter introduce an eﬀective interaction between the
+state of an element at two diﬀerent time steps tandt+ 2, so that in the dynamics also
+an eﬀective gradient ﬂow is present, and, if the annealed approxima tion can describe this
+situation, it will be necessary to take into account also this informat ion, aside the crude
+distance, to make the annealed scheme useful.
+Studying this family of models it is also possible, varying the continuous parameters η
+andh, to go from the distribution of the attraction basins typical of the Random Map to
+the one typical of Spin Glasses, thus the study of the general mod el would shed some light
+on the relation between the two kinds of distributions.
+Memory eﬀects are probably responsible of the discrepancy betwe en the prediction of the
+annealed approximation and the observed distribution of cycle lengt h. In fact, the distance
+d(t,t′)doesnotreachastationarydistribution, ifwe imposethecondition thatthetrajectory
+is not yet closed before the measure. We think that this condition, w hich can not be imposed
+in our computation, selects trajectories that are less and less likely to close. As a result,
+the integral closing probability, which is our main tool in the computat ion, increases as a
+function of tslower than expected. It is possible that this eﬀect shows up only at smallland
+disappears in the inﬁnite size limit (an hint of this could be the fact that the distribution
+of cycle length decays faster in this limit), but it is also possible that, a s in the case of
+Kauﬀman model that we previously studied, some corrections to th e annealed picture are
+necessary also in the inﬁnite size limit. However, we think that these r esults show that the
+annealed approximation is an useful tool to investigate in a simple way the properties of
+attractors in disordered dynamical systems.
+Acknowledgments
+We are indebted to Angelo Vulpiani for addressing us to this model. U.B . is pleased to thank
+Peter Grassberger and Heiko Rieger for interesting discussions.
+21
+References
+[1] J.J. Hopﬁeld (1982), Neural networks and physical systems wit h emergent collective
+computational abilities, Proc. Nat. Acad. Sci. USA ,79, 2554
+[2] G. Parisi (1986), Asymmetric neural networks and the proces s of learning, J. Phys. A:
+Math. Gen. 19, L675
+[3] A. Crisanti and H. Sompolinsky (1987), Dynamics of spin systems with randomly
+asymmetric bonds: Langevin dynamics and a spherical model, Phys. Rev. A 364922.
+[4] A. Crisanti and H. Sompolinsky (1988), Phys. Rev. A 374865.
+[5] H. Gutfreund, J.D. Reger and A.P. Young (1988), The nature of attractors in an
+asymmetric spin glass with deterministic dynamics, J. Phys. A: Math. Gen. 21, 2775
+[6] H. Rieger, M. Schreckenberg, and J. Zittartz (1989), Glauber dynamics of the asym-
+metric SK model, Z. Phys. B - Condensed Matter 74, 527
+[7] H. Rieger, M. Schreckenberg, P. Spitzner and W. Kinzel (1991) , Alignment in the fully
+asymmetric SK model, J. Phys. A: Math. Gen. 24, 3399
+[8] T. Pfenning, H. Rieger and M. Schreckenberg (1991), Numerica l investigation of the
+asymmetric SK model with deterministic dynamics, J. Phys. I 1, 323
+[9] K. N¨ utzel (1991), The length of attractors in asymmetric ran dom neural networks with
+deterministic dynamics, J. Phys. A: Math. Gen. 24, L151.
+[10] K. N¨ utzel, U. Krey (1993), Subtle dynamical behavior of ﬁnite size Sherrington-
+Kirkpatrick spin glasses with non symmetric couplings, J. Phys. A: Math. Gen. 26,
+L591
+[11] M. Schreckenberg (1992), Attractors in the fully asymmetric SK model, Z. Phys. B -
+Condensed Matter 86, 453.
+[12] B. Derrida and Y. Pomeau (1986), Random Networks of Automa ta: a Simple Annealed
+Approximation, Biophys. Lett. 1(2), 45-49
+[13] S.A. Kauﬀman (1969), J. Theor. Biol. 22, 437 Homoeostasis and Diﬀerentiation in
+Random Genetic Control Networks, Nature 244, 177-178. S.A. Kauﬀman (1993), Ori-
+gins of Order: Self-Organization and Selection in Evolutio n, Oxford University Press
+[14] U. Bastolla and G. Parisi (1966), Closing probabilities in the Kauﬀm an Model: an
+annealed computation, Physica D 98, 1
+[15] A. Crisanti, M. Falcioni and A. Vulpiani (1993), Transition from r egular to complex
+behavior in a discrete deterministic asymmetric neural network mod el,J. Phys. A:
+Math. Gen. 26, 3441
+22
+[16] B. Derrida and G. Weisbuch (1986), Evolution of overlaps betwe en conﬁgurations in
+random Boolean networks, J. Physique 47, 1297
+[17] H.J. Hilorst and M. Nijmajer (1987), On the approach of the sta tionary state in Kauﬀ-
+man’s random boolean network, J. Physique 48, 185
+[18] N. Metropolis and S. Ulam (1953), Am. Math. Monthly 60252. B. Harris (1960), Ann.
+Math. Stat. 311045.
+[19] B. Derrida, H. Flyvbjerg (1986), The random map model: a disor dered model with
+deterministic dynamics, Journal de Physique 48, 971-978
+[20] B. Derrida and H. Flyvbjerg (1986), Multivalley Structure in Kau ﬀman’s Model: Anal-
+ogy with Spin Glasses, J.Phys.A: Math.Gen. 19, L1003-L1008
+[21] U. Bastolla and G. Parisi (1997), Attraction basins in discretize d maps, J. Phys. A:
+Math. Gen. , /bf 30, 3757
+[22] J.P. Bouchod, L.F. Cugliandolo, J. Kurchan and M. Mezard (1997 ), Out of equilibrium
+dynamics in Spin-Glasses and other Glassy Systems, cond-mat/970 2070
+23

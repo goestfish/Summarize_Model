@@ -1,0 +1,720 @@
+arXiv:cond-mat/9807394v1  [cond-mat.dis-nn]  30 Jul 1998Life and Death near a Windy Oasis
+Karin A. Dahmen, David R. Nelson
+Lyman Laboratory of Physics, Harvard University, Cambrigd e, MA, 02138
+Nadav M. Shnerb
+Racah Institute of Physics, Hebrew University, Jerusalem 9 1904, Israel
+We propose a simple experiment to study delocalization and e xtinction in inhomogeneous bio-
+logical systems. The nonlinear steady state for, say, a bact eria colony living on and near a patch
+of nutrient or favorable illumination (“oasis”) in the pres ence of a drift term (“wind”) is computed.
+The bacteria, described by a simple generalization of the Fi sher equation, diﬀuse, divide A→A+A,
+dieA→0, and annihilate A+A→0. At high wind velocities all bacteria are blown into an un-
+favorable region (“desert”), and the colony dies out. At low velocity a steady state concentration
+survives near the oasis. In between these two regimes there i s a critical velocity at which bacte-
+ria ﬁrst survive. If the “desert” supports a small nonzero po pulation, this extinction transition is
+replaced by a delocalization transition with increasing ve locity. Predictions for the behavior as a
+function of wind velocity are made for one and two dimensions .
+PACS numbers: 05.70.Ln,87.22.As,05.40.+j
+I. INTRODUCTION AND RESULTS
+Bacterial growth in a petri dish, the basic experiment of microbiolog y, is a familiar but interesting phenomenon.
+Depending on the nutrient and agar concentration, a variety of int riguing growth patterns have been observed [1–4].
+Some regimes can be modeled by diﬀusion limited aggregation, others b y Eden models, and still others exhibit ring
+structures or a two-dimensional modulation in the bacterial densit y. At high nutrient concentration and low agar
+density, there is a large regime of simple growth of a circular patch (a fter point innoculation), described by a Fisher
+equation [5], and studied experimentally in Ref. [1].
+Of course, most bacteria do not live in petri dishes, but rather in inh omogeneous environments characterized by,
+e.g., spatially varying growth rates and/or diﬀusion constants. Oft en, as in the soil after a rain storm (or in a sewage
+treatment plant), bacterial diﬀusion and growth are accompanied by convective drift in an aqueous medium through
+the disorder. By creating artiﬁcially modulated growth environment s in petri dishes, one can begin to study how
+bacteria (and other species populations) grow in circumstances mo re typical of the real world. More generally, the
+challenges posed by combining inhomogeneous biological processes w ith various types of ﬂuid ﬂows [6] seem likely to
+attract considerable interest in the future. The easiest problem t o study in the context of bacteria is to determine
+how ﬁxed spatial inhomogeneities and convective ﬂow aﬀect the simp le regime of Fisher equation growth mentioned
+above.
+A delocalization transition in inhomogeneous biological systems has re cently been proposed, focusing on a single
+species continuous growth model, in which the population disperses v ia diﬀusion and convection [7]: the Fisher
+equation [5] for the population number density c(x,t), generalized to account for convection and an inhomogeneous
+growth rate, reads [7,8]
+∂c(x,t)/∂t=D∇2c(x,t)−v·∇c(x,t)
++U(x)c(x,t)−bc2(x,t), (1)
+whereDis the diﬀusion constant of the system, vis the spatially homogeneous convection (“wind”) velocity, and bis
+a phenomenological parameter responsible for the limiting of the con centrationc(x,t) to some maximum saturation
+value (by competition processes of the kind A+A→0 [8]). The growth rate U(x) is a random function which
+describes a spatially random nutrient concentration, or, for phot osynthetic bacteria, an inhomogeneous illumination
+pattern [7]. If U(x) is constant over the entire sample, then the convection term −v· ∇c(x,t) has no eﬀect on the
+growth of the bacteria. Only the introduction of a spatial depende nce for the growth rate U(x) makes the convection
+term interesting. In the following we consider the simple case of a “sq uare-well potential” shape for U(x), imposing
+a positive growth rate aon an illuminated patch (“oasis”), and a negative growth rate −ǫaoutside (“desert”) [9]:
+U(x) =
+
+a,for|x|<W
+2,
+−ǫa,for|x| ≥W
+2,(2)
+1
+whereWis the diameter of the oasis. Experimentally this could be realized using a very simple setup, which
+both illustrates the basic ideas of localization and delocalization, and le ads to interesting further questions. A one
+dimensional example is shown in ﬁgure 1, where a solution with photosy nthetic bacteria in a thin circular pipe, or
+annular petri dish, is illuminated by a ﬁxed uniform light source throug h a mask, leading to a “square well” intensity
+distribution. The mask is moved at a small, constant velocity around t he sample to simulate convective ﬂow. (Moving
+the mask is equivalent to introducing convective ﬂow in the system, u p to a change of reference frame [10].) The
+bacteria are assumed to divide in the brightly illuminated area (“oasis” ) at a certain rate, but division ceases or
+proceeds at a greatly reduced rate in the darker region (“desert ”) outside. As a result, the growth rate in this
+continuum population dynamics model is positive in the oasis and small ( positive or negative) in the surrounding
+desert region. Using this simple nonlinear growth model, we discuss pr edictions for the total number of bacteria
+expected to survive in the steady state, the shape of their distrib ution in space and other quantities, as a function of
+the “convection velocity” of the light source.
+vW
+FIG. 1. Experimental setup: a solution with photosynthetic bacteria in a circular pipe or a thin annular track in a petri d ish,
+is illuminated only in a small area, while the rest of the samp le is either kept dark or illuminated with reduced intensity . The
+light source is moved slowly around the sample to model conve ctive ﬂow. The bacteria are assumed to divide in the illumina ted
+area (“oasis”) at a certain growth rate a >0, and die (or grow modestly) in the remaining area (“desert” ) with growth rate
+−ǫa.
+It is interesting to consider the class of biological situations discuss ed in this paper in the context of the ”critical
+size problem” in population dynamics [11]. In the critical size problem on e asks for the minimal size of habitat for the
+survival of a population undergoing logistic growth and diﬀusion, whe re the region is surrounded by a totally hostile
+environment, i.e., no drift and an inﬁnite death rate outside the oasis . We show here that the linearized version of the
+critical size problem is closely related to a well known problem in quantu m mechanics, and present a generalization of
+this problem to include other types of surrounding environments, a s well as the eﬀect of drift. The linearized version
+of equation (1) around c(x,t) = 0 reads
+∂c(x,t)/∂t=Lc(x,t), (3)
+with the linearized growth operator
+L=D∇2−v·∇+U(x). (4)
+(We discuss later the validity of this linear approximation and compare the results with lattice simulations of the
+full nonlinear problem.) For nonzero convection velocity v,Lis non-Hermitian, but it can still be diagonalized by
+a complete set of right and left eigenvectors, {φR
+n(x)}and{φL
+n(x)}, with eigenvalues Γ n[12,7], and orthogonality
+condition
+2
+/integraldisplay
+ddxφL
+m(x)φR
+n(x) =δm,n, (5)
+(dis the dimension of the substrate, we focus here on d= 1 ord= 2). The time evolution of c(x,t) is then given by
+c(x,t) =/summationdisplay
+ncnφR
+n(x)exp(Γ nt), (6)
+where the initial conditions and left eigenfunctions determine the co eﬃcients {cn},
+cn=/integraldisplay
+ddxφL
+n(x)c(x,t= 0). (7)
+Figure 2 shows the complex eigenvalue spectrum with the potential ( 2) for four diﬀerent values of the convection
+velocityv, for a one dimensional lattice approximation to (4) (see Appendix A) with periodic boundary conditions.
+The derivation of these results is discussed in section II below. At ze ro velocity Lis Hermitian and all eigenvalues
+Γnare real. There are bound states (discrete spectrum) and exten ded or delocalized states (continuous spectrum).
+At ﬁnite velocities, all except one of the delocalized states acquire a complex eigenvalue. States with positive real
+part of the eigenvalue ( ReΓn>0) grow exponentially with time, states with negative real part ( ReΓn<0) decrease
+exponentially with time (see Eq. (6)). In a large one dimensional syst em the “mobility edge” [13], which we deﬁne to
+be the eigenvalue of the fastest growing delocalized state, (i.e. the rightmost eigenvalue in the complex parabolas of
+ﬁgure 2), is located at the overall average growth rate
+Γ∗=/an}b∇acketle{tU/an}b∇acket∇i}ht ≡/integraldisplayL
+0dxU(x)/L≃ −ǫa, (8)
+(up to corrections of order O(1/L) where the system size Lis the mean circumference of the annulus in ﬁgure 1).
+In ﬁgure 2, the eigenvalues of the localized states compose the disc rete, real spectrum to the right of the mobility
+edge. With increasing velocity these localized eigenvalues move to the left by an amount proportional to v2/4D, and
+successively enter the continuous delocalized spectrum through t he mobility edge, which remains ﬁxed. The parabola
+broadens in the vertical direction – the imaginary parts of the eigen values of the delocalized states grow by an amount
+proportional to v. A given localized right eigenfunction φR
+nundergoes a “delocalization transition” when the velocity
+reaches a corresponding critical delocalization velocity v=v∗
+n, at which its eigenvalue Γ nhas been shifted so far to
+the left that it just touches Γ∗. At higher velocities it joins the parabola of eigenvalues describing a c ontinuum of
+delocalized states. The ease with which such a delocalization transitio n can be observed experimentally depends on
+whether there are growing delocalized eigenstates in the system, i.e . whether the mobility edge has a positive real
+value or not.
+3
+-1.1 -0.9 -0.7 -0.5 -0.3 -0.1 0.1 0.3 0.5 0.7
+Re{Γn}/U0-2.0-1.5-1.0-0.50.00.51.01.52.0Im{Γn}/U0Spectrum for different drift velocities
+(Extinction Transition at v/vF ~1)
+1.39
+0.93
+v/vF =00.39
+FIG. 2. Complex nonhermitian eigenvalue spectra (normaliz ed by the diﬀerence of the growth rates inside and outside the
+oasisU0=a+ǫa= 1) at velocities above and below the extinction transition . The spectra are extracted from numerical
+simulations of the lattice model described in Appendix B, fo r a system of 1000 sites, oasis width W= 20 sites, D= 0.3,
+with growth rate U=−0.5 in the desert and U= +0.5 in the oasis, so that the average growth rate is is −0.48 (which is
+equal to the mobility edge Γ∗up to ﬁnite size eﬀects). The chosen velocity parameters (in units of the Fisher wave velocity
+in the oasis vF= 2√
+aD[5]) arev/vF∼0 (circles), v/vF∼0.39 (plus),v/vF∼0.93 (triangles), and v/vF∼1.39 (squares).
+The point spectra are slightly oﬀset in the y-direction so as to be able to distinguish the eigenvalues of the localized states
+for diﬀerent velocities. As described in the introduction, the mobility edge remains roughly ﬁxed, and the parabola of t he
+delocalized eigenvalues opens up as v/vFis increased. The real, localized eigenvalues move to the le ft for higher velocities. At
+v/vF≥1.39 all states are delocalized. (This ﬁgure actually only sho ws the part of the spectrum which corresponds to the
+continuum problem. The lattice calculation also yields a le ft part of the spectrum – not shown here – which is an artifact o f
+the discrete lattice.)
+In a large “deadly” desert ( /an}b∇acketle{tU/an}b∇acket∇i}ht ≃ −ǫa<0) all delocalized states die out, because the mobility edge lies to the le ft
+of the origin, as in ﬁgure 2. The growth rate of each localized eigenst ateφR
+nthen becomes negative at a corresponding
+“extinction” velocity vncwhich is smaller than the corresponding delocalization velocity v∗
+n. Thus, as convection
+is increased, the population dies out before it can delocalize. Later in this paper, we make speciﬁc predictions for
+the behavior of populations near the extinction transition, which oc curs forv=v0c> vncfor alln >0, when the
+eigenvalue of the localized “ground state” (fastest growing eigenf unction of L) passes through the origin.
+If the average growth rate /an}b∇acketle{tU/an}b∇acket∇i}htis positive ( i.efor a small enough desert or a small positive growth rate in an inﬁnite
+desert), the mobility edge lies to the right of the origin and the deloca lization transition can indeed be observed at
+v=v∗
+0where the “ground state” becomes delocalized. One expects to se euniversal behavior near this delocalization
+transition, since there is a diverging correlation length in the system , which renders microscopic details irrelevant
+for certain quantities. We report predictions (see also [14]), for qu antities such as the dependence of the localization
+length on the drift velocity as it approaches the delocalization velocit y, and the shape of the concentration proﬁle
+near the transition.
+A special (universal) behavior is expected for the spatially average growth rate /an}b∇acketle{tU/an}b∇acket∇i}ht= 0. In this case the delo-
+calization and extinction velocities coincide. Figure 3 summarizes the d iﬀerent scenarios in a sketch of the phase
+diagram for large systems with ﬁxed well depth U0≡(a+ǫa), tuning the drift velocity, and the average growth
+rate/an}b∇acketle{tU/an}b∇acket∇i}ht=−ǫa. Also shown in ﬁgure 3 is a horizontal transition line at /an}b∇acketle{tU/an}b∇acket∇i}ht= 0 separating a small velocity region
+(ǫ<0) where localized modes dominate the steady state bacterial popu lation, from one ( ǫ>0) containing a mixture
+of localized and extended states. The experimental signature of t his interesting transition, (which could be accessed
+by increasing the light intensity for photosynthetic bacteria at ﬁxe d convection velocity) will be discussed in a future
+4
+publication [14]. It is of course also possible to drive a population extinctat zero velocity simply by lowering the
+average growth rate. This special transition at /an}b∇acketle{tU/an}b∇acket∇i}ht=−Ucis indicated at the bottom of ﬁgure 3.
+v<U>
+Mixed
+are active)(both extended and localized modes (all modes are extended)Extended Extended 
+(only localized modes active)
+Localized
+Extinct Extinct(all modes are extended)
+-Ucv c
+FIG. 3. Schematic phase diagram in one dimension for inﬁnite system size, as a function of average growth rate /an}b∇acketle{tU/an}b∇acket∇i}htand
+convection velocity v. For a deep well ( U0≡a+ǫa≫D/W2) the extinction transition out of the localized phase occur s when
+v= 0 for /an}b∇acketle{tU/an}b∇acket∇i}ht=−Uc, whereUc≃U0. The diagram shows that if the growth rate is negative outsid e andinsidethe oasis
+(i.e./an}b∇acketle{tU/an}b∇acket∇i}ht<−Uc), then the only possible state is extinction at any velocity . If there is positive growth inside the oasis, but
+negative outside, a localized population can survive in the oasis, but only for small enough wind velocities v. Extended states
+are present for a small positive growth rate in the desert ( /an}b∇acketle{tU/an}b∇acket∇i}ht>0). In this case localized and delocalized states coexist fo r
+small velocities (“mixed phase”), while at large velocitie s all eigenstates are extended, as shown in ﬁgure 6. The groun d state
+becomes delocalized at the critical velocity vcwhich marks the phase boundary between the mixed and the exte nded phase.
+In section II we give details of the analysis of the one dimensional linea rized problem for inﬁnite and ﬁnite systems
+with periodic boundary conditions. In section III some eﬀects of th e nonlinear term are discussed, especially for
+experiments near the extinction transition, and in section IV the tw o dimensional case is discussed. The appendices
+contain some details on the analytic computation of ﬁnite size eﬀects (Appendix A), a brief discussion of a lattice
+model [7] correspondingto the analytic continuum theory (Apppen dix B), and a discussion of dimensionless quantities
+measurable in experiments (Appendix C).
+II. LINEARIZED GROWTH IN ONE DIMENSION
+If the left and right eigenfunctions φR,L
+n(x) are localized ( i.e.if the convection velocity is small enough, so that
+φR,L
+n(x) decays exponentially with the distance from the oasis), one may elim inate the convective term in Eq. (4) via
+the transformation
+φR,L
+n(x) = exp(±v·x/2D)ψn(x) (9)
+(+ refers to the right eigenvectors and −to the left eigenvectors). The eigenvalue equation associated with the
+linearized growth operator (3) becomes Hermitian [15]
+Γnψn(x) =D∇2ψn(x)+U(x)ψn(x)−(v2/4D)ψn(x), (10)
+and is equivalent to the familiar square well potential problem much st udied in quantum mechanics. With the
+identiﬁcations a+ǫa≡U0/¯h, whereU0is a quantum well depth, and ¯ his Planck’s constant, Γ n+ǫa+v2/4D≡ |E|/¯h,
+5
+whereEis a quantum energy level, and D≡¯h/2m, wheremis a mass in the equivalent quantum problem, we can use
+well known quantum mechanical results [16,17]. The left and right eige nfunctions at ﬁnite velocity are then related to
+the eigenstates of the Hermitian problem (10) via the transformat ion (9), while the eigenvalues undergo a rigid shift
+Γn(v) = Γn(v= 0)−v2
+4D. (11)
+A. An Oasis in an Inﬁnite Desert: Localized Populations and t he Extinction Transition
+In an inﬁnite one dimensional system, localized solutions for φR,L
+n(x) are given by Eq. (9) with [18]
+ψn(x) =
+
+A1,nexp(κnx), forx<−W
+2,
+B1,nexp(iknx)+B2,nexp(−iknx),for−W
+2<x<W
+2,
+A2,nexp(−κnx), forx>W
+2,(12)
+whereA1,n,A2,n,B1,n,andB2,nare constant coeﬃcients, and
+κn=/radicalbig
+(Γn(v= 0)+ǫa)/D, (13)
+and
+kn=/radicalbig
+(a−Γn(v= 0))/D, (14)
+as can be seen by substituting the above Ansatz for ψ(x) into Eq. (10). Eq. (13) implies
+Γn(v= 0) =Dκ2
+n−ǫa. (15)
+To compute Γ n(v= 0) one matches both ψn(x) and∂ψn(x)/∂xatx=±W/2, which determines the coeﬃcients
+Ai,n,Bi,n,i= 1,2, up to an overall multiplicative factor, as well as the eigenvalues {Γn(v= 0)}. When solving the
+Hermitian problem one may use the fact that all the eigenfunctions a dmit a well deﬁned parity, i.e., they are odd or
+even under the transformation x→ −x. Even integers ncorrespond to bound eigenstates with even parity, where
+ψn(x), is symmetric under x→ −x. In such a case one obtains the eigenvalue equation for the quantit y
+ζn(Γn)≡knW/2 =W/2/radicalbig
+(a−Γn(v= 0))/D, (16)
+namely,
+cot(ζn) =ζn¯x//radicalbig
+1−(ζn¯x)2, (17)
+(which is equivalent to cot( knW/2) =kn/κn), with
+¯x= 2/radicalbig
+D/(a+ǫa)/W= 2/(/radicalbig
+k2n+κ2nW). (18)
+The dimensionless parameter ¯ xmeasures the ratio of kinetic to potential energy in the equivalent q uantum problem.
+For bound eigenstates with odd parity ψ(x), (ψ(x) antisymmetric under x→ −x, denoted by odd n) one obtains
+cot(ζn) =−/radicalbig
+1−(ζn¯x)2/(ζn¯x). (19)
+Thehighesteigenvalue(withitsnodeless,positiveeigenfunction ψ0(x)), correspondstothelargestgrowthrate Re{Γ0},
+and is therefore expected to dominate the system in most cases at long times, as seen from Eq. (6). Its eigenvalue
+condition (17) for n= 0 leads to [16]
+Γ0(v= 0)+ǫa= (a+ǫa)f(¯x), (20)
+wheref(¯x) is a monotonically decreasing function such that f(¯x)≃1−π2¯x2/4 for ¯x≪1, andf(¯x)≃1/¯x2for ¯x≫1.
+Upon inserting Eq. (20) into the expressions for κnandknone obtains
+6
+κ0=/radicalbig
+(a+ǫa)f(¯x)/D (21)
+and
+k0=/radicalbig
+((a+ǫa)(1−f(¯x)))/D. (22)
+When ¯x≪1, the “potential well” is very deep, and one ﬁnds the usual particle in a box result for Γ 0(v), with
+correction term proportional to v2arising from the change of variables (9) and (11), namely
+Γ0(v)≃(v2
+c−v2)/(4D) =a−Dπ2/W2−v2/4D, (23)
+with
+vc= 2D/radicalbig
+(a/D−π2/W2), (24)
+κ0=/radicalbig
+(a+ǫa)/D−π2/W2 (25)
+and
+k0=π/W. (26)
+For ¯x≫1 one ﬁnds
+Γ0(v)≃(v2
+c−v2)/(4D) = (a+ǫa)2(W/2)2/D−ǫa−D(v/2D)2(27)
+with
+vc= 2D/radicalbig
+((a+ǫa)W/2)2/D2−ǫa/D, (28)
+κ0=/radicalbig
+(a+ǫa)2(W/2)2/D2 (29)
+and
+k0=/radicalbig
+(a+ǫa)(1−1/¯x2)/D. (30)
+If we take as an eﬀective diﬀusion constant for motile bacteria D= 6·10−6cm2/sec, and a growth rate a= 10−3
+/sec in the oasis and a much smaller growth rate outside (0 <|ǫ|<<1), we get for a W= 2cmdiameter oasis,
+¯x= 0.077≪1, and an “extinction velocity” vc≃1.5µ/sec, which is comparable to the Fisher wave velocity [5] in the
+oasis,vF= 2√
+aD= 1.5µ/sec.
+B. Finite Size Eﬀects and the Delocalization Transition
+An experimental ﬁnite system with periodic boundary conditions is de picted in ﬁgure 1. The eigenvalue equation
+forκn(Γn) andkn(Γn) of the corresponding linearized problem of an oasis of width Win a ﬁnite desert of extent
+L > W (withLbeing the mean circumference of the circular region in ﬁgure 1), is ob tained using the Ansatz in
+Eq. (9) with
+ψn(x) =
+
+(A1,nexp(κnx)+A2,nexp(−κnx)),for−L
+2<x<−W
+2,
+(B1,nexp(iknx)+B2,nexp(−iknx)),for−W
+2<x<W
+2,
+(C1,nexp(κnx)+C2,nexp(−κnx)),forW
+2<x<L
+2,(31)
+and matching φR,L
+n(x) anddφR,L
+n(x)/dxat the edges of the well and at the edges of the sample (imposing per iodic
+boundary conditions). One ﬁnds the eigenvalue equation [12] (see a lso [19])
+2knκn(cosh(Lv/(2D))−cos(knW)cosh(κn(L−W)))
++(k2
+n−κ2
+n)sin(knW)sinh(κn(L−W)) = 0. (32)
+7
+Forv/(2D)<Re{κn}, and large L, equation (32) yields
+exp(L(v/(2D)−κn)) = (33)
+cos(knW)−kn/(2κn)·(1−(κn/kn)2)sin(knW).
+The left hand side vanishes in the limit L→ ∞, and the equation reduces to the bound state equations of a single
+square well (Eq. (17) for even parity solutions and Eq. (19) for od d solutions). For ﬁnite L, andv/2D<Re{κn}, the
+deviation of the “localized” solutions κnandknfrom theirv= 0 values for small vis exponentially small in L [12].
+These “localized” or “bound state” solutions, are characterized b y an exponential decay of the bacterial density in
+the desert with a correlation length
+ξn∼(Re{κn}−v/(2D))−1(34)
+and Γn(v) strictly real. However, “delocalized”or“scattering”solutionsals o exist, with Γ n(v) complex, and nontrivial
+dependence of κnandknonv, even in the limit of large L. As the velocity is increased, the nth localized eigenstate
+becomes delocalized ( ξn→ ∞) at the critical delocalization velocity v∗
+ngiven in an inﬁnite system by
+v∗
+n= 2DRe{κn}. (35)
+This implies
+ξn∼1/(v∗
+n−v)ν(36)
+with the (universal) critical exponent ν= 1. We saw that with increasing velocity, the growth rate Re{Γn(v)}for a
+given eigenstate decreases. It becomes negative above the corr esponding extinction velocity vnc. We therefore expect
+that the delocalization transition for the “ground state” (which te nds to dominate the long time behavior) can be
+observed only if v∗
+0≤v0c. In the following we discuss the three desert scenarios, ǫ>0,ǫ<0, andǫ= 0.
+(1) Forǫ >0 (a “deadly” desert), of big enough size L, one ﬁnds that all delocalized states die out exponentially
+with time ( vnc< v∗
+n). The population is localized around the oasis at small vand extinct at high v. Figure 2 is a
+plot of the eigenvalues Γ( v) in the complex plane for this case, as derived for the lattice model d iscussed in Appendix
+B. The lower part of ﬁgure 4 shows a series of proﬁles of the ground state eigenfunction close to the extinction
+transition. In small enough systems, such that the total eﬀectiv e growth rate/integraltextL
+0U(x)dxis positive, delocalized states
+can actually have a positive growth rate even for ǫ>0. (See also Eq. (A2) in Appendix A, with δκ∼O(1/L), and
+¯κ∼O(1/L) .) In this case, the system is small enough so that the bacteria can traverse the desert quickly, and on
+average won’t die before reenterring the oasis in a circular pipe.
+(2) Ifǫ<0, delocalized states should be observable even for very large syst ems, because the “desert” can support
+modest growth, although at a much smaller rate than in the oasis if |ǫ| ≪1. Growing delocalized eigenstates are
+present, even for v= 0, and the population is a superposition of fast growing localized sta tes and more slowly growing
+delocalized ones. As a drift velocity vincreases, the n’th localized eigenstate delocalizes at v=v∗
+nwith a positive
+growthrate ReΓn(v∗
+n)(i.e.v∗
+n<vnc). This caseallowsforanexperimentalobservationofthe delocaliza tiontransition:
+as the velocity is increased, more and more eigenstates delocalize. T he eigenvalue spectrum for two diﬀerent values of
+vis shown in ﬁgure 5 (a) and (b). We can see that the spectrum at the delocalization transition is slightly diﬀerent
+depending on whether an “even” eigenfunction or an “odd” eigenfu nction is about to delocalize next (“even” and
+“odd” are to be understood in the sense explained in section IIA). I f an odd eigenfunction is about to delocalize
+next, there exists a delocalized state which has a purely real growt h rate (at the tip of the parabola in the spectrum
+of ﬁgure 5(b)), while no such state exists when an even eigenfunct ion is about to delocalize, as in ﬁgure 5(a). The
+essential characteristics of the spectrum are derived in Appendix A.
+For experiments, we focus on the delocalization of the ground stat e, since it is the fastest growing eigenstate, which
+dominates the system near the oasis. The ground state delocalizes at the highest delocalization velocity v=v∗
+0,
+i.e.forv > v∗
+0all states are delocalized. The lower part of ﬁgure 6 shows a series o f proﬁles of the ground state
+eigenfunction close to delocalization. One sees that at the delocaliza tion velocity v∗
+0, the correlation length ξ0reaches
+the system size. In an inﬁnite system it diverges as in Eq. (36). Near the delocalization transition, we expect certain
+quantities to become independent of microscopic details of the syst em. These universal quantities will only depend on
+general properties, such as symmetries, dimensions etc.. Simple mo dels that only share these general properties with
+the experimental system will be suﬃcient for precise predictions fo r these quantities near the transition. An example
+of such a quantity is the critical exponent νin Eq. (36). Details for the square well system and more general ra ndom
+systems will be presented in a future paper [14].
+(3) Forǫ= 0, the growth rate of the bacteria exactly balances the death ra te in the desert, they only diﬀuse. In this
+case the delocalization velocity and the extinction velocities coincide: v∗
+n=vncin an inﬁnite system. There is again
+8
+a diverging correlation length leading to universal critical behavior n ear the delocalization transition [14]. In a ﬁnite
+system the average growth rate/integraltextL
+0dxU(x)/Lis positive. In small systems, one therefore expects to see deloca lized
+states with a positive growth rate in experiments for this case as we ll.
+These results for one dimension in the limit L→ ∞are summarized in ﬁgure 3 which shows a schematic phase
+diagram for ﬁxed well depth U0≡(a+ǫa), as a function of the convection velocity and the average growth rate
+/an}b∇acketle{tU/an}b∇acket∇i}ht ≡/integraltextL
+0dxU(x)/L, in the limit L→ ∞.
+-2.5 -2.0 -1.5 -1.0 -0.5 0.0 0.5 1.0 1.5 2.0 2.50.00.20.40.60.81.0c(x,v)/c(0,0)Bacterial Density near Extinction
+Nonlinear Case
+-2.5 -2.0 -1.5 -1.0 -0.5 0.0 0.5 1.0 1.5 2.0 2.5
+x/W0.00.20.40.60.81.0c(x,v)/c(0,0)Linear Casev/vF =00.93
+0.98
+0.99
+0.93
+0.98
+0.99v/vF =0
+FIG. 4. A series of steady state population proﬁles for a syst em with negative average growth rate, at diﬀerent drift velo cities,
+for the linear and the nonlinear case. The xcoordinate is normalized by the width Wof the oasis. In the nonlinear case the
+populations c(x,v) are divided by the population at zero velocity in the middle of the oasis c(0,0). In the “linear” case, we
+simply assume the validity of Eq. (44) and rescale the curves such that their maximum values match those of the nonlinear c ase.
+The proﬁles were extracted from a lattice model with 1000 sit es, an oasis of width W= 200 sites, with growth rate U= 0.5
+inside the oasis and U=−0.5 outside, and diﬀusion constant D= 30. The velocity parameters are taken to be v/vF= 0 (solid
+line),v/vF= 0.93 (dotted), v/vF= 0.98 (dashed), and v/vF= 0.99 (dash-dotted). Close to the extinction transition, wher e
+the population is small, the agreement between the nonlinea r and the linear solution becomes quite good. The oasis occup ies
+the region |x/W|<0.5 in the ﬁgures.
+9
+Γ
+}Lπ/2~nRe
+ImΓ
+(a)n
+}~2π/L
+nΓIm
+(b)ΓRen
+FIG. 5. Sketches of complex nonhermitian eigenvalue spectr a at two diﬀerent velocities: (a) velocity vawithv∗
+7<va<v∗
+6,
+wheren= 6 denotes an even eigenstate, i.e.all eigenstates with n>6 are delocalized and those with n≤6 are localized; and
+(b) at a higher velocity vb>vawithv∗
+6<vb<v∗
+5wheren= 5 denotes an odd eigenstate. Upon increasing the velocity f rom
+vatovbthen= 6 eigenstate becomes delocalized at v=v∗
+6.
+10
+-2.5 -2.0 -1.5 -1.0 -0.5 0.0 0.5 1.0 1.5 2.0 2.50.00.20.40.60.81.0c(x,v)/c(0,0)Bacterial Density near Delocalization
+Nonlinear Case
+-2.5 -2.0 -1.5 -1.0 -0.5 0.0 0.5 1.0 1.5 2.0 2.5
+x/W0.00.20.40.60.81.0c(x,v)/c(0,0)Linear Casev/vF =00.17
+0.830.500.330.17
+v/vF =00.33
+0.50
+0.83
+FIG. 6. A series of steady state population proﬁles for a syst em with positive average growth rate, at diﬀerent drift velo cities,
+for thelinear andthenonlinear case. The xcoordinate is normalized bythewidth Woftheoasis ( |x/W| ≤0.5). Inthenonlinear
+case the populations c(x,v) are divided by c(0,0), the population in the middle of the oasis, at zero velocit y. Curves for the
+“linear” case, were computed as in ﬁgure 4. The proﬁles were e xtracted from a lattice model with 1000 sites, an oasis of wid th
+200 sites, with growth rate U= 0.1 inside the oasis and U= 1.1 outside, and large diﬀusion constant D= 300. The velocity
+parameters v/vFare taken to be v/vF= 0 (solid line), 0 .17 (dotted), 0 .33 (dashed), 0 .50 (long-dashed), and 0 .83 (dash-dotted).
+In both cases the population becomes delocalized at high vel ocities with increasing velocity when the correlation leng th reaches
+the size of the system.
+C. Delta-Function Potential Well
+Results for a delta-function-like oasis in one dimension, can be easily d erived as a special case of the square well
+potential, by taking the limit ǫ→0,a→ ∞andW→0 withaW= const≡V0. In this case Eq. (32) simpliﬁes to
+κ(cosh(Lv/(2D))−cosh(κL))+V0sinh(κL)/D= 0, (37)
+which is the same equation as obtained in [12]. With the identiﬁcation κ≡(−i)Kthe results derived there can be
+applied here: the delocalization picture is the same as in ﬁgure 5(a), e xcept that there exists only one (even parity)
+bound state solution for Re{κ}>v/(2D). Again two critical velocities vc0andv∗
+0emerge, in accordance to the above
+discussion for a square well potential.
+III. EFFECTS OF THE NONLINEARITY
+We can also estimate the eﬀects due to the nonlinear term in equation (1), which leads to a saturation of c(x,t) for
+Γn(v)>0. The equation of motion becomes
+∂c(x,t)/∂t=Lc(x,t)−bc2(x,t), (38)
+withLgiven by Eq. (4). (The coeﬃcient bcan be set to 1 by rescaling the density c(x,t) byb, as in Appendix C.)
+The solution can be expressed in terms of the complete set of right e igenstates for the linear problem with new time
+dependent coeﬃcients cn(t) with
+11
+c(x,t) =/summationdisplay
+ncn(t)φR
+n(x) (39)
+and
+dcn(t)/dt= Γncn(t)−/summationdisplay
+m,m′wn,mm′cm(t)cm′(t), (40)
+where the mode couplings are given by [7]
+wn,mm′=b/integraldisplay
+dxφL
+n(x)φR
+m(x)φR
+m′(x). (41)
+In general one expects that through the mode couplings the fast est growing eigenstate suppresses the growth rate of
+the other eigenstates, provided the corresponding couplings are large enough [7,14]. In the mixed phase of ﬁgure 3 we
+expect that the fastest growing bound state suppresses the ot her bound states, and the fastest growing delocalized
+state suppresses the other delocalized states [14].
+A. Eﬀects of the Nonlinearity at the Extinction Transition
+Forǫ >0 (and large enough systems so that/integraltextL
+0dxU(x)<0), with velocity vjust below the extinction velocity
+v0c, we expect that the growing ground state term c0(t)φR
+0(x) dominates the summation (39) for c(x,t). In a ﬁrst
+approximation we neglect all cm(t) withm>0 and ﬁnd
+dc0(t)/dt= Γ0c0(t)−w0c2
+0(t), (42)
+withw0≡w0,00=b/integraltext
+ddxφL
+0(x)(φR
+0(x))2>0. At long times
+c0(t) =c0(0)exp(Γ0t)
+1+c0(0)(exp(Γ 0t)−1)w0/Γ0(43)
+with asymptotic behavior lim t→∞c0(t) = Γ0/w0. Thus, the steady state population proﬁle should be given approxi-
+mately by
+c∗(x) = Γ0φR
+0(x)/w0, (44)
+where
+c∗(x) = limt→∞c(x,t). (45)
+The total steady state bacterial population N0is
+N0=/integraldisplay
+dxc∗(x). (46)
+It follows that
+N0≃(Γ0/w0)/integraldisplay
+dxφR
+0(x). (47)
+Since Γ 0∼(v−vc)(v+vc), and/integraltextdxφR
+0(x)∼const+O(v−vc) asv→vcfrom below, one ﬁnds that near the
+extinction transition
+N0∼/braceleftBiggvc−v,forv→v−
+c,
+0,forv>vc,(48)
+Figure 7 shows the total population N0as a function of the convection velocity vfor an oasis in a desert with negative
+growth rate, which is large enough so that the average growth rat e is negative also. The data was obtained from a
+lattice model for the nonlinear problem (see Appendix A). The display ed convection velocities range from v= 0 to
+velocities larger than the extinction velocity v >vc. One can see that N0decreases linearly with v−vcforv→v−
+c,
+12
+as predicted in Eq. (48). Figure 4 shows a series of population proﬁle s for increasing velocity, for the linear case ( i.e.
+taking the ground state of the linear problem as a solution for the st eady state), and for the nonlinear case. One can
+see that close to the extinction transition the ground state of the linearized growth is an excellent approximation, as
+is to be expected since there the bacterial density c(x) becomes small, so that mode couplings other than w0induced
+by the nonlinear term bc2(x) become small relative to the linear terms.
+0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+v/vF0.00.20.40.60.81.0N0(v)/N0(0)Total population versus drift velocity
+(Extinction transition)
+FIG. 7. Numerical results for the total number of bacteria N0(v) (normalized by the total number at zero velocity N0(0)) as
+a function of v/vF, wherevF= 2√
+aDis the Fisher wave velocity. The data were obtained using a 1 d imensional lattice model
+with 100 grid points (see Appendix B). The diﬀusion constant isD= 3., the width of the oasis is W= 20, the growth rate
+is -0.9 outside the oasis and 0.1 inside. The coeﬃcient of the nonlinear term in the equation of motion is b≡1. The average
+growth rate is −0.7<0 for this system, so that v0c<v∗
+0, and the system goes through the extinction transition at v/vF≃0.65,
+above which N0(v) vanishes. The approximation vc≃vFmentioned in the text does not work quite as well here as in oth er
+cases because the condition ¯ x≪1 necessary for this approximation is violated weakly for th e model parameters chosen here.
+(¯x≃0.35).
+B. Limitv→0
+In the linearized case, because Eq. (10) is even in v, we expect N0(t) =/integraltext
+ddxc(x,t)∼const−const′·v2+O(v4) for
+smallvelocities. Inthenonlinearcasethissymmetryisbroken,beca useofthevdependenceofthecoeﬃcients wnmm′in
+Eq.(41)whicharisesfromthetransformation(9). Onethen expe ctsin thesteadystate N0∼const−const′·|v|+O(v2)
+for small velocities. The constants depend on U(x) and other nonuniversal details.
+C. Eﬀects of the Nonlinearity at the Delocalization Transit ion
+Figure 6 shows the same information as ﬁgure 4 for the delocalization transition for an oasis in a background with
+positive growth rate. One can see that the linear approximation ( i.e.taking the ground state of the linear problem as
+a solution for the steady state), becomes best for high velocities [1 4], when the drift term in the equation of motion
+becomes dominant compared to the nonlinear term. Furthermore t he nonlinear solution at low velocities is in the
+“mixed phase”, i.e., it is a superposition of extended and localized eigenstates of the sy stem. A decomposition of
+13
+thev= 0 nonlinear solution into the eigenstates of the system shows [14] t hat its leading contributions are from
+the localized ground state eigenfunction and the fastest growing d elocalized eigenfunction. As the drift velocity is
+increased, the contribution of localized eigenstates clearly diminishe s. Above the delocalization transition, the steady
+state is composed only of delocalized modes.
+IV. TWO DIMENSIONS, INFINITE SYSTEM SIZE
+Much of the above analysis can be adapted to two dimensions. We aga in use the transformation (9) and consider
+a circular oasis of diameter Win Eq. (10). The analysis is straightforward, so we omit most of the d etails. Following
+reference [12], the qualitative behavior of non-Hermitian eigenvalue spectra for linearized growth in two dimensions
+shouldbe asfollows: Asin onedimension, localizedstatesassociatedw iththe potentialwellwillliein apointspectrum
+on the real axis. Extended states, however, will occupy a dense r egion in the complex plane with a parabolic boundary
+(see ﬁgure 8). With increasing v, the localized point spectrum will again migrate into the continuum.
+ReΓnnImΓ
+FIG. 8. Sketch of a complex nonhermitian eigenvalue spectru m in two dimensions with localized and delocalized eigensta tes.
+The sketch uses a computation of the spectrum for a delta func tion potential in two dimensions [12], in which case there is only
+one bound state (to the right of the imaginary axis). We expec t qualitatively the same result for the ﬁnite two dimensiona l
+well discussed in the text, except that multiple bound state s with real eigenvalues will occur, just as in one dimension.
+In the localized regime the spatial distribution of bacteria is in the linea r approximation given by the convection-
+distorted ground state eigenfunction,
+φR,L
+0(x) =
+
+C1,0exp(±v·x/2D)J0(kn|x|),for|x|<W/2,
+C2,0exp(±v·x/2D)K0(κn|x|),for|x|>W/2,(49)
+whereJ0(x) andK0(x) are Bessel functions of order zero [20]. The constants C1,0andC2,0are chosen such that
+φR,L
+0(x) and its radial derivative are continuous at |x|=W/2. The lowest energy eigenvalue is again given by eq. (20),
+but with diﬀerent results for f(¯x) [16]: for ¯x≪1 one ﬁnds f(¯x)≃1−a2
+1¯x2wherea1≃2.405 is the ﬁrst zero of J0(a);
+for ¯x≫1 one ﬁnds f(¯x)≃¯x2exp(−4¯x2). The behavior of the ground state eigenvalue is thus
+Γ0≃a−4D(2.405)2/W2−Dv2/(4D) (50)
+for ¯x≪1 and
+14
+Γ0≃D(4/W2)exp[−16D/(W2(a+ǫa))]−D(v/2D)2(51)
+for ¯x≫1. From these results one can compute v0cfor the 2 dimensional case. As in one dimension, one again ﬁnds
+forǫ>0 (“deadly” oasis), and large enough systems, that vc0<v∗
+0, wherev∗
+0/2D≃Re{κ0}, andv0cis the velocity
+above which the ground state growth rate Γ 0becomes negative.
+Figure 9 shows a contour plot for the spatial distribution of bacter ia in the linearized case at convection velocity
+vbelowv0cin 2 dimensions, obtained from equation (49). Although the full nonlin ear two dimensional problem
+seems tractable numerically, we expect that close to the extinction transition the curves for the linearized case will
+approximate the shape of the steady state, because the ground state dominates sums like that in equation (39).
+-1 -0.5 0 0.5 1-1-0.500.51
+FIG. 9. Contour plot of the distribution of bacteria in two di mensions as obtained for the linearized problem for convect ion
+velocityv= 0.2µ/sec < v c= 1.5µ/sec(directed to the right), with D= 6·10−6cm2/sec, and growth rate a= 10−3/sec
+in the oasis (of diameter W= 2cm) and a much smaller growth rate outside ( |ǫ|= 0.0001≪1). The dashed line indicates
+the circumference of the oasis, the coordinates are given in units of the radius of the oasis. At high velocities the linea r
+approximation is expected to give the steady state generate d by the full nonlinear equation, provided that the ground st ate
+dominates the long time behavior in Eq. (39) (see text).
+APPENDIX A: COMPLEX NONHERMITIAN EIGENVALUE SPECTRA FOR FI NITE SYSTEM SIZE
+To compute the growth rate Γ n(v) near the delocalization of the nth eigenstate, we set κ=v/(2D)+δκ−i¯κwhere
+limL→∞δκ= 0 [12], and take vto be close to the corresponding v∗
+n. Upon expanding the right hand side of equation
+15
+(34) in powers of v−v∗
+nandδκ−i¯κ, one obtains:
+exp(−L(δκ−i¯κ)) =cn(v−v∗
+n)/v+O(δκ−i¯κ)
++O((v−v∗
+n)2), (A1)
+wherecnisthederivativeoftherighthandsidewithrespectto vatv=v∗
+nandδκ−i¯κ= 0. Foreven noneﬁndscn<0,
+and for odd none ﬁndscn>0. Hence, for even n, andv < v∗
+n, one has to leading order δκ≃ln[v/(cn(v−v∗
+n))]/L
+and ¯κ=π(2m+1)/L, withmany integer. For v>v∗
+n,δκ≃ln[v/(cn(v∗
+n−v))]/Land ¯κ= 2πm/L. Similarly, for odd
+nandv < v∗
+n,δκ≃ln[v/(cn(v∗
+n−v))]/Land ¯κ= 2πm/L, and, forv > v∗
+n, one hasδκ≃ln[v/(cn(v−v∗
+n))]/Land
+¯κ=π(2m+1)/L. Atv=v∗
+nin either case, δκ∼O((lnL)/L) and ¯κ∼O((lnL)/L) [12]. For given vandκthe value
+of Γ results from above deﬁnition of κ, Γ(v) =Dκ2−ǫa−D(v/(2D))2, and thus
+Γ(v) =D(δκ+v/2D)2−D¯κ2−D(v/(2D))2−ǫa
+−2iD(δκ+v/2D)¯κ. (A2)
+These results are illustrated in ﬁgure 5.
+APPENDIX B: NUMERICAL ANALYSIS OF A DISCRETE LATTICE MODEL
+A discrete lattice model, originally inspired by the physics of vortex line s [12], has proven very helpful for the
+numerical analysis of our problem. The corresponding lattice discre tization (with lattice constant l0) of the nonlinear
+equation in ddimensions reads [7]
+dcx(t)
+dt=w
+2d/summationdisplay
+ν=1[eg·eνcx+eν(t)+e−g·eνcx−eν(t)−2cosh(g·eν)cx(t)]
++U(x)cx(t)−bc2
+x(t), (1.18)
+wherecx(t) is the species population at the sites {x}of a hypercubic lattice, and the {eν}are unit lattice vectors.
+Furthermore, ( w≃D/ℓ2
+0), whereDisthe diﬀusionconstantofthecorrespondingcontinuummodel, and g≃vℓ0/(2D),
+wherevis the convective ﬂow rate of the continuum model. U(x) andbhave the same interpretation as in the
+continuum model [7]. The subtraction in the ﬁrst term insures that cx(t) is conserved (d
+dt/summationtext
+xcx(t) = 0) ifU(x) =b=
+0. There are two constraints on the mesh size or lattice spacing ℓ0, which ensure that the model correctly describes
+the continuum limit for a given eigenstate φR
+n, derived from the condition that ℓ0|∇φR
+n(x)|/φR
+n(x)≪1. For small v
+one requires
+knℓ0≪1 andκnℓ0≪1. (B1)
+For high velocities the condition becomes
+vℓ0/(2D)≪1, (B2)
+as follows from Eq. (9). The lattice simulations shown in this paper are well within these limits.
+APPENDIX C: DIMENSIONLESS QUANTITIES
+The equation of motion can be rewritten in dimensionless form, by intr oducing rescaled coordinates, y≡x/W,
+whereWis the width Wof the oasis, and rescaled population densities ¯ c≡c/cs, wherecsis roughly the saturation
+value of the bacterial density in the oasis (up to O(ǫ)):cs=a/b(see Eq. (1)). One then obtains
+(W2/D)∂¯c(x,t)/∂t=∇2
+y¯c(x,t)−¯v·∇y¯c(x,t)
++¯v2
+F[(U(x)/U0)¯c(x,t)−¯c2(x,t)], (C1)
+where¯v≡vW/Dis the dimensionless rescaled drift velocity, and ¯ vF≡2/radicalbig
+W2a/Dis the dimensionless rescaled
+Fisher wave velocity vF= 2√
+Dain the oasis, which gives the speed at which a Fisher wave [5] would prop agate in
+the oasis. The velocity vFalso gives a rough estimate for the velocity at which the extinction tr ansition takes place,
+16
+in the appropriate parameter regime ( ǫ <0) of the phase diagram of ﬁgure 3. The basic time scale of the syste m is
+set by the diﬀusion time W2/D, which is the time it takes a bacterium to diﬀuse across the oasis.
+Acknowledgements: It is a pleasure to acknowledge conversations with Jim Shapiro and Elena Budrene. This work
+is supported by the National Science Foundation through Grant No . DMR97-14725, and by the Harvard Materials
+ResearchScienceandEngineeringCenterthroughGrantNo. DMR9 4-00396. Oneofus(K.D.) gratefullyacknowledges
+support from the Society of Fellows of Harvard University.
+[1] J.-I. Wakita, K. Komatsu, A. Nakahara, T. Matsyama, and M . Matsushita, J. Phys. Soc. Japan 63, 1205 (1994); see also
+M. Matsushita, in Bacteria as Multicellular Organisms edited by J.A. Shapiro and M. Dworkin (Oxford University Pre ss,
+Oxford, 1997).
+[2] O. Rauprich, M. Matsushita, C.J. Weijer, F. Siegert, S.E . Esipov, and J.A. Shapiro, J. Bacteriology 178, 6525 (1996); J.A.
+Shapiro and D. Trubatch, Physica D 49, 214 (1991).
+[3] E. Ben-Jacob, O. Schochet, A. Tenenbaum, I. Cohen, A. Czl rok and T. Vicsek, Nature 368, 46 (1994); E. Ben-Jacob, H.
+Shmueli, O. Shochet and A. Tenebaum, Physica A 187, 378 (1992) and Physica A 202, 1 (1994).
+[4] E.O. Budrene and H. Berg, Nature 349, 630 (1991) and Nature 376, 49 (1995).
+[5] J. D. Murray, Mathematical Biology , (Springer-Verlag, N.Y., 1993), chapter 11.
+[6] A.R. Robinson, Proc. R. Soc. Lond. A 453, 2295 (1997); see also R.V. Vincent and N.A. Hill, J. Fluid Me ch.327, 343
+(1996).
+[7] D.R. Nelson and N. Shnerb, Phys. Rev. E (in press, August 1 998), http://xxx.lanl.gov/list/cond-mat, paper number
+9708071.
+[8] Here we present results for the dynamics of continuous populations, while the process is actually discrete, with e vents such
+asA→2A,A→0,A+A→0, whereAdenotes an individual bacterium. Throughout this paper, we neglect this eﬀect and
+study a continuum (“mean ﬁeld”) approximation to this proce ss. Discreteness, which will only be important very close to
+the extinction transition, can be modeled by inclusion of a m ultiplicative Langevin noise term, see, e.g. V. Privman, Tr ends
+in Stat. Phys. 1(1994); H.K. Janssen, Phys. Rev. E, 55, 6253, J. Cardy, http://xxx.lanl.gov/list/cond-mat, pap er number
+9607163; J. Cardy and Uwe C. T¨ auber, cond-mat/9609151, D. B en-Avraham, cond-mat/9805180, 9803281, 9802214.
+[9] D. Ben-Avraham in http://xxx.lanl.gov/list/cond-mat , paper number 9806163, gives an exact solution for a related (in-
+verse) problem for an inﬁnitely deep single trapat the origin, taking into account discreteness eﬀects for t he processes
+A→2AandA+A→A. His problem is equivalent to a solution on half line x>0 with absorbing boundary conditions
+atx= 0 and a drift velocity vto the left (towards x= 0). For the mean ﬁeld theory of his model, we expect that the
+only change in the spectrum {Γn}due to the drift is the rigid shift Γ n→Γn−v2/4D. In his case, all wave functions are
+extended. He observes an extinction transition at a critica l value of the drift velocity.
+[10] For a moving mask, as in ﬁgure 1, the Fisher equation read s∂c(x′,t)/∂t=D(∇′)2c(x′,t)+U(x′−vt)c(x′,t)−bc2(x′,t),
+wherex′is the coordinate in the laboratory frame where the growth me dium is ﬁxed. Upon transforming to new spatial
+coordinates x=x′−vt, in which the mask remains ﬁxed, and then making the replacem entc(x+vt,t)→c(x,t), we
+obtain equation (1).
+[11] See, e.g., A. Okubo, Diﬀusion and Ecological Problems: Mathematical Models , Springer-Verlag, Berlin 1980, and references
+therein.
+[12] N. Hatano and D. R. Nelson, Phys. Rev. Lett. 77570 1996; N. Hatano and D. R. Nelson, Phys. Rev. B 56, 8651 (1997),
+http://xxx.lanl.gov/list/cond-mat, paper number 970529 0.
+[13] The term “mobility edge” is taken from the physics of dis ordered semiconductors, where it refers to an energy divid-
+ing localized from extended electron eigenfunctions. See B .I. Shklovskii and A.L. Efros Electronic Properties of Doped
+Semiconductors (Springer, Berlin, 1984).
+[14] K. Dahmen, D.R. Nelson, and N. Shnerb, to be published.
+[15] For the transformation (9) to make physical sense, the e igenfunctions ψn(x) of (10) must decay suﬃciently fast at inﬁnity.
+We check this condition at the end of the calculation; when it is violated, the eigenvalues become complex.
+[16] L.D. Landau and E.M. Lifshitz, Quantum Mechanics (Non-relativistic Theory) (Pergamon Press, 1991); see also D.R.
+Nelson in “Phase Transitions and Relaxation in Systems with Competing Energy Scales”, edited by T. Riste and D.
+Sherrington (Kluwer, Boston 1993).
+[17] S. Fluegge, Practical Quantum Mechanics I (Springer Verlag, N.Y. 1971), p.160-162.
+[18] LetW′be the size of the annular region in the radial direction in Fi g.1, which we denote by the coordinate y. The condition
+17
+that the population dynamics in this two dimensional annula r “petri dish” be well approximated by a onedimensional
+solution of Eq. (10) is that c(x,y,t)≃¯Ψ0(y)c(x,t), where ¯Ψ0(y) is the steady state of the corresponding Hermitian one
+dimensional nonlinear problem in the y direction. (We assum e an additional growth rate Uy(y) which is zero for ywithin
+the annular region in Fig.1 and −∞outside.) The steady state dominance in the ydirection will be established after a
+time of order D/(W′)2.
+[19] To make contact with the notation of reference [12], let g/¯h→v/2Dandb0→W/2.
+[20] See e.g.J.D. Jackson “Classical Electrodynamics”, John Wiley, New York (1975).
+18

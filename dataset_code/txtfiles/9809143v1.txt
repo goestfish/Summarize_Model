@@ -1,0 +1,1113 @@
+arXiv:cond-mat/9809143v1  9 Sep 1998Analysis of a Population Genetics Model With
+Mutation, Selection, and Pleiotropy
+S.N. Coppersmith,∗†Robert D. Blank,‡and Leo P. Kadanoﬀ∗
+October 12, 2018
+Abstract
+We investigate the behavior of a population genetics model i ntroduced by
+(Waxman &Peck, 1998) incorporatingmutation, selection, a ndpleiotropy. The
+population is inﬁniteand continuous variation of genotype is allowed. Nonethe-
+less, Waxman and Peck showed that if the degree of pleiotropy is large enough,
+in this model a nonzero fraction of the population can have id entical alleles.
+This ‘condensed mode’ behavior appears in the limit of inﬁni te times.
+This paper explores the time-dependence of the distributio n of alleles in this
+model. First, the model is analyzed using a recursion techni que which enables
+the distribution of alleles to be calculated at ﬁnite times a s well as in Waxman
+and Peck’s inﬁnite-time limit. Second, both Waxman and Peck ’s original model
+and a related model in which mutations occur continuously ar e mapped onto
+problems in quantum mechanics. In both cases, the long-time analysis for the
+biological model is equivalent to ﬁnding the nature of the ei genstates of the
+quantum problem. The condensed mode appears if and only if th ere is no
+bound state in the quantum problem.
+We compare the behavior of the discrete- and continuous-tim e versions of
+the model. The results for the two cases are qualitatively si milar, though there
+are some quantitative diﬀerences. We also discuss our attemp ts to correlate the
+statistics of DNA sequence variations with the degree of ple iotropy of various
+genes.
+∗The James Franck Institute, The University of Chicago, 5640S. Ellis Avenue, Chicago, IL 60637
+†Corresponding author. Email address: snc@control.uchicago.edu ; Fax number: (773) 702-5863.
+‡The Hospital for Special Surgery, 535 East 70th Street, New Yor k, NY 10021
+1
+1 Introduction
+Recently, (Waxman & Peck, 1998) introduced a simple population gen etics model
+of an inﬁnite population with a continuous distributions of alleles1incorporating
+pleiotropy (one gene aﬀecting several characters of an organism ). They demonstrated
+that when the number of characters aﬀected is greater than two , the long-time steady
+state solution of their model can have a nonzero fraction of the po pulation with
+identical alleles, and that this phenomenon does not occur if the num ber of characters
+aﬀected per gene is two or fewer.
+In this paper we consider their model and a simple variant of it, addre ssing several
+issues. The ﬁrst three issues involve the mathematical analysis of t he theory. First
+we study the time evolution of the distribution of alleles. In the model, the initial
+distribution of alleles is continuous, and at inﬁnite time there is an inﬁnit ely narrow
+(δ-function) peak;2we ask how the distribution of alleles depends on time at long
+but ﬁnite times. Second, we describe how to construct time-depen dent solutions by
+using an expansion in a sum of functions (Gaussians) particularly pick ed to meet
+the requirements of this problem. Third, we examine the relationship between the
+model with discrete generations used by Waxman and Peck (where m utations occur
+at discrete times, and ﬁtness selection occurs continuously) and a continuous-time
+model in which both mutations and ﬁtness selection occur continuou sly. The latter is
+a limiting case of the discrete model arising when the time between gen erations gets
+very short. We demonstrate that the qualitative behavior of the t wo models is the
+same, but that dependence of the behavior on the parameters ca n be diﬀerent in the
+two models.
+We show that the population genetics models can be mapped onto pro blems in
+quantum mechanics, speciﬁcally Bose-Einstein condensation3(de Groot et al., 1950)
+and motion of a particle in a central potential.4The mapping onto Bose condensation
+is performed on the discrete-time model in the limit that the ﬁtness s election is
+very strong so that only organisms with ﬁtnesses very near optimu m survive each
+1Waxman and Peck’s model is based on the continuum-of-alleles model of (Kimura, 1965). Other
+important investigations of pleiotropic models include (Wagner, 1989 ), (Lande, 1980), (Gavrilets &
+de Jong, 1993), and (Turelli, 1985).
+2The Dirac delta-function, δ(t), is deﬁned to be a function very sharply peaked around t= 0, but
+having a total weight/integraltext
+dtδ(t) equal to one. One deﬁnition of such a function is the limit as zgoes
+to positive inﬁnity of (2 πz)−1/2exp[−t2/(2z)]. We shall deal with variables /vector xwithNcomponents.
+For such variables, δ(/vector x) is deﬁned to be a delta function in the ﬁrst component of /vector x, times one in
+the second component, .... In this way, one has/integraltext
+dNx δ(/vector x) = 1.(Spanier & Oldham, 1987)
+3Bose-Einstein condensation in three dimensions is discussed in many t exts on statistical me-
+chanics, e.g., (Feynman, 1972).
+4See any book on quantum mechanics, e.g., (Schiﬀ, 1968).
+2
+generation. The mapping onto the quantum particle in a central pot ential applies
+more generally. The simplest case has the potential independent of time. This case
+corresponds to the a limit of the population model in which ﬁtness sele ction and
+mutations both occur continuously. The close relation between the continuous-time
+population biology models and Schr¨ odinger’s equation has been explo ited by B¨ urger5
+toobtainmanygeneral resultsonthelong-timebehavior ofmodelso fthetypestudied
+here. In this paper, we focus on the mapping for a speciﬁc model, wh ich yields a
+simple physical interpretation of the emergence of a unique genoty pe, and allows
+the extraction of the time-dependence of the ﬁtness peak as well as comparison to
+the discrete-time model. We ﬁnd that the behavior is qualitatively iden tical when
+the mutations are continuous and when they are discrete, though there are some
+quantitative diﬀerences.
+We also discuss our attempts to relate the results fromthis model t o the statistical
+properties of the sequences that are archived in various sequenc e databases. We
+analyze thestatistical properties ofgene sequences tabulated in genetic databases and
+attempt to correlate observed variations with estimates of the de gree of pleiotropy of
+diﬀerent genes in the databases. The results of these attempts a re inconclusive.
+This paper is organized as follows. In section 2 we introduce the theo retical
+models. Section 3 presents our analysis of the time evolution of the d iscrete version
+of the model, demonstrating that the behavior can be extracted a nalytically in a
+limit in which the typical jump caused by mutations is very large. In sec tion 4 we
+present our analysis of the continuous-time model. Section 5 conta ins remarks on the
+relationshipbetween thecontinuous- anddiscrete-time models. Se ction6presents our
+examination of DNA sequence archives and our attempts to correla te the statistics of
+documented sequence variations to the degree of pleiotropy of va rious genes. Section
+7 recaps our main conclusions. The Appendix contains mathematical details of the
+analysis of the time-dependence of the continuous-time model aime d at establishing
+the long-time time-dependence.
+2 The Models
+Onemodel we study is that of (Waxman& Peck, 1998). In this model, the population
+is inﬁnite, the phenotypic variation is continuous, each gene aﬀects Ncharacters, and
+the eﬀects of diﬀerent genes are uncorrelated (no linkage disequilib rium or epistasis).
+The model assumes a very large population of haploid and asexual or ganisms with
+discrete generations. Let /vector xbe a continuous vector with Ncomponents which rep-
+resents characters which determine the viability of an organism, an dφ(/vector x,t) be the
+5A recent paper with references to previous work is (B¨ urger & Bom ze, 1996).
+3
+normalized probability density that an organism in the population has t he characters
+given by/vector xat timet. The normalization condition for the probability is given by an
+N-dimensional integral as/integraldisplay
+φ(/vector x,t)dNx= 1. (1)
+At each generation an organism with characters /vector xsurvives viability selection with a
+probability proportional to exp( −x2/2Vs). This Gaussian ﬁtness selection will play
+an essential role in our solution of the model. Once each generation, a fractionθof
+the population mutates; it is assumed that if a mutation occurs, the n the probability
+that the mutant takes on the value /vector xgiven the parental value /vector yisf(/vector x−/vector y).
+Sinceφ(/vector x,t) is a probability density, it is normalized at every time t. Thus, for
+this model, the equation for the time evolution of φ(/vector x,t) is:
+Γ(t+1)φ(/vector x,t+1) = (1 −θ)w1(/vector x)φ(/vector x,t)+θ/integraldisplay
+f(/vector x−/vector y)w1(/vector y)φ(/vector y,t)dNy ,(2)
+where the ﬁtness factor w1(/vector x) is
+w1(/vector x) = exp[−x2/2Vs]. (3)
+The multiplicative factor, Γ( t+1), in Eq. (2) ensures that the probability, φ(/vector x,t+1)
+is properly normalized at every time step. Integrating Eq. (2) over all/vector xgives the
+Waxman and Peck result for this normalization:
+Γ(t+1) =/integraldisplay
+φ(/vector x,t)w1(/vector x)dNx . (4)
+We follow Waxman and Peck in using a Gaussian function for the mutatio n proba-
+bility:
+f(/vector x−/vector y) = (2πm2)−N/2exp[−(/vector x−/vector y)2/2m2], (5)
+wherem2describes the variance of the mutant eﬀects for a single characte r.
+In addition to this discrete-time model, we will consider a model in which both
+mutations andselection occur continuously intime. The relationbetw een the discrete
+and continuous-time models can be seen explicitly by noting that the d iﬀerential
+equation
+∂φ(/vector x,t)
+∂t=/bracketleftBigg
+a(t)−x2
+2V/bracketrightBigg
+φ(/vector x,t) (6)
+has the solution
+φ(/vector x,t+τ) = exp/bracketleftBigg/integraldisplayt+τ
+tds a(s)−x2
+2Vτ/bracketrightBigg
+φ(/vector x,t). (7)
+4
+Thus, model Eq. (2) can be written as a diﬀerential equation:
+∂φ(/vector x,t)
+∂t=/bracketleftBigg
+a(t)−x2
+2V/bracketrightBigg
+φ(/vector x,t)
++θ/summationdisplay
+nδ(t−nτ)/integraldisplay
+d/vector y f(/vector x−/vector y)[φ(/vector y,t)−φ(/vector x,t)], (8)
+whereτis the interval between mutations. Here, a(t) is determined by the nor-
+malization requirement of Eq. (1) and δ(t) is the Dirac delta function. In dynam-
+ical systems theory, equations with a sum of time-delta functions a re said to be
+‘kicked’(Lichtenberg & Liberman, 1992). When the interval betwee n kicks (here τ)
+goes to zero, the sum of delta-function is replaced by its time avera ge, so that Eq. (8)
+reduces to:
+∂φ(/vector x,t)
+∂t=/bracketleftBigg
+a(t)−x2
+2V/bracketrightBigg
+φ(/vector x,t)+Θ/integraldisplay
+d/vector y f(/vector x−/vector y)[φ(/vector y,t)−φ(/vector x,t)],(9)
+where Θ is the rate of mutations per unit time, θ/τ, anda(t) is determined by the
+normalization requirement, Eq. (1.)
+In the next few sections we calculate the evolution of φ(/vector x,t) for diﬀerent N, with
+an emphasis on the behavior near /vector x= 0 at long times. In section 3 we examine the
+discrete-time model Eq. (2); section 4 discusses the continuous t ime equation Eq. (9).
+In section 5 we discuss the relationship between the results for the continuous and
+discrete-time equations.
+3 Time Evolution of Discrete Equations
+In this section we consider the discrete-time evolution Eq. (2). We w ill solve it by
+exploiting the following observation. Suppose at some time t φ(/vector x,t) is a normalized
+Gaussian with variance α, so thatφ(/vector x,t) =Gα(/vector x), where6
+Gα(/vector x) = (2πα)−N/2exp/bracketleftBigg
+−x2
+2α/bracketrightBigg
+. (10)
+Eq. (2) then implies that φ(/vector x,t+ 1) is the sum of two Gaussians. Indeed, at any
+ﬁnite timet,φ(/vector x,t) is the sum of ﬁnitely many Gaussians.
+To see how this works, notice that Eq. (2) involves the processes o f multiplication
+and of convolution with a Gaussian. If one multiplies two Gaussians, on e gets another
+Gaussian according to the rule:
+Gα(/vector x)Gβ(/vector x) = (γ
+2παβ)N/2Gγ(/vector x), where 1 /γ= 1/α+1/β . (11)
+6Strictly speaking, αis the variance of one component of /vector x.
+5
+Convolution has slightly diﬀerent rules. A textbook integration yields the simple
+result: /integraldisplay
+Gα(/vector x−/vector y)Gβ(/vector y)dNy=Gδ(/vector x),whereδ=α+β . (12)
+Instead of doing integrals at each time step, we can write recursion relations for
+the evolution of the widths and amplitudes of the Gaussians. We then solve these
+equations in the limit Vs≪m2. Our method of solution has similarities with that
+used by (Kingman, 1978) on a simpler model.
+To perform the calculation explicitly, ﬁrst consider a warm-up proble m—the case
+of no mutations ( θ= 0), which is described by the equation:
+Γ(t+1)φ(/vector x,t+1) = exp[ −x2/2Vs]φ(/vector x,t), (13)
+where Γ(t+1) is deﬁned in Eq. (4). We assume that, at time t,φ(/vector x,t) is a normalized
+Gaussian with variance α(t):
+φ(/vector x,t) =Gα(t)(/vector x) (14)
+The multiplication process of Eq. (11) implies that the value of φ(/vector x,t+ 1) is, once
+again a Gaussian of the form Gα(t+1)(/vector x), but that the new value of αis given by
+1/α(t+1) = 1/α(t)+1/Vs. This equation for α(t) has the solution:
+α(t) =α0
+1+α0t/Vs, (15)
+whereα0=α(t= 0). Thus the population distribution remains Gaussian, and at
+long times, its width scales as |/vector x| ∼t−1/2. As expected, ﬁtness selection continually
+narrows the distribution.
+Now we examine the full Eq. (2) with θ>0. We ﬁrst calculate φ(/vector x,t= 1), given
+thatφ(/vector x,t= 0) is a Gaussian. There are two terms in the equation. Each involves
+the multiplication of Gaussians, and the mutation term also involves a c onvolution.
+By the rules of Eqs. (11) and (12), φ(/vector x,t= 1) is the sum of two Gaussians of the
+form:
+φ(/vector x,1) = (1−θ)Gβ1(α)(/vector x)+θGβ2(α)(/vector x), (16)
+where the two β’s are given by:
+β1(α) =α
+1+α/Vs, (17)
+β2(α) =m2+β1(α), (18)
+It follows immediately that if φ(/vector x,t) is the sum of ﬁnitely many Gaussians, then
+φ(/vector x,t+1) is also the sum of ﬁnitely many Gaussians. Explicitly, we write φ(/vector x,t) in
+the form:
+φ(/vector x,t) =/summationdisplay
+iAi(t)Gαi(t)(/vector x), (19)
+6
+with the normalization condition that/summationtext
+iAi= 1. Then φ(/vector x,t+1) can be written:
+Γ(t+1)φ(/vector x,t+1) = (1 −θ)/summationdisplay
+iBi(t)Gβ1(αi(t))(/vector x)+θ/summationdisplay
+iBi(t)Gβ2(αi(t))(/vector x),(20)
+with:
+Bi(t) =Ai(t)[1+αi(t)/Vs]−N/2, (21)
+Γ(t+1) =/summationdisplay
+iBi(t). (22)
+Eqs. (20-22) simplify considerably when Vs/m2≪1. In this case, the character-
+istic width of the mutation probability function, f, is much greater than the width
+produced by one step of the ﬁtness narrowing. In this big-mutatio n-jump limit,
+β1(m2)≈Vs,β2(m2)≈m2,β1(Vs/n) =Vs/(n+1),β2(Vs/n)≈m2.7(Here,nis any
+positive integer.)
+Consider the time evolution of an initial distribution consisting of a Gau ssian with
+varianceα=m2. After one time step, the distribution splits into two Gaussians, an
+unmutated population with variance β≈Vsand a mutated population with variance
+β≈m2. After two time steps, the population consists of three Gaussians withβ
+values≈m2,Vs, andVs/2. Afternsteps, the population consists of n+1 Gaussians
+withβvaluesm2,Vs,Vs/2,..., Vs/n. We deﬁne α0=m2,αi=Vs/ifori≥1. (Note
+that theseα’s are time-independent.) If we start with an initial distribution which is
+a Gaussian of width much greater than m, then after nsteps, the distribution consists
+ofn+ 1 Gaussians with βvaluesα0, ..., α n. We describe the time evolution using
+rate equations for the populations in these states. Fig. 1 is a sketc h of the transitions
+that can occur between the diﬀerent α’s. Note that at a given time, a state αimakes
+transitions to two states, α0andαi+1.
+We writeφ(/vector x,t) as:
+φ(/vector x,t) =t/summationdisplay
+i=0Ai(t)Gαi(/vector x), (23)
+where theAi(t) must obey:.
+A0(t>0) =θ (24)
+A1(t>0) =(1−θ)
+Γ(t)QA0(t−1), (25)
+Ai(t) =1−θ
+Γ(t)/bracketleftbiggi−1
+i/bracketrightbiggN/2
+Ai−1(t−1) (i>1, t>0), (26)
+7Because the newly-mutated population is a Gaussian of width determ ined bym2for any dis-
+tribution, this approximation is equivalent to the “house-of-cards ” approximation introduced by
+(Kingman, 1978) and investigated in (Turelli, 1984), (Barton & Ture lli, 1989). One can show that
+the results derived in this section are robust when this approximatio n is not made, so long as one is
+the regime where Vs≪m2.
+7
+and
+Γ(t+1) =QA0(t)+t/summationdisplay
+i=1Ai(t)/parenleftbiggi
+i+1/parenrightbiggN/2
+. (27)
+We have deﬁned Q= (1+m2/Vs)−N/2; note that Q≪1 in the limit we consider.
+First consider the ﬁrst two steps of the evolution. Starting with th e initial condi-
+tionA0(t= 0) = 1,Ai(t= 0) = 0, one ﬁnds:
+A0(t= 1) =θ ,
+A1(t= 1) = 1 −θ . (28)
+So far not much has happened. But a key thing happens at the next step:
+A0(t= 2) =θ ,
+A1(t= 2) =θQ(1−θ)
+θQ+(1−θ)2−N/2,
+A2(t= 2) =(1−θ)22−N/2
+θQ+(1−θ)2−N/2. (29)
+Note thatA1(t= 2)∝Q≪1. In fact, for any t >2, allAi’s with 0< i < t are
+proportional to Q. However, as t→ ∞, the number of these terms diverges. So it
+is not obvious whether as t→ ∞a solution exists where A0(t) =θ,At(t) =O(1),
+and all other Ai(t)’s are small, which would imply that the Gaussian describing the
+unmutated population contains a nonzero fraction of the total po pulation. We will
+ﬁnd that such a solution can exist only when N >2.
+First we ﬁnd the steady-state solutions in the long-time limit t→ ∞. In steady
+state, the time arguments on the Aiand on Γ can be dropped, and the recursion
+relations become:
+A0=θ (30)
+A1=θQv , (31)
+Ai=v/bracketleftbiggi−1
+i/bracketrightbiggN/2
+Ai−1(i>1), (32)
+and
+1−θ
+v=θQ+ lim
+t→∞t/summationdisplay
+i=1Ai/parenleftbiggi
+i+1/parenrightbiggN/2
+, (33)
+where we have deﬁned v= (1−θ)/Γ. We explicitly allow for the possibility that the
+amplitudeA∞≡limt→∞At(t) is nonzero.
+The solution to Eqs. (30-33) is:
+A0=θ,
+Ai=θQi−N/2vi, i≥1, (34)
+8
+wherevmust satisfy:
+1−θ
+v=A∞+θQ∞/summationdisplay
+i=0vi/parenleftbigg1
+i+1/parenrightbiggN/2
+. (35)
+Note thatv≤1, for otherwise the Aicannot sum to unity, which is required for
+normalization of the probability.8Since asvincreases the left hand side of Eq. (35)
+monotonically decreases and the right hand side monotonically increa ses, a solution
+withA∞= 0 can exist only if θQ/summationtext∞
+i=0/parenleftBig
+1
+i+1/parenrightBigN/2>1−θ. Conversely, if this inequality
+is not satisﬁed, then we expect A∞>0. SinceA∞∼limt→∞vt, we require v= 1
+ifA∞is nonzero. We show below that such a solution is the long-time limit of th e
+solution of the time-dependent equations.
+First consider the case when A∞∝negationslash= 0. Since the sum in Eq. (35) converges if
+N >2, and diverges otherwise, we see that A∞∝negationslash= 0 can occur only if N >2. When
+the sum does converge, the unmutated ﬁtness peak, whose amplit ude isA∞and
+whose width is given by Eq. (15), can contain a nonzero fraction of t he total weight.
+Evaluating Eq. (33) with v= 1, we ﬁnd A∞= 1−θ−θQζ(N/2), whereζ(N/2) is
+the Riemann zeta function(Carrier et al., 1983; Abramowitz & Stegun, 1972).
+Now we consider the possibility of a solution in which the unmutated pop ulation
+constitutes an inﬁnitesimal fraction of the total population as t→ ∞. SinceA∞= 0,
+we must have:1−θ
+θQ= Φ(N/2,v), (36)
+wherev<1 and Φ(a,x) is the polylogarithm function(Lewin, 1981):
+Φ(a,x)≡∞/summationdisplay
+i=11
+iaxi. (37)
+Whena >1, Φ(a,x= 1) =ζ(a) is ﬁnite, where again ζ(z) is the Riemann zeta
+function. Therefore, for N >2, the the right hand side of Eq. (36) is bounded as
+v→1, and a solution exists only if (1 −θ)/(θQ)<ζ(N/2). In theQ≪1 limit that
+we have assumed, this happens only when 1 −θis very small also. If this condition
+is not satisﬁed, then a nonzero fraction of the population must be in the unmutated
+state.
+WhenN= 2, Φ(1,v) =−log(1−v), and in the limit θQ/(1−θ)≪1, one ﬁnds
+v≈1−exp/bracketleftBigg
+−1−θ
+θQ/bracketrightBigg
+, (38)
+8This inequality is derived in (Waxman & Peck, 1998), and is closely relate d to results derived
+by B¨ urger and collaborators (B¨ urger, 1986), (B¨ urger, 1988 ), (B¨ urger & Hofbauer, 1994), (B¨ urger
+& Bomze, 1996)
+9
+so that:
+Γ≈(1−θ)/parenleftBigg
+1+exp/bracketleftBigg
+−1−θ
+θQ/bracketrightBigg/parenrightBigg
+(N= 2). (39)
+WhenN= 1, the leading order term as v→1 can be calculated by noting that, for
+allv <1, Φ(1
+2,v) obeys the bounds:9
+/integraldisplay∞
+1dx1√xvx<Φ(1
+2,v)</integraldisplay∞
+0dx1√xvx. (40)
+The integrals both converge at their lower limits. They also converge at their upper
+limits when v <1, but not when v= 1. The behavior near the upper limit can be
+used to estimate that, as vapproaches 1,
+Φ(1
+2,v)∼/integraldisplay∞
+0dx1√xexp[−x|lnv|]
+=/radicalBiggπ
+|lnv|/integraldisplay∞
+0dtexp[−t2]
+=π
+2/radicalBig
+|lnv|
+≈π/(2√
+1−v). (41)
+Thus,v≈1−[(πθQ)/(2(1−θ))]2, and:
+Γ≈(1−θ)
+1+/parenleftBiggπθQ
+2(1−θ)/parenrightBigg2
+(N= 1). (42)
+Now we calculate the function φ(/vector x,t→ ∞).10First we consider the case when φ
+has aδ-function piece.
+In this regime, as t→ ∞,A0=θ,Ai=θQ(1/i)N/2(i≥1), andA∞, the weight
+in theδ−function, is A∞= 1−θ−θQζ(N/2), whereζ(N/2) is the Riemann zeta
+9These bounds follow because the integrand is monotonically decreas ing. For any positive integer
+jandv≤1, one has/integraltextj+1
+jdx1√xvx<1√jvj</integraltextj
+j−1dx1√xvx.
+10The form of the distribution calculated by Waxman and Peck (their fo otnote 29) does not apply
+here because they require simultaneous validity of the inequalities θVs/m2≪1,m2/Vs≪1, and
+N≪Vs/m2. Our calculation applies whenever Vs/m2≪1.
+10
+function. Therefore,
+φ(/vector x,t→ ∞) = (1−θ−θQζ(N/2))δ(x)+θ(2πm2)−N/2exp/bracketleftBigg
+−x2
+2m2/bracketrightBigg
++θQ∞/summationdisplay
+n=1(1/n)N/2(2πVs/n)−N/2exp/bracketleftBigg
+−nx2
+2Vs/bracketrightBigg
+= (1−θ−θQζ(N/2))δ(x)+θ(2πm2)−N/2exp/bracketleftBigg
+−x2
+2m2/bracketrightBigg
++θQ(2πVs)−N/2/parenleftBigg
+exp/bracketleftBiggx2
+2Vs/bracketrightBigg
+−1/parenrightBigg−1
+. (43)
+Thus we see that when φ(/vector x,t→ ∞) has aδ-function piece, there is in addition a
+divergent contribution at small x, proportional to 1 /x2. When the distribution is
+smooth, we have A0=θandAi=θQ(1/i)N/2vi(i≥1), andv <1, and we obtain:
+φ(/vector x,t→ ∞) =θ(2πm2)−N/2exp/bracketleftBigg
+−x2
+2m2/bracketrightBigg
++θQ(2πVs)−N/2/parenleftBigg
+v−1exp/bracketleftBiggx2
+2Vs/bracketrightBigg
+−1/parenrightBigg−1
+. (44)
+The sums that arise here are identical to those that come up in the c alculation of
+Bose-Einstein condensation for an ideal Bose gas(de Groot et al., 1950). The weight
+in theδ−function in the genotype distribution, A∞, is analogous to the condensate
+fraction in the Bose condensation problem. The parameter N, which here describes
+the number of traits aﬀected by a mutation, is the number of spatia l dimensions in
+the Bose gas calculation. That the superﬂuid fraction must be zero for a Bose gas
+in one and two dimensions is a special case of a general result in the th eory of phase
+transitions(Mermin & Wagner, 1966), (Hohenberg, 1967), (Fr¨ o lich & Pﬁster, 1981).
+We now discuss the time evolution of the population distribution. We be gin with
+some qualitative remarks. When v <1, the sum in the solution Eq. (35) converges
+geometrically. Therefore, in this regime one expects the approach to thet→ ∞
+limit to be exponential. In the regime where a δ−function contribution is present as
+t→ ∞, theδ−function is the long-time limit of a Gaussian describing the unmutated
+population. The squared width of this Gaussian narrows as 1 /t, so we expect the
+approach to the long-time limit to be power-law. These expectations are supported
+by the explicit calculation that we now present. We, in fact, show tha t the long-time
+corrections to the amplitude of the δ−function are also proportional to 1 /t.
+We again write recursion relations describing the transitions betwee n the various
+Gaussians, now allowing for explicit time dependence in the Ai(t). Deﬁning v(t) =
+11
+(1−θ)/Γ(t+1), these recursion relations are, for t>0:
+A0(t) =θ , (45)
+A1(t) =Qv(t−1)A0(t−1), (46)
+Ai(t) =v(t−1)/parenleftbiggi−1
+i/parenrightbiggN/2
+Ai−1(t−1), (47)
+1−θ
+v(t)=QA0(t)+t/summationdisplay
+i=1Ai(t)/parenleftbiggi
+i+1/parenrightbiggN/2
+. (48)
+For the initial conditions A0(t= 0) = 1 and Ai>0(t= 0) = 0, these recursion relations
+have the solution:
+Ai(t) =Qt−1/productdisplay
+t′=t−iv(t′)/parenleftbigg1
+i/parenrightbiggN/2
+A0(t−i+1). (49)
+The self-consistency condition is:
+1−θ
+v(t)=Q
+v(t)
+t+1/summationdisplay
+j=1/parenleftBigg1
+j/parenrightBiggN/2
+A0(t−j)t/productdisplay
+t′=t−j+1v(t′)
+. (50)
+Now we separate out explicitly the term j=t+1; this is reasonable because v(t′= 0)
+is larger than all the other v’s by a factor proportional to 1 /Q, yielding:
+1−θ
+v(t)=Qθ
+v(t)t/summationdisplay
+j=1/parenleftBigg1
+j/parenrightBiggN/2t/productdisplay
+t′=t−j+1v(t′)+(1−θ)/parenleftbigg1
+t+1/parenrightbiggN/2t−1/productdisplay
+t′=1v(t′).(51)
+Comparison of this result to that of the steady-state analysis (Eq . (34)) reveals that
+ast→ ∞the last term on the rhs is just A∞, the amplitude of the δ−function.
+Finally, deﬁning γ(t) =/producttextt
+t′=1v(t′), we ﬁnd
+(1−θ) =Qt/summationdisplay
+j=1/parenleftBigg1
+j/parenrightBiggN/2γ(t)
+γ(t−j)+(1−θ)/parenleftbigg1
+t+1/parenrightbiggN/2
+γ(t). (52)
+Recall that at long times v(t) approaches a limit v≤1. Therefore, for large t,
+γ(t) =Cγvt, whereCγis a constant, up to corrections that vanish as t→ ∞, and
+(1−θ) =Qt/summationdisplay
+j=1/parenleftBigg1
+j/parenrightBiggN/2
+vj+(1−θ)/parenleftbigg1
+t+1/parenrightbiggN/2
+Cγvt. (53)
+Whenvis strictly less than unity, the convergence is exponential, as expec ted from
+the qualitative argument given above and in agreement with the resu lt from the
+12
+continuous-time equations below. When lim t→∞v(t) = 1, then, since the second
+term on the right hand side is nonzero as t→ ∞, we must have γ(t) =/producttextt
+i=1v(t) =
+Cδ(t+1)N/2, whereCδis a constant. This implies v(t)→((t+1)/t)N/2∼1+O(1/t).
+By calculating the correction to the sum because of this variation in v(t), we ﬁnd that
+the amplitude of the δ−function obeys At(t)−A∞∝t−1ast→ ∞. WhenN= 2,
+v(t→ ∞) is exponentially close to unity, so that the decay of the amplitude in t he
+unmutated peak up to extremely long times is governed by the logarit hmic divergence
+of the sum for v= 1. Thus, in this case we expect At(t) to decay logarithmically with
+t.
+In ﬁgure 2 we plot At(t), the fractionof the populationwhich is unmutated, versus
+timetfor the parameter values θ= 0.2 andQ= 0.1, forN= 1, 2, and 3. The curves
+were obtained by numerical iteration of the recursion relations Eqs . (45–48), starting
+with the initial condition A0(t= 0) = 1 and Ai(t= 0) = 0 for i∝negationslash= 0. We ﬁnd, as
+expected, that At(t) decays to zero for N= 1 andN= 2 but not for N= 3. The
+scales on the plot were chosen to emphasize the logarithmic decay wh enN= 2.
+Tocompute theprobabilityfunction φ(/vector x,t)weﬁrst calculatetheamplitudes Ai(t),
+using the recursion relation, and then sum the corresponding Gaus sians (see Eqs. (19)
+and (10)) to obtain numerical values of the probability. These resu lts are plotted in
+ﬁgures 3, 4, and 5 for the parameter-values θ= 0.2 andQ= 0.1. ForN= 1, see
+ﬁgure 3, we plot φ(/vector x,t) against the magnitude of xfor various values of the time,
+t. The picture shows a probability distribution which ﬁrst gets narrow er, but then
+settles down to a time-independent behavior for the largest times. Also drawn on this
+plot is the inﬁnite-time probability, derived from Eqs. (34) and (35). The probability
+φ(/vector x,t) settles down to this limiting behavior most slowly near /vector x= 0, where ﬁtnesses
+change slowly with /vector x.
+ForN= 3, a corresponding calculation shows a probability function which ge ts
+more and more peaked as time goes on, see ﬁgure 4. Notice how, for t= 1000,
+the peak sticks up sharply from a more slowly varying background. T o see how this
+peaking occurs, we plot in ﬁgure 5 a scaled version of ﬁgure 4. In this version, we plot
+φs(/vector xs,t) whereφs(/vector x,t) is the result of dividing φ(/vector x,t) by the predicted growth of the
+peak, proportional to tN/2, giving us a scaled y-variable φs(/vector x,t) =φ(/vector x,t)t−N/2. The
+scaledx-variable is /vector xs=/vector xt1/2. The resulting plot becomes time-independent for large
+times and not-too-large values of /vector xs. In this way, we see how the peak continually
+gets narrower, and more and more dominates the small- xbehavior.
+Now we turn to the question of the role of initial conditions in the beha vior of
+discrete-time model. This question is important because the method of solution of
+the discrete-time model outlined in this section assumes that the init ial distribution
+φ(/vector x,t= 0) is Gaussian. Here we present our arguments why the results of the
+13
+calculation should not depend sensitively on this choice of initial condit ion.
+First, notethat any initial distribution φ(/vector x,t= 0)which has a width much greater
+than bothVsandm2will narrow to two Gaussians of widths Vsandm2after one
+mutation step. Therefore, the behavior of any broad distribution will be indistin-
+guishable from that of a Gaussian of width ∼>m2.
+Now we consider more general variation of the initial conditions by ex amining the
+time-dependent Eq. (51). Every term in the sum arises from a muta tion event at
+some time t≥0; changing the initial conditions changes only the last term on the
+right hand side. In the t→ ∞limit, the the amplitude of the δ−function is obtained
+by subtracting from unity the fraction of the population which has m utated at some
+time. The long-time limit, v, does not depend on the initial condition; to see this,
+notethat either v= 1, inwhich case A∞isobtainedby thesubtractionjust described,
+or elsev<1, in which case A∞= 0 and the amplitudes of all the terms that depend
+on the initial conditions vanish exponentially. Therefore, the initial c onditions do not
+aﬀect either the presence or absence of the δ−function or its steady-state amplitude
+when it is present.
+4 Continuous-Time Equations
+In this section we consider the continuous-time evolution described by Eq. (9). In
+(B¨ urger & Bomze, 1996) it is shown that there is a unique time-indep endent solution
+ast→ ∞and the possible solutions are classiﬁed using general properties of linear
+operators(Reed & Simon, 1972). Our results for the long-time limit a re consistent
+withtheirs. Inaddition, ourapproachenablesustointerpretsimply theemergence(or
+not) of the δ−function peak as well to address the time-dependence of the appr oach
+to thet→ ∞limit.
+We proceed by Fourier transforming Eq. (9). We deﬁne the quantit yn(/vectork,t) =/integraltextdNx φ(/vector x,t)exp[i/vectork·/vector x] and obtain:
+∂n(/vectork,t)
+∂t=/bracketleftbigg
+a(t)+1
+2V∇2
+/vectork/bracketrightbigg
+n(/vectork,t)−Θ[1−f(/vectork)]n(/vectork,t), (54)
+wheref(/vectork) is the Fourier transform of Eq. (5):
+f(/vectork) = exp[−m2k2/2]. (55)
+We must also specify, in addition to the initial conditions, two boundar y con-
+ditions. One boundary condition is determined by the normalization re quirement/integraltextdNx φ(/vector x,t) = 1, which yields:
+n(/vectork= 0,t) = 1. (56)
+14
+Thesecond boundaryconditionisthat n(/vectork,t)≤1forall/vectork, whichinparticularimplies
+that it cannot diverge as /vectork→ ∞. This follows from combining the normalization
+condition with the non-negativity requirement φ(/vector x,t)≥0:
+n(/vectork,t) =/integraldisplay
+dNx ei/vectork·/vector xφ(/vector x,t)≤/integraldisplay
+dNx φ(/vector x,t) = 1. (57)
+We now solve this equation in the limit of long times. Since as t→ ∞bothnand
+abecome independent of time, we must solve:
+/braceleftbigg
+−1
+2∇2
+/vectork−(ΘV)f(/vectork)/bracerightbigg
+ψ(/vectork) =Eψ(/vectork), (58)
+whereψ(/vectork)≡limt→∞n(/vectork,t) and the eigenvalue E=V(limt→∞a(t)−Θ). Eq. (58)
+is just the time-independent Schr¨ odinger equation(Schiﬀ, 1968) . The parameter N,
+the number of characters aﬀected by each mutation, here is inter preted as the spatial
+dimensionality. As shown in (B¨ urger & Bomze, 1996, and reference s therein) and
+as discussed here in the Appendix, the long-time solution to the popu lation biology
+model is given by the lowest energy eigenstate of this Schr¨ odinger equation.
+The kinetic energy term −1
+2∇2
+/vectorkin Eq. (58) comes from the ﬁtness selection. This
+term, which in /vector x-space causes the distribution to become narrower and narrower ,
+acts to cause it to become wider and wider in /vectork-space. The potential energy term
+−ΘVf(/vectork) comes from the mutations. This potential is constant at large k, and has
+an attractive piece at small k. If we assume that the potential has a characteristic
+scale ink, so thatf(/vectork) =F(m/vectork) (clearly the ﬁtness function considered here is of this
+form), thenwecandeﬁne /vector z=m/vectorkandwritetheSchr¨ odinger equationindimensionless
+form: /braceleftbigg
+−1
+2∇2
+/vector z−/parenleftbiggΘV
+m2/parenrightbigg
+F(/vector z)/bracerightbigg
+ψ(/vector z) =˜Eψ(/vector z), (59)
+where˜E=E/m2. This equation makes it clear that the nature of the behavior
+depends only on the single parameter (Θ V/m2).
+If only the selection (kinetic energy) term were present, the solut ions to Eq. (58)
+consistent with the normalization condition φ(/vectork) = 1 are
+ψ(/vector z) = exp[i/vector p·/vector z], (60)
+where/vector p= ˆz√
+2˜E, and ˆzis a unit vector along /vector z. To be consistent with the boundary
+conditions, we require ˜E≥0. The ground state eigenstate thus has ˜E= 0, so that
+ψ(/vector z) = 1. Fourier transforming this result, we see that in the absence o f mutations, at
+t=∞the entire population has the same genotype. This result is consiste nt with our
+calculation in the previous section demonstrating that in the absenc e of mutations
+the variance of φ(/vector x,t) narrows in proportion to 1 /time.
+15
+So now we consider the eﬀects of adding the potential arising from t he mutation
+term. This potential is attractive, so that the question we must ad dress is whether
+the ground state eigenstate remains extended ( ψ(/vector z)→constant as |/vectork| → ∞) or
+whether it results in a bound state with ˜E <0, which has ψ(/vector z)→0 exponentially
+inkas/vectork→ ∞. In the latter case, the real-space distribution φ(/vector x) is smooth as
+/vector x→0. Therefore, if there is a bound state, then only an inﬁnitesimal fr action of the
+population is unmutated, whereas if there are no bound states, th en a ﬁnite fraction
+of the population has a unique genotype.
+It has been proven for the Schr¨ odinger equation that any attra ctive potential, no
+matter how small, will lead to a bound state for N≤2(Simon, 1976). Thus, the
+population distribution in real space φ(/vector x,t→ ∞) must be smooth for N≤2. When
+N >2boundstatesonlyappearifthepotentialislargeenough(Θ Vs/m2>CN,where
+CNis of order unity)(Schiﬀ, 1968). Therefore, in this case, if the pot ential is small
+(weakmutationeﬀects), thenthegroundstateremainsextende d:ψ(/vectork)→constant as
+/vectork→ ∞, and the real space distribution φ(/vector x) has aδ−function piece. If the potential
+is large (strong mutation eﬀects), then there is a bound state, an d the distribution
+φ(/vector x) is not singular at small /vector x.
+If all the states are extended, then as |/vectork| → ∞the lowest energy state obeys
+∇2
+/vectorkn(/vectork) = 0 and has the form n(/vectork)→A+Bk−(N−2), whereAandBare coeﬃcients
+determined by matching to the solution in the small |/vectork|region.11
+For almost all potentials both AandBare nonzero; Fourier transforming the
+term proportional to Byields:
+B term∝/integraldisplay
+dΩ/integraldisplay∞
+0dk kN−1eikxcos(θ)k−(N−2)∝x−2. (61)
+(Here,/integraltextdΩ is the integral over angles.) Thus, just as in our discrete-time solu tion,
+we ﬁnd associated with a δ-function at /vector x= 0 a power-law divergence at small x,
+φ(/vector x)∝x−2.
+Inthe regimewhere the groundstateisbound, there isa ﬁniteener gy gapbetween
+the ground state and the excited states, which implies that the the long-time limit is
+approachedexponentially intime. Whenthereisnoboundstate, the energyspectrum
+of the Schr¨ odinger equation is continuous, which leads to power-la w convergence to
+the long-time limit. These points are discussed in greater detail in the Appendix.
+11This form can be veriﬁed for all Nby several means, the most straightforward being direct
+evaluation using Cartesian coordinates. A more elegant method is to note that we are looking for a
+function gwhichsatisﬁes0 = ∇2g= div·gradg. Since grad gis a current /vectorjthat is angle-independent
+and obeys div /vectorj= 0, then/integraltext
+j dSr= 0, where Sis the surface of a sphere of radius r. Therefore, one
+must have j∝r−(N−1), so that g∝r−(N−2).
+16
+5 Relation between the continuous-time and the
+discrete-time models
+In this section we discuss the similarities and diﬀerences between the results of our
+discrete-time analysis valid when Vs/m2≪1 and those of the continuous-time anal-
+ysis. The basis of our discussion is Eq. (8), which can be used to desc ribe both
+cases.
+Qualitatively, the discrete and continuous models exhibit very similar b ehavior.
+They both lead to only smooth distributions (a “normal” phase) for N≤2, and
+forN >2 display a transition as the mutation rate is decreased between the normal
+phase and a “condensed” phase, where a ﬁnite fraction of the pop ulation has a unique
+genotype. In both models, the convergence to the long-time limit is p ower law in
+the condensed phase and is exponential in the normal phase. Howe ver, there are
+quantitative diﬀerences between the two models, particularly the d etailed dependence
+on model parameters.
+Inthecontinuous-timemodel, theformofEq.(59)makesitclearth atthebehavior
+depends only on the single parameter Θ V/m2. In contrast, the discrete model that
+we solve in the limit m2/Vs≫1 (Eqs. (24-26)) depends on two parameters: Q=
+(1 +m2/Vs)−N/2andθ. ForN >2, the discrete model might or might not have
+a condensate, depending on the value of the ratio θQ/(1−θ). In this regime, the
+continuous-time model is always in the condensed phase.
+We use Eq. (8) to discuss the relation between the continuous- and discrete-time
+models. One can Fourier transform this equation (as we did in section 4 for the
+continuous-time model) and interpret the result as a quantum-mec hanical problem
+of a particle in a potential which is applied only at the discrete times t=nτas in
+Eq. (8).12
+The discrete model has two parameters while the continuous model has only one,
+since Eq. (8) depends not just on the mean mutation rate Θ but also onτ, the time
+between mutation events. Thus, in principle the discrete-time mode l has one more
+parameter than the continuous-time one. If τis increased by a factor of two, then the
+productθV(θthe mutation probability per generation and Vthe viability selection
+parameter) remains constant, but Vitself is halved. The analysis in section 3, which
+is valid when V/m2is very small, and hence in the limit when τis very long, yields
+a solution in which that both θandV/m2enter explicitly and not just as a product.
+Nonetheless, two models have very similar outcomes.
+12We take the limit where a very strong potential is applied for a very sh ort time at each tn=nτ.
+17
+6 Comparison with sequence database statistics
+Here we present our investigations of the statistical properties o f DNA sequences
+archived in genetic databases. The aim is to see if observed sequenc e variability of
+a gene is correlated with its degree of pleiotropy. The focus in this se ction is on a
+qualitative prediction of the model, that genes with a high degree of p leiotropy should
+haveanarrowerdistributionofallelesthanthosethataﬀectonlyon etrait. Thistrend,
+which is consistent with the mathematical results of the previous se ctions, is easy to
+understand: if a gene of high ﬁtness is pleiotropic, then because ea ch mutation aﬀects
+several characters independently, the chances are high that a g iven mutation leads to
+a large ﬁtness decrease.
+Our ﬁrst test for possible correlation between degree of pleiotrop y and the proba-
+bility distribution describing genetic variation is simply to count the num ber of natu-
+rally occurring variants of various genes in the Drosophila database FlyBase(FlyBase,
+1998). We choose to include naturally occurring alleles, including spon taneous muta-
+tions arising in laboratory stocks, of the genes analyzed. Mutagen -induced variants
+are not included, since there is no evidence that they exist in natura l populations.
+Table 1 shows data for nine genes: brown,cinnabar ,ecdysone receptor ,engrailed ,
+fork head ,hairless,notch,vestigial , andwhite. The number of naturally occur-
+ring variants is tabulated together with the length of the primary tr anscript and the
+approximate length of the genomic region encompassing the gene an d its ﬂanking reg-
+ulatory regions. Transcript and genomic lengths are taken from th e full-format gene
+reports in FlyBase. For genes with multiple transcripts, we report t he length of the
+longest described transcript. When the full gene report does not include the genomic
+length, this is estimated from the FlyBase molecular map of the gene. The number
+of variants per gene is normalized both by the transcript length and by the genomic
+length. In both cases, the values range over approximately three orders of magnitude.
+We estimate the degree of pleiotropy of each of the listed genes acc ording to the num-
+ber of tissues/structures and developmental stages in which the genes are expressed.
+This ordering is admittedly arbitrary to some extent, but few would a rgue with the
+conclusion that fork head (encoding a transcription factor essential for development
+of the midgut) and engrailed (encoding a homeotic gene establishing segmentation)
+are more pleiotropic than the eye color mutants cinnabar ,white, andbrown. Inspec-
+tion of Table 1 reveals a clear inverse correlation between estimated pleiotropy and
+number of variants/transcribed length or variants/genomic lengt h. This relationship
+is consistent with the prediction of Waxman and Peck’s model.
+A weak point of this approach is that other factors besides degree of pleiotropy
+could lead to the observed diﬀerences in the number of variants. Fo r instance, even
+18
+two genes which only aﬀect single traits could have vastly diﬀerent va riabilities, if
+the traits have greatly diﬀerent eﬀects on overall ﬁtness. For ex ample, a gene that
+controls eye color may well have a much smaller overall eﬀect on ﬁtne ss than a gene
+that controls a crucial developmental function. In the population genetics model,
+diﬀerences of this type are reﬂected by diﬀerent values of the ﬁtn ess parameter Vs.
+Within the model, diﬀerences in overall variability caused by changing Vscan be
+distinguished from those caused by changing the degree of pleiotro pyNbecause they
+yield very diﬀerent functional forms for the distribution function φ(/vector x). However,
+countingmutationsyieldsnoinformationaboutthefunctionalform ofthedistribution
+function and thus cannot be used to distinguish between the mecha nisms.
+Our second strategy for relating degree of pleiotropy to statistic s of archived DNA
+sequences aims to obtain information about the form of the probab ility distribution
+for various genes. It assumes that two genetic variants whose se quences are highly
+similar in sequence space code for genes that are close together in ﬁ tness space. We
+use the BLAST 2 sequence similarity search tool(Altschul et al., 1997) to search
+the GENBANK and EMBL DNA sequence databases13against the 8 gene sequences
+listed in Table 2. These databases contain sequences of genes from many organisms,
+though a preponderance of the sequences are from humans. Give n a target sequence,
+BLAST 2 generates a list of matching sequences along with scores wh ich measure
+the degree of similarity. Because the maximum possible score for a giv en sequence is
+larger for longer sequences, we avoided examining genes that were either very short or
+very long. As can be seen in table 2, the lengths of the sequences ex amined varied by
+less than a factor of ten. Only genes were used whose list of matche s was truncated
+because the score fell below the cutoﬀ value of 40; no genes were u sed whose match
+list was truncated because the number of matching sequence exce eded BLAST 2’s
+maximum number of matches of 500. As shown in table 2, the number o f matches
+obtained also varies by roughly an order of magnitude for the genes in the table, and
+is not obviously correlated with the length of the gene.
+High BLAST 2 scores correspond to sequences which match the sea rch sequence
+the most closely. The scores range from roughly 104(a sequence matching itself) to
+the default cutoﬀ of 40. We assume that this score is inversely corr elated with the
+evolutionary distance between the input gene and the retrieved se quences, so that
+a gene with a high fraction of matches with low scores has a broader p robability
+distribution φ(x) than a gene with more matches with high scores. Thus, if all the
+matches tend to be very good, the gene is considered to be less var iable than one
+with many poor matches. We examine the statistics of the closeness of the matches,
+13These databases and the BLAST 2 search tool are maintained by th e National Center for
+Biotechnology Information (http://www.ncbi.nlm.nih.gov).
+19
+in particular the fractions of the total number of matches that fa ll into given ranges
+of scores.
+Figure6isaplotofahistogramofthefractionofthematchesinagive nscorerange
+obtained versus the inverse of the score for several genes. We d o observe signiﬁcant
+variability between these genes; for example, cytochrome P-1-450 , which codes for a
+general-purpose antioxidant expressed in many tissues and is thus plausibly highly
+pleiotropic, has relatively many very good matches compared to rhodopsin , which
+is quite speciﬁc, coding for a protein essential for vision. However, we cannot claim
+that there is an unambiguous correlation between degree of pleiotr opy and these
+plots. For example, HOX A1 has many poor matches, where it might be expected to
+be pleiotropic, since it is essential to many developmental functions . Thus, though
+interesting variations in the statistics of DNA sequences for diﬀere nt genes are found,
+we have not been able to demonstrate convincingly a correlation bet ween degree of
+pleiotropy and these statistical variations.
+The behavior of HOX A1 can be explained by a process of repeated duplication
+anddivergenceover thecourseofevolution. Manyoftheretrieve dgeneshaveassumed
+distinct but related developmental functions. The BLAST 2 analysis presented here
+does not account for a shift in score distributions arising from diver gence among
+members of gene families and superfamilies. Another fundamental d iﬃculty with our
+analysis is illustrated by the case of alpha-tubulin , which codes for a protein vital to
+the formation of microtubules. On the one hand, microtubules are e xpressed in many
+diﬀerent tissues, but on the other hand, all its functions arise fro m similar structural
+properties. Thus, one could categorize alpha-tubulin as either highly pleiotropic (since
+it is expressed in many tissues) or as non-pleiotropic (since the func tion is similar
+everywhere where it is expressed). In short, though degree of p leiotropy is deﬁned in
+the populations genetic model, it is not clear how to quantify it in terms of biological
+function.
+There are several additional diﬃculties and ambiguities inherent in co mparisons
+between genome sequence data and population genetics models of t he type consid-
+ered here. First, the database scores are based on the quality of sequence alignments,
+whereas the population genetics models deﬁne distances in terms of ﬁtness, which is
+a phenotypic quantity. Fitness distance and evolutionary sequenc e distance may be
+quite diﬀerent; for example, point mutations at diﬀerent locations m ay range in eﬀect
+from unobservable to lethal. However, even if there is not a single de ﬁnite relation-
+ship between sequence distance and ﬁtness distance, so long as th ese quantities are
+positively correlated with each other, meaningful results may be ob tained. Variabil-
+ity in the relation between the distances will result in noisy data, but d iﬀerent genes
+are all subject to similar uncertainties. Therefore, it is plausible to h ope that, if sig-
+20
+niﬁcant diﬀerences between the sequence variability of two genes a re observed, they
+reﬂect diﬀerences in the ﬁtness distribution φ(/vector x) of the population genetics models.
+Another limitation of our analysis is that we consider the ﬁtnesses of alleles as ﬁxed.
+This is not necessarily the case, as many gene products function as components of
+multi-protein structures or pathways(Lewontin, 1974), (Dover & Flavell, 1984). This
+dependency of the ﬁtness value of a speciﬁc sequence variant on t he remainder of
+the genotype is manifested explicitly by the existence of epistatic int eractions (e.g.,
+(Fijneman et al., 1996), (van Wezel et al., 1996)).
+In addition, one may worry that the population genetics model we ha ve used
+involves a continuously varying phenotype, whereas sequence var iations are discrete.
+However, because genes are thousands of base pairs long, there is still a huge range
+of variability, and the use of a continuum model is therefore reason able.
+Finally, as mentioned above, pleiotropy itself is deﬁned in terms of phe notypic
+ﬁtness, and it is not clear how to create an independent measure th at enables one to
+assign objectively the degree of pleiotropy Nto a given gene. This is a serious fun-
+damental diﬃculty that must be overcome if one is to make meaningfu l quantitative
+statistical analysis of the possible correlations between the seque nce statistics and the
+degree of pleiotropy.
+7 Discussion
+In this paper we have analyzed some variants of a population biology m odel incorpo-
+rating selection, mutation, and pleiotropy. We have focussed on un derstanding the
+circumstances under which at long times a nonzero fraction of the p opulation has a
+unique genotype, and on characterizing the time dependence of th e population distri-
+bution in this regime. We have analyzed both the discrete-time model of (Waxman
+& Peck, 1998) as well as an associated continuous-time model. We ﬁn d:
+1. In both the discrete and continuous-time models, a unique genot ype can emerge
+only when N, the number of characters aﬀected by each gene, is greater tha n
+two, a result in agreement with (Waxman & Peck, 1998). For any N >2,
+the inﬁnite-time population distribution φ(/vector x,t→ ∞) contains a δ−function
+contribution when the mutation rate is nonzero but small, but not wh en the
+mutation rate is large enough.
+2. In the regime where φ(/vector x,t→ ∞) has aδ-function contribution, this δ-function
+is accompanied by a 1 /x2singularity at small /vector x.
+3. Theδ-function peak emerges as the limit of a peak that continually become s
+21
+higher and narrower. Thus, in this regime the convergence to the t→ ∞limit
+is power-law.
+4. In the regime when φ(/vector x,t→ ∞) is smooth, the convergence to this distribution
+is exponential in time.
+5. The continuous- and discrete-time models exhibit qualitatively iden tical behav-
+ior, but there are quantitative diﬀerences between them.
+Our analysis of the discrete-time equations relies on the use of Gaus sian functions
+for both the ﬁtness and mutation terms. However, our analysis of the continuous-
+time model assumes only that the potential in the quantum mechanic s problem is
+attractive and short-ranged. Therefore, we expect our result s to apply qualitatively
+for a large class of diﬀerent mutation terms.
+Other mechanisms giving rise to genetic diversity such as antagonist ic pleiotropy,
+genetic drift, and discreteness of alleles change qualitatively the na ture of the equa-
+tions describing the system. It will be interesting to see whether th e “condensation”
+phenomenon investigated here is robust when these eﬀects are ta ken into account.
+In addition to our mathematical analysis, we also attempted to asse ss whether
+the degree of pleiotropy of genes resulted in systematic trends in t he degree of varia-
+tion they exhibited in the mutations documented in online genetic data bases. These
+attempts to correlate the degree of pleiotropy with the statistics of the sequence
+variations were inconclusive.
+Available database resources do not allow unbiased sampling of the se quence vari-
+ation present in a natural population. Such a database is likely to eme rge as the
+Human Genome Project’s present initiative to sample the extent of s equence varia-
+tion in a wide array of genes in the American population progresses.
+8 Acknowledgments
+WearegratefulforsupportbytheNationalScienceFoundation, GrantDMR96-26119
+(SNC), and the Oﬃce of Naval Research, Grant N00014-96-1-01 27 (LPK). SNC and
+RDB thank J.J. Sohn for useful suggestions.
+22
+Appendix: The relation between eigenstates of the
+Schr¨ odinger equation and the long-time behavior of
+the continuous-time population genetics model
+In section 4 above we use the result that the long-time behavior of E q. (54) is given
+by the lowest energy eigenstate of the associated Schr¨ odinger E q. (58). This result
+has been shown by B¨ urger and collaborators(B¨ urger & Bomze, 1 996, and references
+therein); for completeness we derive it here and emphasize the implic ations for the
+approach to the long-time behavior in the population biology model.
+We assume that we know the solution of the time-independent proble m, which is
+a set of eigenstates un(/vector x) which satisfy:
+−1
+2∇z2un(/vector z)+V(/vector z)un(/vector z) =Enun(/vector z). (62)
+The eigenstates un(/vector z) are complete (any function can be written as a linear combi-
+nation of them) and can be chosen to be orthonormal:
+/integraldisplay
+dNz u∗
+n1(/vector z)un2(/vector z) =δn1,n2, (63)
+where the star denotes complex conjugate. This normalization is us ual in quantum
+mechanics(Schiﬀ, 1968).
+We need to examine the time-dependent Eq. (54); using scaled varia bles, it is
+written as:
+−∂ψ(/vector z,t)
+∂t=−/bracketleftbigg
+a(t)+1
+2∇2
+z/bracketrightbigg
+ψ(/vector z,t)+V(/vector z)ψ(/vector z,t), (64)
+where
+a(t) =/bracketleftbigg
+−1
+2∇2
+z+V(z)/bracketrightbigg
+ψ(/vector z,t)|/vector z=0. (65)
+We write the wave function at time t0,ψ(/vector z,t0), as a linear combination of eigenstates:
+ψ(/vector z,t0) =/summationdisplay
+ibi(t0)ui(z). (66)
+The condition ψ(/vector z= 0,t0) = 1 is enforced by requiring/summationtext
+ibi(t0)ui(/vector z= 0) = 1. By
+substituting the form (66) for ψand using the orthonormality of the eigenstates, one
+ﬁnds equations for the time-evolution of the coeﬃcients bi:
+−dbi(t)
+dt=bi(t)[Ei−a(t)]. (67)
+Integrating this equation yields:
+bi(t) =bi(t0)A(t)e−Eit, (68)
+23
+whereA(t) = exp/bracketleftBig/integraltextt
+t0ds a(s)/bracketrightBig
+. Thus the ratio of the weights of any two eigenstates
+i1andi2is given by:
+bi1(t)
+bi2(t)=bi1(t0)
+bi2(t0)exp[−(Ei1−Ei2)t]. (69)
+At long times the exponential factor ensures that the state with t he largest weight is
+the one with the lowest energy.
+If there is a nonzero energy gap between the lowest and second-lo west energy
+eigenstates (no δ-function in φ(/vector x)), then Eq. (69) implies that the approach to the
+long-time limit is exponential in time. If there is no bound state, then a ll the states
+are extended and the spectrum is continuous; the Eitake the form Ei=q2
+i/2, where
+qihas the dimension of a wavevector in /vector zspace,(Schiﬀ, 1968) and hence a distance
+in the original /vector xspace. Therefore,
+ψ(/vector z,t) =A(t)/summationdisplay
+ibi(t0)e−q2
+it/2. (70)
+The relative weight of the eigenstate iremains large until qi∼/radicalBig
+1/t. Thus, the
+δ-function at inﬁnite times emerges from a peak that is narrowing, ha ving a width
+proportional to/radicalBig
+1/t.
+References
+Abramowitz, M. and Stegun, C. A. (Eds.) (1972). Riemann Zeta Fun ction and Other
+Sums of Reciprocal Powers. Chapter 23.2 in Handbook of Mathematical Func-
+tions with Formulas, Graphs, and Mathematical Tables , 9th printing. New York:
+Dover, pp. 807-808.
+Altschul, S.F., Madden, T.L., Sch¨ aﬀer, A.A., Zhang, J., Zhang, Z., Miller , W.,
+& Lipman, D.J. (1997). Gapped BLAST and PSI-BLAST: a new genera -
+tion of protein database search programs. Nucleic Acids Res. 25, 3389-3402;
+http://www.ncbi.nlm.nih.gov/BLAST/
+Barton, N.H. & Turelli, M. (1989). Evolutionary quantitative genetic s: how little do
+we know? Annu. Rev. Genet. 23, 337-370.
+B¨ urger, R. (1986). On the maintenance of genetic variation: glob al analysis of
+Kimura’s continuum-of-alleles model. J. Math. Biol. 2, 341-351.
+B¨ urger,R.(1986).Mutation-selectionbalanceandcontinuum-o f-allelesmodels. Math-
+ematical Biosciences 91, 67-83.
+24
+B¨ urger, R. and Hofbauer, J. (1994). Mutation load and mutation -selection-balance in
+quantitative genetic traits. J. Math. Biol. 32, 193-218.
+B¨ urger, R. & Bomze, I.M. (1996). Stationary distributions under mutation–selection
+balance: Structure and properties. Adv. Appl. Prob. 28, 227-251.
+Carrier, G.F., Krook, M., Pearson, C.E. (1983). Functions of a Complex Variable .
+Hod books, Ithaca, N.Y. p.192 ﬀ.
+de Groot, S.R., Hooyman, G.Y., ten Seldam, C.A. (1950). On the Bose- Einstein
+Condensation. Proc. Roy. Soc. A 203, 266-286.
+Dover, G.A. & Flavell, R.B. (1984). Molecular coevolution: DNA diverge nce and the
+maintenance of function. Cell38, 622-623.
+Feynman, R.P. (1972). Statistical Mechanics: A Set of Lectures , Ben-
+jamin/Cummings, Reading, MA), pp. 30-34.
+Fijneman, R.J., deVries, S,S,, Jansen, R.C., Demant, P. (1996).Comp lex interactions
+of new quantitative trait loci, Sluc1, Sluc2, Sluc3, and Sluc4, that inﬂ uence the
+susceptibility to lung cancer in the mouse. Nat. Genet. 14, 465-467.
+Fr¨ ohlich, J. & Pﬁster, C. (1981). On the absence of spontaneou s symmetry breaking
+and of crystalline order in two-dimensional systems. Commun. Math. Phys. 81,
+277-298.
+The FlyBase Consortium (1998). FlyBase – A Drosophila Database. Nucleic Acids
+Research 26, 85-88; http://ﬂybase.bio.indiana.edu/.
+Gavrilets, S. & de Jong, G. (1993). Pleiotropic models of polygenic va riation, stabi-
+lizing selection, and epistasis. Genetics 134, 609-625 (1993).
+Hohenberg, P.C. (1967). Existence of long-range order in one and two dimensions.
+Phys. Rev. 158, 383-386.
+Kimura, M. (1965). A stochastic model concerning the maintenanc e of genetic vari-
+ability in quantitative characters. Proc. Nat. Acad. Sci. USA 54, 731-736.
+Kingman, J.F.C. (1978). A simple model for the balance between selec tion and mu-
+tation.J. Appl. Prob. 15, 1-12.
+Lande, R. (1980). The genetic covariance between characters m aintained by
+pleiotropic mutation. Genetics 94, 203-215.
+25
+Lewin, L. Polylogarithms and Associated Functions . North-Holland, New York.
+Lewontin, R.C. (1974). The Genetic Basis of Evolutionary Change. Columbia Uni-
+versity Press, New York.
+Lichtenberg, A.J. & Liberman, M.A. (1992). Regular and Chaotic Dynamics .Springer
+Verlag Applied Mathematical Sciences series, number 38, Springer V erlag, New
+York, p. 219.
+Mermin, D.andWagner, H.(1966).Absenceofferromagnetismor antiferromagnetism
+in one- or two-dimensional isotropic Heisenberg models. Phys. Rev. Lett. 17,
+1133-1136.
+Reed, M. and Simon, B. (1972). Methods of modern mathematical physics, Vol.4:
+Analysis of operators , Academic Press, New York.
+Schiﬀ, L.I. (1968). Quantum Mechanics , third edition, McGraw-Hill, New York.
+Simon, B. (1976). The Bound State of Weakly Coupled Schr¨ odinger Operators in One
+and Two Dimensions. Annals of Physics 97, 279-288.
+Spanier, J. & Oldham, K. B. (1987). An Atlas of Functions, Hemisphere Pub., Wash-
+ington, DC, chapter 10.
+Turelli, M. (1984). Heritable genetic variation via mutation-selection balance: Lerch’s
+zeta meets the abdominal bristle. Theoret. Pop. Biol. 25, 138-193.
+Turelli, M. (1985). Eﬀects of pleiotropy on predictions concerning m utation-selection
+balance for polygenic traits. Genetics 111, 165-195.
+van Wezel, T., Stassen, A.P., Moen, C.J., Hart, A.A., van der Valk, M.A., D emant,
+P. (1996). Gene interaction and single gene eﬀects in colon tumour s usceptibility
+in mice.Nat. Genet. 14, 468-470.
+Wagner, G.P. (1989). Multivariate mutation-selection balance with c onstrained
+pleiotropic eﬀects. Genetics 122, 223-234.
+Waxman, D. & Peck, J.R. (1998). Pleiotropy and the preservation o f perfection.
+Science279, 1210-1213.
+26
+gene PRNVLTLGNV/LT NV/LG
+fork head 114.013 - 60 2.5×10−4(1.7−7.7)×10−5
+engrailed 2193.62005.3×10−49.5×10−5
+ecdysonereceptor 3135.5352.4×10−33.7×10−4
+notch 4701580 - 150 4.7×10−3(4.7−8.8)×10−4
+vestigial 5553.846 0.014 1.2×10−3
+hairless 6176.082.0×10−32.1×10−3
+cinnabar 7222.5158.8×10−31.5×10−3
+white 82476.048 - 200 0.041 (1.2−5.1)×10−3
+brown 9613.0140 0.020 4.4×10−4
+Table 1: Table of number of naturally-occuring mutations for diﬀere ntDrosophila
+genes. PR is pleiotropy rank, estimated using the number of tissues /structures and
+developmental stagesinwhichthegenesareexpressed. NVisthenumber ofnaturally-
+occurring variants of the gene, LTis the transcript length, and LGis the genomic
+length. All lengths are given in kilobases.
+gene lengthnumber of matches
+cytochrome P-1-450 2565 81
+dystrophin 13957 216
+epidermal growthfactor receptor 2660 57
+HOX A1 (human) 2595 380
+huntingtin 10348 108
+iodothyronine deiodinase 2222 159
+rhodopsin 6953 208
+alpha-tubulin 1596 488
+Table 2: Genes examined using BLAST 2 sequence similarity search too l. Lengths of
+genes are given in units of the number of bases.
+27
+....
+log(α)α
+0α
+1α
+2α
+3α
+4....
+Figure 1: Sketch of transitions between αi’s in the limit Vs/m2≪1. Eachαicorre-
+sponds to a Gaussian in φ(/vector x,t).
+28
+Figure 2: Plot of the fraction of the population which is unmutated, At(t), versus
+timetfor the discrete-time model with parameter values Q= 0.1,θ= 0.2, obtained
+by numerical iteration of Eqs. (45–48) starting with A0(t= 0) = 1,Ai/negationslash=0(t= 0) = 0.
+ForN= 1 and 2, At(t) decays so that A∞≡limt→∞At(t) = 0, while for N= 3,A∞
+is nonzero.
+29
+Figure 3: Plot of probability function φ(/vector x,t) against the magnitude of /vector xforN= 1.
+The numerical results for times 10, 30, 100, and 1000 are calculate d by summing
+Gaussians with weights computed from the recursion relations. This set of curves is
+compared with the expected inﬁnite-time result, calculated as a solu tion to Eqs. (34)
+and (35). For large times, the two types of calculations agree quite well.
+30
+Figure 4: Plot of probability function φ(/vector x,t) against the magnitude of /vector xforN= 3.
+The numerical results are shown for times 10, 30, 100, and 1000. I n contrast to the
+N= 1 case, these curves contain a central peak which continues to n arrow and to
+grow for large t.
+31
+Figure 5: Scaled plot of probability function versus the magnitude of xforN= 3.
+The scaling is picked to make the central peak show a time independen t behavior in
+the new coordinates. The abscissa is xt1/2, so that for larger time the picture focuses
+upon smaller values of x. The ordinate is φ(/vector x,t)t−N/2, andthereby the picture focuses
+uponincreasingly concentrated distributions for larger t. Numeric al results areshown
+for times 10, 30, 100, and 1000. In these coordinates, the ﬁgure shows (as expected)
+an approach to a constant value at large times.
+32
+1/scoreweight in bin
+0.000 0.005 0.010 0.015 0.020 0.025 0.0300.00.10.20.30.40.50.6
+dystrophin
+HOX A1
+huntingtin
+iodothyronine deiodinase
+rhodopsin
+tubulin
+cytochrome P-1-450
+EGFR
+Figure 6: Histogram plot of the fraction of matches with inverse sco res in a given
+range, as a function of inverse score, for several genes with diﬀe ring degrees of
+pleiotropy. Signiﬁcant diﬀerences in the statistics of these matche s are observed;
+for example, cytochrome P-1-450 has a very large percentage of matches with high
+scores, whereas the matches for rhodopsin tend to have low scores.
+33

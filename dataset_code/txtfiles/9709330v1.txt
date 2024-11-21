@@ -1,0 +1,756 @@
+arXiv:cond-mat/9709330v1  [cond-mat.soft]  30 Sep 1997A Conﬁgurational Bias Monte Carlo Method for Linear
+and Cyclic Peptides
+Michael W. Deem∗and Joel S. Bader
+CuraGen Corporation
+322 East Main Street
+Branford, CT 06405
+October 9, 2018
+Running Title: Biased Monte Carlo of Cyclic Peptides.
+∗Author to whom correspondence should be addressed. Present a ddress: Lyman Labo-
+ratory of Physics, Harvard University, Cambridge, MA 02138.
+1
+Abstract
+In this manuscript, we describe a new conﬁgurational bias Monte Ca rlo technique for
+the simulation of peptides. We focus on the biologically relevant cases of linear and cyclic
+peptides. Our approach leads to an eﬃcient, Boltzmann-weighted s ampling of the torsional
+degrees of freedom in these biological molecules, a feat not possible with previous Monte
+Carlo and molecular dynamics methods.
+2
+1 Introduction
+This paper presents a new Monte Carlo method that employs biased t rial moves to achieve
+an eﬃcient sampling of the torsional degrees of freedom for linear a nd cyclic peptides.
+Peptides are small molecules, built from amino acids, that are of fund amental impor-
+tance in biological systems [1]. They play key roles in signal transduct ion between cells,
+regulation of cell growth and diﬀerentiation, and protein localization on cell surfaces [2].
+Peptides are thought to regulate neurotransmission, from modula ting pain and thirst to
+aﬀecting memory and emotion [3, 4]. They are used as a chemical defe nse mechanism by
+some organisms. The conussnails, for example, produce a family of highly-constrained
+peptides that include very powerful neurotoxins [5]. Finally, peptide s are used within the
+biotechnology industry to identify antagonists blocking various abn ormal enzymatic ac-
+tions or ligand-receptor interactions [6]. Cyclic or otherwise constr ained peptides are often
+preferred for this application, since such molecules suﬀer less of a lo ss of conﬁgurational
+entropy upon binding [7]. A classic example is the use of the RGD peptide to block the
+GPIIb/IIIa-ﬁbronectin interaction, reducing blood platelet aggr egation [8, 9].
+The properties of peptides are amenable to examination by compute r experiment. An
+early study was of the alanine dipeptide, in which the potential energ y surface was de-
+duced from ab initio quantum mechanical calculations [10, 11]. Larger peptides have bee n
+examined by classical simulations. Both molecular dynamics [12] and Mo nte Carlo [13]
+approaches have proven useful. The eﬀects of the aqueous envir onment have been incorpo-
+rated by simple dielectric theory [14, 15, 16, 17] or by explicit inclusion of water molecules
+[18].
+It has become clear, however, that the standard molecular dynam ics and Monte Carlo
+methods are not capable of sampling all conformational degrees of freedom accessible at
+body temperature to the larger peptides. This problem is particular ly evident for the im-
+portant case of constrained peptides. Various solutions, such as high-temperature molec-
+ular dynamics [19, 20] or simpliﬁed force ﬁelds [20, 21], have been sugg ested, but these
+approaches suﬀer from uncontrolled approximations. A simulation m ethod able to sample
+the relevant conformational states of peptides, particularly con strained ones, or exposed
+loops of larger proteins would be of great value. It would aid study of these molecules in bi-
+ologicalsystems aswell asfacilitatestructuralunderstanding of thepeptides andantibodies
+of interest to the biotechnology industry.
+3
+Recently, powerful Monte Carlo methods have been developed tha t have a greatly en-
+hanced sampling eﬃciency [22, 23, 24, 25, 26, 27, 28, 29]. These met hods have been
+applied to chain molecules at low and high density [24, 30] and even at ph ase coexistence
+[31, 32, 33, 34]. These methods all use importance sampling, or biase d moves, to eﬃciently
+explore the free energy landscape.
+Wehereapplytheseconceptstopeptidemolecules. Bothlinearandc onstrainedorcyclic
+peptidesaretreatedbythismethod. InSec.2wedescribetheMon teCarlomethodindetail.
+Appendices describe therigidmolecular fragmentsfromwhichpeptid es areconstructed and
+providetechnical detailsofthemethod. InSec. 3we describethea pplicationofthismethod
+to the prototypical polyglycine peptides. We discuss the results in S ec. 4. The superiority
+of this method over conventional molecular dynamics and Monte Car lo is demonstrated.
+Conclusions are presented in Sec. 5.
+2 Monte Carlo Method
+Wemake thesimplifying assumption that the intramolecular potential energy contains only
+torsional and non-bonded terms. That is, bond lengths and angles are ﬁxed, and rotation
+is allowed only about sigma bonds. At room- or body-temperature, t hese are fairly good
+assumptions. They could easily be relaxed, although sampling the incr eased degrees of
+freedom would entail a computational expense. Appendix A describ es the rigid fragments
+that occur in peptides under these assumptions. A suitable form fo r the interatomic po-
+tential would be the AMBER [35], ECCEP [36], or CHARMm [37] force ﬁeld. We pick
+the AMBER potentials. Water is treated in an implicit way, assuming the dielectric con-
+stant for Coulomb interactions is given by ǫ/ǫ0= 4r, withrgiven in ˚Angstroms. These
+assumptions allow the method to be presented without a discussion o f detailed force ﬁeld
+issues. The method is generically applicable to better force ﬁelds and an explicit treatment
+of water.
+A conﬁgurational bias Monte Carlo (CBMC) technique is used to explo re the conforma-
+tions of the molecules. We describe the algorithm for both linear and c yclic peptides. By
+cyclic, we mean peptides constrained because of disulﬁde bonds bet ween cystine residues.
+There are two types of atoms in a peptide, those in the side chains an d those in the
+backbone. Consequently, there are two types of Monte Carlo mov es: type I moves change
+the positions of side chain atoms only, and type II moves change the positions of backbone
+atoms, rigidly rotating the attached side chains. The type I move is a n extension of the
+4
+chain-molecule CBMC [24, 25] to the structurally more complicated ca se of peptides. The
+type I move is applicable to side chains with a free end ( i.e.all naturally occurring amino
+acid side chains except for proline). The backbone to which the side c hain is attached can
+be either linear or cyclic. In the cyclic case, the type I move is also use d to change the
+conﬁguration of the free ends of the main chain.
+TherearetwokindsoftypeIImovesforthebackbone: typeIIam ovesforlinearpeptides
+and type IIb moves for cyclic peptides. The type IIa move is essent ially the same as a type
+I move. The side-chain residues that are attached to the backbon e are rigidly rotated so
+as to remain properly bonded to the C αatoms in their new positions. When the peptide
+is cyclic, we use a type IIb move to change the conﬁguration of part of the backbone loop,
+rigidly rotating any side chains or free ends of the peptide that are a ttached to that part of
+the backbone. The backbone of a cyclic peptide includes the atoms a long the main chain
+as well as the C βand S atoms of the cystines participating in the disulﬁde bond. This
+move requires a concerted rotation of the backbone torsional an gles with a rigid rotation
+of the attached side groups. This concerted rotation of the tors ional angles is an extension
+of the concerted rotation scheme for alkanes [22, 28].
+A type I move is initiated by identifying the side chain to be regrown. No t all of the side
+chain need be regrown, and the ﬁrst group to regrow is chosen. Th is feature is helpful for
+the amino acids with longer side chains, such as lysine. These choices a re made randomly.
+TheMrigid units to be regrown are ﬁrst removed and then added one at a t ime, starting
+from the one closest to the backbone. For each addition, the follow ing actions are carried
+out (see Fig. 1):
+1)kvalues of the torsional angle φij,1≤j≤kconnecting rigid unit ito uniti−1 are
+generated according to the internal potential,
+pint
+i(φij)∝exp[−βuint
+i(φij)]. (1)
+The function uint
+i(φij) is the part of the internal energy that couples unit ito the rest of the
+molecule (but excluding units i+1 toM). The inverse temperature is given by β= 1/kBT.
+2) One of these is picked with probability
+pext
+i(φij) = exp[−βuext
+i(φij)]/wext(i), (2)
+where
+wext(i) =k/summationdisplay
+j=1exp[−βuext
+i(φij)]. (3)
+5
+The function uext
+i(φij) is the part of the external energy that couples unit ito the rest of
+the molecule (but excluding units i+1 toM).
+3) Steps 1-2 are repeated until all M units have been added.
+4) The Rosenbluth weight
+W(n)=M/productdisplay
+i=1wext(i) (4)
+is calculated. This attempted move is accepted with a probability
+acc(o→n) = min[1,W(n)/W(o)]. (5)
+The quantity W(o)is the Rosenbluth weight for the reverse move and is calculated as in
+steps 2-4, but with k−1 random orientations and one orientation that is equal to the
+original geometry for each rigid unit.
+A type IIa move is very similar to a type I move. In this case, the direc tion of regrowth
+is chosen randomly. Then the ﬁrst backbone unit to be regrown is ch osen. The Mrigid
+units to be regrown are removed and added back sequentially, as in t he type I move. The
+rigid units in this case are either A-units, B-units with the side chain rig idly attached, C-
+units, or D-units (see appendix A). An alternative procedure would be to regrow the side
+chain units as well, but this proved not to be eﬃcient, due to frequen t steric repulsions.
+The move is accepted with the probability given by Eq. (5).
+A type IIb move is initiated by identifying the 4 rigid units on the backbo ne to be
+rotated. This is done randomly. The four rigid units are labeled in an am ine to carboxy
+terminal fashion. The attached side groups are rigidly rotated with the backbone units.
+The rotation is carried out as follows (see Fig. 2):
+1) The driver angle φ0is changed by an amount δφ0, where−∆φ<δφ 0<∆φ. This is
+donek′times with probabilities according to the internal potential,
+pint(φ0j)∝exp[−βuint
+0(φ0j)]. (6)
+Thefunction uint
+0(φ0j)istheinternal energyassociatedwiththistorsionalangle. Onlyth ose
+values ofφ0that lead to valid solutions for the modiﬁed torsional angles are cons idered. In
+the general case there will be a distinct φ1for each solution arising from the new value of
+φ0. Deﬁnek(n)to be the number of φ0-φ1pairs. Ifk(n)= 0, the move is rejected.
+2) Aφ0-φ1pair is picked with probability
+pext
+0(φ0j,φ1j) = exp[−βuext
+0(φ0j,φ1j)]/W(n), (7)
+6
+where
+W(n)=k(n)/summationdisplay
+j=1exp[−βuext
+0(φ0j,φ1j)]. (8)
+The function uext
+0(φ0j,φ1j) is the part of the external energy that couples this part of the
+backbone to the rest of the molecule. The value J(n)of the Jacobian is calculated for the
+new, chosen conﬁguration (as detailed in Appendix B).
+3) The reverse move is considered. That is, a rotation about the ne w, chosenφ0-φ1pair
+is considered. k′−1 random values δφ0are chosen. The original value of φ0is assigned to
+thek′th value. This move results in k(o)solutions for φ1.k(o)is always greater than zero,
+since the original conﬁguration exists. (Special care is taken to en sure that the original
+conﬁguration is found by the root ﬁnding procedure.) The Rosenblu th weight is assigned
+toW(o). The value J(o)of the Jacobian is also calculated for the original conﬁguration.
+This attempted move is accepted with a probability
+acc(o→n) = min[1,J(n)W(n)/J(o)W(o)]. (9)
+Splitting the energy into internal and external parts is rather arb itrary. There are
+some constraints imposed, however, by the requirement that the normalization constants
+for Eqs. (1) and (6) be independent of chain conformation [26]. We a ssume for simplicity
+thatuint
+i= 0. One other natural choice, however, would set the internal pa rt equal to the
+torsional terms in Hintraand set the external part equal to the rest of H.
+ForanyMonteCarloscheme toproperlysampletheBoltzmannproba bilitydistribution,
+detailedbalance must besatisﬁed. Refs. [22] and[26]prove that de tailedbalanceissatisﬁed
+for the above scheme.
+3 Application to Polyglycine
+In this section we present the result of applying this conﬁgurationa l bias Monte Carlo
+method to two simple peptides, polyglycine G 6and constrained polyglycine CG 6C.
+Figure 3 shows the energy of linear polyglycine as a function of Monte Carlo steps. This
+run took roughly 3 hours on a Silicon Graphics Indigo2. In Fig. 4 we show the end-to-end
+probability distribution for this system. Gaining this degree of conve rgence took a one-day
+run.
+Figure 5 illustrates the energy of the cyclic polyglycine as a function o f Monte Carlo
+steps. This run took roughly 6 hours. Figure 6 provides a histogram of the number
+7
+of solutions found for each attempted concerted rotation. In ra re cases the root ﬁnding
+procedure failed to ﬁnd all the roots. In the construction of this p lot, we rounded n(n)
+up when it was odd. Figure 7 shows the histogram for the C βSSCβdihedral angle, with
+the statistics taken from a run six times as long as that illustrated in F ig. 5. To give
+a feel for the barrier to rotation about this angle, we show in Fig. 8 t he potential of
+mean force. This potential was determined by umbrella sampling [38]. T his curve took
+two orders of magnitude longer to determine than did the probability distribution in Fig.
+7. The potential of mean force is contrasted with the energy asso ciated purely with the
+CβSSCβtorsional terms. Finally, Fig. 9 shows the result of classifying the co nﬁgurations
+produced by the method into distinct stable conformations. Fuzzy clustering [39] was used
+to determine the dominant conformations, with the result that the re are only two or three
+distinct conformations within this limited simulation run. The simulation r un depicted in
+Figs. 5 and 9 took approximately 8 hours on a Silicon Graphics Indigo2.
+4 Discussion
+We see that with a very modest computational eﬀort, we can achiev e equilibrated results
+for linear peptides. With somewhat more eﬀort, we can achieve equilib ration for cyclic
+peptides.
+As expected, we ﬁnd that the linear peptide G 6is relatively unstructured in solution.
+Thereisacommoncrumpled state, butthereisalsoasigniﬁcant popu lationoftheextended
+state. The constraint of the disulﬁde bond in CG 6C, in contrast, forces that molecule to
+adopt a limited number of molecular conformations. For the fairly sho rt runs illustrated
+in Figs. 5,6,7 and 9, we ﬁnd only three dominant conformations. The ﬁr st conformation is
+associated with the C βSSCβtorsional angle of 290◦, whereas the other two are associated
+with angles of 88◦and 98◦. The ﬁrst of these conformations is very tight, with 0.7 ˚A
+ﬂuctuations about the mean for all atoms in the molecule. The other two are somewhat
+looser, with roughly 1.2 ˚A ﬂuctuations. We see from Fig. 9 that even in this short run the
+method revisits previous conformations. In the limit of a long simulatio n, the time spent in
+each conformation would, of course, be proportional to the expo nential of the free energy
+of the conformation.
+If CG6C were achiral, the potential of mean force in Fig. 8 would be symmetr ic about
+0◦and 180◦. Since the C αcarbons in the cystine residues are, in fact, chiral, the potential
+of mean force is not required to be symmetric. The asymmetry seen in Fig. 8 results from
+8
+the mean, chiral force of the rest of the molecule on the C βSSCβtorsion. In fact, the
+AMBER forceﬁeld takes this chirality into account by reducing the sy mmetry of the C β
+carbon in cysteine. We have used this geometry [40]. The barrier at 0◦is due to a high
+steric repulsion between the hydrogens on the C βcarbons adjacent to the disulﬁde bond.
+This barrier is substantially higher than the barrier at 180◦.
+From Fig. 8, we see that there is a very signiﬁcant free energy barr ier to rotation about
+the C βSSCβtorsional angle. This ﬁgure was not constructed from a standard simula-
+tion run, but by the specialized procedure of umbrella sampling. It is c lear from Fig. 7,
+however, that the present method is able to overcome this barrier and to properly sam-
+ple the relevant conformations even in a relatively short simulation. A ny method such as
+molecular dynamics or standard Monte Carlo that makes only small, loc al changes to the
+conﬁguration would never cross this barrier in a simulation of reason able length. High
+temperature dynamics can allow systems to cross high barriers, bu t can not perform the
+requisite Boltzmann sampling to predict the physiologically relevant co nformations. Only
+a biased method that makes fairly large geometrical changes is capa ble of dealing with
+such barriers in an automatic way, without resort to special techn iques such as umbrella
+sampling. Furthermore, the ability to perform umbrella sampling has a s a prerequisite
+the detailed knowledge of the important conformations and the pat hs between them. In
+our speciﬁc case, we ﬁnd our method to be two orders of magnitude more eﬃcient than
+umbrella sampling.
+5 Conclusion
+We have presented a Monte Carlo method capable of sampling the rele vant room- or body-
+temperature conﬁgurations of linear and cyclic peptides. This meth od allows the study of
+peptides important in biological and technological settings. Our sam pling of the disulﬁde
+dihedral angle in a prototypical cyclic peptide indicates that the met hod can explore widely
+separated regions of conformation space according to the prope r Boltzmann distribution,
+even if the barriers between the regions are quite large. Previous s imulation methods either
+fail to sample the proper thermal distribution or are vastly more co mputationally intensive
+and require detailed knowledge of the thermally accessible regions. T he method can be
+extended to allow incorporation of explicit water molecules. The meth od can be extended
+to force ﬁelds with ﬂexible bonds andangles. These extensions are s ubjects for future work.
+9
+Acknowledgements
+We thank Berend Smit and Charlene X. L. Liang for helpful discussion s about the Monte
+Carlo method and Len Bogarad, Michael McKenna, Jonathan Rothb erg, and Gregory
+Went for helpful conversations about the biological applications. T his work was supported
+by the NCI/NIH under grant #CA62752-01 and by the NIST ATP pro gram under grant
+number #70NANB5H1066. Many of the calculations described herein were performed on
+an Indigo-R8000 on loan from SGI and on a HP-735/125 on loan from H ewlett Packard.
+References
+[1] Alberts, B., 1994, Molecular Biology of the Cell , 3rd edition, (Garland: New York).
+[2] Cohen, G. B., Ren, R. B., and Baltimore, D., 1995, Cell,80, 237.
+[3] Kandel, E., and Abel, T., 1995, Science,268, 825.
+[4] Swerdlow, J. L., 1995, Natl. Geog. ,187(6), 2.
+[5] Olivera, B. M., et al., 1990,Science,249, 257.
+[6] Clackson, T. and Wells, J. A., 1994, Trends in Biotechnology ,12, 173.
+[7] Alberg, D. G., and Schreiber, S. L., 1993, Science,262, 248.
+[8] Ruoslahti, E., 1992, British Journal of Cancer ,66, 239.
+[9] O’Neil, K. T., Hoess, R. H., Jackson, S. A., Ramachandran,N. S., Mou sa, S. A., and
+DeGrado, W. F., 1992, Proteins: Structure, Function, and Genetics ,14, 509.
+[10] Cheam, T. C., and Krimm, S., 1990, Theochem Journal of Molecular Structure ,65,
+173.
+[11] Tobias, D. J., and Brooks, C. L., 1992, J. Phys. Chem. ,96, 3864.
+[12] Roux, B., and Karplus, M., 1994, Annual Review of Biophysics and Biomolecular
+Structure ,23, 731.
+[13] Nikiforovich, G. V., 1994, Int. J. Peptide Protein Res. ,44, 513.
+10
+[14] Schiﬀer, C. A., Caldwell, J. W., Kollman, P. A., and Stroud, R. M., 199 3,Mol.
+Simulat.,10, 121.
+[15] Smith, P. E., and Pettitt, B. M., 1993, J. Phys. Chem. ,97, 6907.
+[16] Gould, I. R., and Hillier, I. H., 1993, J. Chem. Soc. Chem. Comm. ,11, 951.
+[17] Daggett, V., Kollman, P. A., and Kuntz, I. D., 1991, Biopolymers ,31, 285.
+[18] Yan, Y. B., Tropsha, A., Hermans, J., and Erickson, B. W., 1993, Proc. Nat. Acad.
+Sci.,90, 7898.
+[19] Bruccoleri, R. E., and Karplus, M., 1990, Biopolymers ,29, 1847.
+[20] Tsujishita, H., Moriguchi, I., and Hirono, S., 1994, Biophysical Journal ,66, 1815.
+[21] Brunne, R. M., Van Gunsteren, W. F., Bruschweiler, R., and Erns t, R. R., 1993, J.
+Am. Chem. Soc. ,1154764.
+[22] Dodd, L. R., Boone, T. D., and Theodorou, D. N., 1993, Molec. Phys. ,78, 961.
+[23] Frenkel, D., Mooij, G. C. A. M., and Smit, B., 1992, J. Phys.: Condens. Matter ,4,
+3053.
+[24] Frenkel, D., and Smit, B., 1992, Molec. Phys. ,75, 983.
+[25] DePablo, J. J., Laso, M., and Suter, U. W., 1992, J. Chem. Phys. ,96, 6157.
+[26] Smit, B., and Siepmann, J. I., 1994, J. Phys. Chem. ,98, 8442.
+[27] Maginn, E. J., Bell, A. T., and Theodorou, D. N., 1995, J. Phys. Chem. ,99, 2057.
+[28] Leontidis, E., de Pablo, J. J., Laso, M,. and Suter, U. W., 1994, Adv. Pol. Sci. ,116,
+283.
+[29] Escobedo, F. A., and de Pablo, J. J., 1995, J. Chem. Phys. ,102, 2636.
+[30] DePablo, J. J., Laso, M., Siepmann, J. I., and Suter, U. W., 1993, Molec. Phys. ,80,
+55.
+[31] Mooij, G. C. A. M., Frenkel, D., and Smit, B., 1992, J. Phys.: Condens. Matter ,4,
+L255.
+11
+[32] Laso, M., DePablo, J. J., and Suter, U. W., 1992, J. Chem. Phys. ,97, 2817.
+[33] Siepmann, J. I., Karaborni, S., and Smit, B., 1993, Nature,365, 330.
+[34] Smit, B., Karaborni, S., and Siepmann, J. I., 1995, J. Chem. Phys. ,102, 2126.
+[35] Weiner, S. J., et al., 1986,J. Comp. Chem. ,7, 230.
+[36] Nemethy, G., Pottle, M. S., and Scheraga, H. A., 1983, J. Phys. Chem. ,87, 1883.
+[37] Brooks, B. R., Bruccoleri, R. E., Olafson, B. D., States, D. J. Sw aminathan, S. and
+Karplus, M., 1983, J. Comput. Chem. ,4, 187.
+[38] Chandler, D., 1987, Introduction to Modern Statistical Mechanics , (Oxford University
+Press: New York), Ch. 6.3.
+[39] Gordon, H.L., andSomorjai, R.L., 1992, Proteins: Structure, Function, and Genetics ,
+14, 249.
+[40] From the InsightII program, version 2.9.5, BIOSYM Technologie s, 9685 Scranton
+Road, San Diego, CA 92121.
+[41] Ryckaert, J. P., Ciccotti, G., Berendsen, H. J. C., 1977, J. Comp. Phys. ,23, 327.
+[42] Shenkin, P. S., Yarmush, D. L., Fine, R. M., Wang, H. J., and Levint hal, C., 1987,
+Biopolymers ,26, 2053.
+Appendix A: Rigid Units
+As described, the algorithm assumes that bond lengths and angles a re ﬁxed. The only
+degrees offreedom, therefore, aretorsionalangles. Duetoth eextremely highforceconstant
+forrotationabouta πbond,evensometorsionalanglesareﬁxedaswell. Anentirecollectio n
+of atoms that is rigid is called a rigid unit. Such a unit has an incoming bond as well as
+several possible outgoing bonds. There are four backbone rigidun its. Unit A is the starting
+NH+
+3group. Unit D is the terminal COO−group. Unit B is the C αH group. Unit C is the
+CONH amide bond group.
+The residues are connected to the backbone by outgoing bonds fr om the B units. Table
+1 lists the decomposition of the amino acid side chains into rigid units. Ty pical rigid
+12
+Table 1: The rigid units in peptide side groups.
+Side Group Rigid Units
+Glycine H
+Alanine CH 3
+Arginine CH 2, CH2, CH2, CN3H5+
+Aspartate CH 2, CO2−
+Asparagine CH 2, CONH 2
+Cyst(e)ine CH 2, S(H)
+Glutamate CH 2, CH2, CO2−
+Glutamine CH 2, CH2, CONH 2
+Histidine CH 2, C3N2H3
+Isoleucine CH, CH 2, CH3, CH3
+Leucine CH 2, CH, CH 3, CH3
+Lysine CH 2, CH2, CH2, CH2, NH3+
+Methionine CH 2, CH2, S, CH 3
+Phenylalanine CH 2, C6H5
+Proline Backbone Groups: C αHCH2CH2CH2, N, CO
+Serine CH 2, OH
+Threonine CH, CH 3, OH
+Tryptophan CH2, C 8NH6
+Valine CH, CH 3, CH3
+Tyrosine CH 2, C6H4, OH
+units are the CH 2, CN3, CO2, and aromatic ring groups, which have substantial πbonding
+character.
+Proline is a special case, technically an imino acid. The special nature is due to the
+cyclic bonding of the residue to the backbone. The rigid units in this am ino acid are
+the CH n, CO, and N groups. Only transisomers are allowed for the proline amide bond.
+Proline is treated in an approximate way: the C α-Cδfragment is kept rigid, the C δ-N bond
+is broken, and the C α-N torsional barrier is increased. This approximation ignores the
+small ﬂuctuations in the conﬁguration of the proline side-chain loop.
+13
+Appendix B: Concerted Rotation
+Since the molecules under consideration can be cyclic, a Monte Carlo m ove that preserves
+this constraint is required. The “concerted rotation” scheme use d for alkanes [22] can
+be extended to allow rotation of the torsional angles in cyclic peptide s. This appendix
+describes this extension. The reader is referred to Ref. [22] for a fuller discussion of the
+original, restricted method. Themethodpresented hereallowsfor afairlygeneral molecular
+geometry. In particular, the method naturally accommodates the constraint of a planar
+amide bond.
+To formulate the method, we consider rotating about seven torsio nal angles, which will
+move the root positions of four rigid units, rotate up to three addit ional ones, and leave the
+rest of the peptide ﬁxed. We deﬁne the root position of a rigid unit to be the C αposition
+for a B unit, the C position for a C unit, the C position for a CH 2unit, and the S position
+for the S unit in cystine. If unit 5 is a C unit, however, r5is deﬁned to be the N position
+of that unit. For each unit we deﬁne θito be the angle between the incoming and outgoing
+bonds. Thus, θi= 0 for a C unit, and θi≈70.5◦for all others. Figure 1 illustrates the
+geometry under consideration.
+The method leaves the positions riof unitsi≤0 ori≥5 ﬁxed. The torsion φ0is
+changed by an amount δφ0. The values of φi,1≤i≤6, are then determined so that only
+the positions riof units 1 ≤i≤4 are changed.
+The method required several deﬁnitions to present the solution fo r the new torsional
+angles. Vectors are deﬁned which are the diﬀerence in position betw een unitiand unit
+i−1, as seen in the coordinate system of unit i:
+li=r(i)
+i−r(i)
+i−1. (10)
+The coordinate system of i is such that the incoming bond is along the ˆxdirection. Thus
+li=liˆxif atomriandri−1are directly bonded and has x- and y-components otherwise.
+We now deﬁne a rotation matrix that transforms from the coordina te system of unit i+1
+to uniti
+Ti=
+cosθi sinθi 0
+sinθicosφi−cosθicosφisinφi
+sinθisinφi−cosθisinφi−cosφi
+. (11)
+14
+The positions of the units in the frame of unit 1 are, thus, given by
+r(1)
+1=l1
+r(1)
+2=l1+T1l2
+r(1)
+3=l1+T1(l2+T2l3)
+r(1)
+4=l1+T1(l2+T2(l3+T3l4)). (12)
+We further deﬁne the matrix that converts from the frame of ref erence of unit 1 to the
+laboratory reference frame
+Tlab
+1= [cosψI+nn⊤(1−cosψ)+Msinψ]A, (13)
+where
+M=
+0−nzny
+nz0−nx
+−nynx0
+, (14)
+and
+n=ˆx×r
+|ˆx×r|
+cosψ=r·ˆx
+|r|
+sinψ=|r×ˆx|
+|r|, (15)
+whereˆxis a laboratory unit vector along the x direction, and ris the axis of the bond
+coming into unit 1. The matrix Ais a rotation about ˆxand is deﬁned so that Al1= ∆r:
+A=
+1 0 0
+0c−s
+0s c
+(16)
+where
+c= (l1y∆ry+l1z∆rz)/(∆r2
+y+∆r2
+z)
+s= (−l1z∆ry+l1y∆rz)/(∆r2
+y+∆r2
+z). (17)
+15
+Here ∆r=A[Tlab
+1]−1(r1−r0) if unit 0 is a C unit; otherwise ∆ r=l1.
+The method proceeds by solving for φi,2≤i≤6, analytically in terms of φ1. Then a
+nonlinear equation issolved numerically todetermine which values of φ1, if any, arepossible
+for the chosen value of φ0.
+We will work in the coordinate system of unit 1, after it has been rota ted by the chosen
+φ0. We deﬁne
+t=r(1)
+5−l1= [Tlab
+1]−1(r5−r0)−l1. (18)
+Ifθ3∝negationslash= 0 andθ5∝negationslash= 0, the square distance between unit 3 and unit 5 is known and equal to
+q2
+1= (l4xcosθ4−l4ysinθ4+l5x)2+(l4xsinθ4+l4ycosθ4+l5y)2. (19)
+But this distance can also be written as
+q2
+1=|x−T2l3|2
+x=T−1
+1t−l2. (20)
+Equating these two results, two values of φ2are possible
+φI
+2= arcsinc1−arctanxy/xz−H(xz)
+φII
+2=π−arcsinc1−arctanxy/xz−H(xz), (21)
+with
+H(x) =
+
+0, x>0
+π, x<0. (22)
+The constant c1is given by
+c1=
+
+q2
+1−x2−l2
+3+2xx(cosθ2l3x+sinθ2l3y)
+−2(sinθ2l3x−cosθ2l3y)(x2y+x2z)1/2, θ3∝negationslash= 0,θ5∝negationslash= 0
+l3x+l4x+l5xcosθ4−xxcosθ2
+sinθ2(x2y+x2z)1/2, θ3= 0,θ5∝negationslash= 0
+(r5−r2)·(r6−r5)/l6−l5x−l4xcosθ4−xx(cosθ2l3x+sinθ2l3y)
+(sinθ2l3x−cosθ2l3y)(x2y+x2z)1/2 , θ3∝negationslash= 0,θ5= 0
+l3xcosθ4−xx(cosθ2l3x+sinθ2l3y)
+(sinθ2l3x−cosθ2l3y)(x2y+x2z)1/2, θ3= 0,θ5= 0,(23)
+wherexis given by Eq. (20) if θ5∝negationslash= 0, and x=T−1
+1[Tlab
+1]−1(r6−r5)/l6ifθ5= 0. Clearly
+for there to be a solution |c1| ≤1. The last three equations for c1were determined by
+16
+conditions similar to equating Eqs. (19) and (20). For θ3= 0,θ5∝negationslash= 0, the x-component of
+r(3)
+5−r(3)
+3is known to be equal to l4x+l5cosθ4. Forθ3∝negationslash= 0,θ5= 0, the x-component of
+r(5)
+5−r(5)
+3is known to be equal to l5x+l4xcosθ4. Forθ3= 0,θ5= 0, the angle between
+r3−r2andr6−r5is known to be equal to θ4.
+To determine φ3, two expressions for |r5−r4|2are again equated to determine
+c2=l2
+5−y2−l2
+4+2yx(cosθ3l4x+sinθ3l4y)
+−2(sinθ3l4x−cosθ3l4y)(y2y+y2z)1/2(24)
+and
+φI
+3= arcsinc2−arctanyy/yz−H(yz)
+φII
+3=π−arcsinc2−arctanyy/yz−H(yz), (25)
+wherey=T−1
+2(T−1
+1t−l2)−l3. Again, |c2| ≤1 for there to be a solution.
+Ifθ5∝negationslash= 0, the value of φ4can be determined from
+r(1)
+5=r(1)
+4+T1T2T3T4l5. (26)
+Deﬁning
+q3=T−1
+3T−1
+2T−1
+1[Tlab
+1]−1(r5−r4), (27)
+the equations that deﬁne φ4are given by
+q3y= cosφ4(sinθ4l5x−cosθ4l5y)
+q3z= sinφ4(sinθ4l5x−cosθ4l5y). (28)
+This is a successful rotation if the position of r6is successfully predicted. That is, the
+equation
+r(1)
+6−r(1)
+5=T1T2T3T4T5l6= [Tlab
+1]−1(r6−r5) (29)
+must be satisﬁed. We consider the x-component which implies
+F(φ1) =
+
+(r(1)
+6−r(1)
+5)⊤T1T2T3T4ˆx−(l6xcosθ5+l6ysinθ5) = 0, θ5∝negationslash= 0
+(r4−r3)·(r6−r5)−l4l6cosθ4= 0, θ3∝negationslash= 0,θ5= 0
+|r6−r4|−/bracketleftig
+(l6x+l5x)2+l52
+y/bracketrightig1/2= 0, θ3= 0,θ5= 0.(30)
+must be satisﬁed if the rotation is successful. The equations for th e caseθ5= 0 clearly
+express the geometric conditions required for a successful rota tion.
+17
+Eq. (30) is the nonlinear equation for φ1that must be solved. The equation depends
+only onφ1becauseφ2,φ3, andφ4are determined by Eqs. (21), (25), and (28) in terms of
+φ1. This equation has between zero and four values for each value of φ1, however, due to
+the multiple root character of Eqs. (21) and (25). Equation (30) is solved by searching the
+region−π <φ<π for zero crossings. The search is in increments of ≈0.04◦. These roots
+are then reﬁned by a bisection method. There is always an even numb er of roots, due to
+the periodic nature of Eq. 30.
+The root positions, ri, are enough to determine the position andorientation of the seven
+rigid units that are modiﬁed by the concerted rotation. Rigid unit 0 is t ranslated so that its
+root position is at r0. It is oriented so that its incoming bond vector is along the outgoing
+bond vector of rigid unit −1. It is then rotated so that its outgoing bond vector ends at
+r1. This process is repeated sequentially for rigid units 1 to 6.
+Repeated application of the concerted rotation leads to a slightly imp erfect structure,
+duetonumericalprecisionerrors. Inapracticalapplication, theg eometrywouldberestored
+to an ideal state by application of the SHAKE [41] or Random Tweak alg orithm [42].
+The transformation from φi,0≤i≤6, to the new solution which is constrained to
+change only ri,1≤i≤4, actually implies a change in volume element in torsional angle
+space. This change in volume element is the reason for the appearan ce of the Jacobian in
+the acceptance probability. The Jacobian of the transformation f or alkanes is calculated
+in Ref. [22]. It is slightly diﬀerent here since root position r5is not necessarily the head
+position. The Jacobian is given by
+J= 1/|detB|, (31)
+where the 5 ×5 matrixBijis given by the ith component of uj×(r5−hj) fori≤3 and
+by the (i−3)th component of uj×(r6−r5)/|r6−r5|fori= 4,5. Herehi=riexcept that
+h5is the head position even if θ5= 0, and uiis the incoming unit bond vector for unit i.
+Figure Captions
+Figure 1. The type I move applied to the serine side chain.
+Figure 2. The type IIb move is illustrated for the case where unit 0 is ( a) a B-unit and
+(b) a C-unit. In each case, the original geometry and the four pos sible new geometries for
+the chosen driver angle are shown. In case (a), one of the new geo metries is very diﬀerent
+18
+from the original and the other three new ones. The move is shown f or a linear peptide,
+although it is used only on cyclic peptides.
+Figure 3. The energy of G 6as a function of Monte Carlo steps. Note the rapid
+equilibration.
+Figure 4. The probability distribution for the end-to-end distance f or G6. The distance is
+between the terminal C αgroups.
+Figure 5. The energy of CG 6C as a function of Monte Carlo steps. Note the rapid
+equilibration.
+Figure 6. The number of new solutions found for each attempted co ncerted rotation for
+CG6C.
+Figure 7. The observed probability distribution for the C βSSCβtorsional angle in CG 6C
+is shown.
+Figure 8. The potential of mean force calculated by umbrella sampling for the C βSSCβ
+torsional angle in CG 6C (dashed line). The potential of mean force implied by Fig. 7 is
+indicated by the solid line. Also shown is the bare torsional energy con tribution for this
+rotation (dotted line).
+Figure 9. Shown are the occupation numbers of the conﬁguration in each of the three
+dominant conformations as a function of Monte Carlo steps (a). Als o shown is the
+all-atom root-mean-square displacement of the conﬁguration fro m each of the three
+dominant conformations (b). The curves for conformation 1 are s olid, those for 2 are
+dashed, and those for 3 are short-dashed.
+19
+/-/6
+/-/4
+/-/2
+/0
+/2
+/4
+/6
+/8/0 /1 /2 /3 /4 /5 /6 /7 /8 /9 /1/0
+Energy ///(k cal//mol/)Mon te Carlo steps // /1/0/0/0
+/0/./0/0
+/0/./0/5
+/0/./1/0
+/0/./1/5
+/0/./2/0
+/0/./2/5/2 /4 /6 /8 /1/0 /1/2 /1/4 /1/6 /1/8
+P /( R /)Rend/-to/-end
+//
+/A
+/-/8
+/-/6
+/-/4
+/-/2
+/0
+/2
+/4
+/6
+/8
+/1/0/0 /2 /4 /6 /8 /1/0 /1/2 /1/4 /1/6 /1/8
+Energy ///(k cal//mol/)Mon te Carlo steps // /1/0/0/0
+/0
+/0/./1
+/0/./2
+/0/./3
+/0/./4/0 /2 /4 /6 /8 /1/0
+P /( N /)Nsolutions
+/0
+/0/./0/1
+/0/./0/2
+/0/./0/3
+/0/./0/4
+/0/./0/5/0 /6/0 /1/2/0 /1/8/0 /2/4/0 /3/0/0 /3/6/0
+P /( / /)/CSSC
+// Degrees
+/0
+/1
+/2
+/3
+/4
+/5
+/6
+/7
+/8
+/9/0 /6/0 /1/2/0 /1/8/0 /2/4/0 /3/0/0 /3/6/0
+T orsionalenergy ///(k cal//mol/)/CSSC
+// Degrees
+/0
+/0/./2
+/0/./4
+/0/./6
+/0/./8
+/1/0 /2 /4 /6 /8 /1/0 /1/2 /1/4 /1/6 /1/8 /2/0
+ClusterMem b ership/0
+/0/./5
+/1
+/1/./5
+/2
+/2/./5/0 /2 /4 /6 /8 /1/0 /1/2 /1/4 /1/6 /1/8 /2/0
+RMS fromCluster Cen ter//
+/AMon te Carlo steps // /1/0/0/0
+/-/6
+/-/4
+/-/2
+/0
+/2
+/4
+/6
+/8/0 /1 /2 /3 /4 /5 /6 /7 /8 /9 /1/0
+Energy ///(k cal//mol/)Mon te Carlo steps // /1/0/0/0
+/0/./0/0
+/0/./0/5
+/0/./1/0
+/0/./1/5
+/0/./2/0
+/0/./2/5/2 /4 /6 /8 /1/0 /1/2 /1/4 /1/6 /1/8
+P /( R /)Rend/-to/-end
+//
+/A
+/-/8
+/-/6
+/-/4
+/-/2
+/0
+/2
+/4
+/6
+/8
+/1/0/0 /2 /4 /6 /8 /1/0 /1/2 /1/4 /1/6 /1/8
+Energy ///(k cal//mol/)Mon te Carlo steps // /1/0/0/0
+/0
+/0/./1
+/0/./2
+/0/./3
+/0/./4/0 /2 /4 /6 /8 /1/0
+P /( N /)Nsolutions
+/0
+/0/./0/1
+/0/./0/2
+/0/./0/3
+/0/./0/4
+/0/./0/5/0 /6/0 /1/2/0 /1/8/0 /2/4/0 /3/0/0 /3/6/0
+P /( / /)/CSSC
+// Degrees
+/0
+/1
+/2
+/3
+/4
+/5
+/6
+/7
+/8
+/9/0 /6/0 /1/2/0 /1/8/0 /2/4/0 /3/0/0 /3/6/0
+T orsionalenergy ///(k cal//mol/)/CSSC
+// Degrees
+/0
+/0/./2
+/0/./4
+/0/./6
+/0/./8
+/1/0 /2 /4 /6 /8 /1/0 /1/2 /1/4 /1/6 /1/8 /2/0
+ClusterMem b ership/0
+/0/./5
+/1
+/1/./5
+/2
+/2/./5/0 /2 /4 /6 /8 /1/0 /1/2 /1/4 /1/6 /1/8 /2/0
+RMS fromCluster Cen ter//
+/AMon te Carlo steps // /1/0/0/0
+/0
+/0/./0/1
+/0/./0/2
+/0/./0/3
+/0/./0/4
+/0/./0/5/0 /6/0 /1/2/0 /1/8/0 /2/4/0 /3/0/0 /3/6/0
+P /( / /)/CSSC
+// Degrees
+/0
+/1
+/2
+/3
+/4
+/5
+/6
+/7
+/8
+/9/0 /6/0 /1/2/0 /1/8/0 /2/4/0 /3/0/0 /3/6/0
+T orsionalenergy ///(k cal//mol/)/CSSC
+// Degrees

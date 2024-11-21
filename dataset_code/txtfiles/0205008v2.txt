@@ -1,0 +1,903 @@
+arXiv:physics/0205008v2  [physics.bio-ph]  7 May 2002Moleculargyroscopes andbiologicaleffects ofweakELF mag neticﬁelds
+V.N. Binhi∗
+General Physics Institute Russian Academy of Sciences, 38 V avilova St., 119991 Moscow, Russia
+A.V. Savin†
+Institute for Physics and Technology, 13/7 Prechistenka St ., 119034 Moscow, Russia
+Extremely-low-frequency magnetic ﬁelds are known to affec t biological systems. In many cases, biological
+effects display ‘windows’ in biologically effective param eters of the magnetic ﬁelds: most dramatic is the fact
+that relatively intense magnetic ﬁelds sometimes do not cau se appreciable effect, while smaller ﬁelds of the
+order of 10–100 µT do. Linear resonant physical processes do not explain freq uency windows in this case.
+Amplitude window phenomena suggest a nonlinear physical me chanism. Such a nonlinear mechanism has
+beenproposed recentlytoexplainthose ‘windows’. Itconsi ders quantum-interference effects onprotein-bound
+substrate ions. Magnetic ﬁelds cause an interference of ion quantum states and change the probability of ion-
+proteindissociation. Thision-interference mechanism pr edictsspeciﬁcmagnetic-ﬁeldfrequencyandamplitude
+windows within which biological effects occur. It agrees wi th a lot of experiments. However, according to
+the mechanism, the lifetime Γ−1of ion quantum states within a protein cavity should be of unr ealistic value,
+morethan0.01sforfrequencyband10–100 Hz. Inthispaper,a biophysical mechanism hasbeenproposedthat
+(i) retains the attractive features of the ion interference mechanism, i.e., predicts physical characteristics that
+might be experimentally examined and (ii) uses the principl es of gyroscopic motion and removes the necessity
+topostulate large lifetimes. The mechanism considers dyna mics of the density matrixof the molecular groups,
+whichareattachedtothewallsofproteincavitiesbytwocov alentbonds, i.e.,moleculargyroscopes. Numerical
+computationshaveshownalmostfreerotationsofthemolecu largyros. TherelaxationtimeduetovanderWaals
+forces was about 0.01s for the cavitysize of 28 angstr¨ oms.
+I. INTRODUCTION
+Weak static and extremely-low-frequency(ELF) magnetic
+ﬁelds(MFs)canaffectlivingthings: cells,tissues, physi olog-
+icalsystems,andwholeorganisms[ 1,2,3]. Inmanycasesbi-
+ologicaleffectsofweakMF featureresonance-likemultipe ak
+behavior. Multipeak responses or magnetobiological spect ra
+may appear with varying the frequency or amplitude of AC
+MF [4] and the magnitude of DC MF [ 5]. Usually, the term
+‘windows’isusedforthe peaksofthe spectra.
+Amplitude ‘windows’, see Fig. 1, specify nonlinearity of
+the transduction mechanisms involved in magnetobiologica l
+effects. This is conﬁrmed more by the fact that magnetic
+noisesimultaneouslysuperimposedonaregularmagneticsi g-
+nalsuppressesbiologicaleffectofthat signal[ 6,7,8,9].
+A nonlinear mechanism based on quantum interference
+has been developed in [ 10] to explain unusual ELF MF fre-
+quencyandamplitudedependenciesofmagnetobiologicalef -
+fects (MBEs). The mechanism elaborates the interference of
+ionsboundwithinproteins. Accordingtothismechanism,su -
+perposition of the ion states forms a non-uniform pattern of
+the probability density of ion. This pattern consists of a ro w
+of more or less dense segments occurring due to the inter-
+ference between quantum states of ions in a protein binding
+cavity. In a DC MF the pattern rotateswith the cyclotronfre-
+quency. Exposuretoatime-varyingMFofspeciﬁcparameters
+retardsthe rotationof the pattern and facilitates escape o f the
+∗Electronic address: Binhi@biomagneti.com ;
+URL:http://www.biomagneti.com
+†Electronic address: asavin@center.chph.ras.ruion from the cavity. This escape might inﬂuence equilibrium
+of biochemical reactions to ultimately result in a biologic al
+effect.
+Biologically effective parameters of AC-DC magnetic
+ﬁelds depend on the charge-to-mass ratio of the ion in ques-
+tion. The closed formula is derived for ‘magnetic’ part Pof
+ion-proteindissociationprobability. Predictionsbased onthis
+formula reveal good agreement with experimental results in -
+volving calcium, magnesium, potassium, hydrogenand other
+ionsofasmoleculartargetsforMF.Thetheorydescribesmul -
+tipeak frequency and amplitude spectra of MBEs involving
+ionsofCa2+,Mg2+,andH+asmoleculartargetsforAC-DC
+MFs[10].
+Theinterferencemechanismissurprisinglyeffectiveinre t-
+rospectively predicting results of existing experiments c on-
+ducted under the following deﬁned MF conditions: parallel
+AC-DC and pulsed MFs [ 10,11], ‘null’ and static MFs [ 13],
+and various MFs with a slow rotation of a biological system
+[12]. As an example, Fig. 1demonstrates the comparison of
+experimentaldata, in parallel AC-DC MFs, on MBEs involv-
+ing ﬁxed and rotating proteins, and calculated curve (dash
+line).
+The good consistencybetween theoretical calculationsand
+many experiments indicates that what underlies magnetobio -
+logicaleffectsis mostlikelyaninterferencephenomenon.
+According to the interference mechanism, the relation
+should be valid Γ−1Ωc/greaterorsimilar1, whereΓ−1is the lifetime of
+ion quantum states within a bound cavity and Ωcis a cy-
+clotron frequency of an ion in the geomagnetic ﬁeld, usually
+10–100Hz. The postulate therefore has to be made that ion
+quantum states, more exactly their angular modes, live more
+than 0.01 s within the cavity. However it is in contradic-
+tion with our common knowledge that such states might live
+2
+/s48 /s49 /s50 /s51 /s52 /s49/s48/s48/s46/s48/s48/s46/s50/s32
+/s32/s77/s66/s69/s32/s40/s97/s114/s98/s46/s32/s117/s110/s105/s116/s115/s41
+/s32/s40/s114/s101/s108/s46/s32/s117/s110/s105/s116/s115/s41/s32/s116/s104/s105/s115/s32/s119/s111/s114/s107
+/s32/s72
+/s65/s67/s47/s72
+/s68/s67/s50/s52/s32/s76/s105/s98/s111/s102/s102/s32/s101/s116/s32/s97/s108/s44/s32/s49/s57/s56/s55/s44/s32/s67/s97/s52/s53
+/s82/s111/s115/s115/s44/s32/s49/s57/s57/s48/s44/s32/s67/s97/s52/s48/s80/s114/s97/s116/s111/s32/s101/s116/s32/s97/s108/s44/s32/s49/s57/s57/s53/s44/s32/s67/s97/s52/s48/s77/s103/s50/s52/s32/s97/s110/s100 /s67/s97/s52/s48/s44/s32/s76/s101/s100/s110/s101/s118/s32/s101/s116/s32/s97/s108/s44/s32/s49/s57/s57/s54
+/s84/s114/s105/s108/s108/s111/s32/s101/s116/s32/s97/s108/s44/s32/s49/s57/s57/s54/s44/s32/s72/s49/s44/s32/s32 /s61/s50
+/s76/s101/s100/s110/s101/s118/s32/s101/s116/s32/s97/s108/s44/s32/s49/s57/s57/s54/s44/s32/s72/s49/s66/s108/s97/s99/s107/s109/s97/s110/s32/s101/s116/s32/s97/s108/s44/s32/s49/s57/s57/s52/s47/s53/s44/s32/s76/s105/s55/s44/s32 /s61/s49/s46/s56
+/s66/s108/s97/s99/s107/s109/s97/s110/s32/s101/s116/s32/s97/s108/s44/s32/s49/s57/s57/s56/s44/s32/s72/s49/s44/s32/s32 /s61/s50/s97/s110/s100 /s71/s97/s114/s99/s105/s97/s45/s83/s97/s110/s99/s104/s111/s32/s101/s116/s32/s97/s108/s44/s32/s49/s57/s57/s52/s44/s32/s75/s52/s50
+/s32/s66/s105/s110/s104/s105/s44/s32/s49/s57/s57/s55
+FIG.1: Experimentalevidence [ 17,18,19,20,21,22,23,24,25,26]forMBEsinauniaxialMF([ 18]notedaweakperpendicularcomponent
+of a DC MF). Theoretical amplitude spectra: a dash line was de rived for ﬁxed ion-protein complexes (factor α= 1was not shown) and also
+for rotatingion-protein complexes, see details in[ 12]. Solidline represents the function ( 18) derived for gyrointerference.
+only10−12–10−10sbecauseofthethermalizinginteractionof
+ion with cavity walls. On the other hand, the weak AC MF,
+/planckover2pi1Ωc≪kBT,iscommonlybelievedtobeunabletocontribute
+into thermally driven (bio)chemical reactions (so-called kT-
+problem).
+To overcome the problem, we note that there is a speciﬁc
+mechanism that provides relatively large lifetime of the an -
+gular modes. Consider a dipole molecular group that are at-
+tached within the cavity to its walls in two points, i.e. by tw o
+covalent bonds, thus forming a group that may rotate inside
+the cavity without contact with walls. Such a construction i s
+referred to as gyroscope. In the case, it is a molecular gy-
+roscope. Of importance is the fact that thermal oscillation s
+of that covalent bonds, or gyroscope’s supports, make only
+zero torque about the axis of rotation. This leads to rela-
+tivelyslow thermalizationofa gyroscopicdegreeoffreedo m.
+Relaxation is mainly due to van der Waals interaction with
+thermalizing walls. As far as the interaction potential, th e
+Lennard–Jones potential, decreases as r−6and walls’ inner
+surface grows as r2, the overall van der Waals contribution
+varies approximately as r−4. That is, relaxation quickly di-
+minishes with the cavity size to grow. Computations showalmostfreerotations(thermalizationtime0.01s)ofamole cu-
+largyrowithinthecavityof28angstr¨ omssize. Thisisenou gh
+fortheioninterferencemechanismtodisplayitself. Proba bly,
+suchroomycavitiesareformedbyensemblesofafewprotein
+globules, between them, or within some enzymes that unfold
+DNAdouble-helix.
+II. MOLECULARGYROSCOPE
+A long lifetime of angular modes is the sole serious ideal-
+ization underlying the mechanism of ion interference. This
+idealization would be hard to substantiate with the ion-in-
+protein-capsule model. One would have to assume that the
+ionformsboundstatesofthepolarontypewithcapsulewalls .
+In turn, justiﬁcation of a large lifetime of polaron angular
+modes would require new idealizations. A ‘vicious circle’
+occurs which one could not leave without having to substan-
+tially change the model itself. Thus, despite the obvious ad -
+vantages of the ion-in-capsule model, namely, simplicity a nd
+a high forecasting skill, we have to recognize its limitatio ns
+andseek forothersolutions.
+3
+r
+αdLKF
+/G25/G24
+L0ϕ/G11
+FIG.2: Forces,momentsofforces,andangularmomentainrot ation
+of a gyro.
+One of them hinges on the use of conservation laws in the
+dynamics of rotating solids. Rotation of a solid is describe d
+bytheequation
+dL
+dt=K, (1)
+whereLis the angular momentum, Kis the sum of torques
+acting on the solid. Considerfor simplicity a symmetricgyr o
+rotating around one of its main axes of inertia with a force F
+actingonitspointofsupport,asshowninFig. 2. Themoment
+of this force about the shown axis is obviously zero. From
+equation( 1)we have
+L=L0+dL, dL=Kdt=r×Fdt.
+SinceK⊥F, thendL⊥F, i.e., the force caused an orthog-
+onaldisplacementoftheaxisofrotation. Also,thevector ris
+directed along the axis of rotation, therefore the vector dLis
+also orthogonalwith L0.
+Thus,acontinuouslyactingforce Fcausesaforcedpreces-
+sionofthegyroaboutthedirection Fwithanangularvelocity
+deﬁned by the angle through which the gyro axis of rotation
+deviatesperunittime, viz.,
+Ωprecession =dL/L0
+dt=K
+L0=rF
+L0.
+The length of vector ris deﬁned by the gyro locking condi-
+tions. If point B is ﬁxed, then the origin of rcoincides with
+B.IfpointBisfree,thentheoriginof risonlineABandde-
+pends on the gyro parameters. For estimation, it is importan t
+thatrhastheorderofmagnitudeofgyrolength.
+Let the gyro be a model of a rigid molecule free to move
+andconstrainedbythethermaloscillationsofoneofthepoi nt
+of support (e.g. A) alone. We estimate the mean gyro axis
+deviationangle for a randomforce Fcausing chaotic oscilla-
+tions of its point of support. It should be noted that the gyro
+gravityenergy ∼MgRismanyordersofmagnitudebelowits
+kineticenergy ∼L2/2Iandthe effectsof gravitymay bene-
+glected. In the last formulas, M,R, andIare the gyro mass,size, and moment of inertia, and gis the acceleration due to
+gravity.
+The energy of natural gyro rotation is ε0=L2
+0/2I. The
+gyro energy including chaotic rotations is ε0+kBT. On the
+otherhand,themeanenergywithallowancefororthogonalit y
+ofL0anddLis
+/an}bracketle{t1
+2I(L0+dL)2/an}bracketri}ht=1
+2I/braceleftbig
+L2
+0+2/an}bracketle{tL0dL/an}bracketri}ht+/an}bracketle{td2L/an}bracketri}ht/bracerightbig
+=ε0+/an}bracketle{td2L/an}bracketri}ht
+2I,(2)
+where brackets mean averaging over the ensemble. Then
+/an}bracketle{td2L/an}bracketri}ht/2I∼kBT. Denoting the average deviation angle by
+α=/radicalbig
+/an}bracketle{td2L/an}bracketri}ht/L0yieldsα2∼2IkBT/L2
+0. The smaller L0
+thelargertherandomdeviationsofamoleculecausedbyther -
+malperturbationsofitssupport. Suchasupportisthecoval ent
+bondwiththebodyofproteinmolecule. Lowboundestimates
+ofL0followfromtheHeisenberguncertaintyprinciplewhich,
+for a complementary pair of noncommuting operators of an-
+gular variable ϕand angular momentum L ∼d/dϕ, can be
+writtenas:
+△L△ϕ∼/planckover2pi1/2.
+Since△ϕ∼π, then△L∼/planckover2pi1/2π; thus the angular momen-
+tum cannot be smaller than its uncertainty, i.e., L0∼/planckover2pi1/2π.
+Finally,we have
+α2∼8π2IkBT
+/planckover2pi12.
+As can be seen deviationsincrease with the size of molecule;
+however, even for small molecules, the estimate of deviatio n
+isunrealisticallylarge. Itimpliesthat,inlowerrotatio nstates,
+moleculeswill ‘lay aside’ in response to perturbationof th eir
+support and, consequently, the angular momentum will not
+beconserved. Itshouldbenotedthatweareinterestedonlyi n
+angularstateswithsmallquantumnumbers. Otherwisethein -
+terferencepatternstobediscussedbelowbecomeﬁnegraine d
+andare unlikelytobereﬂectedinmeasuredproperties.
+Thus, in order to be immune to thermal displacements of
+supports,thegyrohasto have its secondsupportalso ﬁxed in
+the protein matrix. The conﬁgurationof a rotating solid wit h
+supports ﬁxed in the rim is one of the types of a gyroscope ,
+i.e.,adevicetomeasureangulardisplacementsandvelocit ies.
+Whatweconsiderisessentiallyamoleculargyro: arelative ly
+largemoleculargroupisplacedinaproteincavityanditstw o
+edgesformcovalentbonds(supports)withthecavitywalls. It
+is important to note that thermal oscillations of the suppor ts
+produceonly zero momentsof forcesaboutthe naturalgroup
+rotation axis. Therefore,the gyroscopic degree of freedom ϕ
+isnotthermalizedbythesupports’oscillations. Thisdoes not
+implythattheenergyofthegyrodoesnotdissipate. Radiati on
+dampingor Lorentz friction force is neglected, because of i ts
+inﬁnitesimalvalue. Belowweexamineatﬁrsttheinterferen ce
+of the molecular gyro and then the damping due to wan der
+Waalsforces.
+4
+GLU
+/G2B/G3D
+/G26
+/G26/G26/G26/G26
+/G31/G32/G32
+/G32
+/G32/G0E
+/G10
+FIG. 3: An amino glutaric acid molecule with potentially ion izing
+groups. The zaxis is the main axis of inertia. Rotation of charges
+distributedoverthemoleculeinamagneticﬁeldleadstoint erference
+of itsquantum angular states.
+III. INTERFERENCEOF THEMOLECULAR
+GYROSCOPE
+Rotationsoflargemoleculesismuchsloweraprocessthan
+electronandoscillatory processes. Therefore,we thinkof the
+rotating molecular group as a rigid system of charged point
+masses—atomsandmoleculeswithpartiallypolarizedchem-
+ical bonds. To illustrate, we point to molecules of amino
+acids which could be built into rather spacious protein cavi -
+tiesformingchemicalbondsat extremeendsofthemolecule,
+thus forming a molecular gyroscope. Amino acids are links
+ofpolymericproteinmacromoleculesandalsooccurina bio-
+plasmasfreemonomers. Thegeneralformulaofaminoacids
+iswell known:
+R
+|
+H2N+−CH−COHO−,
+whereRisaradicalwhichdiffersonemoleculefromanother.
+Polaritiesofthegroupsareshowninawatersolution. Byway
+ofexample,theradicalofaminoglutaricacidconsistsofth ree
+links−CH2−CH2−COOH, as shown in Fig. 3. Fixed on
+either side of a cavity, such a molecule, treated as a dynamic
+unit, has one degree of freedom — a polar angle ϕ, which
+simpliﬁesanalysisofitsbehaviorina magneticﬁeld.
+For small velocities, the Lagrange function of one charge
+particlehastheform
+L=Mv2
+2+q
+cAv−qA0, (3)
+wherevis the particle velocity, and qis a charge. Let the
+magnetic ﬁeld H= (0,0, H)be directed along the zaxis,
+and the particle be bounded by a holonomic constraint caus-
+ing its circumferential motion in the xyplane. In spherical
+coordinates,theconstrainscanbewrittenintheform
+r=R=const., θ=π/2. (4)We choosethe vectorpotentialinthe form
+A=/parenleftbigg
+−1
+2Hy,1
+2Hx,0/parenrightbigg
+. (5)
+Withallowanceforconstraints( 4),thevelocityofaparticlein
+sphericalcoordinateswill be v=R˙ϕ,andthevelocityvector
+inCartesiancoordinatesis
+v= (−R˙ϕsin(ϕ), R˙ϕcos(ϕ),0). (6)
+Substitutingthisexpressioninequation( 3),weobtaintheLa-
+grangefunctioninsphericalcoordinates
+L=MR2˙ϕ2
+2+qH
+2cR2˙ϕ−qA0. (7)
+Now, the generalized momentum is l=∂L/∂˙ϕ, and the
+Hamiltonfunction H=l˙ϕ−Lisequalto
+H=1
+2MR2/parenleftbigg
+l−qH
+2cR2/parenrightbigg2
++qA0. (8)
+Intheabsenceofelectromagneticﬁeld H=l2/2MR2, andit
+isobviousthat listheangularmomentumoftheparticle. The
+Hamiltonianoperatorrepeats( 8)with thedifferencethathere
+listheangularmomentumoperator L=−i/planckover2pi1∂/∂ϕ.
+Let nowa few particlesrotate and,in a sphericalsystem of
+coordinates,theconstraintsforparticle ibe
+ri=const., θi=const.
+Then,forasystemofparticlesinauniaxialmagneticﬁeld,t he
+Lagrange function can be written following the derivation o f
+formula(7)as
+L=I
+2˙ϕ2+HQ
+2c˙ϕ−/summationdisplay
+iqiA0(ri,θi,ϕi),(9)
+where
+I=/summationdisplay
+iMir2
+isin2(θi), Q=/summationdisplay
+iqir2
+isin2(θi)(10)
+is the moment of inertia, and ‘charge moment of inertia’ of
+the system about the axis of rotation. As can be seen, the
+Lagrange function of the system follows from the Lagrange
+function ( 7) after formal replacement of MR2withI,qR2
+withQ, andqA0with the respective sum. Therefore, the
+Hamiltonian of the system immediately follows from equa-
+tion(8)aftersimilar substitutions
+H=1
+2I/parenleftbigg
+L−QH
+2c/parenrightbigg2
++/summationdisplay
+iqiA0(ri,θi,ϕi).
+We assume further that the electric ﬁeld is absent, i.e., let
+A0= 0:
+H=1
+2I/parenleftbigg
+L−QH
+2c/parenrightbigg2
+.
+5
+In addition to L2/2Iwe ﬁnd here two more operators. There
+arecertaingroundstoneglectthetermproportionaltosqua red
+H. From the ratios of coefﬁcients at the terms quadratic and
+linear inHwe obtain QH/4c/planckover2pi1∼10−7, where, for estima-
+tion purposes, we let Q∼eR2,R∼10−7cm,H∼1G.
+Droppingthis term we write the Hamiltonian in a convenient
+form
+H=L2
+2I−ω(t)L, ω(t)≡QH
+2Ic.(11)
+Theeigenfunctionsand energiesofthe time-independentpa rt
+ofHamiltonian( 11) are
+|m/an}bracketri}ht=1√
+2πexp(imϕ), m= 0,±1, ..., ε m=/planckover2pi12
+2Im2.
+Wenowconsidertheensembleofgyrosthatfeaturesadensity
+operatorσobeyingtheLiouvilleequation
+i/planckover2pi1˙σ=Hσ−σH, σ=/summationdisplay
+αw(α)σ(α).(12)
+Some physical quantities, like the intensity of a spontaneo us
+emissionortheradiationreemittedbyanensemble,areknow n
+tolinearlydependonthedensitymatrixoftheensemble
+σmm′=/summationdisplay
+αw(α)σ(α)
+mm′.
+Theprobabilityofbiochemicalreactionthatweexamineher e
+is not a quantity of that sort. The reaction probability does
+not directly depend on the density matrix of the ensemble.
+It is rather the probability of the reaction of a gyro average d
+overthatensemble. Therefore,atﬁrstwewillﬁndthedensit y
+matrixσ(α)
+mm′of theαth gyro, then the reaction probabilityof
+that gyro that non-linearly depends on σ(α)
+mm′, and at last we
+will averagetheresultoverthegyroensemble.
+Let the ensemble consist of gyros that appear with a con-
+stant rate at random moments of time. We assume the new
+gyros appear in a quantum state that is a superposition of the
+statesclose tothegroundone,i.e.,
+σ(α)
+mm′(0) =/braceleftbigg
+const, m,m′∼1
+0, m,m′≁1.
+Intheprocessofthermalization,thelevelsturnouttobepo pu-
+latedwiththeenergiesupto εm∼kBT,i.e.,withnumbersup
+tom∼1
+/planckover2pi1/radicalbig
+IkBT∼103for gyros with the inertia moments
+of the order of I∼1035g·cm2. However, we are interested
+in the dynamicsof the lowest states, that only could result i n
+observableeffects.
+In the representation of the eigenfunctions of H0the den-
+sitymatrixequationmaybewrittenfrom( 11)and(12)asfol-
+lows
+˙σmm′=−(Γmm′+iωmm′)σmm′−i
+/planckover2pi1/summationdisplay
+l(Vmlσlm′−σmlVlm′),
+(13)where
+ωmm′=/planckover2pi1
+2I(m2−m′2),Vml=−/planckover2pi1ω(t)mδml.
+Phenomenological relaxation of the density matrix element s
+is taken into account, through the damping constants Γmm′.
+Because of the relaxation the elements σmm′of the lowest
+modes decrease while those of upper modes increase. As far
+asthestationerydynamicsofaseparategyroisoutofintere st,
+we don’tallow forthepumpinguppermodes,i.e., population
+redistributionintothestates withlargenumbers m.
+Substitution of the above relations in ( 13) gives rise to the
+equation
+˙σ=−Γσ+iσ[(m−m′)ω(t)−ω],
+whereindices m,m′aretemporarilyomittedforconvenience.
+Alongwithnotation
+g(t)≡ −Γ+if , f≡(m−m′)ω(t)−ω
+theequationtakesthestraightforwardform ˙σ=g(t)σ. Inthe
+solution of that equation σ=Cexp/parenleftbig/integraltext
+g(t)dt/parenrightbig
+, the constant
+Cfollowsstartingconditions.
+LettheMF possessesbothDC andACparts,then
+ω(t) =ωg(1+h′cosΩt), ωg≡QHDC
+2Ic, h′≡HAC
+HDC.
+Nowweseparateconstantandalternatingpartsin g(t):
+g(t) =−x+izΩcosΩt, x≡Γ+iω−i(m−m′)ωg,
+z≡(m−m′)ωgh′
+Ω= (m−m′)h′
+Ω′,Ω′≡Ω
+ωg.
+Theintegralequals
+/integraldisplay
+g(t)dt=/integraldisplay
+(−x+izΩcosΩt)dt=−xt+izsinΩt ,
+hence
+σ=σ(0)e/integraltextg(t)dt=σ(0)e−xteizsinΩt
+=σ(0)e−xt/summationdisplay
+nJn(z)einΩt.
+Restoringindeces m,m′, wearriveat theequation
+σmm′=σmm′(0)e−[Γmm′+iωmm′−i(m−m′)ωg]t
+×/summationdisplay
+nJn(zmm′)einΩt.
+Further, all the damping constants are assumed to equal Γ.
+Withthenotation
+β≡Γ+iωmm′−i(m−m′)ωg−inΩ,
+werewritethelast equationinthe form
+σmm′=σmm′(0)/summationdisplay
+nJn(zmm′)e−βt
+6
+thatwill beusedlater.
+Now we consider the probability density of a gyro to take
+an angularposition ϕ, which is the only favorablepositionof
+the rotating group of the gyro to react with the active site on
+thewall
+p(t) = Ψ∗(t,ϕ)Ψ(t,ϕ) =1
+2π/summationdisplay
+mc∗
+m(t)e−imϕ/summationdisplay
+m′cm′(t)eim′ϕ
+=1
+2π/summationdisplay
+mm′σmm′e−i(m−m′)ϕ,
+thatis,
+p(t) =1
+2π/summationdisplay
+mm′nσmm′(0)e−i(m−m′)ϕe−βtJn(zmm′).It is expedient to perform a sliding averaging in order to
+smooth out the relatively fast oscillations: they do not aff ect
+theactivesite thatfeaturescharactertime constant τ, i.e.,
+pτ(t) =1
+2τ/integraldisplayt+τ
+t−τp(t′)dt′.
+Virtually,thefactor exp(−βt)shouldbeaveraged:
+/parenleftbig
+e−βt/parenrightbig
+τ=sinh(βτ)
+βτe−βt,
+therefore
+pτ(t) =1
+2π/summationdisplay
+mm′nσmm′(0)sinh(βτ)
+βτe−i(m−m′)ϕe−βtJn(zmm′). (14)
+Then,asintheioninterferencemodel,weassumethereactio n
+probability of a side group of the rotating molecule with the
+proteinactivesitetobeanon-linearfunctionoftheprobab ility
+density (14). In the absence of whatever information on that
+function, it makes sense to consider quadratic non-lineari ty,
+sincethelineartermmakesnocontributiontothatprobabil ity,
+see details in [ 10]. To ﬁnd the reaction probability we will
+square(14) andtakethe averageoverthe gyroensemble.
+In the product pτ(t)pτ(t)there are (i) complex conjugate
+terms,i.e.,pairswithindeces n,m,m′and−n,m′,m,which
+apparentlydo not oscillate, and (ii) fast-oscillating ter ms that
+we omit in view of the subsequent averaging. Omitting also
+immaterialnumericalcoefﬁcient,we write
+p2
+τ(t)≃e−2Γt/summationdisplay
+mm′n|σmm′(0)|2/vextendsingle/vextendsingle/vextendsingle/vextendsinglesinh(βτ)
+βτ/vextendsingle/vextendsingle/vextendsingle/vextendsingle2
+J2
+n(zmm′).
+Inthisexpression,themultiplier
+S≡/summationdisplay
+mm′n|σmm′(0)|2/vextendsingle/vextendsingle/vextendsingle/vextendsinglesinh(βτ)
+βτ/vextendsingle/vextendsingle/vextendsingle/vextendsingle2
+J2
+n(zmm′)
+containsthe magneticﬁelddependence.
+Let a gyroappearin a momentof time t′, then the reaction
+probabilityat time tequals
+u(t,t′) =/braceleftbigg
+Se−2Γ(t−t′), t≥t′
+0, t < t′.
+Assuming the moments of time t′to be distributed over the
+gyro ensemble in the interval (−θ,θ)with a uniform density
+w(instead of a discrete distributionfor w(α)in (12)), we ﬁnd
+the mean probability Pby properintegratingover the param-
+etert′:
+P= lim
+θ→∞w/integraldisplayθ
+−θu(t,t′)dt′=wS
+2Γ.To link this value to an observable, e.g., a concentration of
+the reaction products, we write the kinetic equation for the
+numberNofgyrosperunitoftissue volume
+˙N=w−PN
+thatgives N=w/P= 2Γ/Sinstationeryconditions. Let S0
+andN0stand for corresponding quantities in the absence of
+anACMF, i.e., at h′= 0. We wouldlike to knowtherelative
+changeρof the concentration of the reaction products under
+the AC MF inﬂuence. This is the relative number of gyros
+enteringthereaction,i.e.,
+ρ≡N0−N
+N0= 1−S0
+S. (15)
+We now estimate values of Sandρ. The following notation
+will beused:
+βτ≡η+iξ, η≡Γτ , ξ≡[ωmm′−(m−m′)ωg−nΩ]τ .
+Thentheexpressionfor Stakesthe form
+S=/summationdisplay
+mm′n|σmm′(0)|2sinh2η+sin2ξ
+η2+ξ2J2
+n/bracketleftbigg
+(m−m′)h′
+Ω′/bracketrightbigg
+.
+(16)
+Sinceηis a constant, the frequency spectrum is deﬁned
+mainlybytheequation ξ= 0,i.e.,
+ωmm′−ωg(m−m′)−nΩ = 0.
+For arbitrary small m,m′frequencies ωmm′fall into the mi-
+crowaverange. Theeffectsoflow-frequencyMFsaredeﬁned
+by the interferenceof the levels m′=−m, whenωmm′= 0.
+Then
+ωg(m−m′)+nΩ = 0,
+7
+fromwhichweﬁnd
+Ω′=2m
+n. (17)
+The series over nin (16) converges quickly, therefore the
+terms with n= 1mainly contribute to the reaction proba-
+bility. So, at frequencieswhere the probabilitygains maxi ma
+(Ω′= 2m)contributionsofthosetermsequal
+Sm≡ |σm,−m(0)|2sinh2(Γτ)
+Γ2τ2J2
+1(h′).
+Contributionsofthetermswith n= 2
+|σm,−m(0)|2sinh2(Γτ)+sin2(6mωgτ)
+τ2(Γ2+36m2ω2g)J2
+2(2h′),
+obviously,aremorethanorderofvaluesmaller,inthecaseo f
+ωg/greaterorsimilarΓ,i.e.,whenit makessenseto examinetheinterference
+in general. Thus, in order to make approximate assessments
+we omit thetermswith n >1. Then,forthe same reason,for
+the ground state m= 0only contributions of the terms with
+n= 0are essential. It is those terms that make the contribu-
+tionindependentlyofanACMF:
+S0=|σ00(0)|2sinh2(Γτ)
+Γ2τ2.
+As well, at a ﬁxed frequency Ω′= 2m∗only terms with
+m=−m′=m∗are essential in their contribution. Now the
+relativechangeoftheconcentrationofthereactionproduc tsis
+easy toestimate at the MF frequency,e.g., Ω′= 2m. Making
+note ofJ2
+−1(h′) = J2
+1(h′)and allowing for S=S0+Smin
+thiscase,from( 15)we arriveat
+ρ= 1−/bracketleftBigg
+1+2σ2
+−m,m(0)
+σ2
+00(0)J2
+1(h′)/bracketrightBigg−1
+.
+As is seen, the magnitude of the magnetic effect depends on
+the ratio of the density matrix elements at the initial momen t
+of time just after a gyro appears. For example, if the ground
+stateandthestate m(outofZeeman’ssplitting)equipopulated
+att= +0,then
+ρ= 1−1
+1+J2
+1(h′). (18)
+This function is shown in the Fig. 1, solid line. We conclude
+thatthepositionsofthemaximaoftheamplitudespectrumof
+themagneticeffectdonotdepend(andtherelativemagnitud e
+of the effect do) on the distribution of the initial populati ons
+ofthegyrolevels.
+Thespectrum( 17)determinesonlypossiblelocationsofex-
+trema. Arealformofthespectrumdependsontheinitialcon-
+ditionsforthedensitymatrix,i.e.,onthepopulationsofl evels
+ofdifferentrotationalquantumnumber m.
+It is instructive to note that the molecule need not have
+a dipole moment/summationtext
+iqirifor the magnetic effect to appear.
+Rather, it is important that the ‘charge moment of inertia’ Q(10)beotherthanzero. Thiscanbethecaseintheabsenceof
+dipolemoment,e.g. forionicratherthanzwitterionicform of
+themolecule.
+The main properties of the gyro interference are identical
+with those of the ion interference, namely, (i) multiple pea ks
+intheamplitudeandfrequencyspectra,(ii)dependenceoft he
+positionsoffrequencypeaksontheDCMFintensity,and(iii )
+independenceofthepositionsofamplitudemaximaontheAC
+MF frequency.
+We notethat theinterferenceofa moleculargyrohassome
+features that differ it from the ion interference. Firstly, the
+peak frequencies are deﬁned with respect to the gyral fre-
+quencyωg— a rotation equivalent of cyclotron frequency.
+Peakfrequenciesdependonthedistributionofelectriccha rges
+over the molecule and may deviate from harmonics and sub-
+harmonics of the cyclotron frequency. Secondly, the gyro
+rotation axis is ﬁxed with respect to the shell, which intro-
+duces, in the general case, one more averaging parameter in
+themodel. However,thesefeaturesarenotofprincipalsign if-
+icance. The speciﬁc propertiesof the interferencecan alwa ys
+be calculated for any conﬁguration of magnetic and electric
+ﬁelds, for rotation of biological systems and macromolecul es
+involved,etc.
+Thereisthecrucialfeatureofthegyrointerference: molec -
+ular gyrosare relatively immune to thermal shaking and may
+beeffectivebiophysicaltargetsforexternalMFs.
+As is seen from ( 16) the absolute magnitude of the mag-
+netic effect, where the latter is maximized by the MF param-
+eters, dependsmainly on the value η= Γτ, which should be
+minimizedforgreatereffects. Theproteinreactiontime τand
+the MF frequency Ωhave to fulﬁll the relation Ωτ/greaterorsimilar1in or-
+derto manifestan interference. Thisandthe propertiesof t he
+functionsinh2η/η2leadto theconditionofobservability
+Γ−1/greaterorsimilarΩ−1∼0.01s (19)
+fortheELFrange. Thefollowingsectionexaminesifthecon-
+ditionisreal.
+IV. ESTIMATINGRELAXATIONTIMEFROM
+MOLECULARDYNAMICS
+Computer simulation of molecular gyro behavior indicates
+that, for relaxation times of order 0.01s, the size of cavity
+shouldbebelow30 ˚A.
+We consider the amino acid residue Phenilalanin, (Phe)
+CαC6H5, as a gyro and look at the revolution of its benzene
+ringC6H5aboutthevalencebondC α—Cβ—seeFig. 4. This
+revolutionmaybethoughtofasarotationinoneplaneoftwo
+rigidly bound point masses m= 26mp(mpis the mass of
+proton), spaced by a= 2.42˚A from one another, about their
+commoncenterofgravity.
+We model the cavity by four heavy particles of mass M≥
+mplacedinthecornersofa square(diagonal b > a)centered
+on the gyro axis, as shown in Fig. 5. We assume that these
+particlesoscillate in the gyrorotationplane xy. Eachparticle
+moves in the potential well U(xi,yi), wherexi,yiis the de-
+viation of particle ifrom its equilibrium state. The Hamilton
+8
+FIG.4: SchematicrepresentationofamoleculargyroscopeC αC6H5
+reduced toa model of a two-particle rotor of diameter a.
+functionforthissystemhastheform
+H=1
+2I˙φ2+4/summationdisplay
+i=1[1
+2M(˙x2
+i+ ˙y2
+i)+V(φ,xi,yi)
++U(xi,yi)], (20)
+whereI=1
+2ma2is the gyro moment of inertia, and φis its
+revolutionangle.
+We take the potential of interaction of particle iwith the
+gyroasthesumoftwo Lennard–Jonespotentials
+V(φ,xi,yi) =ǫ{[(r0/r1)6−1]2+[(r0/r2)6−1]2},
+wherer0is the equilibrium arm between a heavy and a light
+particle,r1is the instantaneous distance of a heavy particle
+ito the ﬁrst particle of the gyro, and r2is the distance to
+the second particle. The interaction of carbon atoms in poly -
+meric macromolecules is commonly described by Lennard–
+Jonespotentialsoftheform
+VLJ(r) = 4ǫ0[(σ/r)12−(σ/r)6]
+withσ= 3.8˚Aandǫ0= 0.4937kJ/mol[27,28]. Recognizing
+thateachparticleofthegyroconsistsoftwocarbonatoms,w e
+letǫ= 1kJ/mol≈2ǫ0andr0= 4.5˚A≈21/6σ.
+The carrier potential for each heavy particle will be taken
+inthe form
+U(x,y) =1
+2Kx2+y2
+1−(x2+y2)/R0,
+whereKis the rigidity in particle-carrier interaction, and R0
+is the maximumpossible deviationradiusof a heavy particle .Mmφ
+x4x2
+x1x3y2
+y4y1y3
+b
+FIG.5: A two-dimensional model of a gyro in a molecular cavit y of
+diameterbformed byfour heavyparticles of mass M.
+In a protein macromolecule, the rigidity of atomic displace -
+ments isK= 4N/m. We consider two maximum displace-
+mentvalues: R0= 1˚AandR0=∞.
+Assumingthatheavyparticlesaloneareconnectedwiththe
+thermostat,weobtaintheequationsofmotionintheform
+I¨φ=−∂H
+∂φ,
+M¨xi=−∂H
+∂xi−ΓrM˙xi+ξi, (21)
+M¨yi=−∂H
+∂yi−ΓrM˙yi+ηi,
+i= 1,2,3,4,
+where the system’s Hamilton function is given by equation
+(20);ξiandηiare randomnormallydistributed forces(white
+noise)describingtheinteractionofa heavyparticle iwith the
+thermostat, Γr= 1/tristhe frictionfactor,and tristheparti-
+cle velocityrelaxationtime. Thecorrelationfunctionsof ran-
+domforcesare
+/an}bracketle{tξi(t1)ξj(t2)/an}bracketri}ht= 2MΓrkBTδijδ(t1−t2),
+/an}bracketle{tηi(t1)ηj(t2)/an}bracketri}ht= 2MΓrkBTδijδ(t1−t2),
+/an}bracketle{tξi(t1)ηj(t2)/an}bracketri}ht= 0.
+Here,kBis the Boltzmann constant, and Tis the thermostat
+temperature.
+We integratethe equation system ( 21) by the Runge–Kutta
+method to the fourth order of accuracy with a constant inte-
+gration step ∆t. In this computation, the delta function δ(t)
+is0for|t|>∆t/2and1/∆tfor|t|<∆t/2, that is, the in-
+tegration step corresponds to the correlation time of rando m
+9
+0 10 20 30 40 500100200300
+t  (ps)T  (K) 1 2
+FIG. 6: Current mean temperature of the molecular thermosta tT1
+(curve 1) and temperatures of its molecular neighborhood T2(curve
+2) as functions of time. Thermostat temperature T= 300K, cavity
+diameterb= 11˚A,M=m,andR0= 1˚A.
+force. Therefore, to use a system of Langevin equations, we
+needthat ∆t≪tr. Lettherelaxationtimebe tr= 0.2ps,and
+thenumericalintegrationstep be ∆t= 0.0025ps.
+Letintheinitialmomentoftime t= 0thesystembeinthe
+fundamentalstate
+φ(0) =φ0, xi(0) =ui, yi(0) =vi,(22)
+˙φ(0) = 0,˙xi(0) = 0,˙yi(0) = 0, i= 1,2,3,4,
+where the coordinates of a steady state, φ0,{ui,vi}4
+i=1, are
+determinedassolutionstotheminimizationproblem
+H→min
+φ,x1,...,y4:˙φ≡0,˙x1≡0,...,˙y4≡0.(23)
+Thus,attime zero,themoleculargyroisnotthermalized.
+Our objective is to estimate the average time of gyro ther-
+malization. It correspondsto therelaxationtime ofgyroro ta-
+tion in a thermalized molecular system. For this purpose, we
+numerically integrate the equations of motion ( 21) subject to
+theinitial condition( 22).
+Thegyrothermalizationattime tischaracterizedbyitscur-
+renttemperature
+T1(t) =I/an}bracketle{t˙φ2(t)/an}bracketri}ht/kB,
+where brackets /an}bracketle{t·/an}bracketri}htimply averagingover independentrealiza-
+tions of random forces ξi(t),ηi(t),i= 1,2,3,4. To obtain
+the average value, the system ( 21) was integrated more than
+10000times.
+In turn, the thermalization of the system of heavy particles
+ischaracterizedbyitscurrenttemperature
+T2(t) =M
+8kB4/summationdisplay
+i=1/an}bracketle{t˙x2
+i(t)+ ˙y2
+i(t)/an}bracketri}ht.
+The time dependence of these temperatures is presented in
+Fig.6. Att= 0, the temperatures are T1(0) =T2(0) = 0.
+Further on the time coordinate, they monotonously approach
+thethermostattemperature T= 300K.10 15 20 25 30 3510−1210−1010−810−610−410−2100
+b  (A)ot1  (s)
+1234
+FIG. 7: Gyro thermalization time t1computed as a function of
+molecular cavity diameter batM=m,R0= 1˚A (symbols 1);
+M=m,R0=∞(symbols 2); M= 100m,R0=∞(symbols 3),
+andextrapolation of this functiontolarge b(curve 4).
+Wewillassumethatthemolecularsubsystemiscompletely
+thermalized if its current temperature exceeds 0.99T. We
+determine the gyro thermalization time t1as a solution of
+the equation T1(t) = 0.99T, and the time of heavy parti-
+cle system thermalization t2, as a solution of the equation
+T2(t) = 0.99T. The gyro is thermalized by interacting with
+thesystemofheavyparticles,thereforeitsthermalizatio ntime
+willdependonthediameter boftheheavyparticlesystemand
+will always exceed the heavy particle system thermalizatio n
+time(t1> t2). Timet2is almost independent of band is
+dependentonlyontherelaxationtime tr:t2≈4tr.
+We analyzed the behavior of the system for R0= 1˚A,∞
+andM=m,100m. The dependence of gyro thermalization
+timet1on cavity diameter bis shown in Fig. 7. It is evident
+that, whatever the values of R0andM, the thermalization
+timeincreasesexponentiallywith b. Ifweextrapolatethisde-
+pendenceto therangeoflarge b, we see that,at b= 28–32˚A,
+the thermalization time, and hence the gyro relaxation time
+Γ−1, will be of the orderof seconds. With this size of cavity,
+themoleculargyrowill revolvealmost freely.
+V. CONCLUSION
+The molecular interfering gyroscope is a challenger for
+solvingthekT-problemasaprobablemechanismofmagneto-
+biologicaleffects. Indeed,the wallsofa proteincavitydo not
+interfere with the gyro degree of freedom directly via short -
+range chemical bonds. For cavities larger than 30 ˚A in size,
+thecontributiontotherelaxationfromthevanderWaalsele c-
+tromagneticforces,inducedbywalloscillations,issmall . Ra-
+diation damping is negligibly small. Finally, the oscillat ions
+of gyro supports produce a zero moment of forces about the
+axisofrotationanddonotaffecttheangularmomentum. The
+gyrodegreeoffreedomisveryslowtothermalize,itsdynami c
+10
+behavioriscoherent,whichgivesriseto slow interference ef-
+fects. Of course,whetheror notsome moreorless water-free
+cavitiesofthesizeof30 ˚Aandlargerdoexistremainsanopen
+question,but,whatisessential, ELFmagneticﬁeldbioeffe cts
+arenolongeraparadox.
+The role of molecular gyros could probably be played by
+short sections of polypeptides and nucleic acids built insi de
+globular proteins or in cavities between associated globul es.
+InthisrespectitisinterestingtolookatWatson–Crickpai rsof
+nitrousbases(adenine–thymineandguanine–cytosine)whi ch
+bind DNA strands into a double helix as well as some other
+hydrogen-boundcomplexes of nitrous bases. Their rotation s
+arehamperedbystericfactors. However,intherealmofacti v-
+ity of special DNA enzymes, steric constraints may be lifted
+toallowarelativelyfreerotationofmolecularcomplexes. Itisnot yet clear whether or not the gyrotype of molecularstruc-
+tures exists. They are unlikely to be detected by X-ray meth-
+odssincetheserequirecrystallizationofproteinsforstr uctural
+analysis. In this state, the rotation would likely be frozen .
+Should a rotation be allowed, the mobile groups would not
+giveclearcutreﬂections. Someothermethodsareneededtha t
+wouldworkwithnativeformsofproteinsavoidingdistortio ns
+dueto crystallization.
+Generallyspeaking,the fact that the moleculargyromodel
+givesa physically consistent explanationof MBEs provesin -
+directlyitsrealgrounds. Furtherstudiesshouldverifywh ether
+this conclusion is correct. In any case, today, the interfer ing
+molecular gyroscope is a single available mechanism to give
+explanations that would be physically transparent and gene r-
+allyagreeablewithexperiments.
+[1] M. Blank, ed., Electromagnetic ﬁelds: Biological Interactions
+and Mechanisms , Advances in Chemistry – 250 (Am. Chem.
+Soc.,Washington, 1995).
+[2] E. Goodman, B. Greenebaum, and M. Marron, Int. Rev. Cytol .
+158, 279 (1995).
+[3] F. Bersani, ed., Electricity and Magnetism in Biology and
+Medicine (Kluwer/Plenum, London, 1999).
+[4] W.Adey, J.Cell Biochem. 51, 410 (1993).
+[5] I. Belyaev, A. Matronchik, and Y. Alipov, in Charge and Field
+EffectsinBiosystems–4 ,editedbyM.Allen(WorldScientiﬁc,
+Singapore, 1994), pp. 174–184.
+[6] J. Mullins, D. Krause, and T. Litovitz, in Electricity and Mag-
+netisminBiologyandMedicine ,editedbyM.Blank(SanFran-
+ciscoPressInc, SanFrancisco, 1993), pp. 345–346.
+[7] H.Linand R.Goodman, Bioelectroch. Bioener. 36, 33 (1995).
+[8] P. Raskmark and S. Kwee, Bioelectroch. Bioener. 40, 193
+(1996).
+[9] T. Litovitz, M. Penaﬁel, D. Krause, D. Zhang, and J. Mulli ns,
+Bioelectromagnetics 18, 388(1997).
+[10] V.Binhi, ElectroMagnetobiol. 16, 203(1997).
+[11] V.Binhi, Bioelectroch. Bioener. 45, 73(1998).
+[12] V.Binhi, Bioelectromagnetics 21, 34(2000).
+[13] V.Binhi,Y.Alipov,andI.Belyaev, Bioelectromagneti cs22, 79
+(2001).
+[14] V. Binhi and R. Goldman, Biochim. Biophys. Acta 1474, 147
+(2000).
+[15] C.Slichter, Principlesofmagnetic resonance (Springer,Berlin,
+1980), 2nd ed.
+[16] L. Landau and E. Lifshitz, Quantum Mechanics , vol. 3 of The-
+oretical Physics (Pergamon, Oxford, 1977).
+[17] A.Liboff,R.Rozek, M. Sherman,B.McLeod, andS.Smith, J.
+Bioelect. 6, 13(1987).
+[18] S.Ross,Bioelectromagnetics 11, 27 (1990).
+[19] C. Blackman, J. Blanchard, S. Benane, and D. House, Bioe lec-
+tromagnetics 15, 239 (1994).
+[20] J. Garcia-Sancho, M. Montero, J. Alvarez, R. Fonteriz, and
+A.Sanchez, Bioelectromagnetics 15, 579 (1994).
+[21] C. Blackman, J. Blanchard, S. Benane, and D. House, FASE B
+J.9, 547 (1995).
+[22] F.Prato,J.Carson, K.Ossenkopp, and M.Kavaliers,FAS EBJ.
+9,807 (1995).
+[23] V. Lednev, L. Srebnitskaya, E. Ilyasova, Z. Rozhdestve nskaya,
+A.Klimov, N.Belova, and H.Tiras,Bioﬁzika 41, 815 (1996).[24] V. Lednev, L. Srebnitskaya, E. Ilyasova, Z. Rozhdestve nskaya,
+A. Klimov, and H. Tiras, Dokl. Ross. Akad. Nauk 348, 830
+(1996).
+[25] M.Trillo,A.Ubeda, J.Blanchard, D.House,andC.Black man,
+Bioelectromagnetics 17, 10 (1996).
+[26] C. Blackman, J. Blanchard, S.Benane, and D. House, Bioe lec-
+tromagnetics 20, 5(1999).
+[27] D. Noid, B. Sumpter, and B. Wunderlich, Macromolecules 24,
+4148 (1991).
+[28] A. Savinand L.Manevitch, Phys.Rev. B 58, 11386 (1998).

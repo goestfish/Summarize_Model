@@ -1,0 +1,341 @@
+arXiv:math/0304372v1  [math.PR]  24 Apr 2003ICM 2002 ·Vol. III·1–3
+Biological Sequence Analysis
+T. P. Speed∗
+Abstract
+This talk will review a little over a decade’s research on app lying certain
+stochastic models tobiological sequence analysis. The mod els themselves have
+a longer history, going back over 30 years, although many nov el variants have
+arisen since that time. The function of the models in biologi cal sequence
+analysis is to summarize the information concerning what is known as a motif
+or a domain in bioinformatics, and to provide a tool for disco vering instances
+of that motif or domain in a separate sequence segment. We wil l introduce the
+motif models in stages, beginning from very simple, non-sto chastic versions,
+progressively becoming more complex, until we reach modern proﬁle HMMs
+for motifs. A second example will come from gene ﬁnding using sequence data
+from one or two species, where generalized HMMs or generaliz ed pair HMMs
+have proved to be very eﬀective.
+2000 Mathematics Subject Classiﬁcation: 60J20, 92C40.
+Keywords and Phrases: Motif, Regular expression, Proﬁle, HiddenMarkov
+model.
+1. Introduction
+DNA(deoxyribonucleicacid), RNA(ribonucleicacid), andproteinsar emacro-
+molecules which are unbranched polymers built up from smaller units. I n the case
+of DNA these units are the 4 nucleotide residues A (adenine), C (cyt osine), G (gua-
+nine) and T (thymine) while for RNA the units are the 4 nucleotide resid ues A, C,
+G and U (uracil). For proteins the units are the 20 amino acid residues A (alanine),
+C (cysteine) D (aspartic acid), E (glutamic acid), F (phenylalanine), G (glycine), H
+(histidine), I (isoleucine), K (lysine), L (leucine), M (methionine), N ( asparagine),
+P (proline), Q (glutamine), R (arginine), S (serine), T (threonine), V (valine), W
+(tryptophan) and Y (tyrosine). To a considerable extent, the ch emical properties
+of DNA, RNA and protein molecules are encoded in the linear sequence of these
+basic units: their primary structure.
+∗Department of Statistics, University of California, Berke ley, CA 94720, USA; Division of
+Genetics and Bioinformatics, Walter and Eliza Hall Institu te of Medical Research, VIC 3050,
+Australia. E-mail: terry@stat.berkeley.edu
+98 T. P. Speed
+The use of statistics to study linear sequences of biomolecular units can be
+descriptive or it can be predictive. A very wide range of statistical t echniques has
+been used in this context, and while statistical models can be extrem ely useful,
+the underlying stochastic mechanisms should never be taken literally . A model or
+methodcanbreakdownatanytimewithoutnotice. Further,biologic alconﬁrmation
+of predictions is almost always necessary.
+The statistics of biological sequences can be global or it can be local. For
+example, we might consider the global base composition of genomes: E. colihas
+25% A, 25% C, 25% G, 25% T, while P. falciparum has 82%A+T. At the very
+local, the triple ATG is the near universal motif indicating the start of translation
+in DNA coding sequence. A major role of statistics in this context is to characterize
+individual sequences or classes of biological sequences using proba bility models,
+and to make use of these models to identify them against a backgrou nd of other
+sequences. Needless to say, the models and the tools vary greatly in complexity.
+Extensive use is made in biological sequence analysis of the notions of motif or
+domain in proteins, and site in DNA. We shall use these terms intercha ngeably to
+describe the recurring elements of interest to us. It is important t o note that while
+we focus on the sequence characteristics of motifs, domains or sit es, in practice they
+also embody (biochemical) structural signiﬁcance.
+2. Deterministic models
+The C2H2 (cysteine-cysteine histidine-histidine) zinc-ﬁnger DNA bin ding do-
+main is composed of 25-30 amino acid residues including two conserved cysteines
+and two conserved histidines spaced in a particular way, with some re strictions on
+the residues in between and nearby. Of course the arrangement r eﬂects the three-
+dimensional molecular structure into which the amino-acid sequence folds, for it is
+the structure which has the real biochemical signiﬁcance, see Figu re 1, which was
+obtained from http://www.rcsb.org/pdb/ . An example of this motif is the 27-
+Figure 1: A C2H2 zinc ﬁnger DNA binding domain
+Biological Sequence Analysis 99
+letter sequence known as 1ZNF, this being a Protein Data Bank ident iﬁer for the
+structure XFIN-31 of X. laevis . Its amino acid sequence is
+1ZNF: XYKCGLCERSFVEKSALSRHQRVHKNX
+Note the presence of the two Cs separated by 2 other residues, and the two Hs
+separated by 3 other residues. Here and elsewhere, X denotes an arbitrary amino
+acid residue. A popular and useful summary description of C2H2 zinc ﬁngers which
+clearly includes our example, is the regular expression
+C−X(2,4)−C−X(3)−[LIVMFYWC ]−X(8)−H−X(3,5)−H
+whereX(m)denotesasequenceof nunspeciﬁedaminoacids, while X(m,n)denotes
+frommtonsuch, and the bracketsenclose mutually exclusive alternatives. Th ere is
+a richer set of notation for regular expressions of this kind, but for our purposes it is
+enough to note that this representationis essentiallydeterministic , with uncertainty
+included only through mutually exclusive possibilities (e.g. length or res idue) which
+are not otherwise distinguished.
+Simple and eﬃcient algorithms exist for searching query sequences o f residues
+to ﬁnd every instance of the regular expression above. In so doing with sequence
+in which all instances of the motif are known, we may identify some sub -sequences
+of the query sequence which are not C2H2 zinc ﬁnger DNA binding dom ains, i.e.
+which are false positives, and we may miss some sub-sequences which are C2H2
+zinc ﬁngers, i.e. which are false negatives. Thus we have essentially d eterministic
+descriptions and search algorithms for the C2H2 motifs using regula r expressions.
+Their performance can be described by the frequency of false pos itives and false
+negatives, equivalently, their complements, the speciﬁcity and sen sitivity of the
+regular expression. We do not have space for an extensive bibliogra phy, so for more
+on regular expressions and on most of the other concepts we intro duce below, see
+[2].
+3. Regular expressions can be limiting
+Most protein binding sites are characterized by some degree of seq uence speci-
+ﬁcity, but seeking a consensus DNA sequence is often an inadequat e way to rec-
+ognize their motifs. Simply listing the alternatives seen at a position ma y not be
+very informative, but keeping track of the frequencies with which t he diﬀerent al-
+ternatives appear can be very valuable. Thus position-speciﬁc nuc leotide or amino
+acid distributions came to represent the variability in DNA or protein m otif com-
+position. This is just the set of marginal distribution of letters at ea ch position.
+Rather than present an extensive tabulation of frequencies for o ur C2H2 zinc ﬁn-
+ger example, we present a pictorial representation: a sequence lo go coming from
+http://blocks.fhcrc.org .
+Sequencelogosarescaledrepresentationofposition-speciﬁcnuc leotideoramino
+acid distributions. The overall height at a given position is proportion al to infor-
+mation content, which is a constant minus the entropy of the distrib ution at that
+100 T. P. Speed
+Figure 2: Sequence logo for C2H2 zinc ﬁnger
+position. The proportions of each nucleotide or amino acid at a positio n are in re-
+lation to their observed frequency at that position, with the most f requent on top,
+the next most frequent below, etc.
+4. Proﬁles
+It is convenient for our present purposes to deﬁne a proﬁle as a se t of position-
+speciﬁc distributions describing a motif. (Traditionally the term has b een used for
+the derived scores.) How would we use a set of such distributions to s earch a query
+sequence for instances of the motif? The answer from bioinformat ics is that we
+scorethe query sequence, and for suitably large scores, declare that a candidate
+subsequence is an instance of our motif.
+There are a number of approaches for deriving proﬁle scores, but the easiest to
+explain here is this: scores are log-likelihood ratio test statistics , for discriminating
+between a probability model Mfor the motif and a model Bfor the background.
+The model Mwill be the direct product of the position-speciﬁc distributions, (i.e.
+the independent but not identical distribution model), while the back ground model
+Bwill be the direct product of a set of relevant background frequen cies (i.e. the
+independent and identical distribution model). Thus, if falis the frequency of
+residueaat position lof the motif, and fabackground frequency of the same
+residue, then the proﬁle score assigned to residue aat position lin a possible
+instance of the motif will be sal= logfal/fa. These scores are then summed across
+the positions in the motif, and compared to a suitably deﬁned thresh old. Note
+that proper setting of the threshold requires a set of data in which all instances
+of the motif are known. The false positive and false negative rate co uld then be
+Biological Sequence Analysis 101
+determined for various thresholds, and a suitable choice made.
+We brieﬂy discuss variants of the log-likelihood ratio scores. In many contexts,
+it will matter little whether a position is occupied by a leucine ( L) rather than an
+isoleucine ( I), as each can evolve in time to or from the other rather more readily
+than from other residues. Thus it might make sense to modify the sc ores to take
+this and similar evolutionary patterns into account. Indeed the ﬁrs t use of proﬁles
+involved scores of this kind, using the position speciﬁc amino acid distr ibution
+of an alignment of instances of the motif and entries from what are k nown as
+PAMmatrices, which embody patterns of molecular evolution. In addition , the
+background distribution of residues may be modelled more detailed ma nner, e.g.
+using the so-called Dirichlet mixture models.
+It is also possible to include position-speciﬁc scores for insertion and deletion
+of residues, relative to a consensus pattern. When these are use d, the scoring
+becomes a little more subtle, as the problem is then quite analogous to pairwise
+sequence alignment, but with position dependent scoring paramete rs for matches,
+mismatches, insertions and deletions.
+We summarise this section by noting that probability has entered into our
+description through the use of frequencies, and scores based on them, but so far we
+do not have global statistical models, at least not ones embodying in sertions and
+deletions, on which we base our estimation and testing. These are all part of the
+use of proﬁle HMMs, but ﬁrst we introduce HMMs.
+5. Hidden Markov models
+Hidden Markov models (HMMs) are processes ( St,Ot),t= 1,...,T, whereSt
+is the hidden state and Otthe observation at time t. Their probabilistic evolution
+is constrained by the equations
+pr(St|St−1,Ot−1,St−2,Ot−2,...) =pr(St|St−1),
+pr(Ot|St−1,Ot−1,St−2,Ot−2,...) =pr(Ot|St,St−1).
+The deﬁnitions and basic facts concerning HMMs were laid out in a serie s of beauti-
+ful papers by L. E. Baum and colleagues around 1970, see [2] for re ferences. Much
+of their formulation has been used almost unchanged to this day. Ma ny variants
+are now used. For example, the distribution of Omay not depend on previous S,
+or it may also depend on previous Ovalues,
+pr(Ot|St,St−1,Ot−1,...) =pr(Ot|St),or
+pr(Ot|St,St−1,Ot−1,...) =pr(Ot|St,St−1,Ot−1).
+Most importantly for us below, the times of SandOmay be decoupled, permit-
+ting the observation corresponding to state time tto be a string whose length and
+composition depends on St(and possibly St−1and part or all of the previous ob-
+servations). This is called a hidden semi-Markov or generalized hidden Markov
+model.
+102 T. P. Speed
+Early applications of HMMs were to ﬁnance, but these were never pu blished,
+to speech recognition, and to modelling ion channels. In the mid-late 1 980s HMMs
+entered genetics and molecular biology, where they are now ﬁrmly en trenched. One
+of the major reasons for the success of HMMs as stochastic mode ls is the fact that
+although they are substantial generalizations of Markov chains, t here are elegant
+dynamic programming algorithms which permit full likelihood calculations in many
+cases of interest. Speciﬁcally, there are algorithms which permit th e eﬃcient calcu-
+lation of a) pr(sequence |M), where sequence is a sequence of observations and M
+is an HMM; b) the maximum over statesofpr(states|sequence,M ), where statesis
+theunobservedstatesequenceunderlyingtheobservation sequence ; andc)themax-
+imum likelihood estimates of parameters in M based on the observation sequence .
+Step c) is carried out by an iterative procedure which in the case of in dependent
+states was later termed the EM algorithm.
+6. Proﬁle HMMs
+In a landmark paper A. Krogh, D. Haussler and co-workers introdu ced proﬁle
+HMMs into bioinformatics. An illustrative form of their proﬁle HMM arch itecture
+is given in Figure 3. There we depict the underlying state space of the hidden
+Figure 3: State space of a simple proﬁle HMM
+Markov chain of a proﬁle HMM of length 4, with Mdenoting matchstates,Iinsert
+states and Ddeletestates, while BandEarebeginandendstates, respectively.
+Encircled states ( D,BandE) do not emit observations, while each of the match
+and insert states will have position-speciﬁc observation or emission distributions.
+Finally, each arrow will have associated transition probabilities, with t he expecta-
+tion being that the horizontal transition probabilities are typically ne ar unity. This
+the chain proceeds from left to right, and if it remains within match st ates, its
+output will be an amino acid sequence of length 4. Deviation to the inse rt or delete
+states will modify the output accordingly. The similarity with a direct p roduct of
+a sequence of position-speciﬁc distributions should be unmistakeab le. The proﬁle
+HMMs in use now have considerably more features, while sharing the b asicM,I
+andDarchitecture.
+Biological Sequence Analysis 103
+Why was the introduction of the HMM formalism such an advance? The
+answer is simple: it permitted the construction and application of pro ﬁles to be
+conducted entirely within a formal statistical framework, and tha t really helped.
+Instances of the motif embodied in an HMM could be identiﬁed by calcula ting
+pr(sequence |M)/pr(sequence |B) as was done with proﬁles, using the algorithm for
+problem a) in X above. Instances of the motif could be aligned to the H MM by
+calculating the most probable state sequence giving rise to the motif sequence, in
+essence ﬁnding the most probable sequence of matches, insertion s, deletions which
+align the given sequence to the others which gave rise to the HMM, cf . problem b)
+above. And ﬁnally, the parametersin the HMMs couldbe estimated fr om data com-
+prising known instances of the motif by using maximum likelihood, an impo rtant
+step for many reasons, one being that it put insert and delete scor es on precisely the
+same footing as match and mismatch scores. Although the estimatio n of HMM pa-
+rameters is easiest if the example sequences are properly aligned, t he EM algorithm
+(problem c) above) does not require aligned sequences.
+In the years since the introduction of proﬁle HMMs, they have been become
+the standard approach to representing motifs and protein domain s. The database
+Pfam (http://pfam.wustl.edu ) now has 3,849 hidden Markov models (May 2002)
+representing recognized protein or DNA domains or motifs. Proﬁle H MMs have es-
+sentiallyreplacedtheuseofregularexpressionsandtheoriginalpr oﬁlesforsearching
+other databases to ﬁnd novel instances of a motif, for ﬁnding a mo tif or domain
+match to an input sequence, and for aligning a motif or domain to a an e xisting
+family. There is considerable evidence that the HMM-based searche s are more pow-
+erful than the older proﬁle based ones, though they are slower co mputationally, and
+at times that is an important consideration.
+7. Finding genes in DNA sequence
+Identifying genes in DNA sequence is one of the most challenging, inte resting
+and important problems in bioinformatics today. With so many genome s being
+sequenced so rapidly, and the experimental veriﬁcation of genes la gging far behind,
+it is necessary to rely on computationally derived genes in order to ma ke immediate
+use of the sequence.
+What is a gene? Most readers will have heard of the famous central dogma
+of molecular biology, in which the hereditary material of an organism r esides in its
+genome, usually DNA, and where genes are expressed in a two-stag e process: ﬁrst
+DNA istranscribed into a messenger RNA (mRNA) sequence, and later a processed
+form of this sequence is translated into an amino acid sequence, i.e. a protein. In
+general the transcribed sequence is longer than the translated p ortion: parts called
+introns (intervening sequence) are removed, leaving exons (expr essed sequence), of
+which only some are expressed, while the rest remain untranslated. The translated
+sequence comes in triples called codons, beginning and ending with a un ique start
+(ATG) and one of three stop (TAA, TAG, TGA) codons. There are a lso character-
+istic intron-exon boundaries called splice donor and acceptor sites, and a variety of
+other motifs: promoters, transcription start sites, polyA sites, branching sites, and
+104 T. P. Speed
+so on.
+All of the foregoing have statistical characterizations, and in prin ciple they
+can all help identify genes in long otherwise unannotated DNA sequen ce segments.
+To get an idea of the magnitude of the task with the human genome, c onsider the
+following facts about human gene sequences [5]: the coding regions c omprise about
+1.5% of the entire genome; the average gene length is about 27,000 b p (base pair);
+the average total coding region is 1,340 bp; and the average intron length is about
+3,300 bp. Further, only about 8% of genes have a single exon. We see that the
+information in human genes is very dispersed along the genome, and t hat in general
+the parts of primary interest, the coding exons, are a relatively sm all fraction of the
+gene, on average about1
+20.
+8. Generalized HMMs for ﬁnding genes
+The HMMs which are eﬀective in ﬁnding genes are the generalized HMMs
+(GHMMs) described in section 5. above. Space does not permit our g iving an ad-
+equate description here, so we simply outline the architecture of Ge nscan [1] one
+of the most widely used human geneﬁnders. States represent the gene features
+we mentioned above: exon, intron, and of course intergenic region , and a variety of
+other features (promotor, untranslated region, polyA site, and so on. Output obser-
+vations embody state-dependent nucleotide composition, depend ence, and speciﬁc
+signal features (such as stop codons). In a GHMM the state duration needs to be
+modelled, as well as two other important features of genes in DNA: t hereading
+frame, which corresponds to the triples along the mRNA sequence which ar e se-
+quentially translated, and the strand, as DNA is double stranded, and genes can be
+on either strand, i.e. they can point in either direction. These featu res can be seen
+in Figure 4, which was kindly supplied by Lior Pachter.
+The output of a GHMM geneﬁnder after processing a genomic segme nt is
+broadlysimilartothat fromaproﬁleHMM afterprocessinganaminoac idsequence:
+the most probable state sequence given an observation sequence is a best gene
+annotation of that sequence, and a variety of probabilities can be c alculated to
+indicate the support in the observation sequence for various spec iﬁc gene features.
+9. Comparative sequence analysis using HMMs
+The large number of sequenced genomes now available, and the obse rvation
+thatfunctionallyimportantregionsareevolutionarilyconserved,h asledtoeﬀortsto
+incorporate conservation into the models and methods of biological sequence anal-
+ysis. Pair HMMs were introduced in [2] as a way of including alignment pro blems
+under the HMM framework, and recently [4] they were combined with GHMMs
+(forming GPHMMs) to carry out alignment and geneﬁnding with homolo gous seg-
+ments of the mouse and human genomes. Use of the program SLAM o n the whole
+Biological Sequence Analysis 105
+Figure 4: Forward half of the Genscan GHMM state space
+mousegenome( http://bio.math.berkeley.edu/slam/mouse/ ) demonstrated the
+value of GPHMMs in this context.
+10. Challenges in biological sequence analysis
+The ﬁrst challenge is to understand the biology well enough to begin b iological
+sequence analysis. This part will frequently involve collaborations wit h biologists.
+With HMMs, GHMMs and GPHMMs, designing the underlying architectur e, and
+carryingoutthe modelling forthe componentsparts, e.g. for splice sitesin geneﬁnd-
+ingGHMM is perhapsthe next majorchallenge. Undoubtedly the hard est andmost
+important task of all is the implementation: coding up the algorithms a nd making
+it all work with error-prone and incomplete sequence data. Finally, it is usually a
+real challenge to ﬁnd good data sets for calibrating and evaluating t he algorithms,
+and for carrying out studies of competing algorithms.
+Forarecentexampleofthisprocess,whichisamodelofitskind, see [3]. There
+an HMM is presented for the so-called σArecognition sites, which involve two DNA
+motifs separated by a variable number of base pairs. In addition to t he examples
+mentioned so far, there are many more HMMs in the bioinformatics lite rature, see
+p. 79 of [2] for ones published before 1998.
+11. Closing remarks
+106 T. P. Speed
+In this short survey of biological sequence analysis, I have simply to uched on
+someofthe majorideas. Amuchmorecomprehensivetreatment of materialcovered
+here can be found in the book [2], whose title not coincidentally is the sa me as
+that of this paper. Many important ideas from biological sequence a nalysis have
+not been mentioned here, including molecular evolution and phylogene tic inference,
+and the use of stochastic context-free grammars, a form of gen eralization of HMMs
+suited to the analysis of RNA sequence data.
+At this Congress I have talked (and am now writing) on the research of others,
+in an area in which my own contributions have been negligible. I chose to do so
+upon being honoured by the invitation to speak at this Congress bec ause I believe
+this topic – HMMs – to be one of the great success stories of applying mathematics
+to bioinformatics. In my view it is the one most worthy of a wider mathe matical
+audience. I hope that the fact that there are many others bette r suited than me to
+speak on this topic will not prevent readers from appreciating it and following it up
+through the bibliography.
+I owe what understanding I have of this ﬁeld to collaborations and dis cussions
+with a number of people, and I would like to acknowledge them here. Fir stly, Tony
+Wirth, Simon Cawley and Mauro Delorenzi, with whom I have worked on H HMMs.
+Next, it has been an honour and pleasure to observe from close by t he development
+of SLAM, by Simon Cawley, Lior Pachter and Marina Alexandersson. F inally I’d
+like to thank Xiaoyue Zhou and Ken Simpson for their kind help to me whe n I was
+preparing my talk and this paper.
+References
+[1] C.Burge&S.Karlin, Predictionofcompletegenestructuresin hu mangenomic
+DNA,J. Mol. Biol. 268 (1997) 78–94.
+[2] R. Durbin, S. Eddy, A. Krogh & G. Mitchison, Biological Sequence Analysis.
+Probabilistic models of proteins and nucleic acids , Cambridge University Press,
+1998.
+[3] H. Jarmer, T. S. Larsen, A. Krogh, H. H. Saxild, S. Brunak & S. K nudsen,
+Sigma A recognition sites in the Bacillus subtilis genome, Microbiology 147
+(2001), 2417–2424.
+[4] L. Pachter, M. Alexandersson & S. Cawley, Applications of gener alized pair
+hidden Markovmodels to alignment and gene ﬁnding problems, J. Comp. Biol.
+9 (2002), 389–399.
+[5] The Genome Sequencing Consortium, Initial sequencing and analy sis of the
+human genome, Nature409 (2001), 860–921.

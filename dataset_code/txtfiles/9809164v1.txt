@@ -1,0 +1,258 @@
+arXiv:cond-mat/9809164v1  [cond-mat.soft]  10 Sep 1998ASelf-Assembled Microlensing RotationalProbe
+JamesP.BrodyandStephenR. Quake
+Department of AppliedPhysics
+CaliforniaInstitute of Technology, MS128-95
+Pasadena, CA91125
+(July 2,2018)
+A technique to measure microscopic rotational motion is pre sented. When a small ﬂuorescent polystyrene
+microsphere is attached to a larger polystyrene microspher e, the larger sphere acts as a lens for the smaller
+microsphere and provides anoptical signal that isa strong f unction of the azimuthal angle. We demonstrate the
+technique by measuring the rotational diffusion constant o f the microsphere in solutions of varying viscosity
+and discuss the feasibilityof usingthis probe tomeasure ro tational motion of biological systems.
+The commercial development of precision microspheres
+withwellcontrolledsizesandvariousproteincoatingshas en-
+abled a number of new devices and experimental techniques,
+frombeingthecomponentpartsinthefabricationofphotoni c
+crystals[1]totheiruseas“handles”foropticaltweezersi nthe
+studyofsingleprotein[2,3]andDNAmolecules[4]. Herewe
+describetheuseofmicrosphereswithstreptavidin-biotin coat-
+ing to self assemble a microscopic lensing system that can in
+turnbeusedtomeasurerotation.
+Previous biological experimentsto measure rotational mo-
+tions used a “tethered cell” assay in which a single ﬂagellum
+is attached to a surface and the cell rotates [5–7], or a “ro-
+tating ﬁlament” assay by attaching long actin [8] ﬁlaments t o
+an ATPase molecule or microtubule[9] ﬁlaments to a dynein
+molecule. Both these assays rely on imagingthe probeto de-
+termineorientation,limitingthetimeresolutiontovideo rates
+ontheorderof10Hz.
+Althoughit isinferredfromtheswimmingspeedofmicro-
+organisms that bacterial ﬂagella can turn at a top rotationa l
+speed of 100,000RPM [10], measurement techniquescannot
+keep up with those rates. Measurements are typically made
+byforcingtheﬂagellatoturnalargemomentofinertiawhich
+slows the rotation rate to the region where it is accessible t o
+video analysis. Similarly, in studies of F 1-ATPase, the rota-
+tion rate is slowed to an observable level by increasing the
+hydrodynamic drag that it must oppose. However, the ro-
+tation is likely to be fundamentally at a constant angle per
+ATP hydrolized, as shown by [11,12], and slowing the rota-
+tion by increasing drag results in some elastic storage of en -
+ergy. Methods are needed that have the potential to observe
+high-frequencyrotationsandhaveless hydrodynamicdrag.
+Thispaperpresentsamethodtomeasurehighfrequencyro-
+tationalmotion. An asymmetricﬂuorescentprobeis madeby
+attaching a small ﬂuorescently labeled polymer microspher e
+to a larger polymer microsphere. The larger sphere acts as a
+lens, substantially enhancing the collection efﬁciency of the
+optical system. The experiment is outlined in the inset of
+Fig.1.FIG. 1. The optical ray tracing of the two microspheres. This
+diagram deﬁnes the angles θ,θ′,θ′′,φ,φ′and the distances rand
+δ. The ray originally starts at an angle θto the vertical and after
+passing through the lensing microsphere continues on at an a ngle
+φ′−θ′′. The index of refraction of the water is n1= 1.3and for
+the polystyrene microsphere is n2= 1.59. Inset: The ﬂuorescence
+collectedfrom anobjective withﬁnite NA isenhanced whenth e mi-
+crosphere pair isaligned withthe optical collectionaxis.
+We can show that the system increases the amount of col-
+lected light with a geometric optics argument. The angles of
+ray tracing are outlined in Fig. 1; we would like to calculate
+the exit angle φ′−θ′′as a function of the incident angle θ.
+Thesmall ﬂuorescentmicrosphereis approximatedasa point
+particle a distance δfromthe lensing microsphere. Using ge-
+ometry,notethat
+φ′=π−(π−2θ′+φ) = 2θ′−φ. (1)
+ApplyingSnell’slawatthetopinterfaceofthelensingmicr o-
+spherewe ﬁndthat
+θ′′= sin−1/parenleftbiggn2
+n1sinθ′/parenrightbigg
+, (2)
+wheren2istheindexofrefractionofthelensingmicrosphere
+andn1is the index of refraction of the surrounding medium
+1
+(typicallywater). ApplyingSnell’slawatthebottominter face
+we obtain
+θ′= sin−1/parenleftbiggn1
+n2sin(θ+φ)/parenrightbigg
+. (3)
+Then, by direct substitution of equation (3) into equation ( 2),
+we ﬁndthat
+θ′′=φ+θ. (4)
+Usingthelaw ofsines,we canwrite
+sin(π−θ−φ)
+r+δ=sinθ
+r, (5)
+and then explicitly ﬁnd the angle φas a function of r,θ, and
+δ:
+φ(r,θ,δ) = sin−1/parenleftbiggr+δ
+rsinθ/parenrightbigg
+−θ. (6)
+Finally, we can write the exit angle φ′−θ′′in terms of the
+original angle, θ, the radii of the two spheres, r,δ, and the
+indicesofrefraction, n1andn2.
+φ′−θ′′= 2sin−1/parenleftbiggn1
+n2sin(θ+φ(r,θ,δ))/parenrightbigg
+−θ−2φ(r,θ,δ).
+(7)
+Forδ≪r, we note that φ≪θ. The exit angle is then given
+by
+φ′−θ′′= 2sin−1/parenleftbiggn1
+n2sinθ/parenrightbigg
+−θ. (8)
+Typical realizable values of n1andn2are for water, n1=
+1.3and polystyrene, n2= 1.59. For small θequation (8) re-
+duces to/parenleftBig
+2n1
+n2−1/parenrightBig
+θ. This gives an exit angle of 0.64θfor
+a ray entering at an angle θ. Since the exit angle is always
+less than the original angle, we conclude that the lensing mi -
+crosphere focuses rays from the ﬂuorescent microsphere and
+enhancestheopticalsignal.
+The enhancement in the observed optical signal also de-
+pendson the numericalapertureof the objective. Thenumer-
+ical aperture (NA) is deﬁned as NA =nsinθo, whereθois
+the collection angle. For our objective (20 ×, 0.4 NA) in air
+θo= 23.6◦. Equation(8)showsthatthefocusingmicrosphere
+increases the angle of collection to 43.5◦. This corresponds
+to an effective NA of 0.69. The epi-ﬂuorescent intensity is
+proportional to NA4, so we expect an intensity enhancement
+of(0.69/0.4)4≈9times; this is of the order of what we
+observed. Objectives with high NA collect almost all of the
+emitted light, and thus we would not expect to see any ﬂuo-
+rescentenhancementfromahighNA objective. Observations
+made with a 40 ×, 1.30NA oil immersion objective indicate
+nonoticeableintensityenhancement.
+To construct this system we used the biotin/streptavidin
+binding system. Biotin is known to bind streptavidin witha very high afﬁnity [13]. We obtained streptavidin coated
+microspheres from Interfacial Dynamics (polystyrene at a
+volume concentration of 2.6%, 1.1 µm diameter) and biotin
+coated yellow-green ﬂuorescent microspheres (polystyren e
+1% by volume, 0.2 µm diameter, excitation maximum at
+505nm, emmission maximum at 515nm) from Molecular
+Probes. The smaller microspheres were diluted by a factor
+of 1000 in distilled water. A volume of 10 µl of this solution
+was added to 10 µl of the large microspheres and allowed to
+incubateat roomtemperatureforapproximatelyﬁveminutes .
+The solutionwas then dilutedby a factor of 104in either dis-
+tilledwateroraglycerol/watermixturetogiveaﬁnalconce n-
+trationofapproximatelyonemicrospherepairpernanolite rat
+threedifferentviscosities(1cP,4cP, and13cP).
+FIG. 2. The probability correlation function of the ﬂuoresc ent
+intensity signal measured in three different glycerol-wat er solu-
+tions of varying viscosities. These measurements are the av erage
+over approximately 30 microspheres measured over approxim ately
+1 minute. The errors in the measurements are of order the diam eter
+of the circles marking the data points. The solid lines repre sent ﬁts
+to the data with the following parameters D1= 1.30(±0.03)s−1,
+α1= 32.7(±0.2)◦,D4= 0.70(±0.02)s−1,α4= 55.0(±0.5)◦,
+D13= 0.100(±0.003)s−1,α13= 46.5(±1.1)◦. The inset shows
+typical data from a single microsphere ( η≈4cP) over 18 seconds.
+Thetimescaleisinvideoframeswhereasinglevideoframeis 1/30
+of a second.
+The solution was placed on a microscope slide with cov-
+erslip and the edges were sealed with a clear nail polish to
+prevent any evaporation or ﬂuid ﬂow. These specimens were
+examined on a Nikon ﬂuorescent microscope with a 20 ×,
+0.4NAobjective. Thelensingmicrosphereisundergoingcon -
+stant rotational diffusion, and when the attached ﬂuoresce nt
+microsphereisalignedwiththeopticalcollectionaxisthe ob-
+servedintensityissubstantiallylargerthaninotherposi tions.
+Images of these intensity ﬂuctuations were observed using
+a CCD camera and recorded on video tape. The sequence of
+videoimageswasanalyzedbydigitizingthemwithaPC.The
+microspheres’ ﬂuorescent intensities were measured in eac h
+frame. Data with better time resolution could be obtained by
+using a photodiode to observe single microspheres, but the
+2
+videocameraissufﬁcientlyfastforobservingrotationald iffu-
+sion andofferedthe advantageofbeingable to observemany
+microspherepairsin parallel.
+From the intensity ﬂuctuations we can compute the prob-
+abilityP(t)that the intensity is above a threshold at time t,
+giventhattheintensitywasabovethisthresholdattime t= 0.
+P(t)can in turn be calculated from ﬁrst principles. The rota-
+tional motion of the lensing microsphere can be decomposed
+intoorthogonalazimuthalandpolardirections. Sinceonly the
+azimuthal angle contributes to the intensity enhancement, it
+sufﬁcesto considera onedimensionalproblem. Let αdenote
+the azimuthalangleoverwhichthe signal is enhanced,which
+thendeterminestheinitialconditions. Thesolutionforth eone
+dimensional diffusion equation with initial condition |θ| ≤α
+andinﬁniteboundaryconditionsis[14]
+pinf(θ,t) =1
+2α/parenleftbigg
+erf/parenleftbiggα/2−θ
+2√Drt/parenrightbigg
++erf/parenleftbiggα/2+θ
+2√Drt/parenrightbigg/parenrightbigg
+.(9)
+Thiscanbemadeperiodicbysumming θoverallmultiples
+of2π. The probabilitydensity functionfor the distribution in
+anglesisthen
+p(θ,t) =n=∞/summationdisplay
+n=−∞pinf(θ+2nπ,t) (10)
+andthetotalprobabilitydistributionis
+P(t) =/integraldisplayα/2
+−α/2p(θ,t)dθ. (11)
+In practice this was approximated numerically using just
+the largest terms of the series (|n| ≤3). Then= 0term is
+computedusingaChebyshevapproximationtotheerrorfunc-
+tion and integrating it using a trapezoid algorithm [15]. Th e
+higher order terms were computed using the approximation
+that the initial conditionwas p(θ,0) =δ(θ)(the solution is a
+gaussian function) and the integration was carried out as th e
+valueofthe functiontimesthewidth.
+The data can therefore be ﬁt to a two parameter function
+P(t)that is characterized by the angle αand the rotational
+diffusion coefﬁcient Dr. The angle αis determined by the
+opticsofthesystemandthethresholdappliedtothedata. Th e
+rotationaldiffusioncoefﬁcient Drisgivenby
+Dr=kBT
+8πηa3, (12)
+whereηis theviscosity and aisthe sphere’sradius[16]. The
+measureddiffusioncoefﬁcientsareinagreementwiththepr e-
+dictedvalues(Fig.2).
+Wehaveoutlinedamechanismbywhichamicrolensingef-
+fect is used to measure rotations of individual microsphere s.
+The microlensing can be explained with geometric optics; a
+completetheorywill needtotakeintoaccountnearﬁeldopti -
+cal effects. The microlensing was observed experimentally
+and used to measure the rotational diffusion constant of asphere. This mechanism may have applications in studies of
+biomolecularrotations and ﬂuid dynamics, especially in si tu-
+ations with a high rotational rate. For a rotation at a consta nt
+rate, the load can be adjusted by changing both the viscosity
+of the ﬂuid and size of the larger microsphere. Precision mi-
+crospheres are commercially available with diameters of le ss
+than1µm to greaterthan 100 µmgivinga rangeof loadsthat
+differby106.
+This work was supported by the Whitaker Foundation and
+byNSF CAREERgrantPHY-9722417.
+[1] H. Miguez etal., AppliedPhysics Letters 71, 1148 (1997).
+[2] K. Svoboda, C. F. Schmidt, B. J. Schnapp, and S. M. Block,
+Nature365, 721 (1993).
+[3] J.T.Finer,R.M.Simmons,andJ.A.Spudich, Nature 368, 113
+(1994).
+[4] T. T. Perkins, S. R. Quake, D. E. Smith, and S. Chu, Science
+264, 822 (1994).
+[5] R. M. Berry and H. C. Berg, Proceedings of the National
+Academy of Sciences ofthe USA. 94, 14433 (1997).
+[6] H. Berg,Nature 249, 77 (1974).
+[7] M. Silvermanand M.Simon, Nature 249, 73 (1974).
+[8] C. Shingyoji et al.,Nature393, 711 (1998).
+[9] K. Kinoshita et al.,Cell93, 21 (1998).
+[10] D. J.DeRosier, Cell 93, 17 (1998).
+[11] H. Noji, R. Yasuda, M. Yoshida, and K. Kinosita, Nature 386,
+299 (1997).
+[12] R.Yasuda,H.Noji,K.Kinosita,andM.Yoshida,Cell 93,1117
+(1998).
+[13]Avidin-biotin Technology , edited by M. Wilchek and E. A.
+Bayer (Academic Press,SanDiego, 1990).
+[14] J. Crank, Mathematics of Diffusion (Oxford University Press,
+London, 1970).
+[15] W. H. Press, S. A. Teukolsky, W. T. Vetterling, and B. P. F lan-
+nery,Numerical Recipes in C:The Art of Scientiﬁc Computing
+(Cambridge UniversityPress,New York, 1993).
+[16] T. G. M. van de Ven, Colloidal Hydrodynamics (Academic
+Press, SanDiego, 1989).
+3

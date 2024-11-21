@@ -1,0 +1,881 @@
+arXiv:cond-mat/0104495v1  [cond-mat.soft]  25 Apr 2001IL NUOVO CIMENTO Vol. 20D, N. 12bis, pp. 2265-2288 1998
+Self–consistent Treatment ofCopolymers withArbitrary Se quences
+Yu.A. Kuznetsov (∗), E.G. Timoshenko (∗∗)
+Department of Chemistry, University College Dublin, Belﬁe ld, Dublin 4, Ireland
+Summary. —
+Using the Gaussian Ansatzfor the monomer–monomer correlation functions we de-
+rive a set of the self–consistent equations for determinati on of the conformational
+state in the bead–and–spring copolymer model. The latter is based on the Edwards
+type eﬀective free energy functional with arbitrary two–bo dy interaction matrix.
+The rate of conformational changes in kinetics may be expres sed via the instanta-
+neous gradients of the variational free energy functional i n the space of the averaged
+dynamical variables. We study the equilibrium and kinetics for some periodic and
+random aperiodic amphiphilic sequences in inﬁnitely dilut ed solution. Typical equi-
+librium phase diagrams are elucidated and the conformation al structure of diﬀerent
+states is discussed. The kinetics of compaction of an amphip hilic copolymer to
+the globular state proceeds through formation of locally fr ustrated non–equilibrium
+structures. This leads to a rather complicated multistep ki netic process. We ob-
+serve that even a small modiﬁcation in the primary sequence o f a copolymer may
+signiﬁcantly change its kinetic folding properties.
+PACS 36.20.-r – Macromolecules and polymer molecules.
+PACS 64.60.My – Metastable phases.
+PACS 64.70.Pf – Glass transitions.
+PACS 01.30.Cc – Conference proceedings.
+1. – Introduction
+Conformational transitions of heteropolymers in dilute solutions at tract special at-
+tention of theorists in recent years [1]. There is a signiﬁcant body of works carried out on
+concentrated solutions, mixtures and blends of copolymersbased on the density variables
+formulation [2]. The inﬁnite dilution limit, for which such approaches can not be used,
+is nevertheless very important for understanding the fundament al interactions of macro-
+molecules not beset with the complications due to the aggregation ph enomena. Apart
+from a purely academic interest, the single chain problem appears to be of paramount
+(∗) E-mail: yuri@ucd.ie
+(∗∗) E-mail: Edward.Timoshenko@ucd.ie, Web: http://darksta r.ucd.ie
+c/circlecopyrtSociet` a Italiana di Fisica 1
+2 YU.A. KUZNETSOV , E.G. TIMOSHENKO
+importance for building up increasingly sophisticated models of biopolymers — the goal
+that seemed too remote only a decade ago. The progress in the mod ern biotechnology
+is often impeded by the inability to solve a few fundamental theoretic al problems among
+which there is one grand challenge — given the primary sequence of ma cromolecule
+ﬁnd its conformational structure at a given equilibrium, steady, or more interestingly,
+nonequilibrium state. The next part of the puzzle would be to ﬁnd the relation between
+the conformational structure and biofunctionality of say a prote in, but this sometimes
+can be explained by location of certain active sites on the surface of a protein globule.
+The computational diﬃculties are clearly immense for even not so long protein
+chain of just about 60 amino acid residues. Therefore at the momen t one hopes to
+develop merely some oversimpliﬁed models of heteropolymers abstra cting from the ac-
+curate molecular level description. Such models are obtained by coa rse–graining in a
+fashion normal for statistical mechanics by integrating out many o f the local degrees
+of freedom. We hope to be able to deduce the mesostructure of a m acromolecule and
+to obtain many of the important observables. The approach that w e employ here is
+in its essence a nonequilibrium extension of the Gibbs–Bogoliubov varia tional principle.
+The main strength of the Gaussian self–consistent (GSC) method, which we [3, 4, 5]
+and others [6] were developing ﬁrst for the simple homopolymer and in Ref. [7] we have
+brought to the most general form capable of describing copolymer s, is in that it produces
+the complete set of mean squared distances between pairs of mono mers and thus the
+conformational structure.
+In this work we do not concentrate on the formal derivation of the GSC equations.
+This ispresentedin somedetailinRef. [7]. First, weshallintroduceac ruciallyimportant
+modiﬁcationtothemodelitselfbyaddinganewso–calledself–interac tionterm. Weprove
+that without this regularising term the theory is plagued with diverge nces if at least one
+second virial coeﬃcient is negative. We show that although the new t erm is seemingly
+negligible for long chain lengths, and indeed is not required for the coil, it does in fact
+the trick of correcting the structure of the dense globular state . In the rest of the work
+we carry out extensive study of the equilibrium properties and the f olding kinetics for
+a number of examples of heteropolymer sequences. We also discuss how the spin glass
+behaviour arises for suﬃciently random copolymer sequences.
+2. – The Model and the GSC Equations
+The main variables in the coarse–grained description of the polymer c hain [8, 9, 10]
+are the spatial monomer coordinates Xn, wherenis the monomer number. The solvent
+molecules are excluded from the considerationby integratingout th eir degreesof freedom
+from the path integral representation for the partition function . The resulting monomer
+interactions are represented by the eﬀective free energy funct ional (EFEF),
+H=kBT
+2l2/summationdisplay
+n(Xn−Xn−1)2+∞/summationdisplay
+J=2/summationdisplay
+{n}u(J)
+{n}J−1/productdisplay
+i=1δ(Xni+1−Xn1), (1)
+where for heteropolymers u(J)
+{n}are in principle allowed to have any dependence on the
+site indices {n} ≡ {n1,...,n J}. The ﬁrst term in Eq. (1) describes the connectivity of
+the chain with lcalled the statistical segment length. There are also volume interac tions
+represented by the virial–type expansion [9, 10] in Eq. (1). They re ﬂect the hard–core
+repulsion, the weak attraction between monomers and the eﬀectiv e interaction mediated
+by the solvent–monomer couplings.
+SELF–CONSISTENT TREATMENT OF COPOLYMERS WITH ARBITRARY SE QUENCES 3
+Here we consider the following choice of site–dependent second viria l coeﬃcients in
+Eq. (1),
+u(2)
+nn′= ¯u(2)+∆σn+σn′
+2, (2)
+andu(J)
+{n}=u(J)forJ >2. This corresponds to the case of amphiphilic heteropolymers,
+for which monomers diﬀer only in the monomer–solvent coupling const ants. The mean
+second virial coeﬃcient , ¯u(2), is associated with the quality of the solvent and the pa-
+rameter ∆ is called the degree of amphiphilicity of the chain. The set {σn}expresses
+the chemical composition, or the primary sequence of a heteropolymer. Here we consider
+the case when variables σncan take only three values: −1,1 and 0 corresponding to
+hydrophobic ’ a’, hydrophilic ’ b’ and “neutral” ’ c’ monomers respectively.
+It is assumed that the long timescale evolution of the conformationa l state is well
+represented by the Langevin equation, which upon neglecting the h ydrodynamics may
+be written as,
+ζbd
+dtXn=−∂H
+∂Xn+ηn(t), (3)
+whereζbis the “bare” friction constant per monomer and the Gaussian noise ,ηn, is
+characterised by the second momentum,
+/an}bracketle{tηα
+n(t)ηα′
+n′(t′)/an}bracketri}ht= 2kBTζbδα,α′δn,n′δ(t−t′), (4)
+where the Greek indices denote the spatial components of 3-d vec tors.
+The main idea of the Gaussian self–consistent method is to choose th e trial Hamil-
+tonian,H0, as a most generic quadratic form, with matrix coeﬃcients dependin g on
+time,
+H0(t) =1
+2/summationdisplay
+nn′Vnn′(t)Xn(t)Xn′(t). (5)
+This corresponds to the Gaussian distribution of the inter–monome r distances, ( Xm−
+Xm′)2. Thus, the two–body monomer–monomer correlation function, th at is the prob-
+ability density to ﬁnd the monomer m′at the distance rfrom the monomer m, will be
+given by,
+h(2)
+mm′(r;t)≡ /an}bracketle{tδ(r−Xm+Xm′)/an}bracketri}ht=1
+(2πDmm′(t))3/2exp/parenleftbigg
+−r2
+2Dmm′(t)/parenrightbigg
+. (6)
+HereDmm′is the matrix of the mean squared distances between monomers,
+Dmm′(t)≡1
+3/angbracketleftbig
+(Xm(t)−Xm′(t))2/angbracketrightbig
+. (7)
+Obviously, choosing Eq. (5) as the trial Hamiltonian is equivalent to re placing the non-
+linear Langevin equation (3) by a linear stochastic ensemble,
+ζbd
+dtXn=−/summationdisplay
+n′Vnn′(t)Xn′+ηn(t). (8)
+4 YU.A. KUZNETSOV , E.G. TIMOSHENKO
+The time–dependent coeﬃcients are chosen at each moment in time a ccording to the
+criterion,
+/angbracketleftbigg
+Xn∂H
+∂Xn′/angbracketrightbigg
+0=/angbracketleftbigg
+Xn∂H0
+∂Xn′/angbracketrightbigg
+0, (9)
+where/an}bracketle{t.../an}bracketri}ht0denotes the averaging over the trial ensemble. At equilibrium these equa-
+tions become exactly the extrema conditions for the trial free ene rgy in the Gibbs–
+Bogoliubov variational principle based on minimising the variational fre e energy, A=
+−kBTlogTrexp( −H0/kBT)+/an}bracketle{tH−H0/an}bracketri}ht0, with respect to Vnn′.
+For details of calculations we refer the reader to Refs. [5, 7]. Here w e present the
+ﬁnal form of the kinetic GSC equations which describe the time evolut ion of the mean
+squared distances between monomers (7). It turns out that the equations can be written
+in terms of instantaneous gradients of the variational free energ y,A=E −TS,
+ζb
+2d
+dtDmm′(t) =−2
+3/summationdisplay
+m′′(Dmm′′(t)−Dm′m′′(t))/parenleftbigg∂A
+∂Dmm′′(t)−∂A
+∂Dm′m′′(t)/parenrightbigg
+. (10)
+The energetic and the entropic contributions in the free energy ca n be completely ex-
+pressed in terms of the mean squared distances Dmm′(t),
+E=3kBT
+2l2/summationdisplay
+nDnn−1,nn−1+∞/summationdisplay
+J=2/summationdisplay
+{n}′u(J)
+{n}
+(2π)3(J−1)/2(det∆(J−1))−3/2+Esi, (11)
+S=3
+2kBlogdetR(N−1), R nn′=1
+N2/summationdisplay
+mm′Dnm,n′m′, (12)
+where we have introduced the four–point correlation function and the matrix ∆(J−1),
+Dmm′,nn′≡1
+2(Dm′n+Dmn′−Dmn−Dm′n′), (13)
+∆(J−1)
+ij≡Dn1ni+1,n1nj+1. (14)
+In Eq. (12) we have the determinant of the truncated matrix R(N−1)to exclude the zero
+eigenvalue related to the translational invariance for the centre– of–mass of the system.
+In the second term in Eq. (11), which is responsible for the volume int eractions, the
+summation is taken over not coinciding indices, n1/ne}ationslash=n2/ne}ationslash=.../ne}ationslash=nJ.
+Before proceeding with further discussions of the GSC equations le t us introduce
+some observables. These include the mean squared radius of gyrat ion,
+R2
+g=1
+2N2/summationdisplay
+mm′Dmm′, (15)
+and the micro–phase separation (MPS) order parameter,
+Ψ =1
+N2R2g/summationdisplay
+mm′σm+σm′
+2∆σDmm′,(∆σ)2=1
+N/summationdisplay
+mσ2
+m. (16)
+The MPS parameter describes the degree of correlation between m atrices of the relative
+two–body interaction, ( σm+σm′)/2, and the mean squared distances, Dmm′.
+SELF–CONSISTENT TREATMENT OF COPOLYMERS WITH ARBITRARY SE QUENCES 5
+3. – The Self–interaction Energy Term
+The appearance of the last term in Eq. (11), Esi, is somewhat more nontrivial. In
+fact, in the EFEF of the model (1) we have discarded terms with two or more coinciding
+indices in the three– and higher body contributions. These terms co me formally from the
+virial–type expansion, but each of them gives a singular contribution to the mean energy
+(11). It turns out, however, that upon suppressing these term s there appear additional
+pathological solutions of the GSC equations with singular free energ y if at least one
+element of the two–body interaction matrix, u(2)
+mm′, becomes negative. This is easy to
+see. Indeed, consider volume interactions of just three monomer s under condition that
+the mean squared distances from monomers ’0’ and ’1’ to ’2’ are equ al to each other,
+D0,2=D1,2=D. These interactions produce the mean energy contribution,
+E3=u(2)
+0,2+u(2)
+1,2
+(2πD)3/2+1
+(2πD0,1)3/2/parenleftbigg
+u(2)
+0,1+6u(3)(2π)−3/2
+(D−D0,1/4)3/2/parenrightbigg
+(17)
+Inthecasewhen u(2)
+0,1<0andmonomer’2’isplacedawayfrommonomers’0’and’1’, D >
+D0,1/4+(6u(3)(2π)−3/2/|u(2)
+0,1|)2/3, obviously in the limit D0,1→0 the energy possesses
+a singular minimum, E3→ −∞. As for the free energy, the logarithmic divergence of the
+entropy could not change the situation, thus A → −∞ as well. One can show that the
+inclusion of more monomers in the chain or of higher than three–body interactions does
+not improve the situation, but produces more and more of such pat hological solutions.
+The reason we have not discussed this problem in our previous consid erations is that we
+have accounted for the additional symmetry properties of monom er–monomer distances,
+which come from the symmetry of the EFEF (1). For example, in the c ase of the ring
+homopolymer, due to the inverse symmetry [5], we assumed that for any indices m,
+m′the following mean squared distances are equal, Dm,m′=Dm,2m−m′=D2m′−m,m′.
+This provides suﬃcient repulsion coming from three–body term to pr eclude pathological
+solutions.
+Thus, in a more generalcase, where no symmetry propertiescould be assumed for an
+arbitrary sequence, the standard procedure of suppressing te rms with coinciding indices
+is not satisfactory. Fortunately, it could be remedied by using anot her prescription —
+replacing the terms with coinciding indices by the so–called self–intera ction terms. Here
+we propose the prescription for three–body interaction which is su ﬃcient for our current
+purposes,
+E(3)
+si=c3u(3)/summationdisplay
+m/ne}ationslash=m′/angbracketleftbigg
+δ(Xm−Xm′)/angbracketrightbigg2
+=c3ˆu(3)/summationdisplay
+m/ne}ationslash=m′D−3
+mm′, (18)
+wherec3= 3 is a combinatorial factor related to the three possible ways of ha ving
+coinciding pairs of indices in a triple summation. Obviously, the higher ne gative power
+ofDmm′in (18) compared to the two–body term in (11) prevents one monom er from
+falling on another.
+It would be interesting to consider the coeﬃcient c3in Eq. (18) as an independent
+parameter and to discuss how the inclusion of this term would change the equilibrium
+and kinetics for the ring homopolymer [11]. Note that for the ring hom opolymer we can
+reduce the number of independent elements in the matrix of mean sq uared distances,
+Dmm′, by the factor of N, since due to the translational symmetry, Dm,m′=Dm+k,m′+k
+6 YU.A. KUZNETSOV , E.G. TIMOSHENKO
+for anykandm,m′. This symmetry allows us to reduce signiﬁcantly the computational
+requirements.
+In the good solvent regime, u(2)> u(3)>0, we ﬁnd no substantial change caused by
+the self–interaction term (18). The deviations in the mean squared distances and in the
+squared radius of gyration typically are less than 1% even for short chains. This is only
+natural. In this regime this term is subdominant for long chains and ca n be neglected at
+all in the thermodynamic limit.
+However, the size and the structure of the homopolymer globule, w hich exists in the
+regionu(2)<0, can change signiﬁcantly. In Fig. 1 we exhibit the diagram of globular
+states. One can see that actually two diﬀerent globular states are possible, which we
+call the non–compact globule (as one can see from Table I this globula r state possesses
+a higher value of R2
+g) and the liquid–like globule. The former is the thermodynamically
+stable state atcomparativelysmall c3, whilst the latter existsat highervalues of c3andin
+the region of large u(2). For large negative u(2)the transition between two globular states
+becomes discontinuous and the transition line goes nearly vertically a t approximately
+c3≈1/2. However, the collapse transition from the extended polymer coil to the liquid–
+like globuleremainssecondorder. We found that this phase diagramis quite independent
+of the degree of polymerization, at least in the range we could study numerically, 30 ≤
+N≤200. Thus, introducing of the term (18), which is subdominant for la rge values of
+Ncompared to other terms in (11), nevertheless dramatically chang es the properties of
+the globular state even for very long chains.
+Nowletuscomparethestructureofthenon–compactandtheliquid –likeglobules. In
+Fig. 2intheleft–handsidewepresentthemeansquareddistances, whicharesymmetrical
+with respect to the line m=N/2, i.e.D0,|m−m′|=D0,N−|m−m′|, for values of c3= 0,3.
+In the right–hand side of the ﬁgure we draw the same quantity obta ined from Monte
+Carlo simulations for a ring chain of hard spheres with the Lennard–J ones attraction
+[15]. Since the parameters of excluded volume interactions in the mod el used for Monte
+Carlo simulations are expressed in diﬀerent terms, only shape and sc aling behaviour, but
+not the absolute values of each Dmm′, should be compared. We see a quite remarkable
+agreement here. This is a strong argument in favour of the liquid–like globule. Its mean
+squared distances have a typical saturation regime after compar atively small m. This is
+known to be true of the globule from Monte Carlo simulations and prev ious results from
+other methods [12]. The function, D0mfor the non–compact globule has much more
+convex shape which, in fact, reﬂects the eﬀective monomer repuls ion on large distances
+(see Eq. (17). Also, from Table I we can see that the asymptotic sc aling in the degree
+of polymerisation for the size of the liquid–like globule, R2
+g∼N2/3, is reached starting
+from suﬃciently small Nin agreement with lattice Monte Carlo simulations [13], whilst
+from much larger Nfor the non–compact globule [4].
+Now, let us turn our attention to the kinetics at the collapse transit ion, after an
+instantaneous change of the value of the second virial coeﬃcient f rom a positive to a
+negative value, the latter corresponding to the globular equilibrium s tate. In Fig. 3 we
+exhibit the evolution of the mean squared radii of gyration after qu enches to the liquid–
+like and the non–compact globule. We found that the early stage pro ceeds in a similar
+manner, while the middle or “coarsening” kinetic stage is somewhat slo wer for quenches
+to the liquid–like globule, but the ﬁnal stages here are much faster. This can be seen
+from Tab. I, where we present the values of the total collapse time [14] and the ﬁnal
+relaxationtime, τffordiﬀerent sizes, N. The moststrikingthing hereis thatthe eﬀective
+exponent of the ﬁnal relaxationtime is much smaller than what we hav e earlier expected,
+γf= 5/3 (see Ref. [3, 4]). This also shifts down the eﬀective exponent of th e “total”
+SELF–CONSISTENT TREATMENT OF COPOLYMERS WITH ARBITRARY SE QUENCES 7
+collapse time, since the latter is a cross–over between the exponen t of the coarsening
+stage,γm= 2, which is unaﬀected by the self–interaction term, and the expon ent of
+the ﬁnal relaxation, γf. In principle, the ﬁnal relaxation time and its exponent in the
+degree of polymerization can be determined without appealing to num erical solution of
+the kinetic GSC equations. From Ref. [3] we have, τf∼NF1, whereF1is the ﬁrst
+normal mode for the ﬁnal equilibrium globular state,
+Fq=−1
+2N/summationdisplay
+mcos2πqm
+ND0m. (19)
+A good approximation for the function D0min the liquid–like globule would be the
+following D0mis linearly increasing function of muntil some value D0m1=D, where the
+N-dependence is, D∼m1∼N2/3and then it remains constant. This approximation
+can also be obtained from the Lifshitz theory [12]. Now one can see th atF1∼N1/3and,
+correspondingly, γf= 4/3, which is close to the value of the eﬀective exponent in Tab. I.
+Thus, on the contrary to the coil state, for the liquid–like globule th e ﬁrst normal mode,
+F1, neither gives the main contribution to the mean squared radius of g yration, nor even
+has the same scaling law in the degree of polymerization, N.
+Inclusionoftheself–interactionterm(18)alsostronglyaﬀectsth ephasediagramand
+kinetic properties of rigid chains. We shall consider these questions in a separate work
+[15]. Such modiﬁcations are rather welcome and allows one to make the GSC method
+more accurate for the dense globular states, where its validity has been less established.
+4. – Equilibrium Properties of Copolymer Sequences
+The GSC equations (10) have been studied numerically using the ﬁfth order Runge–
+Kutta algorithm with adaptive time step [16]. In fact, for copolymer s equences, consid-
+ered in the current work, the time step during numerical integratio ns of Eqs. (10) varies
+approximately 100 times. Thus, any integration scheme with ﬁxed tim e step is rather
+unreliable here.
+In studying the equilibrium we consider only stationary points of Eqs. (10), i.e. the
+limitt→ ∞. If for some set of interaction parameters, ¯ u(2)and ∆, one obtains several
+stationary states, one should compare the values of the variation al free energy, A. The
+deepest minimum of the free energy corresponds to the thermody namically stable state,
+the rest of the solutions to metastable states. Here we consider c opolymers with the ring
+topology, though the current treatment may be easily extended f or study of copolymers
+with any other topology just by changing the spring term in Eqs. (1, 11).
+Typical phase diagrams in terms of the mean second virial coeﬃcient , ¯u(2), and the
+amphiphilicity, ∆, in Eq. (2) for some “random” and periodic sequence s are presented
+in Figs. 4-6. In the region ¯ u(2)>0 and for small values of amphiphilicity, ∆ <5, typical
+conformations of copolymers are akin to the homopolymer extende d coil. By decreasing
+¯u(2)to the negative region the chain undergoes the continuous collapse transition, simi-
+larly to what we observed in Sec. 3. The collapse transition is characterised by a rapid
+fall of the radius of gyration, R2
+g, (15) and the change of the fractal dimension, ν(see
+Tab. I).
+The collapse transition for larger values of amphiphilicity turns out to be more com-
+plicated, and essentiallydependent onthe sequence. The globulars tate forlargevaluesof
+∆ is diﬀerent from the liquid–like globule. It is characterized by somewh at higher value
+ofthe radiusofgyrationandextremely largevalue ofthe MPS order parameter(16), thus
+8 YU.A. KUZNETSOV , E.G. TIMOSHENKO
+we call this state the MPS globule. The MPS globule is separated from t he liquid–like
+one by a weak continuous transition (see Figs. 4-6). In the case of long blocks (Fig. 6)
+the collapse transition to the MPS globule becomes discontinuous (ﬁr st–order–like). The
+spinodals I’ and I” designate the region where two distinct states c orresponding to the
+coil and the MPS globule can be found. The depths of the free energ y minima become
+exactly equal on the transition curve I in Fig. 6.
+However, for a wide class of sequences, for example for aperiodic s equences in Figs.
+4, 5, the phase diagram at large amphiphilicity, ∆, is much more complica ted. Starting
+fromsomevalueof∆insomeintermediateregionof ¯ u(2)thereappearadditionalsolutions
+corresponding to local minima of the free energy. The broad region where this could take
+place is bounded by the curves I’ and II” in Figs. 4, 5. With increasing ∆ the number of
+such solutions grows quickly. Signiﬁcantly, in the region of the phase diagram, between
+curves I and II in Figs. 4, 5, some of these possess the lowest free energy value, thus
+being the thermodynamically stable state. Since the number of such solutions is rather
+high even for short sequences and their number grows quickly with t he chain length,
+we do not attempt to draw all their boundaries of (meta)stability. W e shall call them
+collectively as frustrated phases , explaining this terminology below.
+Now let us compare the phase diagrams in Figs. 4 and 5, the latter cor responding
+to the sequence twice longer than the for former. An interesting o bservation is that
+the region between spinodals I’ and II”, designating where the fru strated phases can
+exist, expands dramatically with increasing chain length. The same co ncerns the region
+of thermodynamically stable frustrated phases between curves I and II. More exactly,
+these regions expand downwards and to the left, so that the posit ion of curves I’ and I
+change slightly with increasing N, whilst curves II and II” depend signiﬁcantly on the
+size of the system. For rather long chains we may expect that the r egions of stability
+and metastability of the frustrated phases will continue to expand downwards and to
+the left, so that the lines II and II” will become nearly vertical, displa cing the region of
+stable MPS globule. Probably, for most of long heteropolymer chains the MPS globule
+does not exist as thermodynamically stable state, becoming stable o nly for some special
+sequences. Unfortunately, we can not proceed with numerical so lution for much larger
+system sizes, N, since the calculational expenses grow in NasN3per iteration and also
+the total number of frustrated states becomes huge for large s ystem sizes. This diversity
+and a special foliating structure of various branches leads in the th ermodynamic limit to
+what is known as a spin glass frozen phase [17] of random copolymers .
+Let us consider the conformational structure of the frustrate d states for the copoly-
+mer consisting of repeating ’ ab’ blocks. The phase diagram of this sequence also exhibits
+the thermodynamically stable frustrated phases [7] starting from approximately N= 28.
+In Figs. 7 and 8 we present the dependence of the observables in (1 5, 16) at a quasistatic
+change of the mean second virial coeﬃcient, ¯ u(2), from the coil state to the MPS globule
+and back. From these pictures one can see in the intermediate regio n only a few (seven
+to be precise) of all possible frustrated phases. The values of the radius of gyration and
+the MPS order parameter are intermediate for these solutions, lyin g between those of
+the coil and the MPS globule. In this sense, we can call them non–fully compacted and
+misfolded states.
+In the series of pictures in Fig. 9 we present the matrix of mean squa red distances,
+Dmm′, for the copolymer, consisting of ’ ab’ blocks at some values of the mean second
+virial coeﬃcient, ¯ u(2). The set of Dmm′in the GSC method completely determines the
+conformational structure of any, equilibrium or kinetic, state. Fo r positive ¯ u(2)(see
+Fig. 9a) the mean squared distances possess the structure typic al for the extended coil.
+SELF–CONSISTENT TREATMENT OF COPOLYMERS WITH ARBITRARY SE QUENCES 9
+The elements of the matrix, Dmm′, increase monotonically on moving away from its
+diagonals towards the distance of half–ring along the chain. Thus, t heDmm′matrix
+may be approximated here by a monotonically increasing function of t he chain distance,
+|m−m′|. Decreasing the mean second virial coeﬃcient, ¯ u(2), causes the copolymer to
+pass through frustrated states, in Figs. 9b-9d, ﬁnally reachingt he MPS globule state (see
+Fig. 9e). The characteristic feature of the Dmm′matrix in a frustrated state is that it
+possesses some number of monomer groups having smaller distance s between each other
+than between monomers from other groups. Clearly, such a group represents a cluster
+of monomers, so that here the copolymer chain forms a set of clust ers (approximately
+8 clusters in Fig. 9b, 4 clusters in Fig. 9c and 2 clusters in Fig. 9d), eac h consisting of
+monomers nearest along the chain.
+The internal structure of each cluster is similar to the structure o f the ﬁnal MPS
+globule. Forthesimplestcopolymersequencepresentedhere, the Dmm′matrixawayfrom
+the diagonal can be divided into sub–matrices of the size 2 ×2 (see top of the Fig. 9e),
+each of which possesses approximately the same structure: small values in the upper
+left corner correspond to the mean squared distances between h ydrophobic monomers;
+large values in the lower right corner, which are the mean squared dis tances between
+hydrophilic monomers; and oﬀ-diagonal elements are nearly equal a nd correspond to
+the distances between diﬀerent species. Thus, for the MPS globule , such structure of the
+Dmm′matrix reﬂects the structure ofthe two–bodyinteraction matrix ,u(2)
+mm′. Obviously,
+the higher correlation between these two matrices is manifested in t he higher value of
+the MPS order parameter. For another, more complicated, seque nces the Dmm′matrix
+in the MPS globular state has a diﬀerent structure, but still it resem bles in some way
+the interaction matrix, u(2)
+mm′away from the diagonal, being distorted by the spring
+interactions in the elements close to the diagonal. Note that for the liquid–like globule
+the pattern of the Dmm′matrix looks suﬃciently trivial. Namely, it has narrow band of
+dark color along the main diagonal with its intensity quickly decreasing , as one can see
+from Fig. 9f.
+FromFig.9onecanseethattheinteractionsymmetriesimposedbyt heEFEF(1)are
+spontaneously broken in the region of the phase diagram correspo nding to the frustrated
+phases. Obviously, in our case the number of possible ways to break the symmetry
+is enormously huge and moreover it grows exponentially with increasin g system size.
+Despite thekinematicsymmetriesarenotpresentforarbitraryse quences, thestructureof
+the phase diagram(see Figs. 4, 5) and behaviourof main observable sremain verysimilar.
+It is the particular structure of Dmm′matrix, number and the shape of boundaries of
+frustrated phases that are quite sensitive to the sequence. The symmetry that may
+be broken in this case has a subtler meaning and may be expressed in t erms of the
+replica formalism [17]. Consider, for example, two nearly identical bloc ks with nearly
+identical surroundings. In the coil and the MPS globular states one should expect the
+conformationalmatricesoftheseblockstobe nearlyequaltoeac hother. Onthecontrary,
+the small diﬀerence in the interactions in the region of frustrated p hases may lead to a
+huge diﬀerence in the conformations. Thus, it is by no means surpris ing that the replica
+symmetry breaking in the case of periodic systems takes such an ex plicit manifestation
+in the breaking of the block translational symmetry.
+An important point here is that the frustrated phases become dom inant in an inter-
+mediate region of the phase diagram not due to a low mean energy, bu t mostly due to a
+higher entropy. The MPS globule is entropically unfavourable there b ecause the overall
+shrinking force is insuﬃciently strong. Also, in the regime of nearly co mpensating repul-
+10 YU.A. KUZNETSOV , E.G. TIMOSHENKO
+sion and attraction between monomers it is more preferable to achie ve phase separation
+on a smaller, than the globular, scale by forming clusters.
+5. – Folding Kinetics
+Here we shall consider the time evolution of the conformational sta te of a copoly-
+mer away from the initial equilibrium after it has been subjected to an instantaneous
+temperature jump that causes the two–body interaction parame ters in Eq. (2), ¯ u(2)and
+∆, to change. The composition of copolymer {σ}and the rest of parameters remain
+the same and do not change with time. We are interested in quenches from the ho-
+mopolymer coil, where all monomers are equally hydrophilic (¯ u(2)>0 and ∆ = 0), to
+the region of parameters corresponding to the MPS globular state , so that the ‘ a’ species
+became strongly hydrophobic and the ‘ b’ species remained nearly neutral (¯ u(2)≪0
+and ∆≈ |¯u(2)|). Here we consider some binary copolymer systems, consisting of t he
+same number of ’ a’ and ’b’ monomers and of the same size, N= 50, and quench,
+(¯u(2)= 15,∆ = 0)→(¯u(2)=−35,∆ = 30).
+Let us ﬁrst discuss the general features of the kinetics of the co polymer folding. The
+time evolution of the mean squared radius of gyration, R2
+g(t), the MPS order parameter,
+Ψ(t), and the instantaneous free energy, A(t), is presented in Figs. 10, 11. Here lines
+A correspond to the homopolymer and serve for reference purpo uses. In the case of
+the homopolymer one can see that R2
+gandAdecrease monotonically to their equilibrium
+values correspondingto the liquid–like globule state, while Ψremains ide ntically zero. As
+for the copolymer kinetics, the ﬁrst observation consists in that it proceeds much slower
+than for the homopolymer. For example, for the simplest copolymer sequence, ’( ba)25’,
+the total collapse time [14] is more than 3 times longer than that of th e homopolymer,
+other copolymer sequences collapsing even longer. The total collap se time also seems to
+be quite sensitive to the copolymer sequence. Since the micro–phas e separation is one
+of the main factors in collapse of copolymers, the MPS order parame ter, Ψ, grows in
+kinetics most of the time for all considered sequences, though rat her nonmonotonically.
+Nevertheless, for some sequences it might be negative during some time in kinetics (see
+e.g. sequences E and F in Fig. 11b), something we never observed at equilibrium.
+The evolution of the instantaneous free energy, A(t), depicted in Figs. 10c, 11c, is
+most unusual. Typically it proceeds through multiple accelerations an d decelerations.
+The ﬂat regions of a staircase–like function correspond to tempor ary kinetic arrest of the
+system in transient nonequilibrium conformations, i.e. to transient t rappings of various
+members of the ensemble in their local shallow energy minima. Since suc h minima are
+encountered at diﬀerent moments in time for diﬀerent members of t he ensemble, their
+inﬂuence on the overall time evolution of averaged observables is ma nifested in a smooth
+characteristicslowingdown. Noteherethatthenumberofstepsin kineticsprocesshardly
+can be guessed from the given primary sequence. Typically, the kine tics for sequences
+with smaller number of blocks proceeds through smaller number of st eps. For example,
+folding of the periodic sequence consisting of long blocks, ’( b5a5)5(see line E in Fig. 11c),
+proceeds through only one, though rather long, kinetically arrest ed step. However, for
+the aperiodic sequence of long blocks (line F in Fig. 11c) we can see at le ast six such
+steps, the third one being the longest in time.
+Now let us consider the nonequilibrium conformations, given by the ma trix of the
+mean squared distances between monomers, Dmm′. In Fig. 12 we exhibit the Dmm′ma-
+trix for ’( ba)25’ sequence at diﬀerent times in the folding kinetics. We can see that k inetic
+process proceeds through formation of locally collapsed and phase –separated clusters.
+SELF–CONSISTENT TREATMENT OF COPOLYMERS WITH ARBITRARY SE QUENCES 11
+The initial conformation is similar to Fig. 9a, then at time t= 3.6 we can see approx-
+imately 10 clusters (Fig. 12a), at time t= 5.75 — 6 clusters (Fig. 12b) and at t= 8.6
+— 4 clusters (Fig. 12c). During later evolution these four clusters a pproach each other
+since, as one can see from Fig. 12d, the inter–cluster distances ar e much smaller than
+in Fig. 12c. Finally, the clusters unify forming the MPS globule, the Dmm′matrix of
+which is quite similar to that presented in Fig. 9e. We should note here a lso that these
+nonequilibrium states do not possess the translational block symme try, present for the
+system in the EFEF and the initial conditions. After some time in kinetic s,t≈1 this
+symmetry breaks down, and restores only during ﬁnal kinetic stag es at time moment
+t≈15.
+However, the formal structure of the GSC kinetic equations (10) is such that they
+yield a symmetric solution at any moment in time if one proceeds from th e symmetric
+initial condition. What we observe here is a spontaneous symmetry b reaking in kinetics.
+Namely, at some moment in time the symmetric solution of the kinetic eq uations be-
+comes unstable with respect to perturbations, whether of the init ial condition, or of the
+interaction matrix, u(2)
+nn′. In the exact theory there are ﬂuctuations that can transform
+between diﬀerent spontaneously broken states in kinetics, thus d estroying the unstable
+symmetric state. To describe such phenomena strictly in the frame work of the Gaussian
+method, which presents an improved, but still a mean–ﬁeld type of t heory, we should
+include explicitly an inﬁnitesimal symmetry breaking term εnn′to the two–body inter-
+action matrix, u(2)
+mm′, and consider the limit of vanishing perturbation in the solution.
+In fact, in numerical integration such a regularisation procedure is not even necessary,
+since there is always an intrinsic perturbation due to computer roun d oﬀ and numerical
+integration errors. Thus, if the symmetry is favourable to be kinet ically broken some-
+where, numerically one obtains some spontaneously broken solution s there, rather than
+the unstable symmetric solution, unless the symmetry conditions ha ve been imposed by
+hand. In fact, adding a rather small perturbation matrix, εnn′, changes the behaviour of
+the global observables, such as R2
+g, Ψ,Aand characteristic kinetic times rather insigniﬁ-
+cantly. However, what can be changed by including of a perturbatio n is the centers along
+the chain around which clusters form and grow.
+Finally, let us discuss how the folding kinetics depends on the sequenc e. In series of
+pictures in Fig. 10 we present kinetic processes for the simplest cop olymer consisting of
+’ab’ blocks (sequence B), and also for some sequences obtained by ce rtain modiﬁcations
+in it. In the sequence denoted by C in Fig. 10 we have replaced ten sho rt blocks by
+four of longer size. In the sequence D we have inserted only two hyd rophobic and two
+hydrophilic fragments into the sequence, i.e. we have made only two p ermutations. For
+the former sequence the total kinetic time became approximately 1 .7 times longer than
+thatfortheBsequence. Theﬁnalvaluesofthefreeenergyforb othsequencesBandCare
+nearly the same, whilst the micro–phase separation is somewhat bet ter for the modiﬁed
+sequence C, due to longer blocks. Thus, for that sequence the kin etic properties do not
+deteriorate very much, except that kinetic process takes essen tially longer. However, the
+kinetic foldability of the D sequence is much more poor than for B and C sequences. In
+fact, here not only the kinetic process takes much longer, but the ﬁnal state is diﬀerent
+from the MPS globule. As one can see from Fig. 13 the ﬁnal kinetic sta te for the D
+sequence consists of two clusters. These clusters are connecte d by two links, formed by
+nearly neutral fragments, ’ b2’. Further collapse of this conformation is unfavourable due
+to the entropy and partial screening of hydrophobic monomers by nearly neutral species
+’b’. Size of such misfolded state is larger and the MPS order parameter is approximately
+12 YU.A. KUZNETSOV , E.G. TIMOSHENKO
+twice smaller than what we could expect for the MPS globule. As we hav e already seen
+kinetics of sequences consisting of longer blocks is also quite sensitiv e to the sequence.
+Some modiﬁcations of the periodic sequence E in Fig. 11 to form aperio dic long blocks
+sequence, F, result in somewhat longer, but much more complicated , kinetic processes.
+6. – Conclusion
+In this paper we applied the extended GSC method to studying the eq uilibrium and
+kinetic phenomena of some particular amphiphilic heteropolymer sequ ences. First, we
+have revised the Gaussian theory to include the self–interaction te rm (18). Thus, the
+two–body term in our formalism describes the eﬀective interactions between monomers,
+the self–interaction term is responsible for stability of the globular s tate, and the three–
+body interactions between distinct monomers provide the correct scaling of the size of
+the globule. The structure of the homopolymer globule is now in bette r agreement with
+the one obtained from other methods. We have found that the kine tic laws of the ring
+homopolymerdo not changesigniﬁcantlydue to introduction ofthe s elf–interactionterm,
+except for the ﬁnal relaxation time, which without hydrodynamic int eraction scales with
+the degree of polymerization as, τf∼N4/3.
+We have obtained typical phase diagrams for heteropolymers cons isting of short and
+long blocks. For sequences with rather frustrated interactions a long the chain, apart
+from the coil, the liquid–like and the micro–phase separated globular s tates, we have
+discovered that in a wide intermediate region of the phase diagram th ere may be a large
+number offrustratedpartiallymisfolded states. Someofsuch sta tes, the number ofwhich
+grows exponentially with the chain length, become the dominant ther modynamic state
+in rather narrow domains. We may conclude that the transition to th ese states for large
+systems corresponds to a glassy freezing transition.
+For large amphiphilicity parameter collapse from the extended coil st ate to the MPS
+globule for a wide class of sequences proceeds at equilibrium through these frustrated
+phases. Atypicalcopolymerconformationhereis asetofmicro–ph aseseparatedclusters.
+On approaching the MPS globule quasistatically the number of cluster s decreases, reach-
+ing only one cluster in the ﬁnal MPS globular state. A typical cluster s ize is determined
+by some characteristic range where the micro–phase separation m ay occur.
+We have discovered that the region of meta– and thermodynamic st ability of the
+frustrated phases expands with system size displacing the region o f the MPS globule.
+It is quite likely that the thermodynamically stable MPS globule for hete ropolymers
+of several hundreds of monomers is possible only for a narrow class of some special
+sequences. Also it is likely that inclusion of other interactions, such a s electrostatic,
+and thus modiﬁcation of the two–body interaction matrix in Eq. (2), may additionally
+stabilise the MPS globule.
+We ﬁnd that the kinetics of folding from the coil to the MPS globule for copolymers
+takes much longer than for the homopolymer since it is strongly aﬀec ted by the presence
+of the transient frustrated states along the kinetic pathway. Th is leads to a complicated
+kinetic process consisting of multiple steps with pronounced slowing d own and then
+acceleration in the folding rate. We also present here some preliminar y studies on how
+the folding kinetics depends on the primary heteropolymer sequenc e. Typically, the
+kinetics for copolymers consisting of long blocks proceeds in a smaller number of steps,
+but not necessarily faster, than kinetics for short block copolyme rs. For the latter we
+have seen that even small modiﬁcations of the sequence may chang e crucially the overall
+kinetic behaviour and even the ﬁnal kinetic state itself.
+SELF–CONSISTENT TREATMENT OF COPOLYMERS WITH ARBITRARY SE QUENCES 13
+There is an interesting arena here for classiﬁcation of sequences a nd conformational
+states. Moving in this direction would allow to develop better models fo r proteins, which
+sequences have been specially optimised by the biological evolution.
+Finally, we hope that the way is now open for constructing the non–G aussian exten-
+sion to the self–consistent method. This is diﬃcult since the closure r elations for higher–
+order correlation functions are nontrivial for polymers. When tha t is accomplished one
+could speak of real predictive accuracy of the method.
+∗ ∗ ∗
+The authors acknowledge interesting discussions with Professor A .Yu. Grosberg,
+Professor K. Kawasaki, Professor G. Parisi, Dr D.A. Tikhonov, Dr R .V. Polozov and our
+colleagues Professor K.A. Dawson, Dr A.V. Gorelov and A. Moskalenk o. The authors
+acknowledge the support of the Centre for High Performance Com puting Applications,
+University College Dublin, Ireland.
+REFERENCES
+[1]T. Ohta, andK. Kawasaki ,Macromolecules ,19(1986) 2621; L. Leibler ,Macro-
+molecules ,13(1980) 1602; G. H. Fredrickson, andE. Helfand ,J. Chem. Phys. ,87
+(1987) 697; T. Hashimoto ,Macromolecules ,20(1987) 465; T. Garel, andH. Orland ,
+Europhys. Lett. ,6 (4)(1988) 307; 6(1988) 597; G. H. Fredrickson, S. T. Milner, and
+L. Leibler ,Macromolecules ,25(1992) 6341.
+[2]M. L. Huggins ,J. Chem. Phys ,9(1941) 440; P. J. Flory ,J. Chem. Phys ,9(1941)
+660;Polymer Blends , edited by D. R. Paul, andS. Neuman , (Academic Press, 1987);
+Multicomponent Polymer Systems , edited by I .S. Miles, andS. Rostami , (Longman
+Scientiﬁc and Technical, Singapore, 1992).
+[3]E.G. Timoshenko, Yu.A. Kuznetsov, andK.A. Dawson ,J. Chem. Phys. ,102(1995)
+1816.
+[4]Yu.A. Kuznetsov, E.G. Timoshenko, andK.A. Dawson ,J. Chem. Phys. ,104(1996)
+3338.
+[5]E.G. Timoshenko, Yu.A. Kuznetsov, andK.A. Dawson ,Phys. Rev. ,E 53(1996)
+3886.
+[6]G. Allegra, andF. Ganazzoli ,J. Chem. Phys. ,83(1985) 397; G. Raos, andG. Al-
+legra,J. Chem. Phys. ,104(1996) 1626.
+[7]E.G. Timoshenko, Yu.A. Kuznetsov, andK.A. Dawson , submitted to Phys. Rev. E .
+[8]M. Doi, S. F. Edwards ,The Theory of Polymer Dynamics (Oxford Science, NY, 1989).
+[9]P. G. de Gennes ,Scaling Concepts in Polymer Physics (Cornell Univ. Press, NY, 1988).
+[10]J. des Cloizeaux, andG. Jannink ,Polymers in Solution (Clarendon Press, Oxford,
+1990).
+[11] In what follows we ﬁx the units of temperature, size and t ime by choosing kBT= 1,l= 1
+andζb= 1. We account for the volume interactions up to three–body t erms, i.e. we assume
+thatu(J)
+{n}= 0 for J >3. Taking into consideration of the self–interaction term ( 18), to
+prevent collapse of monomers for any negative second virial coeﬃcient, is suﬃcient if the
+third virial coeﬃcient is positive. below we also ﬁx the thir d virial coeﬃcient, u(3)= 10.
+[12]A. Yu. Grosberg, A. R. Khokhlov ,Statistical Physics of Macromolecules (AIP, NY,
+1994).
+[13]Yu.A. Kuznetsov, E.G. Timoshenko, andK.A. Dawson ,J. Chem. Phys. ,102(1995)
+4807.
+14 YU.A. KUZNETSOV , E.G. TIMOSHENKO
+[14] The total collapse time, τt, deﬁned as that time, when the squared radius of gyration has
+passed through 99% of its overall change: R2
+g(τt) = 0.01R2
+g(0) + 0.99R2
+g(∞). The ﬁnal
+relaxation, τf, determined from the mean squared radius of gyration R2
+g(t) =R2
+g(∞) +
+Afe−t/τf, or equivalently the time–scale deduced from the ﬁrst inter nal mode F1(t) (see
+Ref. [4] for more details).
+[15]Yu.A. Kuznetsov, E.G. Timoshenko ,J. Chem. Phys. ,111(1999) 3744.
+[16]W. H. Press, S. A. Teukolsky, W. T. Vetterling, andB. P. Flannery ,Numerical
+Recipes in C (Cambridge University Press, 1992).
+[17]M. Mezard, G. Parisi, andM. Virasoro ,Spin glass theory and beyond (WorldScientiﬁc,
+Singapore, 1987).
+SELF–CONSISTENT TREATMENT OF COPOLYMERS WITH ARBITRARY SE QUENCES 15
+TableI. –Values of the mean squared radius of gyration, R2
+g, for the globular state at equilib-
+rium,u(2)=−25andu(3)= 10, and characteristic collapse times, τtandτfafter the quench
+u(2)= 15→ −25for diﬀerent lengths of polymer ring, N. Data for c3= 3andc3= 0corre-
+spond to the prescription with and without self–interactio n term (18). The last column contains
+the eﬀective exponent of the appropriate quantity in terms of the degree of polymerization, i.e.
+A∼Nγ.
+N 30 50 70 100 150 200 300 exponent
+R2
+g(c3= 0) 1.19 1.91 2.59 3.53 4.96 6.25 8.52 2 ν= 0.86±0.03
+R2
+g(c3= 3) 0.91 1.32 1.68 2.17 2.90 3.55 4.72 2 ν= 0.69±0.01
+τt(c3= 0) 3.9 10.5 20.3 40.8 90.7 160.3 357 γt= 1.96±0.01
+τt(c3= 3) 3.4 8.4 14.8 27.3 53.3 89.1 179 γt= 1.70±0.03
+τf(c3= 0) 1.18 2.97 5.49 10.2 20.6 33.0 65.7 γf= 1.74±0.03
+τf(c3= 3) 0.73 1.41 2.66 4.25 7.34 9.92 16.8 γf= 1.27±0.05
+Fig. 1. – Diagram of stability of the liquid–like versus the n on–compact globules in term of the
+second virial coeﬃcient, u(2), and the self–interaction parameter, c3. Curve I corresponds to
+discontinuous transition, curves I’ and I” are spinodals.
+Fig. 2. – Plot of the mean squared distances between monomers ,D0m, versus the chain index,
+m, for polymer with N= 200 for the non–compact (NCG), c3= 0, and the liquid–like (LLG)
+globules, c3= 3. Here u(2)=−25 andu(3)= 10. In the right–hand side we present the
+data from Monte Carlo simulations [ ?] for the same polymer size. Since the function D0mis
+symmetric with respect to the value N/2 we present these dependencies only on half–interval.
+Fig. 3. – Plot of the mean squared radius of gyration, R2
+gversus time, t, at the kinetics of the
+collapse transition, u(2)= 15→ −25 to the non–compact (NCG), c3= 0, and the liquid–like
+(LLG),c3= 3, globules.
+Fig. 4. – The phase diagram of “random” sequence ’ babca2cbac2acb3cac3a2b2cac2b’ in terms of
+the mean second virial coeﬃcient, ¯ u(2), and the amphiphilicity, ∆. Curves (Collapse) and (MPS)
+correspond respectively to the collapse and the micro–phas e separation continuous transitions.
+Curves (I) and (II) correspond to discontinuous transition s to the frustrated phases. “Spinodal”
+curves (I’) and (II”) bound the regions of metastability of t he frustrated states. Transition
+curves and boundaries distinguishing diﬀerent frustrated states are not depicted.
+Fig. 5. – The phase diagram of “random” sequence ’( babca2cbac2acb3cac3a2b2cac2b)2’, i.e. twice
+as in Fig. 4 in terms of the mean second virial coeﬃcient, ¯ u(2), and the amphiphilicity, ∆. See
+caption to Fig. 4 for more details.
+Fig. 6. – The phase diagram of “long block” copolymer sequenc e ’(b3a3)5’ in terms of the mean
+second virial coeﬃcient, ¯ u(2), and the amphiphilicity, ∆. Since the frustrated phases her e are not
+accessible, the collapse for large amphiphilicity proceed s through the discontinuous transition
+(curve (I)) and it is accompanied by micro–phase separation . Curves (I’) and (I”) are spinodals.
+16 YU.A. KUZNETSOV , E.G. TIMOSHENKO
+Fig. 7. – Plot of the mean squared radius of gyration, R2
+g, versus the mean second virial
+coeﬃcient, ¯ u(2), for ’(ab)30’ copolymer. Here and in Fig. 8 ∆ = 30, solid lines correspond
+to values of observables in the main free energy minimum and d ashed lines — in metastable
+minima.
+Fig. 8. – Plot of the parameter of micro–phase separation, Ψ, versus the mean second virial
+coeﬃcient, ¯ u(2), for ’(ab)30’ copolymer. See also caption to Fig. 7 for more details.
+Fig. 9. – Diagrams of the mean squared distances matrix, Dmm′for ’(ab)30’ copolymer and
+amphiphilicity, ∆ = 20. Diagrams (a-e) correspond respecti vely to the values of the mean
+second virial coeﬃcient, u(2)= 15,−11,−21,−30 and−40. Diagram (f) corresponds to the
+homopolymer globule, for which u(2)=−25 and ∆ = 0. Indices m,m′start counting from the
+upper left corner. Each matrix element, Dmm′is denoted by a quadratic cell with varying degree
+of black colour, the darkest and the lightest cells correspo nding respectively to the smallest and
+to the largest mean squared distances. The diagonal element s are not painted since bydeﬁnition,
+Dmm= 0.
+Fig. 10. – Plot of the mean squared radius of gyration, R2
+g(Fig. (a)), the MPS order parameter,
+Ψ (Fig. (b)) and the instantaneous free energy, A(Fig. (c)) versus time, t, during kinetics
+after the quench from ¯ u(2)= 15, ∆ = 0 to ¯ u(2)=−35, ∆ = 30 for copolymer sequences with
+N= 50. Lines A-D in the ﬁgures correspond respectively to the f ollowing sequences: ’ c50’
+(homopolymer), ’( ba)25’, ’a2b3a3b2a3b2a2b3(ba)15’ and ’(ba)3b2(ba)9a2(ba)5b2a2(ba)4’.
+Fig. 11. – Plot of the mean squared radius of gyration, R2
+g(Fig. (a)), the MPS order parameter,
+Ψ (Fig. (b)) and the instantaneous free energy, A(Fig. (c)) versus time, t, during kinetics after
+the same quench as in Fig. 10 for copolymer sequences with N= 50. Lines A, E, F in the
+ﬁgures correspond respectively to the following sequences : ’c50’ (homopolymer), ’( b5a5)5’ and
+’b6a4b5a5b4a6b3a7b7a3’.
+Fig. 12. – Diagrams of the mean squared distances matrix, Dmm′(t) for ’(ba)25’ copolymer in
+kinetics after the same quench as in Fig. 10. Diagrams (a-d) c orrespond respectively to the
+following moments in time: t= 3.5, 5.75, 8.60 and 13 .0. See also caption to Fig. 9 for more
+details.
+Fig. 13. – The diagram of the mean squared distances matrix, Dmm′(t) for copolymer sequence
+’(ba)3b2(ba)9a2(ba)5b2a2(ba)4’ at the time moment t= 45, so that this conformation is close to
+the ﬁnal equilibrium. Parameters of the quench are the same a s in Fig. 10. See also caption to
+Fig. 9, 12 for more details.
+-90-80-70-60-50-40-30-20
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8
+
+/BF/D9/B4/BE/B5
+/B9/BI
+/C1 /C1/B3 /C1Ꜽ/C6/D3/D2/DF/D3/D1/D4/CP/D8 /BZ/D0/D3/CQ/D9/D0/CT
+/C4/CX/D5/D9/CX/CS/DF/D0/CX/CZ /CT
+/BZ/D0/D3/CQ/D9/D0/CT
+/BY/CX/CV/BA /BD
+024681012141618
+0 20 40 60 80 100 120 140 160 180 200
+/D1/BW
+/BC /D1
+/B9/BI
+/C6/BV/BZ
+/C4/C4/BZ
+/C5/BV
+/BY/CX/CV/BA /BE
+010203040506070
+0 5 10 15 20 25 30 35 40
+/D8/CA/BE
+/CV
+/B9/BI
+/C6/BV/BZ/C4/C4/BZ
+/BY/CX/CV/BA /BF
+-40-30-20-10010
+0 5 10 15 20 25 30
+/A1/AM /D9/B4/BE/B5
+/B9/BI
+/BV/D3/CX/D0
+/C5/C8/CB /BZ/D0/D3/CQ/D9/D0/CT/BZ/D0/D3/CQ/D9/D0/CT/BY /D6/D9/D7/D8/D6/CP/D8/CT/CS /C8/CW/CP/D7/CT/D7/C1/B3
+/C1
+/C1 /C1
+/C1 /C1Ꜽ/B4/BV/D3/D0/D0/CP/D4/D7/CT/B5
+/B4/C5/C8/CB/B5
+/BY/CX/CV/BA /BG
+-40-30-20-10010
+0 5 10 15 20 25 30
+/A1/AM /D9/B4/BE/B5
+/B9/BI
+/BV/D3/CX/D0
+/C5/C8/CB /BZ/D0/D3/CQ/D9/D0/CT/BZ/D0/D3/CQ/D9/D0/CT/BY /D6/D9/D7/D8/D6/CP/D8/CT/CS /C8/CW/CP/D7/CT/D7/C1/B3
+/C1
+/C1 /C1
+/C1 /C1Ꜽ/B4/BV/D3/D0/D0/CP/D4/D7/CT/B5
+/B4/C5/C8/CB/B5
+/BY/CX/CV/BA /BH
+-40-30-20-10010
+0 5 10 15 20 25 30
+/A1/AM /D9/B4/BE/B5
+/B9/BI
+/BV/D3/CX/D0
+/C5/C8/CB /BZ/D0/D3/CQ/D9/D0/CT/BZ/D0/D3/CQ/D9/D0/CT/C1/B3
+/C1
+/C1Ꜽ/B4/BV/D3/D0/D0/CP/D4/D7/CT/B5
+/B4/C5/C8/CB/B5
+/BY/CX/CV/BA /BI
+05101520253035
+-50 -40 -30 -20 -10 0 10
+/AM /D9/B4/BE/B5/CA/BE
+/CV
+/B9/BI
+/BY/CX/CV/BA /BJ
+00.20.40.60.81
+-50 -40 -30 -20 -10 0 10
+/AM /D9/B4/BE/B5/A9
+/B9/BI
+/BY/CX/CV/BA /BK
+0510152025
+0 5 10 15 20 25 30 35 40
+/D8/CA/BE
+/CV
+/B9/BI
+/BT/BU/BV
+/BW
+/BY/CX/CV/BA /BD/BC/CP
+00.10.20.30.40.50.60.7
+0 5 10 15 20 25 30 35 40
+/D8/A9
+/B9/BI
+/BU/BV
+/BW
+/BY/CX/CV/BA /BD/BC/CQ
+-30-25-20-15-10-50
+0 5 10 15 20 25 30 35 40
+/D8/BT
+/B9/BI
+/BT
+/BV
+/BY/CX/CV/BA /BD/BC
+0510152025
+0 5 10 15 20 25 30
+/D8/CA/BE
+/CV
+/B9/BI
+/BT/BX
+/BY
+/BY/CX/CV/BA /BD/BD/CP
+-0.100.10.20.30.40.50.60.70.8
+0 5 10 15 20 25 30
+/D8/A9
+/B9/BI
+/BX /BY
+/BY/CX/CV/BA /BD/BD/CQ
+-30-25-20-15-10-50
+0 5 10 15 20 25 30
+/D8/BT
+/B9/BI
+/BT
+/BX
+/BY
+/BY/CX/CV/BA /BD/BD
+/BY/CX/CV/BA /BL/CP
+/BY/CX/CV/BA /BL/CQ
+/BY/CX/CV/BA /BL
+/BY/CX/CV/BA /BL/CS
+/BY/CX/CV/BA /BL/CT
+/BY/CX/CV/BA /BL/CU
+/BY/CX/CV/BA /BD/BE/CP
+/BY/CX/CV/BA /BD/BE/CQ
+/BY/CX/CV/BA /BD/BE
+/BY/CX/CV/BA /BD/BE/CS
+/CQ/BE
+/CP/BE
+/CQ/BE
+/CP/BE
+/CQ/BE/CP/BE/CQ/BE/CP/BE/BY/CX/CV/BA /BD/BF

@@ -1,0 +1,628 @@
+arXiv:cond-mat/9809196v1  [cond-mat.stat-mech]  14 Sep 1998The kinesin walk: a dynamic model with elastically coupled h eads
+Imre Der´ enyi∗and Tam´ as Vicsek†
+Department of Atomic Physics, E¨ otv¨ os University, Budape st, Puskin u 5-7, 1088 Hungary
+∗derenyi@hercules.elte.hu and†h845vic@ella.hu
+Proceedings of the National Academy of Sciences USA 93, 6775-6779 (1996)
+ABSTRACT Recently individual two-headed
+kinesin molecules have been studied in in vitro
+motility assays revealing a number of their pe-
+culiar transport properties. In this paper we pro-
+pose a simple and robust model for the kinesin
+stepping process with elastically coupled Brow-
+nian heads showing all of these properties. The
+analytic and numerical treatment of our modelre-
+sults in a very good ﬁt to the experimental data
+and practically has no free parameters. Chang-
+ing the values of the parameters in the restricted
+range allowed by the related experimental esti-
+mates has almost no eﬀect on the shape of the
+curves and results mainly in a variation of the
+zero load velocity which can be directly ﬁtted to
+the measured data. In addition, the model is con-
+sistent with the measured pathway of the kinesin
+ATPase.
+Kinesin is a motor protein converting the energy of ATP
+hydrolysis into mechanical work while moving large dis-
+tances along microtubule ﬁlaments and transporting or-
+ganelles and vesicles inside the cytoplasm of eukaryotic
+cells [1]. The wall of a microtubule is made up of tubu-
+lin heterodimers arranged in 13 longitudinal rows called
+protoﬁlaments (Fig. 1). A tubulin heterodimer is 8 nm
+long and consists of two globular proteins about 4 nm in
+diameter: α- andβ-tubulin. The dimers bind head-to-
+tail giving the polarity to the protoﬁlaments. The mi-
+crotubule has a helical surface lattice which can have
+two possible conﬁgurations: the adjacent protoﬁlaments
+can be shifted in the longitudinal direction by about
+either 5 nm (A-type lattice) or 1 nm (B-type lattice).
+Electron micrograph measurements of microtubules dec-
+oratedwithkinesinheadfragments[2–5]indicatethepre-
+dominance of the B-type lattice and show that kinesin
+heads can bind only to the β-tubulin (meanwhile weakly
+interacting with the α-tubulin also). Native kinesin is a
+dimeric molecule with two globular( ∼9×3×3nm) heads.
+Each one has an ATP and a tubulin binding site.
+Recent experimental studies in in vitromotility assays
+have revealed the following properties of kinesin move-
+ment:
+•kinesin moves unidirectionally parallel to the
+protoﬁlaments towards the “(+)” end of the mi-
+crotubule [6,7];•under an increasing load the speed of the kinesin
+decreases almost linearly [8,9] (see Fig. 3);
+•under its stall force (about 5 pN) kinesin still con-
+sumes ATP at an elevated rate [9];
+•in the absence of ATP (in rigor state) kinesin binds
+to the microtubule verystrongly: it supports forces
+in excess of 10 pN [9];
+•the observed step size in the low speed regime (at
+low ATP or at high force) is about 8 nm [10];
+•some backward slippage was clearly observed [9];
+•thedisplacementvarianceatsaturatingATPandat
+low load increases linearly with time, but at (only
+somewhat more than) half of the rate of a single
+Poisson stepping process with 8 nm step size, im-
+plying that one step consists of two sequential sub-
+processes with comparable limiting rates [11].
+Partially motivated by these remarkable experimental
+advances several interesting thermal ratchet type mod-
+els have very recently been developed for the theoreti-
+cal interpretation of the related transport phenomena.
+These models [13–20] except that of Ajdari (Ref. [21])
+consider cases in which the internal degree of freedom
+of the molecular motors is not taken into account. The
+purpose of the present work is to deﬁne and investigate
+a dynamic model for the kinesin walk which has an in-
+ternal degree of freedom and results in a full agreement
+with the experimental data for the range of its param-
+eters allowed by the known estimates for the lower and
+upper bounds of these parameters.
+There are two basic classes of possible models for the
+stepping of kinesin [12]. The ﬁrst one is the “Long-
+Stride” model in which the heads are moving along a
+single protoﬁlament. The two heads are displaced from
+each other by 8 nm. During the stepping process the
+back head passes the bound front head advancing 16 nm.
+Then the heads change their roles and a new step may
+take place. However, within this framework during the
+long stride the back head has a good chance to bind to
+aβsite belonging to a neighboring track which is closer
+than the next βsite in the same track. Another problem
+is that the low displacement variance observed experi-
+mentally cannot be naturally explained. This model was
+studied in detail by Peskin and Oster [22], who by intro-
+ducing several reaction rate constants found a reasonable
+agreement with the experimental results.
+1
+α
+β
+α
+β
+α
+β
+α
+βα
+β
+α
+βα
+β
+α
+β
+α
+β
+α
+βα
+β
+α
+βα
+β
+α
+β
+α
+β
+α
+βα
+β
+α
+βα
+β
+α
+β
+α
+β
+α
+βα
+β
+α
+βα
+β
+α
+β
+α
+β
+α
+βα
+β
+α
+βα
+β
+α
+β
+α
+β
+α
+βα
+β
+α
+β
+~1 nm~8 nm(+) End
+(-) End
+FIG. 1. The structure of the B-type helical surface lattice
+of the microtubule. The kinesin heads can bind only to the
+β-tubulin monomers.
+The other possibility is the family of “Two-Step” mod-
+els. These models naturally explain the low displace-
+mentvariancebecauseofthetwosequentialsubprocesses.
+During one cycle one of the two heads takes a 8 nm step
+ﬁrst then the other head steps. Note that the motion
+of just one head advances the centroid of the molecule
+by only 4 nm the successive steps of the two heads in
+rapid pair results in an eﬀective 8 nm step which can be
+observed in the low speed regime. This kind of motion
+gives large stability to the protoﬁlament tracking. The
+diﬀerences in the “Two-Step” models arise from the rela-
+tive positions of the heads. If both heads track the same
+protoﬁlament they are not able to pass each other, so
+we can always distinguish the front and the back head.
+In this case the distance of the heads alternates between
+8 and 16 nm, which seems a bit large for the kinesin
+molecule with its 9 −10 nm long heads, but is still possi-
+ble. (Alternating between 0 and 8 nm is already impossi-
+ble because only one head can bind to each β-tubulin site
+at a time). Another quite reasonable situation is when
+thetwo heads track adjacent protoﬁlaments on a B-type
+lattice. In this case the heads are sitting on adjacent β-
+tubulins displaced from each other by only about 1 nm in
+the longitudinal direction, thus either can take the ﬁrst
+step (they can be identical).
+DYNAMICS OF THE KINESIN WALK
+We present here a one-dimensional kinesin walk model
+which describes the whole family of “Two-Step” models.
+Each of the two Brownian heads can move along its own
+one-dimensionalperiodic potential with period L= 8 nm
+in an overdamped environment. The two potentials canbe shifted relatively to each other by an arbitrary dis-
+tance (or even can be the same). These potentials rep-
+resent the interaction with the protoﬁlaments and the
+periods are the tubulin heterodimers. Each period has a
+deep potential valley corresponding to the binding site
+of theβ-tubulin and the other parts of the potential
+are ﬂat. Each valley has an asymmetric “V” shape (see
+Fig. 2): the slope in the backward direction (towards the
+“(−)” end of the microtubule) is steeper and 0 .5−1 nm
+long, while the other slope (towards the “(+)” end) is
+1.5−2 nm long, showing the polarity of the ﬁlaments.
+These ranges are in the order of the Debye length.
+FF (b)
+Q Q
+L = 8 nm L = 8 nm(a)
+FIG. 2. Schematic picture of the potential and the sub-
+sequent steps (from top to bottom) of the kinesin molecule
+in the two limiting cases. In the case (a) the hinge is always
+in the centroid of the molecule, and advances 4 −4 nm dur-
+ing both subprocesses. The two heads share the load force
+equally. In the case (b) the relative position of the hinge to
+the back head is ﬁxed, thus the whole load force acts on this
+head. During the ﬁrst subprocess the hinge does not move,
+however, during the second it advances 8 nm. All the inter-
+mediate cases are possible between (a) and (b).
+In our model the heads are connected at a hinge, and
+aspring acts between them (Fig. 2). At the beginning of
+the mechanochemicalcycle both headsaresitting in their
+valleyswaitingforanATPmolecule, andthespringisun-
+strained. Any conﬁguration of the model is mathemati-
+cally equivalent to a model in which the two potentials
+areidentical, the heads aresitting in the same valley, and
+therefore the rest length of the spring is zero. (Further
+on we will consider only this version of the model.) After
+one of the heads binds an ATP molecule, the hydrolysis
+of this ATP causes a conformational change in this head,
+2
+more precisely, induces the head to take a 8 nm forward
+step. In the language of the model it means that the
+rest length of the spring changes from zero to 8 nm right
+after the hydrolysis. Then, as the ﬁrst rate-limiting sub-
+process, the strained spring is trying to stretch pushing
+the head to the next valley. Reaching its new 8 nm rest
+length another conformational change occurs in the head
+as a consequence of the ADP release: the rest length
+of the spring changes back to zero quickly, then, as the
+second rate-limiting subprocess, the spring is trying to
+contract pulling forward the other head. Completing
+the contraction a next cycle can start waiting for a new
+ATP molecule. Hirose et al.[5] provide evidence that the
+kinesin·ADPcomplexhasindeedadiﬀerentconformation
+near the junction of the heads. (Similarly, a myosin head
+also gets over several conformational changes [23,24].)
+An important cooperative feature of our model is that
+only one ATP hydrolysis can occur during each cycle.
+This picture is consistent with the scheme of Gilbert
+et al.[25] for the pathway of the kinesin ATPase. The
+ﬁrst rate-limiting subprocess was observed as the disso-
+ciation of the head from the microtubule followed by a
+fast rebinding. They did not report on the second one,
+but it is clear that this subprocess already does not be-
+long to the chemical part of the cycle, and induces a slow
+dissociation and a fast rebinding of the other head.
+We can take the load force into account in a natural
+way. Since in the experiments of Svoboda et al.[9,10]
+a large (∼0.5µm in diameter) and therefore slow (com-
+pared to the kinesin heads) silica bead was linked to the
+hinge of the kinesin molecule by a relatively weak elastic
+tether, we can apply a constant (independent of time)
+forceFto the hinge. We arrive at the same conclusion
+by considering the experiments of Hunt et al.[8], where
+a viscous load acted on the moving microtubule while
+the long tail of the kinesin was ﬁxed. But how can we
+transfer the force to the heads when writing down the
+equations of their motion? There are two possible lim-
+iting cases: if the hinge is always in the centroid of the
+molecule (Fig. 2a) the two heads share the load force
+equally,i.e.,F/2 force acts on both heads; if the head
+which wants to step is always free from the load force
+(as in Fig. 2b) the whole force Facts on the actual back
+head. Due to the robustness of the model both (and
+therefore all the intermediate) cases yield practically the
+same force-velocity curves (Fig. 3).
+The motion of the heads are described by the Langevin
+equations
+Γ˙x1=−∂xV(x1)−Fload
+1+K·(x2−x1−l(t))+ξ1(t),
+Γ˙x2=−∂xV(x2)−Fload
+2+K·(x1−x2−l(t))+ξ2(t).
+(1)
+wherex1andx2denote the positions of the heads; Γ
+is the frictional drag coeﬃcient; V(x) is the periodic
+potential; l(t) is the rest length (which alternates be-
+tween 0 and 8 nm due to the conformational changes)
+andKis the stiﬀness of the spring; ξ1(t),ξ2(t) areGaussian white noises with the autocorrelation function/angbracketleftbig
+ξj(t)ξi(t′)/angbracketrightbig
+= 2kTΓδj,iδ(t−t′) fori,j= 1,2.
+02004006008001000
+0123456(a)
+020406080
+0123456Velocity  (nm/s)(b)
+0100200300400500600
+0123456
+Load Force  (pN)(c)
+FIG. 3. The force-velocity curves for an individual kinesin
+molecule at saturating ( ≫90µM) ATP in (a) and (c); and at
+low (∼10µM) ATP concentration in (b). The experimental
+data (scattered symbols) are from Svoboda and Block [9] in
+(a) and (b) obtained byusing optical tweezers; and from Hunt
+et al.[8] in (c) applying viscous load. The open circles cor-
+respond to the simultaneous eﬀect of multiple kinesin motor s
+in the authors’ interpretation [8,9]. The circles and diamo nds
+in (a) mean two diﬀerent set of the measured data. To get
+the best ﬁt (solid lines) we chose 0.7 nm for the backward
+length of the potential valleys and 1.75 nm for the forward
+length; the depth of the valleys was Q= 20kT. In these plots
+the load force was F/2 on each kinesin head. In plot (b) we
+multiplied the average displacement by the ATP consumption
+rateν(cATP) = 10 1/s for the best ﬁt. In plot (c) we used the
+same curve as in (a) but multiplied by a factor 0.6, which can
+be explained with the larger viscosity.
+3
+RESULTS
+In order to obtain results we can compare with the
+experiments ﬁrst the values of the input parameters have
+to be speciﬁed. The drag coeﬃcient Γ for a single head
+can be calculated from the Stokes formula yielding Γ ≈
+6×10−11kg/s.
+The free energy which can be gained from the ATP
+hydrolysis is about 25 kTor 100×10−21J. During a
+stepping cycle the two conformational changes consume
+the free energy of the ATP, while the rest length of the
+spring changes by 8 nm in both cases. This means
+that 1/2·25kT≈(K/2)(8 nm)2, from which we get
+K≈1.5 pN/nm.
+A lower limit for the depth Qof the potential valleys
+can be determined from the fact that the kinesin in rigor
+state supports forces in excess of 10 pN. If we try to pull
+out the two-headed kinesin molecule (with drag coeﬃ-
+cient 2Γ) from a 2 Qdeep potential valley with a force F,
+a low limit for the escape rate is
+F2
+kT2Γe−2Q/kT
+as follows from a more general expression (2) to be dis-
+cussed later. Assuming that the escape rate is much
+larger than 10−21/s we get 13 kTas a lower limit of
+Q. In reality the two heads cannot be handled as one
+larger head, because they are not ﬁxed to each other too
+rigidly, therefore, this is a very low limit. Q≈20kTis
+expected to be a better estimate.
+Notethatthetemperature Tplaysanimportantrolein
+our model due to the deep potential valley the Brownian
+kinesin heads have to escape from.
+We can assume that at the beginning of a stepping
+cycle both heads are sitting in the same valley of the
+potential. After the ATP hydrolysis, as the ﬁrst confor-
+mational change, the strained spring is trying to stretch,
+pushing one of the heads to a neighboring valley, which
+isL= 8 nm away. If the load force is small there is a
+large probability p+
+0L=J+
+0L/(J+
+0L+J−
+0L) that the front
+head jumps to the forward direction due to the asymme-
+try ofthe potential valleys(the forwardslope is less steep
+than the backward), and there is only a small probability
+p−
+0L=J−
+0L/(J+
+0L+J−
+0L) that the other head jumps back-
+ward.J+
+0LandJ−
+0Ldenote the corresponding jumping
+rates. Increasing the load the probability of the forward
+step decreases while that of the backward step increases.
+The average time t0L= 1/(J+
+0L+J−
+0L) which is needed
+for this stretching also slightly increases. Completing
+this subprocessthe secondconformationalchangeoccurs:
+the spring is trying to contract. Now for low load force
+the probability p+
+L0=J+
+L0/(J+
+L0+J−
+L0) that the back-
+ward head jumps forward to the next valley, where the
+other head is sitting, is close to 1, while the probabil-
+ityp−
+L0=J−
+L0/(J+
+L0+J−
+L0) that the forward head jumps
+backward is very small. Increasing the load the situation
+is similar to the previous case.Thus, under low load force the kinesin molecule steps
+8nm forwardduringalmosteachmechanochemicalcycle.
+But increasing the load the probability that the molecule
+remainsonthe same placeoreventakesa backward8 nm
+step increases. Reaching the stall load the average dis-
+placement of the kinesin becomes zero.
+Since the potential valleys are very deep (compared
+to the thermal energy kT), the heads spend almost all
+of their time at the bottom, and they are able to jump
+only very seldom. Therefore, we can calculate the above
+mentioned jumping rates ( J=J+
+0L,J−
+0L,J+
+L0orJ−
+L0)
+from an Arrhenius-like formula. All we need for this
+is the eﬀective potential Veﬀ(x) for the jumping head
+at the bottom of the valley and at the top of the bar-
+rier. The eﬀective potential consists of ﬁve parts: the
+V(x) periodic potential for the jumping head; the poten-
+tialFload
+jxof the external load force; the spring poten-
+tial/angbracketleftbig
+(K/2)(x−xr−l(t))2/angbracketrightbig
+xr; the/angbracketleftbig
+V(xr)/angbracketrightbig
+xrpotential
+for the remaining head; and the potential/angbracketleftbig
+Fload
+rxr/angbracketrightbig
+xrof the external load force for the remaining head. In
+this approximation/angbracketleftbig
+.../angbracketrightbig
+xrmeans thermal averaging for
+the position xrof the remaining head at the bottom of
+its valley. Thus, from the corresponding Fokker-Planck
+equation the jumping rate is
+J=D·e−(Veff
+max−Veff
+min)/kT
+/integraltext
+e−(Veff(x)−Veff
+min)/kTdx·/integraltext
+e−(Veff
+max−Veff(x))/kTdx,
+(2)
+whereD=kT/Γ denotes the diﬀusion coeﬃcient; Veﬀ
+min
+andVeﬀ
+maxare the minimal and the maximal values of the
+eﬀective potential; and the integrals should be evaluated
+around the appropriate extremum. Due to the depth of
+the potential valleys if we do not average the position of
+the remaining head but assume that it always sits at the
+bottom, we get similar results.
+From the jumping rates one can calculate the aver-
+age displacement d= (p+
+0Lp+
+L0−p−
+0Lp−
+L0)L= (J+
+0LJ+
+L0−
+J−
+0LJ−
+L0)[1/(J+
+0L+J−
+0L)][1/(J+
+L0+J−
+L0)]Lduring a cycle
+and the average time t=t0L+tL0= 1/(J+
+0L+J−
+0L) +
+1/(J+
+L0+J−
+L0) needed for this. Increasing the load the av-
+erage displacement decreases due to the increasing prob-
+abilities ofthe remaining and the backwardslippage; and
+the average time slightly increases as a manifestation of
+the so-called Fenn eﬀect [26]. (At stall load it is about
+three times larger than without load.)
+AtsaturatingATPconcentrationtheonlyrate-limiting
+factor is the stepping process, therefore dividing the av-
+erage displacement by the average time gives the average
+velocityv=d/tof the kinesin (Fig. 3a and c).
+But at low ATP concentration the rate-limiting factor
+is the diﬀusion of the ATP to the kinesin heads, i.e.,
+the stepping process is much faster than getting an ATP.
+Thus the average velocity is proportional to the average
+displacement during one cycle with the prefactor
+ν(cATP) =νsat·cATP
+Km+cATP≈νsat
+Km·cATP≈const·cATP,
+4
+which is the rate of the ATP consumption. cATPde-
+notes here the ATP concentration; νsatis the inverse
+average time of a cycle; and Kmis the mechanochem-
+ical Michaelis-Menten constant. Thus the velocity of the
+kinesin is v=ν(cATP)d(Fig. 3b).
+The diﬀerence between the shapes of the force-velocity
+curves at saturating (Fig. 3a and c) and at low (Fig. 3b)
+ATPconcentrationshowsunambiguouslytheFenneﬀect.
+Changing the distribution of the load force Fbetween
+the heads causes the change of the average time ( t0Land
+tL0) needed for the two subprocesses, but their sum, i.e.,
+theaverageduration tofthe steppingcycle, andthe aver-
+age displacement dremains practically unchanged. Thus
+the force-velocity curves are essentially the same for any
+distribution of the load force.
+We have also solved the Langevin equations (1) by nu-
+mericalintegration and our values are in full agreement
+with the results obtained from the above analysis.
+DISCUSSION
+Our model describes the stepping process of the ki-
+nesin molecule with elastically coupled heads. We do
+not use reaction rate constants, but only strain induced
+conformational changes and the underlying asymmetric
+periodic potential. Therefore, we can give the full de-
+scription of the dynamics of the motion.
+From Eq. (7) of Ref. [11] it follows that the displace-
+ment variance of a “Two-Step” process (in which each
+cycle consists of two sequential subprocesses with com-
+parable limiting rates) is r= 1−ps/2 times smaller than
+that of a single Poisson stepping process taking the same
+overall time. The stepping probability ps≤1 denotes
+the probability that a cycle produces a forward step. In
+our model at low load force the stepping probability is
+ps=p+
+0Lp+
+L0≈0.8, in addition, if the ATP concentra-
+tion is saturated the two subprocesses are the only rate-
+limitingfactorswiththesamerates. Thisleadsto r≈0.6
+as compared to r≈0.52 given with an error in the range
+of 0.1−0.2 in Ref. [11]. Thus, our model explains the
+low displacement variance at saturating ATP and at low
+load force. Furthermore, ﬁts the measured force-velocity
+curvesextremely well, and is consistent with the recent
+experimental studies of the pathway of the kinesin AT-
+Pase. The parameters of the model are essentially deter-
+mined by experiments or theoretical calculations, there-
+fore, they can only be tuned in a rather restricted range.
+The shapes of the force-velocity curves are essentially in-
+sensitive to the parameters within this range, showing
+the robustness of the model.
+If the relative position of the hinge to the backward
+head is ﬁxed as, e.g., in Fig. 2b then only one power
+stroke occurs during one cycle. The main advantage of
+this version is that the hinge advances the whole 8 nm
+distance at once. (Note, that in this case the ﬁrst sub-
+process is not so important, thus it can be of a diﬀerenttype, for example, similar to the myosin step: detach-
+ment, free swinging, and rebinding to the next side.) In
+any other cases (like in Fig. 2a), the two subprocesses
+meantwopowerstrokes,andthehingeadvancesthe8nm
+in two parts. In spite of this, one may observe only 8 nm
+displacements, as the two power strokes occur in rapid
+succession.
+From Eq. (2) it follows that the depth and the degree
+of asymmetry of the valleys in the periodic potential we
+assumed have the strongest eﬀects on the results. On the
+other hand, some further details (such as, for example,
+a shallow secondary valley instead of the ﬂat part) have
+lesssigniﬁcantinﬂuenceonthe force-velocitycurves. The
+temperature plays an essential role in the actual mech-
+anism of the walk. The two major points where tem-
+perature comes into the picture are the following: i) the
+potential valley has to be considerably deeper than 3 kT
+to ensure proper binding, ii) on the other hand, from a
+deep valley the heads may escape only if the spring and
+the temperature act simultaneously since the energy of
+the spring cannot be larger than that of the ATP hydrol-
+ysis.
+Todecidewhichtheoreticalmodeldescribesthekinesin
+stepping process in the best way, further experimental
+studies are needed. One possibility is to see how the
+force-velocity curves continue both at higher forces than
+the stall force and at negative forces. Another possibility
+is to measure the displacement variance at higher loads
+and at lower ATP concentrations. This could distinguish
+among the diﬀerent cases of our model as well, because
+for diﬀerent distributions of the load force Fthe average
+duration of the subprocesses are also diﬀerent resulting
+in diﬀerent variances.
+We are aware that C. Doering, M. Magnasco and G.
+Oster have considered a similar approach to the problem
+of the kinesin walk [27].
+The authors are grateful to J. Prost and A. Ajdari for
+useful discussions and for their kind hospitality during
+the visit of I. D. at ESPCI in Paris. The present research
+was supported by the Hungarian Research Foundation
+GrantNo.T4439andNo.F17246,andthecontractERB-
+CHRX-CT92-0063.
+[1] See,e.g., Darnell, J., Lodish, H. & Baltimore, D. (1990)
+Molecular Cell Biology (Scientiﬁc American Books, New
+York)
+[2] Song, Y.-H. & Mandelkow, E. (1993) Proc. Natl. Acad.
+Sci. USA 90, 1671-1675.
+[3] Hoenger, A., Sablin, E.P., Vale, R.D., Fletterick, R.J. &
+Milligan, R.A. (1995) Nature376, 271-274.
+[4] Kikkawa, M., Ishikawa, T., Wakabayashi, T. &Hirokawa,
+N. (1995) Nature376, 274-277.
+[5] Hirose, K., Lockhart, A., Cross, R.A. & Amos, L.A.
+(1995)Nature376, 277-279.
+[6] Vale, R.D., Reese T.S. & Sheetz M.P. (1985) Cell42,
+39-50.
+5
+[7] Ray, S., Meyhoefer, E., Milligan, R.A. & Howard, J.
+(1993)J. Cell. Biol. 121, 1083-1093.
+[8] Hunt, A.J., Gittes, F. & Howard, J. (1994) Biophys J.
+67, 766-781.
+[9] Svoboda, K. & Block, S.M. (1994) Cell77, 773-784.
+[10] Svoboda, K., Schmidt,C.F., Schnapp,B.J. &Block, S.M.
+(1993)Nature365, 721-727.
+[11] Svoboda, K., Mitra, P.P. & Block, S.M. (1994) Proc.
+Natl. Acad. Sci. USA 91, 11782-11786.
+[12] Block, S.M. & Svoboda, K. (1995) Biophys J. 68, 230-
+241.
+[13] Magnasco, M.O. (1993) Phys. Rev. Lett. 71, 1477-1480.
+[14] Ajdari, A. & Prost, J. (1992) C. R. Acad. Sci. Paris 315,
+1635-1639.
+[15] Prost, J., Chauwin, J.-F., Peliti, L. & Ajdari, A. (1994 )
+Phys. Rev. Lett. 72, 2652-2655.
+[16] Astumian, R.D. & Bier, M. (1994) Phys. Rev. Lett. 72,
+1766-1769.
+[17] Doering, C.R., Horsthemke, W. & Riordan, J. (1994)
+Phys. Rev. Lett. 72, 2984-2987.
+[18] Millonas, M.M. & Dykman, D.I. (1994) Phys. Lett. A
+185, 65-69.
+[19] Millonas, M.M. (1995) Phys. Rev. Lett. 74, 10-13.
+[20] Bartussek, R., H¨ anggi, P. & Kissner, J.G. (1994) Euro-
+phys. Lett. 28, 459-464.
+[21] Ajdari, A. (1994) J. Phys. I France 4, 1577-1582.
+[22] Peskin, C.S. & Oster, G. (1995) Biophys J. 68, 202-211.
+[23] Rayment, I., Holden, H.M., Whittaker, M., Yohn, C.B.,
+Lorenz, M., Holmes, K.C. & Milligan, R.A. (1993) Sci-
+ence261, 58-65.
+[24] Ostap, E.M. & Thomas, D.D. (1995) Biophys J. 68, 335.
+[25] Gilbert, S.P., Webb, M.R., Brune, M. & Johnson, K.A.
+(1995)Nature373, 671-676.
+[26] Fenn, W.O. (1924) J. Physiol. 184, 373-395.
+[27] C. Doering, private communication
+6

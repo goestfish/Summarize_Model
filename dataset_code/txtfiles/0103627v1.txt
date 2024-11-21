@@ -1,0 +1,442 @@
+arXiv:cond-mat/0103627v1  [cond-mat.stat-mech]  30 Mar 2001DECIPHERING THE FOLDING KINETICS OF
+TRANSMEMBRANE HELICAL PROTEINS
+Enzo Orlandini1, Flavio Seno1, Jayanth R. Banavar2, Alessandro Laio3& Amos Maritan3,4
+1INFM-Dipartimento di Fisica, Universit` a di Padova, Via
+Marzolo 8, 35131 Padova, Italy
+2Department of Physics and Center for Materials Physics, The
+Pennsylvania State University, University Park, 16802 Pen nsylvania
+3INFM - International School for Advanced Studies, Via Beirut 4 , 34014
+Trieste, Italy
+4The Abdus Salam ICTP, Strada Costieria 11, 34100 Trieste, Italy
+(April 14, 2021)
+Abstract
+Nearly a quarter of genomic sequences and almost half of all r eceptors that
+are likely to be targets for drug design1are integral membrane proteins. Un-
+derstanding the detailed mechanisms of the folding of membr ane proteins is a
+largely unsolved, key problem in structural biology. Here, we introduce a gen-
+eral model and use computer simulations to study the equilib rium properties
+and the folding kinetics of a Cα-based two helix bundle fragment (comprised
+of 66 amino-acids) of Bacteriorhodopsin. Various intermed iates are identiﬁed
+and their free energy are calculated toghether with the free energy barrier
+between them. In 40% of folding trajectories, the folding ra te is considerably
+increased by the presence of non-obligatory intermediates acting as traps. In
+all cases, a substantial portion of the helices is rapidly fo rmed. This initial
+stage is followed by a long period of consolidation of the hel ices accompa-
+nied by their correct packing within the membrane. Our resul ts provide the
+1
+framework for understanding the variety of folding pathway s of helical trans-
+membrane proteins.
+2
+Considerable eﬀort has been expended to understand the dynamic s of the folding and
+biological functionality of proteins. Whereas the behavior of small w ater soluble globular
+proteins is reasonably well understood both experimentally and the oretically2,3, much less
+is known about membrane proteins (MP)4–7that cross biological membranes. Transmem-
+brane proteins (TMP) are the most important and best studied clas s of MP4,5,8. They are
+characterized by the presence in their primary structure of long s egments (20 −30) of amino
+acids with a high degree of hydrophobicity. In the native structure , these correspond to the
+transmembrane segments which are inserted in the lipidic interior of t he membrane9. These
+segments are predominantly made up of α-helices and β-sheets. The stability of α-helices
+andβ-sheets inside the membrane follow from the formation of hydrogen bonds between the
+backbone atoms – other possibilities are excluded within the apolar en viroment4,10.
+Phenomenological models have proved to be powerful for interpre ting experimental data.
+The most common of these is the Two-Stage model based on experimental evidence that
+the folding of TMP occurs in two stages. In the ﬁrst stage, α-helices and β-sheets are
+formed with the full native state structure being formed in a distinc t second stage10. A
+more reﬁned model4takes into account four main steps: partitioning, folding, insertion and
+association. Recently, Pappu et al.11have used a potential smoothing algorithm to predict
+transmembrane helix packing in good accord with experimental data .
+Milik and Skolnick12,13have carried out careful Monte Carlo studies of the insertion
+of peptide chains into lipid membranes and have proposed a new hydro pathy scale based
+on experimental data obtained by studying the interactions of trip eptides with phospho-
+lipid membranes14and the self-solvation eﬀect in protein systems15. Recently Wimley and
+White16havedesignedtransmembranepeptidesthatspontaneouslyinser tacrossbilayersbut
+yet have measurable monomeric water stability, opening the way for the determination of
+the thermodynamic cost of partitioning hydrogen bonded peptide b onds into the membrane
+hydrocarbon core.
+The Monte-Carlo results ofMilikandSkolnick12,13areingoodaccordwithEngelmanand
+Steitz’shelicalhairpinhypothesis17furtherextendedbyJacobsandWhite18,19. Theunfolded
+3
+chain is ﬁrst adsorbed onto the membrane interface, driven mostly by the hydrophobic
+eﬀect and electrostatic lipid-protein interactions20–22. A polypeptide chain has a greater
+possibility, while anchored to the interface, of saturating its intern al hydrogen bonds and
+forming helices. Such helical fragments have a greater propensity to subsequently diﬀuse
+into the lipid phase.
+AdetailedstudyofTMPhasnotyetbeenpossiblebecauselittleisknow nabouttheinter-
+actions between amino acids inside the membrane or between them an d the lipid molecules.
+Here, we adopt a simple, yet powerful, strategy for attacking the folding properties of TMP
+that circumvents this shortcoming. Our novel approach is based o n extensive studies of
+the folding of globular proteins which have underscored the importa nt role played by the
+topology of the native state in controlling both the functionality and the main features of
+the folding process. Nature uses a rich repertory of twenty kinds of amino acids with some-
+times major and at other times subtle diﬀerences in their interaction s with the solvent and
+with each other in order to design sequences that ﬁt the putative n ative state with minimal
+frustration32. Thus a fruitful and general strategy for the study of protein f olding would be
+to extract information on the folding process directly from the top ology of the native state.
+Our study here focuses on the folding process by using a tractable approach (described
+in the Methods Section) that by-passes the details of the complex in teractions of the protein
+in the lipid enviroment by introducing eﬀective potentials, induced by t he presence of the
+membrane and the associated interface region, that stabilize the n ative state structure. The
+validity of the approach based on the native state topology, in the c ase of globular pro-
+teins, has been conﬁrmed a posteriori from the agreement betwe en theory and experimental
+ﬁndings2,23–31. The approach proposed here is similar in spirit and ought to be a tool and a
+guide for the diﬃcult experimental situation of TMP16. Our model allows a complete char-
+acterization of the thermodynamics and the dynamics of the full fo lding process. Due to the
+small number of degrees of freedom involved, the dynamics of the s ystem can be simulated
+for the full folding process. Moreover, the free energies of the m ost relevant intermediate
+states and free energy proﬁles along the reaction paths connect ing them can be explicitly
+4
+calculated by thermodynamic integration (see Methods). Thus the model is able to quanti-
+tatively discriminate between the possible reaction paths envisaged for the insertion process
+of TMP across the membrane4, a feature that is not an obvious consequence of the structure
+of the model. Where there is overlap, our model captures the qualit ative features of the
+earlier simulations of Milik and Skolnick12,13.
+The TMP we considered is made up of the ﬁrst 66 amino acids of bacter iorhodopsin
+consisting of two α-helices (Fig. 1 a). It has been shown that the ﬁrst two helices of bacteri-
+orhodopsin can be considered as independent folding domains33. Furthermore, the side-by-
+side interactions between transmembrane helices play a key role in th e stabilization of the
+protein structure34.
+OurstudieswerecarriedoutusingaMonteCarloalgorithmthathasb eenproventobeex-
+tremely eﬃcient for interacting hetero-polymers (Methods). The behaviour of the structural
+similarity between the system equilibrated at temperature T(measured in dimensionless
+units) and the native state is shown in Figure 1 bin terms of the average fraction of native
+state contacts as a function of Tand partitioned depending on their positions with respect
+to the membrane. The three curves correspond respectively to t he average fraction of native
+contacts inside ( qm) , outside ( qb) and across ( qs) the membrane (see Methods). All these
+curves, well separated at high T, collapse for Tbelow the transition temperature TC∼0.6,
+indicating a cooperative eﬀect in the folding. On monitoring the free e nergy as a function
+of the energy around TC, one observes additional local minima (besides those correspondin g
+to the unfolded and folded states) suggesting the presence of an intermediate.
+The intermediate is characterized by having the two helices almost co mpletely formed
+but not yet correctly inserted across the membrane. A metastab le state in which the protein
+exists at the membrane interface ought to be expected on genera l grounds. Indeed a generic
+heteropolymer withhydrophobic andhydrophilic aminoacids, ofwhich aTMPisaparticular
+case, has a favorable conformation which is localized near surfaces between two selective
+media (the outside and the inside part of the membrane in the presen t case)35,36. At not too
+high temperatures, the gain in energy to place hydrophobic/hydro philic protein segments in
+5
+their preferred enviroment compensates the entropy loss for be ing localized at the interface
+with respect to remain in the bulk phase. Thus, even though our mod el does not explicitly
+contain information on the character of the amino acids, it is able to p redict this feature.
+The presence of these extra minima suggests that non-constitut ive membrane proteins
+wouldfoldwithmulti-statekineticscorrespondingtoon-pathwayint ermediates. Toestablish
+their nature of and their inﬂuence on the dominant folding pathways , we have performed
+a detailed analysis of the folding kinetics. Each independent kinetic fo lding simulation was
+started with the equilibrated denaturated state at T∗= 2.5 . The protein is placed initially
+outside the membrane in the interface region4, at a distance comparable to the average
+size of the denatured protein and then suddenly quenched to a tem perature ( T= 0.4) well
+belowthetransitiontemperature. Thiscasesimulatesthefoldingkin eticsofnon-constitutive
+membrane proteins, i.e. proteins that do not need a translocon pro viding a ’tunnel’ through
+which the protein is injected into the lipid bilayer. Folding to the native s tate occurs mainly
+through the states depicted in Figure 2 awith the dominant pathways shown in Figure 2 b.
+In all the pathways, thesystem goes fromtheunfolded state, Uto stateHIin which 80%
+of the secondary structure is formed (see qin Figure 3 c) and disposed horizontally along the
+interface. The free energy of this state (measured with respect to the free energy of the fully
+folded state) is ∼2.4 TC. This state corresponds to the formation of around 70 % of the
+membrane contacts. The average time τHIto reach state HIis of the order of 500 Monte
+Carlo steps (see Figures 3 and 4; each Monte-Carlo step correspo nds to 50000 attempted
+local deformations.). State HI turns out to be an obligatory on-pa thway intermediate of the
+folding kinetics for non-constitutive MP in agreement with the gener al argument mentioned
+above. Once the protein reaches state HI, it undergoes a relatively slow process of self-
+arrangement in order to insert and assemble the secondary struc tures across the membrane.
+Thisprocessistherate-limitingstepofthefoldingprocess, sinceitin volvesthetranslocation,
+throughthelipidiclayer, ofasubstantialnumberofhydrophilicresid ues. Amongthepossible
+pathways, starting from HI, the most frequent (60% of the cases) and the fastest turn out
+to beU→HI→HV→N. A quantitative characterization of this dominant pathway
+6
+is presented in Figures 3 (for a single folding process) and 4 (as an av erage over 40 folding
+processes). The intermediate HVis characterized by having one αhelix inserted across the
+membrane and is reached in an average period corresponding to a sig niﬁcant fraction of the
+total folding time (see Figure 3). The free energy in this state is ∼0.98TC.The free energy
+barrier between HIandHVis at∼4.31TC(hence, the rate constant of the transition
+HI→HVis proportional to kHI→HV= exp(−(4.31−2.4)TC/T)). The full free energy
+proﬁle versus a reaction coordinate is shown in Fig. 5. The last part o f the folding process
+corresponds to the insertion of the second helix and the assembly o f the two secondary
+structures into the native state structure. This process lasts a pproximately one third of the
+folding time along the pathway U→HI→HV→N. The quasistatic free energy barrier
+betweenHVand the folded state is ∼1.66TC. The rate costant of the transition HV→N
+is, therefore, proportional to exp( −(1.66−0.98)TC/T). These results are consistent with
+the time scales observed in the unconstrained folding dynamics. At t he end, the protein
+is completely packed, ( qmsaturates to 1 (Figures 3 aand 4a)) and the helices are correctly
+positioned across the membrane (note the second jump in the zcoordinate of the center of
+mass in Figures 3 band 4b).
+Much slower dynamics can occur when non-obligatory intermediates are visited by the
+system. These long lived states ( {I}in Figure 2 a) involve a distribution of misfolded regions
+that trap the system and are characterized by having most of the inter-helical contacts
+formed (assembly of the secondary structures) but with the two α-helices still incorrectly
+positioned. Note, for example, that in states {I}, only transmembrane contacts and some
+contacts outside the membrane are misplaced and they account fo r only a small fraction
+of the native state energy. For this reason, in the states {I}, the free energy is ∼1.44
+TC, only slightly higher than the free energy of HV. The folding can proceed from {I}
+either by disentangling the two helices and passing through the obliga tory intermediate
+HV, or by the simultaneous translocation through the membrane of th e two helices. These
+processes, however, entail the crossing of a big free energy bar rier (∼5.18TCfor the ﬁrst
+process and 6 .1 for the second) and happen with low probability. Indeed, at suﬃcie ntly
+7
+low temperatures, the loss in energy of the interhelical contacts is not compensated by the
+gain in the conﬁgurational entropy due to the uncoupling of the α−helices. Thus below the
+folding temperature, I-states act as trapping regions for the sy stem and when trapped, the
+protein spends most of the time during folding in this state.
+In summary, we have presented detailed calculations of helical tran smembrane proteins
+leading to a vivid picture of the folding process. Our strategy relies o n the dominant role
+played by the topology of the native state structure and by the eﬀ ective geometry imposed
+by the membrane and provides a picture which would be expected to b e quite accurate for
+well-designed sequences that are a good ﬁt to the target native st ate conformation. It is
+interesting to note that , with our choice of the parameters, the p athway in which the helices
+assemble outside the membrane and are inserted later is unlikely to oc cur.
+Models based on the topology of the native state structure have b een remarkably
+successful25–28in correctly describing the main features of the folding process det ermined
+in experiments2,23,24,29–31for various globular proteins. A similar approach has been gen-
+eralized here to the almost virgin ﬁeld of transmembrane proteins wh ere experiments are
+rather diﬃcult16,4,7. Our ﬁndings do not depend on the precise values of the ǫparameters
+introduced in the model underscoring the robustness of the resu lts. Our approach predicts a
+folding process involving multiple pathways with a dominant folding chan nel. The simpliciy
+of our model allows for a quantitative description of all the pathway s since we can monitor
+the correct/uncorrect formation of native contacts andcompu te free energy proﬁles. Further
+details not captured by the present approach arising from amino-a cid speciﬁc interactions
+among themselves, with the solvent and in particular with the interior of the membrane
+may of course change the quantitative nature of the results. How ever, our model, which
+captures the bare essentials of a membrane protein, ought to pro vide a zeroth order picture
+of the folding process. Also, as experimental data becomes availab le, the results could be
+benchmarked with models of this type to glean the other factors th at matter.
+8
+I. METHODS
+We represent the residues of the membrane protein as single beads centered in their
+Cαpositions. Adjacent beads are tethered together into a polymer c hain by a harmonic
+potential with the average Cα−Cαdistance along the chain equal to 3 .8˚A. The membrane
+is described simply by a slab of width w=zmax−zmin= 26˚A. Two non-bonded residues
+(i,j) form a contact if their distance is less then 6 .5˚A. In the study of globular proteins,
+the topology of the native state is encoded in the contact map giving the pairs ( i,j) of
+non-bonded residues that are in contact. Here, in addition, the loc ations of such pairs
+with respect to the membrane becomes crucial. The contacts are d ivided into three classes:
+membrane contacts where both iandjresidues are inside the membrane, interface contacts
+withiandjin the interface region4outside the membrane and surface contacts with one
+residue inside the membrane and the other outside. Thus a given pro tein conformation can
+have anative contact but improperlyplaced withrespect tothemem brane (misplaced native
+contact). The crucial interaction potential between non-bonded residue s (i,j) is taken to be
+a modiﬁed Lennard-Jones 12-10 potential:
+Γ(i,j)
+5/parenleftBiggdij
+rij/parenrightBigg12
+−6/parenleftBiggdij
+rij/parenrightBigg10
++5 Γ1(i,j)/parenleftBiggdij
+rij/parenrightBigg12
+. (1)
+The matrices Γ( i,j) and Γ 1(i,j) encode the topology of the TMP in the following way: if
+(i,j) is not a contact in the native state Γ( i,j) = 0,Γ1(i,j) = 1; if ( i,j) is a contact in the
+nativestatebutnotattheproperlocation(i.e. amisplacedcontact )Γ(i,j) =ǫ1,Γ1(i,j) = 0;
+if (i,j) is a native state contact in the proper region Γ( i,j) =ǫ,Γ1(i,j) = 0. This model
+is intended to describe the folding process in the interface and in the membrane region.
+Our interaction potential (similar in spirit to a well known model37for globular proteins
+(see also other approaches that model helix formation38,39)) assigns two values to the energy
+associated with the formation of a native contact, ǫandǫ1.
+The model captures the tendency to form native contacts. In ad dition, in order to
+account for the eﬀective interactions between the membrane and the protein, the model
+9
+assigns a lower energy, −ǫ, to the contact which occurs in the same region as in the native
+state structure compared to −ǫ1when the contact is formed but in the wrong region of
+space. This feature proves to be crucial in determining the mechan ism of insertion of the
+protein across the membrane in order to place all native contacts in the same regions as in
+the native state. Even though the interaction potential is simple an d intuitively appealing,
+it is not possible to simply guess (without detailed calculations) the fold ing mechanism and
+quantitatively determine the probability of occurrence of the vario us folding pathways4.
+Whenǫ=ǫ1, the protein does not recognize the presence of the interface-m embrane
+region and the full rotational symmetry is restored (the system b ehaves like a globular
+protein). The diﬀerence in the parameters ( ǫ−ǫ1) controls the amount of tertiary structure
+formationoutside the membrane. When the diﬀerence is small, the pr otein assembles almost
+completely outside the membrane and the insertion process would be diﬀusion limited. Our
+results are independent of the precise values of the energy param etersǫandǫ1(ǫ > ǫ1) as
+long as they are not too close to each other.
+We report here the results of simulations with ǫ1= 0.1 andǫ= 1.rijanddijare
+the distance between the two residues ( i,j) and their distance in the native conﬁguration,
+respectively. In order to account for the chirality of the TMP, a po tential for the pseudodi-
+hedral angle αibetween the Cαatoms in a helix corresponding to four successive locations
+is added which biases the helices to be in their native state structure .
+The thermodynamics and the kinetics of the model were studied by a Monte Carlo
+method for polymer chains allowing for local deformations. The eﬃcie ncy of the program
+(usually low for continuum calculations) has been increased by full us e of the link cell
+technique40and by the multiple Markov chain method, a new sampling scheme, which has
+been proven to be particulary eﬃcient in exploring the low temperatu re phase diagram for
+polymers41. In our simulation 20 diﬀerent temperatures ranging from T= 2 toT= 0.17
+have been studied. The free energy is calculated by reweighting the diﬀerent temperatures
+with the Ferrenberg-Swendsen42algorithm.
+The free energy diﬀerence FB−FAbetween two states A and B has been estimated as
+10
+the reversible work that has to be done in order to go from A to B. He nce, denoting by
+x(λ) a reaction coordinate connecting A and B (for λ= 0 and λ= 1 the system is in A
+and B respectively), and by /an}bracketle{t·/an}bracketri}htλ=/an}bracketle{tδ(x−x(λ))·/an}bracketri}ht, the canonical average at ﬁxed reaction
+coordinate,
+FB−FA=/integraldisplay1
+0dλ/an}bracketle{tF/an}bracketri}htλ·dx(λ)
+dλ≃/summationdisplay
+i/an}bracketle{tF/an}bracketri}htλ·dx(λ)
+dλ/vextendsingle/vextendsingle/vextendsingle/vextendsingle/vextendsingle
+λ=λi+λi+1
+2(λi+1−λi) (2)
+whereFis the force and {λi,i= 1,...}is a suitably dense partition of the interval (0 ,1).
+The average value /an}bracketle{tF/an}bracketri}htλiat eachλiis computed by a long (more than 5000 steps) Monte
+Carlo run performed with dynamics satisfying the constraint x=x(λi) . The free energy
+diﬀerences obtained with this method are accurate to within ∼0.1TCfor the various states
+whereas the free energy barriers are accurate within ∼0.5TC. This error takes into account
+possible hysteresis eﬀects due to the ﬁnite simulation time.
+11
+REFERENCES
+1Nature Structural Biology 6, 1-2 (1999).
+2Fersht, A. R., W. H. Freeman, New York (1999).
+3Karplus, M. & Sali, A. Curr. Opin. Struct. Biol. 5, 58-73 (1995).
+4White, S. H. & Wimley, W. C. Ann. Rev. Biophys. Biomol. Struct. 28, 319-365 (1999).
+5Ostermeier, C. & Michel, H. Curr. Opin. Struct. Biol. 7, 697-701, (1997).
+6von Heijne, G. Prog. Biophys. Molec. Biol. 66, 2, 113-139 (1996).
+7Booth, P.J. Folding & Design , R85-R92 (1997).
+8Biggin, P. C. & Sansom, M. S. P. Biophysical Chemistry 76, 161-183 (1999).
+9Deber, C. M. & Goto, N. K. Nature Structural Biology 3, 815-818 (1996).
+10Popot, J. L. & Engelman, D. M. Biochemistry 29, 4031-4036 (1990).
+11Pappu, R. V., Marshall, G. R. & Ponder, J. W. Nature Structural Biology 6, 50-55 (1999).
+12Milik, M. and Skolnick, J. Proc. Natl. Acad. Sci. USA 89, 9391-9395, (1992)
+13Milik, M. and J. Skolnick. Proteins: Funct. Stru. Gen. 15,10-25, (1993)
+14Jacobs,R. E. & ite, S. H., Biochemistry 26, 6127-6134 (1987)
+15Roseman, M. A., J. Mol. Biol. 200, 513-522 (1988).
+16Wimley, S.C. & White, S.H Designing Transmebrane α-helices That Insert spontaneously
+preprint . University of California, Irvine (2000)
+17Engelman, D.M. & Steitz, T.A. Cell,23, 411-422 (1981).
+18Jacobs, R.E. & White, S.H. Biochemistry ,28, 3421-3427 (1989).
+19Jacobs, R.E. & White, S.H. Biochemistry ,25, 2605-2612 (1986).
+12
+20Pinheiro, T. J. T. , El¨ ove, G.A., Watts, A. and Roder, H.. Biochemistry 36,13122-13132
+(1997)
+21Rankin, S. E., Watts, A. and Pinheiro, T.J.T. Biochemistry 37, 12588-12595 (1998)
+22Bryson, E. A., Rankin, S.E., Carey,M. Watts, A. and Pinheiro, T.J.T. Biochemistry 38
+:9758-9767 (1999)
+23Fersht, A. R. Current Opinion in Struct. Biology 5, 79-84 (1995)
+24Fersht, A. R. Current Opinion in Struct. Biology 7, 3-9 (1997)
+25Micheletti, C. , Banavar, J. R., Maritan, A. & Seno, F. Phys. Rev. Lett. 82, 3372-3375
+(1999).
+26Munoz, V. & Eaton, W. A. Proc. Natl. Acad. Sci. 96, 11311-11316 (1999).
+27Galzitskaya, O. V. & Finkelstein, A. V. Proc. Natl. Acad. Sci. 96, 11299-11304 (1999).
+28Alm, E. & Baker, D. Proc. Natl. Acad. Sci. 96, 11305-11310 (1999).
+29Chiti, F., Taddei, N., White, P. M., Bucciantini, M., Magherini, F., Stefani, M. and
+Dobson, C. M. Nature Structural Biology 6, 1005, (1999).
+30Martinez, J. C. and Serrano, L. Nature Structural Biology 6, 1010, (1999).
+31Riddle, D. S., Grantcharova, V. P., Santiago, J. V., Alm, E., Ruczinski, I. and Baker, D.
+Nature Structural Biology 6, 1016, (1999).
+32Bryngelson, J. D. and Wolynes, P. G. Proc. Nat. Acad. Sci. USA 84, 7524, (1987).
+33Kahn, T. W., Sturtevant, J.M. and Engelman, D.M. Biochemistry 31,8829-8839 (1992)
+34Kahn, T. W. & Engelman, D.M.. Biochemistry 31,6144-6151 (1992)
+35Garel, T., Huse, D.A., Leibler, L. & Orland, H. Europhys. Lett. 8, 9-12 (1989)
+36Maritan, A., Riva, M.P. & Trovato, A. J. Phys. A: Math. Gen. 32, L275-L280 (1999)
+13
+37Taketomi, H., Ueda, Y. & Go, N. Int. J. Pept. Protein Res. 7, 445-459 (1975).
+38Guo, Z. & Thirumalai, D. Journal of Molecular Biology 263, 323-343 (1996)
+39Takada, S. , Luthey-Schulten, Z. & Wolynes, P.G. Jour. of Chem. Phys. 110, 11616-11629
+(1999)
+40Geroﬀ, I., Milchev, A., Binder, K. & Paul, W. J. Chem. Phys. 98, 6256-6539 (1993).
+41M. C. Tesi, van Rensburg, E.J., Orlandini, E. & Whittington, S. G. J. Stat. Phys. 29,
+2451-2463 (1996).
+42Ferrenberg, A. M. & Swendsen, R. H. Phys. Rev. Lett. 63, 1195-1198 (1989).
+Acknowldgements
+We thank Cristian Micheletti for fruitful discussions and Steve Whit e for a critical reading of
+the manuscript and for many enlightening suggestions. This work wa s supported by INFM
+(PAIS project), MURST-COFIN99, NASAandthe Donorsof ThePe troleum Research Fund
+administered by The American Physical Society.
+14
+II. FIGURE LEGENDS
+Figure 1: Structure and thermodynamics of the helical transmembrane pro tein.
+a)Ribbon representation of the two-helix fragment of bacteriorhod opsin formed
+by the ﬁrst 66 amino-acids. The part inside the membrane (determin ed
+by using the neural network learning algorithm available at http://ww w.embl-
+heidelberg.de/Services/sander/predictprotein/) is shown in red, the part above (below) the
+membrane in blue (green). b)Average equilibrium fraction of native contacts outside, qb
+(◦), inside, qm(✷), and across, qs(△), the membrane as a function of the temperature T.
+All these quantities are expressed in energy unit of ǫ(see Methods). The folding transition
+temperature TCwhen all the curves cross the value 1 /2 is around 0.6. This value is in accord
+with the temperature of the heat capacity maxima.
+Figure 2: Schematic representation of states encountered by non-const itutive proteins
+during the folding process.
+Ina)the red cylinders denote α-helices that reside within the membrane in the native
+state. The region inside the membrane is in turquoise whereas the re st represents the
+interface region4in which the folding process starts. State Udenotes the denatured state
+of the protein, HOis a state in which the helices have been formed but are not yet inside
+the membrane whereas HIcorresponds to a similar state but with the helices completely
+embedded in the membrane without any inter-helical contacts. Usu ally the helices form and
+enter into the membrane separately. HVdenotes an obligatory intermediate and Ndepicts
+the native state. The state {I}represents an ensemble of long lived conformations in which
+helices are formed inside the membrane with several inter-helical co ntacts, but with the two
+α-helices still incorrectly positioned. This conformations diﬀer in term of packing eﬃciency
+of the helices. The state {I}is not obligatory for the folding kinetics. In b)the schematic
+pathways to the native state are shown. In the most directed pat h, the entropy decreases
+on going from UtoN. FromHItoHVthe entropy loss of one helix is not compensated by
+a corresponding energy gain until both helices become vertical. This is the principal origin
+15
+of the high free energy barrier between the state HIand the native state.
+Figure 3: Typical time dependence of diﬀerent parameters as a function of t he Monte-
+Carlo steps for the pathway U→HI→HV→N. Fraction of native contacts inside the
+membrane ( a), normalized z-coordinate of the center of mass of the protein (w ith respect to
+that of the native state conformation) ( b) and overall fraction of native helical contacts ( c).
+Each Monte-Carlo step corresponds to 50000 attempted local de formations. The transition
+from state HIto state HVis signalled by a sharp jump of the position of the center of
+mass. Note that there is no perceptible sign of this transition in term s of newly formed
+native contacts. Most of the helical contacts are formed in the ea rly stages of the folding.
+This fraction does not signiﬁcantly increase until helices correctly a ssemble and the inter-
+helical contacts are formed. The HV→Ntransition is reached by a progressive zippering
+of the horizontal and vertical helices. This zippering is usually very q uick (few MC steps)
+and is only slightly slowed down (see the plateau corresponding to qm∼0.9 ina) when the
+trajectory passes through somewhat deformed conformations . (d) Protein conformations at
+diﬀerent timesduring thefolding. Thecolours red, greenandblueha ve thesame signiﬁcance
+as in Figure 1a with the grey bonds being ones crossing the membrane .
+Figure 4: Distribution of the fraction of native contacts inside the membrane
+(a) and of the normalized z-coordinate of the center of mass ( Rz=zcm
+zcm
+nat) (b). The data were
+obtained using 40 independent kinetic simulations with pathway U→HI→HV→N.
+The grey scale distribution indicates the probabilities at given times: d arker points denote
+higher probability.
+Figure 5: Free energy proﬁles along three reaction coordinates at T=0.85T C. The
+continuous lines are spline ﬁts to the free energy data (crosses) . To obtain free energy
+diﬀerences between two states we estimate the reversible work th at has be done to go from
+one state to the other. For this purpose, we ﬁx the z coordinate o f a speciﬁc residue in order
+to compute the canonical average of the force and then apply eq. (2) (See Methods). The
+free energy of the native state is deﬁned to be equal to 0. ( a) Free energy as a function of
+thez-coordinate of the 58-th residue ( z= 0 corresponds to the middle of the membrane)
+16
+starting from HV; this forces the second helix to cross the membra ne as the protein goes
+from HV to N; the local minimum at z ≃20 corresponds to a state topologically equivalent
+to HV, with the helix containing the 58-th residue fully formed on the m embrane interface
+but without any contact with the ﬁrst helix (in HV some of the inter-h elices contacts are
+already formed); ( b) the 5-th residue is translocated across the membrane with the pr otein
+starting from state HI and proceeding to HV; ( c) the same as in ( b), but the initial state is
+I (see Fig. 2-a)
+17
+FIGURES
+a)                            b)                                 
+FIG. 1. Seno
+18
+U  H0                HI                HV               N
+{ I }State   U State   HO
+State   HV
+Native State  (N) State  IState   HI
+b)a)
+FIG. 2. Seno
+19
+HI HV Na)
+b)
+c)
+d)
+FIG. 3. Seno
+20
+0 4000 8000 12000 16000 20000
+time0.00.20.40.60.81.0
+qm( a )
+0 4000 8000 12000 16000 20000
+time1.001.021.041.061.081.10
+Rz( b )
+FIG. 4. Seno
+21
+-15-10-50510012345
+-15-10-5051015012345
+-15-10-5051015012345
+HV HV HVHI
+I
+N
+z(58) [A] z(5) [A] z(5) [A]F  [TC](a) (b) (c)
+FIG. 5. Seno
+22

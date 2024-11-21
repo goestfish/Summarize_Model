@@ -1,0 +1,1823 @@
+arXiv:cond-mat/9710269v1  24 Oct 1997Keywords: Bilayer membranes; Dynamics; Hydrodynamic theory; Isolat ed mem-
+branes
+1. Introduction
+Phenomenological studies of lipid bilayer membranes have b ecome imperative,
+for a large amount of experiments reveal that the matrix of bi omembrane plays an
+important role in some non-linear phenomena such as shape ﬂu ctuations of cells
+and oscillations of the membrane potential in an external el ectric ﬁeld (1-3). In
+approaching the problem, however, one isimmediately confr onted withcomplexities
+because of the concurrence of the elastic-viscous motion an d the change in shape of
+the material. The lack of a theoretical framework tailored f or non-Newtonian ﬂuid
+membranes impedes progress in this research area, though th e general geometrical
+method in continuum mechanics has been well established. Th e purpose of this
+paper is to present such a framework.
+Themembranesconstitutedbytwolayersofrod-shapedmolec ulesareidentiﬁed
+with hydrotropic liquid crystals in the laminar phase. From this point of view, one
+assumes in the present paper that the dynamic theory of liqui d crystals developed
+during the last 30 years is applicable to the membranes. In fa ct, the experimental
+observationsmentionedabovewouldnotbesurprisingifone thinksoftheanisotropy
+feature of the material, which, as is well known, leads to ins tabilities in the liquid
+crystal bulk.
+Due to the pioneering research of Oseen [4], the fundamental contribution of
+Frank [5] and the important supplementary work of Nehring an d Saupe [6], a cur-
+vature elasticity theory of liquid crystals has been establ ished. It is essentially
+a phenomenological theory. A dimensionless unit vector nam ed “director” is de-
+ﬁned to indicate the preferred orientation of the molecules . The energy stored in
+the material during elastic deformation is thus expressed i n terms of this vector.
+Extending the theory to thin ﬁlms in particular yields the we ll-known curvature
+elasticity equation of membranes [7] which has been used in f ruitful studies on the
+hydrostatic form of lipid vesicles [8].
+The dynamic theory of liquid crystals [9-13], mainly uniaxi al crystals, stems
+from such a mechanical base. It assumes rotation of the molec ules, indicated by the
+director, superposed on the mean ﬂow of the molecules themse lves. The theory was
+used to investigate instabilities of liquid crystals and ha s interpreted successfully
+the Williams’ domain structure and the homoetropic texture s as well in nematics
+[14-22].
+One adapts the theory to the particular context by neglectin g non-uniformities
+across the membrane thickness and replacing the three-dime nsional ﬁlm by a two-
+dimensional surface. It is exactly the method used in the the ory of thin shells
+[23]. The simpliﬁcation is acceptable in most cases of bioce lls, for the membrane
+thickness (40-80 ˚A) is suﬃciently small with regard to the cell diameter (1-10 µm).
+Moreover, the tiltangle of the long molecular axes withresp ect to the vector normal
+to the surface is supposed to be small and hence the elasticit y theory is restricted
+within the extent of linear approximation. With these consi derations, one obtains
+1
+a particular version of the dynamic equations, in which geom etric invariants such
+as the fundamental magnitudes and the curvatures are used to describe the shape
+of the membrane, while the displacement of the conﬁguration of the membrane is
+treated separately from the internal movement ofthe partic lesinside the membrane.
+The attempt to construct such a group of equations, so far as o ne knows, was made
+10 years ago by Peterson [24]. He established, however, only the dynamic equations
+of a solid ﬁlm and the hydrodynamic equations of a Newtonian ﬂ uid membrane,
+separately. This left a gap between these two limiting cases . One will see that by
+introducing the theory of liquid crystals the gap is natural ly bridged.
+Recent tetherexperimentssupport theopinionthatslipbet weenthetwomolec-
+ular layers causes interlayer viscous dissipation [25] whi ch might not be negligible
+in dynamical studies of bilayer membranes [26]. One recogni zes that this kind of
+internal dissipation is excluded from the present theoreti cal model.
+This paper is the ﬁrst part of a series devoted to present the g eneral electro-
+hydrodynamic equations of polar viscoelastic ﬂuid membran es isolated from their
+surroundings. The hydrodynamic theory of liquid crystals w ill be recapitulated in
+the next section, then it will be adapted to the context of bil ayer membranes in the
+third section. The connection of such a membrane to the liqui d surroundings will
+be considered in subsequent papers.
+2. Outline of the Ericksen-Leslie theory
+The hydrodynamics of liquid crystals was primarily establi shed by Ericksen
+[9]. He assumed an intrinsic motion of the non-spherical mol ecules and used a
+time-dependent director to indicate it. Because of the mate rial symmetry, he con-
+structed the constitutive relationships of the dynamic var iables involved and hence
+interpreted explicitly the dynamic conservation laws for u niaxial liquid crystals.
+Leslie [10] was able to take into account the antisymmetric s tress of the anisotropic
+continuum [27,28], which had been overlooked in the express ions of Ericksen, and
+thus provided us a reﬁned version of the theory.
+2
+2.1. Mass balance
+The principle of mass conservation holds in the convected vo lumeR
+d
+dt/integraldisplay/integraldisplay
+R/integraldisplay
+ρdR= 0 (1)
+whereρis the mass density and tis the time.
+2.2. Conservation of momentum
+Letvdenote the barycenter velocity of the molecules. Conservat ion of linear
+momentum in the motion of the continuum is assumed, which ass erts
+d
+dt/integraldisplay/integraldisplay
+R/integraldisplay
+ρvdR=/integraldisplay/integraldisplay
+R/integraldisplay
+FdR+/integraldisplay
+s/integraldisplay
+ds·T (2)
+whereFis the body force, Tthe stress tensor and sis the surface enclosing the
+considered volume.
+The body force consists of the gravitational attraction and electromagnetic
+forces [9]
+F=Fg+Fe,m(3)
+The gravitational force is naturally written as
+Fg=ρˆ g (4)
+whereˆ gis the gravitational acceleration.
+The force generated in an external magnetic ﬁeld is given as [ 9]
+Fm= (M·∇)H (5)
+whereHis the external magnetic ﬁeld, Mis the magnetization and ∇is the vector
+derivative operator.
+The most general relationship of Mlinear with the magnetic ﬁeld is [9]
+M=χ⊥H+/parenleftbig
+χ/bardbl−χ⊥/parenrightbig
+(d·H)d=χ⊥H+χa(d·H)d (6)
+wheredis the director, χ/bardblandχ⊥are the constant magnetic susceptiblities in the
+directions parallel and perpendicular to the director, res pectively, and χais the
+anisotropy.
+The force generated by the electric ﬁeld is not expressed exp licitly in the
+Ericksen-Leslie theory. In electrohydrodynamic studies o f liquid crystals, however,
+the Lorentz force is commonly considered as a cause of instab ilities [17-22]. We do
+not go far towards calculating completely the force in the el ectric ﬁeld, but, inaccu-
+rately, equate it to the Lorentz force, which amounts partly to the ponderomotive
+force in liquid dielectrics [29]. That is
+Fe=ρeE (7)
+3
+whereρeis the density of injected electric charges and Eis the electric ﬁeld.
+The stress tensor consists of three parts [9]
+T=Ti+Te+Tv(8)
+whereTiis the isotropic part of the stress, Teis the stress arising from elastic
+deformation and Tvis that from viscous motion.
+The isotropic part is expressed as
+Ti=−σI (9)
+whereσis a constant and Iis the unit tensor.
+The elastic stress may be deduced from the density of reversi ble deformation
+workWd[9], i.e.
+Te=−(∇d)·∂Wd
+∂(d∇)(10)
+It is suggested in the Oseen-Frank-Nehring-Saupe theory th at
+Wd=k1(∇·d)−k2(d·∇×d)+1
+2(k11−2k13)(∇·d)2+
++1
+2k22(d·∇×d)2+1
+2(k33+2k13)(d·∇d)2−
+−(k12−k23)(d·∇×d)(∇·d)+k13∇·(d∇·d)−
+−1
+2(k22+k24)∇·(d∇·d−d·∇d)−
+−k23∇·[(d·∇×d)d] (11)
+whereki’s are the elastic moduli (Frank’s notation [5] is used in thi s paper), among
+which the relationship k24=1
+2(k11−k22) holds.
+In relation (11), the ﬁrst term originally represented the s play structure result-
+ing from the change of symmetry of the material, although liq uid crystals having
+ferroelectric features are rarely found in nature. The elas tic moduli k2,k12andk23
+are relevant to the chirality of the molecules. The three squ ared terms stand for, in
+sequence, the splay, twist and bending modes of the elastic d eformation. The last
+three terms relate to boundary distortions.
+The viscous stress is supposed to be a linear function of the r ate of straintensor
+Sand the rotational velocity of the director N[9,10]
+Tv=α1(d·S·d)dd+α2dN+α3Nd+α4S+α5d(S·d)+α6(S·d)d(12)
+in which the independent scalar variables such as the mass de nsity and the tem-
+perature have been absorbed in the viscosity coeﬃcients. Th e viscosity coeﬃcients
+satisfy the relationship [11]
+α2+α3=α5−α6 (13)
+4
+The two considered variables are given by
+S=1
+2(v∇+∇v) (14)
+and
+N=˙d−1
+2∇×(v−˙ r)×d (15)
+whereris the position vector, the overdot indicates the convected derivative.
+The movement of the director is governed by the equation [9,1 0]
+d
+dt/integraldisplay/integraldisplay
+R/integraldisplay
+˜ρ˙ddR=/integraldisplay/integraldisplay
+R/integraldisplay
+(G+g)dR+/integraldisplay
+s/integraldisplay
+ds·Π (16)
+where ˜ρis the moment of inertia per unit volume (ML−1),Gandgare respectively
+the external director body force and the intrinsic director body force, having the
+dimensions of torque per unit volume (ML−1T−2), andΠis the intrinsic stress
+(with the dimensions of ML−2T−2).
+The magnetic ﬁeld and electric ﬁeld forces may, respectivel y, be obtained from
+the magnetization energy [9]
+Wm=−1
+2M·H (17)
+and the polarization energy [29]
+Wp=−1
+2P·E (18)
+wherePis the electric dipole moment.
+The constitutive relationship of Plinear with the electric ﬁeld is given as [9]
+P=ǫ⊥−1
+4πE+ǫ/bardbl−ǫ⊥
+4π(d·E)d=ǫ⊥−1
+4πE+ǫa
+4π(d·E)d (19)
+whereǫ/bardblandǫ⊥are the constant dielectric permeabilities with the interp retations
+indicated, and ǫais the dielectric anisotropy.
+With the help of relations (6) and (17)-(19), the ﬁeld-gener ated forces deﬁned
+by [9]
+Gm,e=∂Wm,p
+∂d(20)
+are interpreted as
+Gm=−χa(d·H)H (21)
+Ge=−ǫa
+4π(d·E)E (22)
+5
+The intrinsic body force gconsists also of three parts
+g=λd+ge+gv(23)
+whereλis a constant.
+The conservative and non-conservative body forces exerted on the director are
+[9] respectively
+ge=−∂Wd
+∂d(24)
+and
+gv=γ1N+γ2S·d (25)
+whereγ1andγ2are the viscosity coeﬃcients relevant to the intrinsic moti on.
+Relationships between the γcoeﬃcients in Eq.(25) and the αcoeﬃcients in
+Eq.(12) are [9]
+γ1=α3−α2, γ 2=α6−α5 (26)
+The stress Πhas only a conservative part [9]
+Π=∂Wd
+∂(d∇)(27)
+The extra-body force ge+gvand the extra-stress Πgenerate a torque on the
+director.
+2.3. Energy balance
+The general form of the energy conservation law in the contin uum is [9]
+d
+dt/integraldisplay/integraldisplay
+R/integraldisplayρ
+2v·v+˜ρ
+2˙d·˙d+ρU dR
+=/integraldisplay/integraldisplay
+R/integraldisplay/parenleftBig
+F·v+G·˙d+Qh/parenrightBig
+dR+
++/integraldisplay
+s/integraldisplay
+ds·/parenleftBig
+T·v+Π·˙d−Jh/parenrightBig
+(28)
+whereUis the internal energy per unit mass, Qhis the heat supply per unit volume
+per unit time, and Jhis the heat current ﬂowing out of the volume per unit area
+per unit time.
+For uniaxial liquid crystals, the heat ﬂux is supposed to hav e a linear relation-
+ship with the thermal ﬁeld [9]
+Jh=β0∇Θ+β1(d·∇Θ)d (29)
+where Θ is the temperature and β0andβ1are the heat conductivities.
+6
+3. Adaptation to membranes
+Now we will adapt the Ericksen-Leslie dynamic theory to a bil ayer membrane.
+Unless otherwise stated, the Latin suﬃx runs over 1, 2 and 3, w hilst that the Greek
+suﬃxes run over 1 and 2. Italic symbols indicate the componen ts of a vector or
+tensor in the moving local frame (see below) and block symbol s represent those
+in ﬁxed global coordinates (inertial reference system). Su mmation convention is
+assumed throughout.
+As suggested in the theory of thin shells, one deﬁnes a geomet ric surface situ-
+ated at the middle position in the membrane and names it the “m iddle surface” (see
+Fig 1). The word “surface” in the following means, uniquely, the middle surface.
+Letrbe the vector from an origin in Euclidean space to a point in th e middle
+surface. Any spatial position in the membrane is then determ ined by
+xi= ri(θα,t)+θ3ni(θα,t) (30)
+where xidenotes the spatial coordinates, θiare arbitrary parameters and niis the
+normal vector to the middle surface.
+Ifθ1andθ2areidentiﬁedwiththecurvilinearcoordinatesonthemiddl esurface,
+then the local base vectors are given by
+eα=∂r
+∂θαe3=n=e1×e2
+|e1×e2|=1√a∂r
+∂θ1×∂r
+∂θ2(31)
+whereais the determinant of the metric tensor
+aαβ=eα·eβ (32)
+The second- and the third-order magnitude of the surface are
+bαβ=−∂e3
+∂θα·eβ=∂eα
+∂θβ·e3 (33)
+cαβ=∂e3
+∂θα·∂e3
+∂θβ(34)
+For uniquely determined surface, the fundamental magnitud es satisfy the iden-
+tity
+cαβ−2Hbαβ+Kaαβ= 0 (35)
+where
+2H=aβαbαβ (36)
+is the ﬁrst curvature (mean curvature) and
+K=|bαβ|
+|aαβ|=b
+a(37)
+the second curvature (gaussian curvature).
+7
+The director vector d(a unit vector parallel to the long molecular axes) is
+considered to radiate from the middle surface on the side to w hich the normal
+vector is positive (Fig. 1).
+The molecules displace in the Euclidean space at a velocity v. With respect to
+the local bases eiwhich move with the surface, the velocity has the components
+vα=˙θα, v3= 0 (38)
+because the particle ﬂow is supposed to be parallel to the sur face. With respect to
+the spatial coordinates xithe velocity is given by
+vi= ˙ xi=ti
+αvα+ ˙ ri(39)
+where
+ti
+α=∂ri
+∂θα(40)
+is a time-dependent hybrid tensor. The tensor ti
+αis used to associate the ﬂexible
+and movable surface with the inertial reference system. For example, if the director
+is known by its components dkwith respect to the local bases, then its components
+in the global coordinates must be dk=tk
+αdα+nkd3. Conversely, while one has the
+expansion of a ﬁeld vector at a certain position of the middle surface with respect
+to the ﬁxed coordinates, say, E k, one knows naturally, with respect to the moving
+frame, its tangential parts Eα=tk
+αEkand its normal part E(n)=E3= Eknk. The
+subscript ( n) denotes the normal part of the vectors.
+One deﬁnes the varying conﬁguration of the surface in a way th at any point
+of the surface at the considered instant/parenleftbig
+θ1,θ2,t/parenrightbig
+is the endpoint of a translation
+of the point which occupied the same curvilinear coordinate s on the surface at the
+preceding instant/parenleftbig
+θ1,θ2,t◦/parenrightbig
+along the normal vector n◦. The displacement speed
+of the surface is thus determined by
+˙ ri=/parenleftbigg∂ri
+∂t/parenrightbigg
+θ1,θ2=wni(41)
+wherewis the rate of displacement.
+Across the thickness of the membrane the non-uniformities, such as that of the
+mass, the temperature and the internal energy, as well as tha t of the velocity and
+the stress, are supposed negligible. (The assumption vα
+,3= 0 implies that the two
+molecular layers do not mutually slip.) It follows that the d iﬀerentiation of any
+tensor property of the material is a covariant diﬀerentiati on along the surface. The
+surface derivative operator is deﬁned by [30]
+∇s=eβ∂
+∂θβ(42)
+Replacing the three-dimensional operator ∇in Eq.(11) by the two-dimensional
+operator ∇sandmultiplyingbothsidesoftheexpressionbythemembrane thickness
+8
+hyields the surface density of elastic energy of the membrane . To the ﬁrst-order
+terms (to small tilting angle of the director to the normal), it is
+Wd
+(1)=−k′
+1/parenleftbigg
+2H−∂σdσ−1
+2adσ∂σa/parenrightbigg
++k′
+2εαβ∂βdα+
++k′
+11H/parenleftbigg
+2H−∂σdσ−1
+2adσ∂σa/parenrightbigg
+−
+−(k′
+22+k′
+24)/bracketleftbigg
+K−2H/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg
++dα,β(τ)bβα/bracketrightbigg
+−
+−2k′
+12Hεαβ∂βdα−2k′
+13dβ∂βH (43)
+where the symbol ∂αdenotes the partial derivative with respect to the paramete r
+θα,εαβis the two-parametric permutation tensor, the prime indica tes the surface
+covariant derivative and the subscript ( τ) the tangential part (see Appendix A).
+Here the elastic moduli in Eq.(11) have been replaced by
+k′
+i=hki, k′
+ij=hkij (44)
+Relationship (43) includes the energy contributed by the no n-uniform orienta-
+tion of the molecules, which was emphasized to be important b ut excluded from
+consideration in the Helfrich’s theory [7].
+Lettingd=n, one recovers Helfrich’s formula [7]
+Wd
+(0)=kcH+k′
+cH2+¯kcK (45)
+where
+kc=−2k′
+1, k′
+c= 2k′
+11,¯kc=−(k′
+22+k′
+24) (46)
+Hence the framework encompasses Helfrich’s theory as a spec ial case where the
+long molecular axes are parallel to the normal vector. Recen tly, Ou-Yang and Liu
+deduced Eq.(45) from formula (11) [31].
+The ﬁrst term in Eq.(43) and in Eq.(45) now stands for the non- symmetry of
+the two molecular leaves [7]. The last three terms in Eq.(43) and the last term in
+Eq.(45) are actually meaningful only when the membrane has a free edge such as
+a helical strips (e.g. [32,33]). Otherwise, the orientatio n of the molecules at the
+periphery is determined by the veins of the solid boundary on which the membrane
+is braced rather than the internal molecular ﬁeld. For a clos ed vesicle, these terms
+are vacuous of physical content.
+The following kinematic theorem will frequently be used lat er, which is, in fact,
+an analogue of the Reynolds’ transport theorem in two-dimen sional ﬂuids [28].
+Ifφis any function of position on a surface and of time, which can be any
+scalar or tensor component, and sis a material part of the surface, then
+d
+dt/integraldisplay
+s/integraldisplay
+φds=/integraldisplay
+s/integraldisplay/bracketleftbigg
+˙φ+φ/parenleftbigg
+vα
+,α+˙a
+2a/parenrightbigg/bracketrightbigg
+ds (47)
+9
+wherevα
+,α+ ˙a/(2a) is the dilation of area.
+The change in area of the membranes arises from, besides exte nsion and com-
+pression, tilting of the molecules also [34-37]. For the sur face conﬁguration deﬁned
+above, the rate of change of area is related to the displaceme nt speed by [38]
+˙a
+2a=−2Hw (48)
+If there is neither a source nor a sink in the membrane, then
+vα
+,α= 0 (49)
+On account of (48) and (49), one rewrites (47) as
+d
+dt/integraldisplay
+s/integraldisplay
+φds=/integraldisplay
+s/integraldisplay/parenleftBig
+˙φ−2Hwφ/parenrightBig
+ds (50)
+3.1. Mass balance
+Letγbe the surface density of mass. The mass conservation princi ple requires
+d
+dt/integraldisplay
+s/integraldisplay
+γds= 0 (51)
+Recalling theorem (50) and taking oﬀ the integration one obt ains
+∂tγ+vβ∂βγ−2Hwγ= 0 (52)
+where the convected derivative dt=∂t+vβ∂βhas been taken into consideration.
+Ifξ(i)is the mass percentage of the ithspecies inlaid in the membrane, then
+the balance of this species gives
+∂tξ(i)+vα∂αξ(i)−2Hwξ(i)=Q(i)−Jα
+(i),α (53)
+whereQ(i)is the surface chemical source and J(i)the surface diﬀusion ﬂux of the
+species.
+3.2. Conservation of momentum
+The net force on an arbitrary area with periphery lresolved in the direction
+mβis given by
+d
+dt/integraldisplay
+s/integraldisplay
+γwds=/integraldisplay
+s/integraldisplay
+F3ds+/contintegraldisplay
+lmβTβ3dl (54)
+d
+dt/integraldisplay
+s/integraldisplay
+γvαds=/integraldisplay
+s/integraldisplay
+Fαds+/contintegraldisplay
+lmβTβαdl (55)
+10
+Making use of theorem (50) and Eq.(52), one obtains Cauchy’s equation for
+the displacement movement of the surface
+γ˙w=F3+Tβ3
+,β(56)
+and that for the internal ﬂow of the particles
+γ˙vα=Fα+Tβα
+,β(57)
+In view of the perturbation analysis, one expands Eqs.(56) a nd (57) below on
+the assumption that the tilt angle of the director with respe ct to the normal vector
+is small. All the expressions in the previous section are val id once the spatial oper-
+ator∇is replaced everywhere by the surface operator ∇sand the energy densities
+Eqs.(11), (17) and (18) are multiplied by the membrane thick ness. The details of
+the derivation are given in Appendix C.
+As is shown in Eq.(3), the body force Fconsists of the gravitational attraction
+andelectromagneticﬁeld-generatedforces. Theexpansion ofthesevectorsexpressed
+in Eqs.(4)-(7) with respect to the local bases gives
+Fg
+3=γˆg(n) (58)
+Fg
+α=γˆ giti
+α (59)
+Fm
+3= Hj,inj/bracketleftbig
+χ⊥/parenleftbig
+Hi−H(n)ni/parenrightbig
++χaH(n)ti
+βdβ/bracketrightbig
+(60)
+Fm
+α= Hj,itj
+α/bracketleftbig
+χ⊥/parenleftbig
+Hi−H(n)ni/parenrightbig
++χaH(n)ti
+βdβ/bracketrightbig
+(61)
+Fe
+3=γeE(n) (62)
+Fe
+α=γeEiti
+α (63)
+whereγeis the surface density of electric charges.
+Thestresstensor Tconsistsof(asshownin(8))anisotropicpart,aconservati ve
+partandanon-conservativepart. Theapplicationofthesur facedivergenceoperator
+to the isotropic stress yields
+Tiβα
+,β=−aβα∂βσ (64)
+whereσis identiﬁed with the surface tensor. The elastic restoring force of the
+membrane arises from the tilt of the molecules and the curvat ure of the sheet.
+When the long molecular axes have a small angle to the normal v ector while the
+shape of the membrane is ﬂat, then the surface force reads
+Teβ3
+,β= 0 (65)
+Teβα
+,β=−k′
+1aβσdα
+,σβ(τ)+k′
+2εασaβγdσ,γβ(τ) (66)
+Conversely, when the membrane is ﬂexible while the long mole cular axes remain
+parallel to the normal vector, then the surface force is give n by
+Teβ3
+,β= (k′
+1−2Hk′
+11)/parenleftbig
+4H2−2K/parenrightbig
++(k′
+22+k′
+24)2HK (67)
+Teβα
+,β= 2k′
+1aαβ∂βH−2k′
+2εαβ∂βH−2k′
+11/parenleftbig
+bαβ+2Haαβ/parenrightbig
+∂βH+
++(k′
+22+k′
+24)aαβ∂βK+2k′
+12εαβ/parenleftbig
+bσ
+β∂σH+∂βH2/parenrightbig
+(68)
+11
+One considers next the viscous stress. It is easy to verify th at for the two-
+dimensional ﬂuid the rate of strain given by Eq.(14) is
+S=1
+2(vα,β+vβ,α−2wbαβ)eαeβ(69)
+and the rotational velocity of the director given in Eq.(15)
+N=/bracketleftbigg1
+2vβbα
+β+˙dα−1
+2εαβdβ/parenleftbig
+ελµ∂λvµ/parenrightbig/bracketrightbigg
+eα+1
+2vβbβαdαe3 (70)
+where˙dα=∂tdα+vσdα
+,σ(τ). In writing Eq.(69) one took into account the formula
+[38]
+˙aλµ=−2wbλµ (71)
+(see Appendix C.) Substituting expressions (69) and (70) in to (12) gives the viscous
+resistance in a two-dimensional ﬂuid. In the limiting case 2 H=K= 0 it is given
+by
+Tvβ3
+,β=α3/braceleftbigg
+∂t/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg
++vα
+,βdβ
+,α(τ)+vαdβ
+,αβ(τ)−
+−1
+2εβσ(dσ∂β+∂βdσ)/parenleftbig
+ελµ∂λvµ/parenrightbig/bracerightbigg
++
++α′′
+6
+2Eβαλµ/bracketleftbig
+(vµ,λβ+vλ,µβ)dα+(vµ,λ+vλ,µ)dα,β(τ)/bracketrightbig
+(72)
+Tvβα
+,β=η
+2Eαβλµ(vλ,µβ+vµ,λβ) (73)
+and in the other limiting case d/ba∇dblnit is given by
+Tvβ3
+,β=−(µ+η)4H2w+η/bracketleftbig
+4Kw+/parenleftbig
+bλµ−Haλµ/parenrightbig
+(vλ,µ+vµ,λ)/bracketrightbig
++
++α3
+2/bracketleftbig
+vα
+,βbβ
+α+vβ∂β(2H)/bracketrightbig
+(74)
+Tvβα
+,β=−µaαβ∂β(2Hw)+η
+2Eαβλµ(vλ,µβ+vµ,λβ)−
+−2η/bracketleftbig
+∂βw/parenleftbig
+bαβ−Haαβ/parenrightbig
++waαβ∂βH/bracketrightbig
++
++α2Hvβbα
+β+α3
+2/parenleftbig
+2Hvβbβα−Kvα/parenrightbig
+(75)
+whereµis the dilatation viscosity, ηis the shear viscosity and Eαβλµis the fourth-
+order tensor Eαβλµ=aαλaβµ+aαµaβλ−aαβaλµ. In deducing (72)-(75), formula
+(48) was used.
+The momentum balance for the intrinsic motion over the area sEq.(16) is
+written as
+0 =/integraldisplay
+s/integraldisplay/parenleftbig
+G3+g3/parenrightbig
+ds+/contintegraldisplay
+lmβΠβ3dl (76)
+d
+dt/integraldisplay
+s/integraldisplay
+˜γ˙dα=/integraldisplay
+s/integraldisplay
+(Gα+gα)ds+/contintegraldisplay
+lmβΠβαdl (77)
+12
+where ˜γ=γh. In the usual way, Eqs.(76) and (77) lead directly to the poin t
+expression of the law
+0 =G3+g3+Πβ3
+,β(78)
+˜γ¨dα=Gα+gα+Πβα
+,β(79)
+When a polar ﬂuid is exposed to the external magnetic ﬁeld, th e director is
+reoriented by the force Gm, as given by Eq.(21)
+Gm
+3=−χaH(n)/parenleftbig
+Hiti
+σdσ+H(n)/parenrightbig
+(80)
+Gm
+α=−χaHjtj
+α/parenleftbig
+Hiti
+σdσ+H(n)/parenrightbig
+(81)
+In an external electric ﬁeld, it is subjected to the force Ge, as given by Eq.(22)
+Ge
+3=−ǫa
+4πE(n)/parenleftbig
+Eiti
+σdσ+E(n)/parenrightbig
+(82)
+Ge
+α=−ǫa
+4πEjtj
+α/parenleftbig
+Eiti
+σdσ+E(n)/parenrightbig
+(83)
+For a two-dimensional ﬂuid, the extra-body forces given by E qs.(24) and (25),
+in the limiting case 2 H=K= 0, are given by
+ge3=−k′
+2εαβ∂βdα (84)
+geα=−k′
+13aαβ∂β/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg
++k′
+23aαβ∂β/parenleftbig
+ελµ∂λdµ/parenrightbig
+(85)
+gv3=0 (86)
+gvα=γ1/parenleftbigg
+˙dα+1
+2ελβ∂λvµdβεβα/parenrightbigg
++γ′′
+2
+2Eαβλµ(vλ,µ+vµ,λ)dβ(87)
+and, in the other limiting case d/ba∇dbln,
+ge3=0 (88)
+geα=k′
+13aαβ∂β(2H) (89)
+gv3=0 (90)
+gvα=γ1
+2vβbα
+β (91)
+whereγ′′
+2is referred to the shear motion.
+The surface force to which the director is subjected during t he elastic defor-
+mation, given by Eq.(27), takes the form
+Πβ3
+,β=k′
+2εβα∂βdα (92)
+Πβα
+,β=1
+2(k′
+11−k′
+22)aαβ∂β/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg
++
++k′
+22εαβ∂β/parenleftbig
+ελµ∂λdµ/parenrightbig
++(k′
+22+k′
+24)aβγdα
+,γβ(τ)−
+−k′
+12/bracketleftbigg
+εαβ∂β/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg
++aαβ∂β/parenleftbig
+ελµ∂λdµ/parenrightbig/bracketrightbigg
+(93)
+13
+for 2H=K= 0 and
+Πβ3
+,β=(k′
+1−2Hk′
+11)2H+(k′
+22+k′
+24)2K (94)
+Πβα
+,β=−k′
+11aαβ∂β(2H)+k′
+12εαβ∂β(2H) (95)
+ford/ba∇dbln.
+3.3. Energy balance
+The energy balance Eq.(28) for any material area of the membr ane reads
+d
+dt/integraldisplay
+s/integraldisplayγ
+2/parenleftbig
+vαvα+w2/parenrightbig
++˜γ
+2˙dα˙dα+γU ds
+=/integraldisplay
+s/integraldisplay/parenleftBig
+Fαvα+F3w+Gα˙dα+Qh/parenrightBig
+ds+
++/contintegraldisplay
+lmβ/parenleftBig
+Tβαvα+Tβ3w+Πβα˙dα−Jhβ/parenrightBig
+dl (96)
+whereQhis the rate of local production of heat per unit area and Jhis the surface
+diﬀusion current across a unit linear element of the periphe ry of the considered area.
+Taking account of Eqs.(56)-(57), and (78)-(79), one obtain s from Eq.(96) a
+diﬀerential expression of the law
+γ˙U=Qh−Jhα
+,α+Tβαvα,β+Tβ3∂βw+Πβα˙dα,β−gα˙dα (97)
+For practical uses, one replaces the internal energy by a tes table physical quan-
+tity and obtains
+γCl˙Θ−Teβαvα,β−Teβ3∂βw−Πβα˙dα,β+geα˙dα
+=Qh−Jhα
+,α+/parenleftBig
+−σaβα+Tvβα/parenrightBig
+vα,β+Tvβ3∂βw−gvα˙dα(98)
+whereClis the heat capacity per unit mass in the static state [39], th e convected
+derivative of the temperature is considered as
+˙Θ =∂tΘ+vαtj
+α∂jΘ+wnj∂jΘ (99)
+(see Appendix D.)
+The non-vanishing terms of Eq.(98) containing Te,v,ge,vandΠare
+Teβαvα,β=−/parenleftBig
+k′
+1aβσdα
+,σ(τ)−k′
+2aβλεαµdµ,λ/parenrightBig
+vα,β (100)
+Πβα˙dα,β=/parenleftbig
+k′
+1aβα+k′
+2εβα/parenrightbig˙dα,β (101)
+Tvβαvα,β=η
+2Eαβλµ(vλ,µ+vµ,λ)vα,β (102)
+Tvβ3∂βw=/braceleftbigg
+α3/bracketleftbigg
+˙dβ+1
+2/parenleftbig
+ελµ∂λvµ/parenrightbig
+εβαdα/bracketrightbigg
++
++α′′
+6
+2Eβαλµ(vλ,µ+vµ,λ)dα/bracerightbigg
+∂βw (103)
+14
+for 2H=K= 0, and
+Teβαvα,β=/bracketleftBig
+(k′
+1−2Hk′
+11)bβα+(k′
+2−k′
+12)bβ
+γεγα+
++(k′
+22+k′
+24)Kaβα/bracketrightBig
+vα,β (104)
+geα˙dα=k′
+13˙dαaαβ∂β(2H) (105)
+Πβα˙dα,β=/bracketleftBig
+(k′
+1−2Hk′
+11)aβα+(k′
+2−2Hk′
+12)εβα+
++(k′
+22+k′
+24)/parenleftbig
+2Haβα−bβα/parenrightbig/bracketrightBig
+˙dα,β (106)
+Tvβαvα,β=/braceleftbigg
+(η−µ)2Hwaβα+
++η/bracketleftbigg1
+2Eαβλµ(vλ,µ+vµ,λ)−2wbβα/bracketrightbigg/bracerightbigg
+vα,β (107)
+Tvβ3∂βw=−α3
+2vσbβ
+σ∂βw (108)
+gvα˙dα=γ1
+2vβbβα˙dα (109)
+ford/ba∇dbln. Here the covariant derivative of ˙dαis given by
+˙dα,β=∂t/parenleftbig
+dα,β(τ)/parenrightbig
++vγ
+βdα,γ(τ)+vγdα,γβ(τ) (110)
+(see Appendix C.)
+For the local production of heat it is commonly written as [39 ]
+Qh=/summationdisplay
+r/summationdisplay
+kHkνkrbr (111)
+whereHkis the enthalpy of the kthspecies per unit mass, νkris the stoichiometric
+number of species kin chemical reaction randbris the reaction rate of chemical
+reaction rreferred to a unit area.
+The divergence of the heat ﬂux Eq.(29) is given for the two-di mensional ﬂuid,
+by
+Jhα
+,α=−κ⊥(∂jΘ),k/parenleftbig
+gjk−njnk/parenrightbig
++κa2H/parenleftbig
+nj∂jΘ/parenrightbig
++
++κa/bracketleftbigg/parenleftBig
+tj
+β∂jΘ/parenrightBig/parenleftbig
+2Hdβ+bβ
+αdα/parenrightbig
+−nj(∂jΘ),ktk
+αdα−
+−/parenleftbig
+nj∂jΘ/parenrightbig/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg/bracketrightbigg
+(112)
+whereκ⊥is the heat conductivity in the direction perpendicular to t he director
+vector and κa≡κ/bardbl−κ⊥the thermal anisotropy.
+15
+In the above derivations, one takes an arbitrary three-dime nsional coordinate
+frame as the inertial reference system and two arbitrary lin es on the middle surface
+asthecurvilinearcoordinates. Formostpurposes, however , onemaychooseasimple
+coordinate system. For instance, if one deﬁnes the two princ ipal curvature lines as
+the curvilinear coordinates, which leads to an orthogonal c onjugate system, then
+the expressions will be much simpliﬁed.
+4. Concluding remarks
+By adapting the electrohydrodynamic theory of uniaxial liq uid crystals to thin
+ﬁlms, one obtains a group of dynamicequations, including ba sic Eqs.(52)-(53), (56)-
+(57), (78)-(79) and (98), as well as relevant expressions (5 8)-(70), (72)-(75), (80)-
+(95), (100)-(109) and (111)-(112), which may conveniently be used in the study
+of hydrodynamic and electrodynamic phenomena of biomembra ne matrix. The
+surface density of elastic energy Eq.(43) may be used to the h ydrostatic studies of
+membranes with particular regard to molecule tilting.
+Acknowledgements
+This work is supported by the National Foundation for Natura l Sciences and
+by the Foundation of the Ministry of Education of China.
+The author is grateful to Dr. Y. K. Lau for reading the manuscr ipt and sug-
+gesting many changes in the presentation to make it more read able.
+Appendix A. Preliminaries
+The Gauss formula is given by
+∂eα
+∂θβ=/braceleftbigg
+µ
+α β/bracerightbigg
+eµ+bαβe3
+∂eα
+∂θβ=−/braceleftbigg
+α
+µ β/bracerightbigg
+eµ+bα
+βe3(A1)
+and the derivative of the normal vector
+∂e3
+∂θβ=−bµ
+βeµ=−bβµeµ(A2)
+where/braceleftbigg
+α
+σ β/bracerightbigg
+is the second kind of Christoﬀel symbol.
+Some surface diﬀerential invariants of the director vector are given as
+∇sd=/parenleftBig
+dα
+,β(τ)−d3bα
+β/parenrightBig
+eβeα+/parenleftbig
+∂βd3+dσbσβ/parenrightbig
+eβe3
+=dα
+,βeβeα+d3
+,βeβe3 (A3)
+∇s·d=dα
+,α(τ)−2Hd3=dα
+,α (A4)
+∇s×d=εαβ[(∂βd3+dσbσβ)eα−∂βdαe3]
+=εαβ(d3,βeα−∂βdαe3) ( A5)
+16
+whereεαβis a two parametric permutation tensor, having the componen tsε11=
+ε22= 0,ε12=−ε21= 1/√a. The subscript ( τ) distinguishes the tangential part
+dα
+,β(τ)=∂βdα+dσ/braceleftbigg
+α
+σ β/bracerightbigg
+(A6)
+from the whole covariant derivative
+dα
+,β=∂βdα+dσ/braceleftbigg
+α
+σ β/bracerightbigg
+−d3bα
+β=dα
+,β(τ)−d3bα
+β
+d3
+,β=∂βd3+dσbσβ (A7)
+Supposing Ais a ﬁeld vector. The surface derivative of the vector is asso ciated
+with the spatial derivative of the vector by
+∇sA= Ak,jtj
+αeα/parenleftbig
+tk
+βeβ+nke3/parenrightbig
+(A8)
+LetBbe a second-order tensor ( B=TorΠ). The contraction of the third-
+order tensor ∇sBgives
+∇s·B=/parenleftBig
+Bβα
+,β(τ)−Bβ3bα
+β−2HB3α/parenrightBig
+eα+
++/parenleftBig
+Bβ3
+,β(τ)+Bβαbαβ−2HB33/parenrightBig
+e3 (A9)
+with
+Bβα
+,β(τ)=∂βBβα+Bβα1
+2a∂βa+Bβγ/braceleftbigg
+α
+γ β/bracerightbigg
+Bβ3
+,β(τ)=∂βBβ3+Bβ31
+2a∂βa (A10)
+The normal vector to the middle surface has the spatial compo nents
+ni=1
+2εijktj
+αtk
+βεαβ(A11)
+whereεijkis the three-parametric permutation tensor, which is equal to√g when
+ijk is an even permutation of 1, 2, 3, equal to −√g when it is an odd permutation
+and 0 in other cases, g being the determinant of the metric ten sor of the spatial
+coordinates g ij.
+Appendix B. Surface density of elasticity energy
+Volume density of elasticity energy Eq.(11) can otherwise b e expressed as
+Wd=k1(∇·d)−k2(d·∇×d)+1
+2k11(∇·d)2+
++1
+2k22(d·∇×d)2+1
+2(k33+2k13)(d·∇d)2−
+−1
+2(k22+k24)/bracketleftBig
+(∇·d)2−d∇··d∇/bracketrightBig
+−
+−k12(∇·d)(d·∇×d)+
++k13d·∇(∇·d)−k23d·∇(d·∇×d) ( A12)
+17
+Replacing ∇by the surface operator ∇sdeﬁned in Eq.(42), and multiplying
+the moduli by the membrane thickness h, one obtains from Eq.(A12) the surface
+density of the elasticity energy
+Wd=−k′
+1/parenleftBig
+2H−dα
+,α(τ)/parenrightBig
++k′
+2εαβ∂βdα+k′
+11H/parenleftBig
+2H−dα
+,α(τ)/parenrightBig
+−
+−(k′
+22+k′
+24)/parenleftBig
+K−2Hdα
+,α(τ)+dα,β(τ)bβα/parenrightBig
+−
+−k′
+122Hεαβ∂βdα−k′
+13dβ∂β(2H)+O/parenleftBig
+dα2/parenrightBig
+(A13)
+wherek′
+i=hki, k′
+ij=hkij.
+Appendix C. Forces sustained in membranes
+C1. Forces being exerted on the director
+C1.1. External forces
+For a two-dimensional ﬂuid, the force to which the director i s subjected to in
+an external magnetic ﬁeld is given by
+Gm=−χa(d·H)H
+=−χa/parenleftbig
+Hktk
+σdσ+H(n)/parenrightbig/parenleftbig
+Hjtj
+αeα+H(n)e3/parenrightbig
+(A14)
+and that in an external electric ﬁeld is given by
+Ge=−ǫa
+4π(d·E)E
+=−ǫa
+4π/parenleftbig
+Ektk
+σdσ+E(n)/parenrightbig/parenleftbig
+Ejtj
+αeα+E(n)e3/parenrightbig
+(A15)
+C1.2. Extra body forces
+C1.2.1 Elastic restoring force. Inserting Eq.(A12) in relation (24), one obtains
+ge=−∂Wd
+∂d
+=k2∇×d−k22(d·∇×d)(∇×d)−
+−(k33+2k13)d·(∇d)·(d∇)+k12(∇·d)(∇×d)−
+−k13∇(∇·d)+k23[∇(d·∇×d)+d·∇(∇×d)] ( A16)
+With respect to the local reference frame, it is expressed as
+ge=k′
+2εαβ(dσbσβeα−∂βdαe3)−
+−(k′
+33+2k′
+13)/parenleftbig
+2Hbαβdβ−Kdα/parenrightbig
+eα−
+−k′
+122Hεαβ(dσbσβeα−∂βdαe3)+
++k′
+13aαβ∂β/parenleftbigg
+2H−∂σdσ−1
+2adσ∂σa/parenrightbigg
+eα+
++k′
+23aαβ∂β/parenleftbig
+ελµ∂λdµ/parenrightbig
+eα+O/parenleftBig
+dα2/parenrightBig
+(A17)
+18
+C1.2.2. Viscous resistance The rate of strain Sgiven in Eq.(14) is written for a
+two-dimensional ﬂuid
+S=1
+2(v∇s+∇sv)
+=1
+2/parenleftbig
+∂βveβ+eα∂αv/parenrightbig
+=1
+2gij/parenleftBig
+tj
+αvi
+,β+tj
+βvi
+,α/parenrightBig
+eαeβ
+=1
+2gij/bracketleftBig
+tj
+α/parenleftbig
+ti
+µvµ+ ˙ ri/parenrightbig
+,β+tj
+β/parenleftbig
+ti
+νvν+ ˙ ri/parenrightbig
+,α/bracketrightBig
+eαeβ
+=1
+2(vα,β+vβ,α−2wbαβ)eαeβ(A18)
+for [28]
+gijti
+λtj
+µ=aλµ,gij/parenleftBig
+tj
+λ˙ r,µ+tj
+µ˙ ri
+,λ/parenrightBig
+= ˙aλµ
+and [38]
+˙aλµ=−2wbλµ (71)
+The rotational velocity of the director Ndeﬁned in Eq.(15) is written as
+N=˙d−1
+2∇s×(v−˙r)×d
+=/bracketleftbigg
+˙dα−1
+2vβbα
+β+1
+2ελµ∂λvµdβεβα/bracketrightbigg
+eα+
++1
+2vβbβαdαe3+O/parenleftBig
+dα2/parenrightBig
+(A19)
+where
+˙dα=∂tdα+vσdα
+,σ(τ).
+Inserting Eqs.(A18) and (A19) into relation (25), one obtai ns
+gv=γ1/parenleftbigg
+˙dα−1
+2vβbβα−1
+2ελµ∂λvµdβεβα/parenrightbigg
+eα−γ′
+22Hwdαeα+
++γ′′
+2/bracketleftbigg1
+2Eαβλµ(vλ,µ+vµ,λ)−2w/parenleftbig
+bβα−Haβα/parenrightbig/bracketrightbigg
+dβeα+
++1
+2γ1vαbαβdβe3+O/parenleftBig
+dα2/parenrightBig
+(A20)
+where,γ′
+2is referred to the area dilation, γ′′
+2to the shear motion, the fourth-order
+isotropic tensor Eαβλµ=aαλaβµ+aαµaβλ−aλµaαβis used for the tensor operation
+compatible with the transverse isotropy of the material [28 ].
+19
+C1.3. Extra surface force
+The substitution of Eq.(A12) into relation (27) gives
+Π=∂W
+∂(d∇)
+=k1I+k2d·ε+k11(∇·d)I−k22(d·∇×d)d·ε+
++(k33+2k13)d·(∇d)d−2(k22+k24)[(∇·d)I−∇d]+
++k12[(∇·d)d·ε−(d·∇×d)I]−
+−k23[(∇×d)d−d·(∇d)·ε] ( A21)
+whereεis the third-order permutation tensor. With respect to the l ocal bases it is
+given by
+Π=k′
+1aβαeβeα+k′
+2εβα(eβeα−dαeβe3)−
+−k′
+11/parenleftbigg
+2H−∂σdσ−1
+2adσ∂σa/parenrightbigg
+aβαeβeα−
+−k′
+22ελµ∂λdµεβαeβeα−(k′
+33+2k′
+13)dσbβ
+σeβe3+
++2(k′
+22+k′
+24)/braceleftbigg/bracketleftbigg
+2Haβα−bβα−/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg
+aβα+
++aβγdα
+,γ(τ)/bracketrightbigg
+eβeα+bβαdαeβe3/bracerightbigg
+−
+−k′
+12/braceleftbigg/bracketleftbigg
+2Hεβα−/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg
+εβα+
++ελµ∂λdµaβα/bracketrightbigg
+eβeα+2Hεαβdαeβe3/bracerightbigg
+−
+−k′
+23εβα∂βdαe3e3+O/parenleftBig
+dα2/parenrightBig
+(A22)
+The application of the surface divergence operator to Eq.(A 22) yields
+Πβα
+,β=k′
+2εβσdσbα
+β−k′
+11aβα∂β/parenleftbigg
+2H−∂σdσ−1
+2adσ∂σa/parenrightbigg
+−
+−k′
+22εβα∂β/parenleftbig
+ελµ∂λdµ/parenrightbig
++(k′
+33+2k′
+13)/parenleftbig
+2Hdβbα
+β−Kdα/parenrightbig
++
++2(k′
+22+k′
+24)/bracketleftbigg
+Kdα−2Hbβαdβ−aβα∂β/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg
++
++aβγdα
+,γβ(τ)/bracketrightbigg
+−
+−k′
+12/bracketleftbigg
+εβα∂β/parenleftbigg
+2H−∂σdσ−1
+2adσ∂σa/parenrightbigg
++
++aβα∂β/parenleftbig
+ελµ∂λdµ/parenrightbig
++2Hεβσbα
+βdσ/bracketrightbigg
++O/parenleftBig
+dα2/parenrightBig
+(A23)
+20
+Πβ3
+,β=k′
+12H−k′
+2εβα∂βdα−k′
+11/bracketleftbigg
+4H2−2H/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg/bracketrightbigg
+−
+−(k′
+33+2k′
+13)/bracketleftBig
+bβ
+σdσ
+,β(τ)+dβ∂β(2H)/bracketrightBig
++
++4(k′
+22+k′
+24)/bracketleftbigg
+K−H/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg
++
++dβ∂βH+bβσdσ,β(τ)/bracketrightbigg
+−
++k′
+12εβαdα∂β(2H)+k′
+232Hεβα∂βdα+O/parenleftBig
+dα2/parenrightBig
+(A24)
+C2. Forces exerting on the continuum
+C2.1. Gravitational attraction
+The gravity given in Eq.(4) is written for the two-dimension al ﬂuid
+Fg=γˆg=γˆgk/parenleftbig
+tk
+αeα+nke3/parenrightbig
+(A25)
+C2.2. Ponderomotive forces
+The force the external magnetic ﬁeld exerts on the body of the polar ﬂuid,
+given by Eq.(5), takes the form
+Fm= Hk,j/bracketleftBig
+χ⊥/parenleftbig
+Hj−njH(n)/parenrightbig
++χaH(n)tj
+βdβ/bracketrightBig/parenleftbig
+tk
+αeα+nke3/parenrightbig
+(A26)
+In deducing (A26), one used relation (6) and the formula [28]
+ti
+αtj
+βaαβ= gij−ninj(A27)
+The Lorentz force in an electric ﬁeld (7) is given by
+Fe=γeE=γe/parenleftbig
+Ektk
+αeα+E(n)e3/parenrightbig
+(A28)
+C2.3. Isotropic force
+The application of the surface divergence operator to the is otropic stress ex-
+pressed in Eq.(9) gives
+∇s·Ti=−aαβ∂βσeα (A29)
+C2.4. Elastic restoring force
+Inserting Eq.(A12) into relation (10) yields
+Te=−(∇d)·∂Wd
+∂(d∇)
+=−k1∇d+k2(∇d)×d−k11(∇·d)(∇d)−
+−k22(d·∇×d)(∇d)×d−
+−(k33+2k13)(∇d)·(d∇)·(dd)+
++2(k22+k24)[(∇·d)∇d−(∇d)·(∇d)]+
++k12[(∇·d)(∇d)×d+(d·∇×d)∇d]+
++k23[(∇d)×(d∇)·d+(∇d)·(∇×d)d] ( A30)
+21
+With respect to the local bases it is given by
+Te=k′
+1/bracketleftBig/parenleftBig
+bβα−aβγdα
+,γ(τ)/parenrightBig
+eβeα−dσbσβeβe3/bracketrightBig
++
++k′
+2εσα/bracketleftbig/parenleftbig
+bβ
+σ−aβγdσ,γ(τ)/parenrightbig
+eβeα+dσbβ
+αeβe3/bracketrightbig
+−
+−k′
+11/braceleftbigg/bracketleftbigg
+2Hbβα−1√a∂σ/parenleftbig
+dσ√a/parenrightbig
+bβα−2Haβσdα
+,σ(τ)/bracketrightbigg
+eβeα−
+−2Hbβσdσeβe3/bracerightbigg
++k′
+22ελµ∂λdµεασbβ
+σeβeα−
+−(k′
+33+2k′
+13)/parenleftbig
+2Hbβαdα−Kdβ/parenrightbig
+eβe3+
++2(k′
+22+k′
+24)/braceleftbigg/bracketleftbigg
+Kaβα+aβγdσ,γ(τ)bσα−1√a∂σ/parenleftbig
+dσ√a/parenrightbig
+bβα+
++/parenleftbig
+bσβ−2Haσβ/parenrightbig
+dα
+,σ(τ)/bracketrightbigg
+eβeα−Kdβeβe3/bracerightbigg
+−
+−k′
+12/braceleftbigg/bracketleftbigg/parenleftbigg
+2Hbβ
+µ−1√a∂σ/parenleftbig
+dσ√a/parenrightbig
+bβ
+µ−2Haβσdµ,σ(τ)/parenrightbigg
+εµα+
++ελµ∂λdµbαβ/bracketrightbigg
+eβeα−2Hελµbβ
+λdµeβe3/bracerightbigg
+−
+−k′
+23Kεβαdαeβe3+O/parenleftBig
+dα2/parenrightBig
+(A31)
+The dot product of the surface derivative operator and the st ressTegives
+Teβα
+,β=k′
+1/bracketleftBig
+aβα∂β(2H)−dα
+,σβ(τ)aβσ+2Hbβαdβ−Kdα/bracketrightBig
+−
+−k′
+2/braceleftbig
+εαβ/bracketleftbig
+∂β(2H)+Kdβ−aσγdβ,γσ(τ)/bracketrightbig
+−2Hελµbα
+λdµ/bracerightbig
+−
+−k′
+11/braceleftbigg/parenleftbig
+bβα+2Haβα/parenrightbig
+∂β(2H)−aβσdα
+,σ(τ)∂β(2H)−
+−/parenleftbig
+bβα∂β+2aβα∂βH/parenrightbig/bracketleftbigg1√a∂σ/parenleftbig
+dσ√a/parenrightbig/bracketrightbigg
++
++2H/parenleftBig
+2Hbβαdβ−aβσdα
+,σβ(τ)−Kdα/parenrightBig/bracerightbigg
++
++k′
+22/bracketleftbig
+εασbβ
+σ∂β/parenleftbig
+ελµ∂λdµ/parenrightbig
++εαβ∂β(2H)/parenleftbig
+ελµ∂λdµ/parenrightbig/bracketrightbig
++
++(k′
+33+2k′
+13)/parenleftbig
+4H2bβαdβ−2HKdα−Kbαβdβ/parenrightbig
++
++2(k′
+22+k′
+24)/braceleftbigg
+aβα∂βK+Kbβαdβ+aβσ/parenleftbig
+bαγdγ,σ(τ)/parenrightbig
+,β(τ)+
++/parenleftbig
+bβσ−2Haβσ/parenrightbig
+dα
+,σβ(τ)−
+−/parenleftbig
+bαβ∂β+2aαβ∂βH/parenrightbig/bracketleftbigg1√a∂σ/parenleftbig√adσ/parenrightbig/bracketrightbigg/bracerightbigg
+−
+−k′
+12/braceleftbigg
+2εβα/parenleftbig
+bσ
+β∂σH+∂βH2/parenrightbig
++4H2εβσbα
+σdβ−
+22
+−εβα/bracketleftbigg/parenleftbig
+2∂βH+bσ
+β∂σ/parenrightbig/parenleftbigg1√a∂γ/parenleftbig√adγ/parenrightbig/parenrightbigg
++
++2aγσ∂γHdβ,σ(τ)+2Haγσdβ,σγ(τ)−2HKdβ/bracketrightbigg
+−
+−/parenleftbig
+bβα∂β+2aβα∂βH/parenrightbig/parenleftbig
+ελµ∂λdµ/parenrightbig/bracerightbigg
++
++k′
+23Kbα
+βεβγdγ+O/parenleftBig
+dα2/parenrightBig
+(A32)
+Teβ3
+,β=k′
+1/bracketleftBig
+4H2−2K−2bβ
+σdσ
+,β(τ)−dσ∂σ(2H)/bracketrightBig
++k′
+2εβαdβ∂α(2H)−
+−k′
+11/bracketleftbigg/parenleftbig
+4H2−2K/parenrightbig/parenleftbigg
+2H−∂σdσ−1
+2adσ∂σa/parenrightbigg
+−
+−/parenleftbig
+dσbβ
+σ+2Hdβ/parenrightbig
+∂β(2H)−4Hbβ
+σdσ
+,β(τ)/bracketrightbigg
+−
+−(k′
+33+2k′
+13)/bracketleftbigg
+2Hbβ
+σdσ
+,β(τ)+/parenleftbig
+bβ
+σdσ+2Hdβ/parenrightbig
+∂β(2H)−
+−dβ∂βK−K/parenleftbigg
+∂σdσ+1
+2adβ∂βa/parenrightbigg/bracketrightbigg
++
++2(k′
+22+k′
+24)/bracketleftbigg
+2HK−dβ∂βK+2Hbβαdα,β(τ)−
+−/parenleftbig
+4H2+K/parenrightbig/parenleftbigg
+∂σdσ+1
+2adσ∂σa/parenrightbigg/bracketrightbigg
++
++2K′
+12/braceleftbigg
+εαβ/bracketleftbig/parenleftbig
+bσ
+α∂σH+∂αH2/parenrightbig
+dβ+Hbβ
+αdσ,β(τ)/bracketrightbig
+−
+−/parenleftbig
+2H2−K/parenrightbig
+ελµ∂λdµ/bracerightbigg
++
++k′
+23εαβ/parenleftbig
+dα∂βK+Kdα,β(τ)/parenrightbig
++O/parenleftBig
+dα2/parenrightBig
+(A33)
+C2.5. Viscous resistance
+With the help of Eqs.(A18)-(A19), the viscous stress Eq.(12 ) is written as
+Tv=−/braceleftbigg
+2µHwaαβ+2ηw/parenleftbig
+bαβ−Haαβ/parenrightbig
+−η
+2Eαβλµ(vλ,µ+vµ,λ)+
++α2
+2vσbβ
+σdα+α3
+2vσbα
+σdβ/bracerightbigg
+eαeβ+
++/braceleftbigg
+α3/bracketleftbigg
+˙dα−1
+2vβbα
+β−1
+2/parenleftbig
+εµλvλ,µ/parenrightbig
+εβαdβ/bracketrightbigg
+−α′
+62Hwdα+
++α′′
+6/bracketleftbigg1
+2Eαβλµ(vλ,µ+vµ,λ)dβ−2w/parenleftbig
+bαβdβ−Hdα/parenrightbig/bracketrightbigg/bracerightbigg
+eαe3+
+23
++/braceleftbigg
+α2/bracketleftbigg
+˙dβ−1
+2vαbβ
+α−1
+2/parenleftbig
+εµλvλ,µ/parenrightbig
+εαβdα/bracketrightbigg
+−α′
+52Hwdβ+
++α′′
+5/bracketleftbigg1
+2Eαβλµ(vλ,µ+vµ,λ)dα−2w/parenleftbig
+dαbαβ−Hdβ/parenrightbig/bracketrightbigg/bracerightbigg
+e3eβ+
++1
+2(α2+α3)vαbαβdβe3e3+O/parenleftBig
+dα2/parenrightBig
+(A34)
+where the viscosity coeﬃcient α4in Eq.(12) has been split into the dilatation vis-
+cosityµand the shear viscosity η, theα′coeﬃcients refer to the dilatation of area
+and theα′′coeﬃcients to the shear motion.
+The dot product of ∇sandTvgives
+Tvβα
+,β=−µaαβ∂β(2Hw)+η
+2Eβαλµ(vλ,µβ+vµ,λβ)−
+−2η/bracketleftbig
+∂βw/parenleftbig
+bβα−Haβα/parenrightbig
++waαβ∂βH/bracketrightbig
++
++α2Hvσbσα+α3
+2(2Hbασvσ−Kvα)−
+−α2/bracketleftbigg
+2H˙dα+1
+2/parenleftbig
+vσbσαdβ/parenrightbig
+,β(τ)−H/parenleftbig
+εµλvλ,µ/parenrightbig
+εβαbβ/bracketrightbigg
+−
+−α3/bracketleftbigg
+˙dβbα
+β+1
+2bβσ(vσdα),β(τ)+dαvσ∂σH−
+−1
+2/parenleftbig
+εµλvλ,µ/parenrightbig
+εσβdσbα
+β/bracketrightbigg
++
++α′
+54H2wdα+α′
+62Hwbαβdβ−
+−α′′
+5/bracketleftbig
+HEαβλµ(vλ,µ+vµ,λ)dβ−4Hw/parenleftbig
+dβbβα−Hdα/parenrightbig/bracketrightbig
+−
+−α′′
+6/bracketleftbigg1
+2Eαβλµ(vλ,µ+vµ,λ)dσbα
+β−2w(Hbασdσ−Kdα)/bracketrightbigg
++
++O/parenleftBig
+dα2/parenrightBig
+(A35)
+Tvβ3
+,β(τ)=−µ4H2w+η/parenleftbig
+bλµ−Haλµ/parenrightbig
+(vλ,µ+vµ,λ)−
+−4ηw/parenleftbig
+H2−K/parenrightbig
+−α3
+2/parenleftbig
+bβ
+σvσ
+,β+2vβ∂βH/parenrightbig
++
++α3/braceleftbigg
+∂t/parenleftbigg
+∂βdβ+1
+2adβ∂βa/parenrightbigg
++vσ
+,βdβ
+,σ(τ)+
++vσdβ
+,σβ(τ)−1
+2εβσ(dσ∂β+∂βdσ)/parenleftbig
+ελµ∂λvµ/parenrightbig/bracerightbigg
+−
+−α′
+6/bracketleftbigg
+dβ∂β(2Hw)+2Hw/parenleftbigg
+∂βdβ+1
+2adβ∂βa/parenrightbigg/bracketrightbigg
++
++α′′
+6/braceleftbigg1
+2Eαβλµ[(vµ,λ+vλ,µ)dα],β(τ)−
+24
+−2∂βw/parenleftbig
+dσbσβ−Hdβ/parenrightbig
+−2w/bracketleftbigg
+dα,β(τ)bβα+
++dβ∂βH−H/parenleftbigg
+∂βdβ+1
+2adβ∂βa/parenrightbigg/bracketrightbigg/bracerightbigg
+−
+−(α2+α3)Hvαbαβdβ+O/parenleftBig
+dα2/parenrightBig
+(A36)
+Appendix D. Energy balance
+In the following, one looks for a testable parameter to alter the internal energy
+Uin the energy balance equation.
+With the help of Eqs.(8), (9) and (23), Eq.(97) is written as
+γ˙U−/parenleftBig
+Teβαvα,β+Teβ3∂βw+Πβα˙dα,β−geα˙dα/parenrightBig
+=Qh−Jhα
+,α+/bracketleftBig/parenleftBig
+−σaβα+Tvβα/parenrightBig
+vα,β+Tvβ3∂βw−gvα˙dα/bracketrightBig
+(A37)
+From the ﬁrst law of thermodynamics, one knows that
+dU−/summationdisplay
+iLidli=dQ+dWdiss (A38)
+whereWdissis the dissipated work, litheithwork coordinate, Lithe conjugate
+work coeﬃcient, and UandQare deﬁned as usual.
+AsUis the characteristic function of the temperature Θ and of th e work
+coeﬃcient li, one has
+dU=/parenleftbigg∂U
+∂Θ/parenrightbigg
+lidΘ+/summationdisplay
+i/parenleftbigg∂U
+∂li/parenrightbigg
+Θ,ljdli.
+Equality (A38) may thus be written as
+/parenleftbigg∂U
+∂Θ/parenrightbigg
+lidΘ+/summationdisplay
+i/bracketleftBigg/parenleftbigg∂U
+∂li/parenrightbigg
+Θ,j−Li/bracketrightBigg
+dlli=dQ+dWdiss (A39)
+From the fundamental equations
+dU= ΘdS+/summationdisplay
+iLidli
+dF=−SdΘ+/summationdisplay
+iLidli,
+one has /parenleftbigg∂U
+∂li/parenrightbigg
+lj= Θ/parenleftbigg∂S
+∂li/parenrightbigg
+lj+Li
+/parenleftbigg∂S
+∂li/parenrightbigg
+Θ,lj=−/parenleftbigg∂Li
+∂Θ/parenrightbigg
+li,
+25
+whereFis the Helmholtz function and Sis the entropy. Substitution of the two
+expressions above into Eq.(A39) leads to
+CldΘ−Θ/summationdisplay
+i/parenleftbigg∂Li
+∂Θ/parenrightbigg
+lidli=dQ+dWdiss (A40)
+where
+Cl≡/parenleftbigg∂U
+∂Θ/parenrightbigg
+li= Θ/parenleftbigg∂S
+∂Θ/parenrightbigg
+li(A41)
+is deﬁned as the heat capacity at constant work coordinates [ 39]. Dividing Eq.(A40)
+by the inﬁnitesimal time interval, one obtains the instanta neous energy balance
+CldΘ
+dt−Θ/summationdisplay
+i/parenleftbigg∂Li
+∂Θ/parenrightbigg
+lidli
+dt=dQ
+dt+dWdiss
+dt(A42)
+We turn back now to Eq.(A37). The terms in the parentheses on t he left-side of
+Eq.(A37), i.e. the rate of change of the work of the elastic de formation, is identical
+to the second term on the left-side of Eq.(A42), whereas the r ight-sides of Eqs.(A37)
+and (A42) are identical. It follows thus that
+γCl˙Θ−Teβαvα,β−Teβ3∂βw−Πβα˙dα,β+geα˙dα
+=Qh−Jhα
+,α+/parenleftBig
+−σaβα+Tvβα/parenrightBig
+vα,β+Tvβ3∂βw−gvα˙dα(A43)
+Here the convected derivative of the temperature is given by
+˙Θ =∂tΘ+/parenleftbig
+vαtj
+α+wnj/parenrightbig
+∂jΘ.
+The internal energy Uin Eq.(A37) has now been replaced by the product Cl˙Θ.
+The heat ﬂux Eq.(29) is expanded with respect to the local bas es
+Jh=−∂jΘ/braceleftbig/parenleftbig
+κ⊥tj
+α+κanjdα/parenrightbig
+eα+/parenleftbig
+κatj
+αdα+κ/bardblnj/parenrightbig
+e3/bracerightbig
++O/parenleftBig
+dα2/parenrightBig
+(A44)
+where the coeﬃcient β0has been replaced by the heat conductivity perpendicular
+to the director vector −κ⊥and the coeﬃcient β1by the thermal anisotropy −κa≡
+κ⊥−κ/bardbl.
+The divergence of the heat ﬂux is given by
+Jhα
+,α=Jhα
+,α(τ)−2HJh3
+=−κ⊥(∂jΘ),k/parenleftbig
+gkj−nknj/parenrightbig
++κa2H/parenleftbig
+nj∂jΘ/parenrightbig
++
++κa/bracketleftbigg/parenleftBig
+tj
+β∂jΘ/parenrightBig/parenleftbig
+2Hdβ+bβ
+αdα/parenrightbig
+−
+−/parenleftbig
+nj∂jΘ/parenrightbig/parenleftbigg
+∂α+1
+2a∂αa/parenrightbigg
+dα−
+−nj(∂jΘ),ktk
+αdα/bracketrightbigg
++O/parenleftBig
+dα2/parenrightBig
+(A45)
+26
+References
+1. F. Brochard and J. F. Lennon, J. Phys. (Paris), 36(1975) 1035.
+2. H. C. Pant and B. Rosenberg, Biochim. Biophys. Acta, 225(1971) 379.
+3. R. Larter, Chem. Rev., 90(1990) 355.
+4. C. W. Oseen, Trans. Faraday Soc., 29(1933) 883.
+5. F. C. Frank, Discuss. Faraday Soc., 25(1958) 19.
+6. J. Nehring and A. Saupe, J. Chem. Phys., 54(1971) 337.
+7. W. Helfrich, Z. Naturforsch., Teil C, 28(1973) 693.
+8. X. Michalet, F. J¨ ulicher, B. Fourcade, U. Seifert and D. B ensimon, Recherc.,
+25(1994) 1012.
+9. J. L. Ericksen, Kolloid. Z., 173(1960) 117; Arch. Rational Mech. Anal., 4
+(1960) 231, 9(1962) 26; Trans. Soc. Rheol., 4(1960) 29, 5(1961) 23; Quart.
+J. Mech. Appl. Math., 29(1976) 203.
+10. F. M. Leslie, Quart. J. Mech. Appl. Math., 19(1966) 357; Arch. Rational
+Mech. Anal., 28(1968) 265; Adv. Liq. Cryst., 4(1979) 1.
+11. O. Parodi, J. Phys. (Paris), 31(1970) 581.
+12. M. J. Stephen, J. Phys. Rev., A2(1970) 1558.
+13. M. J. Stephen and J. P. Straley, Rev. Mod. Phys., 46(1974) 617.
+14. R. Williams, J. Chem. Phys., 39(1963) 384.
+15. W. Greubel and U. Wolﬀ, Appl. Phys. Lett., 19(1971) 213.
+16. M. F. Schiekel and K. Fahrenschon, Appl. Phys. Lett., 19(1971) 391.
+17. N. Felici, Rev. Gen. Electr., 78(1969) 717.
+18. W. Helfrich, J. Chem. Phys., 51(1969) 4092.
+19. P. G. de Gennes, Commun. Solid State Phys., 3(1970) 35; 3(1971) 148.
+20. J. M. Schneider and P. K. Watson, Phys. Fluids, 13(1970) 1948, 1955.
+21. E. Dubois-Violette, P. G. Gennes and O. Parodi, J. Phys. ( Paris),32(1971)
+305.
+22. W. J. A. Goossens, Adv. Liq. Cryst., 3(1978) 1.
+23. H. Møllmann, Introduction to the Theory of Thin Shells, J ohn Wiley, New
+York, 1981.
+24. M. A. Peterson, J. Math. Phys., 26(1985) 711; Mol. Cryst. Liq. Cryst., 127
+(1985) 257.
+25. E. Evans, A. Yeung, R. Waugh and J. Song, in R. Lipowsky, D. Richter and K.
+Kremer (Eds.), The Structure and Conformation of Amphiphil ic Membranes,
+Springer-Verlag, Berlin, 1992, p.148.
+26. U. Seifert and S. A. Langer, Europhys. Lett., 23(1993) 71.
+27. J. S. Dahler and L. E. Scriven, Nature, 192(1961) 36.
+28. R. Aris, Vector, Tensor and the Basic Equations of Hydrod ynamics, Prentice-
+Hall, Englewood Cliﬀs, NJ, 1962.
+29. D. Landau and E. M. Lifshitz, Electrodynamics of Continu ous Media, Perga-
+mon Press, Oxford, 1984.
+30. C. E. Weatherburn, Diﬀerential Geometry of Three Dimens ions, Cambridge
+University Press, London, 1955.
+31. Zh. C. Ou-Yang and S. Liu, Mol. Cryst. Liq. Cryst., 204(1991) 143.
+27
+32. N. Nakashima, S. Asakuma and T. Kunitake, J. Am. Chem. Soc .,107(1985)
+509.
+33. N. Nakashima, S. Asakuma, J-M. Kim and T. Kunitake, Chem. Lett.,1984
+(1984) 1709.
+34. E. A. Evans and P. L. La Cell, Blood, 45(1975) 29.
+35. E. A. Evans, R. Waugh and L. Melnik, Biophys. J., 16(1976) 585.
+36. E. A. Evans and R. Skalak, Mechanics and Thermodynamics o f Biomembranes,
+CRC Press, Boca Raton, Florida, 1980.
+37. A. G. Lee, Prog. Biophys. Molec. Biol., 29(1975) 3.
+38. C.Truesdell andR.A.Toupin, TheClassicalFieldTheori es, inS.Flugge(Ed.),
+Encyclopedia of Physics, Vol.3, No.1, Springer-Verlay, Be rlin, 1960.
+39. R. Haase, Thermodynamics of Irreversible Processes, Do ver Publications, Mi-
+neola, New York, 1990.
+Figure captions
+Fig.1 Illustration of the middle surface and the local coord inate axes.
+28

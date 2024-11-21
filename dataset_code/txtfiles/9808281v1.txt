@@ -1,0 +1,342 @@
+arXiv:cond-mat/9808281v1  25 Aug 1998Fractional Populations in Sex-linked Inheritance
+Seung Pyo Leea, Myung-Hoon Chungb, Chul Koo Kima, and Kyun Nahmc
+aDepartment of Physics and Institute for Mathematical Scienc es, Yonsei University, Seoul
+120-749, Korea
+bDepartment of Physics, Hong-Ik University, Chochiwon, Choong nam 339-800, Korea
+cDepartment of Physics, Yonsei University, Wonju 220-710, K orea
+Abstract
+We study the fractional populations in chromosome inherite d diseases. The
+governing equations for the fractional populations are fou nd and solved in the
+presence of mutation and selection. The physical ﬁxed point s obtained are
+used to discuss the cases of color blindness and hemophilia.
+87.10.+e, 42.62.Be
+Typeset using REVT EX
+1
+I. INTRODUCTION
+Many physical ideas are ﬁnding applications in complex biological syste ms these days
+[1,2]. Recently, we presented a theoretical scheme in which one can in vestigate the ratios
+between the fractional population of blood groups [3]. This method h as some analogy with
+the physical concept of renormalization andﬁxed points. Inthis pa per, we extend the theory
+to investigate the problem of sex-linked inheritance.
+In sex-linked inheritance, there are ﬁve population groups, XX,X′X,X′X′,XY, and
+X′Y, whereX,X′andYrepresent the normal female, the defective female, and the male
+chromosome, respectively. The group of so called carrier female is c haracterized by X′X.
+Thegeneticruleisthatsonsreceive Yanddaughtersdo XorX′fromtheirfathers. Similarly,
+their mothers deliver XorX′to sons and daughters. It is also known that there exist
+mutations between XandX′. Another important factor in the present problem is that the
+defective groups, X′X′andX′Y, have disadvantages in surviving and inheriting unlike in
+the case of the blood groups [3]. This selection process should be tak en into account for any
+reasonable discussions. Therefore, we consider the inheritance o f sex-linked disease in the
+presence of mutation and selection and obtain the governing equat ions, which determine the
+next fractional populations from the previous ones. The governin g equations will be used
+to investigate the problems of genetic propagations of chromosom e-linked diseases such as
+color blindness and hemophilia.
+II. FRACTIONAL POPULATION EQUATIONS
+We consider the ﬁve fractional populations with the following constr aints:
+XX(n)+X′X(n)+X′X′(n) = 1 (1)
+XY(n)+X′Y(n) = 1,
+for then-th generation. The ratios of gene frequencies without mutation c an be determined
+as
+/tildewidestXf(n) =XX(n)+1
+2X′X(n),
+/tildewidestX′
+f(n) =X′X′(n)+1
+2X′X(n), (2)
+/tildewidestXm(n) =XY(n),
+/tildewidestX′m(n) =X′Y(n).
+Although the mutation between the normal chromosome Xand the defective one X′
+would be rare, still it plays an important role in the following discussion. In order to
+consider the mutation, we introduce two probability factors, αandβfor the following
+mutation processes;
+Xα−→X′andXβ←−X′. (3)
+Through the above mutation processes, the gene frequencies ar e modiﬁed as
+2
+Xf(n) = (1−α)/tildewiderXf(n)+β/tildewiderX′
+f(n),
+X′
+f(n) = (1−β)/tildewiderX′
+f(n)+α/tildewiderXf(n), (4)
+Xm(n) = (1−α)/tildewiderXm(n)+β/tildewiderX′
+m(n),
+X′
+m(n) = (1−β)/tildewiderX′
+m(n)+α/tildewiderXm(n).
+Thefractionalpopulationequations, whichgovernthepopulations ofthenextgeneration,
+are now written as
+/tildewidestXX(n+1) =Xf(n)×Xm(n),
+/tildewidestX′X(n+1) =X′
+f(n)×Xm(n)+Xf(n)×X′
+m(n),
+/tildewidestX′X′(n+1) =X′
+f(n)×X′
+m(n), (5)
+/tildewidestXY(n+1) =Xf(n),
+/tildewidestX′Y(n+1) =X′
+f(n).
+Since the defective chromosome causes a disease, the populations of/tildewidestX′X′and/tildewidestX′Ywill
+have less chances of surviving and inheriting their genes. In order t o reﬂect this disad-
+vantages, we introduce disadvantage factors δffor the female and δmfor the male groups,
+respectively. Then, the populations of/tildewidestX′X′and/tildewidestX′Ywill be modiﬁed as
+Pop[/tildewidestX′X′(n+1)]−→(1−δf)Pop[/tildewidestX′X′(n+1)], (6)
+Pop[/tildewidestX′Y(n+1)]−→(1−δm)Pop[/tildewidestX′Y(n+1)].
+With normalization, the fractional population equations are given by
+XX(n+1) =Xf(n)·Xm(n)
+1−δfX′
+f(n)·X′
+m(n),
+X′X(n+1) =X′
+f(n)·Xm(n)+Xf(n)·X′
+m(n)
+1−δfX′
+f(n)·X′m(n),
+X′X′(n+1) =(1−δf)X′
+f(n)·X′
+m(n)
+1−δfX′
+f(n)·X′m(n), (7)
+XY(n+1) =Xf(n)
+1−δmX′
+f(n),
+X′Y(n+1) =(1−δm)X′
+f(n)
+1−δmX′
+f(n).
+The above governing equations (1) ∼(7) yield the following constraint relations for any gen-
+erationn,
+Xf(n)+X′
+f(n) = 1 and Xm(n)+X′
+m(n) = 1. (8)
+In order to understand the change of populations along generatio ns, it is convenient to
+consider the automata equations for X′
+fandX′
+monly, which are given by
+3
+X′
+m(n+1) =α+(1−α−β−δm(1−β))X′
+f(n)
+1−δmX′
+f(n), (9)
+2X′
+f(n+1) =2α+(1−α−β)/parenleftBig
+X′
+f(n)+X′
+m(n)/parenrightBig
+−2δf(1−β)X′
+f(n)·X′
+m(n)
+1−δfX′
+f(n)·X′m(n).
+The above coupled recursion relations can now be used to study the ﬁxed points of X′
+m
+andX′
+f, which correspond to the equilibrium values where X′
+m(n+ 1) =X′
+m(n) =X′
+m∗
+andX′
+f(n+ 1) =X′
+f(n) =X′
+f∗. The ﬁxed points of X′
+f∗are given by the solutions of the
+algebraic equation,
+a0+a1X′
+f∗+a2(X′
+f∗)2+a3(X′
+f∗)3= 0, (10)
+where the coeﬃcients aiare given by
+a0=α(3−α−β),
+a1= (α+β)(α+β−3)+δm(2β−α−β2−αβ−1)+2δfα(β−1), (11)
+a2=δm(1+α+β)+2δf(2α+2β−β2−αβ−1)+2δmδf(β−1)2,
+a3= 2δf(1−α−β)+2δmδf(β−1).
+Solving this equation for stable ﬁxed points, we can readily determine the equilibrium pop-
+ulation ratios.
+We study the ﬁxed points in several cases. First of all, in the case of no mutation;
+α= 0 and β= 0, the meaningful ﬁxed point, X′
+f∗, is given by 0. It correctly predicts
+that without mutations, the defective genes will disappear eventu ally. Secondly, when only
+mutations are considered in the theory assuming δm= 0 andδf= 0, the ﬁxed point is given
+byX′
+f∗=α/(α+β). This result will be used in the discussion for color blindness. In othe r
+general cases, the exact solution cannot be expressed in a closed form. However, since the
+mutation rates are known to be very small( ∼10−5∼10−7), the ﬁxed point X′
+f∗can be
+expressed in terms of αandβin an approximate fashion and will be discussed in the next
+section.
+III. COLOR BLINDNESS AND HEMOPHILIA
+The disadvantage, that a color blindness man or woman has, is not se vere enough to
+reduce the chance of survival signiﬁcantly. Hence, we let the disad vantage factors be simply
+zero in this case. Then, we easily notice from Eq. (9) that the ﬁxed p oint is given by
+X′
+m∗=X′
+f∗=α
+α+β. (12)
+This result is identical to that obtained in the conventional genetics [4].
+Using the fractional population equations of Eq. (7) and the above ﬁxed point, we obtain
+the population ratios as
+XY:X′Y=X∗
+f:X′
+f∗= 1−X′
+f∗:X′
+f∗=β:α, (13)
+4
+and furthermore
+XX:X′X:X′X′=β2: 2βα:α2. (14)
+The above result is the well known the Hardy-Weinberg law [5].
+The demographic data for color blindness in England show that XY:X′Y= 12 : 1 [6].
+Hence we conclude that β:α= 12 : 1. We notice that X′chromosome is more unstable
+thanXchromosome since βis much larger than α. The abundance of carrier female is easily
+noticed by the fact that XX:X′X:X′X′= 144 : 24 : 1.
+Hemophilia is a dreadful disease which aﬀects the chance of survival and mating signiﬁ-
+cantly. All of the female group X′X′perish completely upon birth. Hence, the disadvantage
+factorδfis equal to 1. Then the ﬁxed point X′
+f∗can be expressed up to the second order of
+αandβas follows using Eq. (10) and (11),
+X′
+f∗=3
+δmα+/parenleftBigg
+−4
+δm+12
+δ2
+m−18
+δ3
+m/parenrightBigg
+α2+/parenleftBigg5
+δm−9
+δ2
+m/parenrightBigg
+αβ+O(α3,α2β,αβ2,β3), (15)
+X′
+m∗= (−2+3
+δm)α+/parenleftBigg
+−2−10
+δm+30
+δ2
+m−18
+δ3
+m/parenrightBigg
+α2+/parenleftBigg
+−2+11
+δm−9
+δ2
+m/parenrightBigg
+αβ+O(α3,···).(16)
+A numerical calculation of the stable ﬁxed point, X′
+f∗using Eq. (10) is shown in Fig. 1. We
+ﬁnd thatthe dominant contributions comefrom αandδmasEq. (15)indicates. We also ﬁnd
+that the values of the ﬁxed point X′
+f∗are independent of initial values. The approximate
+expressions, Eqs. (15) and (16) are found in good agreement with the exact expression Eq.
+(10) except when δmis near zero.
+It is useful to consider the male hemophilia population before selectio n in order to relate
+the above formulation with the statistical data. Here, the relevan t demographic data is the
+ratio,r, between the mutation cases and the all hemophilia cases;/tildewidestX′Y∗
+mut=r·/tildewidestX′Y∗. Using
+Eqs. (2)∼(7), the population of male infants with hemophilia before selection ca n be written
+as
+/tildewidestX′Y∗=1
+2(1+α−β)X′X∗+αXX∗≡/tildewidestX′Y∗
+inh+/tildewidestX′Y∗
+mut. (17)
+Here, the second term represents the male population having hemo philia caused by the
+spontaneous gene mutation. Actually, the ﬁrst term also contains the gene mutation contri-
+bution of1
+2(α−β)X′X∗. However, when the demographic data rare collected, there is no
+way to distinguish the inheritance from the mutation in this case, bec ause data collectors
+simply check whether there were hemophiliac occurrences in the fam ily line or not. It is
+straightforward to show that ris related to the disadvantage factor δmand the mutation
+ratesαandβ. From Eqs. (2)∼(7), we ﬁnd
+δm= 3r+(10−10r−2
+r)α+(−3+5r)β+O(α2,αβ). (18)
+The early statistical data for the infant male population having hemo philia [7] show that
+/tildewidestXY:/tildewidestX′Y≃104: 1. Assuming that the current fractional population distribution h as
+reached a ﬁxed point, we ﬁnd X′
+f∗≃10−4from Eq. (5). Furthermore, a recent statistics
+shows that the rate ris given by r≃1
+3[8]. This data and Eq. (18) yield δm= 1−O(α,β).
+5
+This result is in a reasonable agreement with the fact that various th erapies treating male
+hemophilia have beeninvented onlyrecently and, thus, theprobabilit yofsuccessful marriage
+andreproductionwasalmostzeroformalepatient inthepast. With δm≃1andX′
+f∗≃10−4,
+we ﬁnd from Eq. (15) that the value of αis about 3 .3×10−5, which is in a reasonable range
+as the probability of mutation. Also, we can obtain the population rat io of the carrier female
+group using Eq. (7); XX:X′X:X′X′∼104: 1.33 : 0.
+Since thelevel of therapies treating malehemophilia hasnow reached thestage that most
+of male patient can marry and reproduce, it is interesting to study t he caseδm= 0 and make
+predictionshowthemutationrateandthefractionalpopulationwill changeaccordingly. The
+ﬁxed point of Eq. (15) and (16) will be modiﬁed as
+X′
+f∗=/radicalBigg
+3
+2α1
+2+O(α,···), (19)
+X′
+m∗=α+(1−α+β)X′
+f∗. (20)
+Using the above results, we ﬁnd the modiﬁed rate
+r=/radicalBigg
+2
+3α1
+2+O(α,···). (21)
+Assuming the mutation rate αdoes not change and remain α≃3.3×10−5as we ﬁnd in the
+above, we can determine X′
+f∗= 0.00707. Also, we readily obtain the fractional populations:
+XX:X′X:X′X′= 98.6 : 1.41 : 0, and XY:X′Y= 993 : 7. The result clearly
+shows that the majority of hemophilia would results frominheritance and that the fractional
+population of carrier female increases drastically, when male hemoph iliac patients survive
+and mate without any disadvantages. Therefore, nongenetic tre atment of hemophiliac male
+may cause increase of hemophiliac population and infant deaths of fe male patients, unless
+some concurrent measures are taken. However, we note that th e present calculation can not
+produce the dynamic properties of the transition period between δm≃1 andδm≃0, since
+δmis assumed static in the calculation.
+IV. CONCLUSION
+We have considered the population ratios of the genetic groups rela ted with chromosome
+inherited diseases. The governing equations, which determine the r atios, are found in the
+presence of mutation and selection. The selection is taken into acco unt in the formulation
+by using the disadvantage factors. It is found that there exist ph ysical ﬁxed points in the
+automata equations, which correspond to equilibrium population rat es. These fractional
+population equations are used to discuss the cases of color blindnes s and hemophilia.
+In the case of color blindness, there is no signiﬁcant disadvantage in selection so that the
+disadvantage factors can be assumed zero. From the governing e quations, we readily obtain
+the Hardy-Weinberg relation XX:X′X:X′X′=β2: 2αβ:α2. Using the statistical data
+XY:X′Y= 12 : 1, we ﬁnd that the ratio of mutation rates α:β= 1 : 12.
+Hemophilia seriously hampers chances of survival, mating and reprod uction. Especially
+for female patients, chance of survival is almost zero, thus, makin gδf= 1. Using the
+6
+demographic data that one out of ten thousand male infants have h emophilia, and that one
+third of all hemophiliac cases are thought to be caused by gene muta tion, we obtain the
+following results; i) the disadvantage factor δmfor male is almost 1, ii) the mutation rate
+α≃3.3×10−5, and iii) XX:X′X≃104: 1.33.
+We have also studied the case when the hemophiliac male suﬀers no disa dvantage in the
+selection process; δm= 0. It is found that the population of hemophiliac females and males
+would increase drastically and inheritary hemophilia would be dominant o ver gene mutated
+cases.
+ACKNOWLEDGMENTS
+This work has been partly supported by the Korea Ministry of Educa tion (Grant No.
+BSRI-97-2425) and the Korea Science and Engineering Foundation through Project No.
+95-0701-04-01-3 and also through the SRC program of SNU-CTP.
+7
+FIGURES
+01e-42e-43e-4
+2e-64e-66e-68e-61e-5
+0.20.40.60.8X'f*
+α
+δmFigure 1
+FIG. 1. For a set of values of δf= 0.5 andβ= 10−5, we plot the ﬁxed point X′
+f∗in the
+three dimensional format, where the xandy-axis correspond the mutation rate αand the male
+disadvantage factor δm. It is found that the overall features of the shape and size do not depend
+onδfandβsensitively.
+8
+REFERENCES
+[1] A. S. Perelson and G. Weisbuch, Rev. Mod. Phys. 69, 1219(1997).
+[2] D. A. Z. Mekjian, Phys. Rev. A44, 8361(1991).
+[3] M.-H. Chung, S. P. Lee, C. K. Kim, and K. Nahm, Phys. Rev. E56, 865 (1997).
+[4] See e.g., P. W. Hedrick, Genetics of Populations , (Jones And Bartlett Publishers, Inc.,
+Boston, 1985).
+[5] C. C. Li, First Course in Population Genetics , (Boxwood, Paciﬁc Grove, CA, 1976).
+[6] T. Strachan and A. P. Read, Human Molecular Genetics , (Bios Scientiﬁc Publishers,
+1996).
+[7] I. H. Porter, Heredity and disease , (McGraw-Hill, New York, 1968), pp.212-214.
+[8] http://www.hemophilia.org/bleeding −info/hemophilia/hemo.html
+9

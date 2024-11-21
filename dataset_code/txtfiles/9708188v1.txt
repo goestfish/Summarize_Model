@@ -1,0 +1,446 @@
+arXiv:cond-mat/9708188v1  [cond-mat.dis-nn]  23 Aug 1997Parisi Phase in a Neuron
+G. Gy¨ orgyi and P. Reimann∗
+Institute for Theoretical Physics, E¨ otv¨ os University, P uskin u. 5-7, H-1088 Budapest, Hungary
+(September 14, 2021)
+Pattern storage by a single neuron is revisited. Generaliz-
+ing Parisi’s framework for spin glasses we obtain a variatio nal
+free energy functional for the neuron. The solution is demon -
+strated at high temperature and large relative number of ex-
+amples, where several phases are identiﬁed by thermodynam-
+ical stability analysis, two of them exhibiting spontaneou s full
+replica symmetry breaking. We give analytically the curved
+segments of the order parameter function and in representa-
+tive cases compute the free energy, the storage error, and th e
+entropy.
+05.20.-y, 75.10Nr, 87.22.Jb
+Statistical physical modeling of neural networks a-
+chieved much success in the description of neural phe-
+nomena, ranging from storage and retrieval in memory
+networks to learning and generalization in feed-forward
+networks to unsupervised learning [1]. Whereas some
+models for a single neuron are admittedly oversimpli-
+ﬁed from the biological viewpoint, when networked they
+exhibit a variety of neural functions, performed by liv-
+ing systems and demanded from artiﬁcial designs. In
+this Letter we study a single perceptron-type neuron’s
+memorization ability, crucial for the understanding of
+networked systems. When the number of synaptic cou-
+plings of a neuron becomes large the storageproblem can
+be described via the statistical mechanical framework in-
+troduced by Gardner and Derrida [2,3]. Since then the
+neuron is well understood below capacity, the region be-
+yond it, however, remained the subject of continuous re-
+search and debate [4–9]. We claim that the framework
+presented here carriesthe exact statistical mechanicalso-
+lution, which we illustrate on a partly analytically treat-
+able limiting case. Networks beyond saturation are long
+known to have complex features; here we show that even
+a single neuron can exhibit extreme complexity.
+We consider the McCulloch-Pitts model neuron [1],
+ξ= sign(h), h=N−1/2/summationdisplayN
+i=1JiSi, (1)
+whereJis the vector of synaptic couplings, Sthe input
+andξthe response. The normalization was chosen so
+thathis typically of O(1) when N→ ∞. Patterns to
+be stored are prescribed as pairs {Sµ,ξµ}M
+µ=1such that
+the neuron is required to generate ξµin response to Sµ.
+Given the ensemble of patterns, the local stability pa-
+rameter ∆µ=hµξµobeys some distribution ρ(∆) (see
+[4]). The µ-th pattern is stored by the neuron if theactual response signal from Eq. (1) equals the desired
+outputξµ,i. e., ∆µ>0. The number of patterns M
+is generically of order N, soα=M/Nis an intensive
+parameter. For the sake of simplicity, we generate the
+Sµ
+i-s independently from a normal distribution, consider
+ξµ=±1 equally likely, and choose the spherical prior
+constraint |J|=√
+N. The cost function to be minimized,
+i. e., the Hamiltonian, is the sum of errors committed on
+the patterns. The error on the µ-th pattern is measured
+by a potential V(∆µ), taken here to be zero for argu-
+ments larger than a given κand decreasing elsewhere [4].
+Storage as deﬁned above corresponds to κ= 0, while a
+κ >0 means a stricter requirement on the local stability
+∆ and ensures a ﬁnite basin of attraction for a memo-
+rized pattern during retrieval. The Hamiltonian deﬁnes
+through gradient descent a dynamics in coupling space.
+Speciﬁcally, V(y) = (κ−y)bθ(κ−y) corresponds to the
+perceptron and adatron rules for b= 1,2, respectively.
+There is no such dynamics in the case b= 0, but because
+ofits prominent static meaning – the Hamiltonian counts
+the incorrectly stored patterns – we will consider that in
+concrete calculations.
+The Hamiltonian introduced above gives rise to a
+statistical mechanical system [2] resembling models of
+spin glasses with inﬁnite-range interactions [10]. The
+microstates are conﬁgurations of synaptic couplings,
+quenched disorder is due to the randomly generated pat-
+terns, and the temperature T=β−1represents the tol-
+erance to error of storage. The partition function is
+Z=/integraldisplay∞
+−∞dNJ δ(√
+N−|J|) exp/parenleftBigg
+−βM/summationdisplay
+µ=1V(∆µ)/parenrightBigg
+.(2)
+For large Nthe replica method [10] yields the mean free
+energy per coupling [2,4,6]
+f=−/an}bracketle{tlnZ/an}bracketri}ht
+Nβ= lim
+n→01−/an}bracketle{tZn/an}bracketri}ht
+nNβ= lim
+n→01
+nmin
+Qf(Q),(3)
+where/an}bracketle{t /an}bracketri}htstands for the average over patterns and
+f(Q) =fs(Q)+αfe(Q), (4a)
+fs(Q) =−(2β)−1lndetQ, (4b)
+fe(Q) =−β−1ln/integraldisplay/integraldisplay∞
+−∞dnx dny(2π)−n
+×exp/parenleftBig
+−β/summationdisplayn
+a=1V(ya)+ixy−1
+2xQx/parenrightBig
+.(4c)
+Then×nmatrixQis symmetric and positive semidef-
+inite, with elements qaa= 1 and −1≤qab≤1. The
+1
+entropic term fsis speciﬁc to the spherical model, while
+the energy-term feis independent of the prior constraint
+on the synapses. The mean error per pattern is
+ε=1
+α∂βf
+∂β=/integraldisplay∞
+−∞d∆ρ(∆)V(∆) (5)
+while the entropy per synapsis
+s=β(αε−f) (6)
+has the usual thermodynamic meaning in coupling space.
+The extremization problem (3,4) was ﬁrst solved with
+the assumption of replica symmetry (RS) [2,3]. Be-
+yond capacity at zero temperature, however, Bouten
+[5] showed by rectifying [2,3] that whenever the lo-
+cal stability distribution function ρ(∆) exhibits a gap,
+there is an eigenvalue in negative inﬁnity of the Hes-
+sian∂2f(Q)/∂qab∂qcdat the RS solution, so this is not
+a minimum in (3). Such is the case for the potential
+V(y) =θ(y−κ). Theonestep replicasymmetrybreaking
+(1-RSB)ansatzwasconsideredfor T= 0, yieldinga ρ(∆)
+diﬀerent from the RS result, and, as demanded from an
+improved solution, a larger energy [6–8]. In the ground
+statebeyondcapacity, whereall qab→1, aneigenvalueof
+negative inﬁnity has been found recently for any R-step
+RSB (R-RSB), and for illustration the 2-RSB solution
+computed [9]. The results show a slight improvement
+over 1-RSB in the energy and a signiﬁcant diﬀerence in
+thescaledelementsof Q, but alsothe2-RSBgroundstate
+turned out to be unstable. Ref. [9] in fact implied that a
+gap inρ(∆) atT= 0 means the instability of all R-RSB
+solutions with Rﬁnite.
+In order to treat the storage problem of the neu-
+ron we technically generalize Parisi’s method for the
+Sherrington-Kirkpatrick (SK) model of spin glasses (see
+[10]). By Parisi’s choice of Qand his continuation rule
+in then→0 limit, the SK free energy was expressed in
+terms of an order parameter function. An elegant and
+useful re-formulation was due to [11], whose free energy
+functional for the SK problem incorporated both Parisi’s
+and Sompolinsky’s partial diﬀerential equations (PPDE
+and SPDE, resp.). Its analog was used for the Little-
+Hopﬁeld (LH) memory network in [12]. For the neuron,
+we adopt Parisi’s form for Q, momentarily as an ansatz,
+but thermodynamical stability analysis reported about
+later amounts to its consistency check. Our calculations
+show that despite the signiﬁcant diﬀerences between the
+SK and the neuron Hamiltonians and those between the
+’hard’ terms in the replica free energies, the variational
+free energies are remarkably similar. We obtain [13]
+f= max
+x(q)extr
+f(q,y),P(q,y)/bracketleftBig
+fs+α(fe+f(1)
+a+f(2)
+a)/bracketrightBig
+,(7a)
+fs=−(2β)−1/integraldisplay1
+0dq/bracketleftbig
+D(q)−1−(1−q)−1/bracketrightbig
+,(7b)
+fe=f(0,0), (7c)f(1)
+a=/integraldisplay1
+0dq/integraldisplay∞
+−∞dyP(q,y)
+×/bracketleftBig
+˙f(q,y)+1
+2f′′(q,y)−1
+2βx(q)f′(q,y)2/bracketrightBig
+,(7d)
+f(2)
+a=/integraldisplay∞
+−∞dyP(1,y) [V(y)−f(1,y)]. (7e)
+The minimization in (3) turned to maximization due to
+its interchange with the n→0 limit [10]. Here and later
+˙h=∂h/∂qandh′=∂h/∂y. Thex(q) is the inverse of
+Parisi’s order parameter function, i. e., it gives the prob-
+ability that the overlap of the synaptic vectors from two
+replicas is smaller than q, andD(q) =/integraltext1
+qd¯qx(¯q) is the
+continuation of the spectrum of the matrix Qforn→0.
+The range 1 ≥q≥0 is now included in the ansatz, that
+should be veriﬁed later. The auxiliary functionals f(1,2)
+a
+carry the Lagrange multiplier ﬁeld P(q,y) and thus van-
+ish at stationarity. Variation by P(q,y) makes the ﬁeld
+f(q,y)satisfythePPDE,whichcanbereadoﬀfrom(7d),
+and that by P(1,y) ﬁxes the initial condition through
+(7e). So f(q,y) evolves from q= 1 toq= 0 and its ﬁnal
+value gives the energy term in (7c). Stationarity in terms
+off(q,y) andf(0,y) leads to the SPDE
+˙P(q,y) =1
+2P′′(q,y)+βx(q)[P(q,y)f′(q,y)]′,(8)
+evolving from P(0,y) =δ(y) untilq= 1. Comparison
+with the SKmodel [11], its p-spingeneralization[14], and
+the LHnetwork[12] showsthat the respectivePDE-sand
+P(0,y) arethe same, but in our casea generalinitial con-
+ditionf(1,y) =V(y) is taken. In fact, the ’hard’ term of
+theSKreplicafreeenergyisformallyaspecialcaseof(4c)
+ifV(y) = ln2cosh y. Variation of (7a) in terms of explicit
+occurrences of x(q) yields (2 β)−1/integraltext1
+0dqF(q,[x(¯q)])δx(q),
+where
+F(q,[x(¯q)]) =/integraldisplayq
+0d˜q
+D(˜q)2−γ/integraldisplay∞
+−∞dyP(q,y)f′(q,y)2(9)
+is simultaneously a function of qand a functional of
+x(¯q), withγ=αβ2. So wherever ˙ x(q)>0 stationar-
+ity requires that F= 0. If x(q)≡m, 0< m < 1,
+in an interval Ithen stationarity in terms of mleads
+to Maxwell’s rule/integraltext
+IdqF(q,[x(¯q)]) = 0. The R-RSB
+ansatz involves a sequence q(R)
+0< ... < q(R)
+Rand has
+x(q) =/summationtextR
+k=0(m(R)
+k+1−m(R)
+k)θ(q−q(R)
+k), withm(R)
+0= 0≤
+m(R)
+1≤...≤m(R)
+R+1= 1. Itisnaturallyincorporatedinto
+the above scheme: required is F= 0 at each of the points
+q(R)
+0,...,q(R)
+Rand so is the Maxwell rule in the intervals
+between them ( cf.[15] in a special case). Note that the
+free energy can be written in short as max x(q)[fs+αfe]
+with (7b,7c), where f(q,y) satisﬁes the PPDE with the
+initial condition as above; that corresponds to Parisi’s
+original formulation.
+Thermodynamical stability analysis requires the diag-
+onalization of the Hessian of f(Q) in Eq. (4). Based on
+2
+the general expression of Ref. [16] we calculated a subset
+of eigenvalues from the replicon sector of the R-RSB, in-
+cludingλ(R)(R) =˙F(q(R)
+R,[x(¯q)])thatderivesfromstates
+in the same smallest cluster. The λ(R)(R) is typically de-
+cisive for stability [15,14], and becomes negative inﬁnity
+atT= 0 for any R-RSB with ﬁnite Rifρ(∆) has a gap
+[5,9]. Concerning the maximizing x(q) of (7), if ˙ x(q)>0
+in an interval Ithen the continuation of the aforemen-
+tioned subset is λ(q) =˙F(q,[x(¯q)]), soλ(q)≡0 inI,
+thus zero modes are present. This is a generic property
+of a Parisi phase [17].
+The distribution of the local stability ∆ is found to be
+of a remarkably simple form [13]
+ρ(∆) =P(1,∆). (10)
+That sheds light on the physical meaning of the auxiliary
+ﬁeldP(q,y):yis the local stability at an intermediate
+generation of the ultrametric tree and P(q,y) its proba-
+bility distribution. The analogy with the local magnetic
+ﬁeld in the SK and LH models [11,18,12] is apparent.
+Classic neural modeling focuses on T= 0. To solve
+that problem, however, extensive numerical work may
+be necessary. On the other hand, in the limit α, T→ ∞
+whileγis kept ﬁnite, we can calculate x(q) wherever it
+deviates from the step-like shape, thence other analytic
+results follow. By resolving the PPDE and the SPDE
+perturbatively we obtain f(q,y) andP(q,y) as function-
+als ofx(q) toO(β2), yielding explicit functional forms for
+the free energy (7) as well as for (9). Another possibility
+is ﬁrst expanding (4) in βand then applying the Parisi
+ansatz. Either way we arrive at
+β2f=φ0+βmax
+x(q)[φ1]+O(β2) (11a)
+φ0=γ/radicalbig
+W(0) (11b)
+φ1=βfs+βγf(1)
+e (11c)
+βf(1)
+e=1
+2/integraldisplay1
+0dqx(q)˙W(q) (11d)
+W(q) =/integraldisplay/integraldisplay∞
+−∞d2texp/parenleftbig
+−1
+2|t|2/parenrightbig
+2πV(n1·t)V(n2·t),(11e)
+where|n1,2|= 1 and n1·n2=q. The functional (11c)
+happenstobeequivalentwiththefreeenergyinNieuwen-
+huizen’sgeneralizationofthesphericalSK-typespinglass
+model [19]. Formula (9) is in leading order
+F(q,[x(¯q)]) =/integraldisplayq
+0d¯qD(¯q)−2−γ˙W(q),(12)
+thus for a continuous x(q) with ˙x(q)>0 one has
+x(q) =1
+2γ−1/2···W(q)¨W(q)−3/2, (13)
+cf.Eq. (9) in [19]. Various trial functions x(q), such
+as anR-RSB, or, Parisi’s ansatz of a continuous orderparameter function between two plateaux (such a clas-
+sic Parisi phase will be referred to as SG-I), can be for-
+mulated by means of (12). We calculated the full set
+of replicon eigenvalues of R-RSB based on [16]. With
+r= 0,...,R−1 andk,l=r+1,...,Rwe have
+λ(r;k,l) =D(q(R)
+k)−1D(q(R)
+l)−1−γ¨W(q(R)
+r),(14)
+andλ(R)(R) is obtained if q(R)
+Ris substituted for all q-s
+in (14). We studied the example V(y) =θ(κ−y) when
+˙W(q) = (2π)−1(1−q2)−1/2exp/parenleftbig
+κ2/(1+q)/parenrightbig
+.(15)
+Four distinct phases are found and depicted on Fig. 1.
+At the boundary of the transition RS—SG-I, further-
+more, at the RS—1-RSB line for κ < κ2, if the border is
+approached from the RSB phase, the x(q) function con-
+verges for each 0 ≤q≤1 to the RS value q(0). Here the
+3rd derivative of the mean free energy is discontinuous.
+On the other hand, for κ > κ 2, if the RS–1-RSB line
+is approached from the RSB side then q(1)
+0→q(0)but
+q(1)
+1/ne}ationslash→q(0). The plateau value m(1)
+1→1 so the limits
+ofx(q) from the two phases diﬀer at one point q= 1.
+At that transition the 2nd derivative of the free energy
+is discontinuous. This phenomenon is analogous to the
+RS—1-RSB transition in the random energy model (see
+[10]), and similar two types of segments of the RS—1-
+RSBborderlinewereidentiﬁedinthespherical, p-spinSK
+model by [15]. The RS—SG-I boundary is analogous to
+the Parisi transition in the SK model. We found a fourth
+phase, where x(q) is like an SG-I curve joined with a 1-
+step function. It is ofthe same type asthe phase PG II of
+the Potts spin glass [20], and the low-temperature state
+of thep-spin SK model [14], furthermore, it is analogous
+to the phase SG-IV of [21]. The borderline λ(0)(0) = 0
+of local stability of the RS state, i. e., the de Almeida--
+Thouless (AT) curve, coincides with the border of the RS
+phase for κ < κ 2but enters the RSB phases for larger
+κ-s. However, whenever RS and RSB states coexist, we
+ﬁnd that the RSB state maximizes the free energy func-
+tional(7). No coexistencebetweendiﬀerenttypes ofRSB
+phases was observed. One characteristic x(q) function
+from each phase is shown on Fig. 2. Note that if x(q)
+has a curved segment, this is explicitly given by Eqs.
+(13,15). For illustration, thermodynamic quantities are
+plotted along the κ= 0 line on Fig. 3. We expect that
+for some ﬁnite temperatures similar phases exist, never-
+theless, in the ground state the phase diagram simpliﬁes
+to the single borderline RS—SG-I, i. e., the known limit
+of capacity curve. The richness of the neural behavior
+forT→ ∞should be contrasted with the generic RS
+high-T-phase in SK-type disordered magnets.
+In conclusion, we have put forth an exact description
+of storage by a single neuron in terms of a variational
+free energy, the solution of which we demonstrated in the
+highTlimit with the error counting potential. Storage
+3
+beyond capacity with other error measures, learning and
+generalizationofunlearnabletasks, storageby networked
+neurons, and frustrated phases in general, are natural
+directions for future investigations.
+Special thank is due to T. Temesv´ ari for his patiently
+explaining parts of [16]. Stimulating discussions with
+C. De Dominicis, I. Kondor, and the late A. V´ egs˝ o are
+gratefully acknowledged. This work was supported by
+HSRF grant No. T017272 and the Holderbank founda-
+tion (Switzerland).
+∗Present address: Universit¨ at Augsburg, Memminger Str.
+6, 86135 Augsburg, Germany
+[1] J. Hertz, A. Krogh, andR. G. Palmer, Introduction to the
+Theory of Neural Computation , Addison-Wesley (Read-
+ing, Massachusetts, 1991)
+[2] E. Gardner, J. Phys. A 22, 1969 (1989); 21, 257 (1988).
+[3] E. Gardner and B. Derrida, J. Phys. A 21, 271 (1988).
+[4] M. Griniasty and H. Gutfreund, J. Phys. A 24, 715
+(1991).
+[5] M. Bouten, J. Phys. A 27, 6021 (1994).
+[6] P. Majer, A. Engel, and A. Zippelius, J. Phys. A 26, 7405
+(1993).
+[7] R. Erichsen and W. K. Theumann, J. Phys. A 26, L61
+(1993).
+[8] A. H. L. West and D. Saad, to be published
+[9] W. Whyte and D. Sherrington, J. Phys. A 29, 3063
+(1996).
+[10] M. M´ ezard, G. Parisi, and M. Virasoro, Spin Glass The-
+ory and Beyond World Scientiﬁc (Singapore, 1987); K.H.
+Fischer and J. A. Hertz, Spin Glasses Cambridge Univer-
+sity Press (Cambridge, U. K., 1991).
+[11] H.-J. Sommers and W. Dupont, J. Phys. C 17, 5785
+(1984).
+[12] K. Tokita, J. Phys. A 27, 4413 (1994).
+[13] Details of the calculation will be presented elsewhere .
+[14] E. Gardner, Nucl. Phys. B 257, 747 (1985)
+[15] A. Crisanti and H.-J. Sommers, Z. Phys. B 87, 341
+(1991).
+[16] T. Temesv´ ari, C. De Dominicis, and I. Kondor, J. Phys.
+A27, 7569 (1994).
+[17] C. De Dominicis, private communication
+[18] J. R. L. de Almeida and E. J. S. Lage, J. Phys. C 16,
+939 (1983).
+[19] Th. M. Nieuwenhuizen, Phys. Rev. Lett. 74, 4289 (1995).
+[20] D. J. Gross, I. Kanter, and H. Sompolinsky, Phys. Rev.
+Lett.55, 304 (1985)
+[21] Th. M. Nieuwenhuizen, J. Phys. A 30, L55 (1997).FIG. 1. Phase diagram for the potential V(y) =θ(κ−y)
+in the (γ,κ) plane for high Tby numerical maximization of
+Eq. (11c). The full lines separate phases with diﬀerent type s
+of global maxima. The RS, 1-RSB, SG-IV, and SG-I phases
+are indicated by a, b, c, andd, respectively. The AT curve is
+the RS phase boundary for κ < κ 2≃2.38 and to the right of
+the arrow it analytically continues in the dashed line.
+FIG. 2. The x(q) function at representative points as
+marked on Fig. 1 by crosses.
+FIG. 3. The entropy sfrom Eq. (6), thefree energyterm φ1
+from Eq. (11c), and the enlarged correction ε1=T(1
+2−ε) for
+the energy (5) in the high Tlimit. The RS—SG-I transition
+is marked by an arrow. The dashed lines correspond to the
+thermodynamically unstable RS state beyond this transitio n
+point.
+4
+00,511,522,533,54
+10 100 1000 104105κ
+γ+++
++a
+dcb
+01
+0 1x(q)
+qa
+b
+c
+d
+-40-32-24-16-808
+0 200 400 600 800 1000 
+γ50 x
+s
+φ
+1ε
+1
+-8-6-4-20
+0 50 100 150 φ
+1

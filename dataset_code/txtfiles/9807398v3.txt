@@ -1,0 +1,235 @@
+arXiv:cond-mat/9807398v3  [cond-mat.stat-mech]  21 Apr 1999Eigen’s error threshold and mutational meltdown in a
+quasispecies model
+Franco Bagnoli∗
+Dipartimento di Matematica Applicata, Universit` a di Fire nze
+via S. Marta, 3 I-50139, Firenze, Italy.
+Also INFN and INFM, sez. di Firenze.
+Michele Bezzi∗∗
+Dipartimento di Fisica, Universit` a di Bologna
+Via Irnerio, 46, I-40126 Bologna, Italy.
+Also INFN, sez. di Bologna
+Abstract
+We introduceatoy modelfor interacting populations connec ted by mutations
+and limited by a shared resource. We study the presence of Eig en’s error
+threshold and mutational meltdown. The phase diagram of the system shows
+that the extinction of the whole population due to mutationa l meltdown can
+occur well before an eventual error threshold transition.
+Typeset using REVT EX
+1
+keywords: Speciation models; Darwinian Theory; Population Dynamics; Eigen Mod el;
+Mutational Meltdown.
+The evolutionary process is due to the balance between two opposit e forces: random
+mutation and natural selection. Mutations tend to increase the ge netic diversity, while
+selection discriminates the individuals more apt to survive. A simple mod el for evolution of
+self-reproducing molecules was proposed by Eigen [1]. The inheritable characters (genotype)
+are modeled by a binary string g= (g1,g2,...,g L),gi∈ {0,1}, of ﬁxed length L(haploid
+individuals). The genotypic space is thus a binary hypercube of Ldimensions. One can
+think of the zeros as good genes (or basis) and the ones as bad gen es. We shall denote the
+set of individuals sharing the same genotype as a strain.
+The selection is modeled by the concept of ﬁtness, which can be deﬁn ed as the survival
+probability or birth rate of a strain in the limit of zero mutations and va nishing population
+(in order to avoid overcrowding eﬀects). The selection acts on the external characters of an
+individual, i.e. its phenotype m, which can be considered a (generally degenerated) function
+of the genotype m(g). The simplest phenotype (used also in Eigen’s model) is a decreasing
+function of the fraction of bad genes in the genotype: m(g) = (1/L)/summationtext
+igi. The mutations,
+occurring with probability µ, reverse the value of a single bit (point mutations) and thus
+couple diﬀerent strains.
+The classiﬁcation of strains into species is based both on the phenot ypic traits and on
+the genotypic information: for strains to belong to the same specie s, they must be connected
+by mutations and form an isolated cluster in the phenotypic space. T his last requirement is
+guaranteed, even in an almost ﬂat ﬁtness landscape, by competitio n [2], which “eliminates”
+the less adapted strains phenotypically near to a ﬁttest one.
+For asharp peak landscape the genotype g= (0,0,...) has higher ﬁtness α, and all
+other genotypes have the same lower ﬁtness β: the ﬁtness landscape is almost ﬂat. Two
+diﬀerent regimes are possible: in one phase the asymptotic limit is a bell shaped distribution
+in phenotypic space (quasispecies), centered around the master sequence; in the other the
+most common phenotype is no more the ﬁttest one. The shape of th e distribution in this
+second phase is dominated by combinatorial factors, approaching a Gaussian in the limit of
+very large mutation rates, with almost no diﬀerence among strains.
+The transition between these two regimes, triggered by the mutat ion rate µor by the
+length of the genome L, is called error threshold . While the original results have been
+obtained for an inﬁnite population, this transition, disregarding the eﬀects of ﬂuctuations,
+depends slightly on the size of population [3,4]. The error transition ha s the character of a
+true phase transition (ﬁrst order) for an inﬁnite genome length L[5].
+A related eﬀect, eﬀective in small populations, is called Muller’s ratche t [6] orstochastic
+escape[7,8]: in absence of back mutations there is a ﬁnite probability that the master
+sequence will be lost due to ﬂuctuations. Since it relies on a random pr ocess, the average
+escape time is however of order of the exponential of the size of th e strain [9], and thus this
+eﬀect is relevant only for very small populations. In practice, this is the ultimate extinction
+mechanism, eﬀective when another cause has reduced enough the population. The error
+threshold, on the other hand, does not depend on the size of the t otal population. In the
+following we shall neglect to consider the inﬂuence of ﬂuctuations.
+2
+When the total population size is not kept ﬁxed, the presence of un favorable mutations
+reduces the average ﬁtness, and this can lead to the extinction of the whole population, a
+phenomenon which is called mutational meltdown [10–12]. The presence of this eﬀect in
+the Eigen model has been shown numerically in Ref. [13].
+In this work we propose a simple minimal model which is able to exhibit bot h the
+error threshold and the mutational meltdown. Due to the form of t he ﬁtness function,
+the dynamics of the population is fundamentally determined by the ﬁt test strains. Let us
+indicate with Xthe number of individuals sharing the master sequence, with Ythe number
+of individuals whose genotype has m= 1, and with Zall others individuals. We assume
+also non-overlapping generations, so that we can consider a discre te time dynamics with
+unit equal to the generation time.
+During reproduction, individuals from strain Xcan mutate, contributing to Y, andY
+toZ, with mutation rate µL. We disregard the possibility of back mutations from ZtoY
+and from YtoX. This last assumption is equivalent to the limit of a large genome, which
+is the case for existing organisms. We also introduce the reproduct ion accuracy q, deﬁned in
+term ofµLasq= 1−µL. Due to the assumption of large L, the multiplicity of mutations
+fromm= 1 tom >1 (L−1) is almost the same of that from m= 0 tom−1 (L).
+Weshallassumeaﬁnite(andconstant)carryingcapacity Koftheenvironment, assuming
+that the eﬀective reproduction rate of a population is proportiona l to 1−N/K, where
+N=X+Y+Zis the total number of individuals. The evolution equation of the popu lation
+is
+
+X′=/parenleftbigg
+1−N
+K/parenrightbigg
+qαX,
+Y′=/parenleftbigg
+1−N
+K/parenrightbigg
+(qβY+(1−q)αX),
+Z′=/parenleftbigg
+1−N
+K/parenrightbigg
+(βZ+(1−q)αY);(1)
+and
+N′=/parenleftbigg
+1−N
+K/parenrightbigg
+(αX+β(Y+Z)),
+where the prime denote quantities at following time step. Obviously all population dies if
+α <1.
+Byintroducingthenormalizeddistribution x=X/N,y=Y/Nandz=Z/N(x+y+z=
+1) we have
+
+
+x′=qαx
+αx+β(y+z),
+y′=qβy+(1−q)αx
+αx+β(y+z),
+z′=βz+(1−q)αy
+αx+β(y+z),(2)
+and
+N′=N/parenleftbigg
+1−N
+K/parenrightbigg
+(αx+β(1−x)). (3)
+3
+The steady state of Eq. (2) is given by x′=x,y′=yand and z′=z. We obtain two
+ﬁxed points
+A=
+
+xA= 0,
+yA= 0,
+zA= 1;(4)
+and
+B=
+
+xB=qα−β
+α−β,
+yB=(1−q)
+qα(qα−β)
+(α−β)2,
+zB=(1−q)2
+qβα
+(α−β)2.(5)
+The ﬁxed point Ais always unstable and Balways stable for α >1. In this second case the
+asymptotic population size is
+NB=K/parenleftbigg
+1−1
+qα/parenrightbigg
+. (6)
+We characterize the error threshold by the fact that the ﬁttest phenotype is no longer
+the most common one, its phase boundary is given by x=y. Evaluating this condition at
+the ﬁxed point Bwe get from Eqs. (5)
+qe=α
+2α−β. (7)
+The mutational meltdown corresponds to the vanishing of the tota l population N= 0,
+while not changing its distribution. Thus, from Eq. (6) we have
+qm=1
+α. (8)
+Our deﬁnition of the error threshold transition needs some remark s: in the original
+work [1] the error threshold is located at the maximum mean Hamming d istance, which
+corresponds to the maximum spread of population. In the limit of ver y large genomes these
+two deﬁnitions agree, since the transition becomes very sharp [5]. F or ﬁnite populations, a
+possible transition can be located in correspondence of the vanishin g of the probability of
+ﬁnding the master sequence [3,13], in a way similar to Muller’s ratchet.
+However, since the master sequence has always an higher eﬀective ﬁtness than other
+strains, this implies that for β <1 the error threshold is only a transient phenomenon before
+extinction, unless the population is artiﬁcially kept ﬁnite, as in Ref. [3]. This mutation-
+induced extinction has been investigated numerically by Malarz and Tig gemann in Ref. [13].
+The condition for the disappearance of the master sequence is x′/x <1 in the limit of
+vanishing x. Denoting arbitrarily this transition as Muller’s ratchet’s one, we obt ain from
+the ﬁrst of Eqs. (2)
+qr=β
+α. (9)
+4
+This transition coincides with the mutational meltdown for β= 1.
+In Figure 1 we plot the phase diagram of the three transitions for so me diﬀerent values
+ofβ. We note that the error threshold depends only on the ratio α/β(i.e. on the relative
+ﬁtness of strains); on the other hand, the mutational meltdown t hreshold involves the whole
+population, so it depends on the absolute value of the ﬁtness α. Forβ <1 the mutational
+meltdown transition crosses the error threshold, so one can obse rve both extinction of the
+quasispecies distribution or the error threshold in a stable populatio n, according with the
+parameters.
+The physical relevant conditions for the extinction of the master s equence is β <1, for
+which also the Ystrains vanish; otherwise back mutations cannot be neglected. Ou r toy
+model can approximate the M2 model by Malarz and Tiggemann, in whic h only one bit
+is mutated with probability Pmut, and thus q= 1−Pmut. In that model the selective
+advantage α/βof the master sequence is given by the number of oﬀsprings, Nrep, whileβ
+is given by the reproduction probability Prep. Since they observed the extinction of the
+master sequence as error threshold, their data must be compare d with Eq. (9), thus
+Pmut= 1−1
+Nrep
+corresponds to their error threshold transition and
+Pmut= 1−1
+PrepNrep
+to the mutational meltdown. The phase diagram of this model is repo rted in Figure 2. The
+numerical data of Ref [13] are well reproduced, except for a small shift of the error threshold
+transition.
+In summary we ﬁnd that for a very steep ﬁtness function ( α≫β), by increasing the
+mutation rate µor the genome length Lone always observes the error threshold; but for
+moderately ﬁtness diﬀerence among strains the mutational meltdo wn causes the extinction
+of the whole population while retaining the quasispecies distribution.
+5
+REFERENCES
+∗bagnoli@dma.uniﬁ.it
+∗∗michele@poincare.dma.uniﬁ.it
+[1] W. Eigen, Naturwissenshaften 58, 465 (1971); W. Eigen and P. Schuster, Naturwis-
+senshaften 64, 541 (1977).
+[2] F. Bagnoli and M. Bezzi, Phys. Rev. Lett. 79(1997) 3302; F. Bagnoli and M. Bezzi,
+Int. Jour. Mod. Phys. C (9) 555.
+[3] M. Nowak and P. Schuster, L. Theor. Biol. 137, 375 (1989).
+[4] D. Alves and J.F. Fontanari, Phys. Rev. E 57, 7008 (1998).
+[5] S. Galluccio, Phys. Rev. E 56, 4526 (1997).
+[6] J.Maynard Smith, The Evolution of Sex (Cambridge University Press, Cambridge1978)
+pp. 33–36.
+[7] P.G. Higgs, G. Woodcock, J. Math. Biol. 33, 677 (1995).
+[8] G. Woodcock, P.G. Higgs, J. Theor. Biol. 179, 61 (1996).
+[9] Pal, Int.J.Mod.Phys. C 7, 899 (1996).
+[10] M. Lynch and W. Gabriel, Evolution 44, 1725 (1990).
+[11] M. Lynch, R. B¨ urger, D. Butcher and W. Gabriel, J. Hered., 84, 339 (1993).
+[12] A.T. Bernardes, J. Physique I5, 1501 (1995).
+[13] K. Malarz and D. Tiggemann, Int. Jour. Mod. Phys. C 9, 481 (1998).
+6
+FIGURES
+00.20.40.60.81
+1 2 3 4 5 6
+q/ /=/
+FIG. 1. Phase diagram for the error threshold and mutational meltdown transitions. The
+continuous line corresponds to the error threshold qe, Eq. (7), the dashed line to the mutational
+meltdown qm, Eq. (8), with β= 0.5, the dotted line to the mutational meltdown with β= 0.5, the
+dashed-dotted line to the mutational meltdown with β= 1.0, corresponding to Muller’s ratchet qr,
+Eq. (9). Since q= 1−µL, the increasing of the mutation rate or the genome length cor responds
+to lowering q. The lower left corner correspond to extinction.
+7
+00.20.40.60.81
+0 0.2 0.4 0.6 0.8 1
+PrepPm ut
+FIG. 2. Phase diagram for the error threshold (Muller’s ratc het version, vertical lines) and
+mutational meltdown (curves) transitions for model M2 of Re f. [13]:α=PrepNrep,β=Prep,
+q= 1−Pmut. Continuous line Nrep= 2, dashed line Nrep= 5, dotted line Nrep= 10.
+8

@@ -1,0 +1,446 @@
+arXiv:cond-mat/0104437v1  [cond-mat.soft]  23 Apr 2001Spectral Representation Theory for Dielectric Behavior
+of Nonspherical Cell Suspensions
+J. P. Huang1, K. W. Yu1, Jun Lei2and Hong Sun2,3
+1Department of Physics, The Chinese University of Hong Kong, Sh atin, NT, Hong Kong
+2Department of Applied Physics, Shanghai Jiao Tong Universi ty, Shanghai 200 030, China
+3Department of Physics, University of California, Berkeley, California 94720-7300
+Abstract
+Recent experiments revealed that the dielectric dispersio n spectrum of ﬁssion
+yeast cells in a suspension was mainly composed of two sub-di spersions. The
+low-frequency sub-dispersion depended on the cell length, while the high-
+frequency one was independent of it. The cell shape eﬀect was s imulated by
+an ellipsoidal cell model but the comparison between theory and experiment
+was far from being satisfactory. Prompted by the discrepanc y, we proposed
+the use of spectral representation to analyze more realisti c cell models. We
+adopted a shell-spheroidal model to analyze the eﬀects of the cell membrane.
+It is found that the dielectric property of the cell membrane has only a minor
+eﬀectonthedispersionmagnituderatioandthecharacterist ic frequencyratio.
+We further included the eﬀect of rotation of dipole induced by an external
+electric ﬁeld, and solved the dipole-rotation spheroidal m odel in the spectral
+representation. Good agreement between theory and experim ent has been
+obtained.
+PACS Number(s): 82.70.-y, 87.22.Bt, 77.22.Gm, 77.84.Nh
+Typeset using REVT EX
+1
+I. INTRODUCTION
+The polarization of biological cells has a wide scope of practical applica tions like manip-
+ulation, trapping or separation of biological cells [1,2], and thus an acc urate characterization
+of the polarization is needed. While the polarization of biological cells ca n be investigated
+by the method of dielectric spectroscopy [3] as well as by the measu rement of ﬁeld-induced
+cell movements [4,5], the former method has a much higher resolution [1]. For biological
+cells, the main contribution to the dielectric dispersion is the structu ral (Maxwell-Wagner)
+polarization eﬀects [1]. Because of the practical applications, ther e is a strong need for
+intuitive models as well as simpliﬁed equations which describe the param eter dependence of
+the polarization. Thus, various cell models have been proposed for the analysis of the po-
+larization mechanisms. However, due to the complexity of existing th eories, these methods
+have not yet found broader acceptance.
+In this work, we propose the use of the spectral representation [6] for analyzing the cell
+models. The spectral representation is a rigorous mathematical f ormalism of the eﬀective
+dielectric constant of a two-phase composite material [6]. It oﬀers the advantage of the
+separation of material parameters (namely the dielectric constan t and conductivity) from
+the cell structure information, thus simplifying the study. From th e spectral representation,
+one can readily derive the dielectric dispersion spectrum, with the dis persion strength as
+well as the characteristic frequency being explicitly expressed in te rms of the structure
+parameters and the materials parameters of the cell suspension ( see section II.B below).
+The actual shape of the real and imaginary parts of the permittivit y over the relaxation
+region can be uniquely determined by the Debye relaxation spectrum , parametrized by the
+characteristic frequencies and the dispersion strengths. So, we can study the impact of these
+parameters on the dispersion spectrum directly.
+The plan of the paper is organized as follows. In the next section, we will review the
+spectral representation theory [6] and show that the dielectric d ispersion spectrum of a
+cell suspension can be expressed in terms of the spectral repres entation. In section III, we
+2
+will apply the spectral representation to the various cell models an d present an alternative
+approach. We show that a better agreement with the experimenta l data can be achieved. In
+section IV, we discuss the eﬀects of dipole rotation. We will show tha t the dipole rotation
+eﬀect has a strong impact on the dispersion spectrum when the cells are suﬃciently long.
+Discussion on further applications of our theory will be given.
+II. FORMALISM
+Weregardacell suspension asacompositesystem consisting ofbiolo gicalcellsofcomplex
+dielectric constant ˜ ǫ1dispersed in a host medium of ˜ ǫ2. A uniform electric ﬁeld E0=E0ˆzis
+applied along the z-axis. We brieﬂy review the spectral representation theory of th e eﬀective
+dielectric constant to establish notations.
+A. Spectral representation
+The spectral representation is initiated by solving the diﬀerential e quation
+∇·/bracketleftbigg/parenleftbigg
+1−1
+˜sη(r)/parenrightbigg
+∇φ(r)/bracketrightbigg
+= 0, (1)
+where ˜s= ˜ǫ2/(˜ǫ2−˜ǫ1) denotes the relevant material parameter and η(r) is the characteristic
+function of the cell structure. The electric potential φ(r) can be solved formally [6]
+φ(r) =−E0z+1
+˜s/integraldisplay
+dr′η(r′)∇′G0(r−r′)·∇′φ(r′), (2)
+whereG0(r−r′) = 1/4π|r−r′|is the free space Green’s function. By denoting an operator
+Γ =/integraldisplay
+dr′η(r′)∇′G0(r−r′)·∇′, (3)
+and the corresponding inner product
+/angb∇acketleftφ|ψ/angb∇acket∇ight=/integraldisplay
+drη(r)∇φ∗·∇ψ, (4)
+3
+it is easy to show that Γ is a Hermitean operator. Let snand|n/angb∇acket∇ightbe the eigenvalue and
+eigenfunction of Γ such that Γ |n/angb∇acket∇ight=sn|n/angb∇acket∇ight, where 0 ≤sn<1 is a real eigenvalue. The
+integral equation can be solved symbolically:
+|φ/angb∇acket∇ight=−˜s
+˜s−Γ|z/angb∇acket∇ightE0. (5)
+From the solution, we obtain the electric ﬁeld and hence compute the eﬀective dielectric
+constant ˜ǫein the spectral representation. We further deﬁne the reduced e ﬀective dielectric
+function [6]:
+F(˜s) = 1−˜ǫe
+˜ǫ2=−1
+˜sVE0/angb∇acketleftz|φ/angb∇acket∇ight. (6)
+By inserting the complete set 1 =/summationtext
+n|n/angb∇acket∇ight/angb∇acketleftn|, we ﬁnd
+F(˜s) =1
+V/summationdisplay
+n/angb∇acketleftz|n/angb∇acket∇ight/angb∇acketleftn|z/angb∇acket∇ight
+˜s−sn=/summationdisplay
+nFn
+˜s−sn. (7)
+Fnis deﬁned as the spectral function:
+Fn=1
+V/angb∇acketleftz|n/angb∇acket∇ight/angb∇acketleftn|z/angb∇acket∇ight, (8)
+which satisﬁes a sum rule [6]:
+/summationdisplay
+nFn=1
+V/summationdisplay
+n/angb∇acketleftz|n/angb∇acket∇ight/angb∇acketleftn|z/angb∇acket∇ight=1
+V/angb∇acketleftz|z/angb∇acket∇ight=V1/V=p, (9)
+whereV1is the total volume of the suspending cells and pthe volume fraction of the cells.
+B. Dielectric dispersion spectrum
+For cells of arbitrary shape, the eigenvalue problem of the Γ operat or can only be solved
+numerically. However, analytic solutions can be obtained for isolated spherical and ellip-
+soidal cells. For dilute suspensions of prolate spheroidal cells, the c ells can be regarded as
+noninteracting. The problem is simpliﬁed to the calculation of snand|n/angb∇acket∇ightwith a single cell,
+which can be solved exactly. Only two of the Fnare nonzero, due to the orthogonality of
+|n/angb∇acket∇ightwith|z/angb∇acket∇ight.
+4
+Thus, in subsequent studies, we restrict ourselves to two poles ( n= 1,2). From Eq.(7),
+the eﬀective dielectric constant is written in the spectral represe ntation:
+˜ǫe= ˜ǫ2/parenleftBigg
+1−2/summationdisplay
+n=1Fn
+˜s−sn/parenrightBigg
+. (10)
+After substituting ˜ ǫ1=ǫ1+σ1/j2πfand ˜ǫ2=ǫ2+σ2/j2πfinto Eq.(10), where ǫandσ
+are the real and imaginary parts of the complex dielectric constant , we rewrite the eﬀective
+dielectric constant after simple manipulations:
+˜ǫe=ǫH+2/summationdisplay
+n=1∆ǫn
+1+jf/fcn+σL
+j2πf, (11)
+whereǫHandσLare the high-frequency dielectric constant and the low-frequenc y con-
+ductivity respectively, while ∆ ǫnare the dispersion magnitudes, fc
+nare the characteristic
+frequencies of the nth sub-dispersion. We obtain the dispersion magnitudes ∆ ǫnand the
+characteristic frequencies fc
+n, respectively [7]:
+∆ǫ1=F1ǫ2s1(s−t)2
+s(s−s1)(t−s1)2,
+∆ǫ2=F2ǫ2s2(s−t)2
+s(s−s2)(t−s2)2,
+fc
+1=σ2s(t−s1)
+2πǫ2t(s−s1),
+fc
+2=σ2s(t−s2)
+2πǫ2t(s−s2),
+wheres=ǫ2/(ǫ2−ǫ1) andt=σ2/(σ2−σ1). To compare with experiment data [8], we
+express the dispersion magnitude ratio and characteristic freque ncy ratio as
+∆ǫ1
+∆ǫ2=F1
+F2·s1(s−s2)(t−s2)2
+s2(s−s1)(t−s1)2, (12)
+fc
+2
+fc
+1=(t−s2)(s−s1)
+(t−s1)(s−s2). (13)
+III. APPLICATIONS TO VARIOUS CELL MODELS
+In a recent work [7], we adopted the spheroidal model (SM) to analy ze the cell suspen-
+sions. Here we brieﬂy review the analytic results of the model:
+s1=Lz, s2=Lxy, F1=1
+3p, F2=2
+3p.
+5
+where
+Lz=−1
+q2−1+q
+(q2−1)3/2ln(q+/radicalBig
+q2−1),
+Lxy= (1−Lz)/2
+are the depolarization factors along the z-axis andx-(ory-) axis of the prolate spheroid and
+qis the ratio of length Lto diameter D.
+In the spheroidal model, we neglected the presence of a cell membr ane. To study this
+eﬀect, weputforwardtheshell-spheroidal model (SSM) here. In thiscase, thebiologicalcells
+are modelled as shell-spheroidal ones with a spheroidal core of comp lex dielectric constant
+ǫ1, covered with a confocal spheroidal shell of ǫs. For a small volume fraction pof shelled
+spheroidal cells embedded in a host medium of complex dielectric const antǫ2, the eﬀective
+dielectric constant ˜ ǫeis given by the dilute-limit expression:
+˜ǫe= ˜ǫ2+p˜ǫ2(bz+2bxy).
+wherebzis the dipole factor for a single-shelled spheroidal cell along the z-axis [9]:
+bz=1
+3(˜ǫs−˜ǫ2)[˜ǫs+Lz(˜ǫ1−˜ǫs)]+(˜ǫ1−˜ǫs)y[˜ǫs+Lz(˜ǫ2−˜ǫs)]
+(˜ǫs−˜ǫ1)(˜ǫ2−˜ǫs)yLz(1−Lz)+[˜ǫs+Lz(˜ǫ1−˜ǫs)][˜ǫ2+Lz(˜ǫs−˜ǫ2)],
+whereyis the volume ratio of core to the whole shelled spheroid, while bxyindicates the
+dipole factor along the x- (ory-) axis, which can be obtained by replacing the subscript z
+withxyin the expression of bz. As a matter of fact, the cell suspension consisting of shell-
+spheroidal cells dispersed in a host medium is a three-phase system. Although the spectral
+representation was generally valid for two-phase composites, we h ave recently shown that
+it applies to composites of coated spheres as well as to coated sphe rical particles randomly
+embedded in a host medium [10]. Note the sum rule/summationtextFn=pis no longer valid. Similarly,
+one can show that the spectral representaton also applies to the present system consisting
+of spheroidal cells with shells of complex dielectric constant ˜ ǫsdispersed in a host. The
+eﬀective dielectric constant is then given by
+˜ǫe= ˜ǫ2/bracketleftBigg
+1−/parenleftBigg2/summationdisplay
+n=1Fn
+˜s−sn+N.P./parenrightBigg/bracketrightBigg
+(14)
+6
+withN.P.being the nonresonant part which vanishes in the limit of unshelled sph eroidal
+inclusions, where
+s1=Lz[1+(x−1)y+Lz(−1+x+y−xy)]
+x−Lz(x−1)2(y−1)+L2
+z(x−1)2(y−1),
+s2=Lxy[1+(x−1)y+Lxy(−1+x+y−xy)]
+x−Lxy(x−1)2(y−1)+L2xy(x−1)2(y−1),
+F1=px2y
+3[x−Lz(x−1)2(y−1)+L2z(x−1)2(y−1)]2,
+F2=2px2y
+3[x−Lxy(x−1)2(y−1)+L2
+xy(x−1)2(y−1)]2,
+wherex= ˜ǫs/˜ǫ2. We omit the complicated expression for the nonresonant part her e. In
+what follows, for the sake of convenience, we assume: (1) yis a constant for all coated
+spheroid; (2) xis a real number.
+In Fig.1, we plot the structure parameters Fnandsnversusxfor various yand for (a)
+q= 3.46, (b) 7.17 and (c) 10 .24, respectively. In all case, p= 0.01. We ﬁnd Fnis strongly
+dependent on yforx >0.5, whereas it is not the case for sn. It may be concluded that
+the dielectric property of the cell membrane has a minor eﬀect on th e dispersion magnitude
+ratio, but plays no role in the characteristic frequency ratio.
+To investigate the validity of these models, we compare to experimen tal data, which was
+extracted by using a temperature sensitive cell division cycle mutan t of ﬁssion yeast, cdc25-
+22 [8]. Asami’s theory [8] results are also plotted for comparison. Fro m Fig.2, it is evident
+that our model gives a better comparison with experimental data t han Asami’s theory. The
+reason for the improvement lies in the introduction of the conductiv ity contrast tby using
+of the spectral representation. As stated in Ref. [7], the large diﬀ erence between our model
+and Asami’s theory is due to a large σ1≫σ2used in contrast to Asami’s claim σ1≈σ2[8].
+We further ﬁnd that SSM provides a better ﬁt than SM for the dispe rsion magnitude ratio
+∆ǫ1/∆ǫ2, while SSM yields the same results as those of SM for the frequency r atiofc
+2/fc
+1
+(both curves overlap in the right panel of Fig.2), indicating that the dielectric property of a
+cell membrane is indeed unimportant.
+7
+IV. EFFECTS OF DIPOLE ROTATION
+According to the numerical results, we ﬁnd that the SSM provides a better ﬁtting with
+previous experimental data than SM, but this improvement is actua lly too small. In other
+words, the dielectric properties of a cell membrane does not play an important role in
+dielectric dispersion spectrum. But, those numerical result will also show that both SM and
+SSM cannot obtain a good agreement with experimental data. In th e presence of an electric
+ﬁeld, cells of large length may rotate in favor of the applied ﬁeld, thus we propose another
+model, namely the dipole-rotation spheroidal model (DRSM) to obta in a better ﬁtting.
+When the cells are long enough, the rotation of dipole becomes very im portant with the
+external electric ﬁeld under consideration, and the system is in gen eral anisotropic. We have
+to take into account the eﬀect of dipole rotation on F1andF2, even for a weak electric
+ﬁeld. Let us compute them from a thermodynamic consideration. We will show that they
+in general depends on q.
+Consider a spheroidal cell in an electric ﬁeld E0. Its long axis makes an angle θwith the
+ﬁeld. The dipole energy of the cell is
+Ed(q,θ) =−Re/bracketleftBigg˜ǫ2D3E2
+0
+16q(bzcos2θ+bxysin2θ)/bracketrightBigg
+, (15)
+wherebzandbxyare dipole factors along and perpendicular to the long axis:
+bz=1
+3(Lz−˜s), bxy=1
+3(Lxy−˜s).
+Eq.(15) can be understood by the energy approach. For simplicity, suppose the major axes
+of the cells all lie along the electric ﬁeld, i.e., θ= 0, then the induced dipole moments of the
+cells give a contribution to the eﬀective dielectric constant. In the d ilute limit,
+˜ǫe= ˜ǫ2+3p˜ǫ2bz,
+wherep=V1/Vis the volume fraction of the cells. For a ﬁxed external ﬁeld condition , the
+total electrostatic energy density of the suspension is given by Et=−Re(˜ǫeE2
+0/8π), which
+is equal to −Re(˜ǫ2E2
+0/8π)+Ed/V, and hence the desired results.
+8
+We showed that the conductivity contrast tattains a small negative value [7] and thus
+the complex material parameter ˜ scan be approximated by t. Consequently, both bzandbxy
+have positive values. The probability is given by the Boltzmann factor
+ρ(q,θ) =Ae−Ed(q,θ)/kBT(16)
+whereAis a normalization factor such that/integraltextρ(q,θ)dΩ = 1, where Ω is the solid angle,
+dΩ = sinθdθdϕ. We can calculate F1andF2by the following integrals
+F1(q) =p/integraldisplay
+ρ(q,θ)cos2θdΩ, F2(q) =p/integraldisplay
+ρ(q,θ)sin2θdΩ. (17)
+TheF1(q)/F2(q) ratio may be obtained by integrating with respect to θfrom 0 toπ/2 by
+symmetry. In the absence of an electric ﬁeld, Ed(q,θ) = 0 andρ(q,θ) equals to a uniform
+distribution. In which case, we obtain F1=p/3 andF2= 2p/3, and hence F1/F2= 0.5.
+Whentheelectricﬁeldisweakenough, theratioisstillconstantand F1/F2= 0.5. Otherwise,
+the ratio will increase rapidly with q. Forq= 1,bz=bxyandF1/F2= 0.5 always. The
+above result implies that both F1andF2depend strongly on qwhen there is an electric
+ﬁeld. For large q,bz≫bxy, the spheroids tend to align with the applied ﬁeld and hence
+F1/F2becomes very large.
+It is found that the mean cell length depends on the cultivation time, whereas the
+diameter is almost unchanged in an experiment [8], which will be applied to compare the
+diﬀerentmodels. Inthefollowingnumerical calculation, withoutlosso fgenerality, weneglect
+the small imaginary part of ˜ ǫ2, and deﬁne a new parameter ξ:
+ξ=ǫ2D3E2
+0
+16kBT(18)
+which characterizes the electric ﬁeld strength.
+We can readily obtain the dispersion magnitude ratio ∆ ǫ1/∆ǫ2as well as the dispersion
+frequency ratio fc
+2/fc
+1by substituting the results of F1(q)/F2(q) into Eqs.(12) and (13), and
+settings1=Lzands2=Lxy. In Fig.3, F1/F2is plotted versus q. It is shown that F1/F2
+depends strongly on the axial ratio q, especially for large qor strong magnitude of external
+electric ﬁeld.
+9
+To compare with experimental data in Fig.2, we obtain good agreemen t in the DRSM
+withξ= 0.017, which corresponds to a weak ﬁeld E0≈0.1 V/m. The results show that
+dipolerotationindeedplaysanimportantroleinthedielectricdispersio n–wecannotneglect
+the eﬀect of the rotation of dipole induced by the applied electric ﬁeld , especially when the
+average length of cell is large. In addition, good agreement exists o nly for large cytoplasmic
+conductivity, as attributed to a higher ion concentration in their cy toplasm to avoid the
+shrinkage of cells due to a loss of water across the cell membrane.
+V. DISCUSSION AND CONCLUSION
+Here we would like to make a few comments. At low frequencies, the ce ll membrane
+eﬀectively insulates the interior of cell. In other words, a potential builds up entirely over
+the cell membrane, leaving the interior of cell rather inactive to the ﬁeld [1]. Thus ǫ1≪ǫ2
+ands= 1+and it is reasonable to use s= 1.001 as ﬁtting parameter. On the other hand,
+we assume that the host medium has low loss and σ2≈0 and at the same time a large
+cytoplasmic conductivity σ1≫σ2. Thust= 0−and it is reasonable to use t=−0.0001 to
+ﬁt the data.
+The resulting equations [Eqs.(12) and (13)] are indeed simple equatio ns arising from
+the spectral representation. These equations serve as a basis w hich describe the parameter
+dependence of the polarization and thereby enhances the applicab ility of various cell models
+for the analysis of the polarization mechanisms. In this connection, the shell-spheroid model
+may readily be extended to multi-shell cell model. However, we believe that the multi-shell
+nature of the cell may have a minor eﬀect on the dispersion magnitud e ratio as well as on
+the characteristic frequency ratio.
+In the presence of external electric ﬁelds, ﬁeld-induced motions s uch as rotation of cells,
+dielectrophoretic motion or vibrational motion may have a signiﬁcant impact on the di-
+electric dispersion spectrum. With the recent advent of experimen tal techniques such as
+automated video analysis [11] as well as light scattering methods [2], t he cell movements can
+10
+be accurately monitored. For purely rotational motions, the distr ibution of surface charge
+on the cell surfaces may deviate signiﬁcantly from the equilibrium dist ribution for cells at
+rest, leading to a change in the polarization relaxation and in the dielec tric dispersion spec-
+trum. In this regard, our recent work on dynamic electrorheologic al eﬀects [12], in which
+the suspended particles can have rotational motions, may be applie d to cell rotational mo-
+tions. InRef. [12], we found that the particles’ rotational motions do change the polarization
+relaxation substantially.
+In this work, we considered a monodisperse cell suspension, in which the cells are of the
+same shape (i.e., same length and diameter). While the diameter of the cells may remain
+constant during the cultivation process, the cells may possess a wid e distribution of cell
+lengths[8]. Amodiﬁedtheory, whichtakesthedistributionoflengthin toaccount, isurgently
+needed and our spectral representation theory will certainly help . In this connection, we
+may apply a strong dc electric ﬁeld (in addition to the ac probe ﬁeld) to help separating
+the long cells from the short ones. Our results indicate that even in a moderate ﬁeld, the
+long cells can easily be aligned with the applied ﬁeld, while the short ones r emain essentially
+randomly oriented. In this way, an emphasis of dispersion spectrum of the long cells can be
+made possible.
+In summary, prompted by the discrepancy between recent theor y and experiment on
+ﬁssion yeast cells, we have proposed the use of spectral represe ntation to analyze more
+realistic cell models. We adopted a shell-spheroidal model to analyze the eﬀects of the
+cell membrane. It is found that the presence of a membrane has on ly a minor eﬀect on
+the dispersion ratio, but plays no role in the frequency ratio. We fur ther included the
+eﬀect of rotation of dipole induced by an external electric ﬁeld. It h as been found that the
+dipole-rotation eﬀect plays an important role in the dispersion magnit ude, but it does not
+change the characteristic frequency ratio. We obtained good agr eement between theory and
+experiment when dipole-rotation eﬀect is included.
+11
+ACKNOWLEDGMENTS
+This work was supported by the Research Grants Council of the Ho ng Kong SAR Gov-
+ernment. J. P. H. is grateful to Dr. L. Gao and Dr. C. Xu for fruitf ul discussion. K. W. Y.
+acknowledges useful discussion with Prof. G. Q. Gu.
+12
+REFERENCES
+[1] For a review, see J. Gimsa and D. Wachner, Biophys. J. 77, 1316 (1999).
+[2] J. Gimsa, Ann. NY Acad. Sci. 873, 287 (1999).
+[3] K. Asami, T. Hanai and N. Koizumi, Jpn. J. Appl. Phys. 19, 359 (1980).
+[4] G. Fuhr, J. Gimsa and R. Glaser, Stud. Biophys. 108, 149 (1985).
+[5] J. Gimsa, P. Marszalek, U. Lowe and T. Y. Tsong, Biophys. J. 73, 3309 (1991).
+[6] D. J. Bergman, Phys. Rep. 43, 379 (1978).
+[7] Jun Lei, Jones T. K. Wan, K. W. Yu and Hong Sun, J. Phys.: Conden s. Matter 13,
+3583 (2001); Phys. Rev. E, July 2001, to be published.
+[8] K. Asami, Biochim. Biophys. Acta 1472, 137 (1999).
+[9] L. Gao, Jones T. K. Wan, K. W. Yu and Z. Y. Li, J. Phys.: Condens. Matter12, 6825
+(2000).
+[10] K. P. Yuen and K. W. Yu, J. Phys.: Condens. Matter 9, 4669 (1997).
+[11] G. De Gasperis, X.-B. Wang, J. Yang, F. F. Becker and P. R. C. G ascoyne, Meas. Sci.
+Technol. 9, 518 (1998).
+[12] Jones T. K. Wan, K. W. Yu and G. Q. Gu, Phys. Rev. E 62, 6846 (2000).
+13
+FIGURES
+FIG. 1. For SSM, F1,F2,s1ands2are plotted versus the dielectric constant ratio xfor diﬀerent
+thickness parameter y: (a)q= 3.46; (b)q= 7.17; (c)q= 10.24.
+FIG. 2. Ratios of the dispersion magnitudes and the characte ristic frequencies are plotted
+versusq. Asami’s theory: σ1≈σ2; SM:t=−0.0014,s= 5.0; SSM: t=−0.0014,s= 5.0,x= 2,
+y= 0.8; DRSM: t=−0.0001,s= 1.001,ξ= 0.017 (i.e., E0is about 0 .1V/m). Note that the
+curves of SM and SSM overlap in the right panel, while they are quite close in the left panel.
+FIG. 3. For DRSM, the ratio F1/F2is plotted versus qfor diﬀerent electric ﬁeld strength
+parameter ξ.
+14
+0.0 0.5 1.0 1.5 2.0
+x0.000.250.500.751.00s20.0 0.5 1.0 1.5 2.0
+x0.0000.0020.0040.0060.008F2
+y=0.80
+y=0.85
+y=0.90
+y=0.95
+0.0 0.5 1.0 1.5 2.0
+x0.00.20.4s10.0 0.5 1.0 1.5 2.0
+x0.0000.0010.0020.0030.004F1
+FIG. 1(a)
+Fig.1(a)/Huang, Yu, Lei, Sun
+15
+0.0 0.5 1.0 1.5 2.0
+x0.000.250.500.751.00s20.0 0.5 1.0 1.5 2.0
+x0.0000.0020.0040.0060.008F2
+y=0.80
+y=0.85
+y=0.90
+y=0.95
+0.0 0.5 1.0 1.5 2.0
+x0.00.10.2s10.0 0.5 1.0 1.5 2.0
+x0.0000.0010.0020.0030.004F1
+FIG. 1(b)
+Fig.1(b)/Huang, Yu, Lei, Sun
+16
+0.0 0.5 1.0 1.5 2.0
+x0.000.250.500.751.00s20.0 0.5 1.0 1.5 2.0
+x0.0000.0020.0040.0060.008F2y=0.80
+y=0.85
+y=0.90
+y=0.95
+0.0 0.5 1.0 1.5 2.0
+x0.00.10.2s10.0 0.5 1.0 1.5 2.0
+x0.0000.0010.0020.0030.004F1
+FIG. 1(c)
+Fig.1(c)/Huang, Yu, Lei, Sun
+17
+1 6 11
+q0102030∆ε1/∆ε2experimental data
+Asami's theory
+SM
+SSM
+DRSM
+1 6 11
+q0306090f2c/f1cexperimental data
+Asami's theory
+SM
+SSM
+DRSM
+Fig.2/Huang, Yu, Lei, Sun
+18
+1 6 11
+q01101001000F1/F2ξ=0.0
+ξ=0.017
+ξ=0.1
+ξ=1.0
+Fig.3/Huang, Yu, Lei, Sun
+19

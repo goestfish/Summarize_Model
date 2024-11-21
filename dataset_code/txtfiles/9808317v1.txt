@@ -1,0 +1,699 @@
+arXiv:cond-mat/9808317v1  [cond-mat.stat-mech]  28 Aug 1998Selection, Mutations and Codon Usage in Bacterial Model
+Franco Bagnoli∗
+Dipartimento di Matematica Applicata,
+Universit` a di Firenze,
+via S. Marta 3,
+I-50139 Firenze, Italy.
+Pietro Li` o
+Dipartimento di Biologia Animale e Genetica,
+Universit` a di Firenze,
+Via Romana 17,
+I-50125 Firenze, Italy
+Abstract
+Wepresentastatistical modelofbacterial evolution based onthecouplingbe-
+tween codon usage and tRNA abundance. Such a model interpret s this aspect
+of the evolutionary process as a balance between the codon ho mogenization
+eﬀect due to mutation process and the improvement of the trans lation phase
+due to natural selection. We develop a thermodynamical desc ription of the
+asymptotic state of the model. The analysis of naturally occ urring sequences
+shows that the eﬀect of natural selection on codon bias not onl y aﬀects genes
+whose products are largely required at maximal growth rate c onditions but
+also gene products that undergo rapid transient increases.
+appeared as J. theor. Biol. 173, 217 (1995).
+I. INTRODUCTION
+The evolution of the genetic material is determined by theinteractio ns among mutations,
+random drift and natural selection.
+The mutation rate seems to vary both among and within genomes, be ing aﬀected by
+many factors, such as the chromosomal position (Sharp et al., 1989), the G+C content
+(Wolfe, 1991), the nearest neighbor bases (Blake et al., 1992), the diﬀerent eﬃciency of the
+repair systems between the lagging and the leading DNA strands dur ing replication and
+∗also INFN and INFM, sezione di Firenze, Largo E. Fermi, 2 I-50 125 Firenze, Italy
+1
+transcription (Veaute & Fuchs, 1993). Thus the molecular clock se ems to tick at diﬀerent
+rate for diﬀerent DNA positions.
+The natural selection acts as a driving force at virtually all levels of t he genetic in-
+formation processing and biological organization: from the DNA sta bility, replication and
+transcription to messenger RNA life span and translation eﬃciency, to the correct function-
+ing of the gene products in the building up and propagation of a living or ganism. Although
+in principle all these constraints could interact in a very complex way, it is indeed fruitful
+to try to untangle the role of each element.
+We have focused on the translation process as a major source of ﬁ tness for the bacterial
+cell.
+Because of the degeneracy of the genetic code and the historical process of codon capture
+(Osawa & Jukes, 1989), diﬀerent codons (synonymous codons) s pecify for the same amino
+acid. The bias in the codon usage is generally not random and it is very m arked in some
+procaryotic and eucaryotic genes. The codon choice is specie-spe ciﬁc (Grantham et al.,
+1980), being roughly the same, although with diﬀerent intensities, in all the genes within a
+genome. The codon bias is thought to be an eﬀect of the improvemen t of the eﬃciency of
+the translation process under natural selection.
+Several authors have stressed that synonymous codons in E. coli, preferentially used in
+highly expressed genes, are translated by the most abundant iso- acceptors tRNA species
+and that the levels of tRNAs in bacterial cells depend on the amino acid usage in proteins
+(Ikemura, 1981a).
+A good correlation between codon usage and tRNAs population has a lso been found in
+Mycoplasma capricolum (Yamaoet al., 1991), in yeast (Ikemura, 1981b) (Ikemura, 1985)
+and in chloroplast genomes (Morton, 1993).
+The importance of codon usage as a substrate for natural select ion is well proved by the
+coding strategy of the coli phage T4: the early expressed genes of T4have a codon pattern
+close to that of E. coliwhile the late expressed genes show a preference towards the cod ons
+read by the tRNAs expressed by the genome of the phage itself (Co we & Sharp, 1991).
+The codon usage inﬂuences the elongation rate in the translation pr ocess, being the
+pairing between codon and anticodon of the diﬀusing tRNA the rate- limiting step compared
+with the peptide bond formation and translocation steps (Gouy & Gr antham, 1980), but
+it cannot be directly related to the protein expression rate. In fac t many experiments have
+demonstrated that other crucial steps aﬀecting the protein pro duction rate are the selection
+of mRNA by a ribosome, the initiation phase and the phenomenon of po lypeptidyl-tRNA
+drop oﬀ (Menninger, 1978).
+Moreover the dynamic of elongation phase seems to be more complex , depending also by
+the diﬀerences in the energy of codon anticodon pairing (Grosjean & Fiers, 1982) (Thomas
+et al., 1988); thus diﬀerences in elongation rates have been found for c odons read by the
+same tRNA species (Sorensen & Pedersen, 1991).
+Diﬀerent considerations should be drawn on the evolutionary role of either the minor or
+the major codons. Some authors have suggested that selection o f some of the rarer tRNA
+species may be the rate-limiting step in protein synthesis (Varenne et al., 1984): they hy-
+pothesize that the rate of polypeptide elongation could act as a reg ulatory mechanism in
+gene expression when clusters of rare codons undergo translatio n, i.e. when the required
+tRNA concentration is low and rate-limiting. This hypothesis has been conﬁrmed exper-
+2
+imentally by manipulating the concentrations of some tRNAs and crea ting rate-limiting
+conditions. Varenne (Goldman, 1982) (Varenne et al., 1984) demonstrated experimentally
+that the presence of rare codons in highly expressed coding region s is associated with pauses
+in the synthesis of proteins. Many diﬀerent contexts have been te sted with similar results:
+Hoekema (Hoekema et al., 1987) replaced some major codons present in the ﬁrst region of
+thePGK1gene ofSaccharomices cerevisiae with synonymous minor codons; Kinnaird (Kin-
+nairdet al., 1991) generated a cluster of three rare codons in the GDHgene inNeurospora
+crassa. Chen and Inouye (Chen & Inouye, 1990) have demonstrated tha t the introduction
+of a cluster of a rare codon, AGG, in lacZsequence of E. coli, lowers the expression of the
+gene; moreover this eﬀect is inversely correlated with the distance between the initiation site
+and the position of rare codons.
+Models that takes into account the inﬂuence of minor codons in the in itiation region of
+mRNA for protein production rate have been presented (Liljenstr om & von Heijne, 1987)
+(Liljenstrom & Bomberg, 1987).
+On the contrary Sharp and Li (Sharp & Li, 1986) have hypothesize d that the pattern
+of synonymous codon usage in regulatory genes reﬂects primarily t he relaxation of natural
+selection. In fact, the absence of rare codons from highly expres sed genes may well result
+from negative selection, while in low expressed genes, selection again st rare codons is very
+weak and so they can accumulate under the pressure of mutation.
+Remarkably diﬀerent considerations should be drawn for the major codons, i.e. codons
+read by the most abundant tRNAs. There is evidence that the majo r proteins are translated
+faster than other proteins and that the elongation rate at major codons is faster than that
+at other codons (Emilsson & Kurland, 1990a).
+Some authors (Emilsson & Kurland, 1990a) (Emilsson & Kurland, 1990 b) have hypoth-
+esized that growth rate, in bacteria, depends on tRNA abundance . Such relation results in
+the so called growth maximization strategy and it is consistent with a m ajor codon prefer-
+ence strategy, in which an optimal subset of codons is thought to b e used very frequently in
+highly expressed genes, and their cognate tRNA species are suppo sed to increase consider-
+ably at high growth rates conditions. This is in agreement with the fac t that the genes for
+the major tRNA species are located inside rRNA operons for a coord inate expression.
+The growth rate dependence on tRNA abundances and other aspe cts of the evolution
+of genes and genomes in bacteria can be faced with statistical mech anics tools. Let us
+consider an homogeneous population of bacterial genomes, subje cted only to synonymous
+mutations and natural selection. If we study its evolution in the pro ximity of a steady
+dynamical state, as for instance a balanced growth state, we can interpret the interaction
+between mutations and natural selection as a competition between randomness and order.
+In this spirit we develop a statistical model from which bacterial evo lution emerges as an
+optimization process under environmental constraints.
+II. THE MODEL
+In order to study quantitatively the competition between mutation and natural selection
+in naturally occurring sequences, we concentrate on the process of the elongation phase.
+We suppose that the rate limiting step in this phase is the relative abun dance of charged
+3
+tRNAs. Thus we assume that thetime required by a ribosome to proc ess a codonisinversely
+proportional to the abundance of the charged cognate tRNAs in it s vicinity. Taking into
+account the data from Gouy and Grantham (Gouy & Grantham, 198 0), the process of
+tRNA diﬀusion in cell extract results much faster than all others pr ocesses involved in our
+schematization, and thus we do not consider the eﬀects of spatial gradients.
+Furthermore, we assume that the eﬃciency of aminoacyl-tRNA syn thetases is not rate
+limiting, i.e. that the concentration of the charged tRNAs does not v ary with the trans-
+lation process regardless of the codon composition of mRNAs. This a pproximation is not
+completely fulﬁlled in real bacteria. From the same source above (Go uy & Grantham, 1980)
+weobtainthatinaverageonly85%ofthetRNApoolisacylated, indica ting thatthereaction
+rate of synthetase is not substrate limited.
+In this approximation we do not take into account the ﬁnite size of a r ibosome, nor the
+queuing of ribosomes, thus disregarding the positional eﬀects of c odon usage, as considered
+elsewhere (Liljenstrom & Bomberg, 1987).
+With this assumption, the translation time does not depend on the or der of codons in
+mRNA and can be calculated as the sum of the time required for each c odon. Finally, we
+do not consider the inﬂuence of ﬂuctuations, i.e. we develop a sort o f “mean ﬁeld” model
+for the translation.
+We indicate the portion of mRNA that code for a protein (or, alterna tively, the whole
+mRNA) with a vector c;ci(i= 1,... ,61) being the number of codons of type iand
+L=/summationtext
+icithe length of the coding region. We denote with akthe relative abundance of
+acylated tRNA of type k(k= 1,... ,n tRNA;/summationtextntRNA
+k=1ak= 1). For E. colintRNA= 45, see
+also the following section. The “translational eﬃciency” of codons b y tRNAs is represented
+by means of a matrix Rikof size 61 ×ntRNA. Again from (Gouy & Grantham, 1980), the
+transpeptidation and translocation phases do not weight heavily on the tRNA cycle, and
+disregarding them, the mean time required to translate the codon iis inversely proportional
+toρi=/summationtextntRNA
+k=1Rikak. The mean translation time per codon τ(in arbitrary time units) is
+thus given by
+τ(c) =1
+L61/summationdisplay
+i=1ci
+ρi. (1)
+For simplicity, the elements Rikcan be taken to be either 0, for a tRNA kthat does not
+pair with a codon i, or 1, disregarding the diﬀerences in energies in the codon-anticod on
+pairing discussed in the previous section.
+In bacteria, cell division and DNA replication are coupled with cell grow th (Zyskind &
+Smith, 1992) (Ageno, 1992). In balanced growth conditions the av erage number of genomes,
+the average number of cells and the cell mass increase exponentially with the same rate.
+The cell growth largely depends on the production rate of the most abundant biopoly-
+mers, among which ribosomal proteins constitute the larger fract ion. The time τin formula
+(1), calculated for an “average” ribosomal protein, can be consid ered proportional to the
+mean duplication time. We assume that the natural selection tends t o lower this time. A
+somewhat opposite eﬀect is due to the mutation process, that ten ds to randomize the codon
+sequence. Since silent mutations do not change the coded aminoacid and thus they do not
+4
+aﬀect the composition of proteins, they are neutral for the selec tion over the protein func-
+tionality. However, silent mutation are not neutral for the calculat ion of the duplication
+timeτ, because of the presence of the abundance of cognate tRNAs in f ormula (1).
+Let us start from a simpliﬁed situation, in which two synonymous codo ns (say codon
+0 and 1) are only read by two tRNAs (with respectively abundances a0anda1), while all
+other codons are grouped together (say codon 2) and in average are read by tRNAs with
+abundance a2(a0+a1+a2= 1). The number of synonymous codons is c0+c1=l. We
+consider only mutations between 0 and 1 and vice versa. Since τdoes not depend on the
+order of the codons in the string, the various strains can be group ed together according with
+the number jof one’s in the mRNA ( j=c1). For each group jthere are gj=/parenleftbiggl
+j/parenrightbigg
+strains.
+We rewrite the formula (1) for the time τjrequired to duplicate a bacterium belonging
+to group jas
+τj=/parenleftbiggj
+a1+l−j
+a0+L−l
+a2/parenrightbigg
+=rj+q+z;
+r=a0−a1
+a0a1;q=l
+a0;z=Kl
+a2;K=L−l
+l.(2)
+The quantity K−1is the relative abundance of the synonymous codons 0 and 1 in the
+coding region. For l≪L,K→ ∞; forl≃L,K≃0. Since selection only acts on 0 and 1
+codons,K−1give an indication of the inﬂuence of selection on the gene.
+In the unit time interval, the number of duplications νjof the mass Mjof bacteria
+belonging to group jisνj=τ−1
+j, and thus
+dMj
+dt=νjMj; (3)
+where for simplicity we set all constants to 1 and we neglect the time d ependence of Mj.
+In the limit of very low mutation rate, we can assume that for each ge neration there is
+at most only one synonymous mutation, that changes codon 1 to 0 o r vice versa. Let us
+indicate with µ/lthe rate of mutation per codon ( µ≤1). The average fraction of bacteria
+in group jthat undergo a mutation per unit of time is µνj. For bacteria in group j, a
+synonymous mutation changes jof one unit. Including mutations, and working with the
+massmj=Mj/gjof a single strain in group j, formula (3) becomes
+dmj
+dt= (1−µ)νjmj+j
+lµνj−1mj−1+l−j
+lµνj+1mj+1; (4)
+for 0≤j≤l, assuming that ν−1=νl+1= 0.
+The total mass of the bacterial population is M=/summationtextl
+k=0gkmk. We can derive from
+eq. (4) the evolution equation for the distribution probability pj=mj/Mof diﬀerent
+strains in the total population. In a natural environment the expo nential growth periods
+are sporadic, generally followed by starvation phases. We mimic this a lternation by means
+of the normalization of distribution, assuming that the strains corr esponding to a very low
+probability are those eliminated by natural selection.
+5
+Since mutations do not change the total mass of population, we hav e, summing up over
+jin eq. (4)
+dM
+dt=l/summationdisplay
+k=0gkνkmk=Ml/summationdisplay
+k=0gkνkpk=M¯ν; (5)
+obtaining
+dpj
+dt=d
+dtmj
+M=1
+Mdmj
+dt−mj
+M2dM
+dt;
+and thus
+dpj
+dt= [(1−µ)νj−¯ν]pj+j
+lµνj−1pj−1+l−j
+lµνj+1pj+1;
+¯ν=l/summationdisplay
+k=0gkνkpk.(6)
+Before dealing with these equations from a mathematical point of vie w, let us put some
+thermodynamical considerations. The scenario is reminiscent of st atistical mechanics sys-
+tems, in which there is competition between order (the energy func tion to be minimized,
+related to the average duplication time) and the entropy, mutuate d by the temperature.
+Each strain in group jcontributes with τjto the mean duplication time. Taking
+into account the analogy between the duplication time of strains and the energy lev-
+els of a statistical system, in the equilibrium (stationary) state we c an tentatively apply
+the methods from equilibrium statistical mechanics. The maximization of the “entropy”
+S=−/summationtextl
+k=0gkpklnpkunder the constraints/summationtextl
+k=0gkpk= 1(normalization of probability
+distribution) and/summationtextl
+k=0gkpkτk=const(in order to select the most probable probability
+distribution within those with the same ﬁtness), gives the Boltzmann distribution (Landau
+& Lifshitz, 1958)
+pj=Cexp(−βτj).
+The Lagrange multiplier βcan be considered as the inverse of an eﬀective “temperature”
+T, that, intuitively, should be related to the mutation rate µ. In the stationary state, ¯ νis
+constant in time, and from eq. (5), M(and thus mj) grows exponentially.
+Inserting the Ansatz
+mj=M0exp(αt−βτj)
+(M0is the total mass at time t= 0) in the equation (4), and using the relations (2), we get
+for the asymptotic state
+(1−µ)νj−α+l−j
+lµνj+1x+j
+lµνj−11
+x= 0, (7)
+wherex= exp(−βr). Approximating νj+1≃νj−1≃νj, with an error of order r/τ2
+j, which is
+small for lorLlarge ora1−a0small, eq. (7) becomes a linear equation in j. This equation
+holds independently of jif
+x=−(1−µ)lr+/radicalbig
+(1−µ)2l2r2+4µ2q(q+lr)
+2µ(q+lr),
+α=µ(1−x2)
+lrx.(8)
+6
+Using the relations (2) we get
+x=(1−µ)(a1−a0)+/radicalbig
+(1−µ)2(a1−a0)2+4µ2a0a1(1+K˜a0)(1+K˜a1)
+2µa0(1+K˜a1)
+where ˜ai=ai/a2,i= 0,1.
+Note that α= ¯ν. Numerical simulations of eq.(6) agree very well with this solution, an d
+show that it is the only stable solution for almost all initial distributions .
+The asymptotic form of Mj=gjmjforK= 0,l→ ∞and 1≪j≪lis
+Mj=M02l√
+2√
+πlexp/parenleftBigg
+αt−(2j−l)2
+2l−βτj/parenrightBigg
+.
+It is remarkable that although the distribution of pjis always a growing function of j(for
+a1> a0), the distribution Mjis bell shaped, due to the contribution of the multiplicity
+factorgj.
+The most probable group jmaxcorresponding to the maximum of Mjis, using the Stirling
+approximation for gj,
+jmax=lx
+x+1.
+ForL≫l(K→ ∞),x= 1,T→ ∞,α= 0 and jmax=l/2. The distribution pjis
+ﬂat because in this case the selection has no eﬀect. This is due to the eﬀective neutrality of
+mutations inside a group j.
+Let us consider in the following the opposite case L=l(K= 0), that represents a
+bacterium in which an essential protein is totally composed by the sing le aminoacid coded
+by 0 and 1 codons. This rather unrealistic case makes our model equ ivalent to a 1D kinetic
+Ising model (Kawasaki, 1972) in an external ﬁeld without interactio ns among spins. In this
+case we can analize in more details the inﬂuence of selection.
+We can express αandβin term of ε=a1−a0:
+x=(1−µ)ε+/radicalbig
+(1−µ)2ε2+µ2(1−ε2)
+µ(1−ε)
+α=µ(x2−1)(1−ε2)
+4εlx
+β=1−ε2
+4εln(x)
+with 0≤ε≤1.
+Forε→0 (a1≃a0,r→0) we have T=β−1= 4µ+O(ε2) andα= 1/2l. This
+relationship conﬁrms the intuitive corrispondence between temper ature and mutation rate,
+at least for moderate diﬀerences in the tRNA abundances. For µ→0, we get jmax=l,
+corresponding to a distribution dominated by the ﬁtter strains. In creasing the mutation rate
+µ,jmaxdecreases; extrapolating to inﬁnite value of µ(beyond the validity of our model), we
+getjmax=l/2, and the inﬂuence of selection is vanished by mutations.
+7
+Forε→1 (a1≫a00,r→ −∞),T→ ∞andα= (1−µ)/l. In this limit only the ﬁttest
+groupj=jmax=lsurvives. In this case all mutations are deleterious, and their eﬀec t is to
+lower the growth rate αof the total mass of bacterial population.
+At this stage of development, our model is too simpliﬁed to allow quant itative com-
+parison with experimental data. However, it can be used as an inter pretative tool for the
+understanding of the mutation/selection dynamics.
+III. PERTINENT DNA SEQUENCES ANALYSIS AND DISCUSSION
+In order to estimate the degree of optimization between codons an d tRNA species we
+have analyzed 1530 Escherichia coli coding regions.
+The choice of analyzing mainly the E. colicoding sequences depends not only on the
+large amount of data in literature and the large number of genes tha t have been sequenced
+(about 35% of the genome, at this date) but on the fact that in E. coligenome the eﬀect of
+a directional mutational pressure towards an increase in G+C or A+ T content is very little
+(about 51% G+C content), as compared with other organisms like Micrococcus luteus (74%
+G+C content) or Mycoplasma capricolum (25 % G+C content) (Sueoka, 1993) (Osawa &
+Jukes, 1988b). This pressure, probably due to mutations in the DN A polymerase system,
+acts particularly in shrinking the codon and anticodon sets: in E. colithere are 75 tRNA
+genes, and 45 types of anticodons, while in Micrococcus luteus orMycoplasma capricolum
+these numbers are much lower (29 and 33 tRNA genes, resp.). Besid es, the large eﬀects of
+the directional mutational pressure on genomes composition prob ably results in weakening
+other existing functional constraints.
+For each gene we have considered the simple relationship (1) betwee n codons at position
+i, (ci)andtRNAmoleculeabundances( ρi). Wehaveconsideredequaltranslationaleﬃciency
+for all codons.
+The eﬀective tRNA species abundances at diﬀerent duplication rate s are not exactly
+known; little diﬀerences in the total tRNA abundances have been pr oved experimentally
+among diﬀerent strains of E. coli(Jakubowski, 1984), but the relative abundances do not
+seem to vary largely even among diﬀerent species of enterobacter ia: the data by Ikemura
+show that there is a good correspondence between the relative ab undances of the tRNA
+species between E. coliandSalmonella typhimurium . Thus we have approached the problem
+performing the calculations in two ways:
+a) considering the data on the relative abundances of the tRNA spe cies published
+by Ikemura ( τI) (Ikemura, 1981a) (Ikemura, 1981b) (Ikemura, 1985) and Jak ubowski
+(Jakubowski,1984).
+b) using the data on tRNA gene dosage published by Komine ( τK) (Komine et al., 1990).
+Both these two implementations are aﬀected by diﬀerent approxima tions.
+In case (a) the data determined by Ikemura are not exhaustive. W e have approximated
+the abundances of the minor tRNAs at the value 0.1 with respect to t he abundance of Leu-
+tRNA normalized at 1. In case (b) we have considered the abundanc e of tRNA species to
+be just proportional to the number of tRNA genes; this assumptio n could be not completely
+true because diﬀerent tRNA gene clusters are regulated by diﬀere nt promoters and because
+of diﬀerences in aminoacyl-tRNA synthetases abundances and cat alytic activities.
+8
+In Fig. 1 we report the average time spent per codon τIfor 1530 coding sequences, both
+for the correct reading frame and for the +1 and +2 reading frame s. The sequences are
+ordered according with the value of τIof the correct reading frame.
+In Fig. 2 we report τKfor the same sequences of Fig. 1.
+The comparison of the two ﬁgures shows that there is a good agree ment between the
+values of τIandτK, although the data obtained using the distribution of tRNA abundan ces
+from Ikemura show a more marked separation between the correc t reading frame and the
++1 and +2 frames. This indicates that there is a good corresponden ce between tRNA
+abundances and number of copy of the related tRNA gene, i.e. the m ost abundant tRNAs
+are expressed by triplicated or quadruplicated genes while the less a bundant tRNA species
+are expressed by genes present in a single copy.
+In all the analyzed coding regions, the correct reading frame alway s presents the lower
+crossing times, although the diﬀerences are more marked for the h ighly expressed sets: the
+mean translation time of the correct reading frame for highly expre ssed coding regions (as
+ribosomal genes, see Fig. 1) is lower than those calculated for non h ighly expressed coding
+regions, while the value for the +1 and +2 frames are equal or somet imes greater.
+We have also compared our results with the Sharp and Li’s Codon Adap tation Index
+(CAI) of each sequence. This index does not depend directly on the abun dances of tRNA
+but it is a measure of the bias in codon usage (Sharp & Li, 1987) deﬁne d as follows
+CAI=/parenleftBiggl/productdisplay
+k=1wk/parenrightBigg1
+l
+;CAI∈(0,1) (9)
+where the product of wk=w(ik) is taken over the code under examination. The quantities
+w(ik) for a codon iat position kis given by the relative frequency of the codon iwith
+respect to the most used codon for the same aminoacyd in a set of h ighly expressed genes.
+Note that in principle is possible to sinthetize artiﬁcial sequences mad e only of major codons
+with aCAIvalue greater than that of the most abundant proteins. This occo urs because
+this index neglect the inﬂuence of mutations. The same misundersta nding occours with our
+quantity τ.
+In Fig. 3 we report the CAIvalues for the same sequences of Fig. 1. The agreement
+with both the τIandτKis rather good.
+Thegenesthatshowahighlybiasedcodonusagehavehighvaluesof CAI(andlowvalues
+ofτI) and belong to the translationand transcription machinery, asfor instance genes coding
+for ribosomal proteins, initiation and elongation factors, heat sho ck or stringent response
+proteins, genes involved in the core of intermediate metabolism and g enes coding for the
+most abundant membrane proteins.
+Generally the genes whose products are proved to be required for maximal growth rate
+show high value of CAI. We can consider for instance the118IF2αand71IF2β(Sacerdot
+et al., 1992) that operate in the initiation of the translation process and probably aﬀect
+the production of ribosomal RNA, and the product of the nusAgene that is involved in
+the transcriptional process. These three genes are clustered in the same operon, probably
+for a co-regulation of translation and transcription. The apices ind icate the position of the
+sequences in the ﬁgures.
+9
+The DNA polymerases I and II are present in diﬀerent concentratio ns; about 400
+molecules of polymerase I per cell with respect to 17-100 molecules p er cell of polymerase
+II (Adams et al., 1992). The CAIvalues of the two genes (334polAand760polB) reﬂect the
+diﬀerence: 0.403 ( τI= 2.29) versus 0.352 ( τI= 2.89).
+Since biosynthetic operons are quite constitutively expressed, ex cept during starvation
+conditions, the genes coding for the repressor proteins show CAIvalues lower than repressor
+genes in catabolic operons.
+In some cases genes coding for functional aggregates constitut ed by structural proteins
+interacting in a precise stoichiometry ratio show values of CAIorτIclose to this ratio. This
+relation is true only for highly expressed genes; for example some rib osomal proteins, as1L7
+and11L20, arepresent asa tetramer ineach ribosome(Adams et al., 1992): the CAIvalueof
+the correspondent genes are higher than those of other ribosom al genes; the same correlation
+hasbeenfoundforATP synthetases genes that codeforalargec omplex constituted bymany
+copies of diﬀerent subunits: there is a good agreement between th eCAIvalues of the genes
+and the stoichiometry of the subunits in the complex. This correspo ndence almost vanishes
+for structural proteins coded by low expressed genes as those c oding for ﬁmbriae, pili and
+ﬂagella.
+Generally, the enzymes that channel a metabolic pathway do not pr esent the same bias
+in codon usage, probably because natural selection acts primary o n the homogenization of
+the catalytic activity of the metabolon, however there are also few interesting clues of the
+contrary.
+The membrane lipids biosynthesis in E. coliinvolves the action of at least 25 genes;
+many of these are clustered in the faboperon. Although the regulation of this pathway is
+very complex and not yet completely elucidated, with regard to both the total fatty acid
+content and the phospholipids composition, there are some observ ations that indicate that
+the activities of few enzymes (acetyl-CoA:ACP transacetylase, ac etyl CoA carboxylase) are
+rate limiting in vivo (Magnuson et al., 1993). We have found that the bias in codon usage
+of these genes is higher than that of the genes coding for the othe r enzymes of the pathway.
+Since growth rate depends also by membrane lipids production, the b ias in the bottleneck
+of the pathway probably increases the rate of production, while its eﬀect on the other genes
+is vanishingly small.
+Other interesting examples regard the relatively high bias in codon us age in genes like
+24spoT,180htpr,280uspA,295ﬁs,130cspAand175ackA.
+SincespoTencodes for a ppGpp pyrophosphohydrolase, it takes into accoun t for the
+degradationofppGpp, themajorinductorofthestringent respo nse, thataccumulatesduring
+starvation periods.
+Nutritionalshift-upexperiments, inwhichlargeamountofnutrient sareaddedtobacteria
+growing in a minimal medium, have revealed that there are immediate ch anges in the rate
+of increase of cell mass while the cell division rate continues for some time at pre-shift rate
+(Cooper, 1991).
+Thus the competition among bacteria requires to exit quickly fromth e starvation periods
+and to restart growing when conditions have changed; in this sight t hespoTgene (CAI=
+0.59,τI=1.4 ) could be a very important target for natural selection. Prob ably for the same
+reason the htprgene (CAI= 0.553, τI= 1.95) has a relatively highly biased codon usage:
+the encoded protein coordinates the global response of the cell t o heat shock events. In fact
+10
+this gene codes for a sigma-32 subunit that substitutes the sigma- 70 in the core of RNA
+polymerase making the new holoenzyme capable of activating the hea t shock promoters.
+Henceforth other heat shock genes show a biased codon usage as for instance485dnaJand
+462groEL. The intracellular amount of the universal stress protein, coded b y the gene uspA
+(CAI= 0.52,τI= 2.19), greatly increases in the cases of exhaustion of nutrients lik e carbon,
+nitrogen, phosphate, sulfate or aminoacid (Nystrom & Neidhardt, 1992).
+We hypothesize that codon usage reﬂects not only the eﬀects of s election for high growth
+rate conditions but also selection for very fast, and perhaps shor t time lasting, response to
+equally rapid environment changes. A clue that agrees well with this h ypothesis concerns
+theﬁsgene (CAI= 0.53,τI= 2.21) whose product functions as a DNA binding protein,
+involved in recombination reactions and in rRNA transcription. It has been reported that
+when the availability of a rich medium allows the bacterial cells to exit fro m the stationary
+phase, the amount of the ﬁsgene product increases from less than 100 copies to over 50000
+copiesbeforetheﬁrst cell division. Astheexponential growthgoe son, theFislevels decrease
+considerably (Ball et al., 1992). The gene cspA(CAI= 0.808, τI= 1.81) codes for the major
+cold shock gene (CS7.4) (Tanabe et al., 1992); when the temperature shifts from 37◦Cto
+10◦Cthe level of the protein largely increases and becomes about 13% of the total proteins
+in the bacterial cell.
+It is noteworthy that since acetyl phosphate seems to be a global regulator of signal
+transduction in E. coli, also the gene ackA(CAI= 0.66,τI= 1.9) that codes for a protein
+that synthesizes acetyl phosphate from ATP and acetate prese nts a high value of CAI.
+There are genes with little if any diﬀerences in values of τIbetween the correct reading
+frame and the others. This is mostly true for genes in plasmids (see F ig. 1). Since plasmids
+and conjugative transposons play a key role in the interchange of d rug resistance and viru-
+lence traits among bacteria, and generally in the mobilization of the ge netic material, it has
+been proposed that the entire pool of genetic information could be accessible to all members
+of the bacterial community, considered as a single, heterogeneou s organism. In this regard
+the emergence of a bias in codon usage for a gene carried by a plasmid is treated unfairly by
+natural selection if the rate of the genetic information interchang e among conjugative bac-
+teria of diﬀerent species is suﬃciently high. In fact because of the g enetic ﬂux, the plasmid
+could visit a wide range of hosts, thus it could assay diﬀerent molecula r environments and
+therefore the recombinant processes between homologous gene s maintain sequence homo-
+geneity. Furthermore, an increased expression of a gene could be attained also by increasing
+the number of copies of the plasmids .
+The debate between neutralists and selectionists in evolutionary an d population genetics
+addresses the question of how the superposition and the interact ions between the diﬀerent
+constraints acting on the coding regions allow the tremendous amou nt of molecular genetic
+variation that natural bacteria populations exhibit.
+The comparison of the standard deviation of the CAIindex for thirteen sequences of D-
+glyceraldehyde-3-phosphate dehydrogenasegene(33gapgene; average CAI=0.830,standard
+deviation 0.0025) from diﬀerent strains of E. colisequenced by Selander ( Selander et al.,
+1991) and ten sequences of the alkaline phosphatase gene (843phoAgene,CAI= 0.344,
+standard deviation 0.0059) sequenced by Milkman (DuBose & Hartl, 1 991), shows that
+genes with higher bias in codon usage present lower levels of silent poly morphism.
+This relation suggests that the more biased the codon usage of a ge ne among a bacteria
+11
+population, the less neutral the synonymous mutation.
+Another fundamental question regards if and in what measure the bias in codon usage
+participates in the control of gene expression. E. coliand bacteria in general are governed by
+robust and plastic regulative mechanisms and even if regulative circu itry are parsimonious
+in design, the present day gene networks have a large tool-kit of re gulative mechanisms,
+both at the gene-protein and at the protein-protein interaction le vel.
+Although the basic mechanisms act at the operonlevel, there are glo bal mechanisms that
+allowthecelltorespondtochallenges, ashunger orstress situatio ns, withthecoordinateand
+concerted expression of a network of operons. These mechanism s rely mainly in a cascade-
+like activation of autogenously regulated stimulons or in the sigma sub unit variability that
+makes the polymerases capable of recognizing diﬀerent types of pr omoters.
+Within the operon there are mechanisms that diﬀerentiate the expr ession at the single
+gene level, as for instance internal promoters, transcription ter mination signals, ribosome
+binding sites with diﬀerent eﬃciency, mRNA degradation signals etc.
+Although bias in codon usage has been proved to play a role in diﬀerent iating the ex-
+pression levels of the genes within the operon, since these mechanis ms act sequentially, the
+eﬀect of codon bias on the translation process probably depends la rgely on the optimization
+of the other factors involved in the gene expression.
+The amounts of the genes that present high values of CAI, for instance the ribosomal
+and major outer membrane genes whose products are strongly re quired with respect to
+other proteins for high duplication rates, are the eﬀective ﬁtness bottleneck of the bacterial
+duplication machinery; thus the growth maximization strategy allows a cell to duplicate
+faster because it lowers the time needed for translation.
+The natural selection acts so much stronger in optimizing the trans lation of the very
+highly expressed genes, with respect the other genes, because f urther increases in the trans-
+lation eﬃciency of these latter genes reﬂects smaller improvements in the ﬁtness of the cell.
+Considerations of this type have also been proposed and tested by Dykhuizen and col-
+laborators for lacoperon in E. coli(Deanet al., 1986); they have demonstrated that the
+contribution to the ﬁtness of the proteins encoded by the lacoperon is quite diﬀerent, being
+the bottleneck of the lactose metabolic pathway the ﬂux of lactose into the cell, governed by
+the concentration of the enzyme lac permease: thus the increase of catalytic activity of the
+other enzymes coded by the lac operon (for example beta-galacto sidase) results in a very
+little increase of the global ﬁtness of the pathway.
+This could be a general principle in gene network architecture, i.e. th e potentiality of
+increasing the globalﬁtness ofthe pathway could not beequally dist ributed among thegenes
+belonging to a gene network.
+Being generally accepted that the weaker the selective constraint , the wider the random
+genetic drift (Li & Graur, 1991), the more relaxed situation of gen es whose product are not
+required in large amount, allows high genetic variability consisting mainly in synonymous
+substitutions.
+12
+IV. CONCLUSIONS
+We have modeled some aspects of the molecular evolution of bacteria genomes by means
+of the coupling between codon distributions and tRNAs abundance a nd the competitive
+eﬀects of mutation and selection. Our model is consistent with a the rmodynamical inter-
+pretation of this process, and gives a matematical support to the observed codon usage
+distribution.
+The evolution of a non synchronized population of bacteria is schema tically drawn as
+alternated phases of exponential growth (feast) and selection ( famine), due either to star-
+vation or to external reasons. In bacteria, because of the limiting amounts of nutrients
+and the rapid ﬂuctuation in their availability in natural environment, t he periods of growth
+are sporadic. Indeed, during these sporadic periods, the number of bacterial cells tends to
+increase exponentially and the competition between genotypes cou ld develop very hardly,
+because a light diﬀerence in the ﬁtness could result in a large diﬀerenc e in number and in
+the aﬃrmation of the ﬁtter genotype.
+Probably the two extreme conditions of feast and famine model larg e part of the ﬁtness
+function of the bacterial genomes.
+Bias in codon usage seems to be an adaptive response not only to fea st periods but also
+to conditions of changing surroundings. In fact to survive famine p eriods would require
+sophisticated regulative mechanisms leading to a shrewd managemen t of the resources as for
+instancethestringentresponse, whiletheselectionforrapidoscilla tingperiodsmakethecells
+maximize the sharp up-shift or down-shift production of some spec iﬁc proteins. According
+to this hypothesis, bias in codon usage has revealed an interesting t ool to investigate the
+ﬁtness bottleneck in metabolic pathways or in gene networks like str ingent response.
+Acknowledgments
+We thank Fiammetta Battaglia, Marcello Buiatti and Stefano Ruﬀo fo r helpful discus-
+sions.
+13
+V. REFERENCES
+Adams, L., Knowler, J. T., Leader, D. P. (1992). The biochemistry of the nucleic acids
+Chapman & Hall, London.
+Ageno, M (1992). La macchina batterica (Lombardo ed.) Roma.
+Andersson, G.E. & Kurland, C.G. (1990). Microbiol. Rev .5,198-210.
+Ball, C.A., Osuna, R., Ferguson, K.C., Johnson, R. C. (1992). J. of Bact .174,8043-8056.
+Berry, A.J., Ajioka, J.W., Kreitman, M. (1991). Genetics 129,1111-1117.
+Bibb, M.J., Findlay, P. R., Johnson, M.W. (1984). Gene30,156-166.
+Blake, R.D., Samuel, T.H., Nicholson-Tuell, J. (1992). J. Mol. Evol .34,189-200.
+Chen, G.T. & Inouye, M. (1990). Nucleic Acids Res. 18,1465-1473.
+Cooper, S. (1991). Bacterial Growth and Division . Academic Press, San Diego, California.
+Cowe, E. & Sharp, P.M.(1991). J. Mol. Evol. 33,13-22.
+Dean, A.M., Dykhuizen, D.E., Hartl, D.L. (1986). Genet. Res. 48,1-8.
+DuBose, R. & Hartl, D.L. (1991). In: Evolution at the Molecular Leve l (Selander, R.K. et
+aled.) Sunderland, Massachusetts.
+Emilsson, V. & Kurland, C.G. (1990). EMBO J. 13,4359-4366.
+Emilsson, V. & Kurland, C.G. (1990). Microbiol. Rev .54,198-210.
+Eyre-Walker, A. & Bulmer, M. (1993). Nucleic Acids Res .21,4599-4603.
+Goldman, E. (1982). J.Mol. Biol .158,619-636.
+Gouy, M. & Grantham, R. (1980). Febs Letters 115,151-155.
+Grosjean, H. & Fiers, W. (1982). Gene18,199-209.
+Grantham, R., Gautier, C., Gouy, M., Mercier, R., Pave, A. (1980) Nucleic Acids Res. 8,
+49-62.
+Hoekema, A., Kastelein, R.A., Vasser, M., De Boer H.A. (1987). Mol. Cell. Biol. 7,
+2914-2924.
+Huynen, M.A., Konings, D. A.M., Hogeweg, P. (1992). J.Mol. Evol .34,280-291.
+Ikemura, T. (1981). J.Mol. Biol. 146,1-21.
+Ikemura, T. (1981). J.Mol. Biol. 151,389-409.
+Ikemura, T. (1985). Mol. Biol. and Evol. 2,13-34.
+Jakubowski, H., and Goldman, E. (1984). J. of Bact .158,769-776.
+Jukes, T.H., Osawa, S., Muto, A., Lehman, N.(1987). Cold Spring Harbor Symposia on
+Quantitative Biology. LII,769-776.
+Jukes, T.H., Ozeki, H., Umesono, K. (1988). Proc. Natl. Acad. Sci. Usa 85,1124-1128.
+Kano, A., Andachi,Y., Ohama, T. , Osawa, S. (1991). J. Mol. biol .221,387-401.
+Kawasaki, K. (1972). In: Phase Transitions and Critical Phenomena (Domb, C. and Green,
+M.S. eds.), Academic Press, London.
+Kinnaird, J. H., Burns, P.A., Fincham, J.R.S. (1991). J. Mol. Biol. 221,733-736.
+Komine, Y., Adaki, T., Inokuchi, H., Ozeki, H. (1990). J.Mol. Biol. 212,579-598.
+Landau, L.D. & Lifshitz, E.M. (1958). In: Statistical Physics , Pergamon Press ,Oxford, UK.
+Li, W.H. & Graur, D. (1991). Fundamentals of Molecular Evolution Sinauer Associates inc.
+Publishers, Sunderland Massachussets.
+14
+Liljenstrom, H. & von Heijne, G. (1987). J. Theor. Biol. 124,43-55.
+Liljenstrom, H. & Blomberg, C. (1987). J. Theor. Biol. 129,41-56.
+Magnuson, K., Jackowski, S., Rock, C.O., Cronan, J. E. (1993). Microb. Rev. 57,522-540.
+Menninger, J.R. (1978). J. Biol. Chem 253,6808-6813.
+Morton, B.R. (1993). J Mol. Evol. 37,273-280.
+Neidhardt, F.C., Ingraham, J.L., Law, J. (1987). In: Escherichia Coli and Salmonella Ty-
+phimurium: Cellular and Molecular Biology . (Neidhardt, F.C. et al., ed.) American Society
+for Microbiology, Washington, DC.
+Nystrom, T. & Neidhardt, F. C. (1992). Mol. Microb. 21,3186-3198.
+Jukes, T.H., Osawa, S., Muto, A., Leiman, N. (1987). Cold Spring Harbor symposium on
+quantitative biology LII,769-776.
+Osawa, S. & Jukes, T.H. (1988). TIG7,191-197.
+Osawa, S., Ohama, T., Yamao, F., Muto, A., Jukes, T., Ozeki, H., Umeso no, K. (1988).
+Proc.Natl. Acad. Sci. Usa 85,1125-1128.
+Osawa, S. & Jukes, T.H. (1989). J.Mol. Evol. 28,271-278.
+Ohama, T., Muto, A., Osawa, S. (1990). Nucleic Acids Res. 18,1565-1569.
+Sacerdot, C., Vachon, G., Laalami, S., Morel-Deville, F. , Cenatiempo, Y., Grunberg-
+Manago, M. (1992). J. Mol. Biol. 225,67-80.
+Nelson, K.N., Whittam, T.S., Selander, R.K. (1991). Proc. Natl. Acad. Sci. Usa 88,
+6667-6671.
+Sharp, P.M. & Li, W. (1986). Nucleic Acids Res .14,7737-7749.
+Sharp, P.M. & Li, W. (1987). Nucleic Acids Res .15,1281-1295.
+Sharp, P.M., Shields, D.C., Wolfe, K.H., Li, W. (1989). Science258,808-810.
+Sorensen, M. A., Kurland, C. G., Pedersen, S. (1989). J.Mol. Biol. 207,365-377.
+Sorensen, M. A., Jense, K.F., Pedersen, S. (1990). In: Post-transcriptional control of gene
+expression . (McCarthy and Tuite ed.) NATO ASI Series.
+Sorensen, M. A. & Pedersen, S. (1991). J.Mol. Biol. 222,265-280.
+Sueoka, N. (1993). J Mol Evol 37,137-153.
+Tanabe, H., Goldstein, J., Yang, M., Inouye, M. (1992). J. of Bacter. 174, 3867-3873.
+Thomas, L.K., Dix, D.B., Thompson, R.C. (1988). Proc. Natl. Acad. Sci. Usa 85,4242-
+4246.
+Varenne, S., Buc, J., Lloubes, R., Lazdunsky, C. (1984). J.Mol. Biol 180,549-576.
+Varenne, S., Buc, J., Lloubes, R., Lazdunsky, C. (1986). J.Theor.Biol. 120,99-110.
+Veaute, X. & Fuchs, R. (1993). Science261,598-601.
+Yamao, F. , Andachi, Y., Muto, A., Ikemura, T., Osawa, S. (1991). Nucleic Acids Res .22,
+6119-6122.
+Wright, S. (1932). Proceedings of the Sixth International Congress of Genetic s1,356-366.
+Wolfe, K. H. (1991). J. Theor.Biol. 149,441-451.
+Zyskind, J.W., & Smith, D.W. (1992). Cell69, 5-8.
+15
+FIGURES
+ 
+012345678910
+0 200 400 600 800 1000
+  
+ 1200
+  
+ 1400
+  
+ 
+E. coli genesτΙ      
+FIG. 1. Mean translation time τIfor 1530 Escherichia coli coding regions calculated using
+data on tRNA abundancespublishedby Ikemura. Thesequences areodered according to thevalues
+ofτI. The lower line shows τIfor the correct reading frame. The upper lines show the value of
+τIfor the +1 and +2 reading frames. The open squares correspond to ribosomal genes, the ﬁlled
+triangles correspond to genes carried by plasmids.
+16
+ 
+00.20.40.60.81
+0 200 400 600 800 1000
+  
+ 1200
+  
+ 1400
+  
+ 
+E. coli genesτΚ      
+FIG. 2. Mean translation time τKcalculated using the data on tRNA gene dosage by Komine.
+The sequences are ordered as in Fig. 1. The lower line shows τKfor the correct reading frame.
+The upper lines show the value of τKfor the +1 and +2 reading frames.
+17
+ 
+00.20.40.60.81
+0 200 400 600 800 1000
+  
+ 1200
+  
+ 1400
+  
+ 
+E. coli genesCAI  
+FIG. 3. CAIvalues of the coding sequences ordered as in Fig. 1. The upper line shows
+CAIvalues for the correct reading frame. The lower lines show CAIvalues for the +1 and +2
+reading frames.
+18

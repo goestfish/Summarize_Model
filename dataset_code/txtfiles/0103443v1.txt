@@ -1,0 +1,461 @@
+arXiv:cond-mat/0103443v1  [cond-mat.stat-mech]  21 Mar 2001Tempo and mode in quasispecies evolution
+Joachim Krug1,2,3,4
+1. Fachbereich Physik, Universit¨ at Essen, D-45117 Essen, Germany∗
+2. CAMP and Department of Physics, DTU, DK-2800 Kongens Lyng by, Denmark
+3. Niels Bohr Institute, Blegdamsvej 17, DK-2100 Copenhage n Ø, Denmark
+4. Institute for Theoretical Physics, UCSB, Santa Barbara, CA 93106-4030, USA
+November 15, 2018
+Abstract
+Evolutionary dynamicsinan uncorrelated ruggedﬁtnesslan dscape
+is studied in the framework of Eigen’s molecular quasispeci es model.
+We consider the case of strong selection, which is analogous to the
+zero temperature limit in the equivalent problem of directe d polymers
+in random media. In this limit the population is always local ized at a
+single temporary master sequence σ∗(t), and we study the statistical
+properties of the evolutionary trajectory which σ∗(t) traces out in se-
+quencespace. Numerical resultsforbinarysequences oflen gthN= 10
+and exponential and uniform ﬁtness distributions are prese nted. Evo-
+lution proceeds by intermittent jumps between local ﬁtness maxima,
+where high lying maxima are visited more frequently by the tr ajec-
+tories. The probability distribution for the total time Trequired to
+reach the global maximum shows a T−2-tail, which is argued to be
+universal and to derive from near-degenerate ﬁtness maxima . The to-
+tal number of jumps along any given trajectory is always smal l, much
+smaller than predicted by the statistics of records for rand om long-
+ranged evolutionary jumps.
+∗Permanent address.
+1
+“The concept of quasispecies is not just a model that involves any odd assumption;
+it shows how to view the darwinian world of replicating and mu tating species from
+a physical viewpoint.” M. Eigen [1]
+1 Introduction and motivation
+Eigen’s quasispecies theory of molecular evolution is the simplest math e-
+matical model that incorporates the central Darwinian paradigm o f natural
+selection acting on variability created by random mutations. The mod el was
+originally developed to understand the conditions for the maintenan ce of in-
+formation in systems of self-instructive replicating macromolecules [2]. Such
+systems can be realized in the laboratory in the form of populations o f RNA
+strands which replicate in vitroin the presence of RNA replicase, display-
+ing a wide range of evolutionary phenomena [3, 4, 5, 6]. The notion of a
+quasispecies [7] refers to the structure of self-replicating populations, which
+typically consist of a distribution of related mutants centered arou nd a most
+abundant mastergenotype (see below). The quasispecies structure plays an
+important role in the evolution of RNA viruses, where the presence o f a wide
+range of mutants allows the virus to adapt rapidly to environmental changes
+[8,9]. Ontheotherhand, theexistence ofanerrorthresholdbeyo ndwhichno
+localized quasispecies can be maintained (see Eq.(4)) places an upper bound
+on the genome length of RNA viruses [10].
+The mathematical structure of the quasispecies model has made it a fa-
+vored entrance way for statistical physicists into the ﬁeld of biolog ical evo-
+lution1. It was ﬁrst observed by Leuth¨ ausser [14] that the discrete tim e dy-
+namics (3) can be interpreted as a transfer matrix of a two-dimens ional Ising
+model, where the genotype sequences become one-dimensional sp in conﬁgu-
+rations that are coupled in the time direction through the mutation m atrix
+(1) [15]. A similar relation can be established between (3) and the tran s-
+fer matrix of a polymer directed along the time axis [16, 17]. In addition ,
+Baake and coworkers have recently exploited the equivalence betw een quan-
+tum spin chains and a class of kinetic evolution equations closely relate d to
+the quasispecies model, in which mutation and selection occur in paralle l
+[12, 18].
+In its most basic version, the quasispecies model is formulated in ter ms
+1Recent articles which review this connection are [11, 12, 13].
+2
+of standard chemical reaction equations2written for the concentrations nσ(t)
+of sequences σ= (σ1,...,σN), each of which is composed of Nsymbols drawn
+from an alphabet of Kletters; the usual choice is a binary alphabet ( K= 2),
+so thatσitakes the values 0 and 1. The resulting sequence space consists
+then ofS= 2Npoints arranged on the vertices of an N-dimensional hyper-
+cube. Each sequence σreproduces at a rate W(σ), which may be taken as
+a measure of its ﬁtness [11]. In the reproduction process errors o ccur with
+a mutation probability µper site. The probability of creating a sequence σ′
+when attempting to copy sequence σis therefore equal to
+Qµ(σ→σ′) =µdH(σ,σ′)(1−µ)N−dH(σ,σ′)(1)
+where
+dH(σ,σ′) =N/summationdisplay
+i=1(σi−σ′
+i)2(2)
+is the Hamming distance between the two sequences, i.e. the number of
+digits in which the two diﬀer. The dynamical evolution in discrete time is
+then given by
+nσ(t+1) =/summationdisplay
+σ′W(σ′)Qµ(σ′→σ)nσ′(t). (3)
+Introducing the constraint of a ﬁxed number of molecules leads to n onlinear
+loss terms on the right hand side of (3) [7]. However since these can g enerally
+be transformed away, we ignore this complication here, at the expe nse of
+dealing with exponentially growing population numbers.
+The linear form of the evolution equation (3) makes it plain that, for lo ng
+times, the concentrations will approach that eigenvector of the e volution ma-
+trixW(σ)Qµ(σ→σ′) which corresponds to the largest eigenvalue. Provided
+this eigenvector is localized in sequence space, it deﬁnes the quasispecies: A
+distribution of related mutants centered around the master sequ ence, which
+usually is the sequence with the maximum replication rate W(σ). The most
+celebrated property of the model is its prediction of a sharp error threshold ,
+where the quasispecies delocalizes, and the population spreads unif ormly
+over sequence space. In terms of the sequence length Nand the mutation
+probability µ, the condition for a localized quasispecies takes the form [2, 7]
+N < N max=lnA
+µ, (4)
+2Similar equations arise in classical population genetics [12].
+3
+whereAdenotes the selective advantage , a measure for the superiority of
+the master sequence compared to the other sequences. For the simplest case
+of a single peak ﬁtness landscape, where the master sequence rep licates at
+rateW0and all other sequences replicate at rate W1< W0, the selective
+advantage is A=W0/W1, while for randomly distributed replication rates
+it is a functional of the rate distribution [19, 20]. In terms of the phy sical
+analogies described above, the error threshold phenomenon is equ ivalent to
+the thermal phase transition in the Ising model [14, 15, 18, 20, 21] and to the
+thermal unbinding of a directed polymer bound to an attractive colu mnar
+defect along the time direction [16, 17].
+Much less appears to be known about the evolutionary dynamics of t he
+model, that is, the approach to the ﬁnal quasispecies distribution f rom an
+initiallocalizedordelocalized state. ItwasﬁrstpointedoutbyMcCas kill [19,
+22] that this dynamics should take the form of a “slowing optimization walk”
+throughasuccession ofmetastable states which correspond, ins ome sense, to
+local maxima in the ﬁtness landscape. The separation of time scales b etween
+the (long) residence time ina metastable state and the (brief) tran sition time
+to the next maximum implies a punctuated pattern of evolution [23, 24, 25],
+which can be analyzed in analogy to variable range hopping in condense d
+matter physics [26, 27, 28].
+We should concede from the outset that the deterministic rate equ ations
+(3) are not an entirely appropriate description for this evolutionar y regime,
+since the transition between two local maxima proceeds through th e tails
+of the localized, metastable quasispecies, where the population num bers are
+small and ﬂuctuations due to the ﬁnite number of molecules cannot b e ig-
+nored [22, 28, 29]. It seemed nevertheless worthwhile to explore th ese ques-
+tions within the most basic, deterministic model, before turning to mo re
+sophisticated approaches.
+The present paper reports on some preliminary results from such a n in-
+vestigation. To avoid the complications due to a ﬁnite error thresho ld, we
+consider a strong selection limit (to be described in the next section) , in
+which the population is localized at a single site in sequence space at all
+times. This allows a direct comparison with simple schematic models of
+evolutionary dynamics, such as adaptive walks [30, 31, 32, 33] and r ecord
+dynamics [34, 35, 36]. Adaptive walks describe the evolution of a gene tically
+homogeneous population under the assumption that deleterious mu tations
+(which decrease the ﬁtness) are eliminated, while advantageous mu tations
+spread instantaneously. The population then performs an uphill wa lk in
+4
+the ﬁtness landscape, which terminates at a local maximum where no ﬁt-
+ter one-step neighbors are available. In contrast, in the quasispe cies model
+the population evolves through a chain of local ﬁtness maxima which p ro-
+gresses all the way to the globaloptimum. Some qualitative properties of
+theseevolutionary trajectories are described in Section 3, while Section 4 fo-
+cuses on a speciﬁc statistical feature, the total evolution time. A comparison
+with record dynamics is provided in Section 5, and some open question s are
+formulated in Section 6.
+020040060080010001200
+1 10 100 1000sequence number
+timeexponential
+uniform
+Figure 1: Two evolutionary trajectories generated in two ﬁtness la ndscapes
+with identical ordering of ﬁtnesses but diﬀerent ﬁtness distributio ns. The
+monotonic increase in sequence number for the exponential distrib ution is
+fortuitous - there is no correspondence between the position of a sequence on
+they-axis and its ﬁtness
+Throughout the paper we will consider maximally rugged ﬁtness land-
+scapes, in which the reproduction rate W(σ) is chosen independently and
+randomly for each sequence. In contrast to simpler permutation in variant
+landscapes [12], this makes it necessary to store all 2Nsequences during the
+iteration of the evolution equations3, restricting our numerical treatment to
+3An approximate scheme which reduces the storage requirement fr om 2NtoNis de-
+scribed in [38].
+5
+rather short sequences; the results shown here are for N= 10. A systematic
+analysis of the dependence on sequence length will be presented els ewhere
+[38].
+2 The strong selection limit
+The form of the strong selection limit is motivated by the analogy with
+the zero temperature limit in the associated problems of statistical physics.
+FollowingPeliti[11,21]weintroduceaninverse“selectivetemperatu re”k >0
+by writing the reproduction rates in the form
+W(σ) =ekF(σ). (5)
+We want to take the strong selection limit k→ ∞in such a way that only a
+few mutations occur in each time step. This requires to scale the mut ation
+rate as
+µ=e−kγ(6)
+whereγ >0 is a constant. Inserting (5) and (6) into (3) it is clear that the
+sequence concentrations will grow for large kas
+nσ(t) =ekE(σ,t). (7)
+In the limit k→ ∞the evolution equation (3) then reduces to the recursion
+E(σ,t+1) = max
+σ′[E(σ′,t)+F(σ′)−γdH(σ,σ′)]. (8)
+Since the term −γdHsuppresses mutations to far away sequences, we expect
+similar behavior for a model in which only nearest neighbor mutations a re
+allowed,
+E(σ,t+1) = max
+dH(σ,σ′)≤1[E(σ′,t)+F(σ′)−γdH(σ,σ′)]. (9)
+All results shown in this paper were obtained using the nearest neigh bor rule
+(9), with the parameter γset to unity4.
+We still need to specify the probability distribution p(F) of the ﬁtnesses
+F(σ). Two choices will be considered: The exponential distribution p(F) =
+e−F,F≥0, and a uniform distribution on the interval [0 ,S], whereS= 2N.
+The reason for this particular scaling of the width of the uniform dist ribution
+will become clear below in Section 4.
+4For a discussion of the diﬀerences between the rules (8) and (9), s ee [38].
+6
+3 Evolutionary trajectories
+It is evident from (7) that, in the strong selection limit k→ ∞, the entire
+population resides at the global maximum of the function E(σ,t). The po-
+sition of this maximum in sequence space will be referred to as the mas ter
+sequence at time t, and denoted by σ∗(t). At time t= 0 the master se-
+quence is placed at a randomly chosen point σ(i)by setting E(σ(i),t) = 0 and
+E(σ,t) =−∞forσ/negationslash=σ(i). The subsequent time evolution σ∗(t) deﬁnes an
+evolutionary trajectory.
+Inspection shows that, after one or two time steps, such a traje ctory
+passes exclusively through local ﬁtness maxima, and eventually, af ter a total
+evolution time T, it invariably reaches the global ﬁtness maximum. During
+the evolution, the master sequence spends increasingly long time int ervals
+at local maxima of increasing ﬁtness, with a few abrupt transitions in be-
+tween (Figure 1). The number of transitions is small (see Figure 5), much
+smaller than the number of local ﬁtness maxima, which is on average e qual
+to 2N/(N+1)≈93 [30]. This implies that most local maxima are bypassed
+by a typical trajectory.
+01234567
+1 10 100 1000Fitness of local maxima
+Number of visits at local maxima
+Figure 2: Fitness F(σ) vs. the number of visits for all local maxima in a
+ﬁtness landscape with exponential ﬁtness distribution p(F). The particular
+landscape used here is near degenerate (gap size ǫ≈0.02)
+7
+A quantiﬁcation of this statement is shown in Figure 2, in which the ﬁt-
+nessFof local maxima is plotted against the number of times it is visited
+by an evolutionary trajectory. These data were generated by go ing through
+all possible starting points σ(i)in a ﬁxed ﬁtness landscape. The ﬁgure shows
+a roughly linear correlation between the ﬁtness of a maximum and the loga-
+rithm of the number of visits.
+In relation to adaptive walks [30, 31, 32, 33], which respond only to th e
+relative ordering of ﬁtnesses and not to their actual values, it is of inter-
+est to ask to what extent the set of maxima visited by a given trajec tory
+is determined by the ordering of ﬁtnesses. For this reason Figure 1 shows
+two trajectories evolving in landscapes which were generated using the same
+random numbers – thus having identical ordering of ﬁtnesses – but with dif-
+ferent ﬁtness distributions. Itcanbeseen thattheset oflocal m axima visited
+by the two trajectories is almost identical, apart from a small detou r taken
+by the “uniform” trajectory, but the timing of the evolutionary tr ansitions is
+markedly diﬀerent in the two cases. With reference to G.G. Simpson’s classic
+treatise [23], we may say that the ﬁtness distribution aﬀects only th etempo,
+but not the modeof quasispecies evolution. For a quantitative analysis of
+the temporal aspects we next turn to the distribution of evolution times.
+4 Distribution of evolution times
+Figure 3 shows the distribution P(T) of the number of time steps Trequired
+to reach the global ﬁtness maximum, obtained by averaging over 50 0000
+landscapes with exponential and uniform ﬁtness distributions. The time
+distribution for the exponential case displays a distinct maximum aro und
+T= 7, followed by a slowly decaying tail which is well described by the
+power law
+P(T)∼T−2(10)
+over roughly two decades. The distribution for the uniform case is m uch
+broader, but a similar power law tail can be seen for times T≥500.
+The power law (10) appears to be a simple consequence of the order
+statistics of uncorrelated ﬁtness landscapes. Let F(1)> F(2)> ... > F(S)be
+a realization of ﬁtnesses arranged in decreasing order. As a measu re of the
+spread in ﬁtnesses among the most ﬁt sequences we introduce the ﬁtness gap
+ǫ=F(1)−F(2)>0, (11)
+8
+1e-061e-050.00010.0010.010.1
+1 10 100 1000P(T)
+Thopeful monsters
+exponential
+uniform
+Figure 3: Distribution of the total time Trequired to reach the global ﬁt-
+ness maximum. Symbols show data obtained by averaging over 50000 0 un-
+correlated ﬁtness landscapes with exponential (+) and uniform ( ×) ﬁtness
+distributions, while the full line shows the distribution (17) obtained f or
+record dynamics. The simulations with exponential ﬁtness distribut ion were
+stopped after 1000 time steps
+whichisarandomvariablecharacteristicofeachﬁtnesslandscape. Inthelate
+stage of evolution the population will typically make a a transition from the
+second best sequence σ(2)(or some local ﬁtness maximum with comparable
+ﬁtness5) to the globally optimal sequence σ(1). From the evolution rule (9) it
+is easy to see that, for small ǫ, this transition will require a time of the order
+of
+T≈a(N)/ǫ, (12)
+where the coeﬃcient ais determined by the early stages of the evolution
+process [38]. Thus given the gapdistribution Pg(ǫ) the tail of the distribution
+of evolution times can be estimated to be
+P(T)≈aT−2Pg(a/T), (13)
+and aT−2power law follows for T≫a, provided that 0 < Pg(0)<∞. The
+gap distribution is given by Pg(ǫ) =e−ǫbothfor exponentially distributed
+5In factσ(2)isa local ﬁtness maximum with high probability 1 −N/(2N−1)≈0.990.
+9
+ﬁtnesses, and for ﬁtnesses distributed uniformly between 0 and S, whenSis
+large [39]. The striking diﬀerence between the two evolution time distr ibu-
+tions seen in Figure 3 is related to the diﬀerent scaling of the coeﬃcien ta(N)
+in (12) with sequence length: In the exponential case a(N)∼N3/2, while in
+the uniform case a(N)∼√
+NS[38].
+To compute Pg(0) for general ﬁtness distributions, noteﬁrst that the joint
+distribution of F(1)andF(2)is given by [40]
+P2(F(1),F(2)) =S(S−1)pc(F(2))S−2p(F(1))p(F(2)) (14)
+wherepc(F) =/integraltextF
+0dF′p(F′) denotes the cumulative ﬁtness distribution. The
+cumulative gap distribution is obtained by integration,
+Prob[F(1)−F(2)< ǫ] =
+S(S−1)/integraldisplay∞
+0dF(2)p(F(2))pc(F(2))S−2/integraldisplayF(2)+ǫ
+F(2)dF(1)p(F(1)),(15)
+which tends to Pg(0)ǫforǫ→0. Thus we conclude that
+Pg(0) =S(S−1)/integraldisplay∞
+0dFp(F)2pc(F)S−2(16)
+which is clearly ﬁnite and nonzero.
+The relationship (13) implies that the near-degenerate ﬁtness land scapes,
+which have very small gaps, are the ones that give rise to anomalous ly long
+evolution times. Figure 4 illustrates this connection. The data shown as
+crosses were obtained from an average over exponential ﬁtness landscapes,
+for which the ﬁtness gap ǫwas increased artiﬁcially by increasing the global
+ﬁtness maximum according to F(1)→F(1)+1. This is seen to immediately
+remove the power law tail (10).
+5 Comparison to record dynamics
+A simple schematic analogue of the nonstationary (ever slowing) evo lution
+process found in the quasispecies model is provided by the dynamics of
+records [34, 35, 36, 39], which is equivalent to evolution by long-rang ed ran-
+dom mutations known in the classical literature as the theory of “ho peful
+monsters” [23, 30]. In the present context it reduces to the follow ing rule
+for the motion of the master sequence σ∗(t) in sequence space: At each time
+10
+1e-050.00010.0010.010.1
+1 10 100P(T)
+Tstandard
+nondegenerate
+Figure 4: Comparison of the distribution of evolution times for expon entially
+distributed ﬁtnesses (+) with an ensemble of landscapes for which n ear-
+degeneracies (small gaps) have been removed ( ×). The latter data were
+averaged over 50000 realizations
+step, the population attempts a jump to another, randomly chose n sequence
+σ′/negationslash=σ∗(t). The move is accepted, and σ∗(t+1) =σ′, ifF(σ′)> F(σ∗(t));
+otherwise it is discarded and σ∗(t+ 1) =σ∗(t). Thus the current sequence
+σ∗(t) represents the ﬁtness record among the sequences which the population
+has encountered so far.
+Clearly this process gives rise to a step-like, punctuated pattern w hich is
+qualitatively similar to that shown above in Figure 1. Here we are concerned
+with aquantitative comparison of statistical properties. Let us ﬁrst com-
+pute the probability distribution of the total evolution time Tfor the record
+dynamics. Since the probability of ﬁnding the global ﬁtness maximum in
+any jump is 1 /S, the probability that it has not been found up to time tis
+(1−1/S)t≈e−t/Sfor large Sandt. Taking the derivative one obtains
+P(T) =S−1e−T/S. (17)
+Thetypical evolutiontimes areoftheorderofthenumber ofseque nces, much
+larger than in the quasipecies model. This demonstrates impressively the
+“guided” nature of quasispecies evolution [7], which is much more eﬃcie nt
+11
+1e-050.00010.0010.010.11
+0 2 4 6 8 10probability
+number of transitionsexponential
+uniform
+hopeful monsters
+Figure 5: Probability distributions for the total number of evolution ary
+jumps required to reach the global ﬁtness maximum. Symbols show d ata
+obtained by averaging over 500000 ﬁtness landscapes with expone ntial (+)
+and uniform ( ×) ﬁtness distributions, while the dotted line is the log-Poisson
+distribution (18) predicted by record dynamics
+than a random search. Figure 3 shows how broad the distribution (1 7) is
+compared to that of the quasispecies model. Note, however, that for very
+long times (longer than S) Eq.(17) decays exponentially, faster than the
+degeneracy-induced power law (10). Taken literally, Eq.(10) implies t hat the
+mean evolution time is inﬁnite.
+Nextweconsider thedistribution Pnofthetotalnumber nofevolutionary
+jumps which occur on the way to the global ﬁtness maximum. Adaptin g the
+results of Sibani and collaborators [36, 37], for the case of record dynamics
+we ﬁnd that Pnis a Poisson distribution with parameter ln S,
+Pn≈S−1(lnS)n−1
+(n−1)!. (18)
+In Figure 5 this is compared to numerical data obtained for the quas ispecies
+model. Again the distributions for the quasispecies dynamics are muc h nar-
+rower, showing that less transitions are required to reach the glob al max-
+imum. Simulations for longer sequences show that the mean number o f
+12
+transitions increases sublinearly in N, more slowly than the linear behav-
+ior predicted by (18) [38, 41].
+6 Outlook
+The simplicity of the strong selection dynamics (8,9) suggests to use it for a
+dynamical characterization of diﬀerent kinds of ﬁtness landscape s. In con-
+trast to the random landscapes considered here, realistic ﬁtness landscapes
+obtained e.g. from RNA folding contain extended neutral networks in se-
+quence space, in which the ﬁtness (deﬁned in terms of the RNA seco ndary
+structure) does not change [42]. Central concepts of quasispec ies theory have
+been extended to such landscapes [43]. Extended neutrality provid es a dis-
+tinct mechanism for the appearance of punctuation patterns in ev olution,
+since changes in the genotype do not show up in the phenotype, as lo ng as
+the former moves within a neutral network [44].
+Another interesting direction for further research inspired by th e analogy
+with directed polymers is to include eﬀects of environmental ﬂuctua tions,
+which amounts to making the ﬁtness landscape time-dependent [45]. In the
+directed polymer analogy, the issue is the interplay between columnar disor-
+der, which is provided by the time-independent part of the landscap e, and
+pointdisorder modeling the time-dependent variations [46]. It is well known
+that point disorder can depin a polymer from an attractive columnar defect
+in much the same way as thermal ﬂuctuations [47]. This suggests the in-
+triguing possibility of an error threshold delocalization phenomenon in duced
+by environmental ﬂuctuations.
+Acknowledgements. I would like to thank T. Halpin-Healy and C. Karl
+for their contributions to this project, and K. Sneppen, H. Flyvbj erg and L.
+Peliti for useful discussions. This work has been supported in part by NATO
+within CRG.960662, and by NSF under Grant No. PHY99-07949.
+References
+[1] M. Eigen: Trends in Microbiology 4, 216 (1996)
+[2] M. Eigen: Naturwissenschaften 58, 465 (1971)
+13
+[3] D.R. Mills, R.L. Peterson, S. Spiegelman: Proc. Natl. Acad. Sci. USA
+58, 217 (1967).
+[4] C.K. Biebricher: ‘Darwinian Selection of Self-Replicating RNA
+Molecules’. In: Evolutionary Biology, Vol. 16 , ed. by M.K. Hecht, B.
+Wallace, G.T. Prance (Plenum, New York 1983) pp. 1-52
+[5] C.K. Biebricher, W.C. Gardiner: Biophys. Chem. 66, 179 (1997)
+[6] J.S. McCaskill, G.J. Bauer: Proc. Natl. Acad. Sci. USA 90, 4191 (1993)
+[7] M. Eigen, J. McCaskill, P. Schuster: Adv. Chem. Phys. 75, 149 (1989)
+[8] E. Domingo: Clinical and Diagnostic Virology 10, 97 (1998)
+[9] R.V. Sol´ e, R. Ferrer, I. Gonz´ alez-Garc´ ıa, J. Quer, E. Domin go: J. theor.
+Biol.198, 47 (1999)
+[10] M. Eigen and C.K. Biebricher: ‘Role of Genome Variation in Virus
+Evolution’. In: RNA Genetics. Vol. III: Variability of Virus Genomes ,
+ed. by E. Domingo, J.J. Holland, P. Ahlquist (CRC Press, Boca Raton,
+FL, 1988) pp. 211-245
+[11] L. Peliti: ‘Introduction to the statistical theory of Darwinian ev olution’.
+cond-mat/9712027
+[12] E. Baake, W. Gabriel: ‘Biological evolution through mutation, sele c-
+tion, and drift: An introductory review’. In: Annual Reviews of Com-
+putational Physics VII , ed. by D. Stauﬀer (World Scientiﬁc, Singapore,
+2000) pp. 203-264
+[13] B. Drossel: ‘Biological Evolution and Statistical Physics’.
+cond-mat/0101409 (to appear in Adv. Phys.)
+[14] I. Leuth¨ ausser: J. Stat. Phys. 48, 343 (1987)
+[15] P. Tarazona: Phys. Rev. A 45, 6038 (1992)
+[16] S. Galluccio, R. Graber, Y.-C. Zhang: J. Phys. A 29, L249 (1996)
+[17] S. Galluccio: Phys. Rev. E 56, 4526 (1997)
+[18] E. Baake, M. Baake, H. Wagner: Phys. Rev. Lett. 78, 559 (1997)
+14
+[19] J.S. McCaskill: J. Chem. Phys. 80, 5194 (1984)
+[20] S. Franz, L. Peliti, M. Sellitto: J. Phys. A 26, L1195 (1993)
+[21] S. Franz, L. Peliti: J. Phys. A 30, 4481 (1997)
+[22] J.S. McCaskill: Biol. Cybern. 50, 63 (1984)
+[23] G.G. Simpson: Tempo and Mode in Evolution (Columbia University
+Press, New York, 1944)
+[24] C.M. Newman, J.E. Cohen, C. Kipnis: Nature 315, 400 (1985)
+[25] S.J. Gould, N. Eldredge: Nature 366, 223 (1993)
+[26] W. Ebeling, A. Engel, B. Esser, R. Feistel: J. Stat. Phys. 37, 369 (1984)
+[27] J. Krug, T. Halpin-Healy: J. Phys. I France 3, 2179 (1993)
+[28] Y.C. Zhang: Phys. Rev. E 55, R3817 (1997)
+[29] D. Alves, J.F. Fontanari: Phys. Rev. E 57, 7008 (1998)
+[30] S. Kauﬀman, S. Levin: J. theor. Biol. 128, 11 (1987)
+[31] C.A. Macken, A.S.Perelson: Proc.Natl.Acad.Sci. USA 86, 6191(1989)
+[32] C.A. Macken, P.S. Hagan, A.S. Perelson: SIAM J. Appl. Math. 51, 799
+(1991)
+[33] H. Flyvbjerg, B. Lautrup: Phys. Rev. A 46, 6714 (1992)
+[34] P. Sibani, M.R. Schmidt, P. Alstrøm: Phys. Rev. Lett. 75, 2055 (1995)
+[35] P. Sibani: Phys. Rev. Lett. 79, 1413 (1997)
+[36] P. Sibani, M. Brandt, P. Alstrøm: Int. J. Mod. Phys. B 12, 361 (1998)
+[37] P. Sibani, P.B. Littlewood: Phys. Rev. Lett. 71, 1482 (1993).
+[38] J. Krug and C. Karl (in preparation)
+[39] W. Feller, Introduction to Probability Theory and Its Applications , Vol.
+2 (Wiley, New York 1971)
+15
+[40] H.A. David, Order Statistics (Wiley, New York 1970)
+[41] C. Karl: Diploma thesis (University of Essen, 2001)
+[42] P. Schuster: Biophys. Chem. 66, 75 (1997)
+[43] C. Reidys, C.V. Forst, P. Schuster: Bull. Math. Biol. 63, 57 (2001)
+[44] P. Schuster, W. Fontana: Physica D 133, 427 (1999)
+[45] M. Nilsson, N. Snoad: Phys. Rev. Lett. 84, 191 (2000)
+[46] I. Arsenin, T. Halpin-Healy, J. Krug: Phys. Rev. E 49, R3561 (1994)
+[47] L. Balents, M. Kardar: Phys. Rev. B 49, 13030 (1994)
+16

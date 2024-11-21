@@ -1,0 +1,292 @@
+arXiv:cond-mat/0103385v1  [cond-mat.soft]  19 Mar 2001Modeling two-state cooperativity in protein folding
+Ke Fan, Jun Wang, and Wei Wang∗
+National Laboratory of Solid State Microstructure and Depa rtment of Physics, Nanjing
+University, Nanjing 210093, China
+(February 19, 2001)
+Abstract
+A protein model with the pairwise interaction energies vary ing as local en-
+vironment changes, i.e., including some kinds of collectiv e eﬀect between the
+contacts, is proposed. Lattice Monte Carlo simulations on t he thermody-
+namical characteristics and free energy proﬁle show a well- deﬁned two-state
+behavior and cooperativity of folding for such a model. As a c omparison,
+related simulations for the usual G¯ o model, where the inter action energies
+are independent of the local conformations, are also made. O ur results in-
+dicate that the evolution of interactions during the foldin g process plays an
+important role in the two-state cooperativity in protein fo lding.
+PACS number: 87.15 Aa, 87.15 Cc, 87.15 He
+Typeset using REVT EX
+1
+Due to the developments of experimental methods andtheoretica l models, many achieve-
+ments of protein folding have been made recently [1]. A protein can fo ld itself to its uniquely
+well-deﬁned native structure in a biologically short time, regardless o f the huge number of
+possible conformations, showing a highly cooperatively kinetic behav ior. It is now clear that
+thecooperativityoffoldingmay result fromthebackbone hydroge nbonding, sidechain pack-
+ing and hydrophobic interactions, among them the hydrophobic inte ractions are believed to
+be the dominant driving force for folding [2]. For many small single-dom ain proteins or
+lattice proteinlike models, there is a two-state behavior between th e unfolded states and the
+folded native one [3,4]. Recently, Chan and Kaya [5] indicated that acc ording to the calori-
+metric criterion, which is widely used in experiments as a condition for t wo-state folding,
+popular lattice models, e.g., two-letter HP and 20-letter MJ models, a re far from two-state
+models. Thismay beduetosome ﬂawed assumptions inthepotentialf unctions usedinthese
+models. Lattice models usually use statistical potential functions e xtracted from the pair-
+ing frequencies of 20 kinds of amino acids in databases of protein str uctures [6]. Although
+these knowledge-based potentials may be a good approximation to t he relative strength of
+interactions between the residues in the native state, they provid e no information about
+how the interactions evolve during the folding. For computational c onvenience, a common
+assumption in lattice models is that the interactions are additive, and they are the same
+during the folding as in the native state. This means that the interac tion energies are
+conformation-independent. Clearly this is not relevant to the expe rimental situation [7]. In
+fact, as Dill pointed out [8], the thermodynamic additivity principle whic h is widely used in
+chemistry may be unsuitable in biochemistry. Some recent experimen ts also indicated that
+the transition state is an expanded version of the native state, wh ere the majority of inter-
+actions are partially formed [9], and their strengths are diﬀerent fr om those in the native
+state (with Φ <1). That is, these interactions depend on the conformations [7], es pecially
+the local structures around the contacts as emphasized recent ly in Ref. [10]. Previously, the
+non-additivity was built in a lattice model for packing eﬀects [11]; and t he hydrophobic force
+depending on the local density of peptide atoms was also taken into a ccount in an oﬀ-lattice
+2
+model [12]. Studies on these models show that the introduction of th e non-additivity is
+signiﬁciant, but the two-state cooperativity of these models is not checked, and the eﬀects
+of the non-additivity on thermodynamics and kinetics of folding need to be further studied.
+In this paper, we develop a reﬁned G¯ o model where the pairwise inte raction energies
+vary as the local environment changes, i.e., some kinds of collective e ﬀects between contacts
+are introduced. Our purpose here is to study the two-state coop erativity of protein folding
+and its physical origin with such a model. Our results give a general pic ture about how the
+conformation-dependent interactions aﬀect the folding kinetics, which is consistent with the
+phenomenological explanation based on experimental results.
+We model a polypeptide chain as a self-avoiding chain on a cubic lattice. A contact is
+formed if two residues are space adjacent but not sequence adja cent. If two residues form a
+contact as the same as in the native state, we call this contact a na tive contact, otherwise
+a non-native contact. Following the G¯ o model [13], only native conta cts are considered to
+contribute to the total energy. Diﬀerent from the G¯ o model, we a ssume that the interaction
+energies between residues are conformation-dependent, and va ry with changes of the local
+environment. Toachieve this, weintroduceaparameter Stodescribethedegreeforaresidue
+being ordered relative to the native state. For the i-th residue in a certain conformation, its
+degree of order Siis deﬁned as
+Si=zi/znat
+i, (1)
+whereziis the number of native contacts in this conformation, znat
+iis the number of contacts
+formed in the native state. Obviously, Sivaries between 0 (the i-th residue being fully
+disordered) and 1 (being fully ordered). Thus, the interaction ene rgy between residues iand
+j,Bij=-(Si+Sj)ε/2 is deﬁned, where SiandSjare the degrees of order for residues iandj,
+respectively. εis the unit of energy and is set to be 1 in this work. The total energy o f the
+conformation then is E=/summationtext
+i<j∆ijBij, where ∆ is unity when residues iandjform a native
+contact, and zero otherwise. Here, a contact formed between r esiduesiandjmay have
+diﬀerent energies in diﬀerent conformations, i.e., Bijmay change from one conformation to
+3
+another (for the G¯ o model, one always has Bij=−ε). In general, a contact formed between
+residues iandjwill stabilize, to some extent, other contacts that residue iorjformed
+with other residues. On the contrary, its breakage may destabilize those contacts as well.
+Therefore, the introduction of the degree of order for a residue into the potential function
+reﬂects the cooperativity between the residues. Although the co rrelation distance is small,
+only one lattice unit, the many-body eﬀects are obviously included in o ur model. Figure 1
+shows such a collective eﬀect. The interaction energies of contact A-B (or B-C) are diﬀerent
+when the other contact is present or not present. Clearly, the en ergy of state I3is lower than
+the sum of that of states I1andI2, indicating the interaction non-additivity. Each contact
+is stabilized by the other contact due to the collective eﬀect. Note t hat in this paper our
+model is called G¯ o+ model to distinguish from the G¯ o model.
+Now let us present the Monte Carlo simulations on the thermodynamic and kinetic
+features for both models. The mean ﬁrst passage time (MFPT), as a common measure of
+folding rate, is calculated by an average of the ﬁrst passage time (F PT) over 1000 runs.
+Each run begins with a random conformation, and ends when the nat ive state is reached for
+the ﬁrst time. The FPT is the Monte Carlo steps (MCS) consumed in a r un.
+Generally, as the temperature Tdecreases, the population of the native state, PN, in-
+creases from zero to about unity. The degree of sharpness of ch anges in PN, similar to the
+“rapidity” in Ref. [14], is a measure of the cooperativity of the folding reaction. Figure 2
+shows the population PNand the speciﬁc heat Cvversus temperature Tfor a 36-mer chain
+for both models. PNis deﬁned as PN=e−EN/T//summationtext
+EΩ(E)e−E/T, where Ω( E) is the density
+of states for energy E,ENis the energy of the native state. Ω( E) is calculated with the
+Monte Carlo histogram method [15]. From Fig.2 we can see that the fold ing transition for
+our G¯ o+ model is much sharper than that of the G¯ o model, i.e., a sha rper change in PN.
+There is also a single peak in Cvcurve, but it is narrower than that of the G¯ o model. For
+our G¯ o+ model, the maximum of Cvoccurs at a temperature nearly the midpoint tempera-
+ture of transition with PN=1/2, i.e., the diﬀerence between these two temperatures is quite
+small. This is consistent with recent studies on naturally occuring pro teins [14,16], implying
+4
+a good cooperativity of folding in this model. Diﬀerently, such a tempe rature diﬀerence is
+large for the G¯ o model (see Fig.2), indicating that the folding of the G¯ o model is much less
+cooperative than that of the G¯ o+ model. Since the sharpness is on ly a qualitative descrip-
+tion for the transition, we further calculate the equilibrium energy d istribution at the folding
+transition temperature, Tf. Figure 3 shows such distributions for both models. Clearly our
+G¯ o+ model shows a goodbimodal behavior, and the denatured-st ate energy is distributed in
+a narrow region [see Fig. 3(a)]. This means clearly a two-state folding and there is basically
+no intermediate states at equilibrium. Diﬀerently, for the G¯ o model as shown in Fig. 3(b),
+there are many intermediate states and the bimodal behavior is not so signiﬁcant as that in
+Fig.3(a). Thus for the G¯ o model the folding is not of a two-state. T his is in agreement with
+Chan and Kaya’s argument [5].
+In experiments, a well-established criterion for two-state folding is that the van’t Hoﬀ
+enthalpy ∆ HvHaround the transition midpoint is equal, or very close, to the calorime tric
+enthalpy ∆ Hcalof the entire transition. In this work, we calculate the ratio ∆ HvH/∆Hcalas
+suggested in Ref. [5] (here, the deﬁnition of ∆ HvH/∆Hcalis equal to ( k2)2in Ref. [5]), and
+list the results in Table I. From Table I, we can clearly see the diﬀerenc e between the G¯ o
+model and our G¯ o+ model. The G¯ o model, which is considered as a mod el with minimal
+energetic frustrations, does not meet the calorimetric two-stat e criterion and gives out the
+value of ∆ HvH/∆Hcalfar from 1. Nevertheless, our model satisﬁes the criterion quite w ell
+(for real proteins, the value of ∆ HvH/∆Hcalis 0.96±0.03 [17]). This, again, implies the
+two-state folding and the good cooperativity of our G¯ o+ model.
+Physically, thehighcooperativityofourmodelmayresult fromthen arrowdistributionof
+the denatured states and the high population of the native state a t the folding temperature
+(see also Figs.2 and 3). In our model, the energy spectrum relating t o various conformations
+is redistributed, comparing with that of the G¯ o model, due to the co llective eﬀect between
+interactions. As a result, the energies of non-native conformatio ns are moved to higher
+energy levels and a larger energy gap is left between the non-native conformations and the
+native one (for the two models, the energies of the native state ar e the same). The large
+5
+energy gap makes the native state paticularly stable, which is believe d to be a necessary
+condition for cooperative folding [18]. This may be the physical origin o f the two-state
+cooperativity. It can be further explained from the viewpoint of th e free energy proﬁle. For
+our G¯ o+ model, as shown in Fig.4, the free energy proﬁles have broa d activation barriers.
+The broad activation barriers can account for the large movement of transition state caused
+by mutation or temperature changes, and are considered as a com mon feature of the two-
+state folding [19]. Our numerical results are surprisingly consistent with a phenomenological
+speculation for the existence of such a free energy proﬁle in Ref. [1 9]. It should be noted that
+the broad activation barriers are consistent with the narrow distr ibution of the denatured
+states.
+Now let us make a comparison of the foldability based on the plots of th e MFPT versus
+PNfor both models. Note that we use PNinstead of the commonly used temperature T
+in the horizontal axis in Fig.5. This is because that an identical conditio n should be taken
+for the comparison. In lattice simulations, the temperature has an arbitrary unit and also
+has no direct relationship with the real temperature. The comparis on between two diﬀerent
+models at the same temperature may make no sense. Nevertheless , at an identical condition
+with the same PN, the diﬀerences in the foldability can be well-deﬁned. This is similar to
+other conditions used previously [20]. From Fig. 5, we can see that th e MFPT for our G¯ o+
+model shows a slow decrease as PNincreases, it reaches a minimum at PN≈0.93, and then
+it increases. For the G¯ o model, there is also a minimum but at PN≈0.71. It is clearly
+that when the native state is stable (say, PN≥0.9), our G¯ o+ model folds signiﬁcantly fast,
+i.e., the MFPT is smaller with one or two orders of magnitude than that o f the G¯ o model.
+Physically, this can be explained as follows. From Eq.(1) we can easily se e that the energy
+gain of forming a contact is usually smaller for our G¯ o+ model than th at for the G¯ o model.
+At high temperatures, entropic contribution is dominant to the fre e energy barrier, and
+the loss of entropy is always undercompensated by the energy gain , thus the G¯ o+ model
+folds slower for its smaller energy gain. Whereas at low temperature s, folding is nearly a
+downhill process, and the loss of entropy is always overcompensat ed by the energy gain.
+6
+Therefore, for the G¯ o+ model, it is easier to escape from kinetic tr aps, and the folding is
+faster. Finally, we note that for the two models the pathways of re aching the transition state
+from the denatured state are diﬀerent. Due to the high cooperat ivity in our G¯ o+ model, a
+good core, the assembly of non-polar residues, is formed much ear lier at low temperatures
+than that in the G¯ o model. Detailed kinetic results will be reported els ewhere. We also note
+that similar results are obtained for diﬀerent chain sizes.
+In conclusion, our G¯ o+ model, with many-body interactions depend ing on the local
+structures included, exhibits a good two-state folding behavior. O ur results suggest that
+the evolution of interactions during the folding plays an important ro le in the two-state
+cooperativity in protein folding. We give a possible way how the interac tions evolve in
+the folding, which may capture some essential features of the two -state folding. We expect
+further study could provide new insights into the mechanism of prot ein folding.
+We thank H.S. Chan, A. Maritan and D. Thirumalai for useful sugges tions. This work
+was supported by the Foundation of NNSF (No.19625409, and No.10 074030).
+∗Email address: wangwei@nju.edu.cn
+7
+REFERENCES
+[1] K.A. Dill and H.S. Chan, Nat. Struct. Biol. 4, 10, (1997); D. Baker, Nature (London)
+405, 39, (2000); W.A. Eaton et al., Annu. Rev. Biophys. Biomol. Struct. 29, 327,
+(2000); J.N. Onuchic, L.-S. Zaida, and P.G. Wolynes, Annu. Rev. Phy s. Chem. 48, 525,
+(1997); C.M. Dobson and M. Karplus, Curr. Opin. Struct. Biol. 9, 92, (1999); J. Wang
+and W. Wang, Nat. Struct. Biol. 6, 1033, (1999).
+[2] J.M. Sorenson and T. Head-Gordon, Fold. Des. 3, 523, (1998).
+[3] S.E. Jackson, Fold. Des. 3, R81, (1998).
+[4] H.S. Chan, S. Bromberg, and K.A. Dill, Phil. Trans. R. Soc. Lond. B 348, 61, (1995);
+D.K. Klimov and D. Thirumalai, Fold. Des. 3, 127, (1998);
+[5] H.S. Chan, Proteins 40, 543, (2000); H. Kaya and H.S. Chan, Proteins 40, 637, (2000);
+H. Kaya and H.S. Chan, Phys. Rev. Lett. 85, 4823, (2000);
+[6] S. Miyazawa and R.L. Jernigan, Macromolecules 18, 534, (1985); A. Koliski, A. Godzik,
+and J. Skolnick, J. Chem. Phys. 98, 7420, (1993).
+[7] A.R. Fersht et al., Proc. Natl. Acad. Sci. USA 91, 10426, (1994); R.L. Baldwin, Nature
+(London) 369, 183, (1994).
+[8] K.A. Dill, J. Biol. Chem. 272, 701, (1997).
+[9] D.E. Otzen et al., Proc. Natl. Acad. Sci. USA 91, 10422, (1994); F. Chiti et al., Nat.
+Struct. Biol. 6, 1005, (1999); J.C. Martinez and L. Serrano, ibid.6, 1010, (1999); D.S.
+Riddleet al.,ibid.6, 1016, (1999).
+[10] J.R. Banavar and A. Maritan, Proteins 42, 433, (2001).
+[11] C.J. Camacho and D. Thirumalai, Proc. Natl. Acad. Sci. USA 90, 6369, (1993).
+[12] S. Takada, Z. Luthey-Schulten, and P.G. Wolynes, J. Chem. Ph ys.110, 11616, (1999).
+8
+[13] N. G¯ o, Annu. Rev. Biophys. Bioeng. 12, 183, (1983).
+[14] F. Cecconi et al., cond-matt/0101229.
+[15] A.M. Ferrenberg and R.H. Swendsen, Phys. Rev. Lett. 63, 1195, (1989); N.D. Socci and
+J.N. Onuchic, J. Chem. Phys. 103, 4732, (1995).
+[16] C. Micheletti et al., Phys. Rev. Lett. 82, 3372, (1999).
+[17] P.L. Privalov, Adv. Protein Chem. 33, 167, (1979).
+[18] A. Sali, E.I. Shakhnovich, and M. Karplus, Nature (London) 369, 248, (1994).
+[19] M. Oliveberg et al., J. Mol. Biol. 277, 933, (1998); D.E. Otzen et al., Biochemistry 38,
+6499, (1999); M. Oliveberg, Acc. Chem. Res. 31, 765, (1998).
+[20] V.I. Abkevich, A.V. Gutin, and E.I. Shakhnovich, J. Mol. Biol. 252, 460, (1995); D.K.
+Klimov and D. Thirumalai, Proteins 26, 411, (1996).
+[21] J. Lee, Phys. Rev. Lett. 71, 211, (1993); M.H. Hao and H.A. Scheraga, J. Phys. Chem.
+98, 4940, (1994).
+9
+Table I: The ratios of ∆ HvH/ ∆Hcalfor the G¯ o model and our G¯ o+ model, respectively.
+Ten sequences are calculated for each chain size.
+10
+FIG. 1: Schematic illustration of collective eﬀect between two interactions. From a state
+I0with three unstructured residues, the chain can be settled in a sta teI1(orI2) with a
+contact A-B (or B-C) and an equilibrium constant K1(orK2). A state I3with two contacts
+A-B and B-C can be reached from state I1orI2, but with diﬀerent equilibrium constants
+K2γorK1γ. In state I3, each interaction is stronger by a factor γdue to the existence of
+the other contact.
+FIG. 2: Population PNand speciﬁc heat Cvvarying with the temperature Tfor a 36-mer
+chain.
+FIG.3: Theenergydistributionforthesame36-merusedinFig.2,using(a)G ¯ o+potential
+and (b) G¯ o potential at respective folding transition temperatur e,Tf.
+FIG. 4: The free energy proﬁle F(E) =E−TS(E) of our G¯ o+ model at diﬀerent
+temperatures, where entropy S(E) is calculated by using entropy sampling Monte Carlo
+method [21]. Here U, N and TS denote the unfolded state, native sta te and transition state,
+respectively. Note that the free energy proﬁle at high temperatu re is overall shifted so that
+the unfolded states are overlapped.
+FIG. 5: MFPT versus PNfor a 36-mer chain.
+11
+CBAK2
+I0γγ
+I1
+K1C
+BA
+I2CBAI3
+K2K1
+CBA
+Figure□1 
+By□K.□Fan,□J.□Wang□and□W.□Wang□
+in□"Modeling□two-state□..." 
+0.2 0.4 0.6 0.8 1.0 0.0 0.2 0.4 0.6 0.8 1.0 
+□□Go+ 
+□□Go PN
+T0100 200 300 
+Figure□2□ 
+By□K.□Fan,□J.□Wang,□and□W.□Wang 
+in□"Modeling□two-state□..." Cv
+□□
+-40 -30 -20 -10 00.0 0.1 0.2 0.3 
+Figure□3 
+By□K.□Fan,□J.□Wang,□and□W.□Wang 
+in□"Modeling□two-state□..." Tf=0.72 
+□Population 
+E(b) 0.0 0.1 0.2 0.3 Tf=0.77 (a) 
+□
+□□
+0 10 20 30 40 -40 -36 -32 
+Figure□4□ 
+By□K.□Fan,□J.□Wang,□and□W.□Wang 
+in□"Modeling□two-state□..." T=0.75 T=0.85 □
+□TS TS 
+N
+NUF(E) 
+-□E 
+0.2 0.4 0.6 0.8 1.0 10 510 610 710 810 910 10 
+Figure□5 
+By□K.□Fan,□J.□Wang,□and□W.□Wang 
+in□"Modeling□two-state□..." 
+□□
+□□Go+ 
+□□Go MFPT□(MCS) 
+PN
+□HvH / Hcal □Chain□size □Go□model□ Go+□model□
+27-mer□
+36-mer□
+48-mer□0.62±0.01□
+0.60±0.01□
+0.74±0.01□0.91±0.01□
+0.91±0.01□
+0.95±0.01□
+□

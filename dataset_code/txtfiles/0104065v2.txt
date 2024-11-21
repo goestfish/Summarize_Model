@@ -1,0 +1,1080 @@
+arXiv:cond-mat/0104065v2  [cond-mat.soft]  31 Oct 2001Mechanisms of cooperativity underlying sequence-indepen dent
+β-sheet formation
+Chinlin Guo, Margaret S. Cheung, Herbert Levine
+Department of Physics, University of California, San Diego
+9500 Gilman Drive, La Jolla, CA 92093-0319
+David A. Kessler
+Department of Physics, Bar-Ilan University, Ramat-Gan, Isra el
+(Dated: October 29, 2018)
+ABSTRACT
+We investigate the formation of β-sheet structures in proteins without
+sequence-dependent side-chain interactions. To accompli sh this, we introduce
+a model which explicitly incorporates both solvation eﬀect s and the angular
+dependence (on the protein backbone) of hydrogen bond forma tion. The ther-
+modynamics of this model is studied by exploring the density of states for the
+entire system and the local couplings in a partially folded s tructure. Our results
+suggest that solvation dynamics together with the H-bond an gular dependence
+gives rise to a generic cooperativity in this class of system s; this result ex-
+plains why pathological aggregates involving β-sheet cores can form from many
+diﬀerent proteins. Our work provides the foundation for the construction of
+phenomenological models to investigate topology eﬀects in β-sheet folding and
+the competition between native folding and non-speciﬁc agg regation.
+I. INTRODUCTION
+β-sheets are an important element of protein structure, occurrin g often both in functional
+units and in pathological aggregates. For example, signaling protein s such as SH3 contain a
+βcore. On the other hand, the precursors of amyloidogenesis are c ommonly found to have
+aβ-sheet organization1; moreover, a conformational rearrangement can switch a funct ional
+β-sheet into an aggregation unit2,3. As they play the role of stabilizing highly organized
+2
+architectures (eitherpathologicalorfunctional), β-sheetsmustbestronglycooperativeunits,
+responsible for lowering the free energy of these folded structur es as compared to entropy-
+dominated more irregular patterns.
+It is often assumed that hydrophobic interactions are the major f orces contributing to
+β-sheet cooperativity and their interacting pattern (i.e., the seque nce design) can deﬁne a
+unique fold4. But, one cannot ignore the fact that many neurodegenerative d iseases are
+caused by the aggregation of mutant proteins with long hydrophilic sequences (e.g., poly-
+glutamine in Huntington disease5); theβ-sheet at the core of these aggregates are certainly
+not being stabilized by hydrophobic forces. Indeed, recent exper iments have shown that
+peptides with purely hydrophilic sequences can fold β-sheets cooperatively6. Also, growing
+evidence suggests that proteins are capable of forming β-sheet aggregates, regardless of their
+native folds7. Together with the fact that most amyloidogenetic precursors do not share
+any homologous sequence1, it is therefore very likely that throughout the 2-dimensional β-
+sheet architecture, formation of an H-bond network can genera te long-range ordering, hence
+compensating the mismatch of side-chain interactions and stabilizing the system.
+What are the basic diﬀerences between backbone H-bond and side- chain hydrophobic
+interactions? Besides the diﬀerence in sequence speciﬁcity discuss ed above, they also diﬀer
+in the maximal number of contacts for each interaction unit. Along t he peptide chain,
+one amino acid can form at most two backbone H-bonds with adjacen tβ-strands in the
+2-dimensional β-sheet structure. In contrast, for each hydrophobic residue in a compact
+protein, thenumber offavorable(sequence speciﬁc)contactsc anbemorethantwo; thisleads
+to many-body eﬀects that can deﬁne and stabilize a unique fold4,8,9. In most protein folding
+literature, thehydrophobic many-body eﬀect ismimicked bytheuse ofG¯ o-typeinteraction10
+and sequence-speciﬁc restrictions on the backbone energy11to favor the native state. This
+approach, however, is not generally applicable to the case of seque nce-independent β-sheet
+formation.
+Moreover, from a statistical mechanics prospective, it is well know n that having coop-
+erative behavior in a 2-dimensional, pairwise-interacting system req uires more than two
+couplings (in average) for each interaction unit12. In protein folding, this corresponds to the
+case that folding of a speciﬁc part of the overall structure will aid it s contiguous contact
+formation without redundant entropy loss, as brieﬂy discussed by Berrizet al13. At the ﬁrst
+glance, this principle does not apply to the case of H-bond network f ormation in an obvious
+3
+way. Thus, elucidating how the networking of individual H-bond can g ive rise to a stable
+folded structure is the major goal of present work.
+For this purpose, we study a model system without speciﬁc side-ch ain interaction. It
+has already been shown that for β-structured proteins with randomly assigned sequences,
+a pure Lennard-Jones potential might not be suﬃcient to provide s ystemic cooperativity,14
+and angular dependence in contact formation must be taken into ac count13. Also, there is
+growing evidence that solvent eﬀects play a signiﬁcant role in protein folding and conforma-
+tional changes15,16,17,18,19. Thus, we introduce a new approach to integrate these two eﬀect s
+in modeling H-bond formation. The ingredients of our approach are a “co-plane” parame-
+terization of the backbone degrees of freedom with explicit coupling s of solvation dynamics
+and the angular dependence of hydrogen-bond formation. The sy stemic cooperativity is
+investigated by exploring the density of states for β-sheets of diﬀerent size and structure.
+To facilitate the sampling, we have used replica-exchange20and multi-canonical rescaling21
+techniques. The originof thisglobal cooperativity isfurther studie d bycomparing energetics
+and thermodynamic stability of local sub-structures of model sys tems with diﬀerent types
+of interaction potentials.
+Our results indicate that it is the de-solvation cavity formation (i.e., t he granularity
+of the water molecule) and the hydrogen-bond angular dependenc e that provide β-sheets
+with a systemic cooperativity. Since this property is sequence-inde pendent, our results
+suggest why β-sheets can generically serve as the building blocks for constructin g functional
+macromolecules, and why most functional proteins have the tende ncy to form aggregates at
+suﬃciently high concentration.
+II. METHOD
+A. The model system
+The system proposed here is based on the “ball-and-stick” model in troduced in Ref. 22.
+In this approach, all NH, C α, CO (represented as C′), and C βside-chains are treated as
+lumped balls. The local backbone energy consists of a sum of terms:
+1. bond bending: V θ=1
+2/summationtextkθ(θi−θ0)2
+4
+2. dihedral rotations: V ω=1
+2/summationtextǫω(1+cosωi), Vφ=1
+2/summationtextǫφ(1+cos3φi), Vψ=1
+2/summationtextǫψ(1+
+cos3ψi),
+3. side-chain chirality: V chiral=/summationtextǫchiralΘ/parenleftbig/braceleftbig
+[ˆrNCα×ˆrCβCα]·ˆrC′Cα/bracerightbig
+i/parenrightbig
+with the sum taken over all components (labeled by i), and Θ(s) = (s+|s|)/2. Here, since
+we are interested in sequence-independent eﬀects, all side-chain s are treated as polar or
+weakly charged groups that favor β-sheet formation, with interaction strengths4,26that are
+far less than the magnitude of the H-bond energy and can be gener ally ignored. Also, we
+take the parameters kθ= 200kcal/mol·rad2,ǫω= 40kcal/mol,ǫφ=ǫψ= 0.45kcal/mol, and
+ǫchiral= 10kcal/mol from Ref. 22.
+B. The solvation force ﬁeld
+Next, we construct expressions for the non-local interactions. We incorporate the sol-
+vation eﬀect into the force law by designing a double-well potential t hat can account for
+contact formation and single-H 2O hydration (between the contact pair); the barrier between
+the wells corresponds to the free energy cost involved in the trans fer of a water molecule out
+of the hydration shell15,23. Multiple shells could be accommodated via a multiple-well po-
+tential, but this is not attempted here. The approximation of using a n eﬀective free-energy
+is justiﬁed via the observation that transfer of water from within t he vicinity of the contact
+pair is faster than the contact formation15,16,17,18.
+There is no standard way to construct a continuous de/solvation p otential24which can
+be used for Langevin simulations; we note that a previous curve ﬁtt ing eﬀort25and a recent
+Monte Carlo study23utilized a discrete version of such a potential. We therefore propos e an
+empirical proﬁle based on estimated experimental parameters. Sp eciﬁcally, we will take for
+H-bond formation
+UHb(r) =A
+rk/bracketleftBigg
+1
+4r3k−/parenleftbigg1
+(rc
+Hb)k+1
+(r∗
+Hb)k+1
+(rsol
+Hb)k/parenrightbigg1
+3r2k
++/bracketleftbigg/parenleftbigg1
+(rc
+Hb)k+1
+(r∗
+Hb)k/parenrightbigg1
+(rsol
+Hb)k+1
+(rc
+Hbr∗
+Hb)k/bracketrightbigg1
+2rk−1
+(rc
+Hbr∗
+Hbrsol
+Hb)k/bracketrightBigg
+(1)
+Hereris the distance between NH and CO, and the integer k∈N(k= 6, e.g.) is chosen
+to give speciﬁc long-range behavior. The values r=rc
+Hb,r=r∗
+Hb, andr=rsol
+Hbrepresent the
+5
+separation distance at the contact bond position, at the the peak of the desolvation barrier,
+and in the presence of a single intervening solvent molecule separatio n, respectively. rsol
+Hb
+is obtained by adding the known value of rc
+Hbto the size of a single H 2O.Aandr∗
+Hbcan
+be determined by the strengths of the H-bond22and the desolvation barrier; the latter is
+approximated by the surface energy involved in forming a desolvatio n cavity, estimated to
+equal≈0.103kcal/(mol◦
+A2)18. Here we have rc
+Hb≈3.43◦
+Aandr∗
+Hb≈3.92◦
+A; these yield a
+single H 2O hydration energy of ≈ −0.5 kcal/mol.
+Clearly, the design principle behind this type of formula is to have thre e roots for
+dUHb(r)/dr= 0 accounting for the desolvation barrier and for the two local minim a; one can
+add more roots to address multiple solvation shell eﬀects. Note tha t one might wish to ﬁne-
+tune the potential proﬁle more precisely (for instance, by being ab le to independently vary
+the width of the contact well). This can be accomplished by a more com plicated expression
+(see appendix A). Also, the strength of de/solvation might depend on the hydrophobicity of
+local environment (i.e., de-wetting behavior) and one can certainly t ake this into account.
+As discussed in22,26, hydrogen bond formation has a strong angular dependence on its
+surrounding backbone; thus, one can not fully describe the intera ction using the radial
+distance alone. From Fig. 1(d), we note that such an angular depen dence is merely the
+requirement that all atoms near to the interacting NH, CO (i.e. the s hadowed area) are
+aligned “natively”. In Ref. 22, this “alignment” eﬀect is accomplished by introducing
+artiﬁcial repulsive forces between H-bondneighbors. Here, we pr oposeinstead a “functional-
+block” (co-plane) scheme.
+C. The co-plane approach
+From Fig. 1(a), we notice that the peptide backbone between two c ontiguous C αatoms
+has a co-planar structure because of the N-C-O bond resonance . This allows us to model the
+motion of a “co-plane” as a whole (i.e., with one dihedral angle ωﬁxed to≈180◦). Overall,
+each interacting unit in our system is just one block of C αco-plane. The ithco-plane is
+deﬁned by three points {X(i)
+1,X(i)
+2,X(i)
+3}where X(i)
+1,X(i)
+3are simply the two C αin the plane
+and X(i)
+2is a virtual point satisfying− −−− →
+X(i)
+1X(i)
+2⊥− −−− →
+X(i)
+2X(i)
+3, ﬁg.1(b). Once the degree of freedom
+corresponding to this point is speciﬁed, all the atomic locations of th e amide and carbonyl
+groups are ﬁxed. Note that a convenient way to deﬁne the arbitra ry point X 2is such that
+6
+the vector− −−− →
+X(i)
+2X(i)
+3points directly at the C αof the neighboring strand if the system is in
+the nativeβ-sheet structure; see ﬁg.1(c). Once X(i)
+2is chosen, this determines the in-plane
+anglesθ1andθ2as well as the virtual plane projection angle θ3. We computed all these
+objects by using the native value of bond angles22and dihedral angles observed in regular
+β-sheets (φ∼ −138±1◦,ψ∼135±1◦)26. This leads to all geometrical properties of the
+virtual plane, including θ1= 64.7◦,θ2= 62.2◦,θ3= 22.4◦,X1X2= 3.75◦
+A,X2X3= 0.57◦
+A.
+Given the native plane, we deﬁne the range of possible non-native st ructures via allowing
+the orientation of the planes to vary. This yields three degrees of f reedom per residue; two
+reﬂect the angles needed to deﬁne the direction of the ﬁxed length vector going from one Cα
+to the next while the third refers to a rolling of the plane around this v ector. One can then
+work out the geometrical problem of expressing, in terms of these degrees of freedom, the
+residual terms in the backbone energy arising from the dihedral te rms involving φandψ, the
+bendingofthebondangle ∠C′CαN, andtheside-chainchiralitiesbetweenconsecutiveblocks.
+Our approach fully maintains the overall translation and rotational degrees of freedom of
+the protein molecule. This co-plane parameterization greatly reduc es our computation eﬀort
+as compared to all atom backbones, yet maintains the roll degree o f freedom not present in
+the simpliﬁed C αmodel. As will be shown later, this degree of freedom is important for the
+study ofβ-sheet cooperativity.
+D. The structural factor
+Now we use the co-plane approach to model the H-bond angular dep endence. From
+ﬁg.1(e), we note that having a H-bond between blocks i,jrequires ﬁxing two rotational and
+two translational degrees of freedom. More precisely, we need− −−− →
+X(i)
+1X(i)
+2antiparallel to− −−− →
+X(j)
+1X(j)
+2,
+and− −−− →
+X(i)
+2X(i)
+3parallel to− −−− →
+X(j)
+2X(j)
+3, whereas for translational alignment, the two sets of points
+{X(i)
+1,X(j)
+2,X(j)
+3}and{X(j)
+1,X(i)
+3,X(i)
+2}must be collinear. This leads us to deﬁne a structural
+factor that monitors the angular nativeness in the H-bond
+x(i,j)
+Hb= =1
+16/bracketleftbigg
+1−/hatwidestX(i)
+12·/hatwidestX(j)
+12/bracketrightbigg/bracketleftbigg
+1+/hatwidestX(i)
+23·/hatwidestX(j)
+23/bracketrightbigg
+×/bracketleftBig
+1+cos∠X(j)
+2X(i)
+1X(j)
+3/bracketrightBig/bracketleftBig
+1+cos∠X(i)
+2X(j)
+1X(i)
+3/bracketrightBig
+(2)
+where/hatwidestX(k)
+abis the unit vector connecting X(k)
+a,X(k)
+b. Note that x(i,j)
+Hbhas maximum of 1 only
+when all the alignment criteria are satisﬁed.
+7
+We now wish to incorporate this structural factor into the Hamilton ian in such a manner
+as to ensure that at small xHb, the two interacting blocks are unlikely to form H-bond. A
+simple phenomenological way to proceed is to introduce a potential p roﬁle which has two
+parameters dynamically modulated by xHbwith a ﬁxed solvation energy Esol
+UHb(r,xHb) =A(xHb)
+rk/bracketleftBigg
+1
+4r3k−/parenleftbigg1
+rx
+Hbk+1
+(r∗
+Hb)k+1
+(rsol
+Hb)k/parenrightbigg1
+3r2k
++/bracketleftbigg/parenleftbigg1
+rx
+Hbk+1
+(r∗
+Hb)k/parenrightbigg1
+(rsol
+Hb)k+1
+(rx
+Hbr∗
+Hb)k/bracketrightbigg1
+2rk−1
+(rx
+Hbr∗
+Hbrsol
+Hb)k/bracketrightBigg
+(3)
+Here the ﬁrst dynamical parameter A(xHb) is determined by ﬁxing U Hb(rsol
+Hb,xHb) =Esoland
+for another parameter, we have used a linear relation rx
+Hb=xHbrc
+Hb+(1−xHb)r∗
+Hb. Examples
+of this modulated double-well proﬁle areshown in ﬁg.2(a). Note that even incorporated with
+this structural factor, the H-bond potential still remains pairwis e between two interacting
+blocks.
+Aside from the NH ···OC hydrogen bond, we include in our model the bonding between
+Cα-H···O=C27. This interaction has a strong chirality22and an angular dependence that
+involves at least two contiguous blocks. From ﬁg.1(d), we note that the native conﬁguration
+for interacting, consecutive blocks i,i+ 1 andj,j+ 1 (herei(j) + 1 is the block next to
+i(j) along the same strand) requires/hatwidestX(i)
+23(/hatwidestX(j)
+23) antiparallel to/hatwiderX(i+1)
+23(/hatwiderX(j+1)
+23). Therefore, in
+analogy to the aforementioned H-bond ,we propose a structural f actor for this additional
+interaction
+x(i,j)
+chiral=1
+4xHb(i,j)xHb(i+1,j+1)/bracketleftbigg
+1−/hatwidestX(i)
+23·/hatwiderX(i+1)
+23/bracketrightbigg/bracketleftbigg
+1−/hatwidestX(j)
+23·/hatwiderX(j+1)
+23/bracketrightbigg
+(4)
+with an interaction potential U CαH−OC(r,xchiral) taken to be similar to U Hb(r,xHb). We use
+a Cα-H···O=C interaction strength half that of a single H-bond27.
+E. The role of the force ﬁeld
+To characterize the roles of structural factors and solvation eﬀ ects inβ-sheet formation,
+we have studied four diﬀerent forms of the H-bond potential. Thes e are:
+•(A) LJfix:Ufix
+LJ(r) =|EHb|(rc
+Hb)6
+r6/bracketleftBig
+(rc
+Hb)6
+r6−2/bracketrightBig
+, a L-J potential without angular depen-
+dence.
+8
+•(B) Solfix:Ufix
+Sol(r)⇒eqn.(1), a double-well solvation potential without angular
+dependence.
+•(C) LJang:Uang
+LJ(r) =ALJ(xHb)[rLJ(xHb)]6
+r6/bracketleftBig
+[rLJ(xHb)]6
+r6−2/bracketrightBig
+, a 2-dynamical-parameter L-
+J potential with our proposed angular dependence. This proﬁle is de signed to help
+distinguish the eﬀects of solvation and structural factors. Thus , except for the ab-
+sence of a desolvation barrier, this potential is quite similar to the so lvation one,
+eqn.(3). Explicitly, we let a non-native alignment factor xHb<1 give rise to a
+linear shift |Uang
+LJ(rLJ(xHb))|=ALJ(xHb) =xHb|EHb|+ (1−xHb)|Esol|for the ﬁrst
+parameter. Also, to achieve a repulsive eﬀect similar to that in eqn.(3 ), we set
+Uang
+LJ(rx
+Hb) = UHb(rx
+Hb,xHb), i.e.,rLJ(xHb) =rx
+Hb(1+/radicalbig
+1+UHb(rx
+Hb,xHb)/ALJ(xHb))1/6
+for the second parameter. Fig.2(b) shows the modulation of this fo rce ﬁeld due to
+varying of structural factor.
+•(D) Solang:Uang
+Solv(r)⇒eqn.(3), the de/solvation potential with the proposed angular
+dependence, which constitutes our full model.
+F. The replica-exchange and Multi-canonical Technique
+Throughout the entire paper, the simulation procedure employed a modiﬁed Verlet-
+Langevin algorithm. Speciﬁcally, for a particular set of coordinate /vector x(t) with velocity /vector v(t)
+and force/vectorf(t), the update at time t, ∆/vector x(t)≡/vector x(t+∆t)−/vector x(t) is obtained by
+/vector x(t±∆t) =/vector x(t)±/vector v∆t+∆t2
+2m/vectorf+O(∆t3)
+/vector x(t+∆t)−/vector x(t−∆t) = 2/vector v(t)∆t+O(∆t3)
+/vector x(t+∆t)+/vector x(t−∆t) = 2/vector x(t)+∆t2
+m/vectorf(t)+O(∆t4)
+= 2/vector x(t)+∆t2
+m/bracketleftBig
+−ζ/vector v(t)−/vector∇xE+η(t)/bracketrightBig
++O(∆t4)
+⇒∆/vector x(t) =/bracketleftBigg
+1−ζ∆t
+2m
+1+ζ∆t
+2m/bracketrightBigg
+∆/vector x(t−∆t)+∆t2/bracketleftBig
+−/vector∇xE+η(t)/bracketrightBig
+m+ζ∆t/2+O(∆t4) (5)
+withm,ζ,E≡H({/vectorx}),ηasmass, viscosity, energy(Hamiltonian), anduncorrelatedtherm al
+noise, respectively, where {/vector x}represents the set of coordinates for entire system. Since the
+coordinates used in our simulations represent C αco-planes, the mass mand the radius for
+9
+viscosityζare approximated from the mass of a single glutamine and the C αbond length,
+respectively.
+The replica-exchange method20and multi-canonical rescaling technique21are used to
+obtain the density of states n(E) and hence thermodynamic properties of any given system.
+First, several simulations are performed at diﬀerent temperatur es. To enhance the sampling,
+conﬁgurations obtained at diﬀerent temperatures T,T′were switched in between based on
+the Metropolis criterion20that obeys detail balance,
+P/parenleftBig/bracketleftBig
+{/vector x}T,{/vectorx′}T′/bracketrightBig
+→/bracketleftBig
+{/vectorx′}T,{/vector x}T′/bracketrightBig/parenrightBig
+=
+
+1 if ∆ ≤0,
+e−∆if ∆>0.(6)
+with∆ = [1 /T−1/T′][E({/vectorx′})−E({/vector x})](seeRef. 20andreferencesthereinformoredetails).
+Second, an initial guess of n(E) is obtained by using a WHAM (weighted histogram analysis
+method)-like procedure14,20,
+Pβ(E) =n(E)e−βE
+/summationtext
+En(E)e−βE
+⇒n(E)∝/bracketleftBigg/summationdisplay
+βe−βE
+Pβ(E)/bracketrightBigg−1
+(7)
+whereβ= 1/kBT(kBis Boltzmann factor) and Pβ(E) is the probability of energy distribu-
+tion accumulated from simulations at temperature T= 1/kBβ.
+Then, we performed multi-canonical rescaling simulations to reﬁne n(E), in which we
+used the same Hamiltonian but the forces in equation of motion (5) we re rescaled as
+/vector∇E→∂E′(E,T)
+∂E/vector∇EwithE′(E,T) as a trial function. This rescaling will yield a proba-
+bility distribution Pβ(E)∝n(E)e−βE′(E,T); thus, if we choose E′(E,T)∼kBTlnn(E),
+Pβ(E) will become relatively ﬂat and hence the sampling become more accur ate (see21and
+reference therein for detailed discussion). Finally, the reﬁned n(E) is obtained iteratively,
+n(E)i∝/bracketleftBigg/summationdisplay
+βe−βE′(E,1/β)i
+Pβ(E)i/bracketrightBigg−1
+=/bracketleftBigg/summationdisplay
+βe−lnn(E)(i−1)
+Pβ(E)i/bracketrightBigg−1
+=n(E)(i−1)/summationtext
+β[Pβ(E)i]−1(8)
+whereiindexes the iterations.
+G. The local melting approach
+Aside from examining the global cooperativity, we have also explored the thermody-
+namics of local binding events in the model system. The idea is that in t he absence of
+10
+hydrophobic clustering, the system cooperativity (if any) must ar ise from a scaling up of
+small scale bound structures. In other words, folding of a speciﬁc part of the overall struc-
+ture will be aided by any contiguous folded regions28; this can be investigated by exploring
+the conditional probabilities of residues of being folded (i.e., in their na tive position and
+orientation) or unfolded depending on whether their neighbors are folded or unfolded (i.e.,
+the contact correlations). Speciﬁcally, we investigated two cases ; the ensemble that has all
+blocks retained in their folded conﬁgurations aside from either a) a f ew blocks at the end of
+oneβ-strand or b) a few blocks buried inside the sheet.
+To study these local sub-structures, we have assumed here tha t their thermodynamics
+will not be aﬀected signiﬁcantly by the dynamics of very distant block s. This allows us to
+compute a “conditional” partition function in which, except for thos e speciﬁed blocks, the
+rest can be treated as frozen in their native positions. Doing this, t he number of degrees
+of freedom is signiﬁcantly reduced and the conditional partition fun ction can be obtained
+by explicit numerical integration. For instance, in the single-block β-tail case, the partition
+function reads/integraltext
+dX2dX3δ(X1X2−X1X2N)δ(X2X3−X2X3N)e−H/kBTwhereX1X2N= 3.75◦
+A,
+X2X3N= 0.57◦
+Aare native constants, and X 2, X3are the virtual points of the movable
+terminal block (note that its X 1is ﬁxed). Then, because of the δfunctions, the partition
+function is reduced to an integral over three angles deﬁning the or ientation of the terminal
+plane.
+III. RESULTS
+A. Global Cooperativity
+The ﬁrst system we studied is a 3-strand β-sheet with a total of 6 H-bonds equally
+distributed between adjacent strands. Since there is no sequenc e speciﬁcity, we artiﬁcially
+tethered the H-bonds at the 2 expected turns to maintain the β-sheet propensity. In Fig. 3,
+we show the computed speciﬁc heat for the four diﬀerent model fo rces. Basically, we found
+that there is no sharp transition for the three models LJfix, LJang, Solfixif non-speciﬁc
+H-bonds are allowed to develop on the peptide backbone; this is beca use their dominant low-
+energy states are ensembles with non-speciﬁc, randomly collapsed structures rather than a
+uniquely deﬁned β-sheet (similar to the results observed by Guo & Brooks14). The complete
+11
+model Solang, however, can deﬁne a unique native state and give rise to a sharp t ransition,
+as seen in Fig. 3(a).
+Next, we added a G¯ o-like restriction to the models LJfix, LJang, Solfix, i.e., allowing
+H-bond formation only between those residues that have such an in teraction in the native
+β-sheet structure10. Of course, the entire justiﬁcation of this approach is absent in sy stems
+with homogeneous interaction as the one of primary concern here, but it is still worthwhile
+comparing the results of our proposed complete model with these a lternatives. Note how-
+ever that our G¯ o-like restriction does not include any additional re strictions on backbone
+conﬁgurations to favor a particular structure (i.e., native state) ; this is very diﬀerent from
+the energetic restrictions commonly used in the oﬀ-lattice protein f olding literature11. In
+Fig. 3(b), we show that even with G¯ o-like restrictions to reduce th e non-speciﬁc collapsed
+ensemble, the LJfixmodel can not give rise to a sharp transition compared with models
+incorporating either the de/solvation eﬀect or angular dependenc y. This is consistent with
+results from other group13and also the aforementioned reasoning that with only two contact
+couplings foreach interacting unit, a simple forceﬁeld forH-bondfo rmationcannot produce
+systemic cooperativity.
+The diﬀerence between the various force models becomes much clea rer in larger systems.
+Fig. 3(c) shows the speciﬁc heat diagrams for a 4-strand β-sheet with a total of 15 H-bonds
+equally distributed between adjacent strands. Now, without a sign iﬁcant increase in the
+transition temperature, the peak magnitude of the speciﬁc heat f or model Solangis 100 fold
+larger than that of the previous small system, whereas there is st ill no signiﬁcant transition
+for the L-J G¯ o-like potential. This diﬀerence is further realized by e xamining the density of
+states. In Fig. 4(a), we note that there is only one dominant ensem ble for model LJfixin
+the low-energy region; this ensemble mixes the native and partially fo lded states. In model
+LJang, on the other hand, the unfolded ensemble ( E∼0) is slightly separated from the
+folded one; however, the folded phase has a larger entropy than t hat of the unfolded state,
+and thus there is no transition. In the solvation model, as shown in Fig . 4(b), there is a
+clear separation between the folded and unfolded ensemble, with th e unfolded states having
+the largest entropy, as is crucial for having a sharp transition.
+Apparently, boththe angular dependence andsolvation eﬀect sligh tly enhance the system
+cooperativity, but only a combination of both can yield the desired re sults in the system of
+primary concern here. This point has not been adequately address ed in previous works13,14.
+12
+Also, we notice a high energy population appearing in model LJang, Solfix, and Solang. Ana-
+lyzing the contact proﬁle in this additional phase, we found that its d ominant conﬁgurations
+are those with signiﬁcant intervening of folding and unfolding in the en tire structure, i.e.,
+“droplet”-like structures28,29. As will be elucidated in next section, this intervening can lead
+to an interfacial energetic penalty resulting from backbone twistin g (enhanced by the an-
+gular dependence) and (re)-desolvation barrier crossing at the in terface between contiguous
+folded and unfolded regions; thus the partially unfolded ensemble is s hifted from low energy
+(as in model LJfix) to the high energy region. Consequently, the completely folded an d
+unfolded ensemble are well separated, leading to a sharp transition .
+Of course, whether these partially folded droplet conﬁgurations c an be shifted to high
+energy depends not only on the choice of the H-bond potential (to create the interfacial
+penalty), but also the topology of the β-sheet. When the H-bond energy inside the folded
+droplet can compensate the interfacial penalty, the structure w ill no longer stay at high-
+energy phase. To show this explicitly, we studied a system that is less symmetric on the
+β-sheet plane; we chose a 3-strand β-sheet with long strands, looking at the eﬀect of in-
+creasing the strand length. We started with a 3-strand β-sheet with a total of 30 H-bonds
+equally distributed between adjacent strands. Fig. 5(a,b) shows it sn(E) and speciﬁc heat,
+which are very similar to those of the 4-strand, 15 H-bond system, in that they both have
+well-separated unfolded/native states, and partially unfolded high -energy populations. An-
+alyzing the states in the low and high energy partially folded ensembles , we found that their
+dominant conﬁgurations are droplets with one (in the low energy pha se) or multiple (in the
+high energy phase) interfaces between contiguous un/folded reg ions, i.e., a partially folded
+β-sheet (or hairpin) buried in unfolded coils (illustrated by examples in F ig. 5(a)).
+Whenthesystem size increases toatotalof40H-bonds, however , (see Fig.6(a,b)), weﬁnd
+an increased weight for the partially folded ensemble in the low energy phase ranging from
+0>E >E NwhereENis the native state energy. Unlike the smaller, or symmetric system,
+here the interfacial energy penalty between contiguous un/folde d regions, can not compete
+with the large H-bond energy at the bulky folded portion; this allows t he partially folded
+ensemble tohavealowenergy. Moreover, inasystem withsuch anelo ngatedasymmetry, the
+partiallyfoldedportioncanfreelymove alongthe β-sheet, orfreely slidealongthechain with
+many “mis-pairing” H-bonds (i.e., inconsistent with native pairing). Bo th eﬀects can then
+increase the entropy of the partially folded (or even misfolded) ens emble and hence smears
+13
+out the separation between completely un/folded ensemble and par tially folded ensemble,
+Fig. 6(a). The smearing becomes more signiﬁcant in a larger 3-stran dβ-sheet with a
+total of 50 H-bonds, Fig. 6(c). As a consequence, the system be comes less cooperative
+and an additional continuous transition occurs between these par tially un/folded ensemble,
+ﬁg.6(b,c). Developing a phenomenological model based on these res ults to study how the
+system cooperativity depends on the β-sheet topology, therefore, is one of our future goals.
+B. Local Bonding Eﬀects
+In this section, we examine how the model system acquires “global” c ooperativity (in
+the absence of hydrophobic clustering) by exploring the thermody namic eﬀects of local
+un/bonding. Here, since we are dealing with only a small number of deg rees of freedom, we
+couldcalculateallthermodynamicpropertiesbyexplicitintegrationo fthepartitionfunction.
+As an illustration, we ﬁrst present the results of the single-block β-tail case, Fig. 7, where
+we plotted the probability distribution function (pdf) P(r) of the interacting distance rin
+the native NH ···OC pair between the terminal block (the one allowed to ﬂuctuate) an d its
+native partner (taken to be frozen in space).
+In this case, the maximum possible NH ···OC distance as determined by the range of
+integration, is smaller than that necessary to ﬁt a water molecule in b etween and thus there
+cannot be any true secondary solvated minimum. We do see however the fact that having
+the solvation barrier and (to a lesser extent) the angular factors make a big diﬀerence in
+the structure of P(r). Speciﬁcally, there is no hint of well-separated 2-state behavior f or
+model LJfix. However, a small barrier appears if the potential has an angular d ependence
+(modelLJang), andbecomessigniﬁcant ifsolvationeﬀectsareincluded(modelSo lfix, Solang).
+Here, we note that because of the bond angle ∠C′CαN potential, P(r) is concentrated on
+the “ring” that satisﬁes ∠C′CαN =∠C′CαNnative. On this ring, only a few “points” will
+give minimal dihedral angle ( ψ,φ) energies. These points correspond to the sharp peaks in
+ﬁg.7 that have free energy diﬀerence ≈ǫψ+ǫφ≈1kcal/mol from their surrounding; if we
+reduce the bond angle stiﬀness kθ, these sharp peaks become broadened (data not shown).
+Apparently, this eﬀect comes from the backbone energy and is inde pendent of the choice of
+H-bond potential.
+Next, we studied the“buried” cases with nblocks allowed to ﬂuctuate. In this situation,
+14
+the conﬁgurations of ﬂuctuating blocks are clearly constrained to a great extent by their
+ﬁxed neighbors. Thus, we found that for n= 1, there is neither 2-state behavior nor any
+qualitative diﬀerence among the results of diﬀerent force ﬁelds (da ta not shown); all signiﬁ-
+cant probability is conﬁned in the H-bond well, indicating a strong topo logical conﬁnement
+toforcethefoldingofasingleunfoldedblockburiedamidst foldedone s. Whenn= 2, westill
+do not have enough freedom of backbone motion to allow for a solvat ed second minimum for
+the main H-bond; the maximum separation is slightly above 4.1◦
+A, Fig. 8(a). Nonetheless,
+we see clear diﬀerences among diﬀerent models. For the simplest LJfixmodel, there is no
+conﬁnement to a narrow contact well. Adding the angular factor ba ck in, we create a barrier
+as the NH ···OC distance is increased. This barrier is due to the modulation of the L J po-
+tential by the angular factor, making it repulsive if the orientation is not properly matched.
+Alternatively, adding the solvation eﬀect as in model Solfixalso introduces a barrier; this is
+because rolling of the co-plane allows for a wide separation (and henc e going up and down
+the solvation barrier) in the C αH···OC interactions. Finally, putting both eﬀects in leads
+to a very large degree of conﬁnement in the H-bond well, suggesting that local coupling is
+enhanced by both structural and solvation eﬀects such that an u nfolded block is strongly
+biased to fold if contiguous to folded ones.
+To further characterize the diﬀerence between the varying choic es of force models, we
+explored the un/folding correlation in the 2-block buried case. Spec iﬁcally, we computed
+the conditional probability function P(r) for one block with respect to the un/folding state
+of another (deﬁned as folded/unfolded if its native H-bond separa tionr2≷r∗
+Hb),P(r1|r2>
+r∗
+Hb),P(r1|r2<r∗
+Hb), wherer1,r2are their native H-bond separations, respectively. In other
+words, if the system has a good local coupling, un/folding of one bloc k should force the
+un/folding of another, implying a well-separated P(r1|r2≷r∗
+Hb). In Fig. 8(b), however,
+we found that P(r1|r2≷r∗
+Hb) are well separated only in model Solang. Here, the separated
+probability distributions have been individually normalized; the actual probability for being
+at the larger ris extremely small as is evident from Fig. 8(a). Also, note that it is not r
+in the ﬁgure which is important - this H-bond separation is quite small. I nstead, the two
+peakscorrespond toeither having thefullH-bondenergy(bysat isfyingboththedistance and
+angular conditions) or not having that energy; the distribution at la rgerrdoes not have the
+correct angular conﬁguration. To clarify this point, we plotted the conditional probability
+function on the variation of H-bond energy Einstead of distance r, i.e.,P(E1(r1)|r2>
+15
+r∗
+Hb),P(E1(r1)|r2<r∗
+Hb), Fig. 8(b). Now, we see clearly that only the full model Solanghas
+a signiﬁcant separation eﬀect.
+C. Collective Re-solvation Kinetics
+The conclusion from the local coupling studies is that the full model b eing proposed here
+leads to strong correlations between the behaviors of neighboring blocks. For the system as
+a whole, this should mean that complicated conﬁgurations with repea ted interfaces between
+unfolded and folded residues would cause additional energetic pena lties and thus can be
+strongly suppressed in favor of simpler conﬁgurations with large pa tches of residues being
+either all in contact or all not in contact. Of course, whether the s ystem can therefore
+acquire an global cooperativity would depend on its topology as well, a s revealed in earlier
+section.
+Now, the interesting part of this conclusion, as will be illustrated late r, is that during
+unfolding (folding), the solvation (desolvation) process must occu r in a collective way. To
+see this explicitly, we show the pdf and re-solvation kinetics of a 10-b lock buried case in Fig.
+9(a,b). Because of the large barrier needed to melt the blocks, her e we set the simulation
+temperature far beyond the physiological range.
+From Fig. 9(a) (using Solang), we note that the pdf of native H-bond distances are well
+separated by a free energy (- kBTlnP(r)) barrier, resulting in an ordered (H-bond formed)
+and disordered (H-bond not formed) phases. Interestingly, eve n governed by the same force
+law, the un/folding barriers for the various molten blocks are not qu ite the same. For blocks
+close to the conﬁned ones (those frozen in the space), the barrie r progressively increases, and
+the disordered phase becomes less signiﬁcant. This reduction of dis ordered phase manifests
+a stronger folding bias for any unfolded residues near those folded ones. Thus it is not
+eﬀective to unbind the blocks one by one, since the unbound block will rebind long before
+its neighbor has unbound. This can be seen in the high-temperature unfolding simulation,
+Fig. 9(b), in which we note that the resolvation (i.e., inﬁltration of wat er molecules) process
+involved many residues simultaneously. In Fig. 9(c), we show that th is collective water
+inﬁltration indeed occurs in unfolding of the entire β-sheet.
+16
+IV. DISCUSSION
+Wehave explored themechanism of β-sheet cooperativitywithout side-chain interactions,
+with diﬀerent choices of the H-bond potential. Our results suggest that in the absence of
+hydrophobic clustering, the β-sheet cooperativity arises from a coupling of structural factor
+(contact angular dependence), protein de/solvation eﬀects, an d the system topology. Since
+this phenomenon is sequence-independent, the results can be con sidered to apply in general
+toβ-sheet structures.
+Given the coupling number for each H-bond interacting unit, our res ults diﬀer from most
+2-dimensional pairwise-interacting system, in that there the minima l number of coupling
+required for global cooperativity is larger than the one present he re. Thus, the coupling
+between backbone energy (the angular dependence) and pairwise H-bond interaction (in-
+corporated with solvation dynamics) must yield a strong many-body eﬀect, which has been
+argued to be crucial to produce systemic cooperativity in homogen eous system such as are
+the primary concern here28. Apparently, our model system has a default many-body eﬀect,
+the dihedral conﬁnement via the corresponding terms in the backb one energy.
+As illustrated in our study, when the system is close to the fully folded state, the dihedral
+conﬁnement is strong enough to complete the folding (the n= 1-block case). However, it
+is too weak to conﬁne the backbone collectively if there is a larger unf olded portion in the
+β-sheet, as illustrated in the pure Lennard-Jones potential case. Instead, it is the angular
+dependence which incorporates the contact strength into the ba ckbone Hamiltonian and
+thus ampliﬁes the conﬁnement. This leads to a competition with solvat ion dynamics; in
+other words, while the solvent tries to pull the interacting blocks ap art, the conﬁning force
+ampliﬁed by folded neighbors can hold them back. As this behavior occ urs mainly between
+contiguous un/folded regions, it creates an “interfacial” energet ic penalty and the “droplet”
+picture proposed in previous works28,29(now allowing a measurement the droplet surface
+tension). Consequently, in a partially folded structure, any small r egions of unfolded blocks
+contiguous to folded ones are thermodynamically unfavorable and w ill be forced to fold
+or will unfold the folded ones28. Thus, while there has been a concentration of eﬀort on
+understanding the role the sequence heterogeneity for protein f olding and design, we would
+like to point out that this generic cooperativity buried in the β-sheet architecture can also
+serve as a building block to construct macromolecular structure. However, this same build ing
+17
+block can also provides the mechanism for pathological aggregation .
+What then would be the physiological role and evolutionary principle of having sequence
+heterogeneity, in the presence of possible β-architectures? Certainly, with the fast time scale
+(of order of 0 .1 ns, estimated from our Langevin simulations) for a single C αblock folding,
+any pre-folded β-architecture with ordered, exposed amide and carbonyl oxygen could lead
+to a seeding process and non-speciﬁcally precipitate surrounding u nfolded peptides; this
+has been observed in the elongation process of amyloidogenesis3. The physiological role of
+heterogeneity, therefore, would be to either distort the orienta tion of exposed amide and
+carbonyl groups into a non-aggregation competent form, or pro vide “hot” nuclei to bias
+the system into the native fold. Indeed, this idea has been veriﬁed in a recent tryptophan
+zipper model30. Exploring the competition between native folding due to speciﬁc seq uence
+heterogeneity and pathological aggregation due to generic coope rativity is perhaps the most
+important direction for future study.
+As a side point, to elucidate the eﬀect of local un/binding, we have int roduced a local
+melting method. This method can be further used to explore local nu cleation or de-solvation
+events in any system lacking long-ranged spatial couplings. Also, ins tead of simulating
+all backbone atoms or a simpliﬁed C αmodel, a functional block (co-plane) approach was
+proposed. This approach greatly reduces our computational eﬀo rt; however, it still keeps
+the right angular degrees of freedom (missing in C αmodel) and gives rise to a structural
+factor (i.e., backbone alignment) that helps account for β-sheet cooperativity.
+Also, we have introduced an approach to de/solvation which can be u sed directly for
+Langevin simulations. It has been noticed that the (de)-solvation e ﬀects are important in
+protein folding and functioning, but no standard model has been pr oposed15,16,17,18,19,23,24,25.
+Also, we note that solvent dynamics can be regulated by system hyd rostatic pressure15.
+Interestingly, many adhesion and hemostasis-related proteins ar e very sensitive to shear
+stress and pressure change; perhaps a local de/re-solvation ev ent might trigger a cooperative
+conformational change which ultimately has large scale consequenc es19. Thus, microscopic
+cooperativity can be ampliﬁed into a macroscopic response; this also needs to be explored
+in future work.
+18
+V. ACKNOWLEDGEMENT
+CG wishes to acknowledge Peter G. Wolynes, Jose N. Onuchic, Angel E. Garcia, Tobin
+R. Sosnick, Joan-Emma Shea, and Ken A. Dill for comments the solva tion model, and
+Christopher M. Dobson for comments on sequence-independent m echanism. He also thanks
+to A.E. Garcia for a careful reading on the manuscript.
+1M. Sunde, L.C. Serpell, M. Bartlam, P.E. Fraser, M.B. Pepys, and C.C. Blake, J. Mol. Biol.
+273,729 (1997).
+2K. Liu, H.S. Cho, H.A. Lashuel, J.W. Kelly, and D.E. Wemmer, N at. Struc. Biol. 7,754 (2000).
+3J.W. Kelly, Nat. Struc. Biol. 7,824 (2000).
+4A. Fersht, in Structure and mechanism in protein science. (W.H. Freeman & Company. New
+York, 1999) Chapter 17.
+5M.F. Perutz and A.H. Windle, Nature 412,143 (2001). M.F. Perutz, T. Johnson, M. Suzuki,
+and J.T. Finch, Proc. Natl. Acad. Sci. USA. 91,5355 (1994).
+6S. Koide, X. Huang, K. Link, A. Koide, Z. Bu, and D.M. Engelman , Nature 403,456 (2000).
+7M. F¨ andrich, M.A. Fletcher, and C.M. Dobson, Nature 410,169 (2001).
+8T. Kortemme, M. Ramirez-Alvarado, and L. Serrano, Science 281,253 (1998).
+9N.V. Dokholyan, S.V. Buldyrev, H.E. Stanley, and E.I. Shakh novich, J. Mol. Biol. 296,1183
+(2000).
+10Y. Ueda, H. Taketomi, and N. G¯ o, Biopolymers 17, 1531 (1978).
+11C. Clementi, H. Nymeyer, and J.N. Onuchic. J. Mol. Biol. 298,937 (2000).
+12R.K. Pathria, Statistical Mechanics (Butterworth Heinemann, Oxford, 1996), Chapter. 12.
+13G.F. Berriz, A.M. Gutin, and E.I. Shkhnovich, J. Chem. Phys. 106,9276 (1997).
+14Z. Guo and C.L. Brooks, Biopolymers, 42,745 (1997).
+15G. Hummer, S. Garde, A.E. Garcia, M.E. Paulaitis, and L.R. Pr att, Proc. Natl. Acad. Sci.
+USA.95,1552 (1998).
+16A.E. Garcia and G. Hummer, Protein: Structure, Function, & G enetics.38,261 (2000).
+17J.D. Dunitz, Science 264,670 (1997).
+18H.S. Ashbaugh, E.W. Kaler, and M.E. Paulaitis, J. Am. Chem. S oc.121,9243 (1999).
+19
+19R. Celikel, Z.M. Ruggeri, and K.I. Varughese, K.I. Nat. Stru c. Biol.7,881 (2000); P. Marchese,
+E. Saldivar, J. Ware, and Z.M. Ruggeri, Z.M. Proc. Natl. Acad . Sci. USA. 96,7837 (1999).
+20Y. Sugita, A. Kitao, and Y. Okamoto, J. Chem. Phys. 113,6042 (2000).
+21U.H.E. Hansmann, Y. Okamoto, and F. Eisenmenger, Chem. Phys . Lett.259,321 (1996).
+22S. Takada, Z. Luthey-Schulten, and P.G. Wolynes, J. Chem. Ph ys.110,11616 (1999).
+23N. Helson, J.N. Onuchic, and A.E. Garcia, Proc. Natl. Acad. S ci. USA. 96,14848 (1999).
+24B. Roux, and T. Simonson, Biophys. Chem. 78, 1 (1999).
+25Head-Gordon, T., Stillinger, F.H. J. Chem. Phys. 98,3313 (1993).
+26T.E. Creighton, in Proteins: structure and molecular properties (W.H. Freeman and Company.
+New York. 1996) Chapter 4 & 5.
+27R. Vargas, J. Garza, D.A. Dixon, B.P. Hay, J. Am. Chem. Soc. 122,4750 (2000).
+28C. Guo, H. Levine, and D.A. Kessler, Phys. Rev. Lett. 84,3490 (2000); Proc. Natl. Acad. Sci.
+USA.97,10775 (2000).
+29P.G. Wolynes, Proc. Natl. Acad. Sci. USA 94,6170 (1997).
+30A.G. Cochran, N.J. Skelton, and M.A. Starovasnik, Proc. Nat l. Acad. Sci. USA 98,5578 (2001).
+20
+VI. FIGURE CAPTIONS
+Fig.1 (a) The co-planar structure with (b)the three virtual points {X1,X2,X3}and
+dihedral angles ω,φ,ψlabeled. The virtual bond lengths and angles are determined so as
+to give(c)a regular, symmetric β-sheet structure with side-chains and C αH bonds alter-
+nately pointing up and down periodically. (d)The side-chain and C α-H···OC interactions
+are indicated by light-gray, gray arrows, respectively, with the sh adowed area indicating the
+atoms involved determining the angular dependence of a single H-bon d.(e)If two interact-
+ing blocksi,jare to have a native H-bond (the gray arrow), proper alignment of two pairs
+of planar vectors and collinearity of the two sets of points (X(i)
+1,X(j)
+2,X(j)
+3; X(j)
+1,X(i)
+3,X(i)
+2) are
+required.
+Fig.2The structural-factor-dependent H-bond potential proﬁles in u nits of kcal/mol
+with interaction distance r(NH···OC) measured in◦
+A.(a)The (de)-solvation force ﬁeld
+UHb(r,xHb). The barrier height between r=r∗
+Hband the solvent-separated minimum ( r=
+rsol
+Hb) represents the free energy cost in desolvation cavity formation . Here we have graphed
+UHb(r,xHb) fromxHb= 0 to 1. The dashed curve represents the modulation of the conta ct
+minimum (rx
+Hb,UHb(rx
+Hb,xHb)).(b)The Lennard-Jones force ﬁeld Uang
+LJ(r), where the proﬁle
+is modulated by changing the contact minimum (long-dashed curve) |Uang
+LJ(rLJ(xHb))|=
+xHb|EHb|+(1−xHb)|Esol|from the H-bond contact energy EHbto the single H 2O hydration
+Esol. The major diﬀerence between (a)and(b)is the desolvation barrier.
+Fig.3 (a) The speciﬁc heat for a 3-strand with 6 H-bonds modeled by diﬀerent force
+ﬁelds (without G¯ o-like restrictions). Here, because of the absen ce of G¯ o-like pairing, the
+three force ﬁeld LJfix, LJang, and Solfixare unable to deﬁne a unique structure and hence
+there is no obvious peak (i.e., transition) in their CV diagrams. Wherea s force ﬁeld Solang
+can deﬁne unique β-sheet and hence leads to a sharper transition. (b)Same as (a)except
+for the G¯ o-like restrictions to model LJfix, LJang, and Solfixhere. Note that the transitions
+for these three force ﬁelds become more apparent but still not co mpatible with Solang.(c)
+The speciﬁc heat for a 4-strand with 15 H-bonds modeled by diﬀeren t force ﬁelds. Now the
+transition for Solangbecome much stronger and there is almost no transition for L-J typ e
+force ﬁelds (inset).
+Fig.4The density of state for a 4-strand β-sheet with 15 H-bonds. (a):The density
+of state for L-J type potential (with G¯ o-like restrictions). Note the distribution of entropy
+21
+and the high-energy population appearing in model LJang; this population contains partially
+folded state. (b):The density of state for Sol type potential. Note that a good sepa ration
+between the unfolded and folded ensemble only appeared in model So lang.
+Fig.5The density of state (a):n(E), speciﬁc heat (b)Cv=∂/angbracketleftE/angbracketright
+∂T, and energy ∝an}b∇acketle{tE∝an}b∇acket∇i}ht(inset
+in(b)) for system asymmetrically elongated at one direction on its β-sheet plane (using
+model Solang). Here the system is a 3-strand β-sheet with total 30 H-bonds equally dis-
+tributed between adjacent strands. Note the suppression of low -energy ensemble (between
+the completely unfolded and native states) and the appearance of high-energy population.
+The dominant conﬁgurations in these ensemble (insets) are “drople ts” with interfaces be-
+tweencontiguousun/foldedregions. Notethatthelow-energyco nﬁgurationhaslessinterface
+compared with high-energy one. The negative energy of the unfold ed state comes from the
+two tethered β-turns.
+Fig.6 (a): Then(E) for a 3-strand β-sheet with total 40 H-bonds. Note the growth of
+partially folded ensemble (inset in (a)is a typical example of their conﬁgurations) at low-
+energy phase and smears out the separation between unfolded an d the native states. This
+can lead to an abrupt transition (with the native state) at low tempe rature phase (pointed
+by double arrows in (b)) and a continuous transition (with other high-energy unfolded
+states) at high temperature phase (pointed by a single arrow in (b)). When the system size
+increases to totally 50 H-bonds (c), the smearing becomes more signiﬁcant (arrow in (c))
+and the system eventually loses its cooperativity.
+Fig.7The numerical results for the probability distribution function (pdf )P(r) of
+NH···OC separation rof the “molten” block respective to its native partner in the β-
+tail single-block case (indicated in the inserted diagram; black: froz en, gray: mobile). Here
+temperature: 25◦C and integration step δθ= 10−4. Also, the curves have been adjusted
+up/downward for a better visual comparison. Note that the barr ier for model Solfixis much
+larger than that of Solang. This is because the desolvation barrier height is ﬁxed in the
+former case, but modulated (by the angular factor) in the latter o ne.
+Fig.8The numerical results for buried two-block cases. (a)The pdfP(r) for the native
+H-bond separation (average of the two symmetric mobile blocks). (b)The normalized
+conditional pdf in ﬁrst molten block, P(r1), with respect to whether the second block is
+unfolded (deﬁned as if r2≥r∗
+Hb) or folded (deﬁned as if r2< r∗
+Hb). Herer1,r2are the
+H-bond separations of the two molten blocks with their native partn er, respectively, and
+22
+/integraltext
+dr1P(r1|r2≷r∗
+Hb) = 1.(c)The normalized conditional pdf in ﬁrst molten block, P(E1),
+plotted on its H-bond energy E1.
+Fig.9 (a): Langevin simulation results of a ten-block buried case. Each curve r epresents
+the corresponding block in the inset diagram, averaged over the sy mmetrical pair. The
+simulation is averaged over 25 series of 1 ms runs (∆ t= 5×10−5ps).(b):Snapshot
+of re-solvation simulation at T = 850◦K where each heavy atom is labeled by diﬀerent
+symbols depending on the corresponding H-bond interacting distan cer: “•” (r<r∗
+Hb), “◦”
+(r∗
+Hb≤r < rsol
+Hb), and “ ” ( r≥rsol
+Hb).(c):Snapshot of unfolding simulation of a 4-strand
+β-sheet with 15 H-bonds at T = 800◦K where we have tethered the H-bond at the turn area
+to maintain the β-turn propensity. The time courses are plotted on the change of t otal H-
+bond (indicated by r≤r∗
+Hb) number Q Hband energy E Hb(kcal/mol), and conﬁgurations at
+diﬀerent snapshots (a,b,c,d,e) areprojected toleft-handside. No te thesuccessive inﬁltration
+of water, and the overshot of E Hbat the abrupt transition point, manifesting a collective
+barrier crossing for the re-solvation process.
+APPENDIX A: MODIFIED DESOLVATION POTENTIAL
+The simpliﬁed double-well potential provides the basic insight on how d e/solvation eﬀect
+involves in protein cooperativity. However, one might wish to modify t his model to include
+more control parameters. For this purpose, we propose an alter native potential
+UHB(r) =
+
+−B(r−r1)2−h1
+(r−r1)2m+h2ifr>rx1,
+Ay(r){[y(r)]2+b}+UHB(rx1) ifr≤rx1
+with
+
+y(r) =z(r)[z(r)−1]
+z(r)+s,
+z(r) =rx1/r−1
+rx1/rx0−1
+andras the distance between NH and CO, ﬁg.1 (a). Here, the interacting distance for
+formation of contact, desolvation barrier, and single-solvent sep aration are r=r0,r=r1,
+r=r2, with free energy amplitude D0,D1,D2, respectively, and the width of the contact
+well is controlled by the span between r=rx0andr=rx1. Normally, r2is separated from
+r0by the size of a single water molecule. The integer m >2, on the other hand, is chosen
+for the long-distance behavior, and the six unknowns B,h1,h2,A,b,scan be determined by
+D0,D1,D2,r0,r2and one continuity requirement (dU HB/dr atr=rx1). Using this model,
+23
+one has a complete control on the potential proﬁle (the well width f or the contact entropy,
+e.g.).
+To incorporate the fully Lennard-Jones behavior into the proﬁle at both short ( r≪r∗
+Hb)
+and long (r≫rsol
+Hb) range region, we also proposed another force ﬁeld
+UHB(r) =A/parenleftBigr0
+r/parenrightBig6/bracketleftbigg/parenleftBigr0
+r/parenrightBig6
+−2/bracketrightbigg
++Br6m
+1+Cr12m
+withmas a positive integer and A,B,C > 0. Here the second term is designed to produce
+the desolvation granularity eﬀect.
+24
+(b)
+CNH
+C
+OC
+X1X2X3
+CNH
+C
+OC(a)
+1
+2
+C
+CN
+H
+HO
+NOC
+CCNH
+O
+CC
+N
+CH
+OC
+CCNH
+O
+CC
+N
+CH
+O
+3(c)R
+RRR
+RC
+N
+HO
+C
+CCNH
+OC
+C
+HNO
+CC
+N
+CH
+O C(i)X1(i)X2
+(i)X3
+X3(j)X2(j)X1(j)(e)(d)C
+OCNH
+CCOCNH
+CCONH
+C
+OCNH
+C
+FIG. 1:
+3 4 5 6 7
+r [NH−−OC distance, angstrom]−3−1135UHb(r) [kcal/mol]
+rHbcrHbsolrHb*
+rHbxSol ang(a)H2O
+NH NH OC OC
+3 4 5 6 7
+r [NH−−OC distance, angstrom]−3−1135UHb(r) [kcal/mol]
+rLJ(xHb)(b)
+rHbxLJ ang
+FIG. 2:
+25
+0 200 400 600 800 1000
+Temperature (oK)024Cv (10−2 kcal/mol oK)1: LJ fix
+2: LJ ang
+3: Sol fix
+4: Sol ang(a)
+1234
+0 200 400 600 800 1000
+Temperature (oK)024Cv (10−2 kcal/mol oK)1: LJ fix−Go
+2: LJ ang−Go
+3: Sol fix−Go
+4: Sol ang(b)
+1234
+0 200 400 600 800 1000
+Temperature (oK)012Cv(kcal/mol oK)1: LJ fix−Go
+2: LJ ang−Go
+3: Sol fix−Go
+4: Sol ang
+0 400 800oK012Cv (10−2 kcal/mol oK)LJ fix−Go
+LJ fix−Go(c)
+4
+3
+1,2
+FIG. 3:
+26
+−25 0 25 50 75 100 0 0
+Energy (kcal/mol)10−610−510−410−3
+n(E)LJ fix−Go
+LJ ang−Gounfoldedβ−
+partially foldedsheet
+(a)
+−25 0 25 50 75 100 0 0
+Energy (kcal/mol)10−710−610−510−410−310−2
+n(E)Sol fix−Go
+Sol angunfolded
+β−partially folded
+sheet(b)
+FIG. 4:
+−100 −50 0 50 100 150 200 250
+Energy (kcal/mol)10−810−4
+n(E)(a)
+β−
+sheetunfolded
+partially
+folded
+dropletpartially
+folded
+droplet
+0 500 1000
+Temperature (oK)02Cv (10 kcal/moloK)
+0 500 1000
+Temperature (oK)−12−7−2<E> (102 kcal/mol)(b)
+FIG. 5:
+27
+−100 −50 0 50
+Energy (kcal/mol)10−1010−6n(E)(a)
+β−
+sheetunfolded
+partially
+fodled
+droplet
+0 1000 2000
+Temperature (oK)01Cv (kcal/moloK)
+0 1000
+Temperature (oK)−2−1<E> (102 kcal/mol)(b)
+−150 −100 −50 0 50
+Energy (kcal/mol)10−1210−810−4
+n(E)
+0 1000
+Temperature (oK)01Cv(kcal/moloK)(c)
+β−
+sheetunfoled
+partially
+folded
+FIG. 6:
+28
+3 4 5
+r [native NH−−OC distance, angstrom, T=25oC]−11357−kBT ln P(r) [kcal/mol]1: LJ fix−Go
+2: Sol fix−Go
+3: LJ ang−Go
+4: Sol ang
+12
+4
+3
+FIG. 7:
+29
+3.1 3.3 3.5 3.7 3.9 4.1
+r [native NH−−OC distance, angstrom, T=25oC]010203040506070−kBT ln P(r) [kcal/mol]1: LJ fix−Go
+2: Sol fix−Go
+3: LJ ang−Go
+4: Sol ang(a)
+1234
+3.35 3.45 3.55
+r1 [native NH−−OC distance of first block, angstrom]020P(r1)012P(r1)020P(r1)010P(r1)P(r1|r2<rHb*)
+P(r1|r2>rHb*) LJ fix−Go
+Sol fix−Go
+LJ ang−Go
+Sol ang(b)
+−3 −2 −1 0
+E1 [H−bond energy, kcal/mol]040040
+P(E1|r2>rHb*)0510
+P(E1|r2<rHb*)0510
+Sol ang
+Sol fix−Go
+LJ ang−Go
+LJ fix−GoP(E1)(c)
+FIG. 8:
+30
+3.2 4.2 5.2 6.2
+NH−−OC distance [angstrom, T=550oC]246810−kBT ln P(r) [kcal/mol](a)
+1
+2
+3
+45
+12345 12345T= 0ps
+T= 10ps
+T= 100ps
+T= 500ps(b)
+FIG. 9:

@@ -1,0 +1,1129 @@
+arXiv:physics/0204088v1  [physics.bio-ph]  30 Apr 2002Onthenonlinear dynamics oftopologicalsolitonsinDNA
+L. V. Yakushevich∗
+Institute of Cell Biophysics, Russian Academy of Sciences, 142290 Pushchino, Russia
+A. V. Savin†
+Institute for Physics and Technology, ul. Prechistenka 13/ 7, 119034 Moscow, Russia
+L. I. Manevitch‡
+N. N. Semenov Institute of Chemical Physics, Russian Academ y of Sciences, ul. Kosygina 4, 117977 Moscow, Russia
+(Dated: April 30, 2002)
+Dynamics of topological solitons describing open states in the DNA double helix are studied in the frame-
+works of themodel which takes intoaccount asymmetry ofthe h elix. Itis shownthat threetypes oftopological
+solitons can occur in the DNA double chain. Interaction betw een the solitons, their interactions with the chain
+inhomogeneities and stabilityof the solitons withrespect tothermal oscillations are investigated.
+PACS numbers: 44.10.+i, 05.45.-a,05.60.-k, 05.70.Ln
+I. INTRODUCTION
+It is widely accepted now that the DNA molecule has a
+rather moveable internal structure, and that the internal D NA
+mobility plays an important role in functioningthe molecul e.
+The thermal bath where the DNA molecule is usually im-
+mersed, collisions with the molecules of the solution which
+surrounds DNA, local interactions with proteins, drugs or
+some other ligands lead to activation of different types of i n-
+ternal motions. Small oscillations of individual atoms nea r
+equilibrium positions, rotational, transverse and longit udinal
+displacements of atomic groups (phosphate groups, sugars
+andbases),motionsofthedoublechainfragmentshavingsev -
+eral base pairs lengths, local unwinding of the double helix ,
+transitions of DNA fragments from one conformationalform
+to another, for example, from A-form to B-form and so on,
+are only some of them. A more detailed list of internal mo-
+tionsandoftheirdynamicalcharacteristicscanbefoundin the
+works of Fritzsche [1], Keepers and co-authors[2], McClure
+[3],McCommonandco-authors[4],Yakushevich[5,6]).
+Different approaches to the modeling of the internal DNA
+mobilityareknown. OneofthemhasbeendevelopedbyPro-
+hofskyandco-authors[7,8,9,10],whoconsideredDNAasa
+lattice and took into account the motionsof all atoms(excep t
+ofhydrogenatoms)inthelatticecell. Theirapproachwasli m-
+ited,however,byharmonicapproximation,andthislimitat ion
+didnotpermitthemtomodellargeamplitudeinternalmotion s
+suchas,forexample,localunwindingofthedoublehelix. An -
+otherapproach,basedon the methodsof moleculardynamics
+and proposed ﬁrstly by Levitt [11] and Tidor and co-authors
+[12],isknownnowasoneofthemostpowerfultoolsofinves-
+tigation of the internal DNA mobility [13]. This approach is
+notlimitedbyharmonicapproximationandthereforeitcanb e
+used to study internal motionsof both large and small ampli-
+∗Electronic address: ykushev@icb.psn.ru
+†Electronic address: asavin@center.chph.ras.ru
+‡Electronic address: lmanev@center.chph.ras.rutudes. The approach has, however, one essential deﬁciency:
+because of the limited possibilities of modern computers it
+can not be used to study long DNA fragments, and therefore
+itdoesnotsuitableforstudiesoftheprocessesofpropagat ion
+oflocalstructuraldistortionsalongthemolecule.
+In this paper, to investigate the internal DNA mobility, we
+use the approach developed in a series of works [14, 15, 16,
+17,18,19,20,21,22,23,24,25]. Peculiarityoftheapproac h
+is that it uses rather simple models of the internal DNA dy-
+namics, which take into account only one or a few types of
+theDNAinternalmotions. Thissimpliﬁcationgivesanoppor -
+tunitytoﬁndanalyticalsolutionsofcorrespondingdynami cal
+equations imitating both small and large amplitude interna l
+motions. Andonemoremeritoftheapproachisthatitgivesa
+possibility to study the internal dynamics of long DNA frag-
+ments. Threeworksintheseriesareofmostinterest.
+The ﬁrst one has been done by Englander and co-authors
+[14] who studied the dynamics of DNA open states. Their
+model took into account only rotational motions of nitrous
+bases, which as it was suggested, made the main contribu-
+tion to formation of the open states. Another paper belonged
+to Peyrard and Bishop [22], who studied the processof DNA
+denaturation. Suggesting that the stretching of the hydrog en
+bonds in pairs made the most contribution into the process,
+they created a simpliﬁed model where only transverse mo-
+tionsofbasesalongthedirectionofthehydrogenbondswher e
+taken into account. The third important paper was published
+by Muto and co-authors [21]. These authors suggested that
+two types of internal motions were made the main contribu-
+tion to DNA denaturation process: transverse motions along
+the hydrogen bond direction and longitudinal motions along
+thebackbonedirection. Theirmodelconsistedoftwopolynu -
+cleotide strands linked together through the hydrogen bond s
+described by a Lennard-Jones potential, and the phosphodi-
+ester bridges in the backbone were described by an anhar-
+monicTodapotential.
+Further development of the approach was limited for sev-
+eral years by small improvements of the models and their
+combinations, and only involvingnumerical methodsof sim-
+ulationoftheinternalDNAdynamicsgaveanewimpulseand
+2
+ϕ
+ϕn,1
+n,2n+1
+n
+n-1
+A Tr rT A
+ha
+FIG. 1: Fragment of the DNA double chain consisting of 3 AT bas e
+pairs. Longitudinal pitch of the helix a= 3.4˚A; transverse pitch
+h= 16.15˚A.
+TABLE I: The values of the parameters mα,rα,Iα=mαr2
+α, for
+allpossible bases α(mp= 1.67343·10−27kg isthe proton mass).
+α m α(mp) rα(˚A) Iα(×10−47m2kg)
+A 135.13 5.8 7607.03
+T 126.11 4.8 4862.28
+G 151.14 5.7 8217.44
+C 111.10 4.7 4106.93
+interestingpossibilitieswhichhavebeenrealizedinthew orks
+ofVanZandt[26],Techeraandco-authors[27],Salerno[25] ,
+Barbi[28,29],andCampa[30]. Justthesemethodspermitted
+not only to study a possibility of appearance of large ampli-
+tude localized distortions in the DNA structure, but also to
+investigate their stability, the inﬂuence of thermal noise , the
+interactions between the distortions, the propagation of t hem
+alongthehomogeneousandinhomogeneousDNA.
+In all these works, however, the asymmetry of the base
+pairs was neglected. That is both bases in a pair weremodeled as identical structural elements with the same
+characteristics (masses, moments of inertia and so on).
+But even in the case of homogeneous (synthetic) DNA the
+asymmetryexists. Indeed,if, forexample,oneof the polynu -
+cleotide chains consists of only adenines, the other chain
+should consist of thymines, and this homogeneous model is
+substantially asymmetrical. Just this type of asymmetrica l
+model is studied in this work. To simplify calculations, we
+consider only rotational motions of nitrous bases around
+the sugar-phosphate chains in the plane perpendicular to
+the main axis of the double chain. We ﬁnd solitary wave
+solutions describing open states in the double helix. We
+classify the solitons, investigate stability of the solito ns with
+respect to thermal oscillations, interactions between the
+solitons, interaction of the solitons with inhomogeneitie s of
+the chain. To solve all these problems, we use numerical-
+variation methods efﬁciency of which was proved in the
+works [31, 32, 33, 34, 35, 36], devoted to the analysis of
+nonlineardynamicsofmolecularchainsandpolymercrystal s.
+II. DISCRETEMODELOFTHE DNADOUBLEHELIX
+LetusconsiderB-formoftheDNAmolecule,thefragment
+of which is presented in Fig. 1. The lines in the ﬁgure cor-
+respond to the skeleton of the double helix, black and grey
+rectangles correspond to bases in pairs (AT and GC). Let us
+focus our attention on the rotational motions of bases aroun d
+the sugar-phosphate chains in the plane perpendicular to th e
+helix axis. Below we shall call the chain placed on the left
+by the ﬁrst chain, and the right chain – by the second one.
+Positivedirectionsoftherotationsofthebasesforeachof the
+chainsareshownin Fig. 1.
+Let us consider the plane DNA model where the chains of
+the macromolecule form two parallel straight lines placed a t
+a distance hfrom each other, and the bases can make only
+rotation motions around their own chain, being all the time
+perpendicular to it. Let us suggest that ϕn,1is the angular
+displacement of the n-th base of the ﬁrst chain, and ϕn,2is
+theangulardisplacementofthe n-thbaseofthesecondchain.
+ThentheHamiltonianofthedoublechaintakestheform
+H=/summationdisplay
+n/braceleftbigg1
+2In,1˙ϕ2
+n,1+1
+2In,2˙ϕ2
+n,2+ǫn,1sin2ϕn+1,1−ϕn,1
+2+ǫn,2sin2ϕn+1,2−ϕn,2
+2+Vαβ(ϕn,1,ϕn,2)/bracerightbigg
+.(1)
+The ﬁrst two terms of Hamiltonian (1) correspond to the ki-
+netic energy of the n-th base pair. Here In,1is the mo-
+ment of inertia of the n-th base of the ﬁrst chain; In,2is
+the moment of inertia of the n-th base of the second chain,
+point denotes differentiation in time t. For the base pair αβ
+(αβ=AT, TA, CG, GC )the moment of inertia is equaltoIn,1=mαr2
+α,In,2=mβr2
+β. The value of the base
+massmα, the length rαand corresponding moment of iner-
+tiaIα=mαr2
+αforall possible basepairsare presentedin the
+TableI.
+The third and the fourth terms in Hamiltonian (1) describe
+interactionof the neighboringbasesalongeachof the macro -
+3
+molecule chains. Parameter ǫn,icharacterizes the energy of
+interactionofthe n-thbasewiththe (n+1)-thbaseofthe i-th
+chain(i= 1,2). Thevalueof the parameterisunknown. But
+if we take into accountthat angulardisplacementof one base
+isaccompaniednotonlybyovercomingthebarrierdueto the
+stackinginteraction,butalsobysubstantialdeformation ofthe
+dihedralandvalenceangles,wecansuggestthattheenergyo f
+thedisplacement ǫn,ishouldbewittinglymorethanthestack-
+ing40÷60kJ/mol [37], and it should weakly depend on the
+typeofthebase. Thisgivesusapossibilitytosuggestlater on
+thatǫn,1≡ǫn,2≡ǫ >60kJ/mol.
+TheﬁfthterminHamiltonian(1)correspondstotheenergyof interaction between conjugated bases of different chain s.
+Here index αβ=AT, TA, GC, CG determinesthe type of the
+base pair. It is convenient to model the energy of interactio n
+ofconjugatedpairsbythepotential
+Vαβ(ϕn,1,ϕn,2) =1
+2Kαβ|Rn−R◦
+n|2,(2)
+whereRnis the vector connecting the end of the base (n,1)
+with the end of the base (n,2),R◦
+nis the value of the vector
+forthegroundstateofthechain ϕn,1≡0,ϕn,2≡0. Potential
+(2)canbewrittenin amoresimpleform
+Vαβ(ϕn,1,ϕn,2) =Kαβ{rα(rα+rβ)(1−cosϕn,1)+rβ(rα+rβ)(1−cosϕn,2)−rαrβ[1−cos(ϕn,1−ϕn,2)]}.(3)
+The rigidity of interaction Kαβcan be estimated from the
+energyofinteraction
+eαβ=1
+2/bracketleftBig
+Vαβ(0,π
+2)+Vαβ(π
+2,0)/bracketrightBig
+=1
+2Kαβ[r2
+α+r2
+β].
+The pair AT (TA) is stabilized by two hydrogen bonds (they
+are shown in Fig. 1 by dotted lines), and the pair CG (GC) –
+by three hydrogen bonds. Therefore we suggest later on that
+eAT=eTA= 2eCG/3 = 2eGC/3 =e.
+For the value of the energy of interaction of the bases in
+ATbasepairwecantakethedoubleenergyofhydrogenbond
+e= 40kJ/mol. Then the rigidity of the bond between the
+basesisequalto
+KAT=KTA=2
+3KGC=2
+3KCG=
+K=2e
+r2α+r2
+β= 0.234N/m. (4)
+Ontheotherhand,thevalueoftheparametercanbeestimated
+fromthe frequencyspectrumoflow amplitudeoscillationso f
+thechain. We shallobtainit inthenextsection.
+III. DISPERSIONEQUATION
+The system of equations of motion, which corresponds to
+macromoleculeHamiltonian(1),takestheform
+In,1¨ϕn,1=−∂H
+∂ϕn,1;
+In,2¨ϕn,2=−∂H
+∂ϕn,2, (5)
+n= 0,±1,±2,... .
+Letusconsiderhomogeneousmacromoleculewhereonlyone
+typeofbasepairsexists αβ(In,1≡Iα,In,2≡Iβ).Insertsmallamplitudeplanewave
+(ϕn,1(t),ϕn,2(t)) = (ϕ1,ϕ2)Aei(qan−ωt),
+into the system of equations (5). Here (ϕ1,ϕ2)is a normal-
+ized to 1 two dimension vector, A≪πis the amplitude,
+q∈[0,π/a]is the wave number. It is easy to show that in
+the linear approximation the frequency ωshould satisfy the
+dispersionequation
+ω4+Bω2+C= 0, (6)
+where
+B= [Kαβ(Iαr2
+β+Iβr2
+α)+4κ(Iα+Iβ)sin2qa
+2)]/IαIβ;
+C= [4κKαβ(r2
+α+r2
+β)sin2qa
+2+16κ2sin4qa
+2]/IαIβ,
+κ=ǫ/2isthe rigidityofthe interactionofneighboringbases
+alongthechain.
+Dispersioncurve(6) hastwo branches:
+ωa(q) = [(B−/radicalbig
+B2−4C)/2]1/2;
+ωo(q) = [(B+/radicalbig
+B2−4C)/2]1/2.
+The upper curve ω=ωo(q)corresponds to optical phonons,
+the lower curve ω=ωa(q)corresponds to acoustic phonons
+inthechain.
+The frequency ωa(q)tends to zero as q→0. Let us deter-
+minethevelocityofacousticphononsas
+v0= lim
+q→0ω(q)
+q=a/radicalBigg
+κ(r2α+r2
+β)
+Iαr2
+β+Iβr2α.
+Thedependenceofthesoundvelocity v0inthehomogeneous
+molecule αβ=AT (GC) on the energy of rotation ǫis pre-
+sentedintheTableII.
+According to different estimations [38, 39, 40] the veloc-
+ity of sound in DNA is on the interval from 1890 m/s till
+4
+ 0 π/2  π 020406080
+123456(a)
+ qaω   (cm−1)
+ 0 π/2  π 020406080
+12
+3456
+(b)
+ qa
+FIG. 2: Acoustic ω=ωa(q)(curve 1, 3, 5) and optical ω=ωo(q)(curve 2, 4, 6) branches of the dispersion curve for homogene ous chain
+(αβ=AT,ǫ=60, 600, 6000 kJ/mol) for chain with K= 0.234N/m(a) and K= 4.744N/m(b).
+3500 m/s. From the Table II it is clear, that among three
+typical values ǫ= 60, 600, 6000 kJ/mol the value ǫ=
+6000kJ/mol is the best one. Just this value will be used in
+the numerical investigations of the dynamics of topologica l
+solitons.
+Thelowestvalueoftheopticalfrequencyis
+ωo(0) =/radicalBig
+Kαβ(Iαr2
+β+Iβr2α)/IαIβ.(7)
+TABLE II: Dependence of sound velocity v0(m/s) on the value of
+the parameter ǫfor homogeneous αβ=AT(GC)chain
+ǫ(kJ/mol) 60 600 6000
+AT 219.47 694.02 2194.7
+GC 223.38 706.39 2233.4According to [41] ωo(0) = 35 cm−1, therefore from (7) we
+have
+KAT=K= 4.744N/m, KCG=3
+2K= 7.117N/m.(8)
+This estimation of the value of the rigidity differs from tha t
+obtained in (4). The use of the value given in (4) gives sub-
+stantially lower value of the frequency ωo(0) = 7.77cm−1.
+Thuswe havethefollowingestimationof thevalueof thepa-
+rameterK:0.234≤K≤4.744N/m. Theviewofthedisper-
+sioncurvesforhomogeneouschain( αβ=AT)withdifferent
+valuesofthe parametersispresentedinFig. 2.
+For numerical investigation of the soliton dynamics we
+shall take intermediate value K= 0.8714N/m which cor-
+responds to the frequency ωo(0) = 15 cm−1, and energy of
+interaction eAT= 149kJ/mol.
+5
+IV. NUMERICALMETHODOF FINDINGSOLITARY
+WAVESOLUTIONS
+Complexityof the system of equationsof motions(5) does
+not permit us to carry out analytical investigation. Theref ore,
+weshallstudyitnumericallyandusevariationtechnique,p ro-
+posedin [32], toﬁndsolitonlikesolutions.
+Let us consider homogeneous DNA molecule (for all n
+In,1=Iα,In,2=Iβ, whereαβ=AT (TA, CG, GC)). We
+shallﬁndthesolutionofsystem(5)intheformofawavewith
+smooth constant proﬁle. For the purpose, let us suggest that
+ϕn,1(t) =ϕ1(ξ),ϕn,2(t) =ϕ2(ξ), where the wave variable
+ξ=na−vt, andvisthe velocityofthewave.
+Let us assume, that the functions ϕ1andϕ2smoothly de-
+pendonξ. Thenthetimesecondderivativescanbesubstituted
+fordiscreetderivatives
+d2ϕn,i
+dt2=v2∂ϕi
+∂ξ2=v2(ϕn+1,i−2ϕn,i+ϕn−1,i)/a2,(9)
+i= 1,2. Using these relations, we can write the equationsof
+motions(5) intheform
+Lϕn,1= 0, Lϕn,2= 0, n= 0,±1,±2,....(10)
+Herethefunctional
+L=/summationdisplay
+n{v2
+2a2[Iα(ϕn+1,1−ϕn,1)2+Iβ(ϕn+1,2−ϕn,2)2]−
+−ǫ(sin2ϕn+1,1−ϕn,1
+2+sin2ϕn+1,2−ϕn,2
+2)
+−Vαβ(ϕn,1,ϕn,2)}
+isa discreetversionoftheLagrangian
+L=/summationdisplay
+n[1
+2In,1˙ϕ2
+n,1+1
+2In,2˙ϕ2
+n,2−
+−ǫ(sin2ϕn+1,1−ϕn,1
+2+sin2ϕn+1,2−ϕn,2
+2)
+−Vαβ(ϕn,1,ϕn,2)],
+whichcorrespondstothesystem ofequationsofmotion(5).
+For further analysis it is convenient to write the functiona l
+Lin thedimensionlessform
+¯L= 2L/K(r2
+A+r2
+T) =/summationdisplay
+n[cα(ϕn+1,1−ϕn,1)2+cβ(ϕn+1,2−ϕn,2)2
+−g(sin2ϕn+1,1−ϕn,1
+2+sin2ϕn+1,2−ϕn,2
+2)(11)
+−Uαβ(ϕn,1,ϕn,2)],
+wherethedimensionlesscoefﬁcients
+cα=v2Iα
+Ka2(r2
+A+r2
+T), cβ=v2Iβ
+Ka2(r2
+A+r2
+T),parameterofcooperativity
+g= 2ǫ/K(r2
+A+r2
+T), (12)
+dimensionless potential Uαβ(ϕn,1,ϕn,2) =
+2Vαβ(ϕn,1,ϕn,2)/K(r2
+A+r2
+T).
+Soliton solution of the system (10) can be found numeri-
+callyasasolutionoftheproblemonconditionalminimum
+−¯L→ min
+ϕ2,i,...,ϕN−1,i, i=1,2: (13)
+ϕ1,1=ϕ−∞,1, ϕ1,2=ϕ−∞,2, (14)
+ϕN,1=ϕ∞,1, ϕN,2=ϕ∞,2. (15)
+Boundary conditions (14), (15) for the problem (13) deter-
+mine the type of the soliton solution. We shouldtake a rather
+large number N, in order that the form of the solution of the
+problem might not depend on its value. For the purpose it is
+enoughtotake Ntentimeslargerthanthewidthofthesoliton.
+The soliton solution of the problem (13) can be character-
+izedbythetopologicalcharge q=(q1,q2),whereqi= (ϕ∞,i−
+ϕ−∞,i)/2π,i= 1,2, is an integer (qi= 0,±1,±2,...). To
+ﬁndsolitonsolutionwithtopologicalcharge q, it isnecessary
+to solve the problem on minimum (13) with boundarycondi-
+tions
+ϕ−∞,1=ϕ−∞,2= 0, ϕ∞,1= 2πq1, ϕ∞,2= 2πq2.
+This problem was solved by the method of conjugatedgradi-
+ent. Thevalue N= 2000wastaken,andtheinitialpoint
+ϕn,i= [1+tanh µ(n−N/2)]πqi, i= 1,2,
+wasused. Here µisa changeableparameter.
+Soliton solution (solution in the form of a solitary wave)
+{ϕ◦
+n,1,ϕ◦
+n,2}N
+n=1corresponds to topological soliton with the
+energyE=K(r2
+A+r2
+T)¯E/2,wheredimensionlessenergy
+¯E=N−1/summationdisplay
+n=1[cα(ϕn+1,1−ϕn,1)2+cβ(ϕn+1,2−ϕn,2)2+
++g(sin2ϕn+1,1−ϕn,1
+2+sin2ϕn+1,2−ϕn,2
+2)
++Uαβ(ϕn,1ϕn,2)]
+andwith thediameter
+D= 1+2/radicalbig
+(n−¯n)2pn,
+wherethe point
+¯n=N/summationdisplay
+n=1npn
+determinesthepositionofthesolitoncenter,andtheformu la
+6
+pn=¯En/¯E=/braceleftbigg1
+4/bracketleftbig
+cα(ϕn+1,1−ϕn−1,1)2+cβ(ϕn+1,2−ϕn−1,2)2/bracketrightbig
++1
+2g/bracketleftbigg
+sin2ϕn+1,1−ϕn,1
+2
++sin2ϕn+1,2−ϕn,2
+2+sin2ϕn,1−ϕn−1,1
+2+sin2ϕn,2−ϕn−1,2
+2/bracketrightbigg
++Uαβ(ϕn,1ϕn,2)/bracerightbigg
+/¯E
+givesthedistributionoftheenergyalongthe chain.
+V. DYNAMICALPROPERTIESOFSOLITONS
+Atthebeginningletusconsiderstationarysolitonsolutio ns
+oftheproblem(13). Inthedimensionlessfunctional ¯L,coefﬁ-
+cientscα=cβ= 0whenv= 0. So, only one dimensionless
+parameter g(12) which characterizes cooperativity of rota-
+tional motions remains in functional (11). The existence of
+soliton solution and its form depend on the value of the pa-
+rameter.
+A. Stationarysolution
+Theresultsof numericalinvestigationsofthe problem(13)
+show that in the homogeneous chains stationary topological
+soliton solutions exist when the parameter of cooperativit yg
+is larger than the threshold value: g≥g0>0. The ab-
+sence of the soliton topological stability when g < g 0can
+be explained in the following way. Any topological defect
+can be eliminated by turning the DNA bases. The turning of
+one base about 360 degrees transfers the system to the initia l
+state, that is φi,n≡φi,n±2π. And this is why the narrow
+solitonswith thesize equaltoonelinkofthechainareequiv -
+alenttothegroundstateandthisiswhytheyareunstable. So ,
+onlyrelativelywide solitonswith the generalturningcons ist-
+ing of several small changes of rotational angles that is whe n
+|φi,n+1−φi,n| ≪2π,arestable. Dependenceofthethreshold
+valueg0onthesolitontopologicalcharge qforhomogeneous
+ATandGCchainsaregivenintheTable III.
+From Fig. 3 it becomes clear that the soliton energy ¯E
+and its width Dmonotonously increase when the parameter
+of cooperativity gincreases. For soliton stability it is neces-
+sary that its width D >4.33. The view of stationary solitons
+with the parameters of cooperativity g= 10andg= 150
+is presented in Fig. 4. In the case of the soliton with topo-
+logical charge q=(1,0), the ﬁrst component has the form of a
+smooth step (when nmonotonously changes, the base of the
+TABLE III: Dependence of the threshold value of the paramete r of
+cooperativity g0on the value of the soliton topological charge q=
+(q1,q2)for homogeneous αβ=AT(GC) chain
+(q1,q2) (1,0) (0,1) (1,1)
+AT 8.3 5.7 8.3
+GC 12.0 8.2 12.0ﬁrstoftwoDNAchainsmakesacompleteturn)accompanied
+bysmoothsmallamplitudedeformationinthesecondcompo-
+nent (Fig. 4a). In the case of the soliton with q=(0,1), only
+thesecondcomponenthasthe formofa step (Fig. 4b). In the
+case of soliton with q=(1,1), each of the components has the
+form of a step (Fig. 4c), steps being displaced relatively on e
+another. Later on we shall show that this soliton is the bound
+stateoftwotopologicalsolitonswiththecharges q1=(1,0)and
+q2=(0,1). There exist two equivalentstates of the soliton: th e
+left state q=(1,1)l, when the soliton with the charge q1is on
+left of the soliton with the charge q2(Fig. 4c), and the right
+stateq=(1,1)r, whenthesolitonwiththecharge q1isonright
+ofthesolitonwiththecharge q2.
+Whenǫ= 6000 kJ/mol and K= 0.234N/m the pa-
+rameter of cooperativity g= 150.24≫g0, and when
+K= 0.8714N/m the parameter g= 40.34> g0(see Ta-
+ble III) for all typesof topologicalsolitons. So, forthese val-
+ues of the rigidity parameter Kstable solitons with different
+topological charges exist. For maximum value of the rigid-
+ity parameter K= 4.744N/m the parameterof cooperativity
+g= 7.41< g0,andthismeansthatstabletopologicalsolitons
+are absent. Thus the problem of the existence of topological
+solitons (open states) in the DNA reduces to the problem of
+receivingexactestimationoftheparameters ǫ K. But thisis,
+however, a rather difﬁcult problem. We think that the values
+ǫ= 6000kJ/mol,K= 0.8714N/m, when all three types of
+solitonsexist, are the most grounded. And we shall use these
+valuesforfurthercalculations.
+Dependence of the energy Eand the diameter Dof sta-
+tionary topological soliton on its topological charge qin the
+chain with ǫ= 6000kJ/mol and the transverse rigidity de-
+termined by formulas (4) and (8), are given in the Table IV.
+From the data of the table it follows that the energy of the
+interaction of the solitons with the charges (1,0) and (0,1) is
+equalto∆E=E(1,0)+E(0,1)−E(1,1) = 90.71kJ/mol
+TABLE IV: Dependence of the energy Eand the diameter Dof
+stationary topological soliton on its topological charge qwith two
+values of the transverse rigidity K
+αβ=AT αβ=GC
+K(N/m) qE(kJ/mol) D E (kJ/mol) D
+(1,0) 2776.52 16.59 3405.48 13.69
+0.234 (0,1) 2237.36 19.58 2733.60 16.18
+(1,1) 4971.72 42.85 6087.54 35.13
+(1,0) 5329.76 9.03 6394.96 7.64
+0.8714 (0,1) 4302.09 10.59 5146.38 8.98
+(1,1) 9551.14 22.60 11444.96 18.93
+7
+0 50 100 15050100150
+1
+23(a)E_
+0 50 100 15050100150
+1
+23 (b)
+0 50 100 15010203040
+1
+23 (c)D
+ g0 50 100 15010203040
+1
+23(d)
+ g
+FIG. 3: Dependence of the dimensionless soliton energy ¯Eand the width Don the velue of the parameter of cooperativity gwhenq=(1,0),
+(0,1), (1,1)(curves 1, 2,3) inhomogeneous AT(a),(c)and GC chains (b),(d).
+for the chain with the rigidity of the transverse interactio n
+K= 0.8714N/m, and the energy is equal to ∆E= 42.16
+kJ/molforthe chainwith K= 0.234N/m.B. Nonstationarysolutions
+Numerical investigationof the problem(13) shows, that in
+thehomogeneouschain,topologicalsolitonhastheinterva lof
+the velocities 0≤s≤s1<1, wheres=v/v0is the dimen-
+sionlessvelocityand v0is thevelocityofsound. Dependence
+ofmaximumvelocityofthesoliton s1onitscharge q,ontype
+ofthebaseinthechain αβandontherigidityofthetransverse
+8
+800 900 1000 1100 1200 0 π2π
+(a)ϕn,1 ,    ϕn,2
+800 900 1000 1100 1200 0 π2π
+(b)ϕn,1 ,    ϕn,2
+800 900 1000 1100 1200 0 π2π
+(c)ϕn,1 ,    ϕn,2
+ n
+FIG. 4: The view of stationary soliton with the topological c harge
+q=(1,0) (a); q=(0,1) (b); q=(1,1)l(c). Continuous lines correspond
+to displacements by the ﬁrst component ϕn,1; dotted lines – to dis-
+placements by the second component ϕn,2; thin lines correspond to
+chain with g= 10; ﬂatlines –tochainwith g= 150.
+TABLEV: Dependence of the maximum value of the soliton veloc -
+itys1onitstopological charge q,thesolitonmovinginthe homoge-
+neousαβchain withthe transverse rigidity K.
+K(N/m) q AT GC
+(1,0) 0.77 0.70
+0.234 (0,1) 0.88 0.84
+(1,1) 0.77 0.70
+(1,0) 0.64 0.55
+0.8714 (0,1) 0.86 0.84
+(1,1) 0.65 0.56
+interaction Kispresentedinthe TableV.
+Dependenceofthesolitonenergy Eandthediameter Don
+the dimensionless velocity sis presented in Fig. 5. With the
+increasingofthesolitonvelocityitsenergymonotonicall yin-
+creases,andthe diametermonotonicallydecreases. Usingt he
+dependence E(s)we can ﬁndthemassofrest of thetopolog-
+ical soliton
+M= lim
+s→02(E(s)−E(0))
+s2v2
+0.
+Dependenceofthemassofrest Mofthesolitononitscharge0 0.2 0.4 0.6 0.84812
+1
+23E(103 kJ/mol)
+0 0.2 0.4 0.6 0.85101520
+456D
+ s
+FIG.5: Dependence of the energy Eandthe diameter Dof the soli-
+ton which moves along homogeneous AT chain and has the charge
+q= (1,0)(curves1and4), q= (0,1)(curves2and5)and q= (1,1)
+(curves 3 and 6), on the dimensionless velocity s(ǫ= 6000kJ/mol,
+K= 0.8714N/m).
+TABLEVI: The dependence of the solitonmass of rest M(the val-
+ues are given in proton mass units mp) on its topological charge q,
+the soliton being in the homogeneous αβchain with the transverse
+rigidityK.
+K(N/m) q AT GC
+(1,0) 7640 9663
+0.234 (0,1) 4052 4064
+(1,1) 11581 13590
+(1,0) 14978 18730
+0.8714 (0,1) 7899 7804
+(1,1) 22660 26265
+q, onthetypeofthe basesofthe chain αβandonthe rigidity
+ofthetransverseinteraction Kispresentedinthe TableVI.
+Numerical investigationshows that all topological solito ns
+at all permitted velocities are stable. They move along the
+chain with constant velocity, their form and energy being
+conserved. Thus, the speciﬁcity of the chain of the DNA
+molecule leads to a principal effect consisting in the possi -
+bility of preferable localization of soliton excitations o n one
+chain. Moreover, it appears that soliton excitation with th e
+charge (1,1) is a bound state of two excitations localized in
+separatechains.
+9
+−80 −40 0 40 80012345
+123
+R/aU   (103 kJ/mol)
+FIG. 6: Potential of interaction of solitons Uq1,q2(R)withq1=
+(1,0),q2= (0,1)(curve 1); q1= (1,0),q2= (0,−1)(curve 2);
+q1=q2= (1,0)andq1=q2= (0,1)(curve 3).
+VI. INTERACTIONOFTOPOLOGICALSOLITONS
+DNA is aratherlongmolecule,andseveralopenstatescan
+beactivatedin it simultaneously. Thereforeit isinterest ingto
+consider the problem of interaction of solitons imitating t he
+openstates.
+Numericalapproach(13)permitsustoinvestigatetheprob-
+lem and to obtain the dependence of the energy of a pair of
+solitonswith thecharges q1,q2onthedistance betweentheir
+centersn1,n2. For the purpose, it is necessary to take the
+boundary conditions and the initial point, which correspon d
+toapairoftopologicalsolitonswiththecentersmovingawa y
+at a distance R. When minimizing the energy of the system
+E=−L, it is necessary also to ﬁx the turns of the bases,
+which correspondto the centers of solitons. Then the energy
+of the obtained state E(R)corresponds to the energy of a
+pair of topological solitons, the solitons being at a distan ce
+R=n2−n1from each other. By changing positions of the
+solitoncenters,we canobtainthe potentialofinteraction
+Uq1,q2(R) =E(R)−E(q1)−E(q2),
+whereE(q1)andE(q2)isthe energyofisolatedsolitons.
+The potential of interaction of solitons of different types
+and the potential of topological solitons with the charges o f
+the same sign are presented in Fig. 6. The potential of two
+solitons of different types with q1= (1,0)andq2= (0,1)
+has the form of symmetrical double well potential (Fig. 6,
+curve 1). Maximum of the potential is reached when R= 0,
+thatiswhenthecentersofthesolitonsareplacedattheneig h-
+boringchainsandwhenthesolitonsareoppositetoeachothe r.
+Fromenergeticpointofviewthisconﬁgurationofthesolito ns
+of differentchains is the most disadvantageous. Minimum of
+the energyis reached when R=±20a. Thus two solitons of
+thistypecanformtwoenergeticallyequivalentcoupledsta tes.
+Oneofthestates(leftminimumofthepotentialofinteracti on)
+corresponds to the left isomer of the topological soliton wi th
+the charge q= (1,1)l, and the otherstate (the right minimum
+ofthepotentialofinteraction)correspondstotherightis omer
+ofthesoliton q= (1,1)r.
+If solitons have different signs of charges q1= (1,0)andq2= (0,−1), the potential ofinteractionhas a bell-like form
+with one maximum at R= 0(Fig. 6, curve 2). From the
+potentialitfollowsthat,thesolitonswhichbelongtodiff erent
+chains,shouldrepulsefromeachother. Solitonswiththesa me
+sign of charge ( q1=q2= (1,0), (0,1)) also repulse from
+eachother.
+When distance between the solitons decreases, the energy
+monotonically increases and goes to inﬁnity when R→0
+(Fig. 6, curve3).
+The potential of interaction Uq1,q2(R)permits to predict
+the result of repulsion of solitons with the charges q1and
+q2. Let us model the repulsion of the solitons. For the pur-
+pose, let us consider a double chain consisting of N= 4000
+base pairs. At the ends of each of the polynucleotide chains
+let us introduce viscous friction which provides with absor p-
+tion of phonons. The system of equations of motion (5),
+n= 1,2,...,N, was integrated numerically with the initial
+conditionwhich correspondsto two topologicalsolitons wi th
+the centers placed in the points n1=N/4andn2= 3N/4
+andwith thevelocities s1=−s2=s >0.
+The results show that collision of solitons having equal
+signsq1=q2= (±1,0),(0,±1)leads to their reﬂection
+at one another. When the velocities sare small, the reﬂection
+ispracticallyelastic,andwhenthevelocities sarelarge,colli-
+sionisaccompaniedbyslightemissionofphonons. Collisio n
+of solitons with q1= (±1,0),q2= (0,∓1)ands= 0.5
+leads to their reﬂection, accompanied by slight emission of
+phonons. Thisbehavioris in a goodagreementwith the form
+ofcorrespondingpotentialof interaction(Fig. 6, curve2) . To
+pass through one another, solitons need to overcome energy
+barrierUq1,q2(0) = 2025 kJ/mol. Thus, their kinetic energy
+should be equal to Ek(s) =Eq1(s) +Eq2(s)−Eq1(0)−
+Eq2(0)> Uq1,q2(0). This condition is fulﬁlled only in the
+vicinity of the most possible values of the velocity (see. Fi g.
+5). So, when s= 0.5, the kinetic energy Ek= 1732kJ/mol
+is lower than the heightof the energybarrier(reﬂectiontak es
+place), and when s= 0.6, the energy Ek= 3000.9kJ/mol is
+higherthanthe barrier(solitonspassthroughoneanother) .
+Solitons with the charges q1= (±1,0),q2= (0,±1)at-
+tract one another at a distance R >20a, and when the dis-
+tance is shorter they repulse one another. Here the energy
+barrierUq1,q2(0) = 4989 kJ/mol does not permit solitons to
+pass throughone another. Solitons always reﬂect. Formatio n
+of the bound state does not occur even when the value of the
+velocity is small. It is explained by small value of the bond
+energy∆E= 91kJ/mol.
+Potential of interaction of different topological soliton s
+with the charges of opposite signs (q1=−q2)is presented
+in Fig. 7. Potential of interaction of one component soliton s
+(q1= (1,0),(0,1))monotonically decreases with the de-
+creasing of the distance between the solitons. When R→0,
+thepotential Uq1,q2(R)→ −[E(q1)+E(q2)]. At adistance
+R= 0solitonscompletelyrecombine.
+Potentialof interactionof two componentsolitonswith the
+charges of different signs has a similar form. If the soliton s
+havedifferentpolarity,thatis,iftheﬁrstsolitonisalef tisomer
+(q1= (1,1)l)and the second soliton is a right isomer (q2=
+(−1,−1)r). Solitons of that type attract one another. Their
+10
+0 20 40 60 80 100 120−3−2−1011
+3
+42
+R/aU   (103 kJ/mol)
+FIG. 7: Potential of interaction of solitons Uq1,q2(R)withq1=
+(1,1)l,q2= (−1,−1)l(curve 1); q1= (1,1)l,q2= (−1,−1)r
+(curve 2); q1= (1,0),q2= (−1,0)(curve 3); q1= (0,1),q2=
+(0,−1)(curve 4).
+collisionsalwaysleadstorecombinationofthesolitons.
+If solitons have the same polarity, they repulse when R >
+20a, and attract when the distances are shorter. Recombi-
+nation of the solitons requires overcoming the energy bar-
+rier 1730 kJ/mol. Solitons overcome the barrier only when
+s >0.38,andthevalueoftheirkineticenergyismorethanthe
+heightofthebarrier. Whenthevalueofthevelocityissmall er,
+solitons reﬂect, and when the value is larger they recombine
+(Fig. 8). Duringrecombinationtheenergyofsolitonsisspe nt
+for intensive emission of phonons. Breather-like excitati ons
+canbealso formed.
+Collision of one component soliton with two component
+soliton can lead (depending on the relationship of the signs
+of charges and on the polarity of the two component soliton)
+totheirpartialrecombinationortoinelastic reﬂectionac com-
+panied by disintegration of the two component soliton. So,
+at the velocity s= 0.5collision of the soliton having the
+chargeq1= (1,0), with the two component soliton having
+thecharge q2= (1,1)l,leadstoinelasticreﬂectionoftheﬁrst
+soliton, and at the same time the second soliton disintegrat es
+into two one component solitons with the charges (1,0) and
+(0,1)(Fig. 9).
+VII. EFFECTOF THECHAIN INHOMOGENEITIESON
+THEDYNAMICSOF TOPOLOGICALSOLITONS
+Till now our investigation was limited by consideration of
+homogeneous model of DNA. The real DNA is, however, a
+substantiallyinhomogeneoussystem,thereforeit isofspe cial
+interest to consider the effect of the chain inhomogeneity o n
+the dynamics of topological solitons. In the inhomogeneous
+chain, the energy of stationary soliton Ewill depend on the
+position of the center of the soliton ¯n. To move, soliton re-
+quires to overcome the energetic potential barrier E(¯n). To
+ﬁndtheenergyofthesolitonwiththecenteratthepoint n= ¯n
+we needtosolvenumericallytheproblemofminimizing
+E→ min
+ϕ2,i,...,ϕN−1,i, i=1,2: (16)
+FIG. 8: Recombination of solitons with the same signs of char ges
+andthe same polarities( q1= (1,1)l,q2= (−1,−1)l,s= 0.5).
+ϕ1,1=ϕ−∞,1, ϕ1,2=ϕ−∞,2, (17)
+ϕN,1=ϕ∞,1, ϕN,2=ϕ∞,2, (18)
+wherethe energy
+E=/summationdisplay
+n[ǫ(sin2ϕn+1,1−ϕn,1
+2+sin2ϕn+1,2−ϕn,2
+2)
++Vαβn(ϕn,1,ϕn,2)],
+αβn– the sequence of the base pairs along the chain. The
+boundary conditions (17), (18) are the same as those in the
+problem (13). To ﬁx the soliton center position we need to
+solvetheproblemofminimizing(16)withrespecttovariabl es
+ϕn,iwhere2≤n≤N−1,n/ne}ationslash= ¯n,i= 1,2. Forsolitonwith
+chargeq1/ne}ationslash= 0it is necessaryto ﬁx thevalue ϕ¯n,1=πq1, and
+forsolitonwith q2/ne}ationslash= 0–thevalue ϕ¯n,2=πq2.
+Theproblemonconditionalminimum(16)hasbeensolved
+bythenumericalmethodofconjugategradient. Wetook N=
+2000. Possibleviewofenergeticproﬁleofthesolitonmoving
+intheinhomogeneouschainis presentedin Fig. 10
+Atthebeginning,letusestimatetheeffectofpointinhomo-
+geneities. FromFig. 10a it isobviousthat onepointdefect i n
+the homogeneous AT chain leads to appearance of localized
+potential barrier with height equal to Ed= 150kJ/mol. To
+overcomethebarrier,thesolitonkineticenergyshouldsat isfy
+11
+FIG. 9: Disintegration of two component soliton ( q2= (1,1)l)
+when it comes into collision with one component soliton ( q1=
+(1,0)). The velocity ofthe movement is s= 0.5.
+the condition Ek(s) =E(s)−E(0)> Ed. Soliton can to
+overcome the barrier only when its velocity s > s d, where
+the threshold value of the velocity sdis taken from equation
+E(sd)−E(0) =Ed. From the data of Fig. 5 it is easy to
+ﬁnd, that for soliton with q=(1,0) the velocity sd= 0.21, for
+solitonwith q=(0,1)thevelocity sd= 0.28,andwhen q=(1,1)
+thevelocity sd= 0.17.
+Letusmodelnumericallytheinteractionofsolitonwithlo-
+cal defectof the homogeneousAT chain. For the purpose,let
+us consider homogeneousAT chain consisting of N= 4000
+baseswithonebaseGCinthemiddleofthechaininthepoint
+n=N/2. Suggestthatattheinitialtimeatopologicalsoliton
+is in the point n=N/4and consider its movement through
+the chain inhomogeneity. The results of numerical modeling
+ofthesolitondynamicsshow,thatindependentlyonthevalu e
+of topologicalcharge qsoliton with velocity s= 0.05reﬂect
+from this point defect, but for s= 0.5, moves through the
+pointdefectwithnegligiblysmallenergyloss.
+Point defect in the homogeneousGC chainleads to forma-
+tion of localized potential well with depth 150 kJ/mol (see
+Fig. 10b). Almost at all values of the velocity soliton easil y
+propagatesalongthischainwithoutformationofboundstat e.
+Thus we can conclude that soliton moving in the DNA chain
+with sufﬁciently largevelocity( s > sd) is stable with respect900 950 1000 1050 110000.511.52E (103 kJ/mol)(c)900 950 1000 1050 110000.050.10.15E (103 kJ/mol)(a)
+900 950 1000 1050 1100−0.15−0.1−0.050E (103 kJ/mol)
+(b)
+900 950 1000 1050 110000.511.5
+_nE (103 kJ/mol)(d)
+FIG. 10: The view of energetic relief for soliton in the inhom oge-
+neous chain: in homogeneous AT chain with one GC base pair (a) ;
+in homogeneous GC chain with one AT base pair (b); in the chain
+the ﬁrstpart of whichconsists of only AT base pairs, and the s econd
+- of only GC base pairs (c); in the chain with random sequence o f
+base pairs (d). Dotted line shows the relief of the soliton wi th topo-
+logicalcharge q= (1,0),ﬁrmline–thereliefforsolitonwithcharge
+q= (1,1).
+topointdefects.
+In the chain one part of which consists of only AT base
+pairs, and the other – of only GC base pairs energetic bar-
+rier takes the form of smooth step (Fig. 10c). The height of
+the step is equal to the difference between the values of soli -
+ton energy in homogeneous GC and AT chains. From data
+of table IV it follows, that the height of the step is equal
+to∆E= 1065kJ/mol for soliton with topological charge
+q=(1,0) and ∆E= 844kJ/mol for soliton with q=(0,1), and
+whenq=(1,1) the energy ∆E=1894 kJ/mol. Soliton moving
+along homogeneous AT region of the chain, can enter into
+GC region only if its kinetic energy Ek(s)>∆E. As seen
+from Fig. 5, this condition is satisﬁed only if soliton veloc -
+itys > sk, where the threshold value of the velocity is de-
+termined by the equation Ek(sk) = ∆E. For soliton with
+q=(1,0) the velocity sk= 0.48, forq=(0,1)sk= 0.59, and
+forq=(1,1)thevelocity sk= 0.52.
+Let us model numerically the soliton moving from homo-
+geneous AT region of the chain to homogeneous GC region.
+The results of the modelingshow that the soliton with veloc-
+12
+FIG. 11: Movement of soliton with q= (1,0),s= 0.5through the
+boundary between homogeneous ATand GCregions.
+itys= 0.05< skand with any topological charge reﬂects
+elastically from the boundary between the regions. At given
+velocitythesolitonkineticenergyisnotlargeenoughtoov er-
+come energeticbarrier( Ek(s)≪∆E). Soliton with s= 0.5
+q= (1,0)moves through the boundary between homoge-
+neous regions and its motion is accompanied by emission of
+phonons. Inside the region consisting of GC base pairs, soli -
+ton continues to move, but with a smaller magnitude of the
+velocity(Fig. 11). Forgivenvalueof qthe thresholdvalueof
+the velocity sk= 0.48<0.5. So, the kinetic energy of soli-
+ton is large enough to overcome energetic barrier. Because
+the main part of the kinetic energy is spent to overcome the
+barrier,thevelocityofthesolitonsubstantiallydecreas esafter
+overcomingthe barrier. When q=(0,1) the threshold value of
+thevelocity sk= 0.59andsolitonreﬂectsat s= 0.5fromthe
+boundary of the homogeneous regions. The reﬂection is ac-
+companied by phonon emission. For soliton with the charge
+q=(1,1) the velocity s= 0.5< sk= 0.52is not enough to
+overcome energetic barrier. Collision of soliton having to po-
+logical charge (q= (1,1)l)with the boundary between the
+homogeneous regions leads to the disintegration of the soli -
+ton. It disintegratesintotwo onecomponentsolitonswith t he
+chargesq1= (1,0)andq2= (0,1). Soliton with the charge
+q2continuestomoveintoGCregionofthechain,andsoliton
+FIG.12: Enteringtwo component soliton(charge q= (1,1)l, veloc-
+itys= 0.5) the random inhomogeneous region of the chain, and
+further disintegrationof the soliton.
+withthecharge q1reﬂectsfromtheboundary.
+Let us consider the propagation of soliton in the inhomo-
+geneous chain with random sequence of bases. In this case
+randomenergeticrelief E(n)isformed. Theamplitudeofthe
+relief for soliton with q=(1,0) reaches 1000 kJ/mol, and for
+soliton with q=(1,1) – 1500 kJ/mol (Fig. 10d). It is obvious
+that uniform propagation of soliton in the chain of that type
+isimpossible,becausesolitonlosespartofenergyforphon on
+emissionwhencrossingeachhomogeneity.
+Let us consider the movement of soliton through inhomo-
+geneous region of the chain. For the purpose, let us suggest
+thatthesecondpartofthechainisformedbyarandomequal-
+possible sequence of base pairs AT, TA, CG, GC. The results
+ofnumericalmodelingofthesolitondynamicsshowthatsoli -
+ton with small value of the velocity s= 0.05and with any
+topologicalchargereﬂects from the boundaryof the inhomo-
+geneous region. This points out, that penetration of the sol i-
+ton into the inhomogeneous region requires the overcoming
+of some energy barrier. Soliton with larger velocity s= 0.5
+andcharge q= (1,0)overcomesthis barrier,entersthe disor-
+dered region of the chain and stops there. The movement in
+thedisorderedregionisaccompaniedbyintensiveemission of
+phonons, which leads to the stop of the soliton. Soliton with
+q=(0,1)cannotovercomethebarrierevenatthisvalueofthe
+13
+velocity. The soliton reﬂects from the boundary of the inho-
+mogeneous region. The reﬂection is accompanied by emis-
+sion of phonons. Two component soliton with q= (1,1)l
+enters inhomogeneous region, and at the same time it dis-
+integrates into two one component solitons with the charges
+q1= (1,0)andq2= (0,1). Thesolitonsmovessometimein
+the inhomogeneouschain, then they stop (Fig. 12). The path
+ofthesolitonscanreachseveralhundredbasepairs.
+Analogousresultshavebeenobtainedeveninthecasewhen
+inhomogeneousregion was formed by the base pairs AT and
+TA. Thus, the sequence of nitrous bases of DNA molecule
+shouldsubstantiallyinﬂuencethecharacteristicsofthem otion
+oftopologicalsoliton. Note,thatithasbeenpointedoutﬁr stly
+inthe work[25].
+VIII. INTERACTIONOFTOPOLOGICALSOLITONS
+WITH THERMALOSCILLATIONSOFTHE CHAIN
+Dynamics of a thermalized chain consisting of Nsites, is
+describedbythesystemoftheLangevinequations
+In,1¨ϕn,1=−∂H
+∂ϕn,1+ξn,1−ΓIn,1˙ϕn,1;
+In,2¨ϕn,2=−∂H
+∂ϕn,2+ξn,2−ΓIn,2˙ϕn,2,(19)
+n= 1,2,...N ,
+where the Hamiltonian of the system His given by Eq. (1),
+ξn,iarerandomnormallydistributedforcesdescribingthein-
+teraction of the n-th base of the i-th chain (i= 1,2)with
+thermal bath, Γ = 1/tris the coefﬁcient of friction, trbeing
+the relaxation time of the rotation velocity of one base. The
+random forces ξn,ihave normal distribution and the correla-
+tionfunctionsare
+/an}bracketle{tξn,i(t1)ξm,j(t2)/an}bracketri}ht= 2ΓkBTδnmδijδ(t1−t2)/radicalbig
+In,iIn,j,
+n,m= 1,2,...,N, i,j = 1,2,
+wherekBisBoltzmann’sconstantand Tisthetemperatureof
+thermalbath.
+Thesystem(19)wasintegratednumericallybythestandard
+fourth-order Runge-Kutta method with constant step of inte -
+gration∆t. The delta function was represented as δ(t) = 0
+when|t|>∆t/2,andδ(t) = 1/∆twhen|t| ≤∆t/2,i.e.,the
+step of numerical integration corresponded to the correlat ion
+time of the random force. In order to use the Langevin equa-
+tion, it was necessary to suggest that ∆t≪tr. Thereforewe
+chose∆t= 0.001psandtherelaxationtime tr≥1ps.
+Let us check stability of topological soliton with respect
+to thermal oscillations of the chain. For the purpose, let
+us consider homogeneous periodical AT chain consisting of
+N= 4000base pairs at the temperature T= 300K. Let us
+integratesystem (19) with the initial conditioncorrespon ding
+totopologicalsoliton (s= 0.5)withcenterplacedinthepoint
+n=N/4. Numerical integration shows stability of solitons
+at all valuesofthe chargeandat bothvaluesofthe transvers e
+rigidityK= 0.234N/m and K= 0.8714N/m. The viscos-
+ity of the environment leads to quick stop of the soliton, and
+FIG. 13: Stability of topological soliton ( q= (1,1)l,s= 0.5) in
+the thermalized homogeneous AT chain ( T= 300K,tr= 1ps).
+Dependence of the distribution of angular displacements ϕn,1,ϕn,2
+andenergy Enalongthechainontime tisshown( K= 0.234N/m).
+after that all time it remains immovable. Soliton remainsst a-
+ble with respect to thermal oscillations during the all time of
+numericalintegration t= 5×103ps(Fig. 13).
+Let us note that in contrast to the models of phi-4 and of
+sine-GordonthestabilityofsolitonsintheDNAmodelhasno t
+topologicalnature. Solitonscanbedestroyed. Toshowthis ,it
+isenoughtosuggestthatthesolitonwidthisequaltoonebas e
+pair(solitonofthattypeisequivalenttothegroundstateo fthe
+chain). Here the stability is associated with energeticfac tors.
+FromFig. 13itiswellseenthatintheregionoflocalization of
+thesoliton,thedensityoftheenergyisequalto En≫kBT.
+Soliton path length in the thermalized homogeneouschain
+(T= 300K) depends on the value of relaxation time tr(on
+14
+FIG. 14: The braking of topological soliton (charge q= (1,1)l, ini-
+tial velocity s= 0.5) in the thermalized cyclic homogeneous AT
+chain (T= 300K,K= 0.234N/m andtr= 1000ps).
+the viscosity of the surrounding of the molecule). At strong
+viscosity tr= 1pssolitonhastimeto passonly7chainlinks
+tillfullstop. Thenitremainsimmovableallthetime(Fig. 1 3).
+Whentheviscosityislower tr= 10pssolitonhastimetopass
+41 links, and when tr= 100ps – 480 links. The braking of
+soliton at low viscosity ( tr= 1000ps) is shown in Fig. 14.
+Soliton passes more than 3000 chain links, and then it begins
+tomoveasa massiveBrownianparticle.
+The braking of soliton in the homogeneous chain is con-
+ditioned only by viscosity. When the viscosity is absent
+(tr=∞) soliton is moving along thermalized chain with
+constant velocity (Fig. 15).Thetmal phonons by themselves
+donotinﬂuencethesolitondynamics.
+Let us note that topological soliton can move along the
+DNA chain in the presence of viscosity too. To organize the
+propagation it is necessary to select in a special way the se-
+quenceof bases. If concentrationof AT base pairsmonotoni-
+callyincreases,inclinedpotential E(n)isformed. Theenergy
+FIG.15: Movement of topological soliton(charge q= (1,1)l,initial
+velocitys= 0.5) in the thermalized cyclic homogeneous AT chain
+(T= 300K,K= 0.234N/m andtr=∞).
+overfall can reach 1116 kJ/mol at K= 0.234N/m and 1894
+kJ/mol at K= 0.8714N/m. Soliton will propagatealong the
+reliefinclinationasaBrownianparticlemovinginthevisc ous
+mediaundertheactionofexternalconstantforce.
+Thermal phononssubstantially inﬂuence the interaction of
+solitons. In the work [42], it was shown that topologicalsol i-
+tons of the model φ–4, can interact with one another through
+thermal phonons. This interaction comes to repulsion of the
+solitons. As a result, in the thermalized chain the interact ion
+of the solitons of different charges substantially changes . At
+alongdistancetheywill repulse. Tomodelthisphenomenon,
+let usconsidercollisionofsolitonswith differentcharge sand
+polarities in the thermalized cyclic AT chain (q1= (1,1)l,
+q2= (−1,−1)r,s1=−s2= 0.5). In the nonthermalized
+chain (T= 0K), the solitons attract one another, and the col-
+lision leads to their recombination. In the thermalized cyc lic
+chain (T= 300K), their collision always leads to reﬂection
+15
+FIG.16: Reﬂectionoftopologicalsolitonswithdifferentc hargesand
+polarities ( q1= (1,1)l,q2= (−1,1)r,s1=−s2= 0.5) in the
+thermalized (T= 300K)cyclichomogeneousATchain( K= 0.234
+N/m,tr=∞).
+(Fig. 16). This behavior can be explained by compression ofphononsgasbetweensolitonswhentheyaredrawingtogether .
+The compressionleads to the repulsionof solitons, which in -
+creases as far as they are drawing together. In the chain with
+free ends, the compression of the phonon gas leads to long
+rangerepulsionofthesolitonsfromtheendsofthechain.
+Thus, topological solitons of the DNA chains are stable
+with respect to thermal oscillations. Interaction with the rmal
+phonons does not lead to destruction or to the braking of the
+soliton, it leads only to changing the interaction between t he
+solitons. In the thermalized chain, long range repulsion be -
+tweensolitonsisappeared.
+IX. CONCLUSION
+Investigationcarriedoutinthispapershowsthatthreetyp es
+of topological solitons which imitate localized states wit h
+open base pairs, can exist in the considered asymmetrical
+model of the DNA double chain. It was shown that the soli-
+tonscan movealong the macromoleculewith constant veloc-
+ity which is smaller than the sound velocity. In the inhomo-
+geneouschain,thecharacterofthesolitonmovementdepend s
+on the sequence of base pairs in the molecule. In the chain
+with random inhomogeneoussequence, solitons can move at
+a distance no more than several hundreds of base pairs. The
+results of numerical investigations show that the solitons are
+stable with respect to thermal oscillations. Interaction o f the
+solitonswiththermalphononsofthemacromoleculedoesnot
+leadto destructionorto the brakingof thesolitons. And onl y
+thecharacteroftheirinteractionschanges. Thedrawingof the
+solitons together leads to their repulsion, which is explai ned
+bycompressionofphonongasbetweenthem.
+All these results point out that topological solitons of thi s
+typecanbeusedtoexplainthe longrangeeffectsin theDNA
+macromolecule.
+[1] H.Fritzshe,Comm. Mol. Biophys. 1, 325(1982).
+[2] J. W. Keepers, Th. L. James, J. Am. Chem. Soc. 104, 929
+(1982).
+[3] W.R.McClure, Ann. Rev. Biochem. 54, 171 (1982).
+[4] J. A. McCommon, S.C. Harvey, Dynamics of proteins and nu-
+cleicacids, Cambridge: Cambridge UniversityPress,1987.
+[5] L.V.Yakushevich, Quart.Rev. Biophys. 26, 201 (1993).
+[6] L. V. Yakushevich, V. M. Komarov, Mathematics. Computer .
+Education(inRussian), 5, 310(1998).
+[7] S. M. Lindsay, J. W. Powell, E. W. Prohofsky, K. V. Devi-
+Prasad, Lattice modes? Soft modes and local modes in dou-
+ble helical DNA. in Structure and Dynamics of Nucleic Acids,
+Proteins and Membranes. Clementi E.,Corongiu G.,Sarma M.
+H., Sarma R. H., Eds. – New York: Adenine Press, 1984. – P.
+531–551.
+[8] J.M. Eyster,W.Prohofsky, Biopolymers 13, 2505 (1974).
+[9] W. N. Mei, M. Kohli, E. W. Prohofskii, L. L. Van Zandt,
+Biopolymers 20, 833(1981).
+[10] J.M. Eyster,W.Prohofsky, Biopolymers 16, 965, (1977).[11] M. Levitt, Cold Spring Harb. Symp. Quant. Biol. 47, 251
+(1983).
+[12] B. Tidor, K. I. Irikura, B. R. Brooks, M. Karplus, J. Biom ol.
+Struct.Dyn. 1, 231 (1983).
+[13] D. Flatters,R.Lavery, Biophys. J. 75, 372(1998).
+[14] S. W. Englander, N. R. Kallenbach, A. J. Heeger, J. A.
+Krumhansl, A. Litwin, Proc. Natl. Acad. Sci. USA 77, 7222
+(1980).
+[15] S.Yomosa, Phys.Rev. A. 27, 2120 (1983).
+[16] S.Takeno, S.Homma, Prog. Theor.Phys. 70, 308(1983).
+[17] J. A. Krumhansl, D. M. Alexander, Nonlinear dynamics an d
+conformational excitations in biomolecular materials. in Struc-
+ture and dynamics: nucleic acids and proteins. Clementi E,
+SarmaRH.,Eds.-NewYork: AdeninePress,1983.–P.61–80.
+[18] V. K. Fedyanin, I. Gochev, V. Lisy, Stud. biophys. 116, 59
+(1986).
+[19] L.V. Yakushevich, Phys. Lett.A. 136, 413 (1989).
+[20] Ch.- T.Zhang, Phys.Rev. A. 35, 886 (1987).
+[21] V. Muto, P.S. Lomdahl and P. L. Christiannsen, Phys. Rev . A
+16
+42, 7452 (1990).
+[22] M.Peyrard, A.R. Bishop, Phys.Rev. Lett. 62, 2755 (1989).
+[23] S.N.Volkov, J.Theor. Biol. 143, 485(1990).
+[24] G.Gaeta, Phys.Lett.A. 143, 227 (1990).
+[25] M.Salerno, Phys.Rev. A. 44, 5292 (1991).
+[26] L.L.VanZandt,Phys. Rev. A. 40, 6134 (1989).
+[27] M. Techera, L. L. Daemen, E.W. Prohofsky, Phys. Rev. A. 41,
+4543 (1990).
+[28] M. Barbi, S. Cocco, M. Peyrard, S. Ruffo, J. Biol. Phys. 24, 97
+(1999).
+[29] M.Barbi,S.Cocco,M.Peyrard,Phys.Let.A. 253, 358(1999).
+[30] A.Campa, Phys.Rev. E. 63, 021901 (2001).
+[31] P. L. Christiansen, A. V. Savin, A. V. Zolotaryuk, J. Com p.
+Phys.134, 108 (1997).
+[32] P. L. Christiansen, A. V. Zolotaryuk, A. V. Savin, Phys. Rev. E
+56, 877 (1997).
+[33] L.I.Manevitch, A.V. Savin,Phys.Rev. E 55, 4713 (1997).
+[34] A.V. Savin,L.I.Manevitch, Phys.Rev. B 58, 11386 (1998).[35] A. V.Savin, L.I.Manevitch, Phys.Rev. E 61, 7065 (2000).
+[36] A. V.Savin, L.I.Manevitch, Phys.Rev. B 63, 224303 (2001).
+[37] M. V. Volkenstein, Biophysics. – Published by Amer. Ins t. of
+Physics, 1975.
+[38] M. B. Hakim, S. M. Lindsay, J. Powell, Biopolymers 23, 1185
+(1984).
+[39] S.M.Lindsay,J.Powell,Lightscatteringoflatticevi brationsof
+DNA.in: StructureandDynamics: NucleicAcidsandProteins .
+Clementi E., Sarma R.H., Eds. – New York: Adenine Press,
+1983. –P.241–259.
+[40] T.Weidlich,S.M.Lindsay,S.A.Lee,N.-J.Tao,G.D.Lew en,
+W. L. Peticolas, G. A. Thomas, A. Rupprecht, J. Phys. Chem.
+92, 3315 (1988).
+[41] J. W. Powell, G. S. Edwards, L. Genzel, F. Kremer, A. Witt lin,
+W.Kubasek, W.Peticolas,Phys. Rev. A.bf 35, 3929 (1987).
+[42] O. P.Kolbysheva, A. F.Sagdeev, JETP 100, 1262 (1991).
